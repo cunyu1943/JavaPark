@@ -3,18 +3,695 @@
   <id>https://cunyu1943.github.io/JavaPark/JavaPark/</id>
   <title>JavaPark</title>
   <subtitle>Java 自学编程之路</subtitle>
-  <updated>2022-04-14T11:11:24.026Z</updated>
+  <updated>2022-04-14T15:40:47.323Z</updated>
   <generator>vuepress-plugin-feed2</generator>
   <link rel="self" href="https://cunyu1943.github.io/JavaPark/JavaPark/atom.xml"/>
   <link rel="alternate" href="https://cunyu1943.github.io/JavaPark/JavaPark/"/>
+  <category term="博客搭建"/>
   <category term="Java 菜鸟入门"/>
   <category term="Spring Boot 基础教程"/>
+  <entry>
+    <title type="html">利用 docsify 免费搭建高颜值文档网站</title>
+    <id>https://cunyu1943.github.io/JavaPark/JavaPark/efficiency/blog/docsify.html</id>
+    <link href="https://cunyu1943.github.io/JavaPark/JavaPark/efficiency/blog/docsify.html"/>
+    <updated>2022-04-14T15:39:51.000Z</updated>
+    <content type="html"><![CDATA[<h2 id="前言" tabindex="-1"> 前言</h2>
+<p>在开始之前，请先确保你已经满足以下两个条件：</p>
+<ul>
+<li>
+<p>自己的电脑上安装了 <code>Node.js</code> ，如果还没有安装，可以参照我的另一篇教程 <a href="https://blog.csdn.net/github_39655029/article/details/105397485" target="_blank" rel="noopener noreferrer"><code>Node.js</code> 的安装（多图版）<ExternalLinkIcon/></a>；</p>
+</li>
+<li>
+<p>拥有自己的 <code>Github/Gitee</code> 账号；</p>
+</li>
+</ul>
+<h2 id="快速安装并开始" tabindex="-1"> 快速安装并开始</h2>
+<h3 id="安装" tabindex="-1"> 安装</h3>
+<p>首先使用如下命令在自己的电脑上安装 <code>docsify-cli</code> 工具，方便后续的创建和预览自己的文档网站；</p>
+<div><pre><code><span>npm</span> i docsify-cli -g
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9naXRlZS5jb20vY3VueXUxOTQzL2ltYWdlcy9yYXcvbWFzdGVyL0ltZ3NXaW4vZG9jc2lmeS1pLnBuZw?x-oss-process=image/format,png" alt="" loading="lazy"></p>
+<h3 id="项目初始化" tabindex="-1"> 项目初始化</h3>
+<p>在自己的电脑上创建一个项目文件夹，比如我的是 <code>Docsify</code>，然后进入该文件夹并打开命令行工具，通过如下命令来初始化项目；</p>
+<div><pre><code>docsify init ./
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9naXRlZS5jb20vY3VueXUxOTQzL2ltYWdlcy9yYXcvbWFzdGVyL0ltZ3NXaW4vZG9jc2lmeS1pbml0LnBuZw?x-oss-process=image/format,png" alt="" loading="lazy"></p>
+<h3 id="项目目录结构" tabindex="-1"> 项目目录结构</h3>
+<p>经过初始化后，可以发现项目文件夹的目录结构如下，主要有三个文件，其功能如下：</p>
+<div><pre><code><span>.</span>
+    .nojekyll
+    index.html
+    README.md
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br></div></div><ul>
+<li>
+<p><code>index.html</code> : 入口文件，也叫配置文件，相关配置均在其中；</p>
+</li>
+<li>
+<p><code>README.md</code> :  作为主页内容渲染；</p>
+</li>
+<li>
+<p><code>.nojekyll</code> : 防止 <code>Github Pages</code> 忽略下划线开头的文件；</p>
+</li>
+</ul>
+<h3 id="本地预览" tabindex="-1"> 本地预览</h3>
+<p>当我们编辑好文档后，想要在本地预览时，可通过如下命令运行本地服务器，然后在浏览器中访问 <code>http://localhost:3000</code> 进行实时预览（其中 3000 端口是 <code>docsify</code> 默认访问端口）；</p>
+<div><pre><code>docsify serve ./
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9naXRlZS5jb20vY3VueXUxOTQzL2ltYWdlcy9yYXcvbWFzdGVyL0ltZ3NXaW4vZG9jc2lmeS1zZXJ2ZS5wbmc?x-oss-process=image/format,png" alt="" loading="lazy"></p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9naXRlZS5jb20vY3VueXUxOTQzL2ltYWdlcy9yYXcvbWFzdGVyL0ltZ3NXaW4vZG9jc2lmeSVFOSVBMiU4NCVFOCVBNyU4OC5wbmc?x-oss-process=image/format,png" alt="" loading="lazy"></p>
+<h2 id="项目配置" tabindex="-1"> 项目配置</h2>
+<h3 id="配置文件-index-html" tabindex="-1"> 配置文件 <code>index.html</code></h3>
+<p>该文件中主要配置了文档网站的名字以及开启一些配置选项，比如我修改后的配置如下：</p>
+<div><pre><code><span><span>&lt;!</span><span>DOCTYPE</span> <span>html</span><span>></span></span>
+<span><span><span>&lt;</span>html</span> <span>lang</span><span><span>=</span><span>"</span>en<span>"</span></span><span>></span></span>
+
+<span><span><span>&lt;</span>head</span><span>></span></span>
+  <span><span><span>&lt;</span>meta</span> <span>charset</span><span><span>=</span><span>"</span>UTF-8<span>"</span></span><span>></span></span>
+  <span><span><span>&lt;</span>title</span><span>></span></span>村雨遥<span><span><span>&lt;/</span>title</span><span>></span></span>
+  <span><span><span>&lt;</span>meta</span> <span>http-equiv</span><span><span>=</span><span>"</span>X-UA-Compatible<span>"</span></span> <span>content</span><span><span>=</span><span>"</span>IE=edge,chrome=1<span>"</span></span> <span>/></span></span>
+  <span><span><span>&lt;</span>meta</span> <span>name</span><span><span>=</span><span>"</span>description<span>"</span></span> <span>content</span><span><span>=</span><span>"</span>Description<span>"</span></span><span>></span></span>
+  <span><span><span>&lt;</span>meta</span> <span>name</span><span><span>=</span><span>"</span>viewport<span>"</span></span>
+    <span>content</span><span><span>=</span><span>"</span>width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0<span>"</span></span><span>></span></span>
+  <span><span><span>&lt;</span>link</span> <span>rel</span><span><span>=</span><span>"</span>stylesheet<span>"</span></span> <span>href</span><span><span>=</span><span>"</span>//unpkg.com/docsify/lib/themes/dark.css<span>"</span></span><span>></span></span>
+<span><span><span>&lt;/</span>head</span><span>></span></span>
+
+<span><span><span>&lt;</span>body</span><span>></span></span>
+  <span><span><span>&lt;</span>div</span> <span>id</span><span><span>=</span><span>"</span>app<span>"</span></span><span>></span></span><span><span><span>&lt;/</span>div</span><span>></span></span>
+  <span>&lt;!-- docsify-edit-on-github --></span>
+  <span><span><span>&lt;</span>script</span> <span>src</span><span><span>=</span><span>"</span>//unpkg.com/docsify-edit-on-github/index.js<span>"</span></span><span>></span></span><span></span><span><span><span>&lt;/</span>script</span><span>></span></span>
+  <span><span><span>&lt;</span>script</span><span>></span></span><span><span>
+    window<span>.</span>$docsify <span>=</span> <span>{</span>
+      <span>name</span><span>:</span> <span>'村雨遥'</span><span>,</span>
+      <span>repo</span><span>:</span> <span>'https://gitub.com/cunyu1943/cunyu1943'</span><span>,</span>
+      <span>maxLevel</span><span>:</span> <span>5</span><span>,</span><span>//最大支持渲染的标题层级</span>
+      <span>subMaxLevel</span><span>:</span> <span>3</span><span>,</span>
+      <span>homepage</span><span>:</span> <span>'README.md'</span><span>,</span>
+      <span>coverpage</span><span>:</span> <span>true</span><span>,</span> <span>// 封面</span>
+      <span>loadSidebar</span><span>:</span> <span>true</span><span>,</span> <span>// 侧边栏</span>
+      <span>autoHeader</span><span>:</span> <span>true</span><span>,</span>
+      <span>notFoundPage</span><span>:</span> <span>true</span><span>,</span> <span>// 找不到页面时</span>
+      <span>auto2top</span><span>:</span> <span>true</span><span>,</span><span>//切换页面后是否自动跳转到页面顶部</span>
+      <span>//全文搜索</span>
+      <span>search</span><span>:</span> <span>{</span>
+        <span>//maxAge: 86400000, // 过期时间，单位毫秒，默认一天</span>
+        <span>paths</span><span>:</span> <span>'auto'</span><span>,</span>
+        <span>placeholder</span><span>:</span> <span>'搜索'</span><span>,</span>
+        <span>noData</span><span>:</span> <span>'未找到结果'</span><span>,</span>
+        <span>// 搜索标题的最大程级, 1 - 6</span>
+        <span>depth</span><span>:</span> <span>3</span><span>,</span>
+      <span>}</span><span>,</span>
+      <span>plugins</span><span>:</span> <span>[</span>
+        EditOnGithubPlugin<span>.</span><span>create</span><span>(</span><span>'https://githee.com/cunyu1943/cunyu1943/'</span><span>)</span>
+      <span>]</span><span>,</span>
+    <span>}</span>
+  </span></span><span><span><span>&lt;/</span>script</span><span>></span></span>
+  <span><span><span>&lt;</span>script</span> <span>src</span><span><span>=</span><span>"</span>//unpkg.com/docsify/lib/docsify.min.js<span>"</span></span><span>></span></span><span></span><span><span><span>&lt;/</span>script</span><span>></span></span>
+  <span>&lt;!--Java代码高亮--></span>
+  <span><span><span>&lt;</span>script</span> <span>src</span><span><span>=</span><span>"</span>//unpkg.com/prismjs/components/prism-java.js<span>"</span></span><span>></span></span><span></span><span><span><span>&lt;/</span>script</span><span>></span></span>
+  <span><span><span>&lt;</span>script</span> <span>src</span><span><span>=</span><span>"</span>//unpkg.com/prismjs/components/prism-python.js<span>"</span></span><span>></span></span><span></span><span><span><span>&lt;/</span>script</span><span>></span></span>
+  <span>&lt;!--全文搜索,直接用官方提供的无法生效--></span>
+  <span><span><span>&lt;</span>script</span> <span>src</span><span><span>=</span><span>"</span>https://cdn.bootcss.com/docsify/4.5.9/plugins/search.min.js<span>"</span></span><span>></span></span><span></span><span><span><span>&lt;/</span>script</span><span>></span></span>
+  <span>&lt;!-- 复制到剪贴板 --></span>
+  <span><span><span>&lt;</span>script</span> <span>src</span><span><span>=</span><span>"</span>//unpkg.com/docsify-copy-code<span>"</span></span><span>></span></span><span></span><span><span><span>&lt;/</span>script</span><span>></span></span>
+  <span>&lt;!-- emoji --></span>
+  <span><span><span>&lt;</span>script</span> <span>src</span><span><span>=</span><span>"</span>//unpkg.com/docsify/lib/plugins/emoji.js<span>"</span></span><span>></span></span><span></span><span><span><span>&lt;/</span>script</span><span>></span></span>
+  <span>&lt;!-- 图片缩放 --></span>
+  <span><span><span>&lt;</span>script</span> <span>src</span><span><span>=</span><span>"</span>//unpkg.com/docsify/lib/plugins/zoom-image.js<span>"</span></span><span>></span></span><span></span><span><span><span>&lt;/</span>script</span><span>></span></span>
+  <span>&lt;!-- 字数统计 --></span>
+  <span><span><span>&lt;</span>script</span> <span>src</span><span><span>=</span><span>"</span>//unpkg.com/docsify-count/dist/countable.js<span>"</span></span><span>></span></span><span></span><span><span><span>&lt;/</span>script</span><span>></span></span>
+<span><span><span>&lt;/</span>body</span><span>></span></span>
+
+<span><span><span>&lt;/</span>html</span><span>></span></span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br><span>27</span><br><span>28</span><br><span>29</span><br><span>30</span><br><span>31</span><br><span>32</span><br><span>33</span><br><span>34</span><br><span>35</span><br><span>36</span><br><span>37</span><br><span>38</span><br><span>39</span><br><span>40</span><br><span>41</span><br><span>42</span><br><span>43</span><br><span>44</span><br><span>45</span><br><span>46</span><br><span>47</span><br><span>48</span><br><span>49</span><br><span>50</span><br><span>51</span><br><span>52</span><br><span>53</span><br><span>54</span><br><span>55</span><br><span>56</span><br><span>57</span><br><span>58</span><br><span>59</span><br><span>60</span><br></div></div><h3 id="侧边栏" tabindex="-1"> 侧边栏</h3>
+<p>上述配置中侧边栏已经打开，即 <code>loadSidebar: true</code>，此时新建一个 <code>_sidebar.md</code> 文件，在其中加入你所要显示的内容；</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9naXRlZS5jb20vY3VueXUxOTQzL2ltYWdlcy9yYXcvbWFzdGVyL0ltZ3NXaW4vc2lkZWJhci5wbmc?x-oss-process=image/format,png" alt="" loading="lazy"></p>
+<h3 id="封面" tabindex="-1"> 封面</h3>
+<p>上述配置中封面已经打开，即 <code>coverpage: true</code>，此时新建一个 <code>_coverpage.md</code> 文件，在其中加入你所要显示的内容，比如我的封面；</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9naXRlZS5jb20vY3VueXUxOTQzL2ltYWdlcy9yYXcvbWFzdGVyL0ltZ3NXaW4vY292ZXIucG5n?x-oss-process=image/format,png" alt="" loading="lazy"></p>
+<h3 id="主页内容" tabindex="-1"> 主页内容</h3>
+<p>即 <code>README.md</code> 的内容，比如我的最终结果显示如下；</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9naXRlZS5jb20vY3VueXUxOTQzL2ltYWdlcy9yYXcvbWFzdGVyL0ltZ3NXaW4vYWJvdXRtZS5wbmc?x-oss-process=image/format,png" alt="" loading="lazy"></p>
+<h3 id="更多" tabindex="-1"> 更多</h3>
+<p>如果还需要了解更多详情，可以访问<a href="https://docsify.js.org/#/zh-cn/quickstart" target="_blank" rel="noopener noreferrer">官网教程<ExternalLinkIcon/></a>；</p>
+<h2 id="部署" tabindex="-1"> 部署</h2>
+<p>进行上述操作之后，我们就可以将其部署到 <code>GitHub Pages</code>，然后供别人访问了是不是很激动，部署详情如下：</p>
+<h3 id="新建仓库" tabindex="-1"> 新建仓库</h3>
+<p>即和平常创建的步骤一样，但是要注意打开 <code>Github Pages</code> 功能；</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9naXRlZS5jb20vY3VueXUxOTQzL2ltYWdlcy9yYXcvbWFzdGVyL0ltZ3NXaW4vZ2l0aHVicGFnZXMucG5n?x-oss-process=image/format,png" alt="" loading="lazy"></p>
+<h3 id="提交项目" tabindex="-1"> 提交项目</h3>
+<p>将本地的项目提交到远程；</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9naXRlZS5jb20vY3VueXUxOTQzL2ltYWdlcy9yYXcvbWFzdGVyL0ltZ3NXaW4vY29tbWl0LnBuZw?x-oss-process=image/format,png" alt="" loading="lazy"></p>
+<h3 id="预览" tabindex="-1"> 预览</h3>
+<p>在浏览器中访问创建仓库时的给的网址即可在线预览我们的网站了，比如我的是：<code>https://cunyu1943.github.io/cunyu1943</code>，默认会显示封面页；</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9naXRlZS5jb20vY3VueXUxOTQzL2ltYWdlcy9yYXcvbWFzdGVyL0ltZ3NXaW4vJUU5JUEyJTg0JUU4JUE3JTg4LnBuZw?x-oss-process=image/format,png" alt="" loading="lazy"></p>
+<h2 id="总结" tabindex="-1"> 总结</h2>
+<p>经过上述的配置之后，我们就成功利用 <code>docsify</code> 成功搭建自己的文档类型网站了。</p>
+<p>关注公众号，获取最新文章更新</p>
+<img src="https://github.com/cunyu1943/cunyu1943/blob/main/imgs/wepublic.gif" width="200" alt="公众号" />]]></content>
+    <category term="博客搭建"/>
+    <published>2022-01-01T20:47:42.000Z</published>
+  </entry>
+  <entry>
+    <title type="html">从 0 到 1 搭建 Halo 博客</title>
+    <id>https://cunyu1943.github.io/JavaPark/JavaPark/efficiency/blog/halo.html</id>
+    <link href="https://cunyu1943.github.io/JavaPark/JavaPark/efficiency/blog/halo.html"/>
+    <updated>2022-04-14T15:39:51.000Z</updated>
+    <content type="html"><![CDATA[<h2 id="前言" tabindex="-1"> 前言</h2>
+<h3 id="说在前面" tabindex="-1"> 说在前面</h3>
+<p>之前一直有在各大平台发布博客内容，然后个人博客一直使用的是 Hexo + Github Pages 的方式，但随着内容增多，Github Pages 访问的也不稳定，所以想着自己搞个服务器和域名搭个博客，最终选定 <a href="https://halo.run/" target="_blank" rel="noopener noreferrer">Halo<ExternalLinkIcon/></a> 这个博客框架，搭建属于自己的博客。</p>
+<p>此内容从零到一手把手记录如何搭建，记录自己的搭建过程，也给后面的朋友们提供一个指南，少走些冤枉路，尽快上手。</p>
+<h3 id="环境配置" tabindex="-1"> 环境配置</h3>
+<p>自己花了 210 左右在 UCloud 买了三年的服务器，然后在腾讯花了将近 200 买了个域名，服务器版本是 Ubuntu 18.04 64 位，理论上讲下面的配置适合于 Ubuntu 系所有版本，个别有出入的地方还请谅解。所以在正式开始之前，你需要满足以下几个条件：</p>
+<ol>
+<li>一台 Ubuntu 系统的服务器（Centos 系统的参考 <a href="https://halo.run/archives/install-with-linux.html" target="_blank" rel="noopener noreferrer">官网教程<ExternalLinkIcon/></a> 即可）；</li>
+<li>一个域名；</li>
+</ol>
+<h2 id="java-环境配置" tabindex="-1"> Java 环境配置</h2>
+<h3 id="安装" tabindex="-1"> 安装</h3>
+<ol>
+<li>首先去 <a href="https://www.oracle.com/java/technologies/javase-downloads.html" target="_blank" rel="noopener noreferrer">官网<ExternalLinkIcon/></a> 下载 JDK，选择自己想要的版本即可，一般推荐 JDK 1.8+ 的版本；</li>
+</ol>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/9edf4e765f7b9c1e7aa34c667f663557.png" alt="" loading="lazy"></p>
+<ol start="2">
+<li>解压下载后的文件；</li>
+</ol>
+<div><pre><code><span>tar</span> -zxvf jdk-11.0.9_linux-x64_bin.tar.gz
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><ol start="3">
+<li>配置环境变量，切换到 root 用户，然后编辑 <code>/etc/profile</code> 文件，添加如下内容（注意路径切换为你自己放置解压缩包后的位置）；</li>
+</ol>
+<div><pre><code>export JAVA_HOME=/environment/jdk/jdk-11.0.9
+export PATH=$JAVA_HOME/bin:$PATH
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br></div></div><h3 id="验证" tabindex="-1"> 验证</h3>
+<p>安装好之后就是验证是否成功，一般我们用如下命令进行检测；</p>
+<div><pre><code><span># 查看 jdk 版本</span>
+java -version
+
+<span># 编译命令</span>
+javac
+
+<span># 运行命令</span>
+java
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br></div></div><h2 id="安装-halo" tabindex="-1"> 安装 Halo</h2>
+<h3 id="下载-halo-运行包" tabindex="-1"> 下载 Halo 运行包</h3>
+<p>要下载 Halo 运行包，可以通过两种方式，更推荐第二种，下载起来更快：</p>
+<ol>
+<li>Github releases：https://github.com/halo-dev/halo/releases</li>
+<li>Nova 提供的下载站：<a href="https://dl.halo.run/" target="_blank" rel="noopener noreferrer">https://dl.halo.run<ExternalLinkIcon/></a></li>
+</ol>
+<p>利用如下命令进行下载，以 1.4.2 版本为例，如果要下载其他版本，换版本号即可！</p>
+<div><pre><code><span>wget</span> https://dl.halo.run/release/halo-1.4.2.jar
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p><img src="https://img-blog.csdnimg.cn/img_convert/5762059b50b9a217169ca9ebc02b90bd.png" alt="" loading="lazy"></p>
+<h3 id="配置" tabindex="-1"> 配置</h3>
+<ol>
+<li>下载配置文件（下载后的文件存放在 <code>~/.halo/application.yaml</code>）；</li>
+</ol>
+<div><pre><code><span>curl</span> -o ~/.halo/application.yaml --create-dirs https://dl.halo.run/config/application-template.yaml
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><ol start="2">
+<li>修改配置，参考 <a href="https://halo.run/archives/install-with-linux.html" target="_blank" rel="noopener noreferrer">官方文档<ExternalLinkIcon/></a> 修改即可；</li>
+</ol>
+<div><pre><code>server:
+  port: <span>8090</span>
+
+  <span># Response data gzip.</span>
+  compression:
+    enabled: <span>false</span>
+spring:
+  datasource:
+    <span># H2 database configuration.</span>
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:file:~/.halo/db/halo
+    username: admin
+    password: <span>123456</span>
+
+    <span># MySQL database configuration.</span>
+  <span>#    driver-class-name: com.mysql.cj.jdbc.Driver</span>
+  <span>#    url: jdbc:mysql://127.0.0.1:3306/halodb?characterEncoding=utf8&amp;useSSL=false&amp;serverTimezone=Asia/Shanghai&amp;allowPublicKeyRetrieval=true</span>
+  <span>#    username: root</span>
+  <span>#    password: 123456</span>
+
+  <span># H2 database console configuration.</span>
+  h2:
+    console:
+      settings:
+        web-allow-others: <span>false</span>
+      path: /h2-console
+      enabled: <span>false</span>
+
+halo:
+  <span># Your admin client path is https://your-domain/{admin-path}</span>
+  admin-path: admin
+
+  <span># memory or level</span>
+  cache: memory
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br><span>27</span><br><span>28</span><br><span>29</span><br><span>30</span><br><span>31</span><br><span>32</span><br><span>33</span><br><span>34</span><br></div></div><h3 id="运行-halo" tabindex="-1"> 运行 Halo</h3>
+<p>配置好 Java  环境，同时下载好 Halo 运行包之后，我们就可以使用如下命令运行了；</p>
+<div><pre><code>java -jar halo-latest.jar
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p>然后在本地浏览器中访问如下地址即可；</p>
+<blockquote>
+<p>http://ip:8090</p>
+</blockquote>
+<h2 id="进阶配置" tabindex="-1"> 进阶配置</h2>
+<h3 id="开机自启" tabindex="-1"> 开机自启</h3>
+<ol>
+<li>下载 Halo 官方 <code>service</code> 模板，然后对其进行修改（此时需要管理员权限）；</li>
+</ol>
+<div><pre><code><span>sudo</span> <span>curl</span> -o /etc/systemd/system/halo.service --create-dirs https://dl.halo.run/config/halo.service
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><ol start="2">
+<li>修改配置文件</li>
+</ol>
+<p>具体可以参考 <a href="https://halo.run/archives/install-with-linux.html" target="_blank" rel="noopener noreferrer">官方文档<ExternalLinkIcon/></a>；</p>
+<p>需要注意的几点：</p>
+<ul>
+<li>填写你的 JDK 绝对路径；</li>
+<li>填写你的 Halo 运行包所在绝对路径；</li>
+<li>填写运行 Halo 服务的用户名；</li>
+</ul>
+<ol start="3">
+<li>测试</li>
+</ol>
+<div><pre><code><span># 修改 service 后需要 Systemd</span>
+<span>sudo</span> systemctl daemon-reload
+
+<span># 使 Halo 开机自启</span>
+<span>sudo</span> systemctl <span>enable</span> halo
+
+<span># 启动 Halo</span>
+<span>sudo</span> <span>service</span> halo start
+
+<span># 重启 Halo</span>
+<span>sudo</span> <span>service</span> halo restart
+
+<span># 停止 Halo</span>
+<span>sudo</span> <span>service</span> halo stop
+
+<span># 查看 Halo 的运行状态</span>
+<span>sudo</span> <span>service</span> halo status
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br></div></div><h3 id="halo-更新" tabindex="-1"> Halo 更新</h3>
+<p>Halo 是一个活跃的社区，目前一直在开发迭代中，后续如果发布了新的版本，而我们又想要升级，这时候就可以按照如下步骤来进行操作了；</p>
+<ol>
+<li>首先，我们需要对我们原有数据进行备份，防止丢失</li>
+</ol>
+<div><pre><code><span>cp</span> -r ~/.halo ~/.halo.bak
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><ol start="2">
+<li>接着备份久的 Halo 安装包，防止新的安装包出现问题后无法回滚；</li>
+</ol>
+<div><pre><code><span>mv</span> halo-latest.jar halo-latest.jar.bak
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><ol start="3">
+<li>做好备份工作之后，就是下载最新的 Halo 安装包了，其中 <code>{{verison}}</code> 对应最新版本号；</li>
+</ol>
+<div><pre><code><span>wget</span> https://dl.halo.run/release/halo-<span>{</span><span>{</span>version<span>}</span><span>}</span>.jar -O halo-latest.jar
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><ol start="4">
+<li>测试一下最新版的 Halo 能否运行成功；</li>
+</ol>
+<div><pre><code>java -jar halo-latest.jar
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><ol start="5">
+<li>测试步骤如果成功了，那我们直接重启 Halo 服务就好了；</li>
+</ol>
+<div><pre><code><span>sudo</span> <span>service</span> halo restart
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><h2 id="域名访问" tabindex="-1"> 域名访问</h2>
+<p>通过上面的配置之后，我们只能通过 <code>ip:port</code> 的方式进行访问，如果我们想让别人来访问，那么有一个域名就十分有必要了。在正式进行配置域名之前，需要确保如下几件准备工作：</p>
+<ol>
+<li>Halo 已经能够正确运行，且运行端口不是 <code>80</code> 端口；</li>
+<li>确保域名解析到服务器 IP，而且确保服务器已经备案（国内服务器都需要，国外无需）；</li>
+<li>打开服务器的 <code>80</code> 和 <code>443</code> 端口；</li>
+</ol>
+<h3 id="配置域名解析服务器-ip" tabindex="-1"> 配置域名解析服务器 IP</h3>
+<p>因为我的域名是在腾讯买的，所以这里以腾讯为例；</p>
+<ol>
+<li>首先打开 <a href="https://console.cloud.tencent.com/cns" target="_blank" rel="noopener noreferrer">域名解析列表<ExternalLinkIcon/></a>，并点击右侧解析进入解析界面；</li>
+</ol>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/bed2bee9316c15d75553b80522b8d686.png" alt="" loading="lazy"></p>
+<ol start="2">
+<li>接着添加记录；</li>
+</ol>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/2726bb06b3ed74295099be252fe59ae7.png" alt="" loading="lazy"></p>
+<p>添加如下两条记录，其他字段保持默认即可；</p>
+<table>
+<thead>
+<tr>
+<th>主机记录</th>
+<th>记录类型</th>
+<th>记录值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>@</code></td>
+<td><code>A</code></td>
+<td>你的服务器 IP</td>
+</tr>
+<tr>
+<td><code>www</code></td>
+<td><code>A</code></td>
+<td>你的服务器 IP</td>
+</tr>
+</tbody>
+</table>
+<h3 id="打开服务器对应端口" tabindex="-1"> 打开服务器对应端口</h3>
+<ol>
+<li>登录你的服务器，然后打开主机管理界面；</li>
+<li>接着编辑防火墙，将需要打开的端口打开即可，一般打开如下的协议端口就可以了；</li>
+</ol>
+<ul>
+<li>ICMP</li>
+<li>3389</li>
+<li>80</li>
+<li>443</li>
+<li>21</li>
+<li>22</li>
+<li>8090</li>
+</ul>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/39a6d494380610a19da62949d7927967.png" alt="" loading="lazy"></p>
+<h3 id="利用-nginx-进行反向代理" tabindex="-1"> 利用 Nginx 进行反向代理</h3>
+<ol>
+<li>安装 Nginx</li>
+</ol>
+<div><pre><code><span>sudo</span> <span>apt-get</span> <span>install</span> nginx
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><ol start="2">
+<li>设置开机自启动 Nginx</li>
+</ol>
+<div><pre><code>systemctl <span>enable</span> nginx
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><ol start="3">
+<li>启动 Nginx</li>
+</ol>
+<div><pre><code><span>sudo</span> <span>service</span> nginx start
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><ol start="4">
+<li>配置 Nginx</li>
+</ol>
+<p>首先下载 Halo 官方的 Nginx 配置模板；</p>
+<div><pre><code><span>curl</span> -o /etc/nginx/conf.d/halo.conf --create-dirs https://dl.halo.run/config/nginx.conf
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p>然后对其进行修改；</p>
+<div><pre><code><span>sudo</span> <span>vim</span> /etc/nginx/conf.d/halo.conf
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p>只需要将其中的 <code>example.com</code> 修改成自己的域名即可，比如我的域名是 <code>cunyu1943.site</code>；</p>
+<div><pre><code>server <span>{</span>
+    listen <span>80</span><span>;</span>
+
+    server_name example.com www.example.com<span>;</span>
+
+    location / <span>{</span>
+        proxy_set_header HOST <span>$host</span><span>;</span>
+        proxy_set_header X-Forwarded-Proto <span>$scheme</span><span>;</span>
+        proxy_set_header X-Real-IP <span>$remote_addr</span><span>;</span>
+        proxy_set_header X-Forwarded-For <span>$proxy_add_x_forwarded_for</span><span>;</span>
+
+        proxy_pass http://127.0.0.1:8090/<span>;</span>
+    <span>}</span>
+<span>}</span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br></div></div><ol start="5">
+<li>自动配置 SSL 证书</li>
+</ol>
+<p>首先安装 certbot nginx 插件；</p>
+<div><pre><code><span>sudo</span> <span>apt-get</span> <span>install</span> python-certbot-nginx
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p>接着执行配置，过程中会询问为哪个域名添加证书，以及是否重定向，如实选择即可；</p>
+<div><pre><code><span>sudo</span> certbot --nginx 
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p><img src="https://img-blog.csdnimg.cn/img_convert/f44b8d7753c628576920afee7cb73c56.png" alt="" loading="lazy"></p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/0ea59523b032883f42611d5e49c52513.png" alt="" loading="lazy"></p>
+<p>最后，设置自动续约即可；</p>
+<div><pre><code><span>sudo</span> certbot renew --dry-run
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p><img src="https://img-blog.csdnimg.cn/img_convert/1bbb76ec98a28520bbb4b1b12fded507.png" alt="" loading="lazy"></p>
+<ol start="6">
+<li>完成上述步骤之后，大功告成了，我们就可以通过自己的域名来访问自己的博客了，比如我的博客就是：</li>
+</ol>
+<blockquote>
+<p>https://cunyu1943.site</p>
+</blockquote>
+<h2 id="总结" tabindex="-1"> 总结</h2>
+<p>好了，经过上面的一系列设置，我们的博客就搭建完成了，是不是好简单的说，那就别犹豫，赶紧动手搞起来吧！</p>
+<p>最后再贴以下自己的博客地址，欢迎大家来留言，交换友链呀！</p>
+<blockquote>
+<p>https://cunyu1943.site</p>
+</blockquote>
+<p>关注公众号，获取最新文章更新</p>
+<img src="https://github.com/cunyu1943/cunyu1943/blob/main/imgs/wepublic.gif" width="200" alt="公众号" />]]></content>
+    <category term="博客搭建"/>
+    <published>2022-01-01T20:42:01.000Z</published>
+  </entry>
+  <entry>
+    <title type="html">超详细 Hexo + Github Pages 博客搭建教程</title>
+    <id>https://cunyu1943.github.io/JavaPark/JavaPark/efficiency/blog/hexo.html</id>
+    <link href="https://cunyu1943.github.io/JavaPark/JavaPark/efficiency/blog/hexo.html"/>
+    <updated>2022-04-14T15:39:51.000Z</updated>
+    <content type="html"><![CDATA[<h2 id="前言" tabindex="-1"> 前言</h2>
+<p>现在市面上已经有许多博客了，比如 CSDN、掘金、博客园、简书等等。我们可以直接在上面发表内容，而且交互比较人性化，而且也能被搜索引擎检索到。但是总归是别人的平台，经常会受限，因此我们就希望能有自己的博客。之前也尝试过搭建过不同的博客类型，折腾了不少工作，最终决定定型，采用 Hexo + Github Pages 的方式。今天就带大家一起来搭建自己的博客。由于是采用 Hexo + Github Pages 的方式，所以都是免费的，只是需要有一定的动手能力！</p>
+<h2 id="hexo-简介" tabindex="-1"> Hexo 简介</h2>
+<p><a href="https://hexo.io/zh-cn/docs/" title="Hexo" target="_blank" rel="noopener noreferrer">Hexo<ExternalLinkIcon/></a> 是一个快速、简洁且高效的静态博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。我们只需要通过 Markdown 语法写好自己的博客内容，然后通过简单的命令就能够将生成的网页上传到 Github，然后大家都可以来访问你的网页了。既方便了自己，也给了自己一个展示自己成果的平台，是不是一举两得。</p>
+<h2 id="搭建步骤" tabindex="-1"> 搭建步骤</h2>
+<p>搭建之前，需要做一些准备工作，首先需要确保你的电脑上已经上安装好了 Git 和 Node.Js，然后才能开始安装 Hexo，那么首先我们先来看看如何准备这这些环境。</p>
+<h3 id="git" tabindex="-1"> Git</h3>
+<h4 id="安装" tabindex="-1"> 安装</h4>
+<ol>
+<li><strong>Window</strong>：<a href="https://git-scm.com/download/win" title="下载并安装" target="_blank" rel="noopener noreferrer">下载并安装<ExternalLinkIcon/></a></li>
+<li><strong>macOS</strong>：<a href="https://sourceforge.net/projects/git-osx-installer/" title="下载并安装" target="_blank" rel="noopener noreferrer">下载并安装<ExternalLinkIcon/></a></li>
+<li><strong>Linux（Debian，Ubuntu）</strong>：<code>sudo apt-get install git-core</code></li>
+<li><strong>Linux（Fedora、RedHat、CentOS）</strong>：<code>sudo yum install git-core</code></li>
+</ol>
+<h4 id="设置" tabindex="-1"> 设置</h4>
+<p>安装成功后，将 git 与 GitHub 账号绑定，右键打开 Git Bash，然后设置配置信息：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/9f214e62438f3061eb4e3e371dac06a2.png" alt="" loading="lazy"></p>
+<div><pre><code><span># 配置用户名和邮箱</span>
+<span>git</span> config --global user.name <span>"github 用户名"</span>
+<span>git</span> config --global user.email <span>"github 注册邮箱"</span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br></div></div><p>比如我的配置就是：</p>
+<div><pre><code>git config <span>--</span>global user<span>.</span>name <span>"cunyu1943"</span>
+git config <span>--</span>global user<span>.</span>email <span>"747731461@qq.com"</span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br></div></div><p>接着生成 ssh 密钥文件，输入如下命令后直接三次回车即可，一般不需要设置密码；</p>
+<div><pre><code><span># 生成 ssh 密钥</span>
+ssh-keygen -t rsa -C <span>"github 注册邮箱"</span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br></div></div><p>我生成秘钥的命令：</p>
+<div><pre><code>ssh-keygen -t rsa -C <span>"747731461@qq.com"</span>
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p><img src="https://img-blog.csdnimg.cn/img_convert/55ebc468cd27b89b8a96e53b2be37a83.png" alt="" loading="lazy"></p>
+<p>一般执行上述命令之后，会生成 <code>id_rsa</code> 和 <code>id_rsa.pub</code> 两个文件，前者是我们私有的，而后者则是对外开放的。接着找到生成的 <code>.ssh</code> 的文件夹中的 id_rsa.pub 密钥，将内容复制；</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/0411108dec507c1bbe92577ed494d74c.png" alt="" loading="lazy"></p>
+<p>然后打开 <a href="https://github.com/settings/keys" title="GitHub-Settings-Keys" target="_blank" rel="noopener noreferrer">GitHub-Settings-Keys<ExternalLinkIcon/></a> 页面，创建一个新的 SSH key，填写 <code>Title</code> 和 <code>Key</code>，<code>Title</code> 可以随意，而 <code>Key</code> 的内容则是我们刚才复制的 <code>id_rsa.pub</code> 中的内容，最后点击 <code>Add SSH key</code> 即可；</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/5f24db5b06ddc011da5d1410cc3b1898.png" alt="" loading="lazy"></p>
+<h3 id="node-js-安装" tabindex="-1"> Node.Js 安装</h3>
+<h4 id="安装-1" tabindex="-1"> 安装</h4>
+<p>去官网下载最新的稳定版 <a href="https://nodejs.org/en/" title="Node.JS" target="_blank" rel="noopener noreferrer">Node.JS<ExternalLinkIcon/></a> ，一般推荐 64 位（大家应该现在用的电脑基本都是 64 位的吧），安装的话很简单，基本就是下一步下一步点击就好了。如果还是不知道如何安装，可以参考我的另一篇博客：<a href="https://blog.csdn.net/github_39655029/article/details/105397485" title="Windows 下 Node.js 的安装（多图版）" target="_blank" rel="noopener noreferrer">Windows 下 Node.js 的安装（多图版）<ExternalLinkIcon/></a></p>
+<h4 id="验证" tabindex="-1"> 验证</h4>
+<p>安装完成后，要查看我们是否安装成功，可以打开命令提示符（<code>Win + R</code>），输入 <code>cmd</code> 打开控制台，输入如下命令，如果出现对应版本号，说明安装成功了；</p>
+<div><pre><code><span>node</span> -v
+<span>npm</span> -v
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br></div></div><p><img src="https://img-blog.csdnimg.cn/img_convert/25231850a3b1ea577a2e435bccc4226a.png" alt="" loading="lazy"></p>
+<h4 id="设置-1" tabindex="-1"> 设置</h4>
+<p>由于下载包是从国外服务器，所以速度较慢，因此我们推荐用阿里的国内镜像进行设置；</p>
+<div><pre><code><span>npm</span> config <span>set</span> registry https://registry.npm.taobao.org
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><h3 id="hexo-安装" tabindex="-1"> Hexo 安装</h3>
+<p>在你的硬盘上找个地儿，用来存放你的博客文件，比如我的就在 <code>D:personalFiles/github/blog</code>，这个文件夹你可以根据自己的喜好来设置。然后从命令台进入当前文件夹，接下来就是安装过程了；</p>
+<ol>
+<li>首先安装 Hexo</li>
+</ol>
+<div><pre><code><span>npm</span> i hexo-cli -g
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p><img src="https://img-blog.csdnimg.cn/img_convert/677f0c2187eb990da1691fedab237596.png" alt="" loading="lazy"></p>
+<ol start="2">
+<li>新建一个文件夹用于存放你的博客，比如我的是 <code>blog</code>，然后进入该文件夹，并用如下命令进行初始化并安装必备组件；</li>
+</ol>
+<div><pre><code>hexo init <span>.</span>
+<span>npm</span> <span>install</span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br></div></div><p><img src="https://img-blog.csdnimg.cn/img_convert/4350b00e1562e51b4960250544eaa884.png" alt="" loading="lazy"></p>
+<ol start="3">
+<li>初始化后，目录结构如下；</li>
+</ol>
+<div><pre><code><span>.</span>
+├── _config.yml <span># 网站配置信息</span>
+├── package.json <span># 应用程序信息</span>
+├── scaffolds <span># 模板文件夹</span>
+├── <span>source</span> <span># 存放用户资源</span>
+<span>|</span>   ├── _drafts
+<span>|</span>   └── _posts
+└── themes <span># 主题文件夹</span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br></div></div><ol start="4">
+<li>然后输入如下命令，然后在浏览器中打开 <code>http://localhost:4000</code>；</li>
+</ol>
+<div><pre><code><span># 新建博客</span>
+hexo new <span>"博客名"</span>
+<span># 生成静态网页</span>
+hexo g
+<span># 打开本地服务器</span>
+hexo s
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br></div></div><p>然后就可以看到如下的界面，不过我的是经过修改过的，所以和你的会不一样。</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/535f3847ee858f27e637558157da3133.png" alt="" loading="lazy"></p>
+<h3 id="github-个人仓库" tabindex="-1"> Github 个人仓库</h3>
+<p>完成上面的步骤之后，我们就能在本地进行预览了，不过我们如果想要发布到网上供别人看的话，那就得利用 Github Pages 的功能了，下边就来介绍如何结合 Hexo + Github Pages ，将我们的博客推送到网上去，方便大家在任何地方访问！</p>
+<blockquote>
+<p>首先你得有个 GitHub 账号，如果没有的，请出门 <a href="https://github.com/" title="右转" target="_blank" rel="noopener noreferrer">右转<ExternalLinkIcon/></a> 先去注册个账号；</p>
+</blockquote>
+<p>有了账号之后，新建一个仓库，而且得确保你的仓库是 <code>public</code>，你要搞个 <code>private</code>，谁能访问的了？？？同时，仓库名一定要是：</p>
+<blockquote>
+<p><strong>用户名.github.io</strong></p>
+<p><strong>用户名.github.io</strong></p>
+<p><strong>用户名.github.io</strong></p>
+</blockquote>
+<p>这个用户名建议不要太复杂，但是又要能体现你个人特点，因为后续让别人访问你的博客时，就要通过 <code>https://用户名.github.io</code> 这个域名来访问。比如我的用户名是 <strong>cunyu1943</strong>，所以我的仓库就是 <a href="https://github.com/cunyu1943/cunyu1943.github.io" title="cunyu1943.github.io" target="_blank" rel="noopener noreferrer">cunyu1943.github.io<ExternalLinkIcon/></a>：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/0a6e5cdf9098a51f48d33b5c096be223.png" alt="" loading="lazy"></p>
+<h3 id="部署到-github" tabindex="-1"> 部署到 Github</h3>
+<p>完成上面的步骤后，你应该能在本地进行预览了，接下来就是推送网站到 Github Pages 了，然后我们就能被其他人访问了。</p>
+<p>只需要在我们刚才的博客根目录中的站点配置文件 <code>_config.yml</code> ，设置为你的个人仓库名即可：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/68519976be11905dd3d69f9c7e6b1bd9.png" alt="" loading="lazy"></p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/c70585f9bfd39a935240959f7c907fac.png" alt="" loading="lazy"></p>
+<p>完成上述步骤之后，主要使用如下命令，就能将我们本地的内容推送到远程 GitHub 仓库了，然后在浏览器中访问：</p>
+<blockquote>
+<p>https://用户名.github.io</p>
+</blockquote>
+<p>比如我的博客 <a href="https://cunyu1943.github.io/" title="村雨遥的博客" target="_blank" rel="noopener noreferrer">村雨遥的博客<ExternalLinkIcon/></a>；</p>
+<div><pre><code>hexo clean
+hexo g
+hexo d
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br></div></div><p><img src="https://img-blog.csdnimg.cn/img_convert/d5697ef15cda2973caab9df285cae840.png" alt="" loading="lazy"></p>
+<h3 id="gitee-个人仓库" tabindex="-1"> Gitee 个人仓库</h3>
+<p>上面说完部署到 Github，接下来就说说怎么部署到 Gitee，老规矩，首先你得需要一个 Gitee 账号，如果没有的，出门 <a href="https://gitee.com/" title="右转" target="_blank" rel="noopener noreferrer">右转<ExternalLinkIcon/></a> 先去注册个账号。</p>
+<p>然后新建一个仓库，同样有几点需要注意的：</p>
+<ol>
+<li>保证你的仓库是 <code>public</code>；</li>
+<li>仓库名是 <strong>你的用户名</strong>，这一点和 Github 略有不同，不需要是 <strong>用户名.gitee.io</strong>；</li>
+</ol>
+<p>比如我的用户名是 <code>cunyu1943</code>，所以我的仓库名就是 <a href="https://gitee.com/cunyu1943/cunyu1943" title="cunyu1943" target="_blank" rel="noopener noreferrer">cunyu1943<ExternalLinkIcon/></a>。</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/e52925336dd43a2855f20c4b8070aec1.png" alt="" loading="lazy"></p>
+<h3 id="部署到-gitee" tabindex="-1"> 部署到 Gitee</h3>
+<p>完成上面的步骤后，你应该能在本地进行预览了，接下来就是推送网站到 Gitee Pages 了，然后我们就能被其他人访问了。这里需要注意的是，Gitee Pages 不像 Github Pages 会自动更新，它需要你每次推送后，去更新一下，如果想要自动更新，就需要开通 Gitee 的会员。</p>
+<p>然后需要在我们刚才的博客根目录中的站点配置文件 <code>_config.yml</code> ，设置为你的个人仓库名即可：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/68519976be11905dd3d69f9c7e6b1bd9.png" alt="" loading="lazy"></p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/acf71e19a8e282048961690fb61789eb.png" alt="" loading="lazy"></p>
+<p>完成上述步骤之后，主要使用如下命令，就能将我们本地的内容推送到远程 Gitee 仓库了，去手动更新 Gitee Pages 后，然后在浏览器中访问：</p>
+<blockquote>
+<p>https://用户名.gitee.io</p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/ad5783dd0f33293d94d0c2ca04a29a31.png" alt="" loading="lazy"></p>
+<h2 id="如何写新博客并推送到远程" tabindex="-1"> 如何写新博客并推送到远程</h2>
+<p>通过上面的步骤后，你的博客应该就已经搭建成功，而且能通过 <code>https://用户名.github.io</code> 的方式进行访问了。接下来如果我们要发一篇新的博客内容，又应该怎么办呢？接下来就详细讲一下如何操作。</p>
+<ol>
+<li>首先进入博客所在文件夹，然后右键进入控制台，用如下命令进行创建新的文章；</li>
+</ol>
+<div><pre><code>hexo n <span>"博客标题名"</span>
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p><img src="https://img-blog.csdnimg.cn/img_convert/b07c430fcf115fc31016addcd91f9003.png" alt="" loading="lazy"></p>
+<ol start="2">
+<li>接着在 <code>blog/source/_posts</code> 目录下应该就会有创建好的以文章标题名命名的 Markdown 文件；</li>
+</ol>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/d07a96180d7ecbf8556be4e7d8cf6440.png" alt="" loading="lazy"></p>
+<ol start="3">
+<li>接着打开该文件，编写你自己想要的内容即可；</li>
+</ol>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/8cef628ef730e4deb715823a5e1a91b5.png" alt="" loading="lazy"></p>
+<ol start="4">
+<li>接着在控制台使用如下命令，将其推送到远程 GitHub 仓库，等过一会儿之后，访问即可看到刚才推送的新文章了！</li>
+</ol>
+<div><pre><code>hexo g
+hexo d
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br></div></div><p><img src="https://img-blog.csdnimg.cn/img_convert/9830d8a8159ea45fd40bbffb35411bed.png" alt="" loading="lazy"></p>
+<h2 id="如何绑定自定义域名" tabindex="-1"> 如何绑定自定义域名</h2>
+<p>通过 <code>用户名.github.io</code> 的方式来访问总归是有些不方便，如果我们需要自己的个性域名，又应该如何设置呢？那么在此之前，你需要有一个已经备案好的域名，如果没有的话，请到阿里云、腾讯云等场商购买自己的域名，然后通过该平台备案，然后添加两条解析记录，以我的腾讯云为例：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/cc5d3b48e7cfb72790a978a91f2b7cce.png" alt="" loading="lazy"></p>
+<p>备好案并设置解析之后，在 Github 的博客项目中，依次点击 <code>Settings-&gt;Pages</code>，然后在 <code>Custom domain</code> 添加你的域名即可，最后 <code>Save</code> 即可，此时你的博客根目录下应该会多一个 <code>CNAME</code> 的文件，然后你就可以通过自己的域名来访问你的博客了。</p>
+<p>当然，有时候可能经过上面的设置后，博客根目录下不会出现名为 <code>CNAME</code> 的文件，如果没有，我们可以通过在本地博客 <code>/source</code> 目录下手动建立一个 <code>CNAME</code> 文件（无后缀），然后把你的域名填进去并保存，最后依次执行如下命令将设置上传到 Github 即可 ~</p>
+<div><pre><code>hexo g
+hexo d
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br></div></div><p><img src="https://img-blog.csdnimg.cn/img_convert/4c8c10d34cd0a17cf16ca8ccf790e037.png" alt="" loading="lazy"></p>
+<p>比如我的域名为 <code>cunyu1943.site</code>，通过设置之后，我们就可以通过 https://cunyu1943.site 来访问我的博客了。</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/8618f69960bda326648f46a003d03241.png" alt="" loading="lazy"></p>
+<h2 id="美化" tabindex="-1"> 美化</h2>
+<p>经过上面的设置之后，我们只是得到了一个简单地博客，如果你也想让你的博客像我的一样酷（zhuang）炫（bi），就要用到主题了，我采用的主题是 <a href="https://github.com/blinkfox/hexo-theme-matery" title="hexo-theme-matery" target="_blank" rel="noopener noreferrer">hexo-theme-matery<ExternalLinkIcon/></a>，一个基于材料设计和响应式设计而成的主题，而且关于如何设置它也有十分详细的文档，如果存在不懂得问题，还可以及时提交 issue，作者回复也十分及时。</p>
+<p>如果你不想过于折腾，那么你完成上面的步骤之后，也可以直接采用我的博客源代码，然后把里边的个人配置改一下就 ok 了，我的博客源码地址：<a href="https://github.com/cunyu1943/hexo-theme-matery-personal" title="cunyu1943/hexo-theme-matery-personal" target="_blank" rel="noopener noreferrer">hexo-theme-matery-personal<ExternalLinkIcon/></a></p>
+<p>大家直接下载下来，然后把 <code>node_modules.zip</code> 进行解压，然后修改其中的部分配置（也就是你的 Github、网名啥的呀个人信息），主要是修改根目录下的 <code>_config.yml</code> 和 <code>_config.hexo-theme-matery.yml</code>，然后就可以直接写博客了。当然，前提是你把环境啥的都搭建好了。</p>
+<p>PS：我对于配置文件中的某些关键信息进行了隐藏，比如 <code>gitalk</code>、<code>gitment</code>、<code>Valine</code>、<code>baiduAnalytics</code> 等，这些需要你自己去注册并获取自己的信息，请记得修改，否则可能导致失败。</p>
+<h2 id="总结" tabindex="-1"> 总结</h2>
+<p>至此，我们的博客就搭建完成了，是不是很简单，赶紧去试试吧！</p>
+<p>对于文中不清楚的地方，欢迎留言，我会在看到的第一时间回复你！</p>
+<p>关注公众号，获取最新文章更新</p>
+<img src="https://github.com/cunyu1943/cunyu1943/blob/main/imgs/wepublic.gif" width="200" alt="公众号" />]]></content>
+    <category term="博客搭建"/>
+    <published>2021-12-30T22:06:52.000Z</published>
+  </entry>
+  <entry>
+    <title type="html">Vuepress + GitHub Actions 实现博客自动部署</title>
+    <id>https://cunyu1943.github.io/JavaPark/JavaPark/efficiency/blog/vuepress-github-action.html</id>
+    <link href="https://cunyu1943.github.io/JavaPark/JavaPark/efficiency/blog/vuepress-github-action.html"/>
+    <updated>2022-04-14T15:39:51.000Z</updated>
+    <content type="html"><![CDATA[<h2 id="前言" tabindex="-1"> 前言</h2>
+<p>正常我们利用 Vuepress 搭建一个文档博客之后，往往都是通过如下步骤来部署一篇博客：</p>
+<ol>
+<li>
+<p>首先写文章；</p>
+</li>
+<li>
+<p>写完文章之后生成静态文件，这里一般使用的是 <code>npm run build</code> 命令，但也有使用 <code>yarn build</code> 的；</p>
+</li>
+<li>
+<p>将我们生成的静态文件推送到 Github Pages；</p>
+</li>
+<li>
+<p>访问我们对应的网址，查看我们的推送是否成功。</p>
+</li>
+</ol>
+<p>上述步骤看似简单，但一旦文档过多时，生成静态文件就十分耗费时间。这时候我们就想了，有不有一种方法，能够帮我们自动构建静态文件然后部署到 Github Pages 上呢。刚好，Github 官方提供了这个一个工具：Github Actions。利用它，我们就能够将重心转移到创作之后，每次创作之后推送到远程之后它就会自动后续工作，接下来我们就来看看如何利用 Github Action 实现自动部署我们的博客。</p>
+<h2 id="生成-token" tabindex="-1"> 生成 Token</h2>
+<p>要部署 Actions，那么它就需要有能够操作我们仓库的权限，因此需要提前设置个人访问令牌（Github personal access）。设置方法如下：进入 Github 后，点击我们的头像，然后依次进入 <code>Settings -&gt; Developer settings -&gt; Personal access tokens</code>，对应地址就是 <a href="https://github.com/settings/tokens" target="_blank" rel="noopener noreferrer">Token 生成<ExternalLinkIcon/></a>。然后点击右上方的 <code>Generate new token</code>，接着输入 token 的名字，这个名字可以随意，不过还是推荐根据它的用途来命名。然后选 <code>Expiration</code>，也就是这个 Token 的有效期，如果我们要长期用，建议选为 <code>No expiration</code>，意思就是无期限。最后就是选权限，一般来讲这里选 <code>repo</code> 就够了，但是如果你不确定，那就全都选上也行。然后点击 <code>Generate Token</code>，会生成一个令牌，注意这里它只会出现一次，一旦刷新该网页就不见了，所以最好把它复制到你的备忘录备份一下，而且我们待会也是需要用到这个 Token 的。</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/5052e39e5de806967f5dcd97619b2984.png" alt="" loading="lazy"></p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/182c48f80f42f1b2085b0b3684e9b1fc.png" alt="" loading="lazy"></p>
+<h2 id="设置-secrets" tabindex="-1"> 设置 Secrets</h2>
+<p>进入你存放你博客源码的项目，然后以此点击 <code>Settings -&gt; Secrets</code>，接着点击右上角的 <code>New repository secret</code>，新建一个 <code>Secret</code>。这里的名字要命名为 <code>ACCESS_TOKEN</code>，然后 <code>Value</code> 就是我们上一步中所生成的 Token。</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/73b1aebaa00a49182756a17adac2430c.png" alt="" loading="lazy"></p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/263ad40d8338b257f2b8852e7b622cad.png" alt="" loading="lazy"></p>
+<h2 id="编写-action" tabindex="-1"> 编写 Action</h2>
+<p>进入项目的的 <code>Actions</code> 选项，然后新建一个 <code>workflow</code>（我是因为已经建立过了，所以才是下面的界面），默认新建的 <code>workflow</code> 名字是  <code>main.yml</code> 这个可以自己自定义，根据你自己喜好来就行了。</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/a057ab9c0039b346a0f90a0b2ce30c5a.png" alt="image-20210826100501499" loading="lazy"></p>
+<p>生成后的 <code>main.yml</code> 位于项目的 <code>.github/workflows</code> 目录下。</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/f2ec4500b986f31f6c1e56b32079c17a.png" alt="" loading="lazy"></p>
+<p>接下来是在 <code>main.yml</code> 中填入如下信息即可，具体实例的可以参考我的博客实例：</p>
+<blockquote>
+<p>https://github.com/cunyu1943/cunyu1943.github.io/</p>
+</blockquote>
+<div><pre><code><span># name 可以自定义</span>
+<span>name</span><span>:</span> Deploy GitHub Pages
+
+<span># 触发条件：在 push 到 main/master 分支后，新的 Github 项目 应该都是 main，而之前的项目一般都是 master</span>
+<span>on</span><span>:</span>
+  <span>push</span><span>:</span>
+    <span>branches</span><span>:</span>
+      <span>-</span> main
+
+<span># 任务</span>
+<span>jobs</span><span>:</span>
+  <span>build-and-deploy</span><span>:</span>
+    <span># 服务器环境：最新版 Ubuntu</span>
+    <span>runs-on</span><span>:</span> ubuntu<span>-</span>latest
+    <span>steps</span><span>:</span>
+      <span># 拉取代码</span>
+      <span>-</span> <span>name</span><span>:</span> Checkout
+        <span>uses</span><span>:</span> actions/checkout@v2
+        <span>with</span><span>:</span>
+          <span>persist-credentials</span><span>:</span> <span>false</span>
+
+      <span># 生成静态文件</span>
+      <span>-</span> <span>name</span><span>:</span> Build
+        <span>run</span><span>:</span> npm install <span>&amp;&amp;</span> npm run docs<span>:</span>build
+
+      <span># 部署到 GitHub Pages</span>
+      <span>-</span> <span>name</span><span>:</span> Deploy
+        <span>uses</span><span>:</span> JamesIves/github<span>-</span>pages<span>-</span>deploy<span>-</span>action@releases/v3
+        <span>with</span><span>:</span>
+          <span>ACCESS_TOKEN</span><span>:</span> $<span>{</span><span>{</span> secrets.ACCESS_TOKEN <span>}</span><span>}</span> <span># 也就是我们刚才生成的 secret</span>
+          <span>BRANCH</span><span>:</span> gh<span>-</span>pages <span># 部署到 gh-pages 分支，因为 main 分支存放的一般是源码，而 gh-pages 分支则用来存放生成的静态文件</span>
+          <span>FOLDER</span><span>:</span> docs/.vuepress/dist <span># vuepress 生成的静态文件存放的地方</span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br><span>27</span><br><span>28</span><br><span>29</span><br><span>30</span><br><span>31</span><br><span>32</span><br></div></div><h2 id="验证" tabindex="-1"> 验证</h2>
+<p>经过上面的的步骤配置好之后，就可以点击仓库的 <code>Actions</code> 来查看部署情况了。</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/6d49049a1ba67ac80b5c6480e79da729.png" alt="" loading="lazy"></p>
+<p>如果是绿色的，说明自动部署成功了，如果是红色，那就说明部署失败。这个时候我们可以点进去看看部署失败的日志信息。</p>
+<p>以我部署失败的一个实例来讲，可以看到主要是在部署步骤出了问题，我们就可以根据给出的错误日志来找出问题所在，然后找方法解决它了。</p>
+<p>我这里错误的大体意思就是说我 Vuepress 项目下的的 <code>dist</code> 目录不存在，而解决方法则是在 Vuepress 的配置文件中的 <code>dist</code> 设置为 <code>docs/.vuepress/dist</code> 即可。</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/8c815342f2679356f1cccc9c28f97f3f.png" alt="" loading="lazy"></p>
+<h2 id="总结" tabindex="-1"> 总结</h2>
+<p>以上就是关于 Vuepress + Github Actions 实现自动部署的所有内容了，如果对你有所帮助，那就帮忙点赞关注吧！</p>
+<p>最后，贴出我的博客地址，可以去看看效果！</p>
+<ul>
+<li>项目文件：https://github.com/cunyu1943/cunyu1943.github.io</li>
+<li>预览地址：https://cunyu1943.github.io/</li>
+</ul>
+<p>关注公众号，获取最新文章更新</p>
+<img src="https://github.com/cunyu1943/cunyu1943/blob/main/imgs/wepublic.gif" width="200" alt="公众号" />]]></content>
+    <category term="博客搭建"/>
+    <published>2022-01-01T20:35:22.000Z</published>
+  </entry>
   <entry>
     <title type="html">成员变量、实例变量、静态变量、局部变量？</title>
     <id>https://cunyu1943.github.io/JavaPark/JavaPark/java/java-se/all-kinds-of-variable.html</id>
     <link href="https://cunyu1943.github.io/JavaPark/JavaPark/java/java-se/all-kinds-of-variable.html"/>
-    <updated>2022-04-13T16:03:09.000Z</updated>
-    <summary type="html">刚开始学习的你，是不是被这几个概念弄得晕头转向。如果你也对它们感到很疑惑，那就进来瞅一眼吧。</summary>
+    <updated>2022-04-14T15:39:51.000Z</updated>
     <content type="html"><![CDATA[<h2 id="前言" tabindex="-1"> 前言</h2>
 <p>学习Java的过程中，一开始很容易被这些各种变量绕晕，这篇博客主要介绍了这几种变量之间的关系和区别。</p>
 <h2 id="实例" tabindex="-1"> 实例</h2>
@@ -87,14 +764,12 @@
 ]]></content>
     <category term="Java 菜鸟入门"/>
     <published>2022-01-15T22:07:48.000Z</published>
-    <rights>true</rights>
   </entry>
   <entry>
     <title type="html">深入浅出 Java 注解</title>
     <id>https://cunyu1943.github.io/JavaPark/JavaPark/java/java-se/annotations.html</id>
     <link href="https://cunyu1943.github.io/JavaPark/JavaPark/java/java-se/annotations.html"/>
-    <updated>2022-04-13T16:03:09.000Z</updated>
-    <summary type="html">所谓注解，就是一种能被添加到 Java 中的元数据。可以用它来修饰类、方法、变量等，但却对于修饰的代码造成直接影响，你知道这是为什么么？</summary>
+    <updated>2022-04-14T15:39:51.000Z</updated>
     <content type="html"><![CDATA[<h2 id="注解简介" tabindex="-1"> 注解简介</h2>
 <p>所谓注解，其实就像一种拥有特定作用的注释，自 JDK1.5 及之后版本所引入的特性，它是放在 Java 源码的类、方法、字段、参数前的一种用作标注的“元数据”，与类、接口、枚举处于同一个层次中。</p>
 <p>通过其作用的不同，我们常常将注解分为如下 3 类：</p>
@@ -454,14 +1129,12 @@
 ]]></content>
     <category term="Java 菜鸟入门"/>
     <published>2022-02-27T09:16:21.000Z</published>
-    <rights>true</rights>
   </entry>
   <entry>
     <title type="html">Java 控制流程</title>
     <id>https://cunyu1943.github.io/JavaPark/JavaPark/java/java-se/control-process.html</id>
     <link href="https://cunyu1943.github.io/JavaPark/JavaPark/java/java-se/control-process.html"/>
-    <updated>2022-04-13T16:03:09.000Z</updated>
-    <summary type="html">在实际的代码中，经常需要做条件判断、循环等操作。因此，需要有多种流程控制语句，来实现程序的跳转和循环工作。那么今天，我们就来学习 Java 中控制流程相关知识。</summary>
+    <updated>2022-04-14T15:39:51.000Z</updated>
     <content type="html"><![CDATA[<h2 id="往期推荐" tabindex="-1"> 往期推荐</h2>
 <blockquote>
 <ol>
@@ -991,14 +1664,12 @@
 ]]></content>
     <category term="Java 菜鸟入门"/>
     <published>2022-01-15T11:14:50.000Z</published>
-    <rights>true</rights>
   </entry>
   <entry>
     <title type="html">数组操作的奇技淫巧</title>
     <id>https://cunyu1943.github.io/JavaPark/JavaPark/java/java-se/how-to-operate-array.html</id>
     <link href="https://cunyu1943.github.io/JavaPark/JavaPark/java/java-se/how-to-operate-array.html"/>
-    <updated>2022-04-13T16:03:09.000Z</updated>
-    <summary type="html">之前在变量和数据类型章节，我们了解了 Java 中的 8 大基本数据类型，同时也介绍了引用类型，今天就来看看引用类型中的数组相关的使用技巧。</summary>
+    <updated>2022-04-14T15:39:51.000Z</updated>
     <content type="html"><![CDATA[<h2 id="前言" tabindex="-1"> 前言</h2>
 <p>前边已经讲过了 Java 中的 8 大基本数据类型，这篇文章主要就来讲讲引用类型中的数组。主要内容安排如下：</p>
 <ul>
@@ -1260,14 +1931,12 @@ arr <span>=</span> <span>new</span> <span>String</span><span>[</span><span>]</sp
 ]]></content>
     <category term="Java 菜鸟入门"/>
     <published>2022-01-15T11:28:39.000Z</published>
-    <rights>true</rights>
   </entry>
   <entry>
     <title type="html">Java 输入输出流</title>
     <id>https://cunyu1943.github.io/JavaPark/JavaPark/java/java-se/in-out-stream.html</id>
     <link href="https://cunyu1943.github.io/JavaPark/JavaPark/java/java-se/in-out-stream.html"/>
-    <updated>2022-04-13T16:03:09.000Z</updated>
-    <summary type="html">今天我们将学习 Java 中的 IO 流及其类型，以及如何利用 IO 流来进行文件的读写操作。</summary>
+    <updated>2022-04-14T15:39:51.000Z</updated>
     <content type="html"><![CDATA[<h2 id="前言" tabindex="-1"> 前言</h2>
 <p>我们日常开发过程中，有许多方面都涉及到 IO 流，比如上传下载、传输、设计模式等等。而所有的一切都是基于 IO 流来进行，所以今天就来看看 Java 中 IO 流的相关知识点。</p>
 <p>本文主要内容安排如下：</p>
@@ -1950,14 +2619,12 @@ arr <span>=</span> <span>new</span> <span>String</span><span>[</span><span>]</sp
 ]]></content>
     <category term="Java 菜鸟入门"/>
     <published>2022-01-15T21:41:48.000Z</published>
-    <rights>true</rights>
   </entry>
   <entry>
     <title type="html">JDBC 入门指南</title>
     <id>https://cunyu1943.github.io/JavaPark/JavaPark/java/java-se/jdbc-introduction.html</id>
     <link href="https://cunyu1943.github.io/JavaPark/JavaPark/java/java-se/jdbc-introduction.html"/>
-    <updated>2022-04-13T16:03:09.000Z</updated>
-    <summary type="html">受够了只是基于控制台黑窗口的程序，是时候该试试如何与数据库进行交互了。今天就来看看，如何写程序跟数据库打交道。</summary>
+    <updated>2022-04-14T15:39:51.000Z</updated>
     <content type="html"><![CDATA[<h2 id="前言" tabindex="-1"> 前言</h2>
 <p>在我们日常使用的 APP 或网站中，往往需要存取数据，比如在微信中，需要存储我们的用户名、手机号、用户密码…… 等一系列信息。依靠之前所学习的 Java 相关知识已经无法满足这一需求。现在的应用程序中最基本、应用最广的也就是关系型数据库，如 MySQL。Java 语言中为了实现与关系型数据库的通信，制定了标准的访问接口，即 JDBC（Java Database Connectivity）。本文主要介绍在 Java 中使用 JDBC 的相关知识，主要内容如下：</p>
 <ul>
@@ -2893,14 +3560,12 @@ arr <span>=</span> <span>new</span> <span>String</span><span>[</span><span>]</sp
 ]]></content>
     <category term="Java 菜鸟入门"/>
     <published>2022-01-15T21:59:14.000Z</published>
-    <rights>true</rights>
   </entry>
   <entry>
     <title type="html">Java 开发环境搭建及入门 Hello World 程序</title>
     <id>https://cunyu1943.github.io/JavaPark/JavaPark/java/java-se/jdk-install-and-hello-world.html</id>
     <link href="https://cunyu1943.github.io/JavaPark/JavaPark/java/java-se/jdk-install-and-hello-world.html"/>
-    <updated>2022-04-13T16:03:09.000Z</updated>
-    <summary type="html">Java 菜鸟入门系列教程第一篇，主要针对初学者应该如何搭建自己的 Java 开发环境，然后编写最经典的 Hello World 入门程序！</summary>
+    <updated>2022-04-14T15:39:51.000Z</updated>
     <content type="html"><![CDATA[<h2 id="前言" tabindex="-1"> 前言</h2>
 <p>作为一个入门的学习者，要进行 Java 开发，那怎么能少得了 JDK 呢，本文就先来看看如何安装并配置 JDK，为后续的学习做好铺垫。</p>
 <h2 id="下载并安装-jdk" tabindex="-1"> 下载并安装 JDK</h2>
@@ -3048,14 +3713,12 @@ java
 ]]></content>
     <category term="Java 菜鸟入门"/>
     <published>2022-01-11T10:42:38.000Z</published>
-    <rights>true</rights>
   </entry>
   <entry>
     <title type="html">IDEA，你的 Java 开发首选 IDE</title>
     <id>https://cunyu1943.github.io/JavaPark/JavaPark/java/java-se/learn-java-with-idea.html</id>
     <link href="https://cunyu1943.github.io/JavaPark/JavaPark/java/java-se/learn-java-with-idea.html"/>
-    <updated>2022-04-13T16:03:09.000Z</updated>
-    <summary type="html">本文主要对比了 IDEA 旗舰版与社区版的相关区别，并对 IDEA 在不同系统中的安装及卸载工作做了一个详细的介绍，最后则是利用安装好后的 IDEA 创建一个 Hello World 项目，实现上一篇博客中同样的效果。</summary>
+    <updated>2022-04-14T15:39:51.000Z</updated>
     <content type="html"><![CDATA[<h2 id="前言" tabindex="-1"> 前言</h2>
 <p>上一篇中，我们讲了 <a href="https://cunyu1943.github.io/posts/9a989e71/" target="_blank" rel="noopener noreferrer">如何搭建 Java 开发环境<ExternalLinkIcon/></a>。不过既然确定了要从事 Java 开发，那怎么能少得了一个趁手的 IDE 呢。正所谓工欲善其事。必先利其器，一个趁手的 IDE 就像电视剧里的神兵利器，能让我们功力大增，大大提高我们的效率。</p>
 <p>但是目前市场上那么多的 IDE，有 Eclipse、IntelliJ IDEA、NetBeans …… 我们究竟该选择哪一个呢？既然做不了决定，那我就替你选择吧！要是都没接触过，那就直接 IDEA 吧，要是你之前是个 Eclipse 的忠实粉丝，也推荐你用一下 IDEA 试试，你只需要把 IDEA 的快捷键方式设置为 Eclipse 方式即可，相信过了一开始的阵痛期之后，就会喜欢上 IDEA 这一神器。那接下来，我们就来进行 IDEA 的安装工作！</p>
@@ -3201,14 +3864,12 @@ java
 ]]></content>
     <category term="Java 菜鸟入门"/>
     <published>2022-01-11T21:43:01.000Z</published>
-    <rights>true</rights>
   </entry>
   <entry>
     <title type="html">Lombok 安装及使用指南</title>
     <id>https://cunyu1943.github.io/JavaPark/JavaPark/java/java-se/lombok-install-and-usage.html</id>
     <link href="https://cunyu1943.github.io/JavaPark/JavaPark/java/java-se/lombok-install-and-usage.html"/>
-    <updated>2022-04-13T16:03:09.000Z</updated>
-    <summary type="html">是否厌烦了重复去写各种 Getter、Setter、toString 等各种方法，那就了解下 Lombok 这个神器吧，只需要一个简单的注解，就能省去重复编写的时间，还能让代码更加清爽。</summary>
+    <updated>2022-04-14T15:39:51.000Z</updated>
     <content type="html"><![CDATA[<h2 id="简介" tabindex="-1"> 简介</h2>
 <p>为了减少写一些 <code>get/set/toString</code> 方法，让项目代码更加整洁，提高开发效率，发现大家都开始采用 Lombok 这个工具。Lombok 是一个 Java 类库，它会自动插入编辑器和构建工具，用于帮助开发人员消除 Java 中冗长样板代码。而我们开发人员所要做的，仅仅是添加几个 Lombok 中的注解，就可以替换掉原来的多行 <code>get/set/toString</code> 方法代码，既简洁也易于维护。下面我们就来看看，如何安装并使用这一工具。</p>
 <h2 id="安装-lombok" tabindex="-1"> 安装 Lombok</h2>
@@ -4221,14 +4882,12 @@ java
 ]]></content>
     <category term="Java 菜鸟入门"/>
     <published>2022-01-16T20:51:19.000Z</published>
-    <rights>true</rights>
   </entry>
   <entry>
     <title type="html">Java 中的面向对象（上）</title>
     <id>https://cunyu1943.github.io/JavaPark/JavaPark/java/java-se/oop-1.html</id>
     <link href="https://cunyu1943.github.io/JavaPark/JavaPark/java/java-se/oop-1.html"/>
-    <updated>2022-04-13T16:03:09.000Z</updated>
-    <summary type="html">如果你之前有学习 C 语言等编程语言的基础，经过上面章节的学习之后，你会发现其实大多和 C 语言中的知识点类型，可能就是细微的区别，而今天，我们就要来看看，Java 对比 C 语言的最大不同，也即面向对象思想的引入。</summary>
+    <updated>2022-04-14T15:39:51.000Z</updated>
     <content type="html"><![CDATA[<h2 id="前言" tabindex="-1"> 前言</h2>
 <p>前面已经讲了 Java 的一些环境搭建、IDE 使用、变量及数据类型、操作符、控制流程以及数组操作，今天就来看看 Java 里边的一个核心思想 - <strong>面向对象编程</strong>。内容预告如下：</p>
 <ul>
@@ -4490,14 +5149,12 @@ pet<span>.</span><span>setAge</span><span>(</span><span>3</span><span>)</span><s
 ]]></content>
     <category term="Java 菜鸟入门"/>
     <published>2022-01-15T11:31:47.000Z</published>
-    <rights>true</rights>
   </entry>
   <entry>
     <title type="html">Java 中的面向对象（下）</title>
     <id>https://cunyu1943.github.io/JavaPark/JavaPark/java/java-se/oop-2.html</id>
     <link href="https://cunyu1943.github.io/JavaPark/JavaPark/java/java-se/oop-2.html"/>
-    <updated>2022-04-13T16:03:09.000Z</updated>
-    <summary type="html">Java 中的包、注释以及如何创建 jar 包</summary>
+    <updated>2022-04-14T15:39:51.000Z</updated>
     <content type="html"><![CDATA[<h2 id="前言" tabindex="-1"> 前言</h2>
 <p>在上一篇文章 <a href="https://mp.weixin.qq.com/s?__biz=MzIyNTg2MjkzNw==&amp;mid=2247493594&amp;idx=1&amp;sn=f97c14f70a3d1bc4ae3036eac10a2f47&amp;chksm=e87b93acdf0c1abaeb0358f16feccd59547d6d76bed50dbe4f08221311b41126d6f801517f84&amp;token=121379199&amp;lang=zh_CN#rd" target="_blank" rel="noopener noreferrer">何为面向对象（上）<ExternalLinkIcon/></a> 中，讲到了面向的 3 大特性（<strong>封装、继承、多态</strong>）和面向对象设计的 5 大原则（SRP、OCP、LSP、DIP、ISP）。此外，我们还讲了如何创建一个类，并且在创建类后如何构造一个对象。然后还介绍了类中的属性和方法，并对构造方法和引用也做了简单的讲解。</p>
 <p>有了上面的基础之后，今天我们来继续学习面向对象的相关知识，主要内容预告如下：</p>
@@ -4714,14 +5371,12 @@ pet<span>.</span><span>setAge</span><span>(</span><span>3</span><span>)</span><s
 ]]></content>
     <category term="Java 菜鸟入门"/>
     <published>2022-04-03T16:20:59.000Z</published>
-    <rights>true</rights>
   </entry>
   <entry>
     <title type="html">Java 操作符</title>
     <id>https://cunyu1943.github.io/JavaPark/JavaPark/java/java-se/operator.html</id>
     <link href="https://cunyu1943.github.io/JavaPark/JavaPark/java/java-se/operator.html"/>
-    <updated>2022-04-13T16:03:09.000Z</updated>
-    <summary type="html">学习了 Java 中的变量和数据类型的相关知识，今天就继续来看看，Java 中的操作符都有哪些。</summary>
+    <updated>2022-04-14T15:39:51.000Z</updated>
     <content type="html"><![CDATA[<h2 id="前言" tabindex="-1"> 前言</h2>
 <p><a href="https://cunyu1943.github.io/posts/c6412b1/" target="_blank" rel="noopener noreferrer">上一篇<ExternalLinkIcon/></a> 文章中介绍了 Java 变量和数据类型，那么如何对他们进行运行算呢？这一节就来看看 Java 中的运算！</p>
 <p>本文主要内容：</p>
@@ -5136,14 +5791,12 @@ pet<span>.</span><span>setAge</span><span>(</span><span>3</span><span>)</span><s
 ]]></content>
     <category term="Java 菜鸟入门"/>
     <published>2022-01-15T11:05:04.000Z</published>
-    <rights>true</rights>
   </entry>
   <entry>
     <title type="html">Java 反射机制详解：入门、使用、实例</title>
     <id>https://cunyu1943.github.io/JavaPark/JavaPark/java/java-se/reflection.html</id>
     <link href="https://cunyu1943.github.io/JavaPark/JavaPark/java/java-se/reflection.html"/>
-    <updated>2022-04-13T16:03:09.000Z</updated>
-    <summary type="html">现在 Java 开发中有着许许多多的各类框架，但如果你扒开这些框架的底层代码一款，发现它们都离不开反射机制。那我们就来看看，用途如此之广的反射到底是个什么东西。</summary>
+    <updated>2022-04-14T15:39:51.000Z</updated>
     <content type="html"><![CDATA[<h2 id="反射概述" tabindex="-1"> 反射概述</h2>
 <h3 id="什么是反射" tabindex="-1"> 什么是反射</h3>
 <p>将类的各个组成部分封装为其他对象的过程就叫做 <strong>反射</strong>，其中 <strong>组成部分</strong> 指的是我们类的 <strong>成员变量（Field）</strong>、<strong>构造方法（Constructor）</strong>、<strong>成员方法（Method）</strong>。</p>
@@ -5788,14 +6441,12 @@ method<span>.</span><span>invoke</span><span>(</span>object<span>)</span><span>;
 ]]></content>
     <category term="Java 菜鸟入门"/>
     <published>2022-01-15T21:52:26.000Z</published>
-    <rights>true</rights>
   </entry>
   <entry>
     <title type="html">是时候拥抱 Junit 单元测试了！</title>
     <id>https://cunyu1943.github.io/JavaPark/JavaPark/java/java-se/test-with-junit.html</id>
     <link href="https://cunyu1943.github.io/JavaPark/JavaPark/java/java-se/test-with-junit.html"/>
-    <updated>2022-04-13T16:03:09.000Z</updated>
-    <summary type="html">前后端分离时代，你是否还在为你的后端单元测试而发愁？如果你还在等着前端程序来测试，那建议了解一下 Junit，自己先测试一遍再交给别人测试。</summary>
+    <updated>2022-04-14T15:39:51.000Z</updated>
     <content type="html"><![CDATA[<h2 id="何为测试" tabindex="-1"> 何为测试</h2>
 <p>在计算机领域中，所谓测试，描述的是一种用来鉴定软件正确性、完整性和质量的过程。而软件测试又一般可以分为黑盒测试和白盒测试，两者的相关定义如下。</p>
 <h3 id="黑盒测试" tabindex="-1"> 黑盒测试</h3>
@@ -6125,14 +6776,12 @@ method<span>.</span><span>invoke</span><span>(</span>object<span>)</span><span>;
 ]]></content>
     <category term="Java 菜鸟入门"/>
     <published>2022-01-16T09:21:33.000Z</published>
-    <rights>true</rights>
   </entry>
   <entry>
     <title type="html">Java 中的变量与数据类型</title>
     <id>https://cunyu1943.github.io/JavaPark/JavaPark/java/java-se/variable-and-datatype.html</id>
     <link href="https://cunyu1943.github.io/JavaPark/JavaPark/java/java-se/variable-and-datatype.html"/>
-    <updated>2022-04-13T16:03:09.000Z</updated>
-    <summary type="html">继前两篇文章之后，本文集中介绍了 Java 中的变量、数据类型、变量作用域以及常量等主要知识点。</summary>
+    <updated>2022-04-14T15:39:51.000Z</updated>
     <content type="html"><![CDATA[<h2 id="前情回顾" tabindex="-1"> 前情回顾</h2>
 <p>在之前的文章中，我们已经介绍了如何搭建 Java 开发环境以及如何使用 IDEA，现在就开始正式学习 Java 语言的相关语法吧！😎</p>
 <p>本期内容预告如下：</p>
@@ -6677,14 +7326,12 @@ num <span>=</span> <span>(</span><span>int</span><span>)</span>ans<span>;</span>
 ]]></content>
     <category term="Java 菜鸟入门"/>
     <published>2022-01-11T22:28:36.000Z</published>
-    <rights>true</rights>
   </entry>
   <entry>
     <title type="html">SpringBoot 配置详解</title>
     <id>https://cunyu1943.github.io/JavaPark/JavaPark/java/spring-boot/configuration.html</id>
     <link href="https://cunyu1943.github.io/JavaPark/JavaPark/java/spring-boot/configuration.html"/>
-    <updated>2022-04-13T16:03:09.000Z</updated>
-    <summary type="html">本文主要对 Spring Boot 项目中的配置文件进行了简单的介绍，并学习如何自定义属性并配置多环境项目，最后则是对比了当前主流的两种方式不同格式配置文件 yml 和 properties 的异同。</summary>
+    <updated>2022-04-14T15:39:51.000Z</updated>
     <content type="html"><![CDATA[<h2 id="前言" tabindex="-1"> 前言</h2>
 <p>为了 Spring Boot 能够更好地生成配置元数据文件，我们可以在创建项目时添加 <code>Spring Configuartion Processor</code> 依赖，或者在创建好项目后的 <code>pom.xml</code> 文件中手动添加。添加该依赖后，我们在编写配置时就会有属性提示，大大降低编写错误。</p>
 <div><pre><code><span><span><span>&lt;</span>dependency</span><span>></span></span>
@@ -6932,14 +7579,12 @@ num <span>=</span> <span>(</span><span>int</span><span>)</span>ans<span>;</span>
 ]]></content>
     <category term="Spring Boot 基础教程"/>
     <published>2022-01-09T16:15:47.000Z</published>
-    <rights>true</rights>
   </entry>
   <entry>
     <title type="html">Spring Boot 整合 FreeMarker 实例</title>
     <id>https://cunyu1943.github.io/JavaPark/JavaPark/java/spring-boot/integrated-freemarker.html</id>
     <link href="https://cunyu1943.github.io/JavaPark/JavaPark/java/spring-boot/integrated-freemarker.html"/>
-    <updated>2022-04-13T16:03:09.000Z</updated>
-    <summary type="html">本文以一个小 demo 来作示例，来看看如何整合 Spring Boot 和 FreeMarker.</summary>
+    <updated>2022-04-14T15:39:51.000Z</updated>
     <content type="html"><![CDATA[<h2 id="前言" tabindex="-1"> 前言</h2>
 <p>在之前的文章<a href="https://cunyu1943.blog.csdn.net/article/details/107671467" target="_blank" rel="noopener noreferrer">Spring Boot 整合 Thymeleaf<ExternalLinkIcon/></a>中，我们学习了如何将模板 Thymeleaf 整合到 Spring Boot 中，那今天我们就来看看，另一个老牌的开源免费模板引擎 - FreeMarker！</p>
 <h2 id="freemarker-简介" tabindex="-1"> FreeMarker 简介</h2>
@@ -7091,14 +7736,12 @@ num <span>=</span> <span>(</span><span>int</span><span>)</span>ans<span>;</span>
 ]]></content>
     <category term="Spring Boot 基础教程"/>
     <published>2021-12-29T22:05:44.000Z</published>
-    <rights>true</rights>
   </entry>
   <entry>
     <title type="html">Spring Boot 集成 Swagger2，构建强大的 API 文档</title>
     <id>https://cunyu1943.github.io/JavaPark/JavaPark/java/spring-boot/integrated-swagger2.html</id>
     <link href="https://cunyu1943.github.io/JavaPark/JavaPark/java/spring-boot/integrated-swagger2.html"/>
-    <updated>2022-04-13T16:03:09.000Z</updated>
-    <summary type="html">主要对 Swagger 进行了简单介绍，并用 Spring Boot 集成 Swagger，同时还进行简单的测试，构建我们自己的 API 接口文档。</summary>
+    <updated>2022-04-14T15:39:51.000Z</updated>
     <content type="html"><![CDATA[<h2 id="前言" tabindex="-1"> 前言</h2>
 <p>不管你是从事前端还是后端开发，相信都难免被接口文档折磨过。如果你是一个前端开发者，可能你会经常发现后端给的接口文档跟实际代码有所出入。而假设你是一个后端开发者，你可能又会觉得自己开发后端接口已经够烦的了，还要花费大量精力去编写和维护接口文档，所以难免有时候会更新不及时。这就可能造成了前后端相互不理解，最后甚至吵起来，哈哈哈 🤪。</p>
 <p>这时候我们就会想，有没有一款工具，能让我们快速实现编写接口文档。这个工具既能保证我们的接口文档实时更新，也能保证我们不用花过多时间去维护，就像写注释那么简单。</p>
@@ -7287,14 +7930,12 @@ num <span>=</span> <span>(</span><span>int</span><span>)</span>ans<span>;</span>
 ]]></content>
     <category term="Spring Boot 基础教程"/>
     <published>2022-01-06T09:01:56.000Z</published>
-    <rights>true</rights>
   </entry>
   <entry>
     <title type="html">Spring Boot 使用 Swagger3 生成 API 接口文档</title>
     <id>https://cunyu1943.github.io/JavaPark/JavaPark/java/spring-boot/integrated-swagger3.html</id>
     <link href="https://cunyu1943.github.io/JavaPark/JavaPark/java/spring-boot/integrated-swagger3.html"/>
-    <updated>2022-04-13T16:03:09.000Z</updated>
-    <summary type="html">主要介绍如何使用 Spring Boot 集成 Swagger3，构建我们自己的 API 接口文档，并对比了 Swagger2 和 Swagger3 的区别，让我们从 Swagger2 向 Swagger3 过渡更加顺滑。</summary>
+    <updated>2022-04-14T15:39:51.000Z</updated>
     <content type="html"><![CDATA[<h2 id="前言" tabindex="-1"> 前言</h2>
 <p>在之前的文章中，我们已经讲了如何利用 Spring Boot 来集成 Swagger2，详情可戳：<a href="https://blog.csdn.net/github_39655029/article/details/122336225" target="_blank" rel="noopener noreferrer">Spring Boot 集成 Swagger2，构建强大的 API 文档<ExternalLinkIcon/></a>。但其实 Swagger2 中主流的 <code>2.9.2</code> 自 2018 年发布后就已经好久没更新了，而在时隔两年之后的 2020 年，Swagger3 终于发布了。</p>
 <p>相比于之前的 Swagger2，Swagger3 无疑新添了更多的特点，而相对集中地，主要集中在如下几点。</p>
@@ -7558,14 +8199,12 @@ num <span>=</span> <span>(</span><span>int</span><span>)</span>ans<span>;</span>
 ]]></content>
     <category term="Spring Boot 基础教程"/>
     <published>2022-01-08T21:01:40.000Z</published>
-    <rights>true</rights>
   </entry>
   <entry>
     <title type="html">SpringBoot 整合 Thymeleaf 实例</title>
     <id>https://cunyu1943.github.io/JavaPark/JavaPark/java/spring-boot/integrated-thymeleaf.html</id>
     <link href="https://cunyu1943.github.io/JavaPark/JavaPark/java/spring-boot/integrated-thymeleaf.html"/>
-    <updated>2022-04-13T16:03:09.000Z</updated>
-    <summary type="html">本文以实例出发，从添加依赖，编写实体类和 Controller，创建 Thymeleaf 模板以及测试等步骤一步步讲述了如何利用 Spring Boot 整合 Thymeleaf，开启我们的 Web 开发之旅~</summary>
+    <updated>2022-04-14T15:39:51.000Z</updated>
     <content type="html"><![CDATA[<h2 id="什么是-thymeleaf" tabindex="-1"> 什么是 Thymeleaf</h2>
 <ul>
 <li>
@@ -7737,14 +8376,12 @@ num <span>=</span> <span>(</span><span>int</span><span>)</span>ans<span>;</span>
 ]]></content>
     <category term="Spring Boot 基础教程"/>
     <published>2022-01-09T16:17:16.000Z</published>
-    <rights>true</rights>
   </entry>
   <entry>
     <title type="html">Spring Boot 入门简介</title>
     <id>https://cunyu1943.github.io/JavaPark/JavaPark/java/spring-boot/introduction.html</id>
     <link href="https://cunyu1943.github.io/JavaPark/JavaPark/java/spring-boot/introduction.html"/>
-    <updated>2022-04-13T16:03:09.000Z</updated>
-    <summary type="html">作为 Spring Boot 基础教程的开篇，本文主要介绍了 Spring Boot 的定义、特点以及它的优缺点，并探讨了我们为何要使用 Spring Boot 这一利器，使用它又能给我们带来什么好处。</summary>
+    <updated>2022-04-14T15:39:51.000Z</updated>
     <content type="html"><![CDATA[<h2 id="前言" tabindex="-1"> 前言</h2>
 <p><code>Spring</code> 是重量级企业开发框架 <code>EJB（Enterprise JavaBean）</code> 的替代品，是为了解决企业级应用开发的复杂性而创建的，简化开发。通过 <strong>依赖注入（DI）</strong> 和 <strong>面向切面编程</strong>，用简单的 <strong><code>Java</code> 对象（<code>POJO</code>，<code>Plain Old Java Object</code>）</strong> 实现 <code>EJB</code> 的功能，<strong>其组件代码轻量，但是配置很繁琐（需要大量 <code>XML</code> 配置）</strong>。<code>Spring 2.5</code> 引入基于注解的组件扫描，<code>Spring 3.0</code> 引入基于 <code>Java</code> 的配置，可以代替 <code>XML</code>，虽然引入的特性大大提高了配置的效率，但是也无法避免，针对这一问题，<code>Spring Boot</code> 应运而生。</p>
 <p>Spring Boot 是为简化 Spring 应用初始搭建和开发过程，我们只要基于特定方式来进行配置即可。</p>
@@ -7811,14 +8448,12 @@ num <span>=</span> <span>(</span><span>int</span><span>)</span>ans<span>;</span>
 ]]></content>
     <category term="Spring Boot 基础教程"/>
     <published>2022-01-09T15:51:53.000Z</published>
-    <rights>true</rights>
   </entry>
   <entry>
     <title type="html">创建 SpringBoot 项目的 3 种方式</title>
     <id>https://cunyu1943.github.io/JavaPark/JavaPark/java/spring-boot/the-methods-to-create-springboot-project.html</id>
     <link href="https://cunyu1943.github.io/JavaPark/JavaPark/java/spring-boot/the-methods-to-create-springboot-project.html"/>
-    <updated>2022-04-13T16:03:09.000Z</updated>
-    <summary type="html">上一篇中我们讲了 Spring Boot 的一些特点及优缺点，这一篇我们就来看看，如何创建一个最简单的 Spring Boot 项目！</summary>
+    <updated>2022-04-14T15:39:51.000Z</updated>
     <content type="html"><![CDATA[<h2 id="前言" tabindex="-1"> 前言</h2>
 <p>如果你是一个浸淫 SpringBoot 已久的老手，那么可能下面的内容可能不那么适合你，写得很简单。但如果是
 对于一个刚学习 SpringBoot 的新手而言，我想多少还是有些用的。本文就来手把手教你如何创建一个 SpringBoot 项目，并对其中的一些关键信息进行简单分析，让你更加快速地掌握如何创建一个 SpringBoot 项目。</p>
@@ -8072,6 +8707,18 @@ num <span>=</span> <span>(</span><span>int</span><span>)</span>ans<span>;</span>
 ]]></content>
     <category term="Spring Boot 基础教程"/>
     <published>2022-01-09T15:51:15.000Z</published>
-    <rights>true</rights>
+  </entry>
+  <entry>
+    <title type="html">JavaPark(Java 自学指南)</title>
+    <id>https://cunyu1943.github.io/JavaPark/JavaPark/home.html</id>
+    <link href="https://cunyu1943.github.io/JavaPark/JavaPark/home.html"/>
+    <updated>2022-04-14T15:39:51.000Z</updated>
+    <content type="html"><![CDATA[<h2 id="必看专栏" tabindex="-1"> 必看专栏</h2>
+<ul>
+<li><a href="./java/java-se/jdk-install-and-hello-world">《Java 菜鸟入门》</a>：根据自己所学知识，结合网上的经典教程，输出针对 Java 新手程序员的详细入门教程！</li>
+<li><a href="./java/spring-boot/introduction">《Spring Boot 基础教程》</a>：根据自己所学习的知识，打造出的详细全面的 Spring Boot 2.x 基础教程！</li>
+</ul>
+]]></content>
+    <published>2022-04-14T00:00:00.000Z</published>
   </entry>
 </feed>
