@@ -6,8 +6,8 @@
     <link>https://cunyu1943.github.io/JavaPark/JavaPark/</link>
     <description>Java 自学编程之路</description>
     <language>zh-CN</language>
-    <pubDate>Mon, 18 Apr 2022 07:07:59 GMT</pubDate>
-    <lastBuildDate>Mon, 18 Apr 2022 07:07:59 GMT</lastBuildDate>
+    <pubDate>Mon, 18 Apr 2022 07:45:49 GMT</pubDate>
+    <lastBuildDate>Mon, 18 Apr 2022 07:45:49 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>JavaScript 教程</category>
@@ -14839,10 +14839,10 @@ hexo d
       <enclosure url="https://img-blog.csdnimg.cn/img_convert/5052e39e5de806967f5dcd97619b2984.png" type="image/png"/>
     </item>
     <item>
-      <title>成员变量、实例变量、静态变量、局部变量？</title>
+      <title>Java 菜鸟入门：成员变量、实例变量、静态变量、局部变量？</title>
       <link>https://cunyu1943.github.io/JavaPark/JavaPark/java/java-se/all-kinds-of-variable.html</link>
       <guid>https://cunyu1943.github.io/JavaPark/JavaPark/java/java-se/all-kinds-of-variable.html</guid>
-      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">成员变量、实例变量、静态变量、局部变量？</source>
+      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">Java 菜鸟入门：成员变量、实例变量、静态变量、局部变量？</source>
       <category>Java 菜鸟入门</category>
       <pubDate>Sat, 15 Jan 2022 22:07:48 GMT</pubDate>
       <content:encoded><![CDATA[<h2 id="前言" tabindex="-1"> 前言</h2>
@@ -15283,10 +15283,10 @@ hexo d
       <enclosure url="https://img-blog.csdnimg.cn/20210425095601385.png" type="image/png"/>
     </item>
     <item>
-      <title>Java 控制流程</title>
+      <title>Java 菜鸟入门：控制流程</title>
       <link>https://cunyu1943.github.io/JavaPark/JavaPark/java/java-se/control-process.html</link>
       <guid>https://cunyu1943.github.io/JavaPark/JavaPark/java/java-se/control-process.html</guid>
-      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">Java 控制流程</source>
+      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">Java 菜鸟入门：控制流程</source>
       <category>Java 菜鸟入门</category>
       <pubDate>Sat, 15 Jan 2022 11:14:50 GMT</pubDate>
       <content:encoded><![CDATA[<h2 id="往期推荐" tabindex="-1"> 往期推荐</h2>
@@ -15819,10 +15819,10 @@ hexo d
       <enclosure url="https://i.loli.net/2021/04/15/GOgNuZMFAK4SiHy.png" type="image/png"/>
     </item>
     <item>
-      <title>数组操作的奇技淫巧</title>
+      <title>Java 菜鸟入门：数组操作的奇技淫巧</title>
       <link>https://cunyu1943.github.io/JavaPark/JavaPark/java/java-se/how-to-operate-array.html</link>
       <guid>https://cunyu1943.github.io/JavaPark/JavaPark/java/java-se/how-to-operate-array.html</guid>
-      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">数组操作的奇技淫巧</source>
+      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">Java 菜鸟入门：数组操作的奇技淫巧</source>
       <category>Java 菜鸟入门</category>
       <pubDate>Sat, 15 Jan 2022 11:28:39 GMT</pubDate>
       <content:encoded><![CDATA[<h2 id="前言" tabindex="-1"> 前言</h2>
@@ -16087,10 +16087,10 @@ arr <span>=</span> <span>new</span> <span>String</span><span>[</span><span>]</sp
       <enclosure url="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/3ac401c4e57b4a909e5bec78d39b1fcf~tplv-k3u1fbpfcp-watermark.image" type="image/"/>
     </item>
     <item>
-      <title>Java 输入输出流</title>
+      <title>Java 菜鸟入门：输入输出流</title>
       <link>https://cunyu1943.github.io/JavaPark/JavaPark/java/java-se/in-out-stream.html</link>
       <guid>https://cunyu1943.github.io/JavaPark/JavaPark/java/java-se/in-out-stream.html</guid>
-      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">Java 输入输出流</source>
+      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">Java 菜鸟入门：输入输出流</source>
       <category>Java 菜鸟入门</category>
       <pubDate>Sat, 15 Jan 2022 21:41:48 GMT</pubDate>
       <content:encoded><![CDATA[<h2 id="前言" tabindex="-1"> 前言</h2>
@@ -16776,10 +16776,10 @@ arr <span>=</span> <span>new</span> <span>String</span><span>[</span><span>]</sp
       <enclosure url="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/4bd54169166f49678b8bae19c2115400~tplv-k3u1fbpfcp-watermark.image" type="image/"/>
     </item>
     <item>
-      <title>JDBC 入门指南</title>
+      <title>Java 菜鸟入门：JDBC 入门指南</title>
       <link>https://cunyu1943.github.io/JavaPark/JavaPark/java/java-se/jdbc-introduction.html</link>
       <guid>https://cunyu1943.github.io/JavaPark/JavaPark/java/java-se/jdbc-introduction.html</guid>
-      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">JDBC 入门指南</source>
+      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">Java 菜鸟入门：JDBC 入门指南</source>
       <category>Java 菜鸟入门</category>
       <pubDate>Sat, 15 Jan 2022 21:59:14 GMT</pubDate>
       <content:encoded><![CDATA[<h2 id="前言" tabindex="-1"> 前言</h2>
@@ -17718,10 +17718,10 @@ arr <span>=</span> <span>new</span> <span>String</span><span>[</span><span>]</sp
       <enclosure url="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c379a613f5064fde85a2a3bbcddea59d~tplv-k3u1fbpfcp-watermark.image" type="image/"/>
     </item>
     <item>
-      <title>Java 开发环境搭建及入门 Hello World 程序</title>
+      <title>Java 菜鸟入门：开发环境搭建及入门程序</title>
       <link>https://cunyu1943.github.io/JavaPark/JavaPark/java/java-se/jdk-install-and-hello-world.html</link>
       <guid>https://cunyu1943.github.io/JavaPark/JavaPark/java/java-se/jdk-install-and-hello-world.html</guid>
-      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">Java 开发环境搭建及入门 Hello World 程序</source>
+      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">Java 菜鸟入门：开发环境搭建及入门程序</source>
       <category>Java 菜鸟入门</category>
       <pubDate>Tue, 11 Jan 2022 10:42:38 GMT</pubDate>
       <content:encoded><![CDATA[<h2 id="前言" tabindex="-1"> 前言</h2>
@@ -17872,10 +17872,10 @@ java
       <enclosure url="https://cdn.jsdelivr.net/gh/cunyu1943/image-hosting-for-blog/imgimage-jdkxiazai.png" type="image/png"/>
     </item>
     <item>
-      <title>IDEA，你的 Java 开发首选 IDE</title>
+      <title>Java 菜鸟入门：利用 IDEA 进行 Java 开发</title>
       <link>https://cunyu1943.github.io/JavaPark/JavaPark/java/java-se/learn-java-with-idea.html</link>
       <guid>https://cunyu1943.github.io/JavaPark/JavaPark/java/java-se/learn-java-with-idea.html</guid>
-      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">IDEA，你的 Java 开发首选 IDE</source>
+      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">Java 菜鸟入门：利用 IDEA 进行 Java 开发</source>
       <category>Java 菜鸟入门</category>
       <pubDate>Tue, 11 Jan 2022 21:43:01 GMT</pubDate>
       <content:encoded><![CDATA[<h2 id="前言" tabindex="-1"> 前言</h2>
@@ -18024,10 +18024,10 @@ java
       <enclosure url="https://img-blog.csdnimg.cn/20200604092817501.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2dpdGh1Yl8zOTY1NTAyOQ==,size_16,color_FFFFFF,t_70" type="image/"/>
     </item>
     <item>
-      <title>Lombok 安装及使用指南</title>
+      <title>Java 菜鸟入门：Lombok 安装及使用指南</title>
       <link>https://cunyu1943.github.io/JavaPark/JavaPark/java/java-se/lombok-install-and-usage.html</link>
       <guid>https://cunyu1943.github.io/JavaPark/JavaPark/java/java-se/lombok-install-and-usage.html</guid>
-      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">Lombok 安装及使用指南</source>
+      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">Java 菜鸟入门：Lombok 安装及使用指南</source>
       <category>Java 菜鸟入门</category>
       <pubDate>Sun, 16 Jan 2022 20:51:19 GMT</pubDate>
       <content:encoded><![CDATA[<h2 id="简介" tabindex="-1"> 简介</h2>
@@ -19043,10 +19043,10 @@ java
       <enclosure url="https://gitee.com/cunyu1943/images/raw/master/imgsUbuntu/20200519140731.png" type="image/png"/>
     </item>
     <item>
-      <title>Java 中的面向对象（上）</title>
+      <title>Java 菜鸟入门：面向对象（上）</title>
       <link>https://cunyu1943.github.io/JavaPark/JavaPark/java/java-se/oop-1.html</link>
       <guid>https://cunyu1943.github.io/JavaPark/JavaPark/java/java-se/oop-1.html</guid>
-      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">Java 中的面向对象（上）</source>
+      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">Java 菜鸟入门：面向对象（上）</source>
       <category>Java 菜鸟入门</category>
       <pubDate>Sat, 15 Jan 2022 11:31:47 GMT</pubDate>
       <content:encoded><![CDATA[<h2 id="前言" tabindex="-1"> 前言</h2>
@@ -19311,10 +19311,10 @@ pet<span>.</span><span>setAge</span><span>(</span><span>3</span><span>)</span><s
       <enclosure url="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/8c6475fcddda4b19b7f1ba10ec940b09~tplv-k3u1fbpfcp-watermark.image" type="image/"/>
     </item>
     <item>
-      <title>Java 中的面向对象（下）</title>
+      <title>Java 菜鸟入门：面向对象（下）</title>
       <link>https://cunyu1943.github.io/JavaPark/JavaPark/java/java-se/oop-2.html</link>
       <guid>https://cunyu1943.github.io/JavaPark/JavaPark/java/java-se/oop-2.html</guid>
-      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">Java 中的面向对象（下）</source>
+      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">Java 菜鸟入门：面向对象（下）</source>
       <category>Java 菜鸟入门</category>
       <pubDate>Sun, 03 Apr 2022 16:20:59 GMT</pubDate>
       <content:encoded><![CDATA[<h2 id="前言" tabindex="-1"> 前言</h2>
@@ -19534,10 +19534,10 @@ pet<span>.</span><span>setAge</span><span>(</span><span>3</span><span>)</span><s
       <enclosure url="https://cdn.jsdelivr.net/gh/cunyu1943/blog-imgs@main/2022/04/image-20220403145655949.png" type="image/png"/>
     </item>
     <item>
-      <title>Java 操作符</title>
+      <title>Java 菜鸟入门：操作符</title>
       <link>https://cunyu1943.github.io/JavaPark/JavaPark/java/java-se/operator.html</link>
       <guid>https://cunyu1943.github.io/JavaPark/JavaPark/java/java-se/operator.html</guid>
-      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">Java 操作符</source>
+      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">Java 菜鸟入门：操作符</source>
       <category>Java 菜鸟入门</category>
       <pubDate>Sat, 15 Jan 2022 11:05:04 GMT</pubDate>
       <content:encoded><![CDATA[<h2 id="前言" tabindex="-1"> 前言</h2>
@@ -19955,10 +19955,10 @@ pet<span>.</span><span>setAge</span><span>(</span><span>3</span><span>)</span><s
       <enclosure url="https://i.loli.net/2021/04/15/hWksXpZNbVd1Qn2.png" type="image/png"/>
     </item>
     <item>
-      <title>Java 反射机制详解：入门、使用、实例</title>
+      <title>Java 菜鸟入门：反射机制详解</title>
       <link>https://cunyu1943.github.io/JavaPark/JavaPark/java/java-se/reflection.html</link>
       <guid>https://cunyu1943.github.io/JavaPark/JavaPark/java/java-se/reflection.html</guid>
-      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">Java 反射机制详解：入门、使用、实例</source>
+      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">Java 菜鸟入门：反射机制详解</source>
       <category>Java 菜鸟入门</category>
       <pubDate>Sat, 15 Jan 2022 21:52:26 GMT</pubDate>
       <content:encoded><![CDATA[<h2 id="反射概述" tabindex="-1"> 反射概述</h2>
@@ -20606,10 +20606,10 @@ method<span>.</span><span>invoke</span><span>(</span>object<span>)</span><span>;
       <enclosure url="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/49b4292e4a2847f799276d5ca4eae6b5~tplv-k3u1fbpfcp-watermark.image" type="image/"/>
     </item>
     <item>
-      <title>是时候拥抱 Junit 单元测试了！</title>
+      <title>Java 菜鸟入门：是时候拥抱 Junit 单元测试了！</title>
       <link>https://cunyu1943.github.io/JavaPark/JavaPark/java/java-se/test-with-junit.html</link>
       <guid>https://cunyu1943.github.io/JavaPark/JavaPark/java/java-se/test-with-junit.html</guid>
-      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">是时候拥抱 Junit 单元测试了！</source>
+      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">Java 菜鸟入门：是时候拥抱 Junit 单元测试了！</source>
       <category>Java 菜鸟入门</category>
       <pubDate>Sun, 16 Jan 2022 09:21:33 GMT</pubDate>
       <content:encoded><![CDATA[<h2 id="何为测试" tabindex="-1"> 何为测试</h2>
@@ -20942,10 +20942,10 @@ method<span>.</span><span>invoke</span><span>(</span>object<span>)</span><span>;
       <enclosure url="https://cdn.jsdelivr.net/gh/cunyu1943/blog-imgs/picgo/image-20210330095328265.png" type="image/png"/>
     </item>
     <item>
-      <title>Java 中的变量与数据类型</title>
+      <title>Java 菜鸟入门：变量与数据类型</title>
       <link>https://cunyu1943.github.io/JavaPark/JavaPark/java/java-se/variable-and-datatype.html</link>
       <guid>https://cunyu1943.github.io/JavaPark/JavaPark/java/java-se/variable-and-datatype.html</guid>
-      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">Java 中的变量与数据类型</source>
+      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">Java 菜鸟入门：变量与数据类型</source>
       <category>Java 菜鸟入门</category>
       <pubDate>Tue, 11 Jan 2022 22:28:36 GMT</pubDate>
       <content:encoded><![CDATA[<h2 id="前情回顾" tabindex="-1"> 前情回顾</h2>

@@ -3,7 +3,7 @@
   <id>https://cunyu1943.github.io/JavaPark/JavaPark/</id>
   <title>JavaPark</title>
   <subtitle>Java 自学编程之路</subtitle>
-  <updated>2022-04-18T07:07:59.470Z</updated>
+  <updated>2022-04-18T07:45:49.404Z</updated>
   <generator>vuepress-plugin-feed2</generator>
   <link rel="self" href="https://cunyu1943.github.io/JavaPark/JavaPark/atom.xml"/>
   <link rel="alternate" href="https://cunyu1943.github.io/JavaPark/JavaPark/"/>
@@ -14794,10 +14794,10 @@ hexo d
     <published>2022-01-01T20:35:22.000Z</published>
   </entry>
   <entry>
-    <title type="html">成员变量、实例变量、静态变量、局部变量？</title>
+    <title type="html">Java 菜鸟入门：成员变量、实例变量、静态变量、局部变量？</title>
     <id>https://cunyu1943.github.io/JavaPark/JavaPark/java/java-se/all-kinds-of-variable.html</id>
     <link href="https://cunyu1943.github.io/JavaPark/JavaPark/java/java-se/all-kinds-of-variable.html"/>
-    <updated>2022-04-16T14:44:06.000Z</updated>
+    <updated>2022-04-18T07:35:02.000Z</updated>
     <content type="html"><![CDATA[<h2 id="前言" tabindex="-1"> 前言</h2>
 <p>学习Java的过程中，一开始很容易被这些各种变量绕晕，这篇博客主要介绍了这几种变量之间的关系和区别。</p>
 <h2 id="实例" tabindex="-1"> 实例</h2>
@@ -15237,10 +15237,10 @@ hexo d
     <published>2022-02-27T09:16:21.000Z</published>
   </entry>
   <entry>
-    <title type="html">Java 控制流程</title>
+    <title type="html">Java 菜鸟入门：控制流程</title>
     <id>https://cunyu1943.github.io/JavaPark/JavaPark/java/java-se/control-process.html</id>
     <link href="https://cunyu1943.github.io/JavaPark/JavaPark/java/java-se/control-process.html"/>
-    <updated>2022-04-16T14:44:06.000Z</updated>
+    <updated>2022-04-18T07:35:02.000Z</updated>
     <content type="html"><![CDATA[<h2 id="往期推荐" tabindex="-1"> 往期推荐</h2>
 <blockquote>
 <ol>
@@ -15772,10 +15772,10 @@ hexo d
     <published>2022-01-15T11:14:50.000Z</published>
   </entry>
   <entry>
-    <title type="html">数组操作的奇技淫巧</title>
+    <title type="html">Java 菜鸟入门：数组操作的奇技淫巧</title>
     <id>https://cunyu1943.github.io/JavaPark/JavaPark/java/java-se/how-to-operate-array.html</id>
     <link href="https://cunyu1943.github.io/JavaPark/JavaPark/java/java-se/how-to-operate-array.html"/>
-    <updated>2022-04-16T14:44:06.000Z</updated>
+    <updated>2022-04-18T07:35:02.000Z</updated>
     <content type="html"><![CDATA[<h2 id="前言" tabindex="-1"> 前言</h2>
 <p>前边已经讲过了 Java 中的 8 大基本数据类型，这篇文章主要就来讲讲引用类型中的数组。主要内容安排如下：</p>
 <ul>
@@ -16039,10 +16039,10 @@ arr <span>=</span> <span>new</span> <span>String</span><span>[</span><span>]</sp
     <published>2022-01-15T11:28:39.000Z</published>
   </entry>
   <entry>
-    <title type="html">Java 输入输出流</title>
+    <title type="html">Java 菜鸟入门：输入输出流</title>
     <id>https://cunyu1943.github.io/JavaPark/JavaPark/java/java-se/in-out-stream.html</id>
     <link href="https://cunyu1943.github.io/JavaPark/JavaPark/java/java-se/in-out-stream.html"/>
-    <updated>2022-04-16T14:44:06.000Z</updated>
+    <updated>2022-04-18T07:35:02.000Z</updated>
     <content type="html"><![CDATA[<h2 id="前言" tabindex="-1"> 前言</h2>
 <p>我们日常开发过程中，有许多方面都涉及到 IO 流，比如上传下载、传输、设计模式等等。而所有的一切都是基于 IO 流来进行，所以今天就来看看 Java 中 IO 流的相关知识点。</p>
 <p>本文主要内容安排如下：</p>
@@ -16727,10 +16727,10 @@ arr <span>=</span> <span>new</span> <span>String</span><span>[</span><span>]</sp
     <published>2022-01-15T21:41:48.000Z</published>
   </entry>
   <entry>
-    <title type="html">JDBC 入门指南</title>
+    <title type="html">Java 菜鸟入门：JDBC 入门指南</title>
     <id>https://cunyu1943.github.io/JavaPark/JavaPark/java/java-se/jdbc-introduction.html</id>
     <link href="https://cunyu1943.github.io/JavaPark/JavaPark/java/java-se/jdbc-introduction.html"/>
-    <updated>2022-04-16T14:44:06.000Z</updated>
+    <updated>2022-04-18T07:35:02.000Z</updated>
     <content type="html"><![CDATA[<h2 id="前言" tabindex="-1"> 前言</h2>
 <p>在我们日常使用的 APP 或网站中，往往需要存取数据，比如在微信中，需要存储我们的用户名、手机号、用户密码…… 等一系列信息。依靠之前所学习的 Java 相关知识已经无法满足这一需求。现在的应用程序中最基本、应用最广的也就是关系型数据库，如 MySQL。Java 语言中为了实现与关系型数据库的通信，制定了标准的访问接口，即 JDBC（Java Database Connectivity）。本文主要介绍在 Java 中使用 JDBC 的相关知识，主要内容如下：</p>
 <ul>
@@ -17668,10 +17668,10 @@ arr <span>=</span> <span>new</span> <span>String</span><span>[</span><span>]</sp
     <published>2022-01-15T21:59:14.000Z</published>
   </entry>
   <entry>
-    <title type="html">Java 开发环境搭建及入门 Hello World 程序</title>
+    <title type="html">Java 菜鸟入门：开发环境搭建及入门程序</title>
     <id>https://cunyu1943.github.io/JavaPark/JavaPark/java/java-se/jdk-install-and-hello-world.html</id>
     <link href="https://cunyu1943.github.io/JavaPark/JavaPark/java/java-se/jdk-install-and-hello-world.html"/>
-    <updated>2022-04-16T14:44:06.000Z</updated>
+    <updated>2022-04-18T07:35:02.000Z</updated>
     <content type="html"><![CDATA[<h2 id="前言" tabindex="-1"> 前言</h2>
 <p>作为一个入门的学习者，要进行 Java 开发，那怎么能少得了 JDK 呢，本文就先来看看如何安装并配置 JDK，为后续的学习做好铺垫。</p>
 <h2 id="下载并安装-jdk" tabindex="-1"> 下载并安装 JDK</h2>
@@ -17821,10 +17821,10 @@ java
     <published>2022-01-11T10:42:38.000Z</published>
   </entry>
   <entry>
-    <title type="html">IDEA，你的 Java 开发首选 IDE</title>
+    <title type="html">Java 菜鸟入门：利用 IDEA 进行 Java 开发</title>
     <id>https://cunyu1943.github.io/JavaPark/JavaPark/java/java-se/learn-java-with-idea.html</id>
     <link href="https://cunyu1943.github.io/JavaPark/JavaPark/java/java-se/learn-java-with-idea.html"/>
-    <updated>2022-04-16T14:44:06.000Z</updated>
+    <updated>2022-04-18T07:35:02.000Z</updated>
     <content type="html"><![CDATA[<h2 id="前言" tabindex="-1"> 前言</h2>
 <p>上一篇中，我们讲了 <a href="https://cunyu1943.github.io/posts/9a989e71/" target="_blank" rel="noopener noreferrer">如何搭建 Java 开发环境<ExternalLinkIcon/></a>。不过既然确定了要从事 Java 开发，那怎么能少得了一个趁手的 IDE 呢。正所谓工欲善其事。必先利其器，一个趁手的 IDE 就像电视剧里的神兵利器，能让我们功力大增，大大提高我们的效率。</p>
 <p>但是目前市场上那么多的 IDE，有 Eclipse、IntelliJ IDEA、NetBeans …… 我们究竟该选择哪一个呢？既然做不了决定，那我就替你选择吧！要是都没接触过，那就直接 IDEA 吧，要是你之前是个 Eclipse 的忠实粉丝，也推荐你用一下 IDEA 试试，你只需要把 IDEA 的快捷键方式设置为 Eclipse 方式即可，相信过了一开始的阵痛期之后，就会喜欢上 IDEA 这一神器。那接下来，我们就来进行 IDEA 的安装工作！</p>
@@ -17972,10 +17972,10 @@ java
     <published>2022-01-11T21:43:01.000Z</published>
   </entry>
   <entry>
-    <title type="html">Lombok 安装及使用指南</title>
+    <title type="html">Java 菜鸟入门：Lombok 安装及使用指南</title>
     <id>https://cunyu1943.github.io/JavaPark/JavaPark/java/java-se/lombok-install-and-usage.html</id>
     <link href="https://cunyu1943.github.io/JavaPark/JavaPark/java/java-se/lombok-install-and-usage.html"/>
-    <updated>2022-04-16T14:44:06.000Z</updated>
+    <updated>2022-04-18T07:35:02.000Z</updated>
     <content type="html"><![CDATA[<h2 id="简介" tabindex="-1"> 简介</h2>
 <p>为了减少写一些 <code>get/set/toString</code> 方法，让项目代码更加整洁，提高开发效率，发现大家都开始采用 Lombok 这个工具。Lombok 是一个 Java 类库，它会自动插入编辑器和构建工具，用于帮助开发人员消除 Java 中冗长样板代码。而我们开发人员所要做的，仅仅是添加几个 Lombok 中的注解，就可以替换掉原来的多行 <code>get/set/toString</code> 方法代码，既简洁也易于维护。下面我们就来看看，如何安装并使用这一工具。</p>
 <h2 id="安装-lombok" tabindex="-1"> 安装 Lombok</h2>
@@ -18990,10 +18990,10 @@ java
     <published>2022-01-16T20:51:19.000Z</published>
   </entry>
   <entry>
-    <title type="html">Java 中的面向对象（上）</title>
+    <title type="html">Java 菜鸟入门：面向对象（上）</title>
     <id>https://cunyu1943.github.io/JavaPark/JavaPark/java/java-se/oop-1.html</id>
     <link href="https://cunyu1943.github.io/JavaPark/JavaPark/java/java-se/oop-1.html"/>
-    <updated>2022-04-16T14:44:06.000Z</updated>
+    <updated>2022-04-18T07:35:02.000Z</updated>
     <content type="html"><![CDATA[<h2 id="前言" tabindex="-1"> 前言</h2>
 <p>前面已经讲了 Java 的一些环境搭建、IDE 使用、变量及数据类型、操作符、控制流程以及数组操作，今天就来看看 Java 里边的一个核心思想 - <strong>面向对象编程</strong>。内容预告如下：</p>
 <ul>
@@ -19257,10 +19257,10 @@ pet<span>.</span><span>setAge</span><span>(</span><span>3</span><span>)</span><s
     <published>2022-01-15T11:31:47.000Z</published>
   </entry>
   <entry>
-    <title type="html">Java 中的面向对象（下）</title>
+    <title type="html">Java 菜鸟入门：面向对象（下）</title>
     <id>https://cunyu1943.github.io/JavaPark/JavaPark/java/java-se/oop-2.html</id>
     <link href="https://cunyu1943.github.io/JavaPark/JavaPark/java/java-se/oop-2.html"/>
-    <updated>2022-04-16T14:44:06.000Z</updated>
+    <updated>2022-04-18T07:35:02.000Z</updated>
     <content type="html"><![CDATA[<h2 id="前言" tabindex="-1"> 前言</h2>
 <p>在上一篇文章 <a href="https://mp.weixin.qq.com/s?__biz=MzIyNTg2MjkzNw==&amp;mid=2247493594&amp;idx=1&amp;sn=f97c14f70a3d1bc4ae3036eac10a2f47&amp;chksm=e87b93acdf0c1abaeb0358f16feccd59547d6d76bed50dbe4f08221311b41126d6f801517f84&amp;token=121379199&amp;lang=zh_CN#rd" target="_blank" rel="noopener noreferrer">何为面向对象（上）<ExternalLinkIcon/></a> 中，讲到了面向的 3 大特性（<strong>封装、继承、多态</strong>）和面向对象设计的 5 大原则（SRP、OCP、LSP、DIP、ISP）。此外，我们还讲了如何创建一个类，并且在创建类后如何构造一个对象。然后还介绍了类中的属性和方法，并对构造方法和引用也做了简单的讲解。</p>
 <p>有了上面的基础之后，今天我们来继续学习面向对象的相关知识，主要内容预告如下：</p>
@@ -19479,10 +19479,10 @@ pet<span>.</span><span>setAge</span><span>(</span><span>3</span><span>)</span><s
     <published>2022-04-03T16:20:59.000Z</published>
   </entry>
   <entry>
-    <title type="html">Java 操作符</title>
+    <title type="html">Java 菜鸟入门：操作符</title>
     <id>https://cunyu1943.github.io/JavaPark/JavaPark/java/java-se/operator.html</id>
     <link href="https://cunyu1943.github.io/JavaPark/JavaPark/java/java-se/operator.html"/>
-    <updated>2022-04-16T14:44:06.000Z</updated>
+    <updated>2022-04-18T07:35:02.000Z</updated>
     <content type="html"><![CDATA[<h2 id="前言" tabindex="-1"> 前言</h2>
 <p><a href="https://cunyu1943.github.io/posts/c6412b1/" target="_blank" rel="noopener noreferrer">上一篇<ExternalLinkIcon/></a> 文章中介绍了 Java 变量和数据类型，那么如何对他们进行运行算呢？这一节就来看看 Java 中的运算！</p>
 <p>本文主要内容：</p>
@@ -19899,10 +19899,10 @@ pet<span>.</span><span>setAge</span><span>(</span><span>3</span><span>)</span><s
     <published>2022-01-15T11:05:04.000Z</published>
   </entry>
   <entry>
-    <title type="html">Java 反射机制详解：入门、使用、实例</title>
+    <title type="html">Java 菜鸟入门：反射机制详解</title>
     <id>https://cunyu1943.github.io/JavaPark/JavaPark/java/java-se/reflection.html</id>
     <link href="https://cunyu1943.github.io/JavaPark/JavaPark/java/java-se/reflection.html"/>
-    <updated>2022-04-16T14:44:06.000Z</updated>
+    <updated>2022-04-18T07:35:02.000Z</updated>
     <content type="html"><![CDATA[<h2 id="反射概述" tabindex="-1"> 反射概述</h2>
 <h3 id="什么是反射" tabindex="-1"> 什么是反射</h3>
 <p>将类的各个组成部分封装为其他对象的过程就叫做 <strong>反射</strong>，其中 <strong>组成部分</strong> 指的是我们类的 <strong>成员变量（Field）</strong>、<strong>构造方法（Constructor）</strong>、<strong>成员方法（Method）</strong>。</p>
@@ -20549,10 +20549,10 @@ method<span>.</span><span>invoke</span><span>(</span>object<span>)</span><span>;
     <published>2022-01-15T21:52:26.000Z</published>
   </entry>
   <entry>
-    <title type="html">是时候拥抱 Junit 单元测试了！</title>
+    <title type="html">Java 菜鸟入门：是时候拥抱 Junit 单元测试了！</title>
     <id>https://cunyu1943.github.io/JavaPark/JavaPark/java/java-se/test-with-junit.html</id>
     <link href="https://cunyu1943.github.io/JavaPark/JavaPark/java/java-se/test-with-junit.html"/>
-    <updated>2022-04-16T14:44:06.000Z</updated>
+    <updated>2022-04-18T07:35:02.000Z</updated>
     <content type="html"><![CDATA[<h2 id="何为测试" tabindex="-1"> 何为测试</h2>
 <p>在计算机领域中，所谓测试，描述的是一种用来鉴定软件正确性、完整性和质量的过程。而软件测试又一般可以分为黑盒测试和白盒测试，两者的相关定义如下。</p>
 <h3 id="黑盒测试" tabindex="-1"> 黑盒测试</h3>
@@ -20884,10 +20884,10 @@ method<span>.</span><span>invoke</span><span>(</span>object<span>)</span><span>;
     <published>2022-01-16T09:21:33.000Z</published>
   </entry>
   <entry>
-    <title type="html">Java 中的变量与数据类型</title>
+    <title type="html">Java 菜鸟入门：变量与数据类型</title>
     <id>https://cunyu1943.github.io/JavaPark/JavaPark/java/java-se/variable-and-datatype.html</id>
     <link href="https://cunyu1943.github.io/JavaPark/JavaPark/java/java-se/variable-and-datatype.html"/>
-    <updated>2022-04-16T14:44:06.000Z</updated>
+    <updated>2022-04-18T07:35:02.000Z</updated>
     <content type="html"><![CDATA[<h2 id="前情回顾" tabindex="-1"> 前情回顾</h2>
 <p>在之前的文章中，我们已经介绍了如何搭建 Java 开发环境以及如何使用 IDEA，现在就开始正式学习 Java 语言的相关语法吧！😎</p>
 <p>本期内容预告如下：</p>
