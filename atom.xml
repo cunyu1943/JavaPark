@@ -3,7 +3,7 @@
   <id>https://cunyu1943.github.io/JavaPark/JavaPark/</id>
   <title>JavaPark</title>
   <subtitle>Java 自学编程之路</subtitle>
-  <updated>2022-04-18T07:58:24.779Z</updated>
+  <updated>2022-04-18T08:49:00.673Z</updated>
   <generator>vuepress-plugin-feed2</generator>
   <link rel="self" href="https://cunyu1943.github.io/JavaPark/JavaPark/atom.xml"/>
   <link rel="alternate" href="https://cunyu1943.github.io/JavaPark/JavaPark/"/>
@@ -13649,10 +13649,10 @@ ORDER BY ……
     <published>2022-02-19T23:05:11.000Z</published>
   </entry>
   <entry>
-    <title type="html">Maven 常用命令及项目骨架生成</title>
+    <title type="html">Maven 入门手册：常用命令及项目骨架生成</title>
     <id>https://cunyu1943.github.io/JavaPark/JavaPark/java/maven/maven-command-skeleton.html</id>
     <link href="https://cunyu1943.github.io/JavaPark/JavaPark/java/maven/maven-command-skeleton.html"/>
-    <updated>2022-04-16T14:44:06.000Z</updated>
+    <updated>2022-04-18T08:47:59.000Z</updated>
     <content type="html"><![CDATA[<h2 id="前言" tabindex="-1"> 前言</h2>
 <p>上一篇文章中我们已经介绍了什么是 Maven，以及如何进行 Maven 的安装，最后还对 Maven 安装后的简单配置进行了讲解。今天我们就主要来看看 Maven 中的核心概念以及 Maven 在日常使用中常用的命令。</p>
 <h2 id="maven-核心" tabindex="-1"> Maven 核心</h2>
@@ -13766,13 +13766,13 @@ ORDER BY ……
 <p>好了，以上就是 Maven 中的一些常用命令和如何利用 Archetype 来生成项目骨架，以及利用 Maven 所生成的项目的总体结构了。如果你觉得对你有所帮助，还请点赞关注一波哦。今天就到此为止了，下一期我们继续来看如何利用 Maven 进行依赖管理，敬请期待吧！</p>
 ]]></content>
     <category term="Maven 入门教程"/>
-    <published>2022-04-16T02:23:21.000Z</published>
+    <published>2022-04-18T00:00:00.000Z</published>
   </entry>
   <entry>
-    <title type="html">Maven 简介，安装及配置</title>
+    <title type="html">Maven 入门手册：简介，安装及配置</title>
     <id>https://cunyu1943.github.io/JavaPark/JavaPark/java/maven/maven-intro-install.html</id>
     <link href="https://cunyu1943.github.io/JavaPark/JavaPark/java/maven/maven-intro-install.html"/>
-    <updated>2022-04-16T07:38:03.000Z</updated>
+    <updated>2022-04-18T08:47:59.000Z</updated>
     <content type="html"><![CDATA[<h2 id="前言" tabindex="-1"> 前言</h2>
 <p>在我们之前的开发过程中，往往会遇到以下问题：</p>
 <ul>
@@ -13865,10 +13865,10 @@ ORDER BY ……
     <published>2021-12-30T15:07:13.000Z</published>
   </entry>
   <entry>
-    <title type="html">如何使用 IDEA 创建 Maven 项目</title>
+    <title type="html">Maven 入门手册：使用 IDEA 创建 Maven 项目</title>
     <id>https://cunyu1943.github.io/JavaPark/JavaPark/java/maven/maven-project-with-idea.html</id>
     <link href="https://cunyu1943.github.io/JavaPark/JavaPark/java/maven/maven-project-with-idea.html"/>
-    <updated>2022-04-16T07:38:03.000Z</updated>
+    <updated>2022-04-18T08:47:59.000Z</updated>
     <content type="html"><![CDATA[<h2 id="前言" tabindex="-1"> 前言</h2>
 <p>之前我们已经学习过 Maven 是什么，我们可以用它来干什么。接着我们又介绍了如何安装和配置 Maven，再接着，我们又了解了 Maven 中常用的一些命令以及如何利用 Archetype 来生成项目骨架，并对利用 Maven 所生成项目的结构进行了描述。最后则是 Maven 中的一些核心概念和如何进行依赖管理，并说明当依赖产生冲突时，应该如何解决。但以上始终还是停留在概念的阶段，并未进入我们实际的开发中。那么今天的内容就主要来看看，我们如何利用 IDEA 搭配 Maven 来开发一个简单的 Demo。</p>
 <h2 id="idea-中的-maven-配置" tabindex="-1"> IDEA 中的 Maven 配置</h2>
@@ -13900,8 +13900,8 @@ ORDER BY ……
 | ----- ||     |  | java/ |
 | --- ||     | resources/ |
 | --- | ---------- || test/ |
-| ----- |  || java/ |
-| ----- ||  |resources/
+| ----- ||     | java/ |
+| --- ||  |resources/
     |----pom.xml
 </code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br></div></div><p><img src="https://s1.ax1x.com/2020/07/07/UFZVRs.png" alt="" loading="lazy"></p>
 <ol start="4">
@@ -14000,10 +14000,10 @@ ORDER BY ……
     <published>2022-01-09T23:03:42.000Z</published>
   </entry>
   <entry>
-    <title type="html">Maven 仓库、坐标以及依赖管理</title>
+    <title type="html">Maven 入门手册：仓库、坐标以及依赖管理</title>
     <id>https://cunyu1943.github.io/JavaPark/JavaPark/java/maven/maven-warehouse-dependency.html</id>
     <link href="https://cunyu1943.github.io/JavaPark/JavaPark/java/maven/maven-warehouse-dependency.html"/>
-    <updated>2022-04-16T07:38:03.000Z</updated>
+    <updated>2022-04-18T08:47:59.000Z</updated>
     <content type="html"><![CDATA[<h2 id="前言" tabindex="-1"> 前言</h2>
 <p>在我们创建使用 Maven 项目的过程中，当需要用到第三方的插件时，都是通过依赖管理来达成，也就是 Maven 项目中必有的 <code>pom.xml</code> 文件。POM（Project Object Model），即 <strong>项目对象模型</strong>，其中定义了 Maven 项目的形式。因此，<code>pom.xml</code> 可以看做是 Maven 项目中的导航。</p>
 <h2 id="maven-仓库" tabindex="-1"> Maven 仓库</h2>

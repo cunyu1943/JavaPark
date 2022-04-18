@@ -6,8 +6,8 @@
     <link>https://cunyu1943.github.io/JavaPark/JavaPark/</link>
     <description>Java 自学编程之路</description>
     <language>zh-CN</language>
-    <pubDate>Mon, 18 Apr 2022 07:58:24 GMT</pubDate>
-    <lastBuildDate>Mon, 18 Apr 2022 07:58:24 GMT</lastBuildDate>
+    <pubDate>Mon, 18 Apr 2022 08:49:00 GMT</pubDate>
+    <lastBuildDate>Mon, 18 Apr 2022 08:49:00 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>JavaScript 教程</category>
@@ -13687,12 +13687,12 @@ ORDER BY ……
       <enclosure url="https://cdn.jsdelivr.net/gh/cunyu1943/blog-imgs@main/blog/image-new-project.png" type="image/png"/>
     </item>
     <item>
-      <title>Maven 常用命令及项目骨架生成</title>
+      <title>Maven 入门手册：常用命令及项目骨架生成</title>
       <link>https://cunyu1943.github.io/JavaPark/JavaPark/java/maven/maven-command-skeleton.html</link>
       <guid>https://cunyu1943.github.io/JavaPark/JavaPark/java/maven/maven-command-skeleton.html</guid>
-      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">Maven 常用命令及项目骨架生成</source>
+      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">Maven 入门手册：常用命令及项目骨架生成</source>
       <category>Maven 入门教程</category>
-      <pubDate>Sat, 16 Apr 2022 02:23:21 GMT</pubDate>
+      <pubDate>Mon, 18 Apr 2022 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2 id="前言" tabindex="-1"> 前言</h2>
 <p>上一篇文章中我们已经介绍了什么是 Maven，以及如何进行 Maven 的安装，最后还对 Maven 安装后的简单配置进行了讲解。今天我们就主要来看看 Maven 中的核心概念以及 Maven 在日常使用中常用的命令。</p>
 <h2 id="maven-核心" tabindex="-1"> Maven 核心</h2>
@@ -13808,10 +13808,10 @@ ORDER BY ……
       <enclosure url="https://s1.ax1x.com/2020/07/07/UFZGW9.png" type="image/png"/>
     </item>
     <item>
-      <title>Maven 简介，安装及配置</title>
+      <title>Maven 入门手册：简介，安装及配置</title>
       <link>https://cunyu1943.github.io/JavaPark/JavaPark/java/maven/maven-intro-install.html</link>
       <guid>https://cunyu1943.github.io/JavaPark/JavaPark/java/maven/maven-intro-install.html</guid>
-      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">Maven 简介，安装及配置</source>
+      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">Maven 入门手册：简介，安装及配置</source>
       <category>Maven 入门教程</category>
       <pubDate>Thu, 30 Dec 2021 15:07:13 GMT</pubDate>
       <content:encoded><![CDATA[<h2 id="前言" tabindex="-1"> 前言</h2>
@@ -13905,10 +13905,10 @@ ORDER BY ……
       <enclosure url="https://img-blog.csdnimg.cn/img_convert/07b231ac8f0c6addd6c9baba7e69bae4.png" type="image/png"/>
     </item>
     <item>
-      <title>如何使用 IDEA 创建 Maven 项目</title>
+      <title>Maven 入门手册：使用 IDEA 创建 Maven 项目</title>
       <link>https://cunyu1943.github.io/JavaPark/JavaPark/java/maven/maven-project-with-idea.html</link>
       <guid>https://cunyu1943.github.io/JavaPark/JavaPark/java/maven/maven-project-with-idea.html</guid>
-      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">如何使用 IDEA 创建 Maven 项目</source>
+      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">Maven 入门手册：使用 IDEA 创建 Maven 项目</source>
       <category>Maven 入门教程</category>
       <pubDate>Sun, 09 Jan 2022 23:03:42 GMT</pubDate>
       <content:encoded><![CDATA[<h2 id="前言" tabindex="-1"> 前言</h2>
@@ -13942,8 +13942,8 @@ ORDER BY ……
 | ----- ||     |  | java/ |
 | --- ||     | resources/ |
 | --- | ---------- || test/ |
-| ----- |  || java/ |
-| ----- ||  |resources/
+| ----- ||     | java/ |
+| --- ||  |resources/
     |----pom.xml
 </code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br></div></div><p><img src="https://s1.ax1x.com/2020/07/07/UFZVRs.png" alt="" loading="lazy"></p>
 <ol start="4">
@@ -14041,10 +14041,10 @@ ORDER BY ……
       <enclosure url="https://s1.ax1x.com/2020/07/07/UFUiPs.png" type="image/png"/>
     </item>
     <item>
-      <title>Maven 仓库、坐标以及依赖管理</title>
+      <title>Maven 入门手册：仓库、坐标以及依赖管理</title>
       <link>https://cunyu1943.github.io/JavaPark/JavaPark/java/maven/maven-warehouse-dependency.html</link>
       <guid>https://cunyu1943.github.io/JavaPark/JavaPark/java/maven/maven-warehouse-dependency.html</guid>
-      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">Maven 仓库、坐标以及依赖管理</source>
+      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">Maven 入门手册：仓库、坐标以及依赖管理</source>
       <category>Maven 入门教程</category>
       <pubDate>Sun, 09 Jan 2022 23:03:24 GMT</pubDate>
       <content:encoded><![CDATA[<h2 id="前言" tabindex="-1"> 前言</h2>
