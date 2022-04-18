@@ -6,8 +6,8 @@
     <link>https://cunyu1943.github.io/JavaPark/JavaPark/</link>
     <description>Java 自学编程之路</description>
     <language>zh-CN</language>
-    <pubDate>Mon, 18 Apr 2022 07:45:49 GMT</pubDate>
-    <lastBuildDate>Mon, 18 Apr 2022 07:45:49 GMT</lastBuildDate>
+    <pubDate>Mon, 18 Apr 2022 07:58:24 GMT</pubDate>
+    <lastBuildDate>Mon, 18 Apr 2022 07:58:24 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>JavaScript 教程</category>
@@ -21493,10 +21493,10 @@ num <span>=</span> <span>(</span><span>int</span><span>)</span>ans<span>;</span>
       <enclosure url="https://cdn.jsdelivr.net/gh/cunyu1943/image-hosting-for-blog/imgJava%20%E5%85%B3%E9%94%AE%E5%AD%97.png" type="image/png"/>
     </item>
     <item>
-      <title>SpringBoot 配置详解</title>
+      <title>Spring Boot 基础教程：配置详解</title>
       <link>https://cunyu1943.github.io/JavaPark/JavaPark/java/spring-boot/configuration.html</link>
       <guid>https://cunyu1943.github.io/JavaPark/JavaPark/java/spring-boot/configuration.html</guid>
-      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">SpringBoot 配置详解</source>
+      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">Spring Boot 基础教程：配置详解</source>
       <category>Spring Boot 基础教程</category>
       <pubDate>Sun, 09 Jan 2022 16:15:47 GMT</pubDate>
       <content:encoded><![CDATA[<h2 id="前言" tabindex="-1"> 前言</h2>
@@ -21747,10 +21747,10 @@ num <span>=</span> <span>(</span><span>int</span><span>)</span>ans<span>;</span>
       <enclosure url="https://s1.ax1x.com/2020/07/29/aZ4ucV.png" type="image/png"/>
     </item>
     <item>
-      <title>Spring Boot 整合 FreeMarker 实例</title>
+      <title>Spring Boot 基础教程：整合 FreeMarker 实例</title>
       <link>https://cunyu1943.github.io/JavaPark/JavaPark/java/spring-boot/integrated-freemarker.html</link>
       <guid>https://cunyu1943.github.io/JavaPark/JavaPark/java/spring-boot/integrated-freemarker.html</guid>
-      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">Spring Boot 整合 FreeMarker 实例</source>
+      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">Spring Boot 基础教程：整合 FreeMarker 实例</source>
       <category>Spring Boot 基础教程</category>
       <pubDate>Wed, 29 Dec 2021 22:05:44 GMT</pubDate>
       <content:encoded><![CDATA[<h2 id="前言" tabindex="-1"> 前言</h2>
@@ -21905,10 +21905,10 @@ num <span>=</span> <span>(</span><span>int</span><span>)</span>ans<span>;</span>
       <enclosure url="https://img-blog.csdnimg.cn/img_convert/392d82974ae0da42c0837b569234c9ab.png" type="image/png"/>
     </item>
     <item>
-      <title>Spring Boot 集成 Swagger2，构建强大的 API 文档</title>
+      <title>Spring Boot 基础教程：集成 Swagger2</title>
       <link>https://cunyu1943.github.io/JavaPark/JavaPark/java/spring-boot/integrated-swagger2.html</link>
       <guid>https://cunyu1943.github.io/JavaPark/JavaPark/java/spring-boot/integrated-swagger2.html</guid>
-      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">Spring Boot 集成 Swagger2，构建强大的 API 文档</source>
+      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">Spring Boot 基础教程：集成 Swagger2</source>
       <category>Spring Boot 基础教程</category>
       <pubDate>Thu, 06 Jan 2022 09:01:56 GMT</pubDate>
       <content:encoded><![CDATA[<h2 id="前言" tabindex="-1"> 前言</h2>
@@ -22100,10 +22100,10 @@ num <span>=</span> <span>(</span><span>int</span><span>)</span>ans<span>;</span>
       <enclosure url="https://cdn.jsdelivr.net/gh/cunyu1943/blog-imgs@main//blog/image-20220105214716027.png" type="image/png"/>
     </item>
     <item>
-      <title>Spring Boot 使用 Swagger3 生成 API 接口文档</title>
+      <title>Spring Boot 基础教程：集成 Swagger3</title>
       <link>https://cunyu1943.github.io/JavaPark/JavaPark/java/spring-boot/integrated-swagger3.html</link>
       <guid>https://cunyu1943.github.io/JavaPark/JavaPark/java/spring-boot/integrated-swagger3.html</guid>
-      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">Spring Boot 使用 Swagger3 生成 API 接口文档</source>
+      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">Spring Boot 基础教程：集成 Swagger3</source>
       <category>Spring Boot 基础教程</category>
       <pubDate>Sat, 08 Jan 2022 21:01:40 GMT</pubDate>
       <content:encoded><![CDATA[<h2 id="前言" tabindex="-1"> 前言</h2>
@@ -22370,10 +22370,10 @@ num <span>=</span> <span>(</span><span>int</span><span>)</span>ans<span>;</span>
       <enclosure url="https://cdn.jsdelivr.net/gh/cunyu1943/blog-imgs@main//blog/image-20220108172004702.png" type="image/png"/>
     </item>
     <item>
-      <title>SpringBoot 整合 Thymeleaf 实例</title>
+      <title>Spring Boot 基础教程：整合 Thymeleaf 实例</title>
       <link>https://cunyu1943.github.io/JavaPark/JavaPark/java/spring-boot/integrated-thymeleaf.html</link>
       <guid>https://cunyu1943.github.io/JavaPark/JavaPark/java/spring-boot/integrated-thymeleaf.html</guid>
-      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">SpringBoot 整合 Thymeleaf 实例</source>
+      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">Spring Boot 基础教程：整合 Thymeleaf 实例</source>
       <category>Spring Boot 基础教程</category>
       <pubDate>Sun, 09 Jan 2022 16:17:16 GMT</pubDate>
       <content:encoded><![CDATA[<h2 id="什么是-thymeleaf" tabindex="-1"> 什么是 Thymeleaf</h2>
@@ -22548,10 +22548,10 @@ num <span>=</span> <span>(</span><span>int</span><span>)</span>ans<span>;</span>
       <enclosure url="https://s1.ax1x.com/2020/07/29/ae6BOH.png" type="image/png"/>
     </item>
     <item>
-      <title>Spring Boot 入门简介</title>
+      <title>Spring Boot 基础教程：入门简介</title>
       <link>https://cunyu1943.github.io/JavaPark/JavaPark/java/spring-boot/introduction.html</link>
       <guid>https://cunyu1943.github.io/JavaPark/JavaPark/java/spring-boot/introduction.html</guid>
-      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">Spring Boot 入门简介</source>
+      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">Spring Boot 基础教程：入门简介</source>
       <category>Spring Boot 基础教程</category>
       <pubDate>Sun, 09 Jan 2022 15:51:53 GMT</pubDate>
       <content:encoded><![CDATA[<h2 id="前言" tabindex="-1"> 前言</h2>
@@ -22621,10 +22621,10 @@ num <span>=</span> <span>(</span><span>int</span><span>)</span>ans<span>;</span>
       <enclosure url="https://gitee.com/cunyu1943/images/raw/master/imgsUbuntu/image-20200519083943477.png" type="image/png"/>
     </item>
     <item>
-      <title>创建 SpringBoot 项目的 3 种方式</title>
+      <title>Spring Boot 基础教程：创建项目的 3 种方式</title>
       <link>https://cunyu1943.github.io/JavaPark/JavaPark/java/spring-boot/the-methods-to-create-springboot-project.html</link>
       <guid>https://cunyu1943.github.io/JavaPark/JavaPark/java/spring-boot/the-methods-to-create-springboot-project.html</guid>
-      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">创建 SpringBoot 项目的 3 种方式</source>
+      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">Spring Boot 基础教程：创建项目的 3 种方式</source>
       <category>Spring Boot 基础教程</category>
       <pubDate>Sun, 09 Jan 2022 15:51:15 GMT</pubDate>
       <content:encoded><![CDATA[<h2 id="前言" tabindex="-1"> 前言</h2>

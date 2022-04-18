@@ -3,7 +3,7 @@
   <id>https://cunyu1943.github.io/JavaPark/JavaPark/</id>
   <title>JavaPark</title>
   <subtitle>Java 自学编程之路</subtitle>
-  <updated>2022-04-18T07:45:49.404Z</updated>
+  <updated>2022-04-18T07:58:24.779Z</updated>
   <generator>vuepress-plugin-feed2</generator>
   <link rel="self" href="https://cunyu1943.github.io/JavaPark/JavaPark/atom.xml"/>
   <link rel="alternate" href="https://cunyu1943.github.io/JavaPark/JavaPark/"/>
@@ -21434,10 +21434,10 @@ num <span>=</span> <span>(</span><span>int</span><span>)</span>ans<span>;</span>
     <published>2022-01-11T22:28:36.000Z</published>
   </entry>
   <entry>
-    <title type="html">SpringBoot 配置详解</title>
+    <title type="html">Spring Boot 基础教程：配置详解</title>
     <id>https://cunyu1943.github.io/JavaPark/JavaPark/java/spring-boot/configuration.html</id>
     <link href="https://cunyu1943.github.io/JavaPark/JavaPark/java/spring-boot/configuration.html"/>
-    <updated>2022-04-14T15:39:51.000Z</updated>
+    <updated>2022-04-18T07:54:41.000Z</updated>
     <content type="html"><![CDATA[<h2 id="前言" tabindex="-1"> 前言</h2>
 <p>为了 Spring Boot 能够更好地生成配置元数据文件，我们可以在创建项目时添加 <code>Spring Configuartion Processor</code> 依赖，或者在创建好项目后的 <code>pom.xml</code> 文件中手动添加。添加该依赖后，我们在编写配置时就会有属性提示，大大降低编写错误。</p>
 <div><pre><code><span><span><span>&lt;</span>dependency</span><span>></span></span>
@@ -21687,10 +21687,10 @@ num <span>=</span> <span>(</span><span>int</span><span>)</span>ans<span>;</span>
     <published>2022-01-09T16:15:47.000Z</published>
   </entry>
   <entry>
-    <title type="html">Spring Boot 整合 FreeMarker 实例</title>
+    <title type="html">Spring Boot 基础教程：整合 FreeMarker 实例</title>
     <id>https://cunyu1943.github.io/JavaPark/JavaPark/java/spring-boot/integrated-freemarker.html</id>
     <link href="https://cunyu1943.github.io/JavaPark/JavaPark/java/spring-boot/integrated-freemarker.html"/>
-    <updated>2022-04-14T15:39:51.000Z</updated>
+    <updated>2022-04-18T07:54:41.000Z</updated>
     <content type="html"><![CDATA[<h2 id="前言" tabindex="-1"> 前言</h2>
 <p>在之前的文章<a href="https://cunyu1943.blog.csdn.net/article/details/107671467" target="_blank" rel="noopener noreferrer">Spring Boot 整合 Thymeleaf<ExternalLinkIcon/></a>中，我们学习了如何将模板 Thymeleaf 整合到 Spring Boot 中，那今天我们就来看看，另一个老牌的开源免费模板引擎 - FreeMarker！</p>
 <h2 id="freemarker-简介" tabindex="-1"> FreeMarker 简介</h2>
@@ -21844,10 +21844,10 @@ num <span>=</span> <span>(</span><span>int</span><span>)</span>ans<span>;</span>
     <published>2021-12-29T22:05:44.000Z</published>
   </entry>
   <entry>
-    <title type="html">Spring Boot 集成 Swagger2，构建强大的 API 文档</title>
+    <title type="html">Spring Boot 基础教程：集成 Swagger2</title>
     <id>https://cunyu1943.github.io/JavaPark/JavaPark/java/spring-boot/integrated-swagger2.html</id>
     <link href="https://cunyu1943.github.io/JavaPark/JavaPark/java/spring-boot/integrated-swagger2.html"/>
-    <updated>2022-04-14T15:39:51.000Z</updated>
+    <updated>2022-04-18T07:54:41.000Z</updated>
     <content type="html"><![CDATA[<h2 id="前言" tabindex="-1"> 前言</h2>
 <p>不管你是从事前端还是后端开发，相信都难免被接口文档折磨过。如果你是一个前端开发者，可能你会经常发现后端给的接口文档跟实际代码有所出入。而假设你是一个后端开发者，你可能又会觉得自己开发后端接口已经够烦的了，还要花费大量精力去编写和维护接口文档，所以难免有时候会更新不及时。这就可能造成了前后端相互不理解，最后甚至吵起来，哈哈哈 🤪。</p>
 <p>这时候我们就会想，有没有一款工具，能让我们快速实现编写接口文档。这个工具既能保证我们的接口文档实时更新，也能保证我们不用花过多时间去维护，就像写注释那么简单。</p>
@@ -22038,10 +22038,10 @@ num <span>=</span> <span>(</span><span>int</span><span>)</span>ans<span>;</span>
     <published>2022-01-06T09:01:56.000Z</published>
   </entry>
   <entry>
-    <title type="html">Spring Boot 使用 Swagger3 生成 API 接口文档</title>
+    <title type="html">Spring Boot 基础教程：集成 Swagger3</title>
     <id>https://cunyu1943.github.io/JavaPark/JavaPark/java/spring-boot/integrated-swagger3.html</id>
     <link href="https://cunyu1943.github.io/JavaPark/JavaPark/java/spring-boot/integrated-swagger3.html"/>
-    <updated>2022-04-14T15:39:51.000Z</updated>
+    <updated>2022-04-18T07:54:41.000Z</updated>
     <content type="html"><![CDATA[<h2 id="前言" tabindex="-1"> 前言</h2>
 <p>在之前的文章中，我们已经讲了如何利用 Spring Boot 来集成 Swagger2，详情可戳：<a href="https://blog.csdn.net/github_39655029/article/details/122336225" target="_blank" rel="noopener noreferrer">Spring Boot 集成 Swagger2，构建强大的 API 文档<ExternalLinkIcon/></a>。但其实 Swagger2 中主流的 <code>2.9.2</code> 自 2018 年发布后就已经好久没更新了，而在时隔两年之后的 2020 年，Swagger3 终于发布了。</p>
 <p>相比于之前的 Swagger2，Swagger3 无疑新添了更多的特点，而相对集中地，主要集中在如下几点。</p>
@@ -22307,10 +22307,10 @@ num <span>=</span> <span>(</span><span>int</span><span>)</span>ans<span>;</span>
     <published>2022-01-08T21:01:40.000Z</published>
   </entry>
   <entry>
-    <title type="html">SpringBoot 整合 Thymeleaf 实例</title>
+    <title type="html">Spring Boot 基础教程：整合 Thymeleaf 实例</title>
     <id>https://cunyu1943.github.io/JavaPark/JavaPark/java/spring-boot/integrated-thymeleaf.html</id>
     <link href="https://cunyu1943.github.io/JavaPark/JavaPark/java/spring-boot/integrated-thymeleaf.html"/>
-    <updated>2022-04-14T15:39:51.000Z</updated>
+    <updated>2022-04-18T07:54:41.000Z</updated>
     <content type="html"><![CDATA[<h2 id="什么是-thymeleaf" tabindex="-1"> 什么是 Thymeleaf</h2>
 <ul>
 <li>
@@ -22484,10 +22484,10 @@ num <span>=</span> <span>(</span><span>int</span><span>)</span>ans<span>;</span>
     <published>2022-01-09T16:17:16.000Z</published>
   </entry>
   <entry>
-    <title type="html">Spring Boot 入门简介</title>
+    <title type="html">Spring Boot 基础教程：入门简介</title>
     <id>https://cunyu1943.github.io/JavaPark/JavaPark/java/spring-boot/introduction.html</id>
     <link href="https://cunyu1943.github.io/JavaPark/JavaPark/java/spring-boot/introduction.html"/>
-    <updated>2022-04-14T15:39:51.000Z</updated>
+    <updated>2022-04-18T07:54:41.000Z</updated>
     <content type="html"><![CDATA[<h2 id="前言" tabindex="-1"> 前言</h2>
 <p><code>Spring</code> 是重量级企业开发框架 <code>EJB（Enterprise JavaBean）</code> 的替代品，是为了解决企业级应用开发的复杂性而创建的，简化开发。通过 <strong>依赖注入（DI）</strong> 和 <strong>面向切面编程</strong>，用简单的 <strong><code>Java</code> 对象（<code>POJO</code>，<code>Plain Old Java Object</code>）</strong> 实现 <code>EJB</code> 的功能，<strong>其组件代码轻量，但是配置很繁琐（需要大量 <code>XML</code> 配置）</strong>。<code>Spring 2.5</code> 引入基于注解的组件扫描，<code>Spring 3.0</code> 引入基于 <code>Java</code> 的配置，可以代替 <code>XML</code>，虽然引入的特性大大提高了配置的效率，但是也无法避免，针对这一问题，<code>Spring Boot</code> 应运而生。</p>
 <p>Spring Boot 是为简化 Spring 应用初始搭建和开发过程，我们只要基于特定方式来进行配置即可。</p>
@@ -22556,10 +22556,10 @@ num <span>=</span> <span>(</span><span>int</span><span>)</span>ans<span>;</span>
     <published>2022-01-09T15:51:53.000Z</published>
   </entry>
   <entry>
-    <title type="html">创建 SpringBoot 项目的 3 种方式</title>
+    <title type="html">Spring Boot 基础教程：创建项目的 3 种方式</title>
     <id>https://cunyu1943.github.io/JavaPark/JavaPark/java/spring-boot/the-methods-to-create-springboot-project.html</id>
     <link href="https://cunyu1943.github.io/JavaPark/JavaPark/java/spring-boot/the-methods-to-create-springboot-project.html"/>
-    <updated>2022-04-14T15:39:51.000Z</updated>
+    <updated>2022-04-18T07:54:41.000Z</updated>
     <content type="html"><![CDATA[<h2 id="前言" tabindex="-1"> 前言</h2>
 <p>如果你是一个浸淫 SpringBoot 已久的老手，那么可能下面的内容可能不那么适合你，写得很简单。但如果是
 对于一个刚学习 SpringBoot 的新手而言，我想多少还是有些用的。本文就来手把手教你如何创建一个 SpringBoot 项目，并对其中的一些关键信息进行简单分析，让你更加快速地掌握如何创建一个 SpringBoot 项目。</p>
