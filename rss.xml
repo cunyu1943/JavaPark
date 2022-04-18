@@ -6,8 +6,8 @@
     <link>https://cunyu1943.github.io/JavaPark/JavaPark/</link>
     <description>Java 自学编程之路</description>
     <language>zh-CN</language>
-    <pubDate>Mon, 18 Apr 2022 08:49:00 GMT</pubDate>
-    <lastBuildDate>Mon, 18 Apr 2022 08:49:00 GMT</lastBuildDate>
+    <pubDate>Mon, 18 Apr 2022 08:57:19 GMT</pubDate>
+    <lastBuildDate>Mon, 18 Apr 2022 08:57:19 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>JavaScript 教程</category>
@@ -13558,10 +13558,10 @@ ORDER BY ……
       <enclosure url="https://cdn.jsdelivr.net/gh/cunyu1943/blog-imgs@main/2022/04/image-20220402210100067.png" type="image/png"/>
     </item>
     <item>
-      <title>如何在 IDEA 中创建并部署 JavaWeb 程序</title>
+      <title>Java Web 篇：IDEA 中创建并部署 JavaWeb 程序</title>
       <link>https://cunyu1943.github.io/JavaPark/JavaPark/java/java-web/create-deploy-javaweb-with-idea.html</link>
       <guid>https://cunyu1943.github.io/JavaPark/JavaPark/java/java-web/create-deploy-javaweb-with-idea.html</guid>
-      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">如何在 IDEA 中创建并部署 JavaWeb 程序</source>
+      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">Java Web 篇：IDEA 中创建并部署 JavaWeb 程序</source>
       <category>Java Web</category>
       <pubDate>Sat, 19 Feb 2022 23:05:11 GMT</pubDate>
       <content:encoded><![CDATA[<h2 id="前言" tabindex="-1"> 前言</h2>

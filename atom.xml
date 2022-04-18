@@ -3,7 +3,7 @@
   <id>https://cunyu1943.github.io/JavaPark/JavaPark/</id>
   <title>JavaPark</title>
   <subtitle>Java 自学编程之路</subtitle>
-  <updated>2022-04-18T08:49:00.673Z</updated>
+  <updated>2022-04-18T08:57:19.091Z</updated>
   <generator>vuepress-plugin-feed2</generator>
   <link rel="self" href="https://cunyu1943.github.io/JavaPark/JavaPark/atom.xml"/>
   <link rel="alternate" href="https://cunyu1943.github.io/JavaPark/JavaPark/"/>
@@ -13521,10 +13521,10 @@ ORDER BY ……
     <published>2022-04-16T07:38:03.000Z</published>
   </entry>
   <entry>
-    <title type="html">如何在 IDEA 中创建并部署 JavaWeb 程序</title>
+    <title type="html">Java Web 篇：IDEA 中创建并部署 JavaWeb 程序</title>
     <id>https://cunyu1943.github.io/JavaPark/JavaPark/java/java-web/create-deploy-javaweb-with-idea.html</id>
     <link href="https://cunyu1943.github.io/JavaPark/JavaPark/java/java-web/create-deploy-javaweb-with-idea.html"/>
-    <updated>2022-04-17T12:14:12.000Z</updated>
+    <updated>2022-04-18T08:56:10.000Z</updated>
     <content type="html"><![CDATA[<h2 id="前言" tabindex="-1"> 前言</h2>
 <p>在之前 Java 的学习中，我们可能更多地是和控制台程序打交道，也就是我们日常说的黑框框程序。 现在既然完成了 Java SE 部分的基础知识，是时候来学习 JavaWeb 部分。而随着 IDEA 的强势崛起和不断更新，使用 Eclipse 的同学可能会有些不习惯 IDEA。这一点确实是，IDEA 不同版本之间的操作和设置可能都有微小的变动，就算你之前一直使用的 IDEA，也可能会随着 IDEA 的更新找不到某些隐藏在犄角旮旯的操作。</p>
 <p>今天我们就来看看，如何在 IDEA 最新版中从零创建一个 Java Web 项目，然后将其部署到 Tomcat 中，实现一个最简单的 JavaWeb 小程序。</p>
