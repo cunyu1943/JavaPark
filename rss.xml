@@ -6,8 +6,8 @@
     <link>https://cunyu1943.github.io/JavaPark/JavaPark/</link>
     <description>Java 自学编程之路</description>
     <language>zh-CN</language>
-    <pubDate>Mon, 18 Apr 2022 13:11:46 GMT</pubDate>
-    <lastBuildDate>Mon, 18 Apr 2022 13:11:46 GMT</lastBuildDate>
+    <pubDate>Mon, 18 Apr 2022 14:22:25 GMT</pubDate>
+    <lastBuildDate>Mon, 18 Apr 2022 14:22:25 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>JavaScript 教程</category>
@@ -472,10 +472,10 @@ name <span>=</span> <span>prompt</span><span>(</span><span>'请输入你要观�
       <enclosure url="https://cdn.jsdelivr.net/gh/cunyu1943/blog-imgs@main/2022/04/image-20220417120304362.png" type="image/png"/>
     </item>
     <item>
-      <title>IDEA 连接 MySQL 失败解决方案</title>
+      <title>IDEA 教程：连接 MySQL 失败解决方案</title>
       <link>https://cunyu1943.github.io/JavaPark/JavaPark/dev-tools/idea/connect-mysql-fail.html</link>
       <guid>https://cunyu1943.github.io/JavaPark/JavaPark/dev-tools/idea/connect-mysql-fail.html</guid>
-      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">IDEA 连接 MySQL 失败解决方案</source>
+      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">IDEA 教程：连接 MySQL 失败解决方案</source>
       <category>IDEA 教程</category>
       <pubDate>Mon, 07 Feb 2022 19:08:58 GMT</pubDate>
       <content:encoded><![CDATA[<h2 id="前言" tabindex="-1"> 前言</h2>
@@ -529,10 +529,10 @@ name <span>=</span> <span>prompt</span><span>(</span><span>'请输入你要观�
 </code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br></div></div>]]></content:encoded>
     </item>
     <item>
-      <title>最新版 IDEA 简单使用手册</title>
+      <title>IDEA 教程：最新版 IDEA 简单使用手册</title>
       <link>https://cunyu1943.github.io/JavaPark/JavaPark/dev-tools/idea/idea-guide.html</link>
       <guid>https://cunyu1943.github.io/JavaPark/JavaPark/dev-tools/idea/idea-guide.html</guid>
-      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">最新版 IDEA 简单使用手册</source>
+      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">IDEA 教程：最新版 IDEA 简单使用手册</source>
       <category>IDEA 教程</category>
       <pubDate>Tue, 04 Jan 2022 21:43:45 GMT</pubDate>
       <content:encoded><![CDATA[<h2 id="前言" tabindex="-1"> 前言</h2>
@@ -689,10 +689,10 @@ name <span>=</span> <span>prompt</span><span>(</span><span>'请输入你要观�
       <enclosure url="https://img-blog.csdnimg.cn/img_convert/368752d9d56ffbbb614c2e2e8c801c3e.png" type="image/png"/>
     </item>
     <item>
-      <title>IntelliJ IDEA 中集成并使用 Git 图文教程</title>
+      <title>IDEA 教程：集成并使用 Git 图文教程</title>
       <link>https://cunyu1943.github.io/JavaPark/JavaPark/dev-tools/idea/idea-integrate-with-git.html</link>
       <guid>https://cunyu1943.github.io/JavaPark/JavaPark/dev-tools/idea/idea-integrate-with-git.html</guid>
-      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">IntelliJ IDEA 中集成并使用 Git 图文教程</source>
+      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">IDEA 教程：集成并使用 Git 图文教程</source>
       <category>IDEA 教程</category>
       <pubDate>Wed, 05 Jan 2022 09:19:15 GMT</pubDate>
       <content:encoded><![CDATA[<h2 id="前言" tabindex="-1"> 前言</h2>
@@ -806,10 +806,10 @@ name <span>=</span> <span>prompt</span><span>(</span><span>'请输入你要观�
       <enclosure url="https://cdn.jsdelivr.net/gh/cunyu1943/blog-imgs@main//blog/image-20220104215832717.png" type="image/png"/>
     </item>
     <item>
-      <title>白嫖 IntelliJ IDEA 专业版使用权</title>
+      <title>IDEA 教程：白嫖 IntelliJ IDEA 专业版使用权</title>
       <link>https://cunyu1943.github.io/JavaPark/JavaPark/dev-tools/idea/idea-pro-with-student-email.html</link>
       <guid>https://cunyu1943.github.io/JavaPark/JavaPark/dev-tools/idea/idea-pro-with-student-email.html</guid>
-      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">白嫖 IntelliJ IDEA 专业版使用权</source>
+      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">IDEA 教程：白嫖 IntelliJ IDEA 专业版使用权</source>
       <category>IDEA 教程</category>
       <pubDate>Tue, 04 Jan 2022 21:42:02 GMT</pubDate>
       <content:encoded><![CDATA[<h2 id="前言" tabindex="-1"> 前言</h2>
@@ -863,10 +863,10 @@ name <span>=</span> <span>prompt</span><span>(</span><span>'请输入你要观�
       <enclosure url="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL2N1bnl1MTk0My9pbWFnZS1ob3N0aW5nLWZvci1ibG9nL2ltZ3NXaW4yMDIwMDMxOTEzNDAxMS5wbmc?x-oss-process=image/format,png" type="image/"/>
     </item>
     <item>
-      <title>不得不知的 IDEA 实用小技巧</title>
+      <title>IDEA 教程：不得不知的实用小技巧</title>
       <link>https://cunyu1943.github.io/JavaPark/JavaPark/dev-tools/idea/idea-tips.html</link>
       <guid>https://cunyu1943.github.io/JavaPark/JavaPark/dev-tools/idea/idea-tips.html</guid>
-      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">不得不知的 IDEA 实用小技巧</source>
+      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">IDEA 教程：不得不知的实用小技巧</source>
       <category>IDEA 教程</category>
       <pubDate>Mon, 07 Feb 2022 19:05:54 GMT</pubDate>
       <content:encoded><![CDATA[<h2 id="前言" tabindex="-1"> 前言</h2>
@@ -930,10 +930,10 @@ name <span>=</span> <span>prompt</span><span>(</span><span>'请输入你要观�
       <enclosure url="https://cdn.jsdelivr.net/gh/cunyu1943/image-hosting-for-blog/imgimage-ctrlshiftv.png" type="image/png"/>
     </item>
     <item>
-      <title>IDEA + Github，你的多设备开发神器</title>
+      <title>IDEA 教程：IDEA + Github 多设备同步开发</title>
       <link>https://cunyu1943.github.io/JavaPark/JavaPark/dev-tools/idea/idea-with-github.html</link>
       <guid>https://cunyu1943.github.io/JavaPark/JavaPark/dev-tools/idea/idea-with-github.html</guid>
-      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">IDEA + Github，你的多设备开发神器</source>
+      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">IDEA 教程：IDEA + Github 多设备同步开发</source>
       <category>IDEA 教程</category>
       <pubDate>Mon, 03 Jan 2022 21:58:37 GMT</pubDate>
       <content:encoded><![CDATA[<h2 id="前言" tabindex="-1"> 前言</h2>
@@ -1025,10 +1025,10 @@ name <span>=</span> <span>prompt</span><span>(</span><span>'请输入你要观�
       <enclosure url="https://imgconvert.csdnimg.cn/aHR0cHM6Ly91cGxvYWQtaW1hZ2VzLmppYW5zaHUuaW8vdXBsb2FkX2ltYWdlcy85NzQ3MzUwLTYxMDYwNTQzZGYwNjNkMjkucG5n?x-oss-process=image/format,png" type="image/"/>
     </item>
     <item>
-      <title>使用 IDEA 创建 Java 入门应用</title>
+      <title>IDEA 教程：创建 Java 入门应用</title>
       <link>https://cunyu1943.github.io/JavaPark/JavaPark/dev-tools/idea/java-quick-start-with-idea.html</link>
       <guid>https://cunyu1943.github.io/JavaPark/JavaPark/dev-tools/idea/java-quick-start-with-idea.html</guid>
-      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">使用 IDEA 创建 Java 入门应用</source>
+      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">IDEA 教程：创建 Java 入门应用</source>
       <category>IDEA 教程</category>
       <pubDate>Sat, 15 Jan 2022 21:19:56 GMT</pubDate>
       <content:encoded><![CDATA[<h2 id="前言" tabindex="-1"> 前言</h2>
@@ -1140,10 +1140,10 @@ name <span>=</span> <span>prompt</span><span>(</span><span>'请输入你要观�
       <enclosure url="https://cdn.jsdelivr.net/gh/cunyu1943/blog-imgs@main/blog/image-20210914093309992.png" type="image/png"/>
     </item>
     <item>
-      <title>IDEA 中 Tomcat 控制台乱码解决方法</title>
+      <title>IDEA 教程：Tomcat 控制台乱码解决方法</title>
       <link>https://cunyu1943.github.io/JavaPark/JavaPark/dev-tools/idea/tomcat-console-error-code.html</link>
       <guid>https://cunyu1943.github.io/JavaPark/JavaPark/dev-tools/idea/tomcat-console-error-code.html</guid>
-      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">IDEA 中 Tomcat 控制台乱码解决方法</source>
+      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">IDEA 教程：Tomcat 控制台乱码解决方法</source>
       <category>IDEA 教程</category>
       <pubDate>Sat, 15 Jan 2022 21:34:09 GMT</pubDate>
       <content:encoded><![CDATA[<h2 id="前言" tabindex="-1"> 前言</h2>
@@ -14158,10 +14158,10 @@ ORDER BY ……
 ]]></content:encoded>
     </item>
     <item>
-      <title>利用 docsify 免费搭建高颜值文档网站</title>
+      <title>博客搭建：docsify 搭建高颜值文档网站</title>
       <link>https://cunyu1943.github.io/JavaPark/JavaPark/efficiency/blog/docsify.html</link>
       <guid>https://cunyu1943.github.io/JavaPark/JavaPark/efficiency/blog/docsify.html</guid>
-      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">利用 docsify 免费搭建高颜值文档网站</source>
+      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">博客搭建：docsify 搭建高颜值文档网站</source>
       <category>博客搭建</category>
       <pubDate>Sat, 01 Jan 2022 20:47:42 GMT</pubDate>
       <content:encoded><![CDATA[<h2 id="前言" tabindex="-1"> 前言</h2>
@@ -14297,10 +14297,10 @@ ORDER BY ……
       <enclosure url="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9naXRlZS5jb20vY3VueXUxOTQzL2ltYWdlcy9yYXcvbWFzdGVyL0ltZ3NXaW4vZG9jc2lmeS1pLnBuZw?x-oss-process=image/format,png" type="image/"/>
     </item>
     <item>
-      <title>从 0 到 1 搭建 Halo 博客</title>
+      <title>博客搭建：从 0 到 1 搭建 Halo</title>
       <link>https://cunyu1943.github.io/JavaPark/JavaPark/efficiency/blog/halo.html</link>
       <guid>https://cunyu1943.github.io/JavaPark/JavaPark/efficiency/blog/halo.html</guid>
-      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">从 0 到 1 搭建 Halo 博客</source>
+      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">博客搭建：从 0 到 1 搭建 Halo</source>
       <category>博客搭建</category>
       <pubDate>Sat, 01 Jan 2022 20:42:01 GMT</pubDate>
       <content:encoded><![CDATA[<h2 id="前言" tabindex="-1"> 前言</h2>
@@ -14573,10 +14573,10 @@ halo:
       <enclosure url="https://img-blog.csdnimg.cn/img_convert/9edf4e765f7b9c1e7aa34c667f663557.png" type="image/png"/>
     </item>
     <item>
-      <title>超详细 Hexo + Github Pages 博客搭建教程</title>
+      <title>博客搭建：超详细 Hexo + Github Pages 搭建教程</title>
       <link>https://cunyu1943.github.io/JavaPark/JavaPark/efficiency/blog/hexo.html</link>
       <guid>https://cunyu1943.github.io/JavaPark/JavaPark/efficiency/blog/hexo.html</guid>
-      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">超详细 Hexo + Github Pages 博客搭建教程</source>
+      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">博客搭建：超详细 Hexo + Github Pages 搭建教程</source>
       <category>博客搭建</category>
       <pubDate>Thu, 30 Dec 2021 22:06:52 GMT</pubDate>
       <content:encoded><![CDATA[<h2 id="前言" tabindex="-1"> 前言</h2>
@@ -14748,10 +14748,10 @@ hexo d
       <enclosure url="https://img-blog.csdnimg.cn/img_convert/9f214e62438f3061eb4e3e371dac06a2.png" type="image/png"/>
     </item>
     <item>
-      <title>Vuepress + GitHub Actions 实现博客自动部署</title>
+      <title>博客搭建：Vuepress + GitHub Actions 博客自动部署</title>
       <link>https://cunyu1943.github.io/JavaPark/JavaPark/efficiency/blog/vuepress-github-action.html</link>
       <guid>https://cunyu1943.github.io/JavaPark/JavaPark/efficiency/blog/vuepress-github-action.html</guid>
-      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">Vuepress + GitHub Actions 实现博客自动部署</source>
+      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">博客搭建：Vuepress + GitHub Actions 博客自动部署</source>
       <category>博客搭建</category>
       <pubDate>Sat, 01 Jan 2022 20:35:22 GMT</pubDate>
       <content:encoded><![CDATA[<h2 id="前言" tabindex="-1"> 前言</h2>
