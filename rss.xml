@@ -6,8 +6,8 @@
     <link>https://cunyu1943.github.io/JavaPark/JavaPark/</link>
     <description>Java 自学编程之路</description>
     <language>zh-CN</language>
-    <pubDate>Mon, 18 Apr 2022 08:57:19 GMT</pubDate>
-    <lastBuildDate>Mon, 18 Apr 2022 08:57:19 GMT</lastBuildDate>
+    <pubDate>Mon, 18 Apr 2022 13:00:31 GMT</pubDate>
+    <lastBuildDate>Mon, 18 Apr 2022 13:00:31 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>JavaScript 教程</category>
@@ -1275,10 +1275,10 @@ name <span>=</span> <span>prompt</span><span>(</span><span>'请输入你要观�
       <enclosure url="https://cdn.jsdelivr.net/gh/cunyu1943/blog-imgs@main/2022/04/image-20220416215107844.png" type="image/png"/>
     </item>
     <item>
-      <title>MyBatis 简介</title>
+      <title>MyBatis 指北：简介</title>
       <link>https://cunyu1943.github.io/JavaPark/JavaPark/java/mybatis/introduction.html</link>
       <guid>https://cunyu1943.github.io/JavaPark/JavaPark/java/mybatis/introduction.html</guid>
-      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">MyBatis 简介</source>
+      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">MyBatis 指北：简介</source>
       <category>MyBatis 专栏</category>
       <pubDate>Sun, 16 Jan 2022 20:20:41 GMT</pubDate>
       <content:encoded><![CDATA[<h2 id="前言" tabindex="-1"> 前言</h2>
@@ -1353,10 +1353,10 @@ name <span>=</span> <span>prompt</span><span>(</span><span>'请输入你要观�
       <enclosure url="https://cdn.jsdelivr.net/gh/cunyu1943/blog-imgs@main//blog/image-20210819211710682.png" type="image/png"/>
     </item>
     <item>
-      <title>MyBatis Generator 代码自动生成器，从此解放你的双手</title>
+      <title>MyBatis 指北：MyBatis Generator 代码自动生成器</title>
       <link>https://cunyu1943.github.io/JavaPark/JavaPark/java/mybatis/mybatis-generator.html</link>
       <guid>https://cunyu1943.github.io/JavaPark/JavaPark/java/mybatis/mybatis-generator.html</guid>
-      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">MyBatis Generator 代码自动生成器，从此解放你的双手</source>
+      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">MyBatis 指北：MyBatis Generator 代码自动生成器</source>
       <category>MyBatis 专栏</category>
       <pubDate>Sat, 16 Apr 2022 09:12:04 GMT</pubDate>
       <content:encoded><![CDATA[<h2 id="前言" tabindex="-1"> 前言</h2>
@@ -1750,10 +1750,10 @@ name <span>=</span> <span>prompt</span><span>(</span><span>'请输入你要观�
       <enclosure url="https://img-blog.csdnimg.cn/img_convert/405d9115d907022f81f044810e072b36.png" type="image/png"/>
     </item>
     <item>
-      <title>MyBatis 快速入门实例</title>
+      <title>MyBatis 指北：快速入门</title>
       <link>https://cunyu1943.github.io/JavaPark/JavaPark/java/mybatis/quick-start.html</link>
       <guid>https://cunyu1943.github.io/JavaPark/JavaPark/java/mybatis/quick-start.html</guid>
-      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">MyBatis 快速入门实例</source>
+      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">MyBatis 指北：快速入门</source>
       <category>MyBatis 专栏</category>
       <pubDate>Sun, 16 Jan 2022 20:21:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2 id="前言" tabindex="-1"> 前言</h2>
@@ -2188,10 +2188,10 @@ name <span>=</span> <span>prompt</span><span>(</span><span>'请输入你要观�
       <enclosure url="https://cdn.jsdelivr.net/gh/cunyu1943/blog-imgs@main/2022/02/image-20220226223539293.png" type="image/png"/>
     </item>
     <item>
-      <title>MyBatis Plus 简介及入门实例</title>
+      <title>MyBatis Plus 篇：简介及入门实例</title>
       <link>https://cunyu1943.github.io/JavaPark/JavaPark/java/mybatis-plus/intro-and-quick-start.html</link>
       <guid>https://cunyu1943.github.io/JavaPark/JavaPark/java/mybatis-plus/intro-and-quick-start.html</guid>
-      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">MyBatis Plus 简介及入门实例</source>
+      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">MyBatis Plus 篇：简介及入门实例</source>
       <category>MyBatis Plus 指南</category>
       <pubDate>Sun, 16 Jan 2022 20:40:33 GMT</pubDate>
       <content:encoded><![CDATA[<h2 id="前言" tabindex="-1"> 前言</h2>
@@ -2578,10 +2578,10 @@ name <span>=</span> <span>prompt</span><span>(</span><span>'请输入你要观�
       <enclosure url="https://baomidou.com/img/mybatis-plus-framework.jpg" type="image/jpeg"/>
     </item>
     <item>
-      <title>MyBatis Plus 日志配置及常用 CRUD</title>
+      <title>MyBatis Plus 篇：日志配置及常用 CRUD</title>
       <link>https://cunyu1943.github.io/JavaPark/JavaPark/java/mybatis-plus/log-and-common-crud.html</link>
       <guid>https://cunyu1943.github.io/JavaPark/JavaPark/java/mybatis-plus/log-and-common-crud.html</guid>
-      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">MyBatis Plus 日志配置及常用 CRUD</source>
+      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">MyBatis Plus 篇：日志配置及常用 CRUD</source>
       <category>MyBatis Plus 指南</category>
       <pubDate>Sun, 16 Jan 2022 20:41:01 GMT</pubDate>
       <content:encoded><![CDATA[<h2 id="前言" tabindex="-1"> 前言</h2>
@@ -3985,10 +3985,10 @@ name <span>=</span> <span>prompt</span><span>(</span><span>'请输入你要观�
       <enclosure url="https://cdn.jsdelivr.net/gh/cunyu1943/blog-imgs@main//blog/image-20210807215944335.png" type="image/png"/>
     </item>
     <item>
-      <title>Spring 简介</title>
+      <title>Spring 篇：简介</title>
       <link>https://cunyu1943.github.io/JavaPark/JavaPark/java/spring/spring-intro.html</link>
       <guid>https://cunyu1943.github.io/JavaPark/JavaPark/java/spring/spring-intro.html</guid>
-      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">Spring 简介</source>
+      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">Spring 篇：简介</source>
       <category>Spring 教程</category>
       <pubDate>Sun, 16 Jan 2022 17:19:52 GMT</pubDate>
       <content:encoded><![CDATA[<h2 id="前言" tabindex="-1"> 前言</h2>
@@ -4208,10 +4208,10 @@ name <span>=</span> <span>prompt</span><span>(</span><span>'请输入你要观�
       <enclosure url="https://s1.ax1x.com/2020/07/16/UD3qht.png" type="image/png"/>
     </item>
     <item>
-      <title>创建 Spring 项目的 3 种方式</title>
+      <title>Spring 篇：3 种创建项目的方式</title>
       <link>https://cunyu1943.github.io/JavaPark/JavaPark/java/spring/the-methods-to-create-spring-project.html</link>
       <guid>https://cunyu1943.github.io/JavaPark/JavaPark/java/spring/the-methods-to-create-spring-project.html</guid>
-      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">创建 Spring 项目的 3 种方式</source>
+      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">Spring 篇：3 种创建项目的方式</source>
       <category>Spring 教程</category>
       <pubDate>Sun, 16 Jan 2022 17:27:51 GMT</pubDate>
       <content:encoded><![CDATA[<h2 id="前言" tabindex="-1"> 前言</h2>
@@ -4470,10 +4470,10 @@ name <span>=</span> <span>prompt</span><span>(</span><span>'请输入你要观�
       <enclosure url="https://cdn.jsdelivr.net/gh/cunyu1943/blog-imgs@main//blog/image-20210814103240169.png" type="image/png"/>
     </item>
     <item>
-      <title>Spring MVC 简介及入门实例</title>
+      <title>Spring MVC 指南：简介及入门实例</title>
       <link>https://cunyu1943.github.io/JavaPark/JavaPark/java/spring-mvc/intro-and-quick-start.html</link>
       <guid>https://cunyu1943.github.io/JavaPark/JavaPark/java/spring-mvc/intro-and-quick-start.html</guid>
-      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">Spring MVC 简介及入门实例</source>
+      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">Spring MVC 指南：简介及入门实例</source>
       <description>之前写了关于 Spring 的相关文章，而接下来，作为 SSM 三驾马车之一的 Spring MVC 怎能落下！那咱们就趁热打铁，看看 Spring MVC 是个啥，然后再看看如何创建一个 Hello World 实例。</description>
       <category>Spring MVC 合辑</category>
       <pubDate>Sun, 16 Jan 2022 20:11:39 GMT</pubDate>
