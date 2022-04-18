@@ -6,8 +6,8 @@
     <link>https://cunyu1943.github.io/JavaPark/JavaPark/</link>
     <description>Java 自学编程之路</description>
     <language>zh-CN</language>
-    <pubDate>Mon, 18 Apr 2022 03:41:12 GMT</pubDate>
-    <lastBuildDate>Mon, 18 Apr 2022 03:41:12 GMT</lastBuildDate>
+    <pubDate>Mon, 18 Apr 2022 03:52:20 GMT</pubDate>
+    <lastBuildDate>Mon, 18 Apr 2022 03:52:20 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>JavaScript 教程</category>
@@ -119,13 +119,6 @@ name <span>=</span> <span>1943</span><span>;</span>
 name <span>=</span> <span>'村雨遥'</span><span>;</span>
 name <span>=</span> <span>"村雨遥"</span><span>;</span>
 </code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br></div></div><p>除此之外，和其他编程语言一样，JavaScript 也提供了许多转义符，常见的转义符如下表所示。</p>
-<p>|
-|
-|
-|
-|
-|
-|</p>
 <table>
 <thead>
 <tr>
@@ -168,7 +161,7 @@ name <span>=</span> <span>"村雨遥"</span><span>;</span>
 <div><pre><code><span>var</span> wepublic <span>=</span> <span>'村雨遥'</span><span>;</span>
 <span>alert</span><span>(</span>wepublic<span>.</span>length<span>)</span><span>;</span>
 </code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br></div></div><p><img src="https://cdn.jsdelivr.net/gh/cunyu1943/blog-imgs@main/2022/04/image-20220418083326974.png" alt="" loading="lazy"></p>
-<ol start="2">
+<ol>
 <li><strong>字符串拼接</strong></li>
 </ol>
 <p>如果存在多个字符串，可以使用 <code>+</code> 来进行拼接，其具体方式为：</p>
@@ -178,7 +171,7 @@ name <span>=</span> <span>"村雨遥"</span><span>;</span>
 <div><pre><code><span>var</span> wepublic <span>=</span> <span>'村雨遥：'</span><span>;</span>
 <span>var</span> id <span>=</span> <span>'cunyu1943'</span><span>;</span>
 <span>alert</span><span>(</span>wepublic <span>+</span> id<span>)</span><span>;</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br></div></div><p>![](/Users/cunyu/Library/Application Support/typora-user-images/image-20220418084040519.png)</p>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br></div></div><p><img src="https://cdn.jsdelivr.net/gh/cunyu1943/blog-imgs@main/2022/04/image-20220418084040519.png" alt="" loading="lazy"></p>
 <h3 id="布尔类型-boolean" tabindex="-1"> 布尔类型（<code>Boolean</code>）</h3>
 <p>只有 <code>true</code> 和 <code>false</code> 两个值，<code>true</code> 代表真，而 <code>false</code> 表示假。但是当它们和数字类型相加时，此时 <code>true</code> 的值就变成了 1，而 <code>false</code> 的值变成了 0。</p>
 <div><pre><code><span>// 2</span>
@@ -239,7 +232,7 @@ console<span>.</span><span>log</span><span>(</span><span>typeof</span> focus<spa
 console<span>.</span><span>log</span><span>(</span>str<span>)</span><span>;</span>
 console<span>.</span><span>log</span><span>(</span><span>typeof</span> str<span>)</span><span>;</span>
 </code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br></div></div><p><img src="https://cdn.jsdelivr.net/gh/cunyu1943/blog-imgs@main/2022/04/image-20220418093954838.png" alt="" loading="lazy"></p>
-<ol start="2">
+<ol>
 <li><strong>String()</strong></li>
 </ol>
 <div><pre><code><span>var</span> num <span>=</span> <span>1943</span><span>;</span>
@@ -247,7 +240,7 @@ console<span>.</span><span>log</span><span>(</span><span>typeof</span> str<span>
 console<span>.</span><span>log</span><span>(</span>str<span>)</span><span>;</span>
 console<span>.</span><span>log</span><span>(</span><span>typeof</span> str<span>)</span><span>;</span>
 </code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br></div></div><p><img src="https://cdn.jsdelivr.net/gh/cunyu1943/blog-imgs@main/2022/04/image-20220418094352888.png" alt="" loading="lazy"></p>
-<ol start="3">
+<ol>
 <li><strong><code>+</code> 拼接</strong></li>
 </ol>
 <p>字符串和其他任意类型的变量相拼接，最后得到的一定是字符串。</p>
@@ -292,7 +285,7 @@ console<span>.</span><span>log</span><span>(</span><span>typeof</span> str<span>
 console<span>.</span><span>log</span><span>(</span>num<span>)</span><span>;</span>
 console<span>.</span><span>log</span><span>(</span><span>typeof</span> num<span>)</span><span>;</span>
 </code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br></div></div><p><img src="https://cdn.jsdelivr.net/gh/cunyu1943/blog-imgs@main/2022/04/image-20220418101002885.png" alt="" loading="lazy"></p>
-<ol start="2">
+<ol>
 <li><strong>parseFloat(string)</strong></li>
 </ol>
 <div><pre><code><span>var</span> str <span>=</span> <span>'19.43'</span><span>;</span>
@@ -300,7 +293,7 @@ console<span>.</span><span>log</span><span>(</span><span>typeof</span> num<span>
 console<span>.</span><span>log</span><span>(</span>num<span>)</span><span>;</span>
 console<span>.</span><span>log</span><span>(</span><span>typeof</span> num<span>)</span><span>;</span>
 </code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br></div></div><p><img src="https://cdn.jsdelivr.net/gh/cunyu1943/blog-imgs@main/2022/04/image-20220418101126923.png" alt="" loading="lazy"></p>
-<ol start="3">
+<ol>
 <li><strong>Number()</strong></li>
 </ol>
 <div><pre><code><span>var</span> str1 <span>=</span> <span>'19.43'</span><span>;</span>
@@ -312,7 +305,7 @@ console<span>.</span><span>log</span><span>(</span><span>typeof</span> num1<span
 console<span>.</span><span>log</span><span>(</span>num2<span>)</span><span>;</span>
 console<span>.</span><span>log</span><span>(</span><span>typeof</span> num2<span>)</span><span>;</span>
 </code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br></div></div><p><img src="https://cdn.jsdelivr.net/gh/cunyu1943/blog-imgs@main/2022/04/image-20220418102625953.png" alt="" loading="lazy"></p>
-<ol start="4">
+<ol>
 <li><strong>运算符隐式转换</strong></li>
 </ol>
 <div><pre><code><span>var</span> str1 <span>=</span> <span>'2022'</span><span>;</span>
