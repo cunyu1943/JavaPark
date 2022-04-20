@@ -3,10 +3,11 @@
   <id>https://cunyu1943.github.io/JavaPark/JavaPark/</id>
   <title>JavaPark</title>
   <subtitle>Java 自学编程之路</subtitle>
-  <updated>2022-04-20T14:42:44.641Z</updated>
+  <updated>2022-04-20T15:01:25.781Z</updated>
   <generator>vuepress-plugin-feed2</generator>
   <link rel="self" href="https://cunyu1943.github.io/JavaPark/JavaPark/atom.xml"/>
   <link rel="alternate" href="https://cunyu1943.github.io/JavaPark/JavaPark/"/>
+  <category term="福利"/>
   <category term="工具教程"/>
   <category term="Java 实战"/>
   <category term="JavaScript 教程"/>
@@ -22,6 +23,55 @@
   <category term="博客搭建"/>
   <category term="Java 菜鸟入门"/>
   <category term="Spring Boot 基础教程"/>
+  <entry>
+    <title type="html">福利来袭，专属打工人的省钱小秘招</title>
+    <id>https://cunyu1943.github.io/JavaPark/JavaPark/welfare/save-money-tips.html</id>
+    <link href="https://cunyu1943.github.io/JavaPark/JavaPark/welfare/save-money-tips.html"/>
+    <updated>2022-04-20T14:59:02.000Z</updated>
+    <content type="html"><![CDATA[<p>作为一个打工人，你是否也有以下的烦恼呢？</p>
+<ol>
+<li>
+<p>平常加班啥的必然少不了，这时候问题就来了，那不得点个外卖整一下。打开外卖 APP 一看，随便一份小面都得 20 软妹币以上了，想着要是有个券再点多好，还能省点钱。</p>
+</li>
+<li>
+<p>项目上线加班到深夜，回家必须得打车了，最重要的是：打车不报销！🤷🏻‍♀️，无奈只能忍痛打个车回家了，这时候心想，要是能领个券再打车多好，能省一点是一点。</p>
+</li>
+<li>
+<p>周末了想去约个电影看看，打开购票 APP 一看，woc，电影票贵的要死，心想要是有个能省钱的平台买票多好。</p>
+</li>
+</ol>
+<p>作为 👷🏻‍♂️，我也有着大家同样的烦恼，但我发现了一个可以省钱的宝藏平台，所以也给大家安利一番。</p>
+<p>扫描以下任一二维码即可订阅，点外卖、买电影票、打车都有优惠！</p>
+<p><strong>支持如下平台</strong>：</p>
+<ul>
+<li><strong>美团</strong></li>
+<li><strong>饿了么</strong></li>
+<li><strong>高德打车</strong></li>
+<li><strong>滴滴打车</strong></li>
+<li><strong>花小猪打车</strong></li>
+<li>……</li>
+</ul>
+<p><strong>省钱从关注开始！</strong></p>
+<table>
+<thead>
+<tr>
+<th>电影</th>
+<th>外卖</th>
+<th>打车</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="https://cdn.jsdelivr.net/gh/cunyu1943/blog-imgs@main/2022/02/IMG_0034.PNG" alt="电影票" loading="lazy"></td>
+<td><img src="https://cdn.jsdelivr.net/gh/cunyu1943/blog-imgs@main/2022/02/IMG_0031.PNG" alt="外卖" loading="lazy"></td>
+<td><img src="https://cdn.jsdelivr.net/gh/cunyu1943/blog-imgs@main/2022/02/IMG_0036.PNG" alt="打车" loading="lazy"></td>
+</tr>
+</tbody>
+</table>
+]]></content>
+    <category term="福利"/>
+    <published>2022-02-27T21:31:17.000Z</published>
+  </entry>
   <entry>
     <title type="html">效率工具：一招搞定电子签名</title>
     <id>https://cunyu1943.github.io/JavaPark/JavaPark/efficiency/e-signature.html</id>
