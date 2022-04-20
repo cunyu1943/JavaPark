@@ -6,10 +6,11 @@
     <link>https://cunyu1943.github.io/JavaPark/JavaPark/</link>
     <description>Java 自学编程之路</description>
     <language>zh-CN</language>
-    <pubDate>Wed, 20 Apr 2022 13:36:02 GMT</pubDate>
-    <lastBuildDate>Wed, 20 Apr 2022 13:36:02 GMT</lastBuildDate>
+    <pubDate>Wed, 20 Apr 2022 14:42:44 GMT</pubDate>
+    <lastBuildDate>Wed, 20 Apr 2022 14:42:44 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+    <category>工具教程</category>
     <category>Java 实战</category>
     <category>JavaScript 教程</category>
     <category>IDEA 教程</category>
@@ -24,6 +25,2773 @@
     <category>博客搭建</category>
     <category>Java 菜鸟入门</category>
     <category>Spring Boot 基础教程</category>
+    <item>
+      <title>效率工具：一招搞定电子签名</title>
+      <link>https://cunyu1943.github.io/JavaPark/JavaPark/efficiency/e-signature.html</link>
+      <guid>https://cunyu1943.github.io/JavaPark/JavaPark/efficiency/e-signature.html</guid>
+      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">效率工具：一招搞定电子签名</source>
+      <category>工具教程</category>
+      <pubDate>Sat, 15 Jan 2022 17:15:37 GMT</pubDate>
+      <content:encoded><![CDATA[<blockquote>
+<p>PS：白色背景版和透明背景版可能在某些平台预览效果一样，但实际上是不同的，大家自己尝试就清楚了。</p>
+</blockquote>
+<h2 id="前言" tabindex="-1"> 前言</h2>
+<p>受疫情的影响，网上办公已经成为一种大趋势。而在网上办公时，也存在一些不方便的地方，比如需要签名的地方我们应该怎么办呢？这时候就需要制作我们的电子签名，而今天文章的主要内容就是教大家如何制作自己的电子签名，主要分为：</p>
+<ol>
+<li><strong>PPT 制作电子签名</strong></li>
+<li><strong>PS 制作电子签名</strong></li>
+</ol>
+<h2 id="ppt-制作电子签名" tabindex="-1"> PPT 制作电子签名</h2>
+<p>这是一种十分简单地方法了，只需要我们电脑上装了 Office 中的 PowerPoint 即可，以下就是具体的制作过程。</p>
+<h3 id="准备工作" tabindex="-1"> 准备工作</h3>
+<ul>
+<li>PowerPoint</li>
+<li>一张有你手写签名的照片</li>
+</ul>
+<h3 id="制作过程" tabindex="-1"> 制作过程</h3>
+<ol>
+<li>新建 PPT 并导入图片</li>
+</ol>
+<p>打开 PowerPoint，新建一个空白文档，然后在 <code>插入 -&gt; 图片 -&gt; 插入图片来自本设备</code>；</p>
+<p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/0d3db085c2434deca6d3ed909854f423~tplv-k3u1fbpfcp-watermark.image" alt="" loading="lazy"></p>
+<ol start="2">
+<li>图片旋转裁剪</li>
+</ol>
+<p>具体步骤是，选中导入的图片，然后在 <code>图片格式</code> 下边进行旋转和裁剪，讲你的签名摆正，并裁减到只剩下你的签名；</p>
+<p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/26abda1aafa343b9abdee41e68865251~tplv-k3u1fbpfcp-watermark.image" alt="旋转正置" loading="lazy"></p>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ce0a097068674f07a1529641704622bc~tplv-k3u1fbpfcp-watermark.image" alt="裁剪" loading="lazy"></p>
+<ol start="3">
+<li>对比度设置</li>
+</ol>
+<p>选中图片右键，然后选择 <strong>设置图片格式</strong>，然后在 <strong>图片校正</strong> 下将对比度设置为最大 100%。</p>
+<p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/4258413e3ac74b848bc37e1155ec36ea~tplv-k3u1fbpfcp-watermark.image" alt="" loading="lazy"></p>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/9a6a1a2be8c944ca980ee25583599b11~tplv-k3u1fbpfcp-watermark.image" alt="" loading="lazy"></p>
+<ol start="4">
+<li>保存签名</li>
+</ol>
+<p>此时我们就得到我们的签名，可以看到我们的效果还是蛮好的。</p>
+<p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/5970d2d06ec9489ebea0a3a82b860531~tplv-k3u1fbpfcp-watermark.image" alt="" loading="lazy"></p>
+<p>同样的，选中图片右键，然后选择 <strong>另存为图片</strong> 即可。</p>
+<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/8cf2583cc77742699075de5523864fec~tplv-k3u1fbpfcp-watermark.image" alt="" loading="lazy"></p>
+<ol start="5">
+<li>效果优化</li>
+</ol>
+<p>到上一步我们的电子签名就已经做好了，但是我们会发现这个时候的签名底色是纯白的，这时候就不太方便了，我们希望它的底色是透明度，方便嵌入到不同的文档，具体操作步骤如下：</p>
+<p>选中图片，然后在 <strong>图片格式</strong> 下选中 <strong>颜色</strong> 中的 <strong>设置透明色</strong>，然后再次点击我们的签名，此时我们的签名就是透明的了。接着就是保存了，保存步骤同 4.</p>
+<p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/7eddae4805bc448c9f4877561bcfbb44~tplv-k3u1fbpfcp-watermark.image" alt="" loading="lazy"></p>
+<p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/cdd4435b553b4aa59c3c50c6294cc65a~tplv-k3u1fbpfcp-watermark.image" alt="" loading="lazy"></p>
+<h3 id="效果对比" tabindex="-1"> 效果对比</h3>
+<p><img src="https://z3.ax1x.com/2021/04/22/cLpETI.png" alt="纯色背景版" loading="lazy">
+<img src="https://z3.ax1x.com/2021/04/22/cLpZkt.png" alt="透明背景版" loading="lazy"></p>
+<h2 id="ps-制作电子签名" tabindex="-1"> PS 制作电子签名</h2>
+<h3 id="准备工作-1" tabindex="-1"> 准备工作</h3>
+<ul>
+<li>
+<p>Photoshop（也可以利用 <a href="https://www.uupoop.com/#/old" target="_blank" rel="noopener noreferrer">在线版 PS<ExternalLinkIcon/></a>）</p>
+</li>
+<li>
+<p>一张有你手写签名的照片</p>
+</li>
+</ul>
+<h3 id="制作过程-1" tabindex="-1"> 制作过程</h3>
+<ol>
+<li>导入图片</li>
+</ol>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/acbb52c32fce4706ad93441498ee3c91~tplv-k3u1fbpfcp-watermark.image" alt="" loading="lazy"></p>
+<ol start="2">
+<li>提取签字区域</li>
+</ol>
+<p>依次打开工具栏的 <strong>选择 -&gt; 色彩范围</strong>；</p>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c4c90a52b5484c6b8335bfde61c391de~tplv-k3u1fbpfcp-watermark.image" alt="" loading="lazy"></p>
+<p>接着选择左侧工具栏中的 <strong>吸管</strong>，然后点选签字的黑色区域，得到下图的效果；</p>
+<p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/d4bd292c392b4d0193af6caff2a5a006~tplv-k3u1fbpfcp-watermark.image" alt="" loading="lazy"></p>
+<p>然后利用快捷键 <strong>Ctrl + J</strong> 创建一个新的图层，然后点击 <code>Background</code> 前边的小眼睛，把它给隐藏掉，就得到我们的图层 1 的视图；</p>
+<p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/0d19847e9fe743a8b8f342b60bf6f300~tplv-k3u1fbpfcp-watermark.image" alt="" loading="lazy"></p>
+<ol start="3">
+<li>保存签名</li>
+</ol>
+<p>完成上面的步骤之后，点击 **文件 -&gt; 导出为 ** ，选择你想要导出的格式即可；</p>
+<p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/4ab7badc882e492d883094aa5dcd5d5c~tplv-k3u1fbpfcp-watermark.image" alt="" loading="lazy"></p>
+<p>以导出 <code>png</code> 为例，我们还可以设置导出的宽度和高度，以及导出的质量，然后点击保存即可；</p>
+<p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f5b8d069ab7947a2a72ff9f39a04625c~tplv-k3u1fbpfcp-watermark.image" alt="" loading="lazy"></p>
+<h3 id="效果预览" tabindex="-1"> 效果预览</h3>
+<p><img src="https://z3.ax1x.com/2021/04/22/cLCWeH.png" alt="" loading="lazy"></p>
+<h2 id="总结" tabindex="-1"> 总结</h2>
+<p>好了，以上就是今天文章的主要内容了，主要介绍了两种制作电子签名的方式。如果文中的内容对你也有用，那就点赞关注一波吧。</p>
+<p>如果你有更好的制作方法，也可以在评论区中评论，大家一起交流！</p>
+]]></content:encoded>
+      <enclosure url="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/0d3db085c2434deca6d3ed909854f423~tplv-k3u1fbpfcp-watermark.image" type="image/"/>
+    </item>
+    <item>
+      <title>效率工具：Gitee + Typora 打造写作环境</title>
+      <link>https://cunyu1943.github.io/JavaPark/JavaPark/efficiency/gitee-typora.html</link>
+      <guid>https://cunyu1943.github.io/JavaPark/JavaPark/efficiency/gitee-typora.html</guid>
+      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">效率工具：Gitee + Typora 打造写作环境</source>
+      <category>工具教程</category>
+      <pubDate>Mon, 03 Jan 2022 21:42:03 GMT</pubDate>
+      <content:encoded><![CDATA[<h2 id="前言" tabindex="-1"> 前言</h2>
+<p>对于写博客的朋友们来讲，图床这个东西一定不会陌生，而且在一定程度上也给大家造成过一定困扰。</p>
+<p>上一篇文章中我们讲了如何 <a href="https://mp.weixin.qq.com/s?__biz=MzIyNTg2MjkzNw==&amp;mid=2247492657&amp;idx=1&amp;sn=4420ebc879c2013ee564b832f6615d10&amp;chksm=e87b9047df0c195109f063d5118bbbd01d72469857965360a7cca5951871a7f1fcb470328016&amp;token=1963893699&amp;lang=zh_CN#rd" target="_blank" rel="noopener noreferrer">利用 Github 搭建自己的免费图床<ExternalLinkIcon/></a>，但有人反映 Github 访问有点慢，而且也不太稳定，所以就推荐用国内的 Gitee 来搭建，于是今天就带来新鲜热乎的基于 Gitee  所搭建的免费图床教程，也水一篇文章，希望对大家伙有所帮助。</p>
+<p><img src="http://ww1.sinaimg.cn/bmiddle/9150e4e5ly1fqdi3jit6oj203h03h3yb.jpg" alt="" loading="lazy"></p>
+<h2 id="准备工作" tabindex="-1"> 准备工作</h2>
+<p>那么在正式开始之前，同样的，你得提前准备以下东西：</p>
+<blockquote>
+<p>一个 Gitee 账号</p>
+</blockquote>
+<p><img src="http://ww2.sinaimg.cn/bmiddle/6af89bc8gw1f8so949lh9j205i03st8i.jpg" alt="" loading="lazy"></p>
+<p>是的，就这么简单，只要你有一个 Gitee 账号就够了，你就能拥有一个免费的图床了，如果你还没有，那赶紧出门去 <a href="http://gitee.com/" target="_blank" rel="noopener noreferrer">注册<ExternalLinkIcon/></a> 一个账号吧。</p>
+<h2 id="搭建过程" tabindex="-1"> 搭建过程</h2>
+<p>接下来就是正式开始搭建过程了，准备好大干一场吧！</p>
+<p><img src="http://ww2.sinaimg.cn/bmiddle/006r3PQBjw1fb2ti0rsmpj307406ywes.jpg" alt="" loading="lazy"></p>
+<ol>
+<li>登录你的 Gitee 之后，创建一个新的仓库；</li>
+</ol>
+<p><img src="https://cdn.jsdelivr.net/gh/cunyu1943/blog-imgs/gitee-new.png" alt="" loading="lazy"></p>
+<ol start="2">
+<li>填写仓库先关资料，一般只需要选一个合适的仓库名，然后确保仓库为 <code>public</code> 其他的保持默认就好；</li>
+</ol>
+<p><img src="https://cdn.jsdelivr.net/gh/cunyu1943/blog-imgs/image-info.png" alt="" loading="lazy"></p>
+<ol start="3">
+<li>一般创建成功之后，会出现如下界面，至此，我们的图床算是创建好了，接下来就是如何上传图片了；</li>
+</ol>
+<p><img src="https://cdn.jsdelivr.net/gh/cunyu1943/blog-imgs/image-finish.png" alt="" loading="lazy"></p>
+<h2 id="上传图片" tabindex="-1"> 上传图片</h2>
+<p>通过上面的步骤，我们的图床时搭建好了，但是通过传统的方法向 Gitee 上传图片太麻烦了，这里我们推荐使用一个开源图床工具 <a href="https://molunerfinn.com/PicGo/" target="_blank" rel="noopener noreferrer">PicGo<ExternalLinkIcon/></a> 来作为我们的图片上传工具；</p>
+<p>PicGo 的安装就不说了，去他的 <a href="https://molunerfinn.com/PicGo/" target="_blank" rel="noopener noreferrer">官网<ExternalLinkIcon/></a> 下载对应版本进行安装即可，我们主要讲讲如何用它来上传图片。安装后，打开软件其主页面如下：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/cunyu1943/image-hosting-for-blog/blog/image-picgo.png" alt="" loading="lazy"></p>
+<p>接下来就是配置 PicGo 的过程了。</p>
+<ol>
+<li>首先，我们先要去 Gitee 创建一个 令牌；</li>
+</ol>
+<p>以此打开 <code>设置 -&gt; 私人令牌</code>，最后点击右上角 <code>生成新令牌</code>；</p>
+<p><img src="https://cdn.jsdelivr.net/gh/cunyu1943/blog-imgs/image-tokengene.png" alt="" loading="lazy"></p>
+<ol start="2">
+<li>填写令牌描述信息及勾选相关信息，然后点击 <code>提交</code> 即可，提交后会输入密码验证生成；</li>
+</ol>
+<p><img src="https://gitee.com/cunyu1943/blog-img/raw/master/images/image-tokengenetate.png" alt="令牌生成" loading="lazy"></p>
+<ol start="3">
+<li>
+<p><code>令牌</code> 生成，注意它只会显示一次，所以你最好把它复制下来到你的备忘录存好，方便下次使用，否则下次有需要重新新建；</p>
+</li>
+<li>
+<p>配置 PicGo，PicGo 默认是不支持 Gitee 图床的，但我们可以通过安装插件来实现。打开 <strong>插件设置</strong>，在右方搜索框中搜索 <strong>picgo</strong>，然后安装 <strong>gitee-uploader</strong> 插件，也可以安装 <strong>github-plus</strong> 或者 <strong>gitee</strong>；</p>
+</li>
+<li>
+<p>然后到图床设置中打开 Gitee 图床；</p>
+</li>
+</ol>
+<p><img src="https://cdn.jsdelivr.net/gh/cunyu1943/blog-imgs/image-giteeconfig.png" alt="" loading="lazy"></p>
+<ol start="6">
+<li>填写相关信息，最后点击 <code>确定</code>即可，要将其作为默认图床的话，点击设为默认图床，其中的相关信息如下：
+<ul>
+<li><strong>repo</strong>：就是刚才创建的 <strong>用户名/仓库名</strong>;</li>
+<li><strong>branch</strong>：默认为 <strong>master</strong> 即可；</li>
+<li><strong>token</strong>：刚才生成的令牌；</li>
+<li><strong>path</strong>：可自定义，但是要填，否则可能导致上传失败；</li>
+<li><strong>customPath</strong>：图片归档方式，以年、年月……</li>
+<li><strong>customUrl</strong>：保持默认；</li>
+</ul>
+</li>
+</ol>
+<p><img src="https://gitee.com/cunyu1943/blog-img/raw/master/images/image-configgitee.png" alt="设置" loading="lazy"></p>
+<ol start="6">
+<li>上传图片，通过上传区上传即可（Ctrl V 或者将图片拖拽都可以），也可以通过快捷键的方式上传（默认上传键为 <code>Ctrl + Shift + P</code>）；</li>
+</ol>
+<p><img src="https://cdn.jsdelivr.net/gh/cunyu1943/image-hosting-for-blog/blog/image-20210126135321015.png" alt="" loading="lazy"></p>
+<h2 id="搭配-typora-使用" tabindex="-1"> 搭配 Typora 使用</h2>
+<p><a href="https://www.typora.io/" target="_blank" rel="noopener noreferrer">Typora<ExternalLinkIcon/></a> 是一款跨平台的本地 Markdown 编辑器（个人认为是同类最棒的一款软件了），通过搭配 Typora + Picgo，我们不用向上面上传图片那么麻烦，只需要在 Typora 设置后图片就能自动上传，设置方法如下：</p>
+<p>依次打开 <code>文件-&gt;偏好设置-&gt;图像</code>，然后选择插入图片时的动作为上传图片，并勾选对本地位置的图片应用，最后在 PicGo 路径中找到你安装 PicGo 的地址即可；</p>
+<p><img src="https://gitee.com/cunyu1943/blog-img/raw/master/images/image-typoraconfig.png" alt="Typora 设置" loading="lazy"></p>
+<h2 id="总结" tabindex="-1"> 总结</h2>
+<p>至此，我们的搭建免费图床的教程就到此结束了，总体上来讲和 Github 搭建的方式还是一样的，只是有一些小细节需要注意。好了，总结一下本文，主要有如下几部分：</p>
+<ol>
+<li>准备一个 Gitee 账号；</li>
+<li>搭建图床仓库；</li>
+<li>上传图片设置；</li>
+<li>搭配 Typora 使用；</li>
+</ol>
+<p>如果你对上面的部分有疑问，欢迎留言或者私信，我会在看到的第一时间回复你！</p>
+<p><img src="http://ww4.sinaimg.cn/bmiddle/6af89bc8gw1f8srz9343vj205i05ijr9.jpg" alt="" loading="lazy"></p>
+]]></content:encoded>
+      <enclosure url="http://ww1.sinaimg.cn/bmiddle/9150e4e5ly1fqdi3jit6oj203h03h3yb.jpg" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>效率工具：Github 当免费图床</title>
+      <link>https://cunyu1943.github.io/JavaPark/JavaPark/efficiency/github-img-bed.html</link>
+      <guid>https://cunyu1943.github.io/JavaPark/JavaPark/efficiency/github-img-bed.html</guid>
+      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">效率工具：Github 当免费图床</source>
+      <category>工具教程</category>
+      <pubDate>Mon, 03 Jan 2022 21:38:59 GMT</pubDate>
+      <content:encoded><![CDATA[<h2 id="前言" tabindex="-1"> 前言</h2>
+<p>对于写博客的朋友们来讲，图床这个东西一定不会陌生，而且在一定程度上也给大家造成过一定困扰。</p>
+<p>对于不清楚这个东西的朋友，我就在这儿大概说一下图床是个啥东西。所谓图床，其实可以就相当于我们手机上的相册，不过他是在线的，而且是对大家开放的，大家都可以访问查看，但是编辑删除这些功能仅限于拥有者，就相当于用百度云分享的公开照片，你可以查看，也可以下载下来编辑，但是拥有权还是属于分享者。</p>
+<p>那你可能会疑惑，那这个东西和写博客的我们有啥关系呢？</p>
+<img src="http://ww2.sinaimg.cn/bmiddle/ceeb653ejw1faa8rtzdq1j20k00k0jvh.jpg" style="zoom: 50%;" />
+<p>你想想，我们写博客，是不是有很多图片需要插入，我们这些博客要保留在本地的时候你可以预览到图片，但一旦你要把它发布到网上，这时候问题来了！发现图片上传失败，那是因为你本地的图片都是存在本地的，平台不会自动给你上传，那这个时候就凸显出图床的重要性了。当然了，如果你是直接在平台进行编辑，那着一点就不用担心了，基本平台都会自动给你上传到它自己的服务器。</p>
+<p>有了图床，我们在本地写好博客之后，就能够任意复制到其他平台，不用担心图片丢失问题了。</p>
+<img src="http://ww2.sinaimg.cn/bmiddle/9150e4e5gy1g39su10f1dj209l0a3q30.jpg" style="zoom:50%;" />
+<p>今天的文章就是给大家分享一个搭建免费图床的教程，既是方便自己后续的复习，也希望对大家也有所帮助。</p>
+<h2 id="准备工作" tabindex="-1"> 准备工作</h2>
+<p>那么在正式开始之前，你需要提前准备以下东西：</p>
+<blockquote>
+<p>一个 Github 账号</p>
+</blockquote>
+<img src="http://ww2.sinaimg.cn/bmiddle/9150e4e5ly1g6zyr5dbqvj20cs0cudgc.jpg" style="zoom:50%;" />
+<p>好了，就这么简单，只要你有一个 Github 账号就够了，你就能拥有一个免费的图床了，如果你还没有，那赶紧去 <a href="https://github.com/cunyu1943" target="_blank" rel="noopener noreferrer">注册<ExternalLinkIcon/></a> 一个账号吧。</p>
+<h2 id="搭建过程" tabindex="-1"> 搭建过程</h2>
+<p>这一部分就是正式开始大家过程了，准备好大干一场吧！</p>
+<img src="http://ww1.sinaimg.cn/bmiddle/006r3PQBjw1fabl4k0h27j309q09q3yk.jpg" style="zoom:50%;" />
+<ol>
+<li>登录你的 Github 之后，创建一个新的仓库；</li>
+</ol>
+<p><img src="https://cdn.jsdelivr.net/gh/cunyu1943/image-hosting-for-blog/blog/image-createrepo.png" alt="" loading="lazy"></p>
+<ol start="2">
+<li>填写仓库先关资料，一般只需要选一个合适的仓库名，然后确保仓库为 <code>public</code> 其他的保持默认就好；</li>
+</ol>
+<p><img src="https://cdn.jsdelivr.net/gh/cunyu1943/image-hosting-for-blog/blog/image-20210126131523319.png" alt="" loading="lazy"></p>
+<ol start="3">
+<li>一般创建成功之后，会出现如下界面，至此，我们的图床算是创建好了，接下来就是如何上传图片了；</li>
+</ol>
+<p><img src="https://cdn.jsdelivr.net/gh/cunyu1943/image-hosting-for-blog/blog/image-successimg.png" alt="" loading="lazy"></p>
+<h2 id="上传图片" tabindex="-1"> 上传图片</h2>
+<p>通过上面的步骤，我们的图床时搭建好了，但是通过传统的方法向 Github 上传图片太麻烦了，这里我们推荐使用一个开源图床工具 <a href="https://molunerfinn.com/PicGo/" target="_blank" rel="noopener noreferrer">PicGo<ExternalLinkIcon/></a> 来作为我们的图片上传工具；</p>
+<p>PicGo 的安装就不说了，去他的 <a href="https://molunerfinn.com/PicGo/" target="_blank" rel="noopener noreferrer">官网<ExternalLinkIcon/></a> 下载对应版本进行安装即可，我们主要讲讲如何用它来上传图片。安装后，打开软件其主页面如下：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/cunyu1943/image-hosting-for-blog/blog/image-picgo.png" alt="" loading="lazy"></p>
+<p>接下来就是配置 PicGo 的过程了。</p>
+<ol>
+<li>首先，我们先要去 Github 创建一个 token；</li>
+</ol>
+<p>以此打开 <code>Settings -&gt; Developer settings -&gt; Personal access tokens</code>，最后点击 <code>generate new token</code>；</p>
+<p><img src="https://cdn.jsdelivr.net/gh/cunyu1943/image-hosting-for-blog/blog/image-20210126133151041.png" alt="" loading="lazy"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/cunyu1943/image-hosting-for-blog/blog/image-20210126133303931.png" alt="" loading="lazy"></p>
+<ol start="2">
+<li>填写及勾选相关信息，然后点击 <code>Genetate token</code> 即可；</li>
+</ol>
+<p><img src="https://cdn.jsdelivr.net/gh/cunyu1943/image-hosting-for-blog/blog/access.png" alt="" loading="lazy"></p>
+<ol start="3">
+<li><code>token</code> 生成，注意它只会显示一次，所以你最好把它复制下来到你的备忘录存好，方便下次使用，否则下次有需要重新新建；</li>
+</ol>
+<p><img src="https://cdn.jsdelivr.net/gh/cunyu1943/image-hosting-for-blog/blog/image-20210126134143580.png" alt="" loading="lazy"></p>
+<ol start="4">
+<li>配置 PicGo，依次打开 图床设置 -&gt;  Github 图床；</li>
+</ol>
+<p><img src="https://cdn.jsdelivr.net/gh/cunyu1943/image-hosting-for-blog/blog/image-20210126134655906.png" alt="" loading="lazy"></p>
+<ol start="5">
+<li>填写相关信息，最后点击 <code>确定</code>即可，要将其作为默认图床的话，点击设为默认图床；</li>
+</ol>
+<p><img src="https://cdn.jsdelivr.net/gh/cunyu1943/image-hosting-for-blog/blog/image-20210126135110934.png" alt="" loading="lazy"></p>
+<ol start="6">
+<li>上传图片，通过上传区上传即可（Ctrl V 或者将图片拖拽都可以），也可以通过快捷键的方式上传（默认上传键为 <code>Ctrl + Shift + P</code>）；</li>
+</ol>
+<p><img src="https://cdn.jsdelivr.net/gh/cunyu1943/image-hosting-for-blog/blog/image-20210126135321015.png" alt="" loading="lazy"></p>
+<h2 id="加速访问" tabindex="-1"> 加速访问</h2>
+<p>大家可能会发现，我们上传到 Github 的图片有时候访问太慢了，有时候甚至直接加载不出来！那该咋办呢？</p>
+<p>这时候我们就可以用 <a href="https://www.jsdelivr.com/" target="_blank" rel="noopener noreferrer">jsDelivr<ExternalLinkIcon/></a> 进行免费加速，而设置的方法也很简单，只需要在我们 PicGo 图床配置中添加如下自定义域名即可；</p>
+<blockquote>
+<p><code>https://cdn.jsdelivr.net/gh/用户名/仓库名</code></p>
+</blockquote>
+<p>比如我的就是 <code>https://cdn.jsdelivr.net/gh/cunyu1943/blog-imgs</code></p>
+<p><img src="https://cdn.jsdelivr.net/gh/cunyu1943/blog-imgs/image-jsdelivr.png" alt="" loading="lazy"></p>
+<h2 id="图床推荐" tabindex="-1"> 图床推荐</h2>
+<p>除开用 Github 搭建的方式之后，我们也可以用 Gitee 进行搭建，搭建方式和本文大致相同。此外，我也推荐几个免费的图床给大家，大家可以根据自己的喜好进行选择；</p>
+<ol>
+<li><a href="https://imgchr.com/" target="_blank" rel="noopener noreferrer">路过图床<ExternalLinkIcon/></a></li>
+<li><a href="https://sm.ms/" target="_blank" rel="noopener noreferrer">SM.MS<ExternalLinkIcon/></a></li>
+<li><a href="https://imgur.com/" target="_blank" rel="noopener noreferrer">Imgur<ExternalLinkIcon/></a></li>
+</ol>
+<h2 id="总结" tabindex="-1"> 总结</h2>
+<p>至此，我们的搭建免费图床的教程就到此结束了，总结一下主要有如下几部分：</p>
+<ol>
+<li>准备一个 Github 账号；</li>
+<li>搭建图床仓库；</li>
+<li>上传图片设置；</li>
+<li>加速访问；</li>
+<li>免费图床推荐；</li>
+</ol>
+<p>如果你对上面的部分有疑问，欢迎留言或者私信，我会在看到的第一时间回复你！</p>
+<p><img src="http://ww4.sinaimg.cn/bmiddle/6af89bc8gw1f8srz9343vj205i05ijr9.jpg" alt="" loading="lazy"></p>
+]]></content:encoded>
+      <enclosure url="https://cdn.jsdelivr.net/gh/cunyu1943/image-hosting-for-blog/blog/image-createrepo.png" type="image/png"/>
+    </item>
+    <item>
+      <title>效率工具：10 分钟入门 Markdown</title>
+      <link>https://cunyu1943.github.io/JavaPark/JavaPark/efficiency/markdown-in-10min.html</link>
+      <guid>https://cunyu1943.github.io/JavaPark/JavaPark/efficiency/markdown-in-10min.html</guid>
+      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">效率工具：10 分钟入门 Markdown</source>
+      <category>工具教程</category>
+      <pubDate>Sun, 16 Jan 2022 21:08:52 GMT</pubDate>
+      <content:encoded><![CDATA[<h2 id="什么是markdown格式" tabindex="-1"> 什么是Markdown格式</h2>
+<p>Markdown格式是一种可用普通文本编辑器编写的标记语言，使用者能够通过简单的标记语法，对自己所写文本内容进行简单的格式排版。如果你经常逛 Github，你会发现大多数项目下边都会有一个 <code>README.md</code> 的项目说明文件，而它就是利用 Markdown 来进行编写的。而现在的大多数博客平台如 CSDN、博客园、掘金等，基本都支持 Markdown 格式，如果你有多平台发布文章的需求，那么学会用 Markdown 来编写内容未尝不是一个好的方法。</p>
+<p>而且就算微信公众号，我们也可以借助第三方工具来进行排版，比起之前用 Word 来排版的方式省去了很多麻烦，实现一文多发变得更加容易，不用再去调格式适应不同平台。</p>
+<h2 id="优点" tabindex="-1"> 优点</h2>
+<ul>
+<li>
+<p>语法简洁易学，且功能比纯文本强大；</p>
+</li>
+<li>
+<p>格式转换方便，兼容性强，可读性极好；</p>
+</li>
+<li>
+<p>专注内容写作而不用关注排版样式；</p>
+</li>
+<li>
+<p>能导出PDF、HTML 等格式的文件；</p>
+</li>
+<li>
+<p>迁移、反复编辑不会导致格式错乱；</p>
+</li>
+</ul>
+<h2 id="写作格式" tabindex="-1"> 写作格式</h2>
+<h3 id="标题" tabindex="-1"> 标题</h3>
+<p>一到六级标题如下，每多一级则多加一个<code>#</code>号，<strong>注意</strong>：符号和标题内容间的空格不能省略，具体格式如下：</p>
+<div><pre><code><span><span>#</span> 一级标题</span>
+<span><span>##</span> 二级标题</span>
+<span><span>###</span> 三级标题</span>
+<span><span>####</span> 四级标题</span>
+<span><span>#####</span> 五级标题</span>
+<span><span>######</span> 六级标题</span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br></div></div><p><img src="https://cdn.jsdelivr.net/gh/cunyu1943/image-hosting-for-blog/blog/image-title'.png" alt="img" loading="lazy"></p>
+<h3 id="列表" tabindex="-1"> 列表</h3>
+<p>列表又分为有序列表和无序列表；</p>
+<ul>
+<li>有序列表：<code>阿拉伯数字 + . + 空格 + 内容</code>，具体格式如下：</li>
+</ul>
+<div><pre><code>  <span>1.</span> 蒂姆.邓肯
+  <span>2.</span> 马努.比诺比利
+  <span>3.</span> 托尼.帕克
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br></div></div><p><img src="https://cdn.jsdelivr.net/gh/cunyu1943/image-hosting-for-blog/blog/image-ol.png" alt="img" loading="lazy"></p>
+<ul>
+<li>无序列表：<code>英文横杠 + 空格 + 内容</code>，具体格式如下：</li>
+</ul>
+<div><pre><code>  <span>-</span> Apple
+  <span>-</span> Orange
+  <span>-</span> Banana
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br></div></div><p><img src="https://cdn.jsdelivr.net/gh/cunyu1943/image-hosting-for-blog/blog/image-ul.png" alt="img" loading="lazy"></p>
+<h3 id="加粗" tabindex="-1"> 加粗</h3>
+<p>内容前后分别用两个 <code>*</code> 将其括起来，即 <code>** + 内容 + **</code>，具体格式如下：</p>
+<div><pre><code><span><span>**</span><span>公众号：村雨遥</span><span>**</span></span>
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p><img src="https://cdn.jsdelivr.net/gh/cunyu1943/image-hosting-for-blog/blog/image-bold.png" alt="img" loading="lazy"></p>
+<h3 id="斜体" tabindex="-1"> 斜体</h3>
+<p>和加粗很类似，不过只需要将内容前后分别用一个 <code>*</code> 包围起来即可，即 <code>* + 内容 + *</code>，具体格式如下：</p>
+<div><pre><code><span><span>*</span><span>公众号：村雨遥</span><span>*</span></span>
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p><img src="https://cdn.jsdelivr.net/gh/cunyu1943/image-hosting-for-blog/blog/image-italic.png" alt="img" loading="lazy"></p>
+<h3 id="删除线" tabindex="-1"> 删除线</h3>
+<p>要给内容加上删除线的效果，只需要在内容前后分别用两个 <code>~</code> 将其包围即可，即 <code>~~ + 内容 + ~~</code>，具体格式如下：</p>
+<div><pre><code><span><span>~~</span><span> 公众号：村雨遥 </span><span>~~</span></span>
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p><img src="https://cdn.jsdelivr.net/gh/cunyu1943/image-hosting-for-blog/blog/image-delete.png" alt="img" loading="lazy"></p>
+<h3 id="下划线" tabindex="-1"> 下划线</h3>
+<p>要实现下划线的效果，可以借助 HTML 语法 <code>&lt;u&gt; + 内容 + &lt;/u&gt;</code>，具体格式如下：</p>
+<div><pre><code><span><span><span>&lt;</span>u</span><span>></span></span>公众号：村雨遥<span><span><span>&lt;/</span>u</span><span>></span></span>
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p><img src="https://cdn.jsdelivr.net/gh/cunyu1943/image-hosting-for-blog/blog/image-underline.png" alt="img" loading="lazy"></p>
+<h3 id="分割线" tabindex="-1"> 分割线</h3>
+<p>如果要将不同内容之间插入一条分割线，可以使用 <code>---</code> 单独占一行来实现，具体格式如下：</p>
+<div><pre><code>公众号：村雨遥
+
+<span>---</span>
+
+个人博客：https://cunyu1943.github.io
+
+<span>---</span>
+
+知乎：https://www.zhihu.com/people/cunyu1943
+
+<span>---</span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br></div></div><p><img src="https://cdn.jsdelivr.net/gh/cunyu1943/image-hosting-for-blog/blog/image-splitline.png" alt="img" loading="lazy"></p>
+<h3 id="引用" tabindex="-1"> 引用</h3>
+<p>要引用其他人的话时，可以使用 <code>&gt; + 内容</code> 的形式，具体格式如下：</p>
+<div><pre><code><span>></span> 吾生也有涯，而知也无涯。
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p><img src="https://cdn.jsdelivr.net/gh/cunyu1943/image-hosting-for-blog/blog/image-quoat.png" alt="img" loading="lazy"></p>
+<h3 id="上下标" tabindex="-1"> 上下标</h3>
+<p>当我们需要写化学公式或者需要标记上下标时，该怎么办呢？</p>
+<ul>
+<li>上标：<code>^内容^</code></li>
+<li>下标：<code>~内容~</code></li>
+</ul>
+<div><pre><code><span>1.</span> 上标
+
+<span>    H^2^O</span>
+
+<span>2.</span> 下标
+
+<span>    H~2~O</span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br></div></div><p><img src="https://cdn.jsdelivr.net/gh/cunyu1943/image-hosting-for-blog/blog/image-shangxiabiao.png" alt="img" loading="lazy"></p>
+<h3 id="高亮" tabindex="-1"> 高亮</h3>
+<p>高亮语法在有的 Markdown 标准中可能不支持，但在这里也给出其用法，即 <code>== + 内容 + ==</code>，具体格式如下：</p>
+<div><pre><code>==公众号：村雨遥==
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p><img src="https://cdn.jsdelivr.net/gh/cunyu1943/image-hosting-for-blog/blog/image-highlight.png" alt="img" loading="lazy"></p>
+<h3 id="任务列表" tabindex="-1"> 任务列表</h3>
+<p>任务列表是我们经常接触到的东西，比如我们的备忘录，完成的事件和未完成事件，要在 Markdown 中实现同样效果，可以使用如下的格式：</p>
+<ul>
+<li>已完成：<code>[x] + 内容</code></li>
+<li>未完成：<code>[] + 内容</code></li>
+</ul>
+<div><pre><code><span>1.</span> 未完成任务
+
+<span>    - [ ] 公众号：村雨遥
+    - [ ] 个人博客：https://cunyu1943.github.io</span>
+
+<span>2.</span> 已完成任务
+    <span>-</span> [x] 知乎：https://www.zhihu.com/people/cunyu1943
+    <span>-</span> [x] CSDN：https://blog.csdn.net/github_39655029
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br></div></div><p><img src="https://cdn.jsdelivr.net/gh/cunyu1943/image-hosting-for-blog/blog/image-tasklist.png" alt="img" loading="lazy"></p>
+<h3 id="目录生成" tabindex="-1"> 目录生成</h3>
+<p>当我们文章写完之后，想要像 Word 中那样自动生成目录，此时就可以使用 <code>[TOC]</code> 单独占一行来实现，但是要注意，有的平台可能不支持该用法，具体格式如下：</p>
+<div><pre><code>[TOC]
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p><img src="https://cdn.jsdelivr.net/gh/cunyu1943/image-hosting-for-blog/blog/image-content.png" alt="img" loading="lazy"></p>
+<h3 id="表格" tabindex="-1"> 表格</h3>
+<p>Markdown 中的表格也很方便，我们可以用 <code>:</code> 来调整表格对齐的方式，具体格式如下：</p>
+<div><pre><code><span>1.</span> 左对齐
+<span><span><span>|</span><span> 平台     </span><span>|</span><span> 链接                                   </span><span>|</span>
+</span><span><span>|</span> <span>:-------</span> <span>|</span> <span>:-------------------------------------</span> <span>|</span>
+</span><span><span>|</span><span> 公众号   </span><span>|</span><span> 村雨遥                                 </span><span>|</span>
+<span>|</span><span> 个人博客 </span><span>|</span><span> https://cunyu1943.github.io            </span><span>|</span>
+<span>|</span><span> 知乎     </span><span>|</span><span> https://www.zhihu.com/people/cunyu1943 </span><span>|</span>
+</span></span>
+<span>2.</span> 居中对齐
+
+<span><span><span>|</span><span>   平台   </span><span>|</span><span>                  链接                  </span><span>|</span>
+</span><span><span>|</span> <span>:------:</span> <span>|</span> <span>:------------------------------------:</span> <span>|</span>
+</span><span><span>|</span><span>  公众号  </span><span>|</span><span>                 村雨遥                 </span><span>|</span>
+<span>|</span><span> 个人博客 </span><span>|</span><span>      https://cunyu1943.github.io       </span><span>|</span>
+<span>|</span><span>   知乎   </span><span>|</span><span> https://www.zhihu.com/people/cunyu1943 </span><span>|</span>
+</span></span>
+<span>3.</span> 右对齐
+<span><span><span>|</span><span>     平台 </span><span>|</span><span>                                   链接 </span><span>|</span>
+</span><span><span>|</span> <span>-------:</span> <span>|</span> <span>-------------------------------------:</span> <span>|</span>
+</span><span><span>|</span><span>   公众号 </span><span>|</span><span>                                 村雨遥 </span><span>|</span>
+<span>|</span><span> 个人博客 </span><span>|</span><span>            https://cunyu1943.github.io </span><span>|</span>
+<span>|</span><span>     知乎 </span><span>|</span><span> https://www.zhihu.com/people/cunyu1943 </span><span>|</span>
+</span></span></code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br></div></div><p><img src="https://cdn.jsdelivr.net/gh/cunyu1943/image-hosting-for-blog/blog/image-table.png" alt="img" loading="lazy"></p>
+<h3 id="公式" tabindex="-1"> 公式</h3>
+<p>Markdown 支持 LaTeX 语法，可以实现行间公式和独立公式块，公式的写法和 LaTeX 语法一样，具体格式如下</p>
+<ul>
+<li>行间公式：<code>$ + 公式 + $</code></li>
+<li>独立公式块：<code>$$ + 公式 + $$</code></li>
+</ul>
+<div><pre><code><span>1.</span> 行间公式
+
+<span>    $x_1+x_2=0$</span>
+
+<span>2.</span> 独立公式块
+
+<span>    $$x^2+y^2=0$$</span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br></div></div><p><img src="https://cdn.jsdelivr.net/gh/cunyu1943/image-hosting-for-blog/blog/image-gongshi.png" alt="img" loading="lazy"></p>
+<h3 id="代码块" tabindex="-1"> 代码块</h3>
+<p>同公式一样，代码块同样可以分为行间代码块和独立代码块，其区别在于用一个或多个 `  将其括起来，具体格式如下：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/cunyu1943/image-hosting-for-blog/blog/image-codeblock.png" alt="img" loading="lazy"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/cunyu1943/image-hosting-for-blog/blog/image-codeb.png" alt="img" loading="lazy"></p>
+<h3 id="链接与图片" tabindex="-1"> 链接与图片</h3>
+<p>链接和图片的唯一区别在于图片需要在最前面加上一个 <code>!</code>，两个具体格式如下：</p>
+<ul>
+<li>链接：<code>[链接说明](url)</code></li>
+<li>图片：<code>![图片说明](url)</code></li>
+</ul>
+<div><pre><code><span>1.</span> 链接
+
+<span>[<span>村雨遥的杂货铺</span>](<span>https://cunyu1943.site</span>)</span>
+
+<span>2.</span> 图片
+
+<span><span>!</span>[<span>村雨遥的杂货铺</span>](<span>https://cdn.jsdelivr.net/gh/cunyu1943/image-hosting-for-blog/blog/image-blogzhuye.png</span>)</span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br></div></div><p><img src="https://cdn.jsdelivr.net/gh/cunyu1943/image-hosting-for-blog/blog/image-linkandpic.png" alt="img" loading="lazy"></p>
+<h2 id="编辑器推荐" tabindex="-1"> 编辑器推荐</h2>
+<p>好了，学习了上面的之后，是不是想马上动手试试。既然如此，那就再给大家推荐几款编辑器，让你的效率更上一层楼，PS：<strong>多学习快捷键使用，效果更佳哦！</strong></p>
+<ol>
+<li><a href="https://www.typora.io/" target="_blank" rel="noopener noreferrer">Typora<ExternalLinkIcon/></a>：跨平台多功能 Markdown 编辑器，支持导出 PDF、HTML 等格式。</li>
+</ol>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly91cGxvYWQtaW1hZ2VzLmppYW5zaHUuaW8vdXBsb2FkX2ltYWdlcy85NzQ3MzUwLTYxMTY0YWExZjY5YzY4MjgucG5n?x-oss-process=image/format,png" alt="img" loading="lazy"></p>
+<ol>
+<li><a href="https://marktext.app/" target="_blank" rel="noopener noreferrer">MarkText<ExternalLinkIcon/></a>：跨平台开源 Markdown 编辑器，支持斗图哦！</li>
+</ol>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly91cGxvYWQtaW1hZ2VzLmppYW5zaHUuaW8vdXBsb2FkX2ltYWdlcy85NzQ3MzUwLTQ0NmU4YWNjMTRlYjE4ZjMucG5n?x-oss-process=image/format,png" alt="img" loading="lazy"></p>
+<ol>
+<li><a href="https://code.visualstudio.com/" target="_blank" rel="noopener noreferrer">Visual Studio Code<ExternalLinkIcon/></a>：巨硬出品，必属精品，哈哈，需要配合插件使用！</li>
+</ol>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly91cGxvYWQtaW1hZ2VzLmppYW5zaHUuaW8vdXBsb2FkX2ltYWdlcy85NzQ3MzUwLWRkNDliNjE2ZmQ5ZWZmMzUucG5n?x-oss-process=image/format,png" alt="img" loading="lazy"></p>
+<h2 id="注意事项" tabindex="-1"> 注意事项</h2>
+<ol>
+<li><code>Markdown</code>兼容<code>HTML</code>相关语法；</li>
+<li>对于特殊字符，可以通过转义字符<code>\</code>将其显示出来；</li>
+</ol>
+]]></content:encoded>
+      <enclosure url="https://cdn.jsdelivr.net/gh/cunyu1943/image-hosting-for-blog/blog/image-title'.png" type="image/png"/>
+    </item>
+    <item>
+      <title>效率工具：利用 Markdown 画图</title>
+      <link>https://cunyu1943.github.io/JavaPark/JavaPark/efficiency/paint-with-markdown.html</link>
+      <guid>https://cunyu1943.github.io/JavaPark/JavaPark/efficiency/paint-with-markdown.html</guid>
+      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">效率工具：利用 Markdown 画图</source>
+      <category>工具教程</category>
+      <pubDate>Sun, 16 Jan 2022 21:10:15 GMT</pubDate>
+      <content:encoded><![CDATA[<h2 id="前言" tabindex="-1"> 前言</h2>
+<p>日常工作中，常常需要画各种图表，利用专业的画图的工具如 Visio 等当然能画出我们想要的图表。但是我们只是想要简单的图表时，也可以通过借助 Markdown 相关语法实现，大大提高效率。</p>
+<h2 id="时序图-sequence-diagrams" tabindex="-1"> 时序图（Sequence Diagrams）</h2>
+<MermaidChart id="mermaid-1a962853" data-code="sequenceDiagram%0A%20%20%E6%9D%91%E9%9B%A8%20-%3E%20%E6%9D%91%E9%9B%A8%E9%81%A5%3A%20%E4%BD%A0%E5%A5%BD%2C%20%E6%9D%91%E9%9B%A8%E9%81%A5%EF%BC%81%0A%20%20Note%20right%20of%20%E6%9D%91%E9%9B%A8%E9%81%A5%3A%20%E6%80%9D%E8%80%83%EF%BC%81%0A%20%20%E6%9D%91%E9%9B%A8%E9%81%A5%20--%3E%20%E6%9D%91%E9%9B%A8%3A%20%E4%BD%A0%E5%A5%BD%EF%BC%8C%E6%9D%91%E9%9B%A8%EF%BC%8C%E5%BE%88%E9%AB%98%E5%85%B4%E4%B8%8E%E4%BD%A0%E5%90%88%E4%BD%9C%EF%BC%81%0A"></MermaidChart><p><img src="https://gitee.com/cunyu1943/images/raw/master/ImgsUbuntu/20200507164716.png" alt="img" loading="lazy"></p>
+<h2 id="流程图-flowcharts" tabindex="-1"> 流程图（Flowcharts）</h2>
+<p><img src="https://cdn.nlark.com/yuque/__flowchart/83be9022c1e43a5bdab9b328ed1107c6.svg" alt="img" loading="lazy"></p>
+<p><img src="https://gitee.com/cunyu1943/images/raw/master/ImgsUbuntu/20200507165446.png" alt="img" loading="lazy"></p>
+<h2 id="mermaid-图" tabindex="-1"> Mermaid 图</h2>
+<h3 id="准备知识" tabindex="-1"> 准备知识</h3>
+<h4 id="节点图形" tabindex="-1"> 节点图形</h4>
+<table>
+<thead>
+<tr>
+<th>格式</th>
+<th>形状</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id[text]</code></td>
+<td>矩形</td>
+</tr>
+<tr>
+<td><code>id(text)</code></td>
+<td>圆角矩形</td>
+</tr>
+<tr>
+<td><code>id((text))</code></td>
+<td>圆形</td>
+</tr>
+<tr>
+<td><code>id&gt;text]</code></td>
+<td>向右旗帜状</td>
+</tr>
+<tr>
+<td><code>id{text}</code></td>
+<td>菱形</td>
+</tr>
+</tbody>
+</table>
+<h4 id="连接线" tabindex="-1"> 连接线</h4>
+<table>
+<thead>
+<tr>
+<th>格式</th>
+<th>效果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>A--&gt;B</code></td>
+<td>实线，箭头，无文字</td>
+</tr>
+<tr>
+<td><code>A---B</code></td>
+<td>实线，无箭头，无文字</td>
+</tr>
+<tr>
+<td><code>A--文字---B</code></td>
+<td>实线，无箭头，文字</td>
+</tr>
+<tr>
+<td><code>A--文字--&gt;B</code></td>
+<td>实线，箭头，文字</td>
+</tr>
+<tr>
+<td><code>A-.-&gt;B</code></td>
+<td>虚线，箭头，无文字</td>
+</tr>
+<tr>
+<td><code>A-.文字.-&gt;B</code></td>
+<td>虚线，箭头，文字</td>
+</tr>
+<tr>
+<td><code>A==&gt;B</code></td>
+<td>大箭头，无文字</td>
+</tr>
+<tr>
+<td><code>A==文字==&gt;B</code></td>
+<td>大箭头，文字</td>
+</tr>
+</tbody>
+</table>
+<h3 id="时序图-sequence-diagrams-1" tabindex="-1"> 时序图（Sequence Diagrams）</h3>
+<div><pre><code>sequenceDiagram
+    Manu->>Tim: Hello Tim, how are you?
+    alt is sick
+    Tim->>Manu: Not so good :(
+    else is well
+    Tim->>Manu: Feeling fresh like a daisy
+    end
+    opt Extra response
+    Tim->>Manu: Thanks for asking
+    end
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br></div></div><p><img src="https://gitee.com/cunyu1943/images/raw/master/ImgsUbuntu/20200507211259.png" alt="" loading="lazy"></p>
+<h3 id="流程图-flowcharts-1" tabindex="-1"> 流程图（Flowcharts)</h3>
+<ul>
+<li>流程图图表方向</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>图表方向</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>TB/TD</code></td>
+<td>从上到下</td>
+</tr>
+<tr>
+<td><code>BT</code></td>
+<td>从下到上</td>
+</tr>
+<tr>
+<td><code>RL</code></td>
+<td>从右到左</td>
+</tr>
+<tr>
+<td><code>LR</code></td>
+<td>从左到右</td>
+</tr>
+</tbody>
+</table>
+<div><pre><code>graph TD
+A[开始] -->B[出示证件]
+    B --> C{是否是学生}
+    C -->|是| D[5 折]
+    C -->|否| E[全票]
+    D --> F[结束]
+    E --> F[结束]
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br></div></div><p><img src="https://gitee.com/cunyu1943/images/raw/master/ImgsUbuntu/20200507211237.png" alt="" loading="lazy"></p>
+<h3 id="甘特图-gantt-charts" tabindex="-1"> 甘特图（Gantt Charts）</h3>
+<div><pre><code>gantt
+    title 甘特图
+    dateFormat  YYYY-MM-DD
+    section Section
+    项目确定           :a1, 2020-01-01, 30d
+    可行性分析     :after a1  , 20d
+    section Another
+    需求分析     :2020-01-12  , 12d
+    项目实施      : 24d
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br></div></div><p><img src="https://gitee.com/cunyu1943/images/raw/master/ImgsUbuntu/20200507214018.png" alt="" loading="lazy"></p>
+<h3 id="类图-class-diagrams" tabindex="-1"> 类图（Class Diagrams）</h3>
+<div><pre><code>classDiagram
+	Animal &lt;|-- Dog
+	Animal &lt;|-- Cat
+	Animal &lt;|-- Wolf
+	
+    Animal : +int age
+	Animal : +String name
+	Animal : +String color
+	Animal : +isMammal()
+	Animal : +getColor()
+	
+	class Dog{
+		+Stirng type
+		+bark()
+	}
+	
+	class Cat{
+		+String eyesColor
+		+catchMouse()
+	}
+	
+	class Wolf{
+		+String area
+		+kill()
+	}
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br></div></div><p><img src="https://gitee.com/cunyu1943/images/raw/master/ImgsUbuntu/20200507211208.png" alt="" loading="lazy"></p>
+<h3 id="状态图-state-diagrams" tabindex="-1"> 状态图（State Diagrams）</h3>
+<div><pre><code>stateDiagram
+	[*] --> 保持
+	保持 --> [*]
+	
+	保持 --> 移动
+	移动 --> 保持
+	移动 --> 加速
+	加速 --> [*]
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br></div></div><p><img src="https://gitee.com/cunyu1943/images/raw/master/ImgsUbuntu/20200507211112.png" alt="" loading="lazy"></p>
+<h3 id="饼图-pie-charts" tabindex="-1"> 饼图（Pie Charts）</h3>
+<p><img src="https://cdn.nlark.com/yuque/__mermaid_v3/805eac7734d0ca3e4b48f70c7a39fe3f.svg" alt="img" loading="lazy"></p>
+<p><img src="https://gitee.com/cunyu1943/images/raw/master/ImgsUbuntu/20200507170556.png" alt="" loading="lazy"></p>
+]]></content:encoded>
+      <enclosure url="https://gitee.com/cunyu1943/images/raw/master/ImgsUbuntu/20200507164716.png" type="image/png"/>
+    </item>
+    <item>
+      <title>工具教程：技术写作中的神兵利器</title>
+      <link>https://cunyu1943.github.io/JavaPark/JavaPark/efficiency/write-tools.html</link>
+      <guid>https://cunyu1943.github.io/JavaPark/JavaPark/efficiency/write-tools.html</guid>
+      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">工具教程：技术写作中的神兵利器</source>
+      <category>工具教程</category>
+      <pubDate>Sat, 01 Jan 2022 20:38:05 GMT</pubDate>
+      <content:encoded><![CDATA[<h2 id="前言" tabindex="-1"> 前言</h2>
+<p>之前参加了由掘金社区组织的创作者训练营第二期活动，有幸见到了比如月影、工业聚、张晋涛等许多这个行业的大佬，也认识了许多技术写作的博主，可谓是一场大型网友面基会，哈哈哈 🤣. 针对大佬们的演讲和各位博主的提问，发现大家对于多平台分发这一块很感兴趣，也被这个问题困扰了许久，所以今天就来讲讲我这个小菜鸟在平常创作和发布这一块中摸索使用的一些工具总结，希望能对大家有所帮助。下面就来看看文章的主要内容，我主要会从如下几个方面来进行展开：</p>
+<ul>
+<li><strong>编辑器</strong></li>
+<li><strong>思维导图</strong></li>
+<li><strong>图床</strong></li>
+<li><strong>多平台分发</strong></li>
+</ul>
+<p>如果你对其中的某一部分比较感兴趣，那就直接跳到对应目录吧，当然你也可以看看全文，看看我的方法和你使用的方法是否相同呢 😉。</p>
+<h2 id="编辑器" tabindex="-1"> 编辑器</h2>
+<p>主要针对的是使用 Markdown 语法的编辑器，如果你对 Markdown 语法还不太熟悉，可以先看看我的另一篇文章：<a href="https://mp.weixin.qq.com/s?__biz=MzIyNTg2MjkzNw==&amp;mid=2247492604&amp;idx=1&amp;sn=a8ef3fe0dc72ed18e841f00236dc01d5&amp;chksm=e87b978adf0c1e9c0b7120aee8826f15e387c5a1581456c7bb227b201c9ad2810a91ca576b2a#rd" target="_blank" rel="noopener noreferrer">十分钟入门 Markdown 写作<ExternalLinkIcon/></a>。</p>
+<h3 id="typora" tabindex="-1"> Typora</h3>
+<blockquote>
+<p>地址：https://www.typora.io/</p>
+</blockquote>
+<p>我愿称之为最强 Markdown 编辑器没有之一，这是一款支持 macOS、Windows、Linux 三大平台的 Markdown 编辑器，而且完全免费。简单而强大，一旦你熟悉其中的快捷键之后，你会发现比其他编辑器快很多！（个人觉得，当然你也可以有不同的意见哈 😁）不过有一个缺点就是，当前一旦文档过大，Typora 使用起来就会十分卡顿，而相同的文档在其它编辑器则不会出现这种情况。</p>
+<p>此外，Typora 支持多种主题，还能支持我们自定义主题，对于我们颜控的小伙伴来讲，那就是杀招呀！对于大多数其它编辑器支持的导出功能，它怎么能少呢，Typora 支持导出如下格式的文件：</p>
+<ul>
+<li>PDF</li>
+<li>HTML（With/Without Styles）</li>
+<li>Word</li>
+<li>OPenOffice</li>
+<li>RTF</li>
+<li>Epub</li>
+<li>LaTex</li>
+<li>Media Wiki</li>
+<li>reStructureText</li>
+<li>Textile</li>
+<li>OPML</li>
+<li>图像</li>
+</ul>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/93f5e642ec2df9f4800192fb7b634121.png" alt="" loading="lazy"></p>
+<h3 id="marktext" tabindex="-1"> MarkText</h3>
+<blockquote>
+<p>地址：https://marktext.app/</p>
+</blockquote>
+<p>也是一款简单优雅免费的开源 Markdown 编辑器，专注于速度和可用性，而且同样支持 macOS、Windows、Linux 三大平台。支持如下特性：</p>
+<ul>
+<li>实时预览（所见即所得）和简洁明了的界面，使您获得无干扰的写作体验。</li>
+<li>支持 CommonMark 规范和 GitHub Flavored Markdown 规范。</li>
+<li>Markdown扩展，例如数学表达式（KaTeX）、front matter 和 emoji。</li>
+<li>支持段落和内联样式快捷方式，以提高您的写作效率。</li>
+<li>导出 <strong>HTML</strong> 和 <strong>PDF</strong> 文件。</li>
+<li>各种主题：<strong>Cadmium Light</strong>、<strong>Material Dark</strong> 等等。</li>
+<li>各种编辑模式：<strong>源代码模式</strong>、<strong>打字机模式</strong>、<strong>专注模式</strong>。</li>
+<li>直接从剪贴板中粘贴图片。</li>
+</ul>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/43b55f25b35d160e46ac3c74cc046d41.png" alt="" loading="lazy"></p>
+<h3 id="vs-code" tabindex="-1"> VS Code</h3>
+<blockquote>
+<p>地址：https://code.visualstudio.com/</p>
+</blockquote>
+<p>是的，VS Code 不仅仅可以作为我们的代码编辑器，我们还能把它当成 Markdown 编辑器，搭配 Markdown 增强插件，左边编辑，右边实时预览，爽歪歪！</p>
+<p>推荐插件：</p>
+<ul>
+<li>Markdown All in One</li>
+<li>Markdown Preview GitHub Styling</li>
+</ul>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/05a79ed98bd13b3a7dca992a89bbc4f6.png" alt="" loading="lazy"></p>
+<h2 id="思维导图" tabindex="-1"> 思维导图</h2>
+<h3 id="process-on" tabindex="-1"> Process On</h3>
+<blockquote>
+<p>地址：https://www.processon.com/i/5eec25bf1e08532637344b9c</p>
+</blockquote>
+<p>免费的在线作图工具，支持实时协作，方便团队，支持多种图的制作：</p>
+<ul>
+<li>流程图</li>
+<li>思维导图</li>
+<li>原型图</li>
+<li>UML</li>
+<li>网络拓扑图</li>
+<li>组织结构图</li>
+<li>……</li>
+</ul>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/5f7d91517e741db88ea31cb08ffd6906.png" alt="" loading="lazy"></p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/dc4fdd7d65efdcef9ca7aff90a068965.png" alt="" loading="lazy"></p>
+<h3 id="幕布" tabindex="-1"> 幕布</h3>
+<blockquote>
+<p>地址：https://mubu.com/</p>
+</blockquote>
+<p>大纲式笔记工具，根据我们的大纲生成思维导图。免费账号支持 300 条多文档结点数量，支持 4 种结构、4 种风格思维导图样式，还能导出 Word、PDF、图片、HTML 等格式，完全足够我们日常个人使用。</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/6496690a8cbde7ed3741ad873273c64b.png" alt="" loading="lazy"></p>
+<h3 id="gitmind" tabindex="-1"> GitMind</h3>
+<blockquote>
+<p>地址：https://gitmind.cn/</p>
+</blockquote>
+<p>免费在线思维导图软件，简化逻辑梳理，集思广益，释放创造力在线脑图、思维导图、流程图、工业设计、工程管理，一图涵千面。</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/2e110d0c638da659f2c41688a3aba490.png" alt="" loading="lazy"></p>
+<p>我们不仅能自己编辑，还能邀请小伙伴进行团队协作。此外，支持多种模板，不仅支持在线编辑，还支持多种导出形式。</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/b8f96e90ed0b0295a2b27e80ea2bb083.png" alt="" loading="lazy"></p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/7c481ca35d6ff0e1055c51bfe3068405.png" alt="" loading="lazy"></p>
+<h3 id="markmap" tabindex="-1"> markmap</h3>
+<blockquote>
+<p>地址：https://markmap.js.org/</p>
+</blockquote>
+<p>上面的工具都是直接图像化工具，和我们的 Markdown 工具无关。而今天这个工具，将两者结合起来，利用 Markdown 来画思维导图。markmap 将 Markdown 语法的文本通过思维导图的方式进行可视化，我们即可以使用在线版，也可以使用它在 VS Code 中的插件版，十分方便，而且支持导出 SVG 和 HTML，可以说是十分方便了！</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/4c69fd55e7e1032d866093822ac75db0.png" alt="" loading="lazy"></p>
+<h2 id="图床" tabindex="-1"> 图床</h2>
+<h3 id="github" tabindex="-1"> Github</h3>
+<blockquote>
+<p>地址：http://github.com/</p>
+</blockquote>
+<p>是的，你没有看错，就是万能的 GitHub，我们不仅仅可以从这里找到开源的项目、软件、教程等，你还能把它当成你自己的免费图床。关于具体的搭建过程，可以参考以下我之前的一篇文章：<a href="https://mp.weixin.qq.com/s?__biz=MzIyNTg2MjkzNw==&amp;mid=2247492657&amp;idx=1&amp;sn=4420ebc879c2013ee564b832f6615d10&amp;chksm=e87b9047df0c195109f063d5118bbbd01d72469857965360a7cca5951871a7f1fcb470328016#rd" target="_blank" rel="noopener noreferrer">如何利用 GitHub 搭建自己的免费图床？<ExternalLinkIcon/></a></p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/9df4c097a6f575d570c34e7d68130eeb.png" alt="" loading="lazy"></p>
+<h3 id="gitee" tabindex="-1"> Gitee</h3>
+<blockquote>
+<p>地址：http://gitee.com/</p>
+</blockquote>
+<p>既然 GitHub 可以用来搭建图床，那我们的国内的 Gitee 也必须可以呀，而且相对 GitHub 来讲访问的速度更快，岂不是美哉。具体的搭建过程可以参考我之前的一篇文章：<a href="https://mp.weixin.qq.com/s?__biz=MzIyNTg2MjkzNw==&amp;mid=2247492731&amp;idx=1&amp;sn=3cef56ad4ce5ec462c6233381af2799c&amp;chksm=e87b900ddf0c191bad9d126b0c7e1cc43e1b481f2ad6224f5ac5d3f4edee25fe6d4281f9edbb#rd" target="_blank" rel="noopener noreferrer">Gitee + Typora，搭建自己的免费图床！<ExternalLinkIcon/></a></p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/90a698a4707f5d0a0b0c3a81e79df8b3.png" alt="" loading="lazy"></p>
+<h3 id="sm-ms" tabindex="-1"> SM.MS</h3>
+<blockquote>
+<p>地址：https://sm.ms/</p>
+</blockquote>
+<p>提供免费图床，而且每个账户有 5 GB 的免费空间，方便我们自己管理，作为我们日常使用完全足够了。</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/9347fd7fa0b1edb839c22c80f3f9e1f9.png" alt="" loading="lazy"></p>
+<h3 id="路过图床" tabindex="-1"> 路过图床</h3>
+<blockquote>
+<p>地址：https://imgtu.com/</p>
+</blockquote>
+<p>路过图床，这是一款高速稳定的上传和外链服务的图床，支持全球 CDN 加速、支持外链、原图保持，而且最大单张支持 10 MB。至于它的稳定性，相信你也不用担心，它已经从 2011 运行至今 10 年的历程，截至到发文前托管了 16151781 张图片，还在犹豫什么，用起来就完事儿了！</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/b26f1bd57b635e0a1102f3e0b4016320.png" alt="" loading="lazy"></p>
+<h2 id="多平台分发" tabindex="-1"> 多平台分发</h2>
+<h3 id="openwrite" tabindex="-1"> OpenWrite</h3>
+<blockquote>
+<p>地址：https://openwrite.cn/</p>
+</blockquote>
+<p>主要提供群发功能、博客导流公众号等功能，此外还支持导出 Markdown 导微信公众号、多平台免费图床配置等，不过普通用户每月仅支持 10 次免费群发机会，其他功能则需要会员。</p>
+<p>普通用户和会员的功能对比：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">特权</th>
+<th style="text-align:left">会员用户</th>
+<th style="text-align:left">普通用户</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">VIP 客服群，1 对 1 解答</td>
+<td style="text-align:left"><strong>支持</strong></td>
+<td style="text-align:left">不支持</td>
+</tr>
+<tr>
+<td style="text-align:left">无限渠道数量</td>
+<td style="text-align:left">支持</td>
+<td style="text-align:left">支持</td>
+</tr>
+<tr>
+<td style="text-align:left">文章免费图床</td>
+<td style="text-align:left">支持</td>
+<td style="text-align:left">支持</td>
+</tr>
+<tr>
+<td style="text-align:left">文章扩散次数</td>
+<td style="text-align:left"><strong>无限制</strong></td>
+<td style="text-align:left">10 次/月</td>
+</tr>
+<tr>
+<td style="text-align:left">文章定时扩散</td>
+<td style="text-align:left"><strong>支持</strong></td>
+<td style="text-align:left">不支持</td>
+</tr>
+<tr>
+<td style="text-align:left">文章群删</td>
+<td style="text-align:left"><strong>支持</strong></td>
+<td style="text-align:left">不支持</td>
+</tr>
+<tr>
+<td style="text-align:left">文章自定义图床</td>
+<td style="text-align:left"><strong>支持</strong></td>
+<td style="text-align:left">不支持</td>
+</tr>
+<tr>
+<td style="text-align:left">文章数据统计分析</td>
+<td style="text-align:left"><strong>支持</strong></td>
+<td style="text-align:left">不支持</td>
+</tr>
+<tr>
+<td style="text-align:left">文章不同渠道自定义底部信息</td>
+<td style="text-align:left"><strong>支持</strong></td>
+<td style="text-align:left">不支持</td>
+</tr>
+</tbody>
+</table>
+<p>当前支持的渠道：</p>
+<ul>
+<li>思否</li>
+<li>CSDN</li>
+<li>掘金</li>
+<li>简书</li>
+<li>知乎</li>
+<li>开源中国</li>
+<li>Spring4All</li>
+<li>今日头条</li>
+<li>慕课手记</li>
+<li>微博</li>
+<li>百家号</li>
+</ul>
+<p>支持的图床：</p>
+<ul>
+<li>
+<p>默认：OW 的免费七牛云，宽高限制在 800 px * 800 px，超出限制将缩放</p>
+</li>
+<li>
+<p>七牛云</p>
+</li>
+<li>
+<p>阿里云</p>
+</li>
+</ul>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/166a1a14756f06a2d7f5ce454f619b18.png" alt="渠道管理" loading="lazy"></p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/4899edb48d76b22bdad0cf5e17315bc5.png" alt="文章管理" loading="lazy"></p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/e9f134196a0b63cc749fe1925eb7ff15.png" alt="图床配置" loading="lazy"></p>
+<h3 id="artipub" tabindex="-1"> ArtiPub</h3>
+<blockquote>
+<p>地址：https://github.com/crawlab-team/artipub</p>
+</blockquote>
+<p>ArtiPub (Article Publisher 的简称，意为 &quot;文章发布者&quot;) 是一款开源的一文多发平台，目前支持文章编辑、文章发布、数据统计的功能。此外，ArtiPub 安装简单，提供了多种安装方式，可以一键安装使用，安装一般只要 5 分钟。</p>
+<p>目前支持如下平台：</p>
+<ul>
+<li>掘金</li>
+<li>SegmentFault</li>
+<li>CSDN</li>
+<li>简书</li>
+<li>知乎</li>
+<li>开源中国</li>
+<li>今日头条</li>
+<li>博客园</li>
+<li>百度百家号</li>
+<li>51CTO</li>
+<li>开发者头条</li>
+<li>微信公众号</li>
+</ul>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/858f33946ecbb1446983154fc4cb3c6f.png" alt="登陆注册" loading="lazy"></p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/a5d533cd3c854c6f1b73b952543d240f.png" alt="平台管理" loading="lazy"></p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/9e310e1b7ef6aa3eed5e75fcf6cef1a1.png" alt="文章管理" loading="lazy"></p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/3a7830643aca031b5809fcd9324d2303.png" alt="文章编辑" loading="lazy"></p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/6af374723b950d11ad06f966c4b44e54.png" alt="文章发布" loading="lazy"></p>
+<h3 id="bloghelper" tabindex="-1"> BlogHelper</h3>
+<blockquote>
+<p>地址：https://github.com/onblog/BlogHelper</p>
+</blockquote>
+<p>这是一款没有界面只存在于系统托盘的小助手，而且完全免费。</p>
+<p>通过它，我们可以将我们本地写好的文章分发到国内技术主流平台。此外，软件还支持多个图床，无论你是使用免费的图床还是自己搭建的图床，相信该软件总有适合你的一个图床吧。</p>
+<ol>
+<li>支持的平台
+<ul>
+<li>知乎</li>
+<li>掘金</li>
+<li>简书</li>
+<li>思否</li>
+<li>CSDN</li>
+<li>博客园</li>
+<li>开源中国</li>
+</ul>
+</li>
+<li>支持的图床
+<ul>
+<li>新浪</li>
+<li>七牛云</li>
+<li>又拍云</li>
+<li>阿里云</li>
+<li>腾讯云</li>
+<li>SM.MS</li>
+<li>GitHub</li>
+<li>ImgUR</li>
+</ul>
+</li>
+</ol>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/9f662f4455952462aca4894af58457d1.png" alt="图床管理" loading="lazy"></p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/a2e945b1b3ef1a3a9eccd3c7be36f7eb.png" alt="平台管理" loading="lazy"></p>
+<h2 id="总结" tabindex="-1"> 总结</h2>
+<p>工具虽多，但不要贪杯哦，哈哈哈。以上也算是介绍了 10 多款用于不同功能的软件了，他们可能都不是很完美，但也都有着自己各自的特点，我们可以结合自己的需要来进行选择他们其中的一款或多款软件搭配使用，不过这都取决于你自己的喜好了。</p>
+<p>好了，今天的文章就到此结束了。如果本文对你也有所帮助，那就点个赞吧！</p>
+<p>当然，如果你有更好的工具推荐，也欢迎在评论区留言交流 ~</p>
+]]></content:encoded>
+      <enclosure url="https://img-blog.csdnimg.cn/img_convert/93f5e642ec2df9f4800192fb7b634121.png" type="image/png"/>
+    </item>
+    <item>
+      <title>Linux 教程：玩转 Manjora</title>
+      <link>https://cunyu1943.github.io/JavaPark/JavaPark/efficiency/linux/manjora-guide.html</link>
+      <guid>https://cunyu1943.github.io/JavaPark/JavaPark/efficiency/linux/manjora-guide.html</guid>
+      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">Linux 教程：玩转 Manjora</source>
+      <category>工具教程</category>
+      <pubDate>Sun, 16 Jan 2022 21:50:36 GMT</pubDate>
+      <content:encoded><![CDATA[<h2 id="零、前言" tabindex="-1"> 零、前言</h2>
+<p>安装好 manjora 后，基础配置往往不够我们日常需求，然后我们就需要对其进行一些改造，让其成为我们称手的工具。
+先介绍下常用软件命令，后边的过程中将会频繁使用它们。</p>
+<ul>
+<li>软件安装</li>
+</ul>
+<div><pre><code>pacman -S softwareName
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><ul>
+<li>软件更新</li>
+</ul>
+<div><pre><code>pacman -Syu
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><ul>
+<li>软件移除</li>
+</ul>
+<div><pre><code>pacman -R softwareName
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><h2 id="一、基础配置" tabindex="-1"> 一、基础配置</h2>
+<h3 id="_1-1-配置国内源" tabindex="-1"> 1.1 配置国内源</h3>
+<div><pre><code><span>sudo</span> pacman -Syy
+<span>sudo</span> pacman-mirrors -i -c China -m rank  <span># 选一个清华源就行</span>
+<span>sudo</span> pacman -Syyu
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br></div></div><h3 id="_1-2-系统更新" tabindex="-1"> 1.2 系统更新</h3>
+<div><pre><code><span>sudo</span> pacman -Syyu
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><h3 id="_1-3-添加-archlinuxcn-源" tabindex="-1"> 1.3 添加 Archlinuxcn 源</h3>
+<p>打开 <strong>/etc/pacman.conf</strong> 文件，然后在末尾加入以下两行即可；</p>
+<div><pre><code>[archlinuxcn]
+SigLevel = Optional TrustedOnly
+Server = https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/$arch
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br></div></div><h3 id="_1-4-安装-anchlinuxcn-签名钥匙" tabindex="-1"> 1.4 安装 anchlinuxcn 签名钥匙</h3>
+<p>进行上一步的添加后，导入 GPG key，避免在后边安装软件时提示 GPG 签名损坏问题；</p>
+<div><pre><code><span>sudo</span> pacman -S archlinuxcn-keyring
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><h3 id="_1-5-中文字体安装" tabindex="-1"> 1.5 中文字体安装</h3>
+<div><pre><code><span>sudo</span> pacman -S wqy-zenhei
+<span>sudo</span> pacman -S wqy-bitmapfont
+<span>sudo</span> pacman -S wqy-microhei
+<span>sudo</span> pacman -S adobe-source-han-sans-cn-fonts
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br></div></div><h2 id="二、软件安装" tabindex="-1"> 二、软件安装</h2>
+<h3 id="_2-1-搜狗拼音输入法" tabindex="-1"> 2.1 搜狗拼音输入法</h3>
+<p>首先安装如下软件：</p>
+<div><pre><code><span>sudo</span> pacman -S fcitx-im 
+<span># 安装fcitx-qt4可能与之前安装的有冲突，但必须安装，不然搜狗安装后无法正常使用。</span>
+<span>sudo</span> pacman -S fcitx-qt4
+<span>sudo</span> pacman -S fcitx-configtool
+<span>sudo</span> pacman -S fcitx-sogoupinyin
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br></div></div><p>然后配置 fcitx 环境，新建 <code>~/.xprofile</code> 文件，同时添加如下内容后，重启系统即可切换搜狗中文输入法；</p>
+<div><pre><code>export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export XMODIFIERS=“@im=fcitx”
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br></div></div><h3 id="_2-2-yay" tabindex="-1"> 2.2 yay</h3>
+<p>一个非常好用的 AUR 包管理器助手，用于装软件，能提供最少化用户输入的 pacman 界面、yaourt 式的搜索，同时几乎没有任何依赖软件；</p>
+<div><pre><code><span>sudo</span> pacman -S yay
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p>然后修改 aur 源为清华镜像；</p>
+<div><pre><code>yay --aururl <span>"https://aur.tuna.tsinghua.edu.cn"</span> --save
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><h3 id="_2-3-chrome" tabindex="-1"> 2.3 Chrome</h3>
+<p>虽然已经自带 firefox ，但是个人还是偏好 Chrome；</p>
+<div><pre><code>yay -S google-chrome
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><h3 id="_2-4-网易云音乐" tabindex="-1"> 2.4 网易云音乐</h3>
+<p>工作闲暇之余，怎么能少了音乐的陪伴呢；</p>
+<div><pre><code>yay -S netease-cloud-music
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><h3 id="_2-5-typora" tabindex="-1"> 2.5 Typora</h3>
+<p>最好的 Markdown 编辑器，没有之一；</p>
+<div><pre><code>yay -S typora
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><h3 id="_2-6-wps" tabindex="-1"> 2.6 WPS</h3>
+<p>作为一个生产力工具，办公工具怎么能少呢；</p>
+<div><pre><code>yay -S wps-office
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p>安装后，会提示缺失字体，可以通过安装字体解决；</p>
+<div><pre><code>yay -S ttf-wps-fonts
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p>针对打开后菜单栏是英文的情况，可以安装 WPS 中文语言包后切换即可；</p>
+<div><pre><code>yay wps<span>|</span><span>grep</span> zh
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p>安装好之后，切换即可；
+<img src="https://img-blog.csdnimg.cn/20200521121805344.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2dpdGh1Yl8zOTY1NTAyOQ==,size_16,color_FFFFFF,t_70" alt="img" loading="lazy"></p>
+<h3 id="_2-7-flameshot" tabindex="-1"> 2.7 flameshot</h3>
+<p>非常好用的截图软件，不仅支持批注等基础功能，还支持上传图片到图床；</p>
+<div><pre><code>yay -S flameshot
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><h3 id="_2-8-git" tabindex="-1"> 2.8 git</h3>
+<div><pre><code>yay -S <span>git</span>
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p>安装后配置；</p>
+<div><pre><code><span>git</span> config --global user.name <span>"xxxx"</span>
+<span>git</span> config --global use.email <span>"xxx@qq.com"</span>
+ssh-keygen -t rst -C <span>"xxx@qq.com"</span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br></div></div><h3 id="_2-9-zsh" tabindex="-1"> 2.9 zsh</h3>
+<p>这是一款强大的 shell，推荐使用，使用如下命令安装；</p>
+<div><pre><code>yay -S <span>zsh</span>
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p>安装好之后，将其设置为默认 shell，然后重启 shell 即可生效；</p>
+<div><pre><code>chsh -s /bin/zsh
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p>然后安装 <strong>oh-my-zsh</strong> 即可；</p>
+<div><pre><code><span>git</span> clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
+<span>cp</span> ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br></div></div><p>然后可以在配置文件中配置 <code>~/.zshrc</code> 我们喜欢的主题，以及安装相关插件后进行配置激活，常用的插件推荐如下；</p>
+<ul>
+<li><strong>extract</strong></li>
+</ul>
+<p>用于解压文件，不管什么压缩文件，都可以用如下命令进行解压，不用再记忆参数；</p>
+<div><pre><code>x filename
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><ul>
+<li><strong>zsh-autosuggestions</strong></li>
+</ul>
+<p>自动建议补全；</p>
+<div><pre><code><span>git</span> clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><ul>
+<li><strong>zsh-syntax-highlighting</strong></li>
+</ul>
+<p>语法高亮显示；</p>
+<div><pre><code><span>git</span> clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p>然后在配置文件中加入如下配置即可：</p>
+<div><pre><code># 主题
+ZSH_THEME=&quot;dallas&quot;
+# 插件
+plugins=(
+    git zsh-syntax-highlighting zsh-autosuggestions extract z
+)
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br></div></div><p><img src="https://img-blog.csdnimg.cn/20200521124446435.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2dpdGh1Yl8zOTY1NTAyOQ==,size_16,color_FFFFFF,t_70" alt="img" loading="lazy"></p>
+<h3 id="_2-10-utools" tabindex="-1"> 2.10 utools</h3>
+<p>效率工具神器；</p>
+<div><pre><code>yay -S utools
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><h3 id="_2-11-xmind" tabindex="-1"> 2.11 XMind</h3>
+<p>思维导图工具；</p>
+<div><pre><code>yay -S xmind
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><h3 id="_2-12-okular" tabindex="-1"> 2.12 okular</h3>
+<p>PDF 阅读器；</p>
+<div><pre><code>yay -S okular
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><h3 id="_2-13-微信" tabindex="-1"> 2.13 微信</h3>
+<div><pre><code>yay -S wechat
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><h3 id="_2-14-qq" tabindex="-1"> 2.14 QQ</h3>
+<div><pre><code>yay -Sy deepin.com.qq.office
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p>解决字体发虚的问题：</p>
+<div><pre><code>yay -S lib32-freetype2-infinality-ultimate
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><h3 id="_2-15-坚果云" tabindex="-1"> 2.15 坚果云</h3>
+<div><pre><code>yay -S nutstore
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><h3 id="_2-16-百度网盘" tabindex="-1"> 2.16 百度网盘</h3>
+<div><pre><code>yay -S baidunetdisk-bin
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><h2 id="三、开发环境" tabindex="-1"> 三、开发环境</h2>
+<h3 id="_3-1-intellij-idea" tabindex="-1"> 3.1 IntelliJ IDEA</h3>
+<p>最强 Java IDE；</p>
+<div><pre><code>yay -S intellij-idea-ultimate-edition
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><h3 id="_3-2-vscode" tabindex="-1"> 3.2 VSCode</h3>
+<p>微软家自己出的编辑器；</p>
+<div><pre><code>yay -S visual-studio-code-bin
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><h3 id="_3-3-postman" tabindex="-1"> 3.3 Postman</h3>
+<p>Web 开发利器；</p>
+<div><pre><code>yay -S postman-bin
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><h3 id="_3-4-pycharm" tabindex="-1"> 3.4 Pycharm</h3>
+<p>一款 Python IDE；</p>
+<div><pre><code>yay -S pycharm-professional
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><h3 id="_3-5-jdk" tabindex="-1"> 3.5 JDK</h3>
+<p>输入如下命令，然后选择想要安装的版本安装即可；</p>
+<div><pre><code>yay jdk
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p>安装之后可以用如下命令查看已有 JDK 版本，然后设置默认 JDK 版本；</p>
+<div><pre><code><span># 查看已有 JDK</span>
+archlinux-java status
+
+<span># 设置默认版本</span>
+<span>sudo</span> archlinux-java <span>set</span> java-11-openjdk
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br></div></div><h3 id="_3-6-mysql" tabindex="-1"> 3.6 MySQL</h3>
+<ul>
+<li>数据库安装；</li>
+</ul>
+<div><pre><code>yay -S mysql
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><ul>
+<li>初始化数据库，此时会生成数据库登录密码，记得保存</li>
+</ul>
+<div><pre><code><span>sudo</span> mysqld --initialize --user<span>=</span>root --basedir<span>=</span>/usr --datadir<span>=</span>/var/lib/mysql
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><ul>
+<li>启动数据库</li>
+</ul>
+<div><pre><code><span>sudo</span> systemctl start mysqld
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><ul>
+<li>登录并修改密码</li>
+</ul>
+<div><pre><code><span># 登录，密码是刚才初始化时生产的密码</span>
+mysql -u root -p 
+
+<span># 修改密码</span>
+ALTER <span>USER</span> <span>'root'</span>@<span>'localhost'</span> IDENTIFIED WITH mysql_native_password BY <span>'新密码'</span><span>;</span>
+
+<span># 使得密码生效</span>
+FLUSH PRIVILEGES<span>;</span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br></div></div><ul>
+<li>最后退出后重新登录时使用修改后的密码即可。</li>
+</ul>
+]]></content:encoded>
+      <enclosure url="https://img-blog.csdnimg.cn/20200521121805344.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2dpdGh1Yl8zOTY1NTAyOQ==,size_16,color_FFFFFF,t_70" type="image/"/>
+    </item>
+    <item>
+      <title>Linux 教程：打造酷炫的 Ubuntu</title>
+      <link>https://cunyu1943.github.io/JavaPark/JavaPark/efficiency/linux/ubuntu-guide.html</link>
+      <guid>https://cunyu1943.github.io/JavaPark/JavaPark/efficiency/linux/ubuntu-guide.html</guid>
+      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">Linux 教程：打造酷炫的 Ubuntu</source>
+      <category>工具教程</category>
+      <pubDate>Mon, 03 Jan 2022 21:47:27 GMT</pubDate>
+      <content:encoded><![CDATA[<h1 id="前言" tabindex="-1"> 前言</h1>
+<p>我们在工作或学习过程中，有许多时候会接触到 Linux，然后便想要自己亲自试试这个系统，但苦于没有系统学习过，所以想要打造自己的工作环境难免会遇到许多困难。为了防止大家踩我踩过的坑，才有了这篇博客。本博客将主要从 <strong>系统设置、常用软件安装、开发环境搭建、系统美化</strong> 几个方面着手，手把手教你如何从零打造自己的 Ubuntu 工作环境。</p>
+<p>先展示下我自己的工作环境：</p>
+<ul>
+<li>桌面</li>
+</ul>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly91cGxvYWQtaW1hZ2VzLmppYW5zaHUuaW8vdXBsb2FkX2ltYWdlcy85NzQ3MzUwLWU1MTMwNmJiN2Q5ZDQ1MjUucG5n?x-oss-process=image/format,png" alt="" loading="lazy"></p>
+<ul>
+<li>程序坞</li>
+</ul>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9naXRlZS5jb20vY3VueXUxOTQzL2ltYWdlcy9yYXcvbWFzdGVyL0ltZ3NVYnVudHUvMjAyMDA0MjIxMjA0MTYucG5n?x-oss-process=image/format,png" alt="" loading="lazy"></p>
+<ul>
+<li>文件</li>
+</ul>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9naXRlZS5jb20vY3VueXUxOTQzL2ltYWdlcy9yYXcvbWFzdGVyL0ltZ3NVYnVudHUvMjAyMDA0MjIxMTU5MjAucG5n?x-oss-process=image/format,png" alt="" loading="lazy"></p>
+<h1 id="系统设置" tabindex="-1"> 系统设置</h1>
+<h2 id="换镜像源" tabindex="-1"> 换镜像源</h2>
+<p>即将官方自带的源换成国内镜像源，如阿里、华为、网易等；</p>
+<p>打开 <strong>软件和更新</strong> ，然后选择下载自 <strong>其他站点</strong>，选择你要设置的镜像源站点即可，也可以点击右侧选择最佳服务器，会根据你所处地区然后自动选择网速最快的；</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly91cGxvYWQtaW1hZ2VzLmppYW5zaHUuaW8vdXBsb2FkX2ltYWdlcy85NzQ3MzUwLTAxNmU0NjhjMTNkZmI5ZGQucG5n?x-oss-process=image/format,png" alt="" loading="lazy"></p>
+<h2 id="安装更新" tabindex="-1"> 安装更新</h2>
+<p>换源之后，执行如下命令用于更新系统；</p>
+<div><pre><code><span>sudo</span> <span>apt</span> update
+<span>sudo</span> <span>apt-get</span>  upgrade
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br></div></div><h2 id="使用本地时区" tabindex="-1"> 使用本地时区</h2>
+<p>使用双系统时，往往两者时间会不正确，可以通过如下命令让 Ubuntu 使用本地时区；</p>
+<div><pre><code>timedatectl set-local-rtc <span>1</span>
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><h2 id="卸载自带的-无用-软件" tabindex="-1"> 卸载自带的“无用”软件</h2>
+<p>此处说的“无用”软件，因人而异，笔者只是提供建议，建议卸载软件列表如下（可能还有些没咋用的没列出，读者可以自行决定是否卸载，卸载之后如果有用到，还可以重新安装）；</p>
+<ul>
+<li>thunderbird 自带邮件</li>
+<li>rhythmbox 音乐</li>
+<li>gnome-mahjongg 对对碰游戏</li>
+<li>gnome-mines 扫雷</li>
+<li>gnome-sudoku 数独</li>
+<li>aisleriot 纸牌</li>
+<li>simple-scan 扫描器</li>
+<li>onboard 屏幕键盘</li>
+<li>brasero 光盘可怜工具</li>
+<li>cheese 茄子相机</li>
+<li>libreoffice 套件，用 WPS 代替</li>
+</ul>
+<h1 id="常用软件安装" tabindex="-1"> 常用软件安装</h1>
+<h2 id="输入法" tabindex="-1"> 输入法</h2>
+<ul>
+<li>搜狗输入法 for Linux</li>
+</ul>
+<p>软件由搜狗输入法团队和 Ubuntu Kylin 团队共同开发，能够满足我们日常输入需求；</p>
+<ul>
+<li>安装</li>
+</ul>
+<p>此处推荐下载安装包后安装，<a href="https://pinyin.sogou.com/linux/?r=pinyin" target="_blank" rel="noopener noreferrer">下载地址<ExternalLinkIcon/></a>，下载后的安装包如下；</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly91cGxvYWQtaW1hZ2VzLmppYW5zaHUuaW8vdXBsb2FkX2ltYWdlcy85NzQ3MzUwLWM5ZjY0NWQ0NzhjZDFmMzQucG5n?x-oss-process=image/format,png" alt="" loading="lazy"></p>
+<p>然后在当前文件夹下打开终端，输入如下命令安装即可；</p>
+<div><pre><code><span>sudo</span> dpkg -i sogoupinyin_2.3.1.0112_amd64.deb 
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly91cGxvYWQtaW1hZ2VzLmppYW5zaHUuaW8vdXBsb2FkX2ltYWdlcy85NzQ3MzUwLTE5MTI3ZDNmNjMyZTQyZTMucG5n?x-oss-process=image/format,png" alt="" loading="lazy"></p>
+<p>接着到 <strong>设置 - &gt; 区域和语言</strong> 点击已安装的语言；</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly91cGxvYWQtaW1hZ2VzLmppYW5zaHUuaW8vdXBsb2FkX2ltYWdlcy85NzQ3MzUwLWQ5NzgxM2I4ODkzOWFlOTIucG5n?x-oss-process=image/format,png" alt="" loading="lazy"></p>
+<p>把键盘输入法设置为 <strong>fcitx</strong>，然后应用到整个系统即可，然后注销或者重启即可使用；
+<img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly91cGxvYWQtaW1hZ2VzLmppYW5zaHUuaW8vdXBsb2FkX2ltYWdlcy85NzQ3MzUwLWFlY2U2ZTQwMGVkZWFhM2UucG5n?x-oss-process=image/format,png" alt="" loading="lazy"></p>
+<ul>
+<li>注意</li>
+</ul>
+<p>当安装时，可能会报依赖相关问题，可以在执行上述命令后，在终端中输入如下命令修复依赖安装，然后再次执行上面的安装命令即可；</p>
+<div><pre><code><span>sudo</span> <span>apt-get</span> --fix-broken <span>install</span>
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><h2 id="浏览器" tabindex="-1"> 浏览器</h2>
+<ul>
+<li>
+<p>Chrome
+说到浏览器，虽然 Ubuntu 中预装了 Firefox，但笔者更习惯用 Chrome ，作为全球范围内份额最高的浏览器，自然不用说啥，其实微软新出的 Edge 浏览器也很不错，只是目前还没有支持 Linux，后续可能会进一步支持。</p>
+</li>
+<li>
+<p>安装</p>
+</li>
+</ul>
+<p>建议使用 deb 安装包安装，先 <a href="https://www.google.cn/intl/zh-CN/chrome/" target="_blank" rel="noopener noreferrer">下载<ExternalLinkIcon/></a> 安装包，然后在本地终端使用如下命令进行安装；</p>
+<div><pre><code><span>sudo</span> dpkg -i google-chrome-stable_current_amd64.deb 
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly91cGxvYWQtaW1hZ2VzLmppYW5zaHUuaW8vdXBsb2FkX2ltYWdlcy85NzQ3MzUwLTY0OWZkMTA1YWRiMmM3NTUucG5n?x-oss-process=image/format,png" alt="" loading="lazy"></p>
+<ul>
+<li>成品</li>
+</ul>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly91cGxvYWQtaW1hZ2VzLmppYW5zaHUuaW8vdXBsb2FkX2ltYWdlcy85NzQ3MzUwLWZkOTExNTAyMzQyMTM4MDMucG5n?x-oss-process=image/format,png" alt="" loading="lazy"></p>
+<h2 id="qq" tabindex="-1"> QQ</h2>
+<p>去官网 <a href="https://im.qq.com/linuxqq/download.html" target="_blank" rel="noopener noreferrer">下载<ExternalLinkIcon/></a> 对应安装包，然后在终端使用如下命令安装；</p>
+<div><pre><code><span>sudo</span> dpkg -i linuxqq_2.0.0-b2-1082_amd64.deb
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly91cGxvYWQtaW1hZ2VzLmppYW5zaHUuaW8vdXBsb2FkX2ltYWdlcy85NzQ3MzUwLTNkZjVlMmU3NDBhMzc2MTAucG5n?x-oss-process=image/format,png" alt="" loading="lazy"></p>
+<ul>
+<li>成品</li>
+</ul>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly91cGxvYWQtaW1hZ2VzLmppYW5zaHUuaW8vdXBsb2FkX2ltYWdlcy85NzQ3MzUwLWJkYjVmYTUxOTAyNDJiMjEucG5n?x-oss-process=image/format,png" alt="" loading="lazy"></p>
+<h2 id="微信" tabindex="-1"> 微信</h2>
+<ul>
+<li>安装</li>
+</ul>
+<p>此处推荐使用网页版即可，wine 版虽然网上也有，但有许多 bug，所以推荐使用网页版；</p>
+<ul>
+<li>创建快捷方式</li>
+</ul>
+<p>打开网页版微信，然后打开浏览器设置中的 <strong>更多工具 -&gt; 创建快捷方式</strong> 即可，然后在桌面就会出现快捷方式，信任即可；</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly91cGxvYWQtaW1hZ2VzLmppYW5zaHUuaW8vdXBsb2FkX2ltYWdlcy85NzQ3MzUwLTEwMTY0ZDU2MDc5YmQxNjAucG5n?x-oss-process=image/format,png" alt="" loading="lazy"></p>
+<ul>
+<li>成品</li>
+</ul>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly91cGxvYWQtaW1hZ2VzLmppYW5zaHUuaW8vdXBsb2FkX2ltYWdlcy85NzQ3MzUwLWM3NWUwZjA3NzdiZWQ2Y2YucG5n?x-oss-process=image/format,png" alt="" loading="lazy"></p>
+<h2 id="音乐播放器" tabindex="-1"> 音乐播放器</h2>
+<ul>
+<li>网易云音乐</li>
+</ul>
+<p>作为网易旗下的音乐软件，虽然版权问题流失了许多用户，但不影响它越来越受广大用户喜欢。而我们在学习工作之余听听音乐，放松下调整状体也是极好的。</p>
+<ul>
+<li>安装</li>
+</ul>
+<p><a href="https://music.163.com/#/download" target="_blank" rel="noopener noreferrer">下载<ExternalLinkIcon/></a> Linux 版本安装包，然后使用如下命令在终端中安装即可；</p>
+<div><pre><code><span>sudo</span> dpkg -i netease-cloud-music_1.2.1_amd64_ubuntu_20190428.deb
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly91cGxvYWQtaW1hZ2VzLmppYW5zaHUuaW8vdXBsb2FkX2ltYWdlcy85NzQ3MzUwLTFjZmZkMmNkYWE1NGE3OTcucG5n?x-oss-process=image/format,png" alt="" loading="lazy"></p>
+<ul>
+<li>成品</li>
+</ul>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly91cGxvYWQtaW1hZ2VzLmppYW5zaHUuaW8vdXBsb2FkX2ltYWdlcy85NzQ3MzUwLTQ1OTA5YjczYjQzOTVjMjAucG5n?x-oss-process=image/format,png" alt="" loading="lazy"></p>
+<h2 id="截图工具" tabindex="-1"> 截图工具</h2>
+<ul>
+<li>flameshot
+flameshot，能够用于标注、模糊，同时还支持上传到 imgur 图床的新式截图工具；</li>
+<li>安装</li>
+</ul>
+<div><pre><code><span>sudo</span> <span>apt</span> <span>install</span> flameshot
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly91cGxvYWQtaW1hZ2VzLmppYW5zaHUuaW8vdXBsb2FkX2ltYWdlcy85NzQ3MzUwLTM4ZTkzNmNjOThhZjU0MTQucG5n?x-oss-process=image/format,png" alt="" loading="lazy"></p>
+<ul>
+<li>设置快捷键</li>
+</ul>
+<p>依次进入 <strong>设置 -&gt; 设备 -&gt; 键盘</strong> ，然后滑到最底端会有一个 <code>+</code> 按钮，点击 <code>+</code> 添加自定义快捷键，并设置名称和命令，然后点击右上角添加就可以设置自己想要的截图快捷键，比如我设置的是 <code>Ctrl + Alt + A</code>，如下图所示；</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly91cGxvYWQtaW1hZ2VzLmppYW5zaHUuaW8vdXBsb2FkX2ltYWdlcy85NzQ3MzUwLWJmODdiNzlhMWViNzI4N2IucG5n?x-oss-process=image/format,png" alt="" loading="lazy"></p>
+<ul>
+<li>成品</li>
+</ul>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly91cGxvYWQtaW1hZ2VzLmppYW5zaHUuaW8vdXBsb2FkX2ltYWdlcy85NzQ3MzUwLWJhMzMwODIzZjFjM2Y0NWQucG5n?x-oss-process=image/format,png" alt="" loading="lazy"></p>
+<h2 id="图片编辑器" tabindex="-1"> 图片编辑器</h2>
+<ul>
+<li>Gimp</li>
+</ul>
+<p>GIMP是 GNU Image Manipulation Program（GNU图像处理程序）的缩写，它是 Peter Mattis 和 Spencer Kimhall 开发的免费照片和图像处理和创作工具，功能十分强大。支持多种图像处理工具、全通道、多级撤销操作恢复旧貌与映像修饰等功能。支持数目众多的效果插件（plug-ins），完全可以与 Windows 平台下著名的图像处理软件 Photoshop 媲美；</p>
+<ul>
+<li>安装</li>
+</ul>
+<p>直接使用如下命令安装即可；</p>
+<div><pre><code><span>sudo</span> <span>apt-get</span> <span>install</span> gimp
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly91cGxvYWQtaW1hZ2VzLmppYW5zaHUuaW8vdXBsb2FkX2ltYWdlcy85NzQ3MzUwLWUzYTNhNjE3N2RlM2E3MmUucG5n?x-oss-process=image/format,png" alt="" loading="lazy"></p>
+<ul>
+<li>成品</li>
+</ul>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly91cGxvYWQtaW1hZ2VzLmppYW5zaHUuaW8vdXBsb2FkX2ltYWdlcy85NzQ3MzUwLWM1NWJkODc1OTRhNmY5YTIucG5n?x-oss-process=image/format,png" alt="" loading="lazy"></p>
+<h2 id="文字处理" tabindex="-1"> 文字处理</h2>
+<ul>
+<li>WPS</li>
+</ul>
+<p>Ubuntu 中自带了 LibreOffice 办公套件，但此处更推荐使用 WPS，更加符合我们国人的使用习惯。</p>
+<ul>
+<li>安装</li>
+</ul>
+<p>先下载安装包，然后依然在本地终端使用如下命令进行安装；</p>
+<div><pre><code><span>sudo</span> dpkg -i wps-office_11.1.0.9505_amd64.deb
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly91cGxvYWQtaW1hZ2VzLmppYW5zaHUuaW8vdXBsb2FkX2ltYWdlcy85NzQ3MzUwLWVmN2Q0ODgzYjJjMWRjNzgucG5n?x-oss-process=image/format,png" alt="" loading="lazy"></p>
+<ul>
+<li>成品</li>
+</ul>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly91cGxvYWQtaW1hZ2VzLmppYW5zaHUuaW8vdXBsb2FkX2ltYWdlcy85NzQ3MzUwLTlmMzYzNjM5MzhiYTdlOGYucG5n?x-oss-process=image/format,png" alt="" loading="lazy"></p>
+<h2 id="markdown-编辑器" tabindex="-1"> Markdown 编辑器</h2>
+<ul>
+<li>Typora</li>
+</ul>
+<p>作为一款极简的 Markdown 编辑器，合并了写作和预览。支持表格、代码编辑，拖拽插图等，非常好用；喜欢它的原因也就是：美观、免费，而且跨平台；</p>
+<ul>
+<li>安装</li>
+</ul>
+<p>依次使用如下命令即可安装；</p>
+<div><pre><code><span>wget</span> -qO - https://typora.io/linux/public-key.asc <span>|</span> <span>sudo</span> apt-key <span>add</span> -
+
+<span>sudo</span> add-apt-repository <span>&amp;</span><span>#39;deb https://typora.io/linux ./&amp;#39;</span>
+
+<span>sudo</span> <span>apt-get</span> update
+
+<span>sudo</span> <span>apt-get</span> <span>install</span> typora
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br></div></div><p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly91cGxvYWQtaW1hZ2VzLmppYW5zaHUuaW8vdXBsb2FkX2ltYWdlcy85NzQ3MzUwLTg3ZDJiYWEyOTZhOGVhMmQucG5n?x-oss-process=image/format,png" alt="" loading="lazy"></p>
+<ul>
+<li>成品</li>
+</ul>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9naXRlZS5jb20vY3VueXUxOTQzL2ltYWdlcy9yYXcvbWFzdGVyL0ltZ3NVYnVudHUvMjAyMDA0MjIxMTQ3MTIucG5n?x-oss-process=image/format,png" alt="" loading="lazy"></p>
+<h2 id="文档阅读器" tabindex="-1"> 文档阅读器</h2>
+<ul>
+<li>Okular</li>
+</ul>
+<p>可以说是 Linux 中最好的 PDF 阅读器，而且还支持常用的 CHM、EPub 等格式文档的查看；</p>
+<ul>
+<li>安装</li>
+</ul>
+<p>直接在终端中使用如下命令安装即可；</p>
+<div><pre><code><span>sudo</span> <span>apt-get</span> <span>install</span> okular
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly91cGxvYWQtaW1hZ2VzLmppYW5zaHUuaW8vdXBsb2FkX2ltYWdlcy85NzQ3MzUwLTYzYTNiZDNlNDA5ZDdkYmYucG5n?x-oss-process=image/format,png" alt="" loading="lazy"></p>
+<ul>
+<li>成品</li>
+</ul>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly91cGxvYWQtaW1hZ2VzLmppYW5zaHUuaW8vdXBsb2FkX2ltYWdlcy85NzQ3MzUwLTY0ZDVkNzQ4Yzc4YmNmZWQucG5n?x-oss-process=image/format,png" alt="" loading="lazy"></p>
+<h2 id="思维导图" tabindex="-1"> 思维导图</h2>
+<ul>
+<li>XMind</li>
+</ul>
+<p>做事或者写作之前，都喜欢先做一个总体的思维导图，然后根据思维导图去细化每一部分，而 XMind 正是这么一款工具；</p>
+<ul>
+<li>安装</li>
+</ul>
+<p>去 <a href="https://www.xmind.cn/download/" target="_blank" rel="noopener noreferrer">下载<ExternalLinkIcon/></a> 安装包之后，在终端中使用如下命令行安装即可；</p>
+<div><pre><code><span>sudo</span> dpkg -i XMind-2020-for-Linux-amd-64bit-10.1.2-202004142327.deb 
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly91cGxvYWQtaW1hZ2VzLmppYW5zaHUuaW8vdXBsb2FkX2ltYWdlcy85NzQ3MzUwLWNkYmEwNDU3ZTExNWUzMDAucG5n?x-oss-process=image/format,png" alt="" loading="lazy"></p>
+<ul>
+<li>成品
+<img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly91cGxvYWQtaW1hZ2VzLmppYW5zaHUuaW8vdXBsb2FkX2ltYWdlcy85NzQ3MzUwLWY1OTMyOGQyNDAzMzRlMjEucG5n?x-oss-process=image/format,png" alt="" loading="lazy"></li>
+</ul>
+<h2 id="多媒体播放器" tabindex="-1"> 多媒体播放器</h2>
+<ul>
+<li>VLC</li>
+</ul>
+<p>支持众多音频与视频解码器及文件格式，并支持 DVD 影音光盘，VCD 影音光盘及各类流式协议。也能作为 unicast 或 multicast 的流式服务器在 IPv4 或 IPv6 的高速网络连接下使用。融合了 FFmpeg 计划的解码器与 libdvdcss 程序库使其有播放多媒体文件及加密 DVD 影碟的功能，是 Linux 中多媒体播放器的不二之选；</p>
+<ul>
+<li>安装</li>
+</ul>
+<p>直接在终端中使用如下命令安装即可；</p>
+<div><pre><code><span>sudo</span> snap <span>install</span> vlc
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly91cGxvYWQtaW1hZ2VzLmppYW5zaHUuaW8vdXBsb2FkX2ltYWdlcy85NzQ3MzUwLTJjMDFmN2ZlMDAwYTJiZmMucG5n?x-oss-process=image/format,png" alt="" loading="lazy"></p>
+<ul>
+<li>成品</li>
+</ul>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly91cGxvYWQtaW1hZ2VzLmppYW5zaHUuaW8vdXBsb2FkX2ltYWdlcy85NzQ3MzUwLThhZGJhZDljYWQ0YTU0N2UucG5n?x-oss-process=image/format,png" alt="" loading="lazy"></p>
+<h2 id="录屏软件" tabindex="-1"> 录屏软件</h2>
+<ul>
+<li>Kazam</li>
+</ul>
+<p>小巧而强大，易安装，即可选择区域录制，也可选择全屏录制，同时还兼具截图功能；</p>
+<ul>
+<li>安装</li>
+</ul>
+<p>直接在终端中使用如下命令安装即可：</p>
+<div><pre><code><span>sudo</span> <span>apt</span> <span>install</span> kazam
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><ul>
+<li>成品</li>
+</ul>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9naXRlZS5jb20vY3VueXUxOTQzL2ltYWdlcy9yYXcvbWFzdGVyL0ltZ3NVYnVudHUvMjAyMDA0MjIxMTUzMTMucG5n?x-oss-process=image/format,png" alt="" loading="lazy"></p>
+<h2 id="视频编辑软件" tabindex="-1"> 视频编辑软件</h2>
+<ul>
+<li>OpenShot</li>
+</ul>
+<p>OpenShot 是 Linux 上的一个多用途视频编辑器，可以帮助你创建具有过渡和效果的视频。</p>
+<ul>
+<li>安装</li>
+</ul>
+<p>直接在终端中使用如下命令安装即可；</p>
+<div><pre><code><span>sudo</span> <span>apt</span> <span>install</span> openshot
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><ul>
+<li>成品</li>
+</ul>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9naXRlZS5jb20vY3VueXUxOTQzL2ltYWdlcy9yYXcvbWFzdGVyL0ltZ3NVYnVudHUvMjAyMDA0MjIxMTUyMzEucG5n?x-oss-process=image/format,png" alt="" loading="lazy"></p>
+<h2 id="下载工具" tabindex="-1"> 下载工具</h2>
+<ul>
+<li>uGet</li>
+</ul>
+<p>Uget（原名：Urlgfe）是一个基于 GTK+ 编写的自由和开放源码的下载管理器 ，跨平台（Windows和GNU / Linux的），支持断点续传和分类下载 ，uGet 同时 具备 多线程下载能力；</p>
+<ul>
+<li>安装</li>
+</ul>
+<div><pre><code><span>sudo</span> <span>apt-get</span> <span>install</span> uget
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly91cGxvYWQtaW1hZ2VzLmppYW5zaHUuaW8vdXBsb2FkX2ltYWdlcy85NzQ3MzUwLWEzYTIwYzhiNTYwYTA3YjAucG5n?x-oss-process=image/format,png" alt="" loading="lazy"></p>
+<ul>
+<li>成品</li>
+</ul>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly91cGxvYWQtaW1hZ2VzLmppYW5zaHUuaW8vdXBsb2FkX2ltYWdlcy85NzQ3MzUwLTM5MDcyZGExMDJkNmJmYjAucG5n?x-oss-process=image/format,png" alt="" loading="lazy"></p>
+<h1 id="开发环境搭建" tabindex="-1"> 开发环境搭建</h1>
+<h2 id="git-安装" tabindex="-1"> git 安装</h2>
+<p>直接在终端中使用如下命令安装即可；</p>
+<div><pre><code><span>sudo</span> <span>apt</span> <span>install</span> <span>git</span>
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly91cGxvYWQtaW1hZ2VzLmppYW5zaHUuaW8vdXBsb2FkX2ltYWdlcy85NzQ3MzUwLTAyOTE2MDI3OTliOTYwNDYucG5n?x-oss-process=image/format,png" alt="" loading="lazy"></p>
+<h2 id="node-js-安装" tabindex="-1"> Node.js 安装</h2>
+<ul>
+<li>安装</li>
+</ul>
+<p>从淘宝镜像源 <a href="https://npm.taobao.org/mirrors/node/" target="_blank" rel="noopener noreferrer">下载<ExternalLinkIcon/></a> 对应版本压缩包，然后解压到你要存储的路径，比如我的是 <code>/home/cunyu/soft/node-v12.16.2</code>；</p>
+<ul>
+<li>配置</li>
+</ul>
+<p>安装（解压）好后，在 <code>/etc/profile</code> 配置文件中配置；</p>
+<div><pre><code>export NODEJS_HOME=/home/cunyu/soft/node-v12.16.2
+export PATH=$NODEJS_HOEM:$PATH
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br></div></div><ul>
+<li>换淘宝镜像源</li>
+</ul>
+<div><pre><code><span>npm</span> config <span>set</span> registry http://registry.npm.taobao.org/
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><ul>
+<li>验证</li>
+</ul>
+<div><pre><code><span>node</span> -v
+<span>npm</span> -v
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br></div></div><p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly91cGxvYWQtaW1hZ2VzLmppYW5zaHUuaW8vdXBsb2FkX2ltYWdlcy85NzQ3MzUwLTk1YjVmNzIxYjZhZDk0ZGEucG5n?x-oss-process=image/format,png" alt="" loading="lazy"></p>
+<h2 id="jdk-安装" tabindex="-1"> JDK 安装</h2>
+<ul>
+<li>安装</li>
+</ul>
+<p>先去 <a href="https://www.oracle.com/java/technologies/javase-downloads.html" target="_blank" rel="noopener noreferrer">下载<ExternalLinkIcon/></a> 要安装的 JDK 版本，然后解压到本地，移到你要存放的位置；</p>
+<div><pre><code><span>tar</span> -zxvf jdk-11.0.7_linux-x64_bin.tar.gz 
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly91cGxvYWQtaW1hZ2VzLmppYW5zaHUuaW8vdXBsb2FkX2ltYWdlcy85NzQ3MzUwLWUyZGYwYjIzNzdiMTcyODUucG5n?x-oss-process=image/format,png" alt="" loading="lazy"></p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly91cGxvYWQtaW1hZ2VzLmppYW5zaHUuaW8vdXBsb2FkX2ltYWdlcy85NzQ3MzUwLWYzODYyMzY2ZDhkMmJkOTEucG5n?x-oss-process=image/format,png" alt="" loading="lazy"></p>
+<ul>
+<li>配置</li>
+</ul>
+<p>打开配置文件 <code>/etc/profile</code>，然后加入如下内容；</p>
+<div><pre><code>export JAVA_HOME=/home/cunyu/Soft/jdk11.0.7
+export PATH=$JAVA_HOME:$PATH
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br></div></div><p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly91cGxvYWQtaW1hZ2VzLmppYW5zaHUuaW8vdXBsb2FkX2ltYWdlcy85NzQ3MzUwLTljMzcwMmJjYzlkNDNlMDEucG5n?x-oss-process=image/format,png" alt="" loading="lazy"></p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly91cGxvYWQtaW1hZ2VzLmppYW5zaHUuaW8vdXBsb2FkX2ltYWdlcy85NzQ3MzUwLTUzN2I0NTZkODA3N2Y3ZWQucG5n?x-oss-process=image/format,png" alt="" loading="lazy"></p>
+<ul>
+<li>验证</li>
+</ul>
+<p>安装和配置之后，在终端中输入如下命令进行验证是否成功；</p>
+<div><pre><code><span># 查看版本</span>
+java -version
+<span># 编译</span>
+java
+<span># 执行</span>
+javac
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br></div></div><p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly91cGxvYWQtaW1hZ2VzLmppYW5zaHUuaW8vdXBsb2FkX2ltYWdlcy85NzQ3MzUwLThmYWU0NjczYjNiNjQ3ODAucG5n?x-oss-process=image/format,png" alt="" loading="lazy"></p>
+<h2 id="miniconda-安装" tabindex="-1"> MiniConda 安装</h2>
+<ul>
+<li>安装</li>
+</ul>
+<p>直接去 <a href="https://docs.conda.io/en/latest/miniconda.html" target="_blank" rel="noopener noreferrer">下载<ExternalLinkIcon/></a> 对应版本安装包，此处以 3.7 版本为例，然后在终端中对齐赋予执行权限后执行；</p>
+<div><pre><code><span>chmod</span> +x Miniconda3-latest-Linux-x86_64.sh 
+
+<span>sh</span> Miniconda3-latest-Linux-x86_64.sh 
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br></div></div><p>执行后会让你阅读相关权限，然后输入 yes 同意，然后会让你指定安装目录，默认就直接回车就好，最后等安装好即可；</p>
+<ul>
+<li>配置</li>
+</ul>
+<p>打开 <code>~/.bashrc</code> 文件，在其中加入如下 内容；</p>
+<div><pre><code># 注意输入你自己安装 miniConda 的目录
+export  PATH="/home/cunyu/miniconda3/bin:"$PATH
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br></div></div><ul>
+<li>验证</li>
+</ul>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly91cGxvYWQtaW1hZ2VzLmppYW5zaHUuaW8vdXBsb2FkX2ltYWdlcy85NzQ3MzUwLTU4NDg3M2YwOTA3OTE5MmYucG5n?x-oss-process=image/format,png" alt="" loading="lazy"></p>
+<h2 id="mysql-安装" tabindex="-1"> MySQL 安装</h2>
+<ul>
+<li>安装</li>
+</ul>
+<div><pre><code><span>sudo</span> <span>apt-get</span> <span>install</span> mysql-server
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly91cGxvYWQtaW1hZ2VzLmppYW5zaHUuaW8vdXBsb2FkX2ltYWdlcy85NzQ3MzUwLThjNzY3NTc3ODU0MzIzMDQucG5n?x-oss-process=image/format,png" alt="" loading="lazy"></p>
+<ul>
+<li>设置 root 用户密码</li>
+</ul>
+<p>上述安装过程结束后，直接登录，此时 root 用户没有设密码，需要输入密码时直接回车；</p>
+<div><pre><code>myslq -u root -p
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p>登录后，使用如下命令来修改 root 用户密码，退出后再次登录输入你修改的密码即可；</p>
+<div><pre><code>SET PASSWORD FOR <span>&amp;</span><span>#39;root&amp;#39;@&amp;#39;localhost&amp;#39; = PASSWORD(&amp;#39;你要设置的密码&amp;#39;);</span>
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><h2 id="vs-code-安装" tabindex="-1"> VS Code 安装</h2>
+<ul>
+<li>安装</li>
+</ul>
+<p>直接去 <a href="https://code.visualstudio.com/" target="_blank" rel="noopener noreferrer">下载<ExternalLinkIcon/></a> 对应安装包，然后在终端使用如下命令安装；</p>
+<div><pre><code><span>sudo</span> dpkg -i code_1.44.2-1587059832_amd64.deb
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly91cGxvYWQtaW1hZ2VzLmppYW5zaHUuaW8vdXBsb2FkX2ltYWdlcy85NzQ3MzUwLWQzZDJkMDZiMDQyOTE5ZGMucG5n?x-oss-process=image/format,png" alt="" loading="lazy"></p>
+<ul>
+<li>成品</li>
+</ul>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly91cGxvYWQtaW1hZ2VzLmppYW5zaHUuaW8vdXBsb2FkX2ltYWdlcy85NzQ3MzUwLTkwNjFlYzMzNTQ5NTRiYzYucG5n?x-oss-process=image/format,png" alt="" loading="lazy"></p>
+<h2 id="intellij-idea-安装" tabindex="-1"> IntelliJ IDEA 安装</h2>
+<ul>
+<li>安装</li>
+</ul>
+<p>从官网 <a href="https://www.jetbrains.com/idea/download/#section=linux" target="_blank" rel="noopener noreferrer">下载<ExternalLinkIcon/></a>
+对应安装包，然后将其解压；</p>
+<div><pre><code><span>tar</span> -zxvf ideaIU-2020.1.tar.gz 
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p>进入 <strong>IDEA/bin</strong> 目录下，执行 <code>idea.sh</code> 即可；</p>
+<ul>
+<li>生成快捷方式</li>
+</ul>
+<p>打开 IDEA 后，进入 <strong>Configure -&gt; Create Desktop Entry</strong>，然后输入 root 用户密码即可；</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly91cGxvYWQtaW1hZ2VzLmppYW5zaHUuaW8vdXBsb2FkX2ltYWdlcy85NzQ3MzUwLTc5ZDQzZjY5N2FmM2Y5ZmQucG5n?x-oss-process=image/format,png" alt="" loading="lazy"></p>
+<h2 id="pycharm-安装" tabindex="-1"> Pycharm 安装</h2>
+<ul>
+<li>安装</li>
+</ul>
+<p>从官网 <a href="https://www.jetbrains.com/pycharm/download/#section=linux" target="_blank" rel="noopener noreferrer">下载<ExternalLinkIcon/></a> 对应安装包，然后将其解压；</p>
+<div><pre><code><span>tar</span> -zxvf pycharm-professional-2020.1.tar.gz 
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p>进入 <strong>Pycharm/bin</strong> 目录下，执行 <code>pycharm.sh</code> 即可；</p>
+<ul>
+<li>生成快捷方式</li>
+</ul>
+<p>打开 Pycharm 后，进入 <strong>Configure -&gt; Create Desktop Entry</strong>，然后输入 root 用户密码即可；</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly91cGxvYWQtaW1hZ2VzLmppYW5zaHUuaW8vdXBsb2FkX2ltYWdlcy85NzQ3MzUwLTIzYzk2NGRlZTc0NGE1ZGEucG5n?x-oss-process=image/format,png" alt="" loading="lazy"></p>
+<h1 id="系统美化" tabindex="-1"> 系统美化</h1>
+<h2 id="grub-美化" tabindex="-1"> Grub 美化</h2>
+<ul>
+<li>对于安装双系统或多系统的读者，想要自己的启动页面变得好看一点，那么你一定不能错过。</li>
+</ul>
+<p>到 <a href="https://www.gnome-look.org/browse/cat/109/ord/latest/" target="_blank" rel="noopener noreferrer">这里<ExternalLinkIcon/></a> 去选择自己喜欢的主题，然后进行安装，这里笔者选择的是 <a href="https://github.com/vinceliuice/grub2-themes" target="_blank" rel="noopener noreferrer">Grub-theme-vimix<ExternalLinkIcon/></a>；</p>
+<ul>
+<li>安装</li>
+</ul>
+<p>把 Grub-theme-vimix 克隆到本地，然后使用如下命令进行安装即可；</p>
+<div><pre><code><span>sudo</span> ./install.sh -t -2 -b
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><h2 id="锁屏界面美化" tabindex="-1"> 锁屏界面美化</h2>
+<p>直接修改相关配置文件：<code>/etc/alternatives/gdm3.css</code> ，然后修改代码中的 <code>#lockDialogGroup</code> 部分如下即可；</p>
+<div><pre><code>#lockDialogGroup {
+  background: #2c001e       
+  url(file:///home/cunyu/imgs/lock.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br></div></div><h2 id="美化工具安装" tabindex="-1"> 美化工具安装</h2>
+<p>美化之前，需要安装 gnome-tweak-tool，安装命令如下；</p>
+<div><pre><code><span>sudo</span> <span>apt-get</span> <span>install</span> gnome-tweak-tool
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly91cGxvYWQtaW1hZ2VzLmppYW5zaHUuaW8vdXBsb2FkX2ltYWdlcy85NzQ3MzUwLTZhMDhlODMwZGQyZDRkMWEucG5n?x-oss-process=image/format,png" alt="" loading="lazy"></p>
+<h2 id="主题安装" tabindex="-1"> 主题安装</h2>
+<ul>
+<li>下载</li>
+</ul>
+<p>推荐使用这套，macos 风格的主题，<a href="https://www.gnome-look.org/p/1275087/" target="_blank" rel="noopener noreferrer">下载链接<ExternalLinkIcon/></a>；</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly91cGxvYWQtaW1hZ2VzLmppYW5zaHUuaW8vdXBsb2FkX2ltYWdlcy85NzQ3MzUwLWFhMGIyZjlmYTg4ODZmODYucG5n?x-oss-process=image/format,png" alt="" loading="lazy"></p>
+<ul>
+<li>安装</li>
+</ul>
+<p>把下载好的压缩包解压之后，移动到 <code>/usr/share/themes</code> 目录下即可；</p>
+<h2 id="图标安装" tabindex="-1"> 图标安装</h2>
+<ul>
+<li>下载</li>
+</ul>
+<p>推荐这款图标，<a href="https://github.com/keeferrourke/la-capitaine-icon-theme" target="_blank" rel="noopener noreferrer">下载链接<ExternalLinkIcon/></a>；</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly91cGxvYWQtaW1hZ2VzLmppYW5zaHUuaW8vdXBsb2FkX2ltYWdlcy85NzQ3MzUwLWFhMTE4ZWZhZmY2YzhiMTcucG5n?x-oss-process=image/format,png" alt="" loading="lazy"></p>
+<ul>
+<li>安装</li>
+</ul>
+<p>把下载好的压缩包解压之后，移动到 <code>/usr/share/icons</code> 目录下即可；</p>
+<h2 id="终端安装" tabindex="-1"> 终端安装</h2>
+<ul>
+<li>安装</li>
+</ul>
+<p>Ubuntu 自带终端已经很强大，但我更推荐使用 ZSH；</p>
+<p>在终端中使用如下命令安装即可；</p>
+<div><pre><code><span>sudo</span> <span>apt</span> <span>install</span> <span>zsh</span>
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly91cGxvYWQtaW1hZ2VzLmppYW5zaHUuaW8vdXBsb2FkX2ltYWdlcy85NzQ3MzUwLWY5NjVhYzEwMGEyMDI1ZTgucG5n?x-oss-process=image/format,png" alt="" loading="lazy"></p>
+<ul>
+<li>设为默认 Shell</li>
+</ul>
+<div><pre><code>chsh -s /usr/bin/zsh
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><ul>
+<li>美化</li>
+</ul>
+<p>安装 <a href="https://github.com/robbyrussell/oh-my-zsh" target="_blank" rel="noopener noreferrer">oh-my-zsh<ExternalLinkIcon/></a>，通过如下任一命令安装；</p>
+<div><pre><code><span># via crul</span>
+<span>sh</span> -c <span>"<span><span>$(</span><span>curl</span> -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh<span>)</span></span>"</span>
+<span># via wget</span>
+<span>sh</span> -c <span>"<span><span>$(</span><span>wget</span> -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh<span>)</span></span>"</span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br></div></div><p>也可以通过如下命令安装；</p>
+<div><pre><code><span>git</span> clone git://github.com/robbyrussell/oh-my-zsh.git  ~/.oh-my-zsh
+<span>cp</span> ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br></div></div><p>安装好之后，对 zsh 进行配置，打开 <code>~/.zshrc</code> 配置文件，进行配置；</p>
+<p>进入 <a href="https://github.com/ohmyzsh/ohmyzsh/wiki/Themes" target="_blank" rel="noopener noreferrer">主题列表<ExternalLinkIcon/></a>，挑选自己喜欢的主题，然后在上述配置中改成你喜欢的主题，比如我的配置文件如下；</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9naXRlZS5jb20vY3VueXUxOTQzL2ltYWdlcy9yYXcvbWFzdGVyL0ltZ3NVYnVudHUvMjAyMDA0MjExMzI5MjgucG5n?x-oss-process=image/format,png" alt="" loading="lazy"></p>
+<div><pre><code># If you come from bash you might have to change your $PATH.
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
+
+# Path to your oh-my-zsh installation.
+export ZSH=$HOME/.oh-my-zsh
+
+# Set name of the theme to load --- if set to "random", it will
+# load a random theme each time oh-my-zsh is loaded, in which case,
+# to know which specific one was loaded, run: echo $RANDOM_THEME
+# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
+# 主题
+ZSH_THEME="dallas"
+
+# Set list of themes to pick from when loading at random
+# Setting this variable when ZSH_THEME=random will cause zsh to load
+# a theme from this variable instead of looking in ~/.oh-my-zsh/themes/
+# If set to an empty array, this variable will have no effect.
+# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
+
+# Uncomment the following line to use case-sensitive completion.
+# CASE_SENSITIVE="true"
+
+# Uncomment the following line to use hyphen-insensitive completion.
+# Case-sensitive completion must be off. _ and - will be interchangeable.
+# HYPHEN_INSENSITIVE="true"
+
+# Uncomment the following line to disable bi-weekly auto-update checks.
+# DISABLE_AUTO_UPDATE="true"
+
+# Uncomment the following line to automatically update without prompting.
+# DISABLE_UPDATE_PROMPT="true"
+
+# Uncomment the following line to change how often to auto-update (in days).
+# 每次更新的时间
+export UPDATE_ZSH_DAYS=30
+
+# Uncomment the following line if pasting URLs and other text is messed up.
+# DISABLE_MAGIC_FUNCTIONS=true
+
+# Uncomment the following line to disable colors in ls.
+# DISABLE_LS_COLORS="true"
+
+# Uncomment the following line to disable auto-setting terminal title.
+# DISABLE_AUTO_TITLE="true"
+
+# Uncomment the following line to enable command auto-correction.
+# ENABLE_CORRECTION="true"
+
+# Uncomment the following line to display red dots whilst waiting for completion.
+# COMPLETION_WAITING_DOTS="true"
+
+# Uncomment the following line if you want to disable marking untracked files
+# under VCS as dirty. This makes repository status check for large repositories
+# much, much faster.
+# DISABLE_UNTRACKED_FILES_DIRTY="true"
+
+# Uncomment the following line if you want to change the command execution time
+# stamp shown in the history command output.
+# You can set one of the optional three formats:
+# "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
+# or set a custom format using the strftime function format specifications,
+# see 'man strftime' for details.
+# HIST_STAMPS="mm/dd/yyyy"
+
+# Would you like to use another custom folder than $ZSH/custom?
+# ZSH_CUSTOM=/path/to/new-custom-folder
+
+# Which plugins would you like to load?
+# Standard plugins can be found in ~/.oh-my-zsh/plugins/*
+# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+# Add wisely, as too many plugins slow down shell startup.
+
+# 插件
+# git
+
+# zsh-syntax-highlighting 输入正确会绿色高亮显示，输入错误会显示其他的颜色
+# git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh
+
+# zsh-autosuggestions 自动建议补全
+git clone git://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh
+
+# extra 解压
+# z
+plugins=(
+    git zsh-syntax-highlighting zsh-autosuggestions extract z
+)
+
+source $ZSH/oh-my-zsh.sh
+
+# User configuration
+
+# export MANPATH="/usr/local/man:$MANPATH"
+
+# You may need to manually set your language environment
+# export LANG=en_US.UTF-8
+
+# Preferred editor for local and remote sessions
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='vim'
+# else
+#   export EDITOR='mvim'
+# fi
+
+# Compilation flags
+# export ARCHFLAGS="-arch x86_64"
+
+# Set personal aliases, overriding those provided by oh-my-zsh libs,
+# plugins, and themes. Aliases can be placed here, though oh-my-zsh
+# users are encouraged to define aliases within the ZSH_CUSTOM folder.
+# For a full list of active aliases, run `alias`.
+#
+# Example aliases
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br><span>27</span><br><span>28</span><br><span>29</span><br><span>30</span><br><span>31</span><br><span>32</span><br><span>33</span><br><span>34</span><br><span>35</span><br><span>36</span><br><span>37</span><br><span>38</span><br><span>39</span><br><span>40</span><br><span>41</span><br><span>42</span><br><span>43</span><br><span>44</span><br><span>45</span><br><span>46</span><br><span>47</span><br><span>48</span><br><span>49</span><br><span>50</span><br><span>51</span><br><span>52</span><br><span>53</span><br><span>54</span><br><span>55</span><br><span>56</span><br><span>57</span><br><span>58</span><br><span>59</span><br><span>60</span><br><span>61</span><br><span>62</span><br><span>63</span><br><span>64</span><br><span>65</span><br><span>66</span><br><span>67</span><br><span>68</span><br><span>69</span><br><span>70</span><br><span>71</span><br><span>72</span><br><span>73</span><br><span>74</span><br><span>75</span><br><span>76</span><br><span>77</span><br><span>78</span><br><span>79</span><br><span>80</span><br><span>81</span><br><span>82</span><br><span>83</span><br><span>84</span><br><span>85</span><br><span>86</span><br><span>87</span><br><span>88</span><br><span>89</span><br><span>90</span><br><span>91</span><br><span>92</span><br><span>93</span><br><span>94</span><br><span>95</span><br><span>96</span><br><span>97</span><br><span>98</span><br><span>99</span><br><span>100</span><br><span>101</span><br><span>102</span><br><span>103</span><br><span>104</span><br><span>105</span><br><span>106</span><br><span>107</span><br><span>108</span><br><span>109</span><br><span>110</span><br><span>111</span><br><span>112</span><br><span>113</span><br><span>114</span><br><span>115</span><br></div></div><h2 id="总结" tabindex="-1"> 总结</h2>
+<p>好了，文章的内容到此就结束了。我主要从系统设置、常用软件安装、开发环境搭建、系统美化四个方面介绍了自己如何配置并使用 Ubuntu 的，希望也给你带来一定的帮助！如果你有更多好玩的技巧，欢迎留言交流！</p>
+]]></content:encoded>
+      <enclosure url="https://imgconvert.csdnimg.cn/aHR0cHM6Ly91cGxvYWQtaW1hZ2VzLmppYW5zaHUuaW8vdXBsb2FkX2ltYWdlcy85NzQ3MzUwLWU1MTMwNmJiN2Q5ZDQ1MjUucG5n?x-oss-process=image/format,png" type="image/"/>
+    </item>
+    <item>
+      <title>Linux 教程：VMware 中安装 Ubuntu</title>
+      <link>https://cunyu1943.github.io/JavaPark/JavaPark/efficiency/linux/ubuntu-install-with-vmware.html</link>
+      <guid>https://cunyu1943.github.io/JavaPark/JavaPark/efficiency/linux/ubuntu-install-with-vmware.html</guid>
+      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">Linux 教程：VMware 中安装 Ubuntu</source>
+      <category>工具教程</category>
+      <pubDate>Sun, 16 Jan 2022 21:48:20 GMT</pubDate>
+      <content:encoded><![CDATA[<h2 id="准备工作" tabindex="-1"> 准备工作</h2>
+<h3 id="ubuntu" tabindex="-1"> Ubuntu</h3>
+<ul>
+<li>
+<p>获取地址：</p>
+</li>
+<li>
+<p><a href="https://ubuntu.com/download/desktop" target="_blank" rel="noopener noreferrer">官网<ExternalLinkIcon/></a></p>
+</li>
+</ul>
+<p><img src="https://img-blog.csdnimg.cn/20210421231044864.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2dpdGh1Yl8zOTY1NTAyOQ==,size_16,color_FFFFFF,t_70" alt="" loading="lazy"></p>
+<ul>
+<li><a href="https://mirrors.tuna.tsinghua.edu.cn/ubuntu-releases/21.04/" target="_blank" rel="noopener noreferrer">清华镜像站<ExternalLinkIcon/></a></li>
+</ul>
+<p><img src="https://img-blog.csdnimg.cn/20210421231220815.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2dpdGh1Yl8zOTY1NTAyOQ==,size_16,color_FFFFFF,t_70" alt="" loading="lazy"></p>
+<h3 id="vmware" tabindex="-1"> VMware</h3>
+<ul>
+<li><a href="https://my.vmware.com/cn/web/vmware/downloads/info/slug/desktop_end_user_computing/vmware_workstation_pro/16_0" target="_blank" rel="noopener noreferrer">官网<ExternalLinkIcon/></a></li>
+</ul>
+<p><img src="https://img-blog.csdnimg.cn/20210421231543393.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2dpdGh1Yl8zOTY1NTAyOQ==,size_16,color_FFFFFF,t_70" alt="" loading="lazy"></p>
+<h2 id="安装过程" tabindex="-1"> 安装过程</h2>
+<p>Vmware 的安装过程此处不在赘述，不清楚如何安装的请自行百度，参见 <a href="https://blog.csdn.net/qq_40950957/article/details/80467513" target="_blank" rel="noopener noreferrer">VMware14安装教程<ExternalLinkIcon/></a>，其他版本的安装也一样，只不过版本版本不同而已，但是步骤没啥变化。</p>
+<p>然后就是 Vmware 中安装 Ubuntu 的过程如下：</p>
+<ol>
+<li>
+<p>首先新建一个虚拟机，配置选典型即可，然后下一步；
+<img src="https://img-blog.csdn.net/20180608174531978?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2dpdGh1Yl8zOTY1NTAyOQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>选择稍后安装操作系统，接着下一步；
+<img src="https://img-blog.csdn.net/2018060817454412?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2dpdGh1Yl8zOTY1NTAyOQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>然后操作客户机系统类型选 Linux，接着在下边的下拉框中选择你对应版本的系统；
+<img src="https://img-blog.csdn.net/20180608174551699?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2dpdGh1Yl8zOTY1NTAyOQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>为你的虚拟机命名，并且选择存放地址，接着下一步；
+<img src="https://img-blog.csdn.net/20180608174559355?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2dpdGh1Yl8zOTY1NTAyOQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>选择磁盘大小，建议选择 20 GB 以上；
+<img src="https://img-blog.csdn.net/20180608174610377?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2dpdGh1Yl8zOTY1NTAyOQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>接着自定义硬件，把不需要的硬件干掉；
+<img src="https://img-blog.csdn.net/2018060817462028?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2dpdGh1Yl8zOTY1NTAyOQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="" loading="lazy">
+<img src="https://img-blog.csdn.net/20180608174706776?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2dpdGh1Yl8zOTY1NTAyOQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>干掉不必要的硬件之后，直接选择完成；
+<img src="https://img-blog.csdn.net/20180608174713840?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2dpdGh1Yl8zOTY1NTAyOQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>编辑虚拟机的相关设置；
+<img src="https://img-blog.csdn.net/20180608174723846?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2dpdGh1Yl8zOTY1NTAyOQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>选择虚拟机内存，这个要根据自己的机器来选，不要搞太高，不然会跑不起来的，直接把你本机搞死；
+<img src="https://img-blog.csdn.net/20180608174730864?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2dpdGh1Yl8zOTY1NTAyOQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>接着就是选择你系统镜像文件的地址；
+<img src="https://img-blog.csdn.net/20180608174738275?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2dpdGh1Yl8zOTY1NTAyOQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>完成各个设置之后，点击开启此虚拟机；
+<img src="https://img-blog.csdn.net/20180608174748990?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2dpdGh1Yl8zOTY1NTAyOQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>选择中文（当然你也可以选择英语），然后点击安装；
+<img src="https://img-blog.csdn.net/20180608174803335?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2dpdGh1Yl8zOTY1NTAyOQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>接着选键盘布局，我们一般都是选汉语就 ok；
+<img src="https://img-blog.csdn.net/20180608174820145?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2dpdGh1Yl8zOTY1NTAyOQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>选择正常安装，对于是否更新和安装其他软件，为了安装的更快，选择不要下载更新；
+<img src="https://img-blog.csdn.net/20180608174827197?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2dpdGh1Yl8zOTY1NTAyOQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>选择清除整个磁盘并安装；</p>
+</li>
+</ol>
+<p><img src="https://img-blog.csdn.net/20180608174844116?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2dpdGh1Yl8zOTY1NTAyOQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="" loading="lazy"></p>
+<ol start="16">
+<li>
+<p>填写计算机名、用户名，并设置用户密码；
+<img src="https://img-blog.csdn.net/20180608174852844?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2dpdGh1Yl8zOTY1NTAyOQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>填写完上面的信息之后，等待一段时间安装，然后重启即可。重启后进入如下界面，只需要输入我们设置的用户密码尽快进入系统。
+<img src="https://img-blog.csdn.net/20180608174905111?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2dpdGh1Yl8zOTY1NTAyOQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="" loading="lazy"></p>
+</li>
+</ol>
+<h2 id="总结" tabindex="-1"> 总结</h2>
+<p>至此，Ubuntu 在 VMware 中的安装过程就结束了，接下来你就可以尽情的捣鼓安装好的系统了 😜.</p>
+]]></content:encoded>
+      <enclosure url="https://img-blog.csdnimg.cn/20210421231044864.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2dpdGh1Yl8zOTY1NTAyOQ==,size_16,color_FFFFFF,t_70" type="image/"/>
+    </item>
+    <item>
+      <title>macOS 教程：iTerm2 + Oh My Zsh 打造帅气终端</title>
+      <link>https://cunyu1943.github.io/JavaPark/JavaPark/efficiency/macos/item-oh-my-zsh.html</link>
+      <guid>https://cunyu1943.github.io/JavaPark/JavaPark/efficiency/macos/item-oh-my-zsh.html</guid>
+      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">macOS 教程：iTerm2 + Oh My Zsh 打造帅气终端</source>
+      <category>工具教程</category>
+      <pubDate>Mon, 03 Jan 2022 22:04:25 GMT</pubDate>
+      <content:encoded><![CDATA[<h2 id="前言" tabindex="-1"> 前言</h2>
+<p>说在前面，本文主要适合于的是使用 macOS 系统的小伙伴，如果你使用的 Windows 或者 Linux 系统的电脑，那可能暂时不太适合你。当然了，如果你只是想了解一下新知识，那么欢迎各位！</p>
+<p>终端（也就是 Windows 中所说的控制台）在我们大多数人的印象中，应该都是黑乎乎的一片，然后再加几个白色的文字吧。如果你还这样想，那你可就 Out 了，现在，我们的终端也可以改造成酷炫时尚的模样，就像下面这张图，那该怎么改呢？赶紧来看看吧。</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/5b165f298d960808713fef024bc97b0c.png" alt="最终效果图" loading="lazy"></p>
+<h2 id="iterm2" tabindex="-1"> iTerm2</h2>
+<p>macOS 自带的终端又丑又难用，不过还好，大佬们的智慧是无穷的，然后就在网上找到了一款能够完全代替原生终端的工具 - <a href="https://iterm2.com/index.html" target="_blank" rel="noopener noreferrer">iTerm2<ExternalLinkIcon/></a>。</p>
+<p>首先安装上 iTerm2，去 <a href="https://iterm2.com/index.html" target="_blank" rel="noopener noreferrer">官网下载<ExternalLinkIcon/></a>，然后直接解压后拖入 <code>Application</code> 就搞定了，然后我们首先来看看他的原皮！</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/ee3f6d808c9bb4470a5b86bd889f1e53.png" alt="" loading="lazy"></p>
+<p>好像还是很丑，咋回事儿，不是说 iTerm2 很酷炫的么，不还是一样丑不拉叽的么？？？</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/7700737a49b85c21425753a83429f5ad.png" alt="" loading="lazy"></p>
+<p>别慌呀，接下来才是正菜！</p>
+<h2 id="oh-my-zsh" tabindex="-1"> Oh My Zsh</h2>
+<p>好了，主角正式登场！</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/1d31de3b8ade95d4062b2ab4b2fd81da.gif" alt="" loading="lazy"></p>
+<blockquote>
+<p>Oh My Zsh is an open source, community-driven framework for managing your zsh configuration.</p>
+</blockquote>
+<p>上面这句话是官网给出的描述，即它是开源、由社区驱动的用于管理 zsh 配置的框架！好了，那就动手整起来！</p>
+<h3 id="安装" tabindex="-1"> 安装</h3>
+<p>官网提供了以下两种自动安装的方式：</p>
+<ol>
+<li>通过 <code>curl</code> 的方式</li>
+</ol>
+<div><pre><code><span># via curl</span>
+<span>sh</span> -c <span>"<span><span>$(</span><span>curl</span> -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh<span>)</span></span>"</span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br></div></div><ol start="2">
+<li>通过 <code>wget</code> 的方式</li>
+</ol>
+<div><pre><code><span># via wget</span>
+<span>sh</span> -c <span>"<span><span>$(</span><span>wget</span> -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh<span>)</span></span>"</span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br></div></div><p>不过由于某些不知名原因，通过上面两种方法一般来说都是安装不成功的，那咋搞？</p>
+<p>既然自动安装搞不定，那就自己手动来呗。</p>
+<ol>
+<li>首先下载 <code>oh-my-zsh</code> 源码；</li>
+</ol>
+<div><pre><code><span>git</span> clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><ol start="2">
+<li>把配置文件拷贝到根目录；</li>
+</ol>
+<div><pre><code><span>cp</span> ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><ol start="3">
+<li>使配置文件生效；</li>
+</ol>
+<div><pre><code><span>source</span> ~/.zshrc
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p>好了，这时候界面应该变了！</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/8603f31c02b851d7b28b7d5e631a3897.png" alt="" loading="lazy"></p>
+<h3 id="zshrc" tabindex="-1"> .zshrc</h3>
+<p>这个文件是 <code>oh-my-zsh</code> 的配置文件，位于根目录下，一般可以通过如下命令可以对其进行查看或编辑；</p>
+<div><pre><code><span>vim</span> ~/.zshrc
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p>每次修改之后，如果要让配置利马生效，需要执行如下命令：</p>
+<div><pre><code><span>source</span> ~/.zshrc
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><h3 id="修改配色" tabindex="-1"> 修改配色</h3>
+<p>打开配置文件 <code>.zshrc</code>，可以看到关于配色方案的配置：</p>
+<div><pre><code><span># Set name of the theme to load --- if set to "random", it will</span>
+<span># load a random theme each time oh-my-zsh is loaded, in which case,</span>
+<span># to know which specific one was loaded, run: echo $RANDOM_THEME</span>
+<span># See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes</span>
+<span>ZSH_THEME</span><span>=</span><span>"agnoster"</span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br></div></div><p>关于配色，你可以去 <a href="https://github.com/ohmyzsh/ohmyzsh/wiki/Themes" target="_blank" rel="noopener noreferrer">主题市场<ExternalLinkIcon/></a> 进行选择，不过在这里推荐一下自己用的一款主题 <a href="https://github.com/romkatv/powerlevel10k" target="_blank" rel="noopener noreferrer">PowerLevel10k<ExternalLinkIcon/></a>；</p>
+<p>使用如下命令进行安装，然后打开配置文件 <code>.zsrch</code>，把主题设置为 PowerLevel10k；</p>
+<div><pre><code><span>git</span> clone --depth<span>=</span><span>1</span> https://gitee.com/romkatv/powerlevel10k.git <span>${ZSH_CUSTOM<span>:-</span>$HOME<span>/</span>.oh-my-zsh<span>/</span>custom}</span>/themes/powerlevel10k
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><div><pre><code><span>ZSH_THEME</span><span>=</span><span>"powerlevel10k/powerlevel10k"</span>
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p>接着安装 <code>MesloLGS NF</code> 字体（ <a href="https://github.com/romkatv/powerlevel10k" target="_blank" rel="noopener noreferrer">PowerLevel10k<ExternalLinkIcon/></a> 安装手册里有），然后依次打开：<code>iTerm2-&gt;Preferences-&gt;Profiles-&gt;Text</code>，把字体选为 <code>MesloLGS NF</code> 即可；</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/1383cd7541d0404f91e7dc27ecd2d1e9.png" alt="iTerm2字体配置" loading="lazy"></p>
+<p>然后重启 iTerm2，输入 <code>p10k configure</code> 按照自己的喜好进行主题配置即可，一般配置的问题大概是以下意思：</p>
+<ol>
+<li>这个符号看起来像钻石（旋转的正方形）吗？</li>
+<li>这个符号看起来像锁吗？</li>
+<li>这个符号看起来像 Debian logo 吗？</li>
+<li>这些图标都交叉分布在 X 之间吗？</li>
+<li>风格</li>
+<li>编码</li>
+<li>是否显示时间</li>
+<li>目录层级分隔符</li>
+<li>头部（左边）</li>
+<li>尾部（右边）</li>
+<li>是否换行</li>
+<li>左边和右边是否有连接线</li>
+<li>命令行和提示是否连接</li>
+<li>两行命令之间分布稀疏还是松散</li>
+<li>是否需要图标</li>
+</ol>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/4ba07fea07cfd5b51f923651919523a5.png" alt="完成后的效果" loading="lazy"></p>
+<h3 id="常用插件推荐" tabindex="-1"> 常用插件推荐</h3>
+<p>要想让我们的终端更好用，推荐安装如下插件；</p>
+<ol>
+<li><strong>git</strong>：自带插件，默认已经开启</li>
+</ol>
+<p>它可以让我们使用非常好用的的 <code>git</code> 命令，提高开发效率：</p>
+<table>
+<thead>
+<tr>
+<th>未用插件前</th>
+<th>用插件后</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>git add --all</code></td>
+<td><code>gaa</code></td>
+</tr>
+<tr>
+<td><code>git branch -D</code></td>
+<td><code>gbD</code></td>
+</tr>
+<tr>
+<td><code>git commit -a -m</code></td>
+<td><code>gcam</code></td>
+</tr>
+<tr>
+<td><code>git checkout -b</code></td>
+<td><code>gcb</code></td>
+</tr>
+<tr>
+<td><code>git checkout master</code></td>
+<td><code>gcm</code></td>
+</tr>
+</tbody>
+</table>
+<p>上面表中只是部分配置，如果要看所有配置，可用使用如下命令查看：</p>
+<div><pre><code><span>vim</span> ~/.oh-my-zsh/plugins/git/git.plugin.zsh
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><ol start="2">
+<li><strong>autojump</strong>：自动跳转对应目录</li>
+</ol>
+<p>该插件会记录你所有的访问记录，不同单独配置，直接访问即可，安装方式如下：</p>
+<div><pre><code>brew <span>install</span> autojump
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p>然后在配置文件 <code>.zshrc</code> 中添加如下配置即可：</p>
+<div><pre><code><span>[</span> -f /usr/local/etc/profile.d/autojump.sh <span>]</span> <span>&amp;&amp;</span> <span>.</span> /usr/local/etc/profile.d/autojump.sh
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p>使用时，利用 <code>j</code> 命令加上目标目录即可，如我要跳到 <code>/home/cunyu/code</code> 目录，只需要使用如下命令即可，不过前提是你之前访问过 <code>code</code> 目录。</p>
+<div><pre><code>j code
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><ol start="3">
+<li><strong>zsh-autosuggestions</strong>：命令提示</li>
+</ol>
+<p>该插件会在你输入命令的时候提示并且自动完成；</p>
+<p>安装命令如下：</p>
+<div><pre><code><span>git</span> clone git://github.com/zsh-users/zsh-autosuggestions <span>$ZSH_CUSTOM</span>/plugins/zsh-autosuggestions
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p>接着在配置文件 <code>.zshrc</code> 中加入如下配置即可；</p>
+<div><pre><code><span>plugins</span><span>=</span><span>(</span>zsh-autosuggestions <span>git</span><span>)</span>
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><ol start="4">
+<li><strong>zsh-syntax-highlighting</strong>：高亮</li>
+</ol>
+<p>该插件命令会自动高亮显示;</p>
+<p>安装命令如下：</p>
+<div><pre><code><span>git</span> clone https://github.com/zsh-users/zsh-syntax-highlighting.git <span>$ZSH_CUSTOM</span>/plugins/zsh-syntax-highlighting
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><ol start="5">
+<li><strong>extract</strong>：一键解压</li>
+</ol>
+<p>tar, gz, zip, rar 等格式的压缩包都可以使用 extract 命令来进行解压，其别名是 <code>x</code>，使用方法如下；</p>
+<div><pre><code>x 压缩包名
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><h2 id="总结" tabindex="-1"> 总结</h2>
+<p>好了，以上就是今天文章的所有内容了。主要介绍了 macOS 中的终端 iTerm2，然后介绍了如何配置 iTerm2 + Oh My Zsh，最后则是推荐几款常用的插件，方便让我们的 iTerm2 更加强大。</p>
+<p>最后，原创不易，如果你觉得我的文章对你有所帮助，那就点赞关注一波吧！</p>
+]]></content:encoded>
+      <enclosure url="https://img-blog.csdnimg.cn/img_convert/5b165f298d960808713fef024bc97b0c.png" type="image/png"/>
+    </item>
+    <item>
+      <title>Windows 教程：制作 U 盘启动盘</title>
+      <link>https://cunyu1943.github.io/JavaPark/JavaPark/efficiency/windows/how-to-make-usb-boot-drive.html</link>
+      <guid>https://cunyu1943.github.io/JavaPark/JavaPark/efficiency/windows/how-to-make-usb-boot-drive.html</guid>
+      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">Windows 教程：制作 U 盘启动盘</source>
+      <category>工具教程</category>
+      <pubDate>Sun, 16 Jan 2022 21:38:59 GMT</pubDate>
+      <content:encoded><![CDATA[<h2 id="前言" tabindex="-1"> 前言</h2>
+<p>在我们日常使用电脑的过程中，难免会遇到电脑卡顿的情况，大多时候我们可以通过重装系统的方式来让我们的电脑重焕新生。但是这时候就遇到个难题呀，不会装系统咋办？？？去电脑城或者维修店花钱装？</p>
+<p><img src="http://ww2.sinaimg.cn/bmiddle/9150e4e5gw1f9nbx3l75mj2057043t8j.jpg" alt="img" loading="lazy"></p>
+<p>作为我的读者，怎么可能让你花那么多钱就为了装个系统呢，留着买吃的他不香么？</p>
+<p><img src="http://wx3.sinaimg.cn/bmiddle/415f82b9ly1fwkr16m9gjj20b40b4aau.jpg" alt="img" loading="lazy"></p>
+<p>那今天咱就来聊聊，怎么装系统！在正式开始装系统之前呢，我们需要做一些准备工作，那就是先得搞个系统启动盘呀。当然了，你可能说直接解压安装也行呀，但那样个人觉得始终安装不干净，还是有之前系统残留的一些东西。所以今天就来看看，怎么制作一个系统启动盘！</p>
+<p>在日常安装系统时，最好制作 U 盘启动盘来安装，而且往往需要每个系统做一次，既然这么麻烦，那有没有办法只做一次启动盘，然后每次换不同系统只要拷贝镜像文件即可呢？答案是：<strong>当然有了！！！</strong>。今天呢，就教给你们两种办法，一种是每次都需要制作的方式，而另一种呢则是一次制作，多次使用的方式！</p>
+<p>这里推荐大家使用 U 盘来制作启动盘，而且 <strong>U 盘的容量最好是在 8G+</strong>，而且在制作系统启动盘之前呢，一点要注意：</p>
+<p><strong>请一定事先备份好 U 盘中的重要资料！</strong></p>
+<p><strong>请一定事先备份好 U 盘中的重要资料！</strong></p>
+<p><strong>请一定事先备份好 U 盘中的重要资料！</strong></p>
+<p>重要的事情说三遍，那么接下来我们就分别介绍两种制作系统启动盘的方式。</p>
+<h2 id="单次单系统" tabindex="-1"> 单次单系统</h2>
+<p>这里又可以分为两种方式，一种是 Refus，另一种是 UltraISO，大家可以根据自己的喜好来进行选择，那么我们就来正式开始吧！</p>
+<h3 id="refus-http-rufus-ie" tabindex="-1"> Refus：http://rufus.ie/</h3>
+<p>Refus 十一款 Windows 下十分小巧强大的刻录软件，打开即用，十分方便，以下介绍如何通过 Refus 制作 U 盘启动盘的具体过程。</p>
+<ol>
+<li>到上面给的链接下载好 Refus 后，不用安装，双击打开即可，打开后的界面如下：</li>
+</ol>
+<p><img src="https://s1.ax1x.com/2020/09/05/wAyyQg.png" alt="img" loading="lazy"></p>
+<ol>
+<li>然后选择镜像文件，然后选择分区类型，最后点击 <strong>开始</strong> 即可；</li>
+</ol>
+<p><img src="https://s1.ax1x.com/2020/09/05/wAyRwn.png" alt="img" loading="lazy"></p>
+<ol>
+<li>点击开始之后，会提示格式化 U 盘，确定后等待完成即可，之后我们就能得到一个刻录好的 U 盘启动盘了；</li>
+</ol>
+<p><img src="https://s1.ax1x.com/2020/09/05/wA6VtP.png" alt="img" loading="lazy"></p>
+<h3 id="ultraiso-https-cn-ultraiso-net" tabindex="-1"> UltraISO：https://cn.ultraiso.net/</h3>
+<p>UltraISO（软碟通）是一款老牌的刻录工具，虽然可以免费提供试用，但是有广告。如果无法忍受这一点，可以自己去网上找找破解版，又或者自己买一个正式版本，下面就介绍利用 UltraISO 制作 U 盘启动盘。</p>
+<ol>
+<li>插入 U 盘，打开 UltraISO，然后在 <strong>文件 -&gt; 打开</strong> 准备好的系统镜像文件；</li>
+</ol>
+<p><img src="https://s1.ax1x.com/2020/09/04/wArEkV.png" alt="img" loading="lazy"></p>
+<ol>
+<li>然后点击 <strong>启动 -&gt; 写入硬盘映像…</strong>，此时会自动识别出 U 盘；</li>
+</ol>
+<p><img src="https://s1.ax1x.com/2020/09/05/wAr2cQ.png" alt="img" loading="lazy"></p>
+<ol>
+<li>不用修改其他配置，直接点击 <strong>写入</strong>，此时会提示操作会格式化 U 盘，点击 <strong>是</strong> 即可；</li>
+</ol>
+<p><img src="https://s1.ax1x.com/2020/09/05/wAseEt.png" alt="img" loading="lazy"></p>
+<ol>
+<li>点击是之后，此时开始刻录过程，等待刻录完成，退出软件即可，此时我们就得到了一个刻录好的 U 盘启动盘了，拿它去安装系统就可以了！</li>
+</ol>
+<p><img src="https://s1.ax1x.com/2020/09/05/wAsHat.png" alt="img" loading="lazy"></p>
+<h2 id="单次多系统" tabindex="-1"> 单次多系统</h2>
+<p>通过上面的方式我们每次都需要重新制作一次系统盘，尤其是当系统版本升级或者系统不同时，那这就很麻烦呀。</p>
+<p>那接下来我们就来看看，一次制作，多次使用的方式。不管你是系统版本升级还是系统不同，只要制作好了，你把系统镜像拷到 U 盘里边，你就能直接用了，方便的一批！那接下来就开始正式工作！</p>
+<h3 id="准备工作" tabindex="-1"> 准备工作</h3>
+<p>今天的主角就是：<strong>Ventoy</strong>，一个新一代的多系统启动 U 盘解决方案，支持 Windows 和 Linux，其官网地址是：</p>
+<p>https://www.ventoy.net/cn/download.html</p>
+<h3 id="具体步骤" tabindex="-1"> 具体步骤</h3>
+<p>首先从官网上下载 Ventoy 之后，就可以动手实操了：</p>
+<ol>
+<li>
+<p>首先插入 U 盘；</p>
+</li>
+<li>
+<p>双击打开下载好的 Ventoy 安装包，不需要安装，打开即用；</p>
+</li>
+<li>
+<p>然后 Ventoy 会自动识别 U 盘，然后点击安装即可；</p>
+</li>
+</ol>
+<p><img src="https://s1.ax1x.com/2020/07/19/UfmUK0.png" alt="img" loading="lazy"></p>
+<ol>
+<li>开始安装前会提示抹除 U 盘数据，所以需要先将 U 盘中的资料备份好，然后等待安装过程结束即可；</li>
+<li>接下来，将我们要安装的系统镜像拷贝到我们的 U 盘即可，然后就可以用来安装系统了；</li>
+</ol>
+<h3 id="视频教程" tabindex="-1"> 视频教程</h3>
+<p>为了方便大家，单次多系统部分我还制作了视频教程，欢迎移步 B 站观看，记得关注投币一键三连哦 😘😘😘！</p>
+<p>https://player.bilibili.com/player.html?bvid=BV1MA411i7gj</p>
+<h2 id="总结" tabindex="-1"> 总结</h2>
+<p>通过上面的学习呢，大家应该都已经能独立完成 U 盘启动盘的制作了。但是不要高兴得太早，这才只是个准备工作呢。开玩笑开玩笑，其实只要把启动盘做好了，我们装系统的工作就算完成了一半了，接下来就是正式安装了。但今天呢讲的已经够多了，我得去休息休息了，那具体的安装过程我们就下一期再见吧！
+<img src="https://cdn.jsdelivr.net/gh/cunyu1943/image-hosting-for-blog/imgqqpyimg1606570424.gif" alt="" loading="lazy"></p>
+]]></content:encoded>
+      <enclosure url="http://ww2.sinaimg.cn/bmiddle/9150e4e5gw1f9nbx3l75mj2057043t8j.jpg" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>Windows 教程：优雅地使用 Windows 10</title>
+      <link>https://cunyu1943.github.io/JavaPark/JavaPark/efficiency/windows/how-to-use-windows10.html</link>
+      <guid>https://cunyu1943.github.io/JavaPark/JavaPark/efficiency/windows/how-to-use-windows10.html</guid>
+      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">Windows 教程：优雅地使用 Windows 10</source>
+      <category>工具教程</category>
+      <pubDate>Sun, 16 Jan 2022 21:45:22 GMT</pubDate>
+      <content:encoded><![CDATA[<h2 id="前言" tabindex="-1"> 前言</h2>
+<p>都 2021 年了，Windows 10 都已经发布 6 年多了，我个人也是从 Windows 10 一发布就从 Windows 7 换到了 Windows 10。就个人体验而言，我觉得 Windows 10 比 Windows 7 好用多了，许多方面都进行了改进。当然了，这只是个人感受，如果您有不同的想法，也不用急着和我争辩，毕竟萝卜白菜，各有所爱嘛，那接下来就说说如何优雅的使用 Windows 10。这些只是个人的使用经验，总结成本文章，供大家参考参考。</p>
+<p>本文基于 Windows 10 专业版（20H2）进行配置及截图，理论上讲适用于 Windows 10 所有版本，略有出入的地方还请多多包涵，可以尝试搜索网上的解决方案。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/cunyu1943/image-hosting-for-blog/blog/image-winver.png" alt="img" loading="lazy"></p>
+<p>本文主要从以下几个方面进行讲解；</p>
+<ol>
+<li>
+<p>系统设置</p>
+</li>
+<li>
+<p>软件推荐</p>
+</li>
+<li>
+<p>日常使用小技巧</p>
+</li>
+</ol>
+<h2 id="系统设置" tabindex="-1"> 系统设置</h2>
+<h3 id="资源管理器设置" tabindex="-1"> 资源管理器设置</h3>
+<ul>
+<li>在<strong>查看</strong>选项中，将<strong>文件扩展名</strong>勾选，并打开<strong>选项</strong>设置；</li>
+</ul>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly91cGxvYWQtaW1hZ2VzLmppYW5zaHUuaW8vdXBsb2FkX2ltYWdlcy85NzQ3MzUwLTM4YWI0ODk1NzI1Y2I3ODYucG5n?x-oss-process=image/format,png" alt="img" loading="lazy"></p>
+<ul>
+<li>在常规选项下，将“<strong>打开文件资源管理器时打开</strong>”后的下拉框设置为此电脑，然后在“<strong>隐私</strong>”将关于快速访问相关选项去掉勾选，最后点击“<strong>确认</strong>”；</li>
+</ul>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly91cGxvYWQtaW1hZ2VzLmppYW5zaHUuaW8vdXBsb2FkX2ltYWdlcy85NzQ3MzUwLTNlN2U1ZTFjZDZjM2EyNDkucG5n?x-oss-process=image/format,png" alt="img" loading="lazy"></p>
+<h3 id="修改默认存储位置" tabindex="-1"> 修改默认存储位置</h3>
+<p>打开设置，选中<strong>系统</strong>设置下的<strong>存储</strong>子栏目，然后<strong>更改新内容保存的位置</strong>，将<strong>默认的C盘</strong>改为<strong>你想要存储的盘</strong>，我的设置中<strong>以D盘为例</strong>，具体看个人喜好，设置步骤如下；</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly91cGxvYWQtaW1hZ2VzLmppYW5zaHUuaW8vdXBsb2FkX2ltYWdlcy85NzQ3MzUwLTgzMThiNjQ0MGE4YTIzOGEucG5n?x-oss-process=image/format,png" alt="img" loading="lazy"></p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly91cGxvYWQtaW1hZ2VzLmppYW5zaHUuaW8vdXBsb2FkX2ltYWdlcy85NzQ3MzUwLWJmMmE0NzFiMGUzZDlmMmIucG5n?x-oss-process=image/format,png" alt="img" loading="lazy"></p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly91cGxvYWQtaW1hZ2VzLmppYW5zaHUuaW8vdXBsb2FkX2ltYWdlcy85NzQ3MzUwLTZmMTgyM2I0YjY5NTU4ZTgucG5n?x-oss-process=image/format,png" alt="img" loading="lazy"></p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly91cGxvYWQtaW1hZ2VzLmppYW5zaHUuaW8vdXBsb2FkX2ltYWdlcy85NzQ3MzUwLTY1NDYxNTA5YTI2Y2JmODgucG5n?x-oss-process=image/format,png" alt="img" loading="lazy"></p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly91cGxvYWQtaW1hZ2VzLmppYW5zaHUuaW8vdXBsb2FkX2ltYWdlcy85NzQ3MzUwLTRiMDA0NDExNDFjYjI1ZmQucG5n?x-oss-process=image/format,png" alt="img" loading="lazy"></p>
+<h3 id="修改常用文件夹的默认路径" tabindex="-1"> 修改常用文件夹的默认路径</h3>
+<p>对于大多人而言，桌面内容一般都是保存在 C 盘下面。这符合大部分人的使用习惯，但是对于我就不同了，我可是个小机灵鬼，被系统搞崩重装系统搞怕了，所以我一般会把桌面等内容保存在其他非系统盘位置。那想要修改如下<strong>桌面</strong>、<strong>文档</strong>、<strong>下载</strong>等的默认路径（默认为C盘），应该如何操作呢，以下以<strong>桌面</strong>为例，其他文件夹的操作都一样！</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly91cGxvYWQtaW1hZ2VzLmppYW5zaHUuaW8vdXBsb2FkX2ltYWdlcy85NzQ3MzUwLTEyNTIwMWJhYTUyZjA3N2IucG5n?x-oss-process=image/format,png" alt="img" loading="lazy"></p>
+<ol>
+<li>选中桌面，鼠标右键，选择属性；</li>
+</ol>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly91cGxvYWQtaW1hZ2VzLmppYW5zaHUuaW8vdXBsb2FkX2ltYWdlcy85NzQ3MzUwLWZiZjE1ZDdiMTY0NzIyOWIucG5n?x-oss-process=image/format,png" alt="img" loading="lazy"></p>
+<ol>
+<li>选中<strong>位置</strong>，然后修改下边方框中<strong>你的自定义路径</strong>；</li>
+</ol>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly91cGxvYWQtaW1hZ2VzLmppYW5zaHUuaW8vdXBsb2FkX2ltYWdlcy85NzQ3MzUwLTlhYmViNDBmMWEyYzA4ZWIucG5n?x-oss-process=image/format,png" alt="img" loading="lazy"></p>
+<ol>
+<li>修改成你的自定义路径后，点击<strong>确定</strong>即可；</li>
+</ol>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly91cGxvYWQtaW1hZ2VzLmppYW5zaHUuaW8vdXBsb2FkX2ltYWdlcy85NzQ3MzUwLWQxZGRjNzVhZDA5NjNkMGIucG5n?x-oss-process=image/format,png" alt="img" loading="lazy"></p>
+<h2 id="软件安装篇" tabindex="-1"> 软件安装篇</h2>
+<p>首先说明，不是给下边软件打广告呀，只是我自己体验下来，觉得适合自己的，当然你也可以有自己的选择，全凭个人喜好嘛，哈哈。</p>
+<h3 id="输入法" tabindex="-1"> 输入法</h3>
+<ul>
+<li><a href="http://www.xinshuru.com/index.html?p=win" target="_blank" rel="noopener noreferrer"><strong>手心输入法</strong><ExternalLinkIcon/></a>：360 旗下产品，无广告，告别骚扰。</li>
+</ul>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly91cGxvYWQtaW1hZ2VzLmppYW5zaHUuaW8vdXBsb2FkX2ltYWdlcy85NzQ3MzUwLTdkNjU5ODZkZGVlZWM3N2UucG5n?x-oss-process=image/format,png" alt="img" loading="lazy"></p>
+<ul>
+<li><a href="http://qq.pinyin.cn/" target="_blank" rel="noopener noreferrer"><strong>QQ输入法</strong><ExternalLinkIcon/></a>：鹅厂出品，斗图十分方便呀！</li>
+</ul>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly91cGxvYWQtaW1hZ2VzLmppYW5zaHUuaW8vdXBsb2FkX2ltYWdlcy85NzQ3MzUwLTFkZGM1NTA1MzY3ZDY3NGQucG5n?x-oss-process=image/format,png" alt="img" loading="lazy"></p>
+<h3 id="压缩软件" tabindex="-1"> 压缩软件</h3>
+<ul>
+<li><a href="http://www.bandisoft.com/" target="_blank" rel="noopener noreferrer"><strong>Bandizip</strong><ExternalLinkIcon/></a>：一家韩国公司出品的解压缩软件，速度与颜值并存，之前的版本都没有广告，现在的新版本中加入了广告，不过也不影响使用。</li>
+</ul>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly91cGxvYWQtaW1hZ2VzLmppYW5zaHUuaW8vdXBsb2FkX2ltYWdlcy85NzQ3MzUwLTBmOGUyNzM4MDA3NzExNzIucG5n?x-oss-process=image/format,png" alt="img" loading="lazy"></p>
+<ul>
+<li><a href="https://www.7-zip.org/" target="_blank" rel="noopener noreferrer"><strong>7-zip</strong><ExternalLinkIcon/></a>：功能强大，不过颜值略低，颜值党就不推荐了，😄；</li>
+</ul>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly91cGxvYWQtaW1hZ2VzLmppYW5zaHUuaW8vdXBsb2FkX2ltYWdlcy85NzQ3MzUwLWE4MTFkNjQ0ODVkN2RkYTQucG5n?x-oss-process=image/format,png" alt="img" loading="lazy"></p>
+<ul>
+<li><a href="https://yasuo.360.cn/" target="_blank" rel="noopener noreferrer"><strong>360 压缩</strong><ExternalLinkIcon/></a>：360 又来了，不过完全放心，这不像xxx安全中心那么额，咋说呢，就很良心！</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/cunyu1943/image-hosting-for-blog/blog/image-360yasuo.png" alt="img" loading="lazy"></p>
+<h3 id="通讯浏览" tabindex="-1"> 通讯浏览</h3>
+<ul>
+<li><a href="https://weixin.qq.com/" target="_blank" rel="noopener noreferrer"><strong>微信</strong><ExternalLinkIcon/></a>  ：这就不用说了，大家都或多或少要用到。</li>
+</ul>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly91cGxvYWQtaW1hZ2VzLmppYW5zaHUuaW8vdXBsb2FkX2ltYWdlcy85NzQ3MzUwLTI4NjY1NmM0N2ZmYWFjMTYucG5n?x-oss-process=image/format,png" alt="img" loading="lazy"></p>
+<ul>
+<li><a href="https://tim.qq.com/" target="_blank" rel="noopener noreferrer"><strong>Tim</strong><ExternalLinkIcon/></a>  ：QQ 办公版，告别花里胡哨的东西，专注于办公。</li>
+</ul>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly91cGxvYWQtaW1hZ2VzLmppYW5zaHUuaW8vdXBsb2FkX2ltYWdlcy85NzQ3MzUwLTg4MjRlMmM5YTg5MTA5MTEucG5n?x-oss-process=image/format,png" alt="img" loading="lazy"></p>
+<ul>
+<li><a href="https://www.google.cn/intl/zh-CN/chrome/" target="_blank" rel="noopener noreferrer"><strong>Chrome</strong><ExternalLinkIcon/></a>：谷歌旗下浏览器，也是目前世界上份额最大的。你可能说用不了 Google，但通过一番设置调教之后，它仍会是最强大的浏览器。</li>
+</ul>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly91cGxvYWQtaW1hZ2VzLmppYW5zaHUuaW8vdXBsb2FkX2ltYWdlcy85NzQ3MzUwLTZmZmJkYzMyZTAxYzM5Y2EucG5n?x-oss-process=image/format,png" alt="img" loading="lazy"></p>
+<ul>
+<li><a href="https://www.microsoft.com/en-us/edge" target="_blank" rel="noopener noreferrer">新版 Edge<ExternalLinkIcon/></a>：最终巨硬还是屈服了，换用 Chromium 内核的 Edge 能否与 Chrome 一战呢？我觉得有戏！</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/cunyu1943/image-hosting-for-blog/blog/image-edge.png" alt="img" loading="lazy"></p>
+<h3 id="文字编辑" tabindex="-1"> 文字编辑</h3>
+<ul>
+<li><a href="https://www.typora.io/" target="_blank" rel="noopener noreferrer"><strong>Typora</strong><ExternalLinkIcon/></a>：跨平台 Markdown 编辑器，个人觉得比许多收费的都好用。</li>
+</ul>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly91cGxvYWQtaW1hZ2VzLmppYW5zaHUuaW8vdXBsb2FkX2ltYWdlcy85NzQ3MzUwLTViNzNiYWE4MjZmMjRjNTkucG5n?x-oss-process=image/format,png" alt="img" loading="lazy"></p>
+<ul>
+<li><a href="https://marktext.app/" target="_blank" rel="noopener noreferrer"><strong>Mark Text</strong><ExternalLinkIcon/></a>：开源跨平台 Markdown 编辑器，最大的特色就是支持斗图！！！</li>
+</ul>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly91cGxvYWQtaW1hZ2VzLmppYW5zaHUuaW8vdXBsb2FkX2ltYWdlcy85NzQ3MzUwLTdlNWQzZTI4OGY0NTJhOWIucG5n?x-oss-process=image/format,png" alt="img" loading="lazy"></p>
+<ul>
+<li><a href="https://molunerfinn.com/PicGo/" target="_blank" rel="noopener noreferrer"><strong>PicGo</strong><ExternalLinkIcon/></a>：搭配前两者使用的图片上传工具，通过搭建自己的图床，实现对图片的管理。</li>
+</ul>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly91cGxvYWQtaW1hZ2VzLmppYW5zaHUuaW8vdXBsb2FkX2ltYWdlcy85NzQ3MzUwLWZmOGExNDFiOTdkMmU4YzQucG5n?x-oss-process=image/format,png" alt="img" loading="lazy"></p>
+<h3 id="代码编辑器" tabindex="-1"> 代码编辑器</h3>
+<ul>
+<li><a href="https://code.visualstudio.com/" target="_blank" rel="noopener noreferrer"><strong>VS Code</strong><ExternalLinkIcon/></a>：巨硬出品，实现弯道超车，成为目前大多程序员的第一选择。</li>
+</ul>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly91cGxvYWQtaW1hZ2VzLmppYW5zaHUuaW8vdXBsb2FkX2ltYWdlcy85NzQ3MzUwLTMyNDhjN2ExYjdjZGUxMWMucG5n?x-oss-process=image/format,png" alt="img" loading="lazy"></p>
+<ul>
+<li><a href="https://atom.io/" target="_blank" rel="noopener noreferrer"><strong>Atom</strong><ExternalLinkIcon/></a>：Github 出品，不过现在 Github 已经被巨硬收购，所以也能叫巨硬出品了，哈哈。</li>
+</ul>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly91cGxvYWQtaW1hZ2VzLmppYW5zaHUuaW8vdXBsb2FkX2ltYWdlcy85NzQ3MzUwLTFiNzdjNDAzMzU4ODNlMDUucG5n?x-oss-process=image/format,png" alt="img" loading="lazy"></p>
+<ul>
+<li><a href="https://www.sublimetext.com/" target="_blank" rel="noopener noreferrer"><strong>Sublime Text</strong><ExternalLinkIcon/></a>：颜值较高的一款编辑器。</li>
+</ul>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly91cGxvYWQtaW1hZ2VzLmppYW5zaHUuaW8vdXBsb2FkX2ltYWdlcy85NzQ3MzUwLWM1MWY5ZWFhMzRjMTJhNDkucG5n?x-oss-process=image/format,png" alt="img" loading="lazy"></p>
+<ul>
+<li><a href="https://notepad-plus-plus.org/downloads/" target="_blank" rel="noopener noreferrer"><strong>Notepad++</strong><ExternalLinkIcon/></a>：湾湾公司的一款产品，自己作死，涉足政治立场，现在有点凉。</li>
+</ul>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly91cGxvYWQtaW1hZ2VzLmppYW5zaHUuaW8vdXBsb2FkX2ltYWdlcy85NzQ3MzUwLTExYzlkOWExNWI1OTk5NGIucG5n?x-oss-process=image/format,png" alt="img" loading="lazy"></p>
+<h3 id="软件卸载" tabindex="-1"> 软件卸载</h3>
+<ul>
+<li><a href="https://www.iobit.com/en/index.php?s" target="_blank" rel="noopener noreferrer"><strong>IObit</strong><ExternalLinkIcon/></a>：个人比较推荐的一款软件卸载工具，自动去除依赖，还能实时监控软件。</li>
+</ul>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly91cGxvYWQtaW1hZ2VzLmppYW5zaHUuaW8vdXBsb2FkX2ltYWdlcy85NzQ3MzUwLWMyZTc5MjBhZjFiYzBhZmYucG5n?x-oss-process=image/format,png" alt="img" loading="lazy"></p>
+<h3 id="下载工具" tabindex="-1"> 下载工具</h3>
+<ul>
+<li><a href="https://motrix.app/zh-CN/" target="_blank" rel="noopener noreferrer"><strong>Motrix</strong><ExternalLinkIcon/></a>：开源下载工具，颜值与实用共存，去你的某雷。</li>
+</ul>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly91cGxvYWQtaW1hZ2VzLmppYW5zaHUuaW8vdXBsb2FkX2ltYWdlcy85NzQ3MzUwLWJkYmIzOTc2ZjZiOTIxNTIucG5n?x-oss-process=image/format,png" alt="img" loading="lazy"></p>
+<ul>
+<li><a href="https://www.internetdownloadmanager.com/" target="_blank" rel="noopener noreferrer"><strong>IDM</strong><ExternalLinkIcon/></a>：多线程下载工具，搭配 Chrome，简直不要太爽！</li>
+</ul>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly91cGxvYWQtaW1hZ2VzLmppYW5zaHUuaW8vdXBsb2FkX2ltYWdlcy85NzQ3MzUwLTY2MTI2NzVmYzY1Yzg1YTEucG5n?x-oss-process=image/format,png" alt="img" loading="lazy"></p>
+<ul>
+<li><a href="https://xdown.org/" target="_blank" rel="noopener noreferrer"><strong>Xdown</strong><ExternalLinkIcon/></a>：相当于 IDM 的一个免费版本吧，搭配插件，可以下载百度云分享资源哦！
+<img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly91cGxvYWQtaW1hZ2VzLmppYW5zaHUuaW8vdXBsb2FkX2ltYWdlcy85NzQ3MzUwLWM2YjFkNWQ0Mzk4Y2Y0MmEucG5n?x-oss-process=image/format,png" alt="img" loading="lazy"></li>
+</ul>
+<h2 id="日常使用小技巧" tabindex="-1"> 日常使用小技巧</h2>
+<h3 id="常用系统操作快捷键" tabindex="-1"> 常用系统操作快捷键</h3>
+<table>
+<thead>
+<tr>
+<th>快捷键</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Alt + Tab</strong></td>
+<td>应用切换</td>
+</tr>
+<tr>
+<td><strong>Win + Tab</strong></td>
+<td>桌面切换</td>
+</tr>
+<tr>
+<td><strong>CapsLock</strong></td>
+<td>切换大小写</td>
+</tr>
+<tr>
+<td><strong>Ctrl + Shift</strong></td>
+<td>输入法切换</td>
+</tr>
+<tr>
+<td><strong>Ctrl + Shift + Esc</strong></td>
+<td>任务管理器</td>
+</tr>
+<tr>
+<td><strong>Win + Space</strong></td>
+<td>输入法切换</td>
+</tr>
+<tr>
+<td><strong>Win + 数字键</strong></td>
+<td>切换任务栏中的对应应用</td>
+</tr>
+<tr>
+<td><strong>Win + 上/下/左/右</strong></td>
+<td>当前窗口最大化/最小化/居左/居右</td>
+</tr>
+<tr>
+<td><strong>Win + R</strong></td>
+<td>打开运行</td>
+</tr>
+<tr>
+<td><strong>Win + E</strong></td>
+<td>打开资源管理器</td>
+</tr>
+<tr>
+<td><strong>Win + D</strong></td>
+<td>显示桌面</td>
+</tr>
+<tr>
+<td><strong>Win + M</strong></td>
+<td>最小化所有窗口</td>
+</tr>
+<tr>
+<td><strong>Win + G</strong></td>
+<td>游戏录制</td>
+</tr>
+<tr>
+<td><strong>Win + A</strong></td>
+<td>打开通知</td>
+</tr>
+<tr>
+<td><strong>Win + I</strong></td>
+<td>打开 Windows 设置</td>
+</tr>
+<tr>
+<td><strong>Win + X</strong></td>
+<td>显示系统选项</td>
+</tr>
+<tr>
+<td><strong>Win + V</strong></td>
+<td>Windows 10 自带剪切板</td>
+</tr>
+<tr>
+<td><strong>Win + P</strong></td>
+<td>投影设置</td>
+</tr>
+<tr>
+<td><strong>Win + L</strong></td>
+<td>锁屏</td>
+</tr>
+<tr>
+<td><strong>Win + Q/S</strong></td>
+<td>快速打开 Cortans 搜索框</td>
+</tr>
+<tr>
+<td><strong>Win + W</strong></td>
+<td>白板</td>
+</tr>
+<tr>
+<td><strong>Win + .</strong></td>
+<td>打开 Emoji 面板</td>
+</tr>
+</tbody>
+</table>
+<h3 id="文件文档处理快捷键" tabindex="-1"> 文件文档处理快捷键</h3>
+<p>对我们而言，用电脑平时接触最多的就是文件文档处理工作，牢记如下这些快捷方式，能大大提高你的工作效率，早点下班回家不香么？</p>
+<table>
+<thead>
+<tr>
+<th>快捷键</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Ctrl + C</strong></td>
+<td>复制</td>
+</tr>
+<tr>
+<td><strong>Ctrl + X</strong></td>
+<td>剪切</td>
+</tr>
+<tr>
+<td><strong>Ctrl + V</strong></td>
+<td>粘贴</td>
+</tr>
+<tr>
+<td><strong>Ctrl + A</strong></td>
+<td>全选</td>
+</tr>
+<tr>
+<td><strong>Ctrl + F</strong></td>
+<td>查找</td>
+</tr>
+<tr>
+<td><strong>Ctrl + Z</strong></td>
+<td>撤销操作</td>
+</tr>
+<tr>
+<td><strong>Ctrl + Y</strong></td>
+<td>还原操作</td>
+</tr>
+<tr>
+<td><strong>Ctrl + N</strong></td>
+<td>新建文件</td>
+</tr>
+<tr>
+<td><strong>Ctrl + O</strong></td>
+<td>打开“打开文件”对话框</td>
+</tr>
+<tr>
+<td><strong>Ctrl + B</strong></td>
+<td>加粗</td>
+</tr>
+<tr>
+<td><strong>Ctrl + I</strong></td>
+<td>斜体</td>
+</tr>
+<tr>
+<td><strong>Ctrl + U</strong></td>
+<td>下划线</td>
+</tr>
+<tr>
+<td><strong>Ctrl + E</strong></td>
+<td>当前行居中</td>
+</tr>
+<tr>
+<td><strong>Ctrl + P</strong></td>
+<td>打印</td>
+</tr>
+<tr>
+<td><strong>Ctrl + Shift + N</strong></td>
+<td>新建文件夹</td>
+</tr>
+</tbody>
+</table>
+<h3 id="截图" tabindex="-1"> 截图</h3>
+<p>想必大家都习惯了登上 QQ 或者微信来截图，但如果我们没网的时候咋整？你可能会说，我提前下个截图软件不就好了！嗯哼，这不失为一种解决方案，但 Windows 自带的截图工具已经十分强大，大家完全可以不用借助其他工具辅助；</p>
+<table>
+<thead>
+<tr>
+<th>快捷键</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Win + Shift + S</strong></td>
+<td>框选截屏，复制到粘贴板</td>
+</tr>
+<tr>
+<td><strong>PrintScreen</strong></td>
+<td>默认全屏截图，复制到粘贴板，<strong>不会提醒</strong></td>
+</tr>
+<tr>
+<td><strong>Win + PrintScreen</strong></td>
+<td>当前全屏截图保存到 “库 - 图片 - 屏幕截图”</td>
+</tr>
+<tr>
+<td><strong>Alt + PrintScreen</strong></td>
+<td>默认将当前窗口截屏复制到粘贴板，<strong>不会提醒</strong></td>
+</tr>
+</tbody>
+</table>
+<h2 id="总结" tabindex="-1"> 总结</h2>
+<p>以上就是 Windows 使用过程中的一些小技巧了，如果你有更多好玩又好用的技巧而我又没有提到的，欢迎留言交流呀！</p>
+]]></content:encoded>
+      <enclosure url="https://cdn.jsdelivr.net/gh/cunyu1943/image-hosting-for-blog/blog/image-winver.png" type="image/png"/>
+    </item>
+    <item>
+      <title>Windows 教程：Node.js 安装教程</title>
+      <link>https://cunyu1943.github.io/JavaPark/JavaPark/efficiency/windows/nodejs-install.html</link>
+      <guid>https://cunyu1943.github.io/JavaPark/JavaPark/efficiency/windows/nodejs-install.html</guid>
+      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">Windows 教程：Node.js 安装教程</source>
+      <category>工具教程</category>
+      <pubDate>Mon, 03 Jan 2022 22:01:31 GMT</pubDate>
+      <content:encoded><![CDATA[<h2 id="前言" tabindex="-1"> 前言</h2>
+<p>本教程所有操作基于<code>Window 10</code>操作系统 + <code>Node.js v12.16.1-x64</code>，原则上适用于所有<code>Windows</code>操作系统，细节不同请根据自己需要自行判断。</p>
+<h2 id="下载" tabindex="-1"> 下载</h2>
+<p>要安装<code>Node.js</code>，首先需要去下载对应系统安装包，<a href="https://nodejs.org/zh-cn/download/" target="_blank" rel="noopener noreferrer">下载地址<ExternalLinkIcon/></a>；</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL2N1bnl1MTk0My9pbWFnZS1ob3N0aW5nLWZvci1ibG9nL2ltZ3NXaW4yMDIwMDQwODIxMDIxNy5wbmc?x-oss-process=image/format,png" alt="" loading="lazy"></p>
+<h2 id="安装" tabindex="-1"> 安装</h2>
+<ol>
+<li>
+<p>双击下载好的安装包；</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL2N1bnl1MTk0My9pbWFnZS1ob3N0aW5nLWZvci1ibG9nL2ltZ3NXaW4yMDIwMDQwODIxMDc0MC5wbmc?x-oss-process=image/format,png" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>直接下一步；</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly91cGxvYWQtaW1hZ2VzLmppYW5zaHUuaW8vdXBsb2FkX2ltYWdlcy85NzQ3MzUwLTZkMGQ4MTQ4MWY2MThlNjMucG5n?x-oss-process=image/format,png" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>勾选同意相关使用协议，同时下一步；</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly91cGxvYWQtaW1hZ2VzLmppYW5zaHUuaW8vdXBsb2FkX2ltYWdlcy85NzQ3MzUwLTAzNmVkZDcyODNiNTAxYzQucG5n?x-oss-process=image/format,png" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>修改成你要安装的路径（默认也可以），然后下一步；</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly91c2VyLWdvbGQtY2RuLnhpdHUuaW8vMjAyMC80LzgvMTcxNTllYmI1Njk1M2Y5Mw?x-oss-process=image/format,png" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>建议不作修改，直接下一步，当然你也可以对里边所需服务进行勾选；</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly91c2VyLWdvbGQtY2RuLnhpdHUuaW8vMjAyMC80LzgvMTcxNTllZDdkMjljYTg1Ng?x-oss-process=image/format,png" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>所需工具自己需要就勾选，不需要就直接下一步；</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly91c2VyLWdvbGQtY2RuLnhpdHUuaW8vMjAyMC80LzgvMTcxNTllZTEzMWE1MjUwNg?x-oss-process=image/format,png" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>直接安装，开始安装；</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly91c2VyLWdvbGQtY2RuLnhpdHUuaW8vMjAyMC80LzgvMTcxNTllZWQxNTllZmQ0Mg?x-oss-process=image/format,png" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>完成安装后，点击 Finish 完成安装；</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly91c2VyLWdvbGQtY2RuLnhpdHUuaW8vMjAyMC80LzgvMTcxNTlmMDU2OTdiMTUxNA?x-oss-process=image/format,png" alt="" loading="lazy"></p>
+</li>
+</ol>
+<h2 id="验证" tabindex="-1"> 验证</h2>
+<p>安装后，我们怎样知道自己是否安装成功呢？可以使用如下命令查看，若成功则会返回下图类似结果；</p>
+<div><pre><code><span>node</span> -v
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly91c2VyLWdvbGQtY2RuLnhpdHUuaW8vMjAyMC80LzgvMTcxNTlmMWJiNmQzYWNkZA?x-oss-process=image/format,png" alt="" loading="lazy"></p>
+<h2 id="环境变量配置" tabindex="-1"> 环境变量配置</h2>
+<p>默认情况下，我们利用 <code>npm</code> 包管理器用来安装依赖包时，包会默认存放在 <code>C:\Users\用户名\AppData\Roaming\npm\node_modules</code> 目录下，如果你不确定你的包存放路径在哪儿，那么可以通过如下命令来进行查看：</p>
+<div><pre><code><span>npm</span> root -g
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p>但这样就存在一个问题，如果我们的依赖包很多的情况下，就会占用我们系统盘大量的空间，这时候我们如果不想让全局包放在这里，那么就可以自定义存放目录。修改的方式也很简单，只需要在控制台中执行如下两条命令即可：</p>
+<div><pre><code><span>npm</span> config <span>set</span> prefix <span>"D:<span title="\n">\n</span>ode<span title="\n">\n</span>ode_global"</span>
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><div><pre><code><span>npm</span> config <span>set</span> cache <span>"D:<span title="\n">\n</span>ode<span title="\n">\n</span>ode_cache"</span>
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p>当然，我们也可以打开配置文件 <code>.npmrc</code>，然后修改如下两条记录：</p>
+<div><pre><code>prefix = D:\node\node_global
+cache = D:\node\node_cache
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br></div></div><p><img src="https://cdn.jsdelivr.net/gh/cunyu1943/blog-imgs@main//blog/image-20210913142636700.png" alt="" loading="lazy"></p>
+<h2 id="总结" tabindex="-1"> 总结</h2>
+<p>通过上述操作，我们就可以成功安装<code>Node.js</code>，接下来我们就可以使用 <code>npm</code> 等工具了，是不是很简单呢！</p>
+]]></content:encoded>
+      <enclosure url="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL2N1bnl1MTk0My9pbWFnZS1ob3N0aW5nLWZvci1ibG9nL2ltZ3NXaW4yMDIwMDQwODIxMDIxNy5wbmc?x-oss-process=image/format,png" type="image/"/>
+    </item>
+    <item>
+      <title>Windows 教程：Windows 中安装 PostgreSQL</title>
+      <link>https://cunyu1943.github.io/JavaPark/JavaPark/efficiency/windows/postgresql-install-on-windows.html</link>
+      <guid>https://cunyu1943.github.io/JavaPark/JavaPark/efficiency/windows/postgresql-install-on-windows.html</guid>
+      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">Windows 教程：Windows 中安装 PostgreSQL</source>
+      <category>工具教程</category>
+      <pubDate>Mon, 17 Jan 2022 20:46:42 GMT</pubDate>
+      <content:encoded><![CDATA[<h2 id="前言" tabindex="-1"> 前言</h2>
+<p>之前由于学习，所以选择的是受众范围较广的 MySQL。至于 MySQL，在这里就不用说了，想必大家都是很熟悉的。正式参加工作之后，才发现原来不同的公司选择的数据库都不一样，有的选择 Oracle，有的选择 MySQL，而有的则选择 PostgreSQL。Oracle 的确很厉害，不过始终是面向收费的，一般小体量的公司用起来成本太高，所以大家还是更倾向于 MySQL。关于 MySQL 的教程、知识分享博客有很多，而且大家写的也很详细，所以在这里就不在赘述了。我们今天就主要来聊聊另一款数据库 PostgreSQL，揭开他的神秘面纱，一探究竟。</p>
+<h2 id="postgresql-的安装" tabindex="-1"> PostgreSQL 的安装</h2>
+<h3 id="什么是-postgresql" tabindex="-1"> 什么是 PostgreSQL</h3>
+<p>它是一个免费的对象-关系数据库服务器(ORDBMS)，它自称是 &quot;世界上最先进的开源关系型数据库&quot;，那么它是否有它所自称的那么强大呢，下面我们就先来看看如何安装它。</p>
+<h3 id="准备工作" tabindex="-1"> 准备工作</h3>
+<p>经过上面的介绍之后，现在我们就来看看如何安装 PostgreSQL。</p>
+<p>在正式安装过程之前，我们先需要准备好安装包，这里我主要是以 Windows 平台为例，理论上来讲普遍适用于全系 Windows 系统。</p>
+<p>那么我们首先要做的就是去 PostgreSQL 官网：https://www.postgresql.org/ 去下载最新版本 PostgreSQL 安装包。</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/04d451920a17d9859e053f1b07cbb41f.png" alt="" loading="lazy"></p>
+<p>然后选择对应平台进入下载安装包，这里提供 <code>.exe</code> 的安装包，也支持下载 <code>.zip</code> 的压缩包形式解压缩安装，这里根据自己的喜好进行下载即可，下边我主要以 <code>.exe</code> 形式的安装包安装为例。</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/6cfef34c322df4d1fa527b782a39c5ea.png" alt="" loading="lazy"></p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/de5c00f96e55e78b53aa06395f2f8f83.png" alt="" loading="lazy"></p>
+<h3 id="安装过程" tabindex="-1"> 安装过程</h3>
+<p>准备工作好了之后，接下来就是正式安装过程了。</p>
+<ol>
+<li>双击我们下载好的安装包之后，进入安装界面，首先是一个欢迎界面，直接 <code>Next</code> 下一步即可；</li>
+</ol>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/d25464db8f1ccad9d4fe193df1657553.png" alt="" loading="lazy"></p>
+<ol start="2">
+<li>然后是选择安装路径，这里默认是在 <code>C:\Program Files\PostgreSQL\13</code> 下，不过我们一般推荐安装到自己平常安装软件的地方，不要直接安装在 C 盘；</li>
+</ol>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/ccde635d53ecde5db61fbd8b4770a6e3.png" alt="" loading="lazy"></p>
+<ol start="3">
+<li>选择所要安装的组件，这里默认是全部安装，如果你们有特殊的要求，那就默认直接点击 <code>Next</code> 下一步即可；</li>
+</ol>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/972c4ada250cbcb1ae11fc64d67d1ea8.png" alt="" loading="lazy"></p>
+<ol start="4">
+<li>选择数据数据存放的地方，这里默认实在安装路径下的 <code>data</code> 子目录下，如果你之前在第 2 步中自定义了安装路径，那么这里直接选择 <code>Next</code> 下一步即可；</li>
+</ol>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/14acea39ce07988b9c47b9dd72ec796a.png" alt="" loading="lazy"></p>
+<ol start="5">
+<li>设置密码，也就是待会儿我们安装结束后登陆时所需的密码，这里自己设置即可（<strong>一定要记住！</strong>）；</li>
+</ol>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/d8f597a48d75ac8679a19ede476345cb.png" alt="" loading="lazy"></p>
+<ol start="6">
+<li>端口设置，PostgreSQL 默认端口是 5432，如果你不想使用默认端口，可以自定义想要使用的端口，这里如果改动了也要记住，确保不要和其他服务冲突；</li>
+</ol>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/6e15b68a9641a7a44be4108e9e81b3c9.png" alt="" loading="lazy"></p>
+<ol start="7">
+<li>其实就是时区选择，这里直接默认点击 <code>Next</code> 下一步即可；</li>
+</ol>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/88596c55247c9a327fdf825629a05bfa.png" alt="" loading="lazy"></p>
+<ol start="8">
+<li>然后是确认信息，确保我们已经准备好了要开始 PostgreSQL 的安装，直接点击 <code>Next</code> 下一步即可；</li>
+</ol>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/15781307661c1c8e0626ef0dc5730a37.png" alt="" loading="lazy"></p>
+<ol start="9">
+<li>接下来就是相对漫长的安装过程了，这里等待即可；</li>
+</ol>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/3bd19984a627c03b15ce27a86af8e59a.png" alt="" loading="lazy"></p>
+<ol start="10">
+<li>好了，显示此界面就说明我们的安装过程结束了，点击 <code>Finish</code> 完成安装即可。</li>
+</ol>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/294881a19a526faee6a12ba990576f0b.png" alt="" loading="lazy"></p>
+<h3 id="验证" tabindex="-1"> 验证</h3>
+<p>既然我们的 PostgreSQL 安装好了，那么接下来就是看看如何使用它了。</p>
+<p>去我们的程序列表中找到 <code>SQL Shell(psql)</code>，也就是下图中的程序打开（这里我因为安装了快捷搜索软件，所以你查找的界面会和我不一样，但是软件是一个）。</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/27b5edf246d19c84dd8e028bb69a5c9b.png" alt="" loading="lazy"></p>
+<p>然后就是登陆过程了，首先是 <code>Server</code>，也就是说数据库 url，默认是在本地（所以是 <code>localhost</code>），没有该动的就直接回车下一步好了。</p>
+<p>接着是 <code>Database</code>，也即我们数据库，这里默认是使用 <code>postgres</code>，因为我们是第一次登陆，所以这里也就直接回车下一步就好了。</p>
+<p>再接着是 <code>Port</code>，也就是端口号，默认是 5432，如果你安装的时候改动了，那么此时你最好也改成你当时改的端口，否则可能导致连接失败。</p>
+<p>然后是 <code>Username</code>，也就是 PostgreSQL 的用户，这里一般默认是超级用户（<code>postgres</code>，这里不同于 MySQL 的 <code>root</code>，要注意），而我们也是第一次登陆，没有建立新账户，直接默认回车下一步即可。</p>
+<p>最后要输入的则是口令，也就是登陆数据库的密码，这里我们已经在上边设置过了，直接输入后回车即可。</p>
+<p>如果我们登陆成功，那么就会出现下面图中的提示了。</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/07af7f2c11fe8ca624cc72b198e3aefe.png" alt="" loading="lazy"></p>
+<h2 id="总结" tabindex="-1"> 总结</h2>
+<p>OK，今天的文章到此就结束了，主要介绍了如何在 Windows 中安装 PostgreSQL，以及 PostgreSQL 的一些简介和如何验证安装是否成功。</p>
+<p>原创不易，如果你觉得本文对你有所帮助，那就来个点赞关注吧。</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/e3a6fc62c2fa20c6b40d63dc60c062ae.gif" alt="" loading="lazy"></p>
+]]></content:encoded>
+      <enclosure url="https://img-blog.csdnimg.cn/img_convert/04d451920a17d9859e053f1b07cbb41f.png" type="image/png"/>
+    </item>
+    <item>
+      <title>Windows 教程：手把手安装 Windows 系统</title>
+      <link>https://cunyu1943.github.io/JavaPark/JavaPark/efficiency/windows/windows-install.html</link>
+      <guid>https://cunyu1943.github.io/JavaPark/JavaPark/efficiency/windows/windows-install.html</guid>
+      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">Windows 教程：手把手安装 Windows 系统</source>
+      <category>工具教程</category>
+      <pubDate>Sun, 16 Jan 2022 21:41:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h2 id="前言" tabindex="-1"> 前言</h2>
+<p>最近女朋友由于工作原因，一直缠着我教她装系统（连系统都不会装，大（la）佬（ji））。</p>
+<p><img src="http://ww4.sinaimg.cn/bmiddle/6af89bc8gw1f8ub3qow2tj203902gq2x.jpg" alt="img" loading="lazy"></p>
+<p>嘘！！！小声 BB，别让她听见了，🤣🤣🤣。那没有办法呀，女朋友的话，你敢不听么，🤪🤪🤪。</p>
+<p><img src="http://wx2.sinaimg.cn/bmiddle/006ARE9vgy1g0l9xfzkspj305i05iwee.jpg" alt="img" loading="lazy"></p>
+<p>于是就有了<a href="https://mp.weixin.qq.com/s?__biz=MzIyNTg2MjkzNw==&amp;mid=2247492186&amp;idx=1&amp;sn=f5f51614b6d7de666f90aa7e4484f6d8&amp;chksm=e87b962cdf0c1f3ae0889f530e7b8a6f95188f54eeb1d1773bed7c7568d0b302c4c58b6f885d&amp;token=2004299281&amp;lang=zh_CN#rd" target="_blank" rel="noopener noreferrer">昨天那篇<ExternalLinkIcon/></a>和这篇文章，手把手教她如何安装 Windows 系统。也可以扔给你的女朋友看看，我不介意的哈 😏😏😏。</p>
+<p><img src="http://ww3.sinaimg.cn/bmiddle/9150e4e5ly1fjrjdswoy3j205i04t0sm.jpg" alt="img" loading="lazy"></p>
+<p>接下来就是正文部分了，各位看官准备好，那么开始之前，我们先来看看一些基本常识，备好小板凳和瓜子！</p>
+<p><img src="http://ww2.sinaimg.cn/bmiddle/6af89bc8gw1f8q2grytifg204g02s746.gif" alt="img" loading="lazy"></p>
+<h3 id="什么是-bios" tabindex="-1"> 什么是 BIOS？</h3>
+<p>BIOS 是英文 &quot;Basic Input Output System&quot; 的缩略词，直译过来后中文名称就是&quot;基本输入输出系统&quot;。<strong>其实，它是一组固化到计算机内主板上一个 ROM 芯片上的程序</strong>，它保存着计算机最重要的基本输入输出的程序、开机后自检程序和系统自启动程序，它可从 CMOS 中读写系统设置的具体信息。其主要功能是为计算机提供最底层的、最直接的硬件设置和控制。此外，BIOS 还向作业系统提供一些系统参数。系统硬件的变化是由 BIOS 隐藏，程序使用 BIOS 功能而不是直接控制硬件。</p>
+<p>上面来自百度百科，说白了我们了解这些基本没啥用，我们只想知道装系统为啥要涉及到 BIOS。这么说吧，BIOS 就是能够让我们正常打开电脑工作的重要工具。这么一说就明白了吧。</p>
+<p><img src="http://ww1.sinaimg.cn/bmiddle/006APoFYjw1fblffn0cupj305k05k74o.jpg" alt="img" loading="lazy"></p>
+<p>我们装系统，其实也不用改 BIOS 里边的其他设置，一般来讲只用 <strong>调整系统的启动介质的启动顺序。</strong> 一般正常的都是优先从硬盘启动，而我们要通过 U 盘安装，所以我们要做的只是：</p>
+<p>✅✅✅</p>
+<p><strong>将 U 盘启动项调整到最前面，让它作为启动介质的优先级最高。</strong></p>
+<p>要进入 BIOS 的方式一般来讲就是：<strong>开启电脑笔记本电源后，狂按 F2，然后一般就会听见 “哔” 的一声，这说明我们成功进入 BIOS 设置面板。</strong></p>
+<p><img src="http://ww2.sinaimg.cn/bmiddle/6af89bc8gw1f8q7weja5qg2028028gn4.gif" alt="img" loading="lazy"></p>
+<p>当然了，对于大多数电脑是 <strong>F2</strong>，但实际上不同电脑厂家对应有不同的启动键，而且就算同一家的笔记本和台式机也可能不同，所以具体启动键可以在 <strong>进入之前建议百度一下对应电脑的启动键</strong>，一般的电脑厂商对应的 BIOS 启动键如下（只是部分，如果不知道是那一个，可以去网上百度对应型号电脑的启动键，一般都能找到）：</p>
+<table>
+<thead>
+<tr>
+<th>电脑厂商</th>
+<th>启动键</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Lenovo</td>
+<td>F2</td>
+</tr>
+<tr>
+<td>Asus</td>
+<td>F2</td>
+</tr>
+<tr>
+<td>DELL</td>
+<td>F2</td>
+</tr>
+<tr>
+<td>HP</td>
+<td>F10</td>
+</tr>
+<tr>
+<td>Acer</td>
+<td>F2</td>
+</tr>
+</tbody>
+</table>
+<h3 id="mbr-vs-gpt" tabindex="-1"> MBR vs GPT</h3>
+<p>具体介绍就不展开了，如果想要进一步了解，推荐阅读：https://zhuanlan.zhihu.com/p/26098509。你只需要记住，现在的新电脑一般都是硬盘 GPT 模式，刻录 U 盘启动盘时选择 GPT 模式，一般是不会出错的。如果电脑稍微老一点的，选用 GTP 模式刻录后，安装会失败，此时选用 MBR 模式，一般就能解决这个问题。</p>
+<p><img src="http://ww4.sinaimg.cn/bmiddle/6af89bc8gw1f8nxp8dogvj20a006ojs2.jpg" alt="img" loading="lazy"></p>
+<h2 id="准备工作" tabindex="-1"> 准备工作</h2>
+<p>既然要装系统，那么首先你需要事先准备好如下的工具：</p>
+<ol>
+<li>
+<p><strong>一个 8G 及以上内存的 U 盘</strong></p>
+</li>
+<li>
+<p><strong>Windows 系统镜像</strong></p>
+</li>
+<li>
+<p><strong>刻录软件</strong></p>
+</li>
+</ol>
+<h3 id="_8g-内存的-u-盘" tabindex="-1"> 8G + 内存的 U 盘</h3>
+<p>要装系统，虽然可以直接直接下载到本地后解压安装，但是更推荐使用 U 盘安装，此时就需要准备一个最小内存为 8G 的 U 盘（现在 Windows 系统镜像大小一般都超过了 4G）。然后需要注意一点：</p>
+<p>⚠⚠⚠</p>
+<p><strong>一定要事先把 U 盘中的重要文件进行备份 ❗❗❗，因为刻录时会抹除 U 盘中原有内容。</strong></p>
+<h3 id="windows-系统镜像" tabindex="-1"> Windows 系统镜像</h3>
+<p>要装系统，下一个纯净的镜像是十分重要的，因为现在网上大多都是经过植入一定软件，就算到时候自己卸载，也很麻烦，而且也保证不了别人往里边注入了啥软件，安全性也未可知，所以此处 <strong>推荐在官方进行下载</strong>。但是官方下载很慢呀，所以此处推荐两个下载渠道：</p>
+<ol>
+<li><strong>MSDN</strong></li>
+</ol>
+<p><a href="https://next.itellyou.cn" target="_blank" rel="noopener noreferrer"><strong>https://next.itellyou.cn</strong><ExternalLinkIcon/></a></p>
+<p><img src="https://s1.ax1x.com/2020/09/04/wkpvfP.png" alt="img" loading="lazy"></p>
+<p>这是一个老牌的 Windows 系统下载的网站，上图是进行改版后的界面，如果你想要访问之前的老版本网站，请移步：https://msdn.itellyou.cn/. 新版本的 MSDN 中，不仅仅提供 Windows 系统的下载，还包括 Linux、MacOS 和  Chromium OS 等系统的下载，比之前所提供下载的系统更丰富了。比如我们选中 Windows 10 的 2004 版后，只要复制 BT 或 ED2K 到相关下载软件（一般是迅雷）中，添加新任务进行下载即可。</p>
+<p><img src="https://s1.ax1x.com/2020/09/04/wkCqPI.png" alt="img" loading="lazy"></p>
+<ol>
+<li><strong>TechBench</strong></li>
+</ol>
+<p><a href="https://tb.rg-adguard.net/public.php" target="_blank" rel="noopener noreferrer"><strong>https://tb.rg-adguard.net/public.php</strong><ExternalLinkIcon/></a></p>
+<p><img src="https://s1.ax1x.com/2020/09/04/wkSW28.png" alt="img" loading="lazy"></p>
+<p>如上图，如果你不想通过种子的方式进行下载，那这个方式一定适合你。它无需通过其他下载工具进行下载，只需要选中系统类型、版本、版、语言以及文件后，右侧就会出现一个下载按钮，然后点击下载按钮就会进行下载，十分方便，如下图中我以 Windows 10 2004 版简体中文的 64 位系统，选中后点击下载进行下载即可。</p>
+<p><img src="https://s1.ax1x.com/2020/09/04/wkp0J0.png" alt="img" loading="lazy"></p>
+<h3 id="刻录软件" tabindex="-1"> 刻录软件</h3>
+<p>这一部分其实昨天都已经说过了，鉴于有的读者可能不爱翻了，就在这儿再啰嗦几句。</p>
+<p><img src="http://ww4.sinaimg.cn/bmiddle/9150e4e5gy1fx4k45jg0wg207i07iagt.gif" alt="img" loading="lazy"></p>
+<p>网上有很多刻录软件，比如什么老毛桃、大白菜等等，但是这些刻录软件都有个毛病：客户端不仅大，而且刻录后安装好系统里边会植入某些软件（别问我咋知道，这是自己当初是小白时一一踩过的坑 😭😭😭），本来我们就想要纯净的，这就很烦了。所以在此推荐几个刻录软件：</p>
+<ol>
+<li><strong>Ventoy</strong></li>
+</ol>
+<p><a href="https://www.ventoy.net/cn/index.html" target="_blank" rel="noopener noreferrer"><strong>https://www.ventoy.net/cn/index.html</strong><ExternalLinkIcon/></a></p>
+<p>这是一个支持 Windows 和 Linux 双平台的刻录软件，<strong>不需要进行安装，打开即用</strong>。最大的特点就是：<strong>可以一次制作，多次使用，即支持多系统</strong>。我们只需要刻录一次，然后将我们的系统镜像拷到 U 盘中就行了（不管你的系统是 Windows 还是 Linux），具体使用可以参照我的另一篇文章 <a href="https://mp.weixin.qq.com/s?__biz=MzIyNTg2MjkzNw==&amp;mid=2247492186&amp;idx=1&amp;sn=f5f51614b6d7de666f90aa7e4484f6d8&amp;chksm=e87b962cdf0c1f3ae0889f530e7b8a6f95188f54eeb1d1773bed7c7568d0b302c4c58b6f885d&amp;token=2004299281&amp;lang=zh_CN#rd" target="_blank" rel="noopener noreferrer">如何一次制作多系统启动盘<ExternalLinkIcon/></a>。</p>
+<ol>
+<li><strong>Refus</strong></li>
+</ol>
+<p><a href="https://rufus.ie/" target="_blank" rel="noopener noreferrer"><strong>https://rufus.ie/</strong><ExternalLinkIcon/></a></p>
+<p>这是一个 Windows 下小巧而强大的刻录软件，如果 <strong>只是需要刻录某一个系统的启动盘，可以优先考虑这个软件，</strong> 具体使用过程请参见 <a href="https://mp.weixin.qq.com/s?__biz=MzIyNTg2MjkzNw==&amp;mid=2247492186&amp;idx=1&amp;sn=f5f51614b6d7de666f90aa7e4484f6d8&amp;chksm=e87b962cdf0c1f3ae0889f530e7b8a6f95188f54eeb1d1773bed7c7568d0b302c4c58b6f885d&amp;token=2004299281&amp;lang=zh_CN#rd" target="_blank" rel="noopener noreferrer">制作 U 盘启动盘的两种方式<ExternalLinkIcon/></a></p>
+<ol>
+<li><strong>UltraISO</strong></li>
+</ol>
+<p><a href="https://cn.ultraiso.net/" target="_blank" rel="noopener noreferrer"><strong>https://cn.ultraiso.net/</strong><ExternalLinkIcon/></a></p>
+<p>UltraISO 软碟通是一款功能强大、方便实用、老牌优秀的光盘映像文件制作/编辑/转换工具。不仅可以直接编辑 ISO 文件，从 ISO 中提取文件和目录；也可以从 CD - ROM 制作光盘映像或者将硬盘上的文件制作成 ISO 文件；同时还可以处理 ISO 文件的启动信息，从而制作可引导光盘。使用 UltraISO，你可以随心所欲地制作/编辑/转换光盘映像文件。但是有个问题就是：<strong>虽然 UltraISO 可以免费用，但是是有广告的，如果你比较烦广告，那你就得花钱购买。</strong> 具体使用教程请参见 <a href="https://mp.weixin.qq.com/s?__biz=MzIyNTg2MjkzNw==&amp;mid=2247492186&amp;idx=1&amp;sn=f5f51614b6d7de666f90aa7e4484f6d8&amp;chksm=e87b962cdf0c1f3ae0889f530e7b8a6f95188f54eeb1d1773bed7c7568d0b302c4c58b6f885d&amp;token=2004299281&amp;lang=zh_CN#rd" target="_blank" rel="noopener noreferrer">制作 U 盘启动盘的两种方式<ExternalLinkIcon/></a>。</p>
+<h2 id="安装过程" tabindex="-1"> 安装过程</h2>
+<p>经过上面的准备过程之后，我们整理下现在手里的资源。不出意外地话，你应该已经手拿一个刻录好的系统启动盘（即刻录进系统镜像的 U 盘）。看吧，搞了半天，最后需要的就是这个玩意儿，是不是很简单 🤣🤣🤣。那接下来，我们就来开始安装过程吧。</p>
+<p><img src="http://ww1.sinaimg.cn/bmiddle/006r3PQBjw1fabl4k0h27j309q09q3yk.jpg" alt="img" loading="lazy"></p>
+<h3 id="设置-bios-启动顺序" tabindex="-1"> 设置 BIOS 启动顺序</h3>
+<p>进入 BIOS 之后，一般是在 BOOT 选项下，将 U 盘的启动顺序调整到最前边（就是图中的 USB HDD 调到第 1 位），然后按 F10 保存退出即可。一般这个时候重启后就会进入 U 盘启动盘中，接下来就是具体的系统安装设置了。</p>
+<p><img src="https://s1.ax1x.com/2020/09/23/wjfWI1.png" alt="img" loading="lazy"></p>
+<h3 id="系统安装设置过程" tabindex="-1"> 系统安装设置过程</h3>
+<ol>
+<li>设置好 BIOS 启动顺序之后，保存重启等一会儿会自动进入如下主安装界面，根据自己的喜好选择语言，时间格式和键盘输入方式后，点击 <strong>下一步</strong>；</li>
+</ol>
+<p><img src="https://s1.ax1x.com/2020/09/23/wjRUyQ.png" alt="img" loading="lazy"></p>
+<ol>
+<li>接着点击现在安装；</li>
+</ol>
+<p><img src="https://s1.ax1x.com/2020/09/23/wjRcSU.png" alt="img" loading="lazy"></p>
+<ol>
+<li>接着会让你输入产品秘钥，如果有的话，直接输入后下一步即可，没有的话，直接点击我没有产品秘钥即可；</li>
+</ol>
+<p><img src="https://s1.ax1x.com/2020/09/23/wjRTfK.png" alt="img" loading="lazy"></p>
+<ol>
+<li>接着选择自己要安装的版本，然后点击下一步即可（一般 <strong>推荐选择专业版</strong>）；</li>
+</ol>
+<p><img src="https://s1.ax1x.com/2020/09/23/wjRq6e.png" alt="img" loading="lazy"></p>
+<ol>
+<li>接着勾选许可条款，继续下一步；</li>
+</ol>
+<p><img src="https://s1.ax1x.com/2020/09/23/wjWV7n.png" alt="img" loading="lazy"></p>
+<ol>
+<li>选择自定义：仅安装 Windows；</li>
+</ol>
+<p><img src="https://s1.ax1x.com/2020/09/23/wjW8B9.png" alt="img" loading="lazy"></p>
+<ol>
+<li>接着选择你要安装系统的硬盘，接着下一步，<strong>注意一定要选中你要安装系统的盘，否则可能把其他盘的数据也给搞掉，而且你也可以自己分区！！！</strong>；</li>
+</ol>
+<p><img src="https://s1.ax1x.com/2020/09/23/wjWrBd.png" alt="img" loading="lazy"></p>
+<ol>
+<li>好了，到此系统正式安装开始了，等他装完，<strong>拔掉 U 盘重启即可</strong>；</li>
+</ol>
+<p><img src="https://s1.ax1x.com/2020/09/23/wjWIBj.png" alt="img" loading="lazy"></p>
+<p><img src="https://s1.ax1x.com/2020/09/23/wjW7En.png" alt="img" loading="lazy"></p>
+<ol>
+<li>重启之后就是 Windows 的一些初始化设置，一般是时区、用户、密码、输入方式等设置，这个没啥好讲了，根据自己的喜好进行选择即可；</li>
+</ol>
+<p><img src="https://s1.ax1x.com/2020/09/23/wjfJKg.png" alt="img" loading="lazy"></p>
+<p><img src="https://s1.ax1x.com/2020/09/23/wjfUVs.png" alt="img" loading="lazy"></p>
+<h2 id="总结" tabindex="-1"> 总结</h2>
+<p>好了，看到这儿，那你就应该能够完整的安装好一个系统了，赶快去试试吧。</p>
+<p>PS：一开始可能会遇到不同的小问题，但是不要慌，电脑一般装个系统是不会坏的，我当初也是一遍遍尝试，最后才安装成功。如果实在是觉得搞不定，你也可以关注我的公众号或者添加我的私人微信，加入我的交流群，大家一起交流哦！！！</p>
+<p>🤪🤪🤪，完了完了，女朋友发现我发的文章了，我得溜了。</p>
+<p><img src="http://ww4.sinaimg.cn/bmiddle/006BkP2Hjw1fazqzh4xf9j30b40b4gly.jpg" alt="" loading="lazy"></p>
+]]></content:encoded>
+      <enclosure url="http://ww4.sinaimg.cn/bmiddle/6af89bc8gw1f8ub3qow2tj203902gq2x.jpg" type="image/jpeg"/>
+    </item>
     <item>
       <title>SE 实训营：MySQL + MyBatis 版学生成绩管理系统</title>
       <link>https://cunyu1943.github.io/JavaPark/JavaPark/practical-training-camp/java-se-in-action/mysql-mybatis-score-management.html</link>
