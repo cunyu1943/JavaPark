@@ -6,14 +6,14 @@
     <link>https://cunyu1943.github.io/JavaPark/JavaPark/</link>
     <description>Java 自学编程之路</description>
     <language>zh-CN</language>
-    <pubDate>Wed, 20 Apr 2022 15:01:25 GMT</pubDate>
-    <lastBuildDate>Wed, 20 Apr 2022 15:01:25 GMT</lastBuildDate>
+    <pubDate>Thu, 21 Apr 2022 04:02:21 GMT</pubDate>
+    <lastBuildDate>Thu, 21 Apr 2022 04:02:21 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+    <category>JavaScript 教程</category>
     <category>福利</category>
     <category>工具教程</category>
     <category>Java 实战</category>
-    <category>JavaScript 教程</category>
     <category>IDEA 教程</category>
     <category>MyBatis 专栏</category>
     <category>MyBatis Plus 指南</category>
@@ -26,6 +26,160 @@
     <category>博客搭建</category>
     <category>Java 菜鸟入门</category>
     <category>Spring Boot 基础教程</category>
+    <item>
+      <title>JS 教程「7」：函数</title>
+      <link>https://cunyu1943.github.io/JavaPark/JavaPark/java/java-web/js/function.html</link>
+      <guid>https://cunyu1943.github.io/JavaPark/JavaPark/java/java-web/js/function.html</guid>
+      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">JS 教程「7」：函数</source>
+      <category>JavaScript 教程</category>
+      <pubDate>Thu, 21 Apr 2022 11:55:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h2 id="函数简介" tabindex="-1"> 函数简介</h2>
+<p>编程时，可能会定义许多相同或者功能相似的代码，此时我们每需要使用一次，就需要重写编写一次。虽然利用循环结构也能够实现一些简单的重复操作，但是功能较为局限。此时，我们就需要使用到 JavaScript 中的函数。</p>
+<p>所谓函数，就是通过将一段可以重复调用的代码块进行封装，从而实现代码的重复利用。</p>
+<h2 id="函数使用" tabindex="-1"> 函数使用</h2>
+<p>了解了函数是个啥，接下来就来看看如何使用函数。</p>
+<p>函数使用，主要可以分为两步：<strong>声明函数</strong>和<strong>调用函数</strong>。</p>
+<ul>
+<li><strong>函数声明</strong></li>
+</ul>
+<p>函数声明，也就是说明函数用来干啥的，其语法结构如下：</p>
+<div><pre><code><span>function</span> <span>函数名</span><span>(</span><span>)</span><span>{</span>
+    <span>// 函数体</span>
+<span>}</span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br></div></div><p>其中 <code>function</code> 是声明函数的关键字，而函数一般是对应某一个功能，所以函数名一般是动词。</p>
+<ul>
+<li><strong>函数调用</strong></li>
+</ul>
+<p>既然声明了函数，那就要去调用！调用函数时，通过调用其函数名来执行函数体代码，其语法结构如下：</p>
+<div><pre><code><span>函数名</span><span>(</span><span>)</span><span>;</span>
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p>以下我们在 JavaScript 中定义一个函数，用于求 <code>1 + 2 + … + num</code> 的值。</p>
+<div><pre><code><span>function</span> <span>sum</span><span>(</span><span>num</span><span>)</span><span>{</span>
+    <span>let</span> result <span>=</span> <span>0</span><span>;</span>
+    <span>for</span><span>(</span><span>let</span> i <span>=</span> <span>1</span><span>;</span> i <span>&lt;=</span> num<span>;</span> i<span>++</span><span>)</span><span>{</span>
+        result <span>+=</span> i<span>;</span>
+    <span>}</span>
+    <span>return</span> result<span>;</span>
+<span>}</span>
+
+<span>let</span> num <span>=</span> <span>prompt</span><span>(</span><span>'请输入一个整数'</span><span>)</span><span>;</span>
+<span>alert</span><span>(</span><span>'和为：'</span> <span>+</span> <span>sum</span><span>(</span>num<span>)</span><span>)</span><span>;</span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br></div></div><p><img src="https://cdn.jsdelivr.net/gh/cunyu1943/blog-imgs@main/2022/04/function.gif" alt="" loading="lazy"></p>
+<h2 id="函数的参数" tabindex="-1"> 函数的参数</h2>
+<p>为了让函数能够准确地实现我们的功能，有时候我们需要用到参数。而参数又分为形参和实参，其中，形参位于声明函数的小括号中，而实参位于函数调用的小括号中。</p>
+<p>声明带有参数的函数时，其语法结构如下：</p>
+<div><pre><code><span>function</span> <span>函数名</span><span>(</span><span>形参<span>1</span><span>,</span> 形参<span>2</span>……</span><span>)</span><span>{</span>
+    <span>// 函数体</span>
+<span>}</span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br></div></div><p>当需要调用函数时，则可以通过以下形式调用。</p>
+<div><pre><code><span>函数名</span><span>(</span>实参<span>1</span><span>,</span> 实参<span>2</span>……<span>)</span><span>;</span>
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p>函数声明时，在函数名后的小括号中紧跟一些参数，这些参数被叫做<strong>形参</strong>，而在函数调用时，同样需要传递对应的参数，而这些参数就叫做<strong>实参</strong>。两者的区别总结如下：</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>形参</strong></td>
+<td>形式上的参数，函数定义时传递的参数</td>
+</tr>
+<tr>
+<td><strong>实参</strong></td>
+<td>实际上的参数，函数调用时传递的参数，实参是传递给形参的</td>
+</tr>
+</tbody>
+</table>
+<p>所以参数的作用在于，在函数内部某些不能固定的值，可以通过参数在调用函数时传递不同的值进行。</p>
+<p>假设我们定义一个函数时，传递了不同数量的参数，就可能出现以下情况。</p>
+<ul>
+<li>实参个数与形参个数相匹配</li>
+<li>实参个数多于形参个数</li>
+<li>实参个数少于形参个数</li>
+</ul>
+<p>以下以实例来分别看着三种情况会出现怎样的结果。</p>
+<div><pre><code><span>function</span> <span>sum</span><span>(</span><span>num</span><span>)</span><span>{</span>
+    <span>let</span> result <span>=</span> <span>0</span><span>;</span>
+    <span>for</span><span>(</span><span>let</span> i <span>=</span> <span>1</span><span>;</span> i <span>&lt;=</span> num<span>;</span> i<span>++</span><span>)</span><span>{</span>
+        result <span>+=</span> i<span>;</span>
+    <span>}</span>
+    <span>return</span> result<span>;</span>
+<span>}</span>
+
+<span>let</span> num <span>=</span> <span>10</span><span>;</span>
+console<span>.</span><span>log</span><span>(</span><span>'和为：'</span> <span>+</span> <span>sum</span><span>(</span>num<span>)</span><span>)</span><span>;</span>
+console<span>.</span><span>log</span><span>(</span><span>'和为：'</span> <span>+</span> <span>sum</span><span>(</span>num<span>,</span> <span>20</span><span>)</span><span>)</span><span>;</span>
+console<span>.</span><span>log</span><span>(</span><span>'和为：'</span> <span>+</span> <span>sum</span><span>(</span><span>)</span><span>)</span><span>;</span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br></div></div><p><img src="https://cdn.jsdelivr.net/gh/cunyu1943/blog-imgs@main/2022/04/image-20220421085617250.png" alt="" loading="lazy"></p>
+<p>可以看到实参和形参个数匹配时，程序输出了正确的结果，而当实参个数大于形参个数时，程序同样输出了正确的结果。而当实参个数小于形参个数时，程序结果出错。因此，在定义和调用参数时，一定要注意形参和实参的匹配问题，否则可能会导致程序出错。</p>
+<h2 id="函数返回值" tabindex="-1"> 函数返回值</h2>
+<p>在调用函数时，我们会希望将函数调用的结果返回到调用者，此时就可以通过关键字 <code>return</code> 语句来实现，其语法结构如下：</p>
+<div><pre><code><span>function</span> <span>函数名</span><span>(</span><span>形参<span>1</span><span>,</span> 形参<span>2</span>……</span><span>)</span><span>{</span>
+    <span>// 函数体</span>
+    <span>return</span> 返回结果<span>;</span>
+<span>}</span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br></div></div><p>其实上面的实例中我已经给出了函数的返回值了，其中 <code>result</code> 就是函数的返回值。实例中将函数的结果进行了返回，所以在调用时直接能够直接进行输出。</p>
+<p>当然，不是所有函数都需要返回值，具体是否需要要根据自己的实际需求来编写。</p>
+<h2 id="作用域" tabindex="-1"> 作用域</h2>
+<p>通常来讲，程序中用到的代码并不是一直有效的，而用于限定这个代码可用范围的就是这段代码的<strong>作用域</strong>。因为作用域的存在，改高了程序逻辑的局部性，增强了可靠性，最大程度上减少了代码中的冲突。</p>
+<p>JavaScript 中，主要有三种作用域：</p>
+<ul>
+<li>全局作用域</li>
+<li>局部作用域</li>
+<li>块级作用域</li>
+</ul>
+<ol>
+<li><strong>全局作用域</strong></li>
+</ol>
+<p>顾名思义，全局作用域也就是在整个代码中都有效。作用于所有代码执行的环境。</p>
+<ol start="2">
+<li><strong>局部作用域</strong></li>
+</ol>
+<p>局部有效，作用于函数内的代码环境，因为和函数息息相关，所以也叫做函数作用域。</p>
+<ol start="3">
+<li><strong>块级作用域</strong></li>
+</ol>
+<p>块级作用域由 <code>{}</code> 所包含，比如 <code>if</code> 和 <code>for</code> 语句中的 <code>{}</code>。</p>
+<div><pre><code><span>let</span> num <span>=</span> <span>1943</span><span>;</span>
+<span>function</span> <span>demo</span><span>(</span><span>num1<span>,</span> num2</span><span>)</span><span>{</span>
+    <span>let</span> tmp <span>=</span> num1<span>;</span>
+    num1 <span>=</span> num2<span>;</span>
+    num2 <span>=</span> tmp<span>;</span>
+<span>}</span>
+<span>demo</span><span>(</span>num<span>,</span> <span>10</span><span>)</span><span>;</span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br></div></div><p>以上实例中 <code>num</code> 的作用域是全局作用域，<code>num1</code> 和 <code>num2</code> 的作用域为局部作用域，而 <code>tmp</code> 的作用域则是块级作用域。</p>
+<h2 id="匿名函数" tabindex="-1"> 匿名函数</h2>
+<p>所谓匿名函数，其实指的就是没有函数名的函数。其语法结构如下，主要有两种定义的方式。</p>
+<div><pre><code><span>(</span><span>function</span> <span>(</span><span>)</span><span>{</span>
+    <span>// 函数体</span>
+<span>}</span><span>)</span><span>;</span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br></div></div><div><pre><code><span>(</span><span>function</span> <span>(</span><span>)</span><span>{</span>
+    <span>// 函数体</span>
+<span>}</span><span>)</span><span>;</span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br></div></div><div><pre><code><span>(</span><span>function</span> <span>(</span><span>num1<span>,</span> num2</span><span>)</span><span>{</span>
+    console<span>.</span><span>log</span><span>(</span>num1 <span>+</span> num2<span>)</span><span>;</span>
+<span>}</span><span>)</span><span>;</span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br></div></div><p>以上就是一个简单的匿名函数，要注意匿名函数是不能单独使用的，它通常作为立即执行函数的基础。</p>
+<p>为了避免全局变量之间的污染，因此我们有时候需要在定义函数时立即执行函数，这时候我们就可以使用到立即执行函数。立即执行函数是基于匿名函数来实现的，也没有函数名，但是他会在定义后立即执行，其语法结构如下。</p>
+<p>立即执行函数也有两种形式，第一种是将匿名函数包裹在一个括号运算符中，然后再跟一个括号。</p>
+<div><pre><code><span>(</span><span>function</span> <span>(</span><span>)</span><span>{</span>
+    <span>// 函数体</span>
+<span>}</span><span>)</span><span>(</span><span>)</span><span>;</span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br></div></div><p>另一种则是在匿名函数后面跟上一个括号，然后再将整个包裹在一个括号运算符中。</p>
+<div><pre><code><span>(</span><span>function</span> <span>(</span><span>)</span><span>{</span>
+    <span>// 函数体</span>
+<span>}</span><span>(</span><span>)</span><span>)</span><span>;</span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br></div></div><div><pre><code><span>(</span><span>function</span> <span>(</span><span>num1<span>,</span> num2</span><span>)</span><span>{</span>
+    console<span>.</span><span>log</span><span>(</span>num1 <span>+</span> num2<span>)</span><span>;</span>
+<span>}</span><span>(</span><span>10</span><span>,</span> <span>20</span><span>)</span><span>)</span><span>;</span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br></div></div><p><img src="https://cdn.jsdelivr.net/gh/cunyu1943/blog-imgs@main/2022/04/image-20220421113436740.png" alt="" loading="lazy"></p>
+<p>但是需要注意的是，如果存在多个匿名函数，那它们之间要用 <code>;</code> 分隔开，否则将会导致报错。</p>
+<h2 id="总结" tabindex="-1"> 总结</h2>
+<p>以上就是本文的所有内容了，主要讲解了关于函数的简介、使用、参数、返回值、作用域以及常用的匿名函数。其中可能有一些小的知识点没有顾虑到，如果有什么遗漏的地方，大家可以指出来，然后根据大家所提的建议进行文章修改，让内容更加详细。</p>
+]]></content:encoded>
+      <enclosure url="https://cdn.jsdelivr.net/gh/cunyu1943/blog-imgs@main/2022/04/function.gif" type="image/gif"/>
+    </item>
     <item>
       <title>福利来袭，专属打工人的省钱小秘招</title>
       <link>https://cunyu1943.github.io/JavaPark/JavaPark/welfare/save-money-tips.html</link>
@@ -28626,19 +28780,6 @@ num <span>=</span> <span>(</span><span>int</span><span>)</span>ans<span>;</span>
 <img src="https://cdn.jsdelivr.net/gh/cunyu1943/cunyu1943@main/imgs/wepublic.gif" width="200" alt="公众号" />
 ]]></content:encoded>
       <enclosure url="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c6178b187e574a52a18056ec4736fce2~tplv-k3u1fbpfcp-zoom-1.image" type="image/"/>
-    </item>
-    <item>
-      <title>JavaPark(Java 自学指南)</title>
-      <link>https://cunyu1943.github.io/JavaPark/JavaPark/home.html</link>
-      <guid>https://cunyu1943.github.io/JavaPark/JavaPark/home.html</guid>
-      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">JavaPark(Java 自学指南)</source>
-      <pubDate>Thu, 14 Apr 2022 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<h2 id="必看专栏" tabindex="-1"> 必看专栏</h2>
-<ul>
-<li><a href="./java/java-se/jdk-install-and-hello-world">《Java 菜鸟入门》</a>：根据自己所学知识，结合网上的经典教程，输出针对 Java 新手程序员的详细入门教程！</li>
-<li><a href="./java/spring-boot/introduction">《Spring Boot 基础教程》</a>：根据自己所学习的知识，打造出的详细全面的 Spring Boot 2.x 基础教程！</li>
-</ul>
-]]></content:encoded>
     </item>
   </channel>
 </rss>
