@@ -3,7 +3,7 @@
   <id>https://cunyu1943.github.io/JavaPark/JavaPark/</id>
   <title>JavaPark</title>
   <subtitle>Java 自学编程之路</subtitle>
-  <updated>2022-04-21T15:02:29.777Z</updated>
+  <updated>2022-04-22T08:53:28.925Z</updated>
   <generator>vuepress-plugin-feed2</generator>
   <link rel="self" href="https://cunyu1943.github.io/JavaPark/JavaPark/atom.xml"/>
   <link rel="alternate" href="https://cunyu1943.github.io/JavaPark/JavaPark/"/>
@@ -23,6 +23,358 @@
   <category term="博客搭建"/>
   <category term="Java 菜鸟入门"/>
   <category term="Spring Boot 基础教程"/>
+  <entry>
+    <title type="html">JS 教程「9」：DOM 元素获取、属性修改</title>
+    <id>https://cunyu1943.github.io/JavaPark/JavaPark/java/java-web/js/dom-get-attribute.html</id>
+    <link href="https://cunyu1943.github.io/JavaPark/JavaPark/java/java-web/js/dom-get-attribute.html"/>
+    <updated>2022-04-22T08:52:26.000Z</updated>
+    <content type="html"><![CDATA[<h2 id="什么是-web-api" tabindex="-1"> 什么是 Web API</h2>
+<p>Web API 是指网页服务器或者网页浏览器的应用程序接口。简单来讲，就是我们在编写 JavaScript 代码时，可以通过 Web API 来操作 HTML 网页和浏览器。</p>
+<p>Web API 又可以分为两类：</p>
+<ul>
+<li>DOM（文档对象模型）</li>
+<li>BOM（浏览器对象模型）</li>
+</ul>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/c1614745eb297b509c51685d12370ce9.png" alt="" loading="lazy"></p>
+<p>DOM（<code>Document Object Model</code>），即文档对象模型，主要用来呈现以及与 HTML 或 XML 文档交互的 API。说白了就是用来操作网页内容，实现各种特效，让用户用起来更顺手。</p>
+<p>再来看看 DOM 树的概念，DOM 树又叫文档树，指的是将 HTML 文档以树状结构直观呈现出来，从而将 HTML 中标签与标签之间的关系直观体现出来。</p>
+<p>我们都知道 HTML 页面中包含了许多标签，而 DOM 对象就是浏览器根据这些标签所生成的 JavaScript 对象。通过这个对象，我们就可以找到标签的各种属性，而通过修改这个对象的属性的结果也会映射到 HTML 页面中标签中。也就是说，通过修改 JavaScript 中的对象属性，我们就能够改变对象对应 HTML 中的标签属性。</p>
+<div><pre><code><span>&lt;</span><span>!</span><span>DOCTYPE</span> html<span>></span>
+<span>&lt;</span>html<span>></span>
+	<span>&lt;</span>head<span>></span>
+		<span>&lt;</span>meta charset<span>=</span><span>"utf-8"</span> <span>/</span><span>></span>
+		<span>&lt;</span>meta name<span>=</span><span>"viewport"</span> content<span>=</span><span>"width=device-width, initial-scale=1"</span><span>></span>
+		<span>&lt;</span>title<span>></span><span>DOM</span><span>&lt;</span><span>/</span>title<span>></span>
+	<span>&lt;</span><span>/</span>head<span>></span>
+	<span>&lt;</span>body<span>></span>
+		<span>&lt;</span>button<span>></span>点击<span>&lt;</span><span>/</span>button<span>></span>
+		<span>&lt;</span>script<span>></span>
+			<span>// 获取 JavaScript 对象</span>
+			<span>let</span> btn <span>=</span> document<span>.</span><span>querySelector</span><span>(</span><span>'button'</span><span>)</span><span>;</span>
+			<span>// 打印所有属性</span>
+			console<span>.</span><span>dir</span><span>(</span>btn<span>)</span><span>;</span>
+			<span>// 修改对象属性</span>
+			btn<span>.</span>innerText <span>=</span> <span>'村雨遥'</span><span>;</span>
+		<span>&lt;</span><span>/</span>script<span>></span>
+	<span>&lt;</span><span>/</span>body<span>></span>
+<span>&lt;</span><span>/</span>html<span>></span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br></div></div><p><img src="https://img-blog.csdnimg.cn/39aaf0deb32742299c718bf512ce85ce.png" alt="" loading="lazy">
+可以看到原本 <code>button</code> 标签的属性 <code>innerText</code> 从原先的点击变成了 村雨遥，说明通过修改 JavaScript 对象属性从而改变 HTML 中标签属性的目的达到了。</p>
+<h2 id="dom-对象获取" tabindex="-1"> DOM 对象获取</h2>
+<ol>
+<li><strong>匹配的首个元素</strong>
+上一小节实例中我们其实已经获取过相关 DOM 对象了，也就是以下这一句：</li>
+</ol>
+<div><pre><code><span>let</span> btn <span>=</span> document<span>.</span><span>querySelector</span><span>(</span><span>'button'</span><span>)</span><span>;</span>
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p>这其实是通过 CSS 选择器来获取的我们网页中的标签，通过以下语法，我们将会从网页中选择到匹配的第一个元素。</p>
+<div><pre><code>document<span>.</span><span>querySelector</span><span>(</span><span>'CSS 选择器'</span><span>)</span><span>;</span>
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p>其中的参数包含了一个或多个有效的 CSS 选择器字符串，然后返回的结果就是匹配到的 CSS 选择器中的<strong>第一个元素</strong>，是一个 <code>HTMLElement</code> 元素。当然，如果没有匹配到任何元素，则返回 <code>null</code>。</p>
+<p>以下是一个获取 DOM 对象的实例。</p>
+<div><pre><code><span><span>&lt;!</span><span>DOCTYPE</span> <span>html</span><span>></span></span>
+<span><span><span>&lt;</span>html</span><span>></span></span>
+	<span><span><span>&lt;</span>head</span><span>></span></span>
+		<span><span><span>&lt;</span>meta</span> <span>charset</span><span><span>=</span><span>"</span>utf-8<span>"</span></span> <span>/></span></span>
+		<span><span><span>&lt;</span>meta</span> <span>name</span><span><span>=</span><span>"</span>viewport<span>"</span></span> <span>content</span><span><span>=</span><span>"</span>width=device-width, initial-scale=1<span>"</span></span><span>></span></span>
+		<span><span><span>&lt;</span>title</span><span>></span></span>DOM 元素获取<span><span><span>&lt;/</span>title</span><span>></span></span>
+	<span><span><span>&lt;/</span>head</span><span>></span></span>
+	<span><span><span>&lt;</span>body</span><span>></span></span>
+		<span><span><span>&lt;</span>div</span><span>></span></span>DOM 元素获取<span><span><span>&lt;/</span>div</span><span>></span></span>
+
+		<span><span><span>&lt;</span>script</span><span>></span></span><span><span>
+			<span>// 获取 js 元素</span>
+			<span>let</span> div <span>=</span> document<span>.</span><span>querySelector</span><span>(</span><span>'div'</span><span>)</span><span>;</span>
+			console<span>.</span><span>log</span><span>(</span>div<span>)</span><span>;</span>
+		</span></span><span><span><span>&lt;/</span>script</span><span>></span></span>
+	<span><span><span>&lt;/</span>body</span><span>></span></span>
+
+<span><span><span>&lt;/</span>html</span><span>></span></span>
+
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br></div></div><p><img src="https://img-blog.csdnimg.cn/e35c743f879d4f72ade0d647bc9ab790.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5p2R6Zuo6YGl,size_20,color_FFFFFF,t_70,g_se,x_16" alt="" loading="lazy"></p>
+<ol start="2">
+<li><strong>匹配的多个元素</strong></li>
+</ol>
+<p>之前我们已经学习了如何获取匹配的首个元素，但是在日常开发中，我们常常需要获取匹配到的多个元素，此时我们就可以使用如下语法来获取匹配的多个元素。</p>
+<div><pre><code>document<span>.</span><span>querySelectorAll</span><span>(</span><span>'CSS 选择器'</span><span>)</span><span>;</span>
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><div><pre><code><span><span>&lt;!</span><span>DOCTYPE</span> <span>html</span><span>></span></span>
+<span><span><span>&lt;</span>html</span><span>></span></span>
+	<span><span><span>&lt;</span>head</span><span>></span></span>
+		<span><span><span>&lt;</span>meta</span> <span>charset</span><span><span>=</span><span>"</span>utf-8<span>"</span></span> <span>/></span></span>
+		<span><span><span>&lt;</span>meta</span> <span>name</span><span><span>=</span><span>"</span>viewport<span>"</span></span> <span>content</span><span><span>=</span><span>"</span>width=device-width, initial-scale=1<span>"</span></span><span>></span></span>
+		<span><span><span>&lt;</span>title</span><span>></span></span>DOM 元素获取<span><span><span>&lt;/</span>title</span><span>></span></span>
+	<span><span><span>&lt;/</span>head</span><span>></span></span>
+	<span><span><span>&lt;</span>body</span><span>></span></span>
+		<span><span><span>&lt;</span>div</span><span>></span></span>DOM 元素获取1<span><span><span>&lt;/</span>div</span><span>></span></span>
+		<span><span><span>&lt;</span>div</span><span>></span></span>DOM 元素获取2<span><span><span>&lt;/</span>div</span><span>></span></span>
+
+		<span><span><span>&lt;</span>script</span><span>></span></span><span><span>
+			<span>// 获取 js 元素</span>
+			<span>let</span> div <span>=</span> document<span>.</span><span>querySelectorAll</span><span>(</span><span>'div'</span><span>)</span><span>;</span>
+			console<span>.</span><span>log</span><span>(</span>div<span>)</span><span>;</span>
+		</span></span><span><span><span>&lt;/</span>script</span><span>></span></span>
+	<span><span><span>&lt;/</span>body</span><span>></span></span>
+
+<span><span><span>&lt;/</span>html</span><span>></span></span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br></div></div><p><img src="https://cdn.jsdelivr.net/gh/cunyu1943/blog-imgs@main/2022/04/image-20220422113827743.png" alt="" loading="lazy"></p>
+<p>除开上述两种获取 DOM 对象之外，还提供了一些用于获取 DOM 元素的方法。最常见的几种总结如下：</p>
+<ul>
+<li>根据 <code>id</code> 获取一个元素</li>
+</ul>
+<div><pre><code>document<span>.</span><span>getElementById</span><span>(</span><span>'id 元素名'</span><span>)</span><span>;</span>
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><ul>
+<li>根据标签获取页面中的一类元素</li>
+</ul>
+<div><pre><code>document<span>.</span><span>getElementsByTagName</span><span>(</span><span>'标签名'</span><span>)</span><span>;</span>
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><ul>
+<li>根据类名获取页面中的元素</li>
+</ul>
+<div><pre><code>document<span>.</span><span>getElementsByClassName</span><span>(</span><span>'类名'</span><span>)</span>
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p>以下是一个分别利用上述方法来获取页面中 DOM 元素的实例。</p>
+<div><pre><code><span>&lt;</span><span>!</span><span>DOCTYPE</span> html<span>></span>
+<span>&lt;</span>html<span>></span>
+	<span>&lt;</span>head<span>></span>
+		<span>&lt;</span>meta charset<span>=</span><span>"utf-8"</span> <span>/</span><span>></span>
+		<span>&lt;</span>meta name<span>=</span><span>"viewport"</span> content<span>=</span><span>"width=device-width, initial-scale=1"</span><span>></span>
+		<span>&lt;</span>title<span>></span><span>DOM</span> 元素获取<span>&lt;</span><span>/</span>title<span>></span>
+	<span>&lt;</span><span>/</span>head<span>></span>
+	<span>&lt;</span>body<span>></span>
+		<span>&lt;</span>div id<span>=</span><span>"id1"</span><span>></span><span>DOM</span> 元素获取<span>1</span><span>&lt;</span><span>/</span>div<span>></span>
+		<span>&lt;</span>div id<span>=</span><span>"id2"</span><span>></span><span>DOM</span> 元素获取<span>2</span><span>&lt;</span><span>/</span>div<span>></span>
+		<span>&lt;</span>div <span>class</span><span>=</span><span>"class1"</span><span>></span><span>DOM</span> 元素获取<span>3</span><span>&lt;</span><span>/</span>div<span>></span>
+		<span>&lt;</span>div <span>class</span><span>=</span><span>"class1"</span><span>></span><span>DOM</span> 元素获取<span>4</span><span>&lt;</span><span>/</span>div<span>></span>
+
+		<span>&lt;</span>script<span>></span>
+			<span>// 获取 js 元素</span>
+			<span>let</span> divs <span>=</span> document<span>.</span><span>getElementsByTagName</span><span>(</span><span>'div'</span><span>)</span><span>;</span>
+			console<span>.</span><span>log</span><span>(</span>divs<span>)</span><span>;</span>
+			<span>let</span> id1 <span>=</span> document<span>.</span><span>getElementById</span><span>(</span><span>'id1'</span><span>)</span><span>;</span>
+			console<span>.</span><span>log</span><span>(</span>id1<span>)</span><span>;</span>
+			<span>let</span> id2 <span>=</span> document<span>.</span><span>getElementById</span><span>(</span><span>'id2'</span><span>)</span><span>;</span>
+			console<span>.</span><span>log</span><span>(</span>id2<span>)</span><span>;</span>
+			<span>let</span> classes <span>=</span> document<span>.</span><span>getElementsByClassName</span><span>(</span><span>'class1'</span><span>)</span><span>;</span>
+			console<span>.</span><span>log</span><span>(</span>classes<span>)</span><span>;</span>
+		<span>&lt;</span><span>/</span>script<span>></span>
+	<span>&lt;</span><span>/</span>body<span>></span>
+
+<span>&lt;</span><span>/</span>html<span>></span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br><span>27</span><br></div></div><p><img src="https://cdn.jsdelivr.net/gh/cunyu1943/blog-imgs@main/2022/04/image-20220422140927487.png" alt="" loading="lazy"></p>
+<h2 id="dom-元素内容" tabindex="-1"> DOM 元素内容</h2>
+<p>既然已经学会了如何获取 DOM 元素，接下来就是看看如何修改元素中的内容。</p>
+<p>这里 Web API 主要提供了三种方式，分别是：</p>
+<ul>
+<li><code>document.write()</code></li>
+<li><code>innerText</code> 属性</li>
+<li><code>innerHTML</code> 属性</li>
+</ul>
+<h3 id="doucument-write" tabindex="-1"> doucument.write()</h3>
+<p>该方法只能将文本内容追加到 <code>&lt;/body&gt;</code>  标签前面的位置，而且文本内容中所包含的标签也同样会被解析。</p>
+<div><pre><code><span>&lt;</span><span>!</span><span>DOCTYPE</span> html<span>></span>
+<span>&lt;</span>html<span>></span>
+	<span>&lt;</span>head<span>></span>
+		<span>&lt;</span>meta charset<span>=</span><span>"utf-8"</span> <span>/</span><span>></span>
+		<span>&lt;</span>meta name<span>=</span><span>"viewport"</span> content<span>=</span><span>"width=device-width, initial-scale=1"</span><span>></span>
+		<span>&lt;</span>title<span>></span><span>DOM</span> 元素内容<span>&lt;</span><span>/</span>title<span>></span>
+	<span>&lt;</span><span>/</span>head<span>></span>
+	<span>&lt;</span>body<span>></span>
+		<span>&lt;</span>script<span>></span>
+			document<span>.</span><span>write</span><span>(</span><span>'公众号：村雨遥！&lt;/br>'</span><span>)</span><span>;</span>
+			document<span>.</span><span>write</span><span>(</span><span>"&lt;font color='red'>wePublic: cunyu1943&lt;/font>"</span><span>)</span><span>;</span>
+		<span>&lt;</span><span>/</span>script<span>></span>
+	<span>&lt;</span><span>/</span>body<span>></span>
+<span>&lt;</span><span>/</span>html<span>></span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br></div></div><p><img src="https://cdn.jsdelivr.net/gh/cunyu1943/blog-imgs@main/2022/04/image-20220422142304628.png" alt="" loading="lazy"></p>
+<h3 id="innertext-属性" tabindex="-1"> innerText 属性</h3>
+<p>通过该属性，可以将文本内容添加或者更新到任意标签的位置，而且文本中的标签也不会被解析。</p>
+<div><pre><code><span><span>&lt;!</span><span>DOCTYPE</span> <span>html</span><span>></span></span>
+<span><span><span>&lt;</span>html</span><span>></span></span>
+	<span><span><span>&lt;</span>head</span><span>></span></span>
+		<span><span><span>&lt;</span>meta</span> <span>charset</span><span><span>=</span><span>"</span>utf-8<span>"</span></span> <span>/></span></span>
+		<span><span><span>&lt;</span>meta</span> <span>name</span><span><span>=</span><span>"</span>viewport<span>"</span></span> <span>content</span><span><span>=</span><span>"</span>width=device-width, initial-scale=1<span>"</span></span><span>></span></span>
+		<span><span><span>&lt;</span>title</span><span>></span></span>DOM 元素内容<span><span><span>&lt;/</span>title</span><span>></span></span>
+
+	<span><span><span>&lt;/</span>head</span><span>></span></span>
+	<span><span><span>&lt;</span>body</span><span>></span></span>
+		<span><span><span>&lt;</span>div</span><span>></span></span>
+			测试
+		<span><span><span>&lt;/</span>div</span><span>></span></span>
+		<span><span><span>&lt;</span>script</span><span>></span></span><span><span>
+			<span>let</span> div <span>=</span> document<span>.</span><span>querySelector</span><span>(</span><span>'div'</span><span>)</span><span>;</span>
+			div<span>.</span>innerText <span>=</span> <span>'Hello World!'</span><span>;</span>
+            div<span>.</span>innerText <span>=</span> <span>'&lt;h1>一级标题&lt;/h1>'</span><span>;</span>
+		</span></span><span><span><span>&lt;/</span>script</span><span>></span></span>
+	<span><span><span>&lt;/</span>body</span><span>></span></span>
+<span><span><span>&lt;/</span>html</span><span>></span></span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br></div></div><p><img src="https://cdn.jsdelivr.net/gh/cunyu1943/blog-imgs@main/2022/04/image-20220422143135431.png" alt="" loading="lazy"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/cunyu1943/blog-imgs@main/2022/04/image-20220422143303536.png" alt="" loading="lazy"></p>
+<h3 id="innerhtml-属性" tabindex="-1"> innerHTML 属性</h3>
+<p>除了 <code>innerText</code> 属性之外，也可以是使用 <code>innerHTML</code> 属性来对文本内容进行添加或者更新，但不同于 <code>innerText</code> 的是，<code>innerHTML</code> 会将文本内容中中的标签也进行解析。</p>
+<div><pre><code><span>&lt;</span><span>!</span><span>DOCTYPE</span> html<span>></span>
+<span>&lt;</span>html<span>></span>
+	<span>&lt;</span>head<span>></span>
+		<span>&lt;</span>meta charset<span>=</span><span>"utf-8"</span> <span>/</span><span>></span>
+		<span>&lt;</span>meta name<span>=</span><span>"viewport"</span> content<span>=</span><span>"width=device-width, initial-scale=1"</span><span>></span>
+		<span>&lt;</span>title<span>></span><span>DOM</span> 元素内容<span>&lt;</span><span>/</span>title<span>></span>
+
+	<span>&lt;</span><span>/</span>head<span>></span>
+	<span>&lt;</span>body<span>></span>
+		<span>&lt;</span>div<span>></span>
+			测试
+		<span>&lt;</span><span>/</span>div<span>></span>
+		<span>&lt;</span>script<span>></span>
+			<span>let</span> div <span>=</span> document<span>.</span><span>querySelector</span><span>(</span><span>'div'</span><span>)</span><span>;</span>
+			div<span>.</span>innerHTML <span>=</span> <span>'Java Park!'</span><span>;</span>
+			div<span>.</span>innerHTML <span>=</span> <span>'&lt;a href="https://cunyu1943.github.io/JavaPark">JavaPark&lt;/a>'</span><span>;</span>
+		<span>&lt;</span><span>/</span>script<span>></span>
+	<span>&lt;</span><span>/</span>body<span>></span>
+<span>&lt;</span><span>/</span>html<span>></span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br></div></div><p><img src="https://cdn.jsdelivr.net/gh/cunyu1943/blog-imgs@main/2022/04/image-20220422143737284.png" alt="" loading="lazy"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/cunyu1943/blog-imgs@main/2022/04/image-20220422143814606.png" alt="" loading="lazy"></p>
+<h3 id="修改元素样式属性" tabindex="-1"> 修改元素样式属性</h3>
+<p>出了修改文本内容，我们还可以实现对元素样式的控制，主要可以通过以下三种方式：</p>
+<ul>
+<li>通过 <code>style</code> 属性操作 CSS</li>
+<li>通过类名 <code>className</code> 操作 CSS</li>
+<li>通过 <code>classList</code> 操作类控制 CSS</li>
+</ul>
+<ol>
+<li><strong>通过 <code>style</code> 属性操作 CSS</strong></li>
+</ol>
+<p>语法结构如下：</p>
+<div><pre><code>对象<span>.</span>style<span>.</span>样式属性 <span>=</span> 样式属性值<span>;</span>
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><div><pre><code><span><span>&lt;!</span><span>DOCTYPE</span> <span>html</span><span>></span></span>
+<span><span><span>&lt;</span>html</span><span>></span></span>
+	<span><span><span>&lt;</span>head</span><span>></span></span>
+		<span><span><span>&lt;</span>meta</span> <span>charset</span><span><span>=</span><span>"</span>utf-8<span>"</span></span> <span>/></span></span>
+		<span><span><span>&lt;</span>meta</span> <span>name</span><span><span>=</span><span>"</span>viewport<span>"</span></span> <span>content</span><span><span>=</span><span>"</span>width=device-width, initial-scale=1<span>"</span></span><span>></span></span>
+		<span><span><span>&lt;</span>title</span><span>></span></span>属性修改<span><span><span>&lt;/</span>title</span><span>></span></span>
+		<span><span><span>&lt;</span>style</span><span>></span></span><span><span>
+			<span>div</span> <span>{</span>
+				<span>background-color</span><span>:</span> black<span>;</span>
+				<span>width</span><span>:</span> 6.25rem<span>;</span>
+				<span>height</span><span>:</span> 12.5rem<span>;</span>
+			<span>}</span>
+		</span></span><span><span><span>&lt;/</span>style</span><span>></span></span>
+	<span><span><span>&lt;/</span>head</span><span>></span></span>
+	<span><span><span>&lt;</span>body</span><span>></span></span>
+		<span><span><span>&lt;</span>div</span><span>></span></span>
+
+		<span><span><span>&lt;/</span>div</span><span>></span></span>
+		<span><span><span>&lt;</span>script</span><span>></span></span><span><span>
+			<span>let</span> div <span>=</span> document<span>.</span><span>querySelector</span><span>(</span><span>'div'</span><span>)</span><span>;</span>
+			div<span>.</span>style<span>.</span>backgroundColor <span>=</span> <span>'green'</span><span>;</span>
+		</span></span><span><span><span>&lt;/</span>script</span><span>></span></span>
+	<span><span><span>&lt;/</span>body</span><span>></span></span>
+<span><span><span>&lt;/</span>html</span><span>></span></span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br></div></div><p><img src="https://cdn.jsdelivr.net/gh/cunyu1943/blog-imgs@main/2022/04/image-20220422151536757.png" alt="" loading="lazy"></p>
+<ol start="2">
+<li>通过类名 <code>className</code> 操作 CSS</li>
+</ol>
+<p>当设计修改的样式较多时，如果直接通过 <code>style</code> 属性修改比较麻烦，此时就可以通过操作 CSS 类名的方式来进行批量修改，其语法结构如下：</p>
+<div><pre><code>元素<span>.</span>className <span>=</span> <span>'类名'</span><span>;</span>
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><div><pre><code><span>&lt;</span><span>!</span><span>DOCTYPE</span> html<span>></span>
+<span>&lt;</span>html<span>></span>
+	<span>&lt;</span>head<span>></span>
+		<span>&lt;</span>meta charset<span>=</span><span>"utf-8"</span> <span>/</span><span>></span>
+		<span>&lt;</span>meta name<span>=</span><span>"viewport"</span> content<span>=</span><span>"width=device-width, initial-scale=1"</span><span>></span>
+		<span>&lt;</span>title<span>></span>属性修改<span>&lt;</span><span>/</span>title<span>></span>
+		<span>&lt;</span>style<span>></span>
+			div <span>{</span>
+				background<span>-</span>color<span>:</span> black<span>;</span>
+				<span>width</span><span>:</span> <span>6</span><span>.</span>25rem<span>;</span>
+				<span>height</span><span>:</span> <span>12</span><span>.</span>5rem<span>;</span>
+			<span>}</span>
+
+			<span>.</span>demo <span>{</span>
+				background<span>-</span>color<span>:</span> greenyellow<span>;</span>
+				<span>width</span><span>:</span> 25rem<span>;</span>
+				<span>height</span><span>:</span> <span>31</span><span>.</span>25rem<span>;</span>
+			<span>}</span>
+		<span>&lt;</span><span>/</span>style<span>></span>
+	<span>&lt;</span><span>/</span>head<span>></span>
+	<span>&lt;</span>body<span>></span>
+		<span>&lt;</span>div <span>class</span><span>=</span><span>"demo"</span><span>></span>
+
+		<span>&lt;</span><span>/</span>div<span>></span>
+		<span>&lt;</span>script<span>></span>
+			<span>let</span> div <span>=</span> document<span>.</span><span>querySelector</span><span>(</span><span>'div'</span><span>)</span><span>;</span>
+			div<span>.</span>className <span>=</span> <span>'demo'</span><span>;</span>
+		<span>&lt;</span><span>/</span>script<span>></span>
+	<span>&lt;</span><span>/</span>body<span>></span>
+<span>&lt;</span><span>/</span>html<span>></span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br><span>27</span><br><span>28</span><br><span>29</span><br><span>30</span><br></div></div><p><img src="https://cdn.jsdelivr.net/gh/cunyu1943/blog-imgs@main/2022/04/image-20220422153427588.png" alt="" loading="lazy"></p>
+<p>使用类名来操作 CSS 时，需要注意一下，如果原先的元素中已经有了 CSS 类，那么此时新增的 CSS 类将覆盖之前 CSS 类。</p>
+<ol start="3">
+<li><strong>通过 <code>classList</code> 来操作 CSS</strong></li>
+</ol>
+<p>针对通过类名 <code>className</code> 操作 CSS 会覆盖以前类名的问题，JavaScript 中又提供了 <code>classList</code> 的方式来追加和删除类名。</p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>add('类名')</code></td>
+<td>追加一个类</td>
+</tr>
+<tr>
+<td><code>remove('类名')</code></td>
+<td>删除一个类</td>
+</tr>
+<tr>
+<td><code>toggle('类名')</code></td>
+<td>切换一个类</td>
+</tr>
+</tbody>
+</table>
+<div><pre><code><span><span>&lt;!</span><span>DOCTYPE</span> <span>html</span><span>></span></span>
+<span><span><span>&lt;</span>html</span><span>></span></span>
+	<span><span><span>&lt;</span>head</span><span>></span></span>
+		<span><span><span>&lt;</span>meta</span> <span>charset</span><span><span>=</span><span>"</span>utf-8<span>"</span></span> <span>/></span></span>
+		<span><span><span>&lt;</span>meta</span> <span>name</span><span><span>=</span><span>"</span>viewport<span>"</span></span> <span>content</span><span><span>=</span><span>"</span>width=device-width, initial-scale=1<span>"</span></span><span>></span></span>
+		<span><span><span>&lt;</span>title</span><span>></span></span>属性修改<span><span><span>&lt;/</span>title</span><span>></span></span>
+		<span><span><span>&lt;</span>style</span><span>></span></span><span><span>
+			<span>div</span> <span>{</span>
+				<span>background-color</span><span>:</span> black<span>;</span>
+				<span>width</span><span>:</span> 6.25rem<span>;</span>
+				<span>height</span><span>:</span> 12.5rem<span>;</span>
+			<span>}</span>
+
+			<span>.demo1</span> <span>{</span>
+				<span>background-color</span><span>:</span> greenyellow<span>;</span>
+				<span>width</span><span>:</span> 10rem<span>;</span>
+				<span>height</span><span>:</span> 15rem<span>;</span>
+			<span>}</span>
+
+			<span>.demo2</span> <span>{</span>
+				<span>background-color</span><span>:</span> aquamarine<span>;</span>
+				<span>width</span><span>:</span> 9.375rem<span>;</span>
+				<span>height</span><span>:</span> 12.5rem<span>;</span>
+			<span>}</span>
+		</span></span><span><span><span>&lt;/</span>style</span><span>></span></span>
+	<span><span><span>&lt;/</span>head</span><span>></span></span>
+	<span><span><span>&lt;</span>body</span><span>></span></span>
+		<span><span><span>&lt;</span>div</span> <span>class</span><span><span>=</span><span>"</span>demo<span>"</span></span><span>></span></span>
+
+		<span><span><span>&lt;/</span>div</span><span>></span></span>
+		<span><span><span>&lt;</span>script</span><span>></span></span><span><span>
+			<span>let</span> div <span>=</span> document<span>.</span><span>querySelector</span><span>(</span><span>'div'</span><span>)</span><span>;</span>
+			div<span>.</span>classList<span>.</span><span>add</span><span>(</span><span>'demo1'</span><span>)</span><span>;</span>
+			div<span>.</span>classList<span>.</span><span>toggle</span><span>(</span><span>'demo2'</span><span>)</span><span>;</span>
+			div<span>.</span>classList<span>.</span><span>remove</span><span>(</span><span>'demo2'</span><span>)</span><span>;</span>
+		</span></span><span><span><span>&lt;/</span>script</span><span>></span></span>
+	<span><span><span>&lt;/</span>body</span><span>></span></span>
+<span><span><span>&lt;/</span>html</span><span>></span></span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br><span>27</span><br><span>28</span><br><span>29</span><br><span>30</span><br><span>31</span><br><span>32</span><br><span>33</span><br><span>34</span><br><span>35</span><br><span>36</span><br><span>37</span><br><span>38</span><br></div></div><p><img src="https://cdn.jsdelivr.net/gh/cunyu1943/blog-imgs@main/2022/04/image-20220422154620799.png" alt="" loading="lazy"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/cunyu1943/blog-imgs@main/2022/04/image-20220422154728553.png" alt="" loading="lazy"></p>
+<h2 id="总结" tabindex="-1"> 总结</h2>
+<p>本文首先讲了什么是 Web API，然后根据 Web API 所提供的各种方法，从页面中获取 DOM 对象，并对 DOM 对象中的元素内容进行设置和修改。</p>
+<p>主要内容集中在常用的 DOM 对象获取方法 <code>querySelector()</code>、<code>querySelectorAll()</code>，以及 DOM 元素内容 3 种修改方式 <code>document.write()</code>、<code>innerText</code>、<code>innerHTML</code> ，最后介绍了如何对 DOM 元素的样式修改，实现样式的增加、转换和删除。</p>
+]]></content>
+    <category term="JavaScript 教程"/>
+    <published>2022-04-22T16:47:00.000Z</published>
+  </entry>
   <entry>
     <title type="html">JS 教程「8」：面向对象</title>
     <id>https://cunyu1943.github.io/JavaPark/JavaPark/java/java-web/js/oop.html</id>
@@ -28576,77 +28928,5 @@ num <span>=</span> <span>(</span><span>int</span><span>)</span>ans<span>;</span>
 ]]></content>
     <category term="Spring Boot 基础教程"/>
     <published>2022-01-09T16:17:16.000Z</published>
-  </entry>
-  <entry>
-    <title type="html">Spring Boot 基础教程：入门简介</title>
-    <id>https://cunyu1943.github.io/JavaPark/JavaPark/java/spring-boot/introduction.html</id>
-    <link href="https://cunyu1943.github.io/JavaPark/JavaPark/java/spring-boot/introduction.html"/>
-    <updated>2022-04-19T01:55:15.000Z</updated>
-    <content type="html"><![CDATA[<h2 id="前言" tabindex="-1"> 前言</h2>
-<p><code>Spring</code> 是重量级企业开发框架 <code>EJB（Enterprise JavaBean）</code> 的替代品，是为了解决企业级应用开发的复杂性而创建的，简化开发。通过 <strong>依赖注入（DI）</strong> 和 <strong>面向切面编程</strong>，用简单的 <strong><code>Java</code> 对象（<code>POJO</code>，<code>Plain Old Java Object</code>）</strong> 实现 <code>EJB</code> 的功能，<strong>其组件代码轻量，但是配置很繁琐（需要大量 <code>XML</code> 配置）</strong>。<code>Spring 2.5</code> 引入基于注解的组件扫描，<code>Spring 3.0</code> 引入基于 <code>Java</code> 的配置，可以代替 <code>XML</code>，虽然引入的特性大大提高了配置的效率，但是也无法避免，针对这一问题，<code>Spring Boot</code> 应运而生。</p>
-<p>Spring Boot 是为简化 Spring 应用初始搭建和开发过程，我们只要基于特定方式来进行配置即可。</p>
-<p>今天我们就来看看，关于 Spring Boot 的相关介绍吧！</p>
-<h2 id="spring-boot" tabindex="-1"> Spring Boot</h2>
-<h3 id="定义" tabindex="-1"> 定义</h3>
-<blockquote>
-<p>Spring Boot makes it easy to create stand-alone, production-grade Spring based Applications that you can “just run”...Most Spring Boot applications need very little Spring configuration.</p>
-</blockquote>
-<p>上面的一段话来自 <code>Spring</code> 官方，即“<code>Spring Boot</code> 能够轻松创建基于 <code>Spring</code> 的独立的生产级别的应用程序，而只需要通过 “<code>just run</code> （可能是 <code>java -jar、tomcat、maven、shell、'Application'</code> 等）”就可以让项目跑起来，大多 <code>Spring Boot</code> 项目仅需少量配置即可运行”。</p>
-<p>Spring Boot 基于 Spring 开发，Spirng Boot 本身并不提供 Spring 框架的核心特性以及扩展功能，只是用于快速、敏捷地开发新一代基于 Spring 框架的应用程序。也就是说，它并不是用来替代 Spring 的解决方案，而是和 Spring 框架紧密结合用于提升 Spring 开发者体验的工具。Spring Boot 以<strong>约定大于配置的核心思想</strong>，默认帮我们进行了很多设置，多数 Spring Boot 应用只需要很少的 Spring 配置。同时它集成了大量常用的第三方库配置（例如 Redis、MongoDB、Jpa、RabbitMQ、Quartz 等等）。</p>
-<h3 id="为什么需要-spring-boot" tabindex="-1"> 为什么需要 Spring Boot</h3>
-<p><code>Spring</code> 框架能够让 <code>J2EE</code>企业应用程序开发更加简化，但是还是需要配置大量文件，针对这一问题，<code>Spring Boot</code> 能够进一步简化 <code>Spring</code> 框架，使得开发更为高效；</p>
-<MermaidChart id="mermaid-382ee188" data-code="graph%20LR%0AA%5BJava%20Se%20%26%20EE%5D%20--%3E%20B%5BSpring%5D%0AB%5BSpring%5D%20--%3E%20C%5BSpring%20Boot%5D%0A"></MermaidChart><p><img src="https://gitee.com/cunyu1943/images/raw/master/imgsUbuntu/image-20200519083943477.png" alt="" loading="lazy"></p>
-<h3 id="特点" tabindex="-1"> 特点</h3>
-<ul>
-<li>可以创建独立 <code>Spring</code> 应用程序，并且基于 <code>Maven</code> 或 <code>Gradle</code> 插件，可以创建可执行的 <code>JARs</code> 和 <code>WARs</code>；</li>
-<li>内嵌 <code>Tomcat</code> 或 <code>Jetty</code> 等 <code>Servlet</code> 容器；</li>
-<li>提供自动配置的 <code>started</code> 项目对象模型（<code>POMS</code>）以简化 <code>Maven</code> 配置；</li>
-<li>尽可能自动配置 <code>Spring</code> 容器；</li>
-<li>提供准备好的特性，如指标、健康检查和外部化配置；</li>
-<li>没有冗余代码生成，不需要 <code>XML</code> 配置；</li>
-</ul>
-<h3 id="重要策略" tabindex="-1"> 重要策略</h3>
-<ul>
-<li><strong>开箱即用</strong>：<code>Outofbox</code>，指在开发过程中，通过在 <code>Maven</code> 项目的 <code>pom</code> 文件中添加相关依赖包，然后使用对应注解来代替繁琐的 <code>XML</code> 配置文件以管理对象的生命周期。这一特点使得开发人员摆脱了复杂的配置工作以及相关依赖的管理工作，更加专注于业务逻辑；</li>
-<li><strong>约定优于配置</strong>：<code>Convention over configuration</code>，一种由 <code>SpringBoot</code> 本身来配置目标结构，由开发者在结构中添加信息的软件设计范式。这一特点虽然降低了部分灵活性，增加了 <code>BUG</code> 定位的复杂性，但减少了开发人员需要做出决定的数量，同时减少了大量 <code>XML</code> 配置，而且可以将代码编译、测试和打包等工作自动化；</li>
-</ul>
-<h3 id="spring-boot-项目约定" tabindex="-1"> Spring Boot 项目约定</h3>
-<ul>
-<li>约定项目中有且只有一个入口类，其类名推荐使用：<code>xxxApplication.java</code>。而且该入口类必须位于所有的子包之外，其中必须存在一个用于启动项目的 <code>main</code> 函数。</li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/cunyu1943/blog-imgs@main//blog/image-20211002204054945.png" alt="" loading="lazy"></p>
-<ul>
-<li>此外， Spring Boot 项目约定必须在项目根目录中存在一个名为 <code>application.yml</code> 或者 <code>yml.prpperties</code> 的配置文件，一般是位于 <code>resources</code> 目录下。</li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/cunyu1943/blog-imgs@main//blog/image-20211002204712421.png" alt="" loading="lazy"></p>
-<h3 id="spring-boot-的优缺点" tabindex="-1"> Spring Boot 的优缺点</h3>
-<h4 id="优点" tabindex="-1"> 优点</h4>
-<ol>
-<li>使得开发基于 <code>Spring</code> 的应用程序变得简单；</li>
-<li><code>Spring Boot</code> 项目开发所需时间明显减少，提高整体生产力；</li>
-<li>无需编写大量样板代码、<code>XML</code> 配置和注释；</li>
-<li>与 <code>Spring</code> 生态系统更加容易集成，如 <code>Spring JDBC、Spring ORM、Spring Data、Spring Security</code>；</li>
-<li>遵循默认配置，我们通过修改默认配置能够减少开发工作；</li>
-<li>提供嵌入式 <code>http</code> 服务器，方便开发测试 <code>web</code> 应用程序；</li>
-<li>提供命令行接口（<code>CLI</code>）工具，用于开发测试 <code>Spring Boot</code> 应用程序；</li>
-<li>提供多种插件，能使用内置工具（<code>Maven &amp; Gradle</code>）开发测试 <code>Spring Boot</code> 应用程序；</li>
-</ol>
-<h4 id="缺点" tabindex="-1"> 缺点</h4>
-<ol>
-<li>相关文档资料较少；</li>
-<li>版本迭代快，导致各版本间的模块改动可能很大；</li>
-</ol>
-<p>总体来讲，采用 Spring Boot 的优点是绝对的，而且其缺点看似是缺点，但如果保持学习，还是很容易就能掌握的。而之所以迭代，不就是为了像 SSM -&gt; Spring Boot 这样简化我们的开发，提高开发效率么？有了更高的效率，那是不是就意味着我们能有更多的时间摸鱼或者早点下班跑路？🤪</p>
-<h2 id="总结" tabindex="-1"> 总结</h2>
-<p>以上就是今天的所有内容了，主要讲了 Spring Boot 的定义、特点、项目约定以及其优缺点。而关于 Spring Boot 项目的具体事例的搭建，我们就下期文章再见吧！</p>
-<blockquote>
-<p>传送门：<a href="https://blog.csdn.net/github_39655029/article/details/119618308" target="_blank" rel="noopener noreferrer">创建 SpringBoot 项目的 3 种方式<ExternalLinkIcon/></a></p>
-</blockquote>
-<p>最后，如果本文对你有所帮助，那就点个赞再走鸭 ~</p>
-<p><strong>关注公众号，获取最新文章更新</strong></p>
-<img src="https://cdn.jsdelivr.net/gh/cunyu1943/cunyu1943@main/imgs/wepublic.gif" width="200" alt="公众号" />
-]]></content>
-    <category term="Spring Boot 基础教程"/>
-    <published>2022-01-09T15:51:53.000Z</published>
   </entry>
 </feed>
