@@ -6,8 +6,8 @@
     <link>https://cunyu1943.github.io/JavaPark/JavaPark/</link>
     <description>Java 自学编程之路</description>
     <language>zh-CN</language>
-    <pubDate>Fri, 22 Apr 2022 08:53:28 GMT</pubDate>
-    <lastBuildDate>Fri, 22 Apr 2022 08:53:28 GMT</lastBuildDate>
+    <pubDate>Sun, 24 Apr 2022 09:12:28 GMT</pubDate>
+    <lastBuildDate>Sun, 24 Apr 2022 09:12:28 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>JavaScript 教程</category>
@@ -26,6 +26,227 @@
     <category>博客搭建</category>
     <category>Java 菜鸟入门</category>
     <category>Spring Boot 基础教程</category>
+    <item>
+      <title>JS 教程「10」：DOM 事件</title>
+      <link>https://cunyu1943.github.io/JavaPark/JavaPark/java/java-web/js/dom-event.html</link>
+      <guid>https://cunyu1943.github.io/JavaPark/JavaPark/java/java-web/js/dom-event.html</guid>
+      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">JS 教程「10」：DOM 事件</source>
+      <category>JavaScript 教程</category>
+      <pubDate>Sun, 24 Apr 2022 09:12:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h2 id="事件" tabindex="-1"> 事件</h2>
+<h3 id="什么是事件" tabindex="-1"> 什么是事件</h3>
+<p>在之前 DOM 的学习中，我们主要学习了如何获取 DOM 元素，并且学会了如何给获取的元素进行属性修改等操作。但这些基本都是静态的修改，并没有接触到一些动作。而今天要学习的事件，其实就是这些动作的总称。</p>
+<p>所谓事件，就是在编程时系统内所发生的动作或者发生的事情，比如在网页中点击一个按钮之后，我们就能实现登录或者注册之类的功能。</p>
+<h3 id="事件监听" tabindex="-1"> 事件监听</h3>
+<p>事件监听，就是让程序检测是否有事件产生，一旦有事件触发，就立即调用一个函数做出响应，这个过程就叫做注册事件。其语法结构如下：</p>
+<div><pre><code>元素<span>.</span><span>addEventListener</span><span>(</span><span>'事件'</span><span>,</span> 要执行的函数<span>)</span><span>;</span>
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p>要实现事件监听，要同时包含以下三要素：</p>
+<ul>
+<li><strong>事件源</strong>：也就是上面语法中所对应的元素，指的是谁发出的事件，也就是网页中哪个 DOM 元素被事件所触发。</li>
+<li><strong>事件</strong>：以何种方式触发，比如鼠标单击 <code>click</code>。</li>
+<li><strong>事件调用函数</strong>：也就是语法结构中要执行的函数，我们触发事件后，需要去做什么。</li>
+</ul>
+<div><pre><code><span><span>&lt;!</span><span>DOCTYPE</span> <span>html</span><span>></span></span>
+<span><span><span>&lt;</span>html</span><span>></span></span>
+	<span><span><span>&lt;</span>head</span><span>></span></span>
+		<span><span><span>&lt;</span>meta</span> <span>charset</span><span><span>=</span><span>"</span>utf-8<span>"</span></span> <span>/></span></span>
+		<span><span><span>&lt;</span>meta</span> <span>name</span><span><span>=</span><span>"</span>viewport<span>"</span></span> <span>content</span><span><span>=</span><span>"</span>width=device-width, initial-scale=1<span>"</span></span><span>></span></span>
+		<span><span><span>&lt;</span>title</span><span>></span></span>DOM 事件<span><span><span>&lt;/</span>title</span><span>></span></span>
+	<span><span><span>&lt;/</span>head</span><span>></span></span>
+	<span><span><span>&lt;</span>body</span><span>></span></span>
+		<span><span><span>&lt;</span>button</span><span>></span></span>点击开始<span><span><span>&lt;/</span>button</span><span>></span></span>
+		<span><span><span>&lt;</span>script</span><span>></span></span><span><span>
+			<span>let</span> btn <span>=</span> document<span>.</span><span>querySelector</span><span>(</span><span>'button'</span><span>)</span><span>;</span>
+			btn<span>.</span><span>addEventListener</span><span>(</span><span>'click'</span><span>,</span> <span>function</span><span>(</span><span>)</span> <span>{</span>
+				<span>alert</span><span>(</span><span>'马上开始'</span><span>)</span><span>;</span>
+			<span>}</span><span>)</span><span>;</span>
+		</span></span><span><span><span>&lt;/</span>script</span><span>></span></span>
+	<span><span><span>&lt;/</span>body</span><span>></span></span>
+<span><span><span>&lt;/</span>html</span><span>></span></span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br></div></div><p>以上就是一个事件监听的实例，通过在网页中点击按钮，就会执行事件调用函数，弹窗显示内容。</p>
+<h3 id="事件类型" tabindex="-1"> 事件类型</h3>
+<p>学习了事件的定义以及如何实现一个最简单的事件监听，接下来就来看看，Web API 中为 DOM 提供的常用事件类型有哪些。</p>
+<p>主要有 4 种类型的事件，分为：</p>
+<ul>
+<li><strong>鼠标事件</strong></li>
+<li><strong>焦点事件</strong></li>
+<li><strong>键盘事件</strong></li>
+<li><strong>文本事件</strong></li>
+</ul>
+<p>以下就分别来看看这些类型的事件又可以细分为哪些小类。</p>
+<ol>
+<li><strong>鼠标事件</strong></li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>事件</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>click</code></td>
+<td>鼠标点击</td>
+</tr>
+<tr>
+<td><code>mouseenter</code></td>
+<td>鼠标经过</td>
+</tr>
+<tr>
+<td><code>mouseleave</code></td>
+<td>鼠标离开</td>
+</tr>
+</tbody>
+</table>
+<ol start="2">
+<li><strong>焦点事件</strong></li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>事件</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>focus</code></td>
+<td>获得焦点</td>
+</tr>
+<tr>
+<td><code>blur</code></td>
+<td>失去焦点</td>
+</tr>
+</tbody>
+</table>
+<ol start="3">
+<li><strong>键盘触发</strong></li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>事件</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>keydown</code></td>
+<td>键盘按下触发</td>
+</tr>
+<tr>
+<td><code>keyup</code></td>
+<td>键盘抬起触发</td>
+</tr>
+</tbody>
+</table>
+<ol start="4">
+<li><strong>文本事件</strong></li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>事件</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>input</code></td>
+<td>用户输入事件</td>
+</tr>
+</tbody>
+</table>
+<h2 id="高阶函数" tabindex="-1"> 高阶函数</h2>
+<p>高阶函数，简单的说可以被理解为函数的高级应用，JavaScript 中函数能够当成值来对待，然后基于这个值来实现函数的高级应用。</p>
+<h3 id="函数表达式" tabindex="-1"> 函数表达式</h3>
+<p>函数表达式其实和普通的函数没有本质上的区别，以下是一个函数表达式和一个普通函数。</p>
+<ul>
+<li>函数表达式</li>
+</ul>
+<div><pre><code><span>let</span> <span>sum1</span> <span>=</span> <span>function</span><span>(</span><span>x<span>,</span> y</span><span>)</span> <span>{</span>
+    <span>return</span> x <span>+</span> y<span>;</span>
+<span>}</span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br></div></div><ul>
+<li>普通函数</li>
+</ul>
+<div><pre><code><span>function</span> <span>sum2</span><span>(</span><span>x<span>,</span> y</span><span>)</span><span>{</span>
+    <span>return</span> x <span>+</span> y<span>;</span>
+<span>}</span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br></div></div><p>在调用时，可以发现调用方式其实都一样，两者最终得到的结果也一致。</p>
+<div><pre><code><span>// 函数表达式调用</span>
+<span>sum1</span><span>(</span><span>10</span><span>,</span> <span>20</span><span>)</span><span>;</span>
+<span>// 普通函数调用</span>
+<span>sum2</span><span>(</span><span>10</span><span>,</span> <span>20</span><span>)</span><span>;</span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br></div></div><h3 id="回调函数" tabindex="-1"> 回调函数</h3>
+<p>如果有两个函数 A 和 B，假设我们将函数 A 作为参数传递给函数 B，那么我们此时将函数 A 叫做 <strong>回调函数</strong>。总结来说就是如果一个函数被当做参数来传递给另一个函数时，则这个被当做参数的函数就叫做回调函数。</p>
+<div><pre><code><span>function</span> <span>A</span><span>(</span><span>)</span><span>{</span>
+    ……
+<span>}</span>
+<span>// 此时 A 就是一个回调函数</span>
+<span>setInterval</span><span>(</span><span>A</span><span>,</span> <span>100</span><span>)</span><span>;</span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br></div></div><h2 id="环境对象" tabindex="-1"> 环境对象</h2>
+<p>环境对象是指函数内部特殊的变量 <code>this</code>，它代表着当前函数运行时所处的环境。</p>
+<p>JavaScript 中，<code>this</code> 不是固定不变的，它会随着执行环境的变化而变化。<code>this</code> 在不同位置，也有着不同的含义。</p>
+<table>
+<thead>
+<tr>
+<th>位置</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>方法中</td>
+<td><code>this</code> 表示该方法所属的对象</td>
+</tr>
+<tr>
+<td>单独使用</td>
+<td><code>this</code> 表示全局对象</td>
+</tr>
+<tr>
+<td>函数中</td>
+<td><code>this</code> 表示全局对象</td>
+</tr>
+<tr>
+<td>事件中</td>
+<td><code>this</code> 表示接收事件的元素</td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li><strong>方法中</strong></li>
+</ol>
+<p>假设有一个对象，则此时对象方法 <code>info</code> 中的 <code>this</code> 就代表 <code>hero</code> 这个对象。</p>
+<div><pre><code><span>let</span> hero <span>=</span> <span>{</span>
+    <span>name</span><span>:</span> <span>'伽罗'</span><span>,</span>
+    <span>sex</span><span>:</span> <span>'女'</span><span>,</span>
+    <span>info</span><span>:</span> <span>function</span><span>(</span><span>)</span><span>{</span>
+        <span>return</span> <span>this</span><span>.</span>name <span>+</span> <span>" , "</span> <span>+</span> <span>this</span><span>.</span>sex<span>;</span>
+    <span>}</span>
+<span>}</span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br></div></div><ol start="2">
+<li><strong>单独使用</strong></li>
+</ol>
+<p>单独使用时，<code>this</code> 指向了全局对象。</p>
+<div><pre><code><span>let</span> num <span>=</span> <span>this</span><span>;</span>
+<span>alert</span><span>(</span>num<span>)</span><span>;</span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br></div></div><p><img src="https://cdn.jsdelivr.net/gh/cunyu1943/blog-imgs@main/2022/04/image-20220424143845013.png" alt="" loading="lazy"></p>
+<ol start="3">
+<li><strong>函数中</strong></li>
+</ol>
+<p>函数中使用 <code>this</code> 时，同样指向全局对象。</p>
+<div><pre><code><span>function</span> <span>func</span><span>(</span><span>)</span><span>{</span>
+    <span>return</span> <span>this</span><span>;</span>
+<span>}</span>
+<span>alert</span><span>(</span><span>func</span><span>(</span><span>)</span><span>)</span><span>;</span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br></div></div><p><img src="https://cdn.jsdelivr.net/gh/cunyu1943/blog-imgs@main/2022/04/image-20220424143845013.png" alt="" loading="lazy"></p>
+<h2 id="总结" tabindex="-1"> 总结</h2>
+<p>本文主要从什么是事件、如何实现事件监听和常见的事件类型三个方面介绍了关于事件的知识点。此外，从函数表达式和回调函数对函数的高阶用法做了简要介绍。最后则是对使用最多的 <code>this</code> 在不同环境中使用时所代表的一些含义。</p>
+]]></content:encoded>
+      <enclosure url="https://cdn.jsdelivr.net/gh/cunyu1943/blog-imgs@main/2022/04/image-20220424143845013.png" type="image/png"/>
+    </item>
     <item>
       <title>JS 教程「9」：DOM 元素获取、属性修改</title>
       <link>https://cunyu1943.github.io/JavaPark/JavaPark/java/java-web/js/dom-get-attribute.html</link>
@@ -28841,184 +29062,6 @@ num <span>=</span> <span>(</span><span>int</span><span>)</span>ans<span>;</span>
 <img src="https://cdn.jsdelivr.net/gh/cunyu1943/cunyu1943@main/imgs/wepublic.gif" width="200" alt="公众号" />
 ]]></content:encoded>
       <enclosure url="https://cdn.jsdelivr.net/gh/cunyu1943/blog-imgs@main//blog/image-20220108172004702.png" type="image/png"/>
-    </item>
-    <item>
-      <title>Spring Boot 基础教程：整合 Thymeleaf 实例</title>
-      <link>https://cunyu1943.github.io/JavaPark/JavaPark/java/spring-boot/integrated-thymeleaf.html</link>
-      <guid>https://cunyu1943.github.io/JavaPark/JavaPark/java/spring-boot/integrated-thymeleaf.html</guid>
-      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">Spring Boot 基础教程：整合 Thymeleaf 实例</source>
-      <category>Spring Boot 基础教程</category>
-      <pubDate>Sun, 09 Jan 2022 16:17:16 GMT</pubDate>
-      <content:encoded><![CDATA[<h2 id="什么是-thymeleaf" tabindex="-1"> 什么是 Thymeleaf</h2>
-<ul>
-<li>
-<p>Thymeleaf 是新一代的 Java 模板引擎，类似于 Velocity、FreeMarker 等传统引擎，其语言和 HTML 很接近，而且扩展性更高；</p>
-</li>
-<li>
-<p>Thymeleaf 的主要目的是将优雅的模板引入开发工作流程中，并将 HTML 在浏览器中正确显示。同时能够作为静态引擎，让开发成员之间更方便协作开发；</p>
-</li>
-<li>
-<p>Spring Boot 官方推荐使用模板，而且 Spring Boot 也为 Thymeleaf 提供了完整的自动化 配置解决方案；</p>
-</li>
-<li>
-<p>Thymeleaf 使用教程请戳 <a href="https://www.thymeleaf.org/doc/tutorials/3.0/usingthymeleaf.html" target="_blank" rel="noopener noreferrer">Tutorial: Using Thymeleaf<ExternalLinkIcon/></a>，配合 Spring 使用的教程请戳 <a href="https://www.thymeleaf.org/doc/tutorials/3.0/thymeleafspring.html" target="_blank" rel="noopener noreferrer">Tutorial: Thymeleaf + Spring<ExternalLinkIcon/></a>。</p>
-</li>
-</ul>
-<h2 id="整合过程" tabindex="-1"> 整合过程</h2>
-<h3 id="准备过程" tabindex="-1"> 准备过程</h3>
-<p>正式开始整合过程之前，这里先给出本文的搭建环境，方便大家进行后续内容的学习。</p>
-<ul>
-<li>JDK 11（理论上其他版本的 JDK 也是可以的，但是更为推荐 JDK 1.8 及以后的版本）</li>
-<li>IDEA（这里没有啥要求，但我个人的话是出新的版本我就会更新，虽然臃肿，但是更新了确实好用 😂）</li>
-<li>SpringBoot 2.x（现在主流应该都是 2.x 版本，1.x 的都是老一点的版本了）</li>
-</ul>
-<h3 id="添加-thymeleaf-依赖" tabindex="-1"> 添加 Thymeleaf 依赖</h3>
-<p>添加 Thymeleaf 依赖有两种方式：</p>
-<ol>
-<li><strong>第一种</strong></li>
-</ol>
-<p>在新建项目时添加，在 <code>Templeate Engines</code> 中勾选 Thymeleaf；</p>
-<p><img src="https://s1.ax1x.com/2020/07/29/ae6BOH.png" alt="" loading="lazy"></p>
-<ol start="2">
-<li><strong>第二种</strong></li>
-</ol>
-<p>对于忘记在新建项目时未添加 Thymeleaf 依赖的项目，可以直接在项目的 <code>pom.xml</code> 中手动添加依赖即可；</p>
-<div><pre><code><span><span><span>&lt;</span>dependency</span><span>></span></span>
-    <span><span><span>&lt;</span>groupId</span><span>></span></span>org.springframework.boot<span><span><span>&lt;/</span>groupId</span><span>></span></span>
-    <span><span><span>&lt;</span>artifactId</span><span>></span></span>spring-boot-starter-thymeleaf<span><span><span>&lt;/</span>artifactId</span><span>></span></span>
-<span><span><span>&lt;/</span>dependency</span><span>></span></span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br></div></div><h3 id="编写实体类和-controller" tabindex="-1"> 编写实体类和 Controller</h3>
-<ol>
-<li>新建实体类 <code>User</code></li>
-</ol>
-<p>这里因为使用 Lombok，所以省去了各种 <code>setter</code>、<code>getter</code>，同时还省去了各种构造方法和重写 <code>toString()</code> 等方法，大大简化了代码。而我们所要做的，仅仅是在 <code>pom.xml</code> 中添加 Lombok 的依赖，然后在我们的实体类中加入对应的注解即可。</p>
-<p>以下是在 <code>pom.xml</code> 中插入 Lombok 依赖的对应代码。</p>
-<div><pre><code><span><span><span>&lt;</span>dependency</span><span>></span></span>
-    <span><span><span>&lt;</span>groupId</span><span>></span></span>org.projectlombok<span><span><span>&lt;/</span>groupId</span><span>></span></span>
-    <span><span><span>&lt;</span>artifactId</span><span>></span></span>lombok<span><span><span>&lt;/</span>artifactId</span><span>></span></span>
-    <span><span><span>&lt;</span>optional</span><span>></span></span>true<span><span><span>&lt;/</span>optional</span><span>></span></span>
-<span><span><span>&lt;/</span>dependency</span><span>></span></span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br></div></div><p>然后我们就可以编写我们的实体类，这里主要用到了 <code>@Data</code>、<code>@Component</code>、<code>@AllArgsConstructor</code> 、<code>NoArgsConstructor</code> 四个注解，其中各个注解的含义如下：</p>
-<ul>
-<li>
-<p><code>@Component</code>：把类实例化到 Spring 容器，相当于在配置文件中配置；</p>
-</li>
-<li>
-<p><code>@Data</code> ：给类的所有属性提供 <code>get</code> 和 <code>set</code> 方法，此外还有 <code>equals、canEqual、hashCode、toString</code> 方法以及 <strong>默认参数为空的构造方法</strong>；</p>
-</li>
-<li>
-<p><code>@AllArgsConstructor</code>：为类提供一个 <strong>全参构造方法</strong>，但此时不再提供默认构造方法；</p>
-</li>
-<li>
-<p><code>@NoArgsConstructor</code>：因为使用了 <code>AllArgsConstructor</code> 会导致类没有默认空参构造方法，所以此时需要它为类提供一个 <strong>无参构造方法</strong>；</p>
-</li>
-</ul>
-<div><pre><code><span>package</span> <span>com<span>.</span>cunyu<span>.</span>pojo</span><span>;</span>
-
-<span>import</span> <span>lombok<span>.</span></span><span>AllArgsConstructor</span><span>;</span>
-<span>import</span> <span>lombok<span>.</span></span><span>Data</span><span>;</span>
-<span>import</span> <span>lombok<span>.</span></span><span>NoArgsConstructor</span><span>;</span>
-<span>import</span> <span>org<span>.</span>springframework<span>.</span>stereotype<span>.</span></span><span>Component</span><span>;</span>
-
-<span>/**
- * <span>@author</span> : cunyu
- * <span>@version</span> : 1.0
- * <span>@className</span> : User
- * <span>@date</span> : 2020/7/29 16:20
- * <span>@description</span> : User 实体类
- */</span>
-
-<span>@Component</span>
-<span>@Data</span>
-<span>@AllArgsConstructor</span>
-<span>@NoArgsConstructor</span>
-<span>public</span> <span>class</span> <span>User</span> <span>{</span>
-    <span>private</span> <span>int</span> age<span>;</span>
-    <span>private</span> <span>String</span> name<span>;</span>
-    <span>private</span> <span>String</span> email<span>;</span>
-<span>}</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br></div></div><ol start="2">
-<li>编写 Controller</li>
-</ol>
-<p>此时主要需要注意的是 <code>setViewName()</code> 和 <code>addObject()</code>，前者表示方法对应的前端页面，也就是我们模板中对应文件名的 <code>.html</code> 文件，而后者则主要给属性注入值，然后将属性传递到前端模板。</p>
-<div><pre><code><span>package</span> <span>com<span>.</span>cunyu<span>.</span>controller</span><span>;</span>
-
-<span>import</span> <span>com<span>.</span>cunyu<span>.</span>pojo<span>.</span></span><span>User</span><span>;</span>
-<span>import</span> <span>org<span>.</span>springframework<span>.</span>stereotype<span>.</span></span><span>Controller</span><span>;</span>
-<span>import</span> <span>org<span>.</span>springframework<span>.</span>web<span>.</span>bind<span>.</span>annotation<span>.</span></span><span>GetMapping</span><span>;</span>
-<span>import</span> <span>org<span>.</span>springframework<span>.</span>web<span>.</span>bind<span>.</span>annotation<span>.</span></span><span>RequestMapping</span><span>;</span>
-<span>import</span> <span>org<span>.</span>springframework<span>.</span>web<span>.</span>servlet<span>.</span></span><span>ModelAndView</span><span>;</span>
-
-<span>/**
- * <span>@author</span> : cunyu
- * <span>@version</span> : 1.0
- * <span>@className</span> : UserController
- * <span>@date</span> : 2020/7/29 16:22
- * <span>@description</span> : UserController
- */</span>
-
-<span>@Controller</span>
-<span>public</span> <span>class</span> <span>UserController</span> <span>{</span>
-
-    <span>// 访问 ip:port/index</span>
-    <span>@GetMapping</span><span>(</span><span>"/index"</span><span>)</span>
-    <span>public</span> <span>ModelAndView</span> <span>index</span><span>(</span><span>)</span> <span>{</span>
-        <span>ModelAndView</span> modelAndView <span>=</span> <span>new</span> <span>ModelAndView</span><span>(</span><span>)</span><span>;</span>
-        <span>// 设置跳转的视图，即位于 templates/index.html</span>
-        modelAndView<span>.</span><span>setViewName</span><span>(</span><span>"index"</span><span>)</span><span>;</span>
-        modelAndView<span>.</span><span>addObject</span><span>(</span><span>"title"</span><span>,</span> <span>"Thymeleaf 使用"</span><span>)</span><span>;</span>
-        modelAndView<span>.</span><span>addObject</span><span>(</span><span>"desc"</span><span>,</span> <span>"Spring Boot 整合 Thymeleaf"</span><span>)</span><span>;</span>
-
-        <span>User</span> author <span>=</span> <span>new</span> <span>User</span><span>(</span><span>25</span><span>,</span> <span>"村雨遥"</span><span>,</span> <span>"747731461@qq.com"</span><span>)</span><span>;</span>
-
-        modelAndView<span>.</span><span>addObject</span><span>(</span><span>"author"</span><span>,</span> author<span>)</span><span>;</span>
-        <span>return</span> modelAndView<span>;</span>
-    <span>}</span>
-<span>}</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br><span>27</span><br><span>28</span><br><span>29</span><br><span>30</span><br><span>31</span><br><span>32</span><br><span>33</span><br><span>34</span><br></div></div><h3 id="创建thymeleaf-模板" tabindex="-1"> 创建Thymeleaf 模板</h3>
-<p>第上面的代码中，我们设置了跳转的视图为 <code>index</code>，所以我们需要在 <code>src/main/resources/templates</code> 中创建 <code>index.html</code>。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/cunyu1943/blog-imgs@main//blog/image-20210809205828636.png" alt="" loading="lazy"></p>
-<div><pre><code><span><span>&lt;!</span><span>DOCTYPE</span> <span>html</span><span>></span></span>
-<span><span><span>&lt;</span>html</span> <span>xmlns</span><span><span>=</span><span>"</span>http://www.w3.org/1999/xhtml<span>"</span></span>
-      <span><span>xmlns:</span>th</span><span><span>=</span><span>"</span>http://www.thymeleaf.org<span>"</span></span><span>></span></span>
-<span><span><span>&lt;</span>head</span><span>></span></span>
-    <span><span><span>&lt;</span>meta</span> <span>charset</span><span><span>=</span><span>"</span>UTF-8<span>"</span></span><span>></span></span>
-    <span>&lt;!-- 即 Controller 中的 title 属性 --></span>
-    <span><span><span>&lt;</span>title</span> <span><span>th:</span>text</span><span><span>=</span><span>"</span>${title}<span>"</span></span><span>></span></span><span><span><span>&lt;/</span>title</span><span>></span></span>
-    
-<span><span><span>&lt;/</span>head</span><span>></span></span>
-<span><span><span>&lt;</span>body</span><span>></span></span>
-<span>&lt;!-- 即 Controller 中的 desc 属性 --></span>
-<span><span><span>&lt;</span>h1</span> <span><span>th:</span>text</span><span><span>=</span><span>"</span>${desc}<span>"</span></span> <span><span>th:</span>align</span><span><span>=</span><span>"</span>center<span>"</span></span><span>></span></span><span><span><span>&lt;/</span>h1</span><span>></span></span>
-    
-<span>&lt;!-- 即 Controller 中的 author 信息 --></span>
-<span><span><span>&lt;</span>h2</span> <span><span>th:</span>align</span><span><span>=</span><span>"</span>center<span>"</span></span><span>></span></span>=====作者信息=====<span><span><span>&lt;/</span>h2</span><span>></span></span>
-<span><span><span>&lt;</span>p</span> <span><span>th:</span>text</span><span><span>=</span><span>"</span>${author?.name}<span>"</span></span><span>></span></span><span><span><span>&lt;/</span>p</span><span>></span></span>
-<span><span><span>&lt;</span>p</span> <span><span>th:</span>text</span><span><span>=</span><span>"</span>${author?.age}<span>"</span></span><span>></span></span><span><span><span>&lt;/</span>p</span><span>></span></span>
-<span><span><span>&lt;</span>p</span> <span><span>th:</span>text</span><span><span>=</span><span>"</span>${author?.email}<span>"</span></span><span>></span></span><span><span><span>&lt;/</span>p</span><span>></span></span>
-<span><span><span>&lt;/</span>body</span><span>></span></span>
-<span><span><span>&lt;/</span>html</span><span>></span></span>
-
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br></div></div><h3 id="测试" tabindex="-1"> 测试</h3>
-<p>启动项目，然后在浏览器中访问 <code>http://localhost:8080/index</code>，如果出现下图中的信息，说明整合成功。</p>
-<p><img src="https://s1.ax1x.com/2020/07/29/ae2Uf0.png" alt="" loading="lazy"></p>
-<h2 id="注意事项" tabindex="-1"> 注意事项</h2>
-<p>为了方便使用，我们在使用 Thymeleaf 模板时，可以添加一些自己的配置。而添加的位置则是项目的配置文件 <code>application.yml</code>，项目默认配置文件应该是 <code>application.properties</code>，但 SpringBoot 更加推荐使用 yml 来配置，所以我们这里需要手动将其改为 yml 的格式，然后设置 Thymeleaf 的相关配置即可。</p>
-<div><pre><code><span>spring</span><span>:</span>
-<span>  thymeleaf</span><span>:</span>
-<span>    cache</span><span>:</span> <span>false</span>
-<span>    prefix</span><span>:</span> <span>classpath:/templates/</span>
-<span>    suffix</span><span>:</span> <span>.html</span>
-<span>    mode</span><span>:</span> <span>HTML</span>
-<span>    encoding</span><span>:</span> <span>UTF-8</span>
-<span>    servlet</span><span>:</span>
-<span>      content-type</span><span>:</span> <span>text/html</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br></div></div><h2 id="总结" tabindex="-1"> 总结</h2>
-<p>好了，以上就是我们今天的所有内容了。今天主要介绍了 Themeleaf 的相关简介，然后对利用 SpringBoot 整合 Thymeleaf 的过程进行了描述，最后则是使用 Thymeleaf 中常用的一些相关配置的注意事项。</p>
-<p><strong>关注公众号，获取最新文章更新</strong></p>
-<img src="https://cdn.jsdelivr.net/gh/cunyu1943/cunyu1943@main/imgs/wepublic.gif" width="200" alt="公众号" />
-]]></content:encoded>
-      <enclosure url="https://s1.ax1x.com/2020/07/29/ae6BOH.png" type="image/png"/>
     </item>
   </channel>
 </rss>
