@@ -3,7 +3,7 @@
   <id>https://cunyu1943.github.io/JavaPark/JavaPark/</id>
   <title>JavaPark</title>
   <subtitle>Java 自学编程之路</subtitle>
-  <updated>2022-04-25T06:27:46.736Z</updated>
+  <updated>2022-04-25T06:37:06.143Z</updated>
   <generator>vuepress-plugin-feed2</generator>
   <link rel="self" href="https://cunyu1943.github.io/JavaPark/JavaPark/atom.xml"/>
   <link rel="alternate" href="https://cunyu1943.github.io/JavaPark/JavaPark/"/>
@@ -6762,10 +6762,10 @@ console<span>.</span><span>log</span><span>(</span>arr<span>)</span><span>;</spa
     <published>2022-04-20T11:05:55.000Z</published>
   </entry>
   <entry>
-    <title type="html">JS 教程「5」：流程控制</title>
+    <title type="html">JS 教程：流程控制</title>
     <id>https://cunyu1943.github.io/JavaPark/JavaPark/java/java-web/js/process-control.html</id>
     <link href="https://cunyu1943.github.io/JavaPark/JavaPark/java/java-web/js/process-control.html"/>
-    <updated>2022-04-19T14:25:26.000Z</updated>
+    <updated>2022-04-25T06:35:33.000Z</updated>
     <content type="html"><![CDATA[<p>一个程序中，各个代码之间的执行顺序对于程序结果是会造成影响的。就拿下面简单的例子来说，假如我们拿先使用 <code>num</code> 这个变量然后再定义和先定义变量再使用相比。先使用再定义会报错 <code>undefined</code>，而定义再使用就没有问题。也就是说，代码的先后顺序会对我们的程序结果造成直接影响。</p>
 <div><pre><code>console<span>.</span><span>log</span><span>(</span>num<span>)</span><span>;</span>
 <span>var</span> num <span>=</span> <span>10</span><span>;</span>

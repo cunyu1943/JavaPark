@@ -6,8 +6,8 @@
     <link>https://cunyu1943.github.io/JavaPark/JavaPark/</link>
     <description>Java 自学编程之路</description>
     <language>zh-CN</language>
-    <pubDate>Mon, 25 Apr 2022 06:27:46 GMT</pubDate>
-    <lastBuildDate>Mon, 25 Apr 2022 06:27:46 GMT</lastBuildDate>
+    <pubDate>Mon, 25 Apr 2022 06:37:06 GMT</pubDate>
+    <lastBuildDate>Mon, 25 Apr 2022 06:37:06 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>PostgreSQL 教程</category>
@@ -6792,10 +6792,10 @@ console<span>.</span><span>log</span><span>(</span>arr<span>)</span><span>;</spa
       <enclosure url="https://cdn.jsdelivr.net/gh/cunyu1943/blog-imgs@main/2022/04/image-20220420094444070.png" type="image/png"/>
     </item>
     <item>
-      <title>JS 教程「5」：流程控制</title>
+      <title>JS 教程：流程控制</title>
       <link>https://cunyu1943.github.io/JavaPark/JavaPark/java/java-web/js/process-control.html</link>
       <guid>https://cunyu1943.github.io/JavaPark/JavaPark/java/java-web/js/process-control.html</guid>
-      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">JS 教程「5」：流程控制</source>
+      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">JS 教程：流程控制</source>
       <category>JavaScript 教程</category>
       <pubDate>Tue, 19 Apr 2022 22:22:22 GMT</pubDate>
       <content:encoded><![CDATA[<p>一个程序中，各个代码之间的执行顺序对于程序结果是会造成影响的。就拿下面简单的例子来说，假如我们拿先使用 <code>num</code> 这个变量然后再定义和先定义变量再使用相比。先使用再定义会报错 <code>undefined</code>，而定义再使用就没有问题。也就是说，代码的先后顺序会对我们的程序结果造成直接影响。</p>
