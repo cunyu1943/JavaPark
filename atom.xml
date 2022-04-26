@@ -3,7 +3,7 @@
   <id>https://cunyu1943.github.io/JavaPark/JavaPark/</id>
   <title>JavaPark</title>
   <subtitle>Java 自学编程之路</subtitle>
-  <updated>2022-04-26T05:19:43.313Z</updated>
+  <updated>2022-04-26T05:36:49.023Z</updated>
   <generator>vuepress-plugin-feed2</generator>
   <link rel="self" href="https://cunyu1943.github.io/JavaPark/JavaPark/atom.xml"/>
   <link rel="alternate" href="https://cunyu1943.github.io/JavaPark/JavaPark/"/>
@@ -28,7 +28,7 @@
     <title type="html">macOS 教程：iTerm2 + Fish 打造高效终端</title>
     <id>https://cunyu1943.github.io/JavaPark/JavaPark/efficiency/macos/fish-shell.html</id>
     <link href="https://cunyu1943.github.io/JavaPark/JavaPark/efficiency/macos/fish-shell.html"/>
-    <updated>2022-04-26T05:18:36.000Z</updated>
+    <updated>2022-04-26T05:35:46.000Z</updated>
     <content type="html"><![CDATA[<h2 id="什么是-fish" tabindex="-1"> 什么是 Fish</h2>
 <p>作为一个程序员，难免会和命令行打交道。而提及到命令行，那 Shell 肯定绕不开，说白了，其实学习各种命令实质就是在学习 Shell。</p>
 <p>当前市面上有很多 Shell，用的最多的可能就是 Bash 和 zsh 了。比如 macOS 中默认的 Shell 就是 Bash，然后之前也用过一段时间 zsh，两者各有千秋，看自己的喜好，不过个人觉得总体来讲 zsh 更好用！</p>
@@ -113,7 +113,7 @@ fish <span>install</span>
 </tbody>
 </table>
 <h2 id="总结" tabindex="-1"> 总结</h2>
-<p>以上就是我们关于 <code>Fish</code> 的安装以及简单的配置教程了，如果你也想拥有如此酷炫的终端，那就赶紧来试试吧！</p>
+<p>以上就是我们关于 <code>Fish</code> 的安装以及简单的配置教程了，如果你也想拥有如此酷炫的终端，那就赶紧来试试吧！t</p>
 ]]></content>
     <category term="工具教程"/>
     <published>2022-04-26T13:14:25.000Z</published>
@@ -1749,7 +1749,7 @@ console<span>.</span><span>log</span><span>(</span><span>'和为：'</span> <spa
     <title type="html">效率工具：Gitee + Typora 打造写作环境</title>
     <id>https://cunyu1943.github.io/JavaPark/JavaPark/efficiency/gitee-typora.html</id>
     <link href="https://cunyu1943.github.io/JavaPark/JavaPark/efficiency/gitee-typora.html"/>
-    <updated>2022-04-20T14:29:12.000Z</updated>
+    <updated>2022-04-26T05:35:46.000Z</updated>
     <content type="html"><![CDATA[<h2 id="前言" tabindex="-1"> 前言</h2>
 <p>对于写博客的朋友们来讲，图床这个东西一定不会陌生，而且在一定程度上也给大家造成过一定困扰。</p>
 <p>上一篇文章中我们讲了如何 <a href="https://mp.weixin.qq.com/s?__biz=MzIyNTg2MjkzNw==&amp;mid=2247492657&amp;idx=1&amp;sn=4420ebc879c2013ee564b832f6615d10&amp;chksm=e87b9047df0c195109f063d5118bbbd01d72469857965360a7cca5951871a7f1fcb470328016&amp;token=1963893699&amp;lang=zh_CN#rd" target="_blank" rel="noopener noreferrer">利用 Github 搭建自己的免费图床<ExternalLinkIcon/></a>，但有人反映 Github 访问有点慢，而且也不太稳定，所以就推荐用国内的 Gitee 来搭建，于是今天就带来新鲜热乎的基于 Gitee  所搭建的免费图床教程，也水一篇文章，希望对大家伙有所帮助。</p>
@@ -2333,7 +2333,7 @@ A[开始] -->B[出示证件]
     <title type="html">工具教程：技术写作中的神兵利器</title>
     <id>https://cunyu1943.github.io/JavaPark/JavaPark/efficiency/write-tools.html</id>
     <link href="https://cunyu1943.github.io/JavaPark/JavaPark/efficiency/write-tools.html"/>
-    <updated>2022-04-20T14:29:12.000Z</updated>
+    <updated>2022-04-26T05:35:46.000Z</updated>
     <content type="html"><![CDATA[<h2 id="前言" tabindex="-1"> 前言</h2>
 <p>之前参加了由掘金社区组织的创作者训练营第二期活动，有幸见到了比如月影、工业聚、张晋涛等许多这个行业的大佬，也认识了许多技术写作的博主，可谓是一场大型网友面基会，哈哈哈 🤣. 针对大佬们的演讲和各位博主的提问，发现大家对于多平台分发这一块很感兴趣，也被这个问题困扰了许久，所以今天就来讲讲我这个小菜鸟在平常创作和发布这一块中摸索使用的一些工具总结，希望能对大家有所帮助。下面就来看看文章的主要内容，我主要会从如下几个方面来进行展开：</p>
 <ul>
@@ -3504,7 +3504,7 @@ source $ZSH/oh-my-zsh.sh
     <title type="html">macOS 教程：iTerm2 + Oh My Zsh 打造帅气终端</title>
     <id>https://cunyu1943.github.io/JavaPark/JavaPark/efficiency/macos/item-oh-my-zsh.html</id>
     <link href="https://cunyu1943.github.io/JavaPark/JavaPark/efficiency/macos/item-oh-my-zsh.html"/>
-    <updated>2022-04-20T14:29:12.000Z</updated>
+    <updated>2022-04-26T05:35:46.000Z</updated>
     <content type="html"><![CDATA[<h2 id="前言" tabindex="-1"> 前言</h2>
 <p>说在前面，本文主要适合于的是使用 macOS 系统的小伙伴，如果你使用的 Windows 或者 Linux 系统的电脑，那可能暂时不太适合你。当然了，如果你只是想了解一下新知识，那么欢迎各位！</p>
 <p>终端（也就是 Windows 中所说的控制台）在我们大多数人的印象中，应该都是黑乎乎的一片，然后再加几个白色的文字吧。如果你还这样想，那你可就 Out 了，现在，我们的终端也可以改造成酷炫时尚的模样，就像下面这张图，那该怎么改呢？赶紧来看看吧。</p>
@@ -4098,7 +4098,7 @@ source $ZSH/oh-my-zsh.sh
     <title type="html">Windows 教程：Node.js 安装教程</title>
     <id>https://cunyu1943.github.io/JavaPark/JavaPark/efficiency/windows/nodejs-install.html</id>
     <link href="https://cunyu1943.github.io/JavaPark/JavaPark/efficiency/windows/nodejs-install.html"/>
-    <updated>2022-04-20T14:29:12.000Z</updated>
+    <updated>2022-04-26T05:35:46.000Z</updated>
     <content type="html"><![CDATA[<h2 id="前言" tabindex="-1"> 前言</h2>
 <p>本教程所有操作基于<code>Window 10</code>操作系统 + <code>Node.js v12.16.1-x64</code>，原则上适用于所有<code>Windows</code>操作系统，细节不同请根据自己需要自行判断。</p>
 <h2 id="下载" tabindex="-1"> 下载</h2>

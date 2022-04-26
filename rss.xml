@@ -6,8 +6,8 @@
     <link>https://cunyu1943.github.io/JavaPark/JavaPark/</link>
     <description>Java 自学编程之路</description>
     <language>zh-CN</language>
-    <pubDate>Tue, 26 Apr 2022 05:19:43 GMT</pubDate>
-    <lastBuildDate>Tue, 26 Apr 2022 05:19:43 GMT</lastBuildDate>
+    <pubDate>Tue, 26 Apr 2022 05:36:49 GMT</pubDate>
+    <lastBuildDate>Tue, 26 Apr 2022 05:36:49 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>工具教程</category>
@@ -118,7 +118,7 @@ fish <span>install</span>
 </tbody>
 </table>
 <h2 id="总结" tabindex="-1"> 总结</h2>
-<p>以上就是我们关于 <code>Fish</code> 的安装以及简单的配置教程了，如果你也想拥有如此酷炫的终端，那就赶紧来试试吧！</p>
+<p>以上就是我们关于 <code>Fish</code> 的安装以及简单的配置教程了，如果你也想拥有如此酷炫的终端，那就赶紧来试试吧！t</p>
 ]]></content:encoded>
       <enclosure url="https://cdn.jsdelivr.net/gh/cunyu1943/blog-imgs@main/2022/04/image-20220426101405092.png" type="image/png"/>
     </item>
