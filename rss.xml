@@ -6,8 +6,8 @@
     <link>https://cunyu1943.github.io/JavaPark/JavaPark/</link>
     <description>Java 自学编程之路</description>
     <language>zh-CN</language>
-    <pubDate>Mon, 25 Apr 2022 06:37:06 GMT</pubDate>
-    <lastBuildDate>Mon, 25 Apr 2022 06:37:06 GMT</lastBuildDate>
+    <pubDate>Tue, 26 Apr 2022 01:25:24 GMT</pubDate>
+    <lastBuildDate>Tue, 26 Apr 2022 01:25:24 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>PostgreSQL 教程</category>
@@ -113,7 +113,7 @@
       <guid>https://cunyu1943.github.io/JavaPark/JavaPark/java/java-web/html/basic-lable.html</guid>
       <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">HTML 教程：基础标签</source>
       <category>HTML 教程</category>
-      <pubDate>Mon, 25 Apr 2022 00:00:00 GMT</pubDate>
+      <pubDate>Mon, 25 Apr 2022 16:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2 id="什么是-html" tabindex="-1"> 什么是 HTML</h2>
 <p>HTML（Hypertext Markup Language），中文名超文本标记语言，是一种用于结构化 Web 网页及其内容的标记语言。</p>
 <p>严格意义上讲，HTML 并不是一门编程语言，而是一种用于定义内容结构的标记语言。它由一系列的元素所构成，通过标签与内容组合得到我们所需效果，使其以某种形式呈现。</p>

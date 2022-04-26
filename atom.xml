@@ -3,7 +3,7 @@
   <id>https://cunyu1943.github.io/JavaPark/JavaPark/</id>
   <title>JavaPark</title>
   <subtitle>Java 自学编程之路</subtitle>
-  <updated>2022-04-25T06:37:06.143Z</updated>
+  <updated>2022-04-26T01:25:24.667Z</updated>
   <generator>vuepress-plugin-feed2</generator>
   <link rel="self" href="https://cunyu1943.github.io/JavaPark/JavaPark/atom.xml"/>
   <link rel="alternate" href="https://cunyu1943.github.io/JavaPark/JavaPark/"/>
@@ -107,7 +107,7 @@
     <title type="html">HTML 教程：基础标签</title>
     <id>https://cunyu1943.github.io/JavaPark/JavaPark/java/java-web/html/basic-lable.html</id>
     <link href="https://cunyu1943.github.io/JavaPark/JavaPark/java/java-web/html/basic-lable.html"/>
-    <updated>2022-04-25T06:26:30.000Z</updated>
+    <updated>2022-04-26T01:21:29.000Z</updated>
     <content type="html"><![CDATA[<h2 id="什么是-html" tabindex="-1"> 什么是 HTML</h2>
 <p>HTML（Hypertext Markup Language），中文名超文本标记语言，是一种用于结构化 Web 网页及其内容的标记语言。</p>
 <p>严格意义上讲，HTML 并不是一门编程语言，而是一种用于定义内容结构的标记语言。它由一系列的元素所构成，通过标签与内容组合得到我们所需效果，使其以某种形式呈现。</p>
@@ -539,7 +539,7 @@
 <p>本文介绍了 HTML 的定义，然后对 HTML 中常用的标签进行了举例学习。</p>
 ]]></content>
     <category term="HTML 教程"/>
-    <published>2022-04-25T00:00:00.000Z</published>
+    <published>2022-04-25T16:00:00.000Z</published>
   </entry>
   <entry>
     <title type="html">JS 教程「11」：DOM 事件</title>
