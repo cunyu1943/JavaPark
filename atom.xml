@@ -3,7 +3,7 @@
   <id>https://cunyu1943.github.io/JavaPark/JavaPark/</id>
   <title>JavaPark</title>
   <subtitle>Java 自学编程之路</subtitle>
-  <updated>2022-04-27T03:24:00.728Z</updated>
+  <updated>2022-04-27T12:38:54.744Z</updated>
   <generator>vuepress-plugin-feed2</generator>
   <link rel="self" href="https://cunyu1943.github.io/JavaPark/JavaPark/atom.xml"/>
   <link rel="alternate" href="https://cunyu1943.github.io/JavaPark/JavaPark/"/>
@@ -24,6 +24,174 @@
   <category term="Maven 入门教程"/>
   <category term="博客搭建"/>
   <category term="Java 菜鸟入门"/>
+  <entry>
+    <title type="html">Spring 篇：Bean 详解</title>
+    <id>https://cunyu1943.github.io/JavaPark/JavaPark/java/spring/bean.html</id>
+    <link href="https://cunyu1943.github.io/JavaPark/JavaPark/java/spring/bean.html"/>
+    <updated>2022-04-27T12:37:00.000Z</updated>
+    <content type="html"><![CDATA[<h2 id="bean-的别名配置" tabindex="-1"> Bean 的别名配置</h2>
+<p>接着上一篇文章中的 <code>&lt;bean&gt;</code> 配置，其中配置了 <code>id</code> 属性，通过 <code>id</code> 属性我们就可以获取到对象。其实 <code>&lt;bean&gt;</code> 配置也提供了 <code>name</code> 属性，它是用于定义 Bean 的别名，一个 Bean 的别名是可以有多个的，各个别名之间可以通过逗号（<code>,</code>）、分号（<code>;</code>）、空格（<code> </code>）分隔。</p>
+<div><pre><code><span>&lt;!--  配置 bean  --></span>
+<span><span><span>&lt;</span>bean</span> <span>id</span><span><span>=</span><span>"</span>bookDao<span>"</span></span> <span>name</span><span><span>=</span><span>"</span>dao bookDaoImpl<span>"</span></span> <span>class</span><span><span>=</span><span>"</span>com.cunyu.dao.impl.BookDaoImpl<span>"</span></span><span>/></span></span>
+<span><span><span>&lt;</span>bean</span> <span>id</span><span><span>=</span><span>"</span>bookService<span>"</span></span> <span>name</span><span><span>=</span><span>"</span>service,bookServiceImpl<span>"</span></span> <span>class</span><span><span>=</span><span>"</span>com.cunyu.service.impl.BookServiceImpl<span>"</span></span><span>></span></span>
+    <span>&lt;!-- property 表示配置当前 Bean 的属性
+             name 表示配置哪一个具体的属性
+             ref 表示参照的 Bean
+             --></span>
+    <span><span><span>&lt;</span>property</span> <span>name</span><span><span>=</span><span>"</span>bookDao<span>"</span></span> <span>ref</span><span><span>=</span><span>"</span>bookDao<span>"</span></span><span>/></span></span>
+<span><span><span>&lt;/</span>bean</span><span>></span></span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br></div></div><p>当我们要获取 Bean 时，既可以通过 <code>id</code>，也可以通过 <code>name</code> 获取。两者的区别在于 <code>id</code> 属性是惟一的，而 <code>name</code> 不是，因此在配置时，更加推荐使用 <code>id</code> 而非 <code>name</code> 防止因为重名而导致在获取 Bean 时混淆。</p>
+<p>通过 <code>id</code> 或者 <code>name</code> 获取 Bean 时，如果获取不到，此时程序将抛出异常 <code>NoSuchBeanDefinitionException</code>。</p>
+<div><pre><code>NoSuchBeanDefinitionException: No bean named <span>'xxx'</span> available
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p>一旦遇到以上错误，那么第一反应应该是是去 Spring 配置文件 <code>applicationContext.xml</code> 中查看对应 Bean 是否配置，或者在代码和配置中的 Bean 名是否匹配一致。</p>
+<h2 id="bean-的作用范围" tabindex="-1"> Bean 的作用范围</h2>
+<p>Bean 既然是一个对象，那么它也是有作用范围的。在 <code>&lt;bean&gt;</code> 配置时我们可以利用 <code>scope</code> 属性。</p>
+<table>
+<thead>
+<tr>
+<th>值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>singleton</code></td>
+<td>单例，也是 Bean 磨人的作用范围</td>
+</tr>
+<tr>
+<td><code>prototype</code></td>
+<td>非单例</td>
+</tr>
+</tbody>
+</table>
+<div><pre><code><span><span><span>&lt;</span>bean</span> <span>id</span><span><span>=</span><span>"</span>bookService<span>"</span></span> <span>class</span><span><span>=</span><span>"</span>com.cunyu.service.impl.BookServiceImpl<span>"</span></span> <span>/></span></span>
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><div><pre><code><span><span><span>&lt;</span>bean</span> <span>id</span><span><span>=</span><span>"</span>bookService<span>"</span></span> <span>class</span><span><span>=</span><span>"</span>com.cunyu.service.impl.BookServiceImpl<span>"</span></span> <span>scope</span><span><span>=</span><span>"</span>singleton<span>"</span></span><span>/></span></span>
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p>以上两种配置的效果是一致的，因为 Bean 默认的作用范围是 <code>singleton</code>。接着我们创建两个 <code>BookService</code> 对象，然后打印出来，可以看到它们指向的是同一块内存。</p>
+<div><pre><code><span>public</span> <span>class</span> <span>AppIoC</span> <span>{</span>
+    <span>public</span> <span>static</span> <span>void</span> <span>main</span><span>(</span><span>String</span><span>[</span><span>]</span> args<span>)</span> <span>{</span>
+        <span>//    加载配置文件，获取 IoC 容器</span>
+        <span>ApplicationContext</span> app <span>=</span> <span>new</span> <span>ClassPathXmlApplicationContext</span><span>(</span><span>"applicationContext.xml"</span><span>)</span><span>;</span>
+
+        <span>BookService</span> bookService1 <span>=</span> <span>(</span><span>BookService</span><span>)</span> app<span>.</span><span>getBean</span><span>(</span><span>"bookService"</span><span>)</span><span>;</span>
+        <span>BookService</span> bookService2 <span>=</span> <span>(</span><span>BookService</span><span>)</span> app<span>.</span><span>getBean</span><span>(</span><span>"bookService"</span><span>)</span><span>;</span>
+        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span>bookService1<span>)</span><span>;</span>
+        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span>bookService2<span>)</span><span>;</span>
+    <span>}</span>
+<span>}</span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br></div></div><p><img src="https://cdn.jsdelivr.net/gh/cunyu1943/blog-imgs@main/2022/04/image-20220427154906508.png" alt="" loading="lazy"></p>
+<p>而如果我们将 Bean 的 <code>scope</code> 配置为 <code>prototype</code>，那么此时再创建两个 <code>BookService</code> 对象，然后对比它们的内存地址，会发现两者指向的并非指向同一块内存。</p>
+<div><pre><code><span><span><span>&lt;</span>bean</span> <span>id</span><span><span>=</span><span>"</span>bookService<span>"</span></span> <span>class</span><span><span>=</span><span>"</span>com.cunyu.service.impl.BookServiceImpl<span>"</span></span> <span>scope</span><span><span>=</span><span>"</span>prototype<span>"</span></span><span>/></span></span>
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><div><pre><code><span>public</span> <span>class</span> <span>AppIoC</span> <span>{</span>
+    <span>public</span> <span>static</span> <span>void</span> <span>main</span><span>(</span><span>String</span><span>[</span><span>]</span> args<span>)</span> <span>{</span>
+        <span>//    加载配置文件，获取 IoC 容器</span>
+        <span>ApplicationContext</span> app <span>=</span> <span>new</span> <span>ClassPathXmlApplicationContext</span><span>(</span><span>"applicationContext.xml"</span><span>)</span><span>;</span>
+
+        <span>BookService</span> bookService1 <span>=</span> <span>(</span><span>BookService</span><span>)</span> app<span>.</span><span>getBean</span><span>(</span><span>"bookService"</span><span>)</span><span>;</span>
+        <span>BookService</span> bookService2 <span>=</span> <span>(</span><span>BookService</span><span>)</span> app<span>.</span><span>getBean</span><span>(</span><span>"bookService"</span><span>)</span><span>;</span>
+        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span>bookService1<span>)</span><span>;</span>
+        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span>bookService2<span>)</span><span>;</span>
+    <span>}</span>
+<span>}</span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br></div></div><p><img src="https://cdn.jsdelivr.net/gh/cunyu1943/blog-imgs@main/2022/04/image-20220427160012518.png" alt="" loading="lazy"></p>
+<h2 id="bean-实例化" tabindex="-1"> Bean 实例化</h2>
+<h3 id="构造方法" tabindex="-1"> 构造方法</h3>
+<p>Bean 的本质是对象，所以可以使用构造方法完成。</p>
+<p>同样基于上一篇文章中的实例，配置好 <code>&lt;bean&gt;</code> 之后，然后在 <code>BookDao</code> 接口的实现中用构造方法来创建 Bean，最后在主程序入口中获取 Bean 之后调用方法，可以发现调用了构造方法。</p>
+<div><pre><code><span><span><span>&lt;</span>bean</span> <span>id</span><span><span>=</span><span>"</span>bookDao<span>"</span></span> <span>class</span><span><span>=</span><span>"</span>com.cunyu.dao.impl.BookDaoImpl<span>"</span></span><span>/></span></span>
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><div><pre><code><span>public</span> <span>class</span> <span>BookDaoImpl</span> <span>implements</span> <span>BookDao</span> <span>{</span>
+    <span>private</span> <span>BookDaoImpl</span><span>(</span><span>)</span> <span>{</span>
+        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>"构造方法"</span><span>)</span><span>;</span>
+    <span>}</span>
+
+    <span>@Override</span>
+    <span>public</span> <span>void</span> <span>save</span><span>(</span><span>)</span> <span>{</span>
+        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>"book dao save ……"</span><span>)</span><span>;</span>
+    <span>}</span>
+<span>}</span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br></div></div><div><pre><code><span>public</span> <span>class</span> <span>AppIoC</span> <span>{</span>
+    <span>public</span> <span>static</span> <span>void</span> <span>main</span><span>(</span><span>String</span><span>[</span><span>]</span> args<span>)</span> <span>{</span>
+        <span>//    加载配置文件，获取 IoC 容器</span>
+        <span>ApplicationContext</span> app <span>=</span> <span>new</span> <span>ClassPathXmlApplicationContext</span><span>(</span><span>"applicationContext.xml"</span><span>)</span><span>;</span>
+        <span>//    获取 Bean</span>
+        <span>BookDao</span> bookDao <span>=</span> <span>(</span><span>BookDao</span><span>)</span> app<span>.</span><span>getBean</span><span>(</span><span>"bookDao"</span><span>)</span><span>;</span>
+        bookDao<span>.</span><span>save</span><span>(</span><span>)</span><span>;</span>
+    <span>}</span>
+<span>}</span>
+
+
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br></div></div><p><img src="https://cdn.jsdelivr.net/gh/cunyu1943/blog-imgs@main/2022/04/image-20220427164017994.png" alt="" loading="lazy"></p>
+<h3 id="静态工厂方法" tabindex="-1"> 静态工厂方法</h3>
+<p>利用静态工厂方法对 Bean 进行实例化时，首先需要创建一个工厂类，并在工厂类中创建一个静态方法用于创建对象。然后在 Spring 的配置文件 <code>applicationContext.xml</code> 中配置静态工厂类并指定其中的方法，最后在主程序入口中获取 Bean 并调用方法即可。</p>
+<div><pre><code><span>public</span> <span>class</span> <span>BookDaoFactory</span> <span>{</span>
+    <span>public</span> <span>static</span> <span>BookDao</span> <span>getBookDao</span><span>(</span><span>)</span> <span>{</span>
+        <span>return</span> <span>new</span> <span>BookDaoImpl</span><span>(</span><span>)</span><span>;</span>
+    <span>}</span>
+<span>}</span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br></div></div><div><pre><code><span><span><span>&lt;</span>bean</span> <span>id</span><span><span>=</span><span>"</span>bookDao<span>"</span></span> <span>factory-method</span><span><span>=</span><span>"</span>getBookDao<span>"</span></span> <span>class</span><span><span>=</span><span>"</span>com.cunyu.factory.BookDaoFactory<span>"</span></span><span>/></span></span>
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><div><pre><code><span>public</span> <span>class</span> <span>AppIoC</span> <span>{</span>
+    <span>public</span> <span>static</span> <span>void</span> <span>main</span><span>(</span><span>String</span><span>[</span><span>]</span> args<span>)</span> <span>{</span>
+        <span>//    加载配置文件，获取 IoC 容器</span>
+        <span>ApplicationContext</span> app <span>=</span> <span>new</span> <span>ClassPathXmlApplicationContext</span><span>(</span><span>"applicationContext.xml"</span><span>)</span><span>;</span>
+        <span>//    获取 Bean</span>
+        <span>BookDao</span> bookDao <span>=</span> <span>(</span><span>BookDao</span><span>)</span> app<span>.</span><span>getBean</span><span>(</span><span>"bookDao"</span><span>)</span><span>;</span>
+        bookDao<span>.</span><span>save</span><span>(</span><span>)</span><span>;</span>
+    <span>}</span>
+<span>}</span>
+
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br></div></div><p><img src="https://cdn.jsdelivr.net/gh/cunyu1943/blog-imgs@main/2022/04/image-20220427163059088.png" alt="" loading="lazy"></p>
+<h3 id="实例工厂对象方法" tabindex="-1"> 实例工厂对象方法</h3>
+<p>假设有一个接口和它的实现如下：</p>
+<div><pre><code><span>public</span> <span>interface</span> <span>PersonDao</span> <span>{</span>
+    <span>public</span> <span>void</span> <span>query</span><span>(</span><span>)</span><span>;</span>
+<span>}</span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br></div></div><div><pre><code><span>public</span> <span>class</span> <span>PersonDaoImpl</span> <span>implements</span> <span>PersonDao</span> <span>{</span>
+    <span>@Override</span>
+    <span>public</span> <span>void</span> <span>query</span><span>(</span><span>)</span> <span>{</span>
+        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>"Person Dao query……"</span><span>)</span><span>;</span>
+    <span>}</span>
+<span>}</span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br></div></div><p>我们创建一个实例工厂方法，注意此时我们是继承了 <code>FactoryBean</code> 接口，然后实现了其中的 <code>getObject()</code> 和 <code>getObjectType()</code> 两个方法。</p>
+<div><pre><code><span>public</span> <span>class</span> <span>PersonDaoFactoryBean</span> <span>implements</span> <span>FactoryBean</span><span><span>&lt;</span><span>PersonDao</span><span>></span></span> <span>{</span>
+    <span>@Override</span>
+    <span>public</span> <span>PersonDao</span> <span>getObject</span><span>(</span><span>)</span> <span>throws</span> <span>Exception</span> <span>{</span>
+        <span>return</span> <span>new</span> <span>PersonDaoImpl</span><span>(</span><span>)</span><span>;</span>
+    <span>}</span>
+
+    <span>@Override</span>
+    <span>public</span> <span>Class</span><span><span>&lt;</span><span>?</span><span>></span></span> <span>getObjectType</span><span>(</span><span>)</span> <span>{</span>
+        <span>return</span> <span>PersonDao</span><span>.</span><span>class</span><span>;</span>
+    <span>}</span>
+<span>}</span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br></div></div><p>接着在 Spring 的配置文件中进行配置，需要注意此时的类应该是我们的工厂类 <code>PersonDaoFactoryBean</code>，而不是 <code>PersonDaoImpl</code>。</p>
+<div><pre><code><span><span><span>&lt;</span>bean</span> <span>id</span><span><span>=</span><span>"</span>personDao<span>"</span></span> <span>class</span><span><span>=</span><span>"</span>com.cunyu.factory.PersonDaoFactoryBean<span>"</span></span><span>/></span></span>
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p>最后在程序主入口中获取 Bean，然后调用方法即可。</p>
+<div><pre><code><span>public</span> <span>class</span> <span>AppIoC</span> <span>{</span>
+    <span>public</span> <span>static</span> <span>void</span> <span>main</span><span>(</span><span>String</span><span>[</span><span>]</span> args<span>)</span> <span>{</span>
+        <span>//    加载配置文件，获取 IoC 容器</span>
+        <span>ApplicationContext</span> app <span>=</span> <span>new</span> <span>ClassPathXmlApplicationContext</span><span>(</span><span>"applicationContext.xml"</span><span>)</span><span>;</span>
+        <span>//    获取 Bean</span>
+        <span>PersonDao</span> personDao <span>=</span> <span>(</span><span>PersonDao</span><span>)</span> app<span>.</span><span>getBean</span><span>(</span><span>"personDao"</span><span>)</span><span>;</span>
+        personDao<span>.</span><span>query</span><span>(</span><span>)</span><span>;</span>
+    <span>}</span>
+<span>}</span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br></div></div><p><img src="https://cdn.jsdelivr.net/gh/cunyu1943/blog-imgs@main/2022/04/image-20220427165856934.png" alt="" loading="lazy"></p>
+<h2 id="bean-的生命周期" tabindex="-1"> Bean 的生命周期</h2>
+<p>先来看看生命周期的定义，所谓生命周期就是指从创建到消亡的完整过程，类比到我们人身上，生命周期就是从我们出生到死亡的这个过程。而 Bean 的生命周期就指的是 Bean 从创建到销毁的整体过程。</p>
+<p>Bean 的生命周期主要分为三个阶段：</p>
+<ul>
+<li><strong>初始化容器</strong></li>
+<li><strong>使用 Bean</strong></li>
+<li><strong>销毁容器</strong></li>
+</ul>
+<p>初始化容器阶段，主要执行的操作有：创建对象（内存分配）、执行构造方法、执行属性注入（<code>set</code> 操作）、执行 Bean 初始化方法。</p>
+<p>使用 Bean 阶段，主要是去执行业务操作。</p>
+<p>销毁容器阶段，主要是执行 Bean 的销毁方法。</p>
+<h2 id="总结" tabindex="-1"> 总结</h2>
+<p>以上就是今天关于 Bean 的内容了，主要从 Bean 的别名配置、作用范围、如何进行实例化以及声明周期 4 个方面着手，学习了 Bean 的相关操作。</p>
+]]></content>
+    <category term="Spring 教程"/>
+    <published>2022-04-27T20:30:00.000Z</published>
+  </entry>
   <entry>
     <title type="html">Spring 篇：IoC 简介及入门实例（XML 版）</title>
     <id>https://cunyu1943.github.io/JavaPark/JavaPark/java/spring/ioc.html</id>
@@ -27968,340 +28136,5 @@ method<span>.</span><span>invoke</span><span>(</span>object<span>)</span><span>;
 ]]></content>
     <category term="Java 菜鸟入门"/>
     <published>2022-01-15T21:52:26.000Z</published>
-  </entry>
-  <entry>
-    <title type="html">Java 菜鸟入门：是时候拥抱 Junit 单元测试了！</title>
-    <id>https://cunyu1943.github.io/JavaPark/JavaPark/java/java-se/test-with-junit.html</id>
-    <link href="https://cunyu1943.github.io/JavaPark/JavaPark/java/java-se/test-with-junit.html"/>
-    <updated>2022-04-18T07:35:02.000Z</updated>
-    <content type="html"><![CDATA[<h2 id="何为测试" tabindex="-1"> 何为测试</h2>
-<p>在计算机领域中，所谓测试，描述的是一种用来鉴定软件正确性、完整性和质量的过程。而软件测试又一般可以分为黑盒测试和白盒测试，两者的相关定义如下。</p>
-<h3 id="黑盒测试" tabindex="-1"> 黑盒测试</h3>
-<blockquote>
-<p>黑盒测试（<code>black-box testing</code>），也称黑箱测试，是软件测试方法，测试应用程序的功能，而不是其内部结构或运作。测试者不需具备应用程序的代码、内部结构和编程语言的专门知识。测试者只需知道什么是系统应该做的事，即当键入一个特定的输入，可得到一定的输出。测试案例是依应用系统应该做的功能，照规范、规格或要求等设计。测试者选择有效输入和无效输入来验证是否正确的输出。</p>
-</blockquote>
-<p>黑盒测试方法可适合大部分的软件测试，例如集成测试（<code>integration testing</code>）以及系统测试（<code>system testing</code>）。</p>
-<h3 id="白盒测试" tabindex="-1"> 白盒测试</h3>
-<blockquote>
-<p>白盒测试（<code>white-box testing</code>），又称透明盒测试 <code>glass box testing</code>、结构测试 <code>structural testing</code> 等）是一个测试软件的方法，测试应用程序的内部结构或运作，而不是测试应用程序的功能（即黑盒测试）。在白盒测试时，以编程语言的角度来设计测试案例。测试者输入资料验证资料流在程序中的流动路径，并确定适当的输出，类似测试电路中的节点。</p>
-</blockquote>
-<p>白盒测试可以应用于单元测试（<code>unit testing</code>）、集成测试（<code>integration testing</code>）和系统的软件测试流程，可测试在集成过程中每一单元之间的路径，或者主系统跟子系统中的测试。尽管这种测试的方法可以发现许多的错误或问题，它可能无法检测未使用部分的规范。</p>
-<p>介绍一下黑白盒测试，主要是为了大家有一个概念，明白两者之间的区别，关于更多测试的内容，这里就不展开讲了，毕竟我们的重点是 JUnit。</p>
-<h2 id="junit-简介" tabindex="-1"> JUnit 简介</h2>
-<h3 id="什么是-junit" tabindex="-1"> 什么是 JUnit</h3>
-<blockquote>
-<p>官网：https://junit.org/</p>
-</blockquote>
-<p>JUnit 是一个编写可重复测试的简单框架，是单元测试框架 xUnit 的一个实例，属于白盒测试。</p>
-<p>针对 Java 语言而言，程序中最小的功能单元是方法，因此，对 Java 程序进行单元测试就是针对单个 Java 方法的测试。</p>
-<p>在我们简单的小程序中，平常测试使用的方法是在主类中创建对象，然后调用对应方法。但是这样一来存在两个缺点：</p>
-<ol>
-<li>不能将测试代码和业务代码分离；</li>
-<li>未打印出测试结果和期望结果；</li>
-</ol>
-<p>因此此时我们就需要一种新的测试框架来帮助我们编写测试，而 JUnit 则是专门针对 Java 而设计的一种标准单元测试框架。作为一个 Java 开发者，学习 JUnit 来进行测试是必备技能。</p>
-<h3 id="如何安装-junit" tabindex="-1"> 如何安装 JUnit</h3>
-<ul>
-<li><strong>本地安装</strong></li>
-</ul>
-<p>对于这种方法，我们只需要去下载 JUnit 最新的包，当前有 Junit4 和 Junit5 两个版本，可以根据自己的需要进行选择然后导入我们 IDE 的依赖文件即可，依赖文件下载地址如下：</p>
-<blockquote>
-<p>JUnit4：https://github.com/junit-team/junit4/releases/</p>
-<p>JUnit5：https://github.com/junit-team/junit5/releases/</p>
-</blockquote>
-<p>以 IDEA 为例，依次打开 <code>File -&gt; Project Structure -&gt; Project Settings -&gt; Modules -&gt; Dependencies -&gt; 点击 + -&gt; Library... -&gt; Java</code>，最后找到下载的 JUnit 文件即可；</p>
-<p><img src="https://cdn.jsdelivr.net/gh/cunyu1943/blog-imgs/picgo/image-20210330095328265.png" alt="" loading="lazy"></p>
-<ul>
-<li><strong>Maven 安装</strong></li>
-</ul>
-<p>当使用 Maven 之后，我们就能十分简单地安装 JUnit 了，只需要在项目的 <code>pom.xml</code> 配置文件中导入依赖即可；</p>
-<div><pre><code><span><span><span>&lt;</span>dependencies</span><span>></span></span>
-    <span><span><span>&lt;</span>dependency</span><span>></span></span>
-        <span><span><span>&lt;</span>groupId</span><span>></span></span>junit<span><span><span>&lt;/</span>groupId</span><span>></span></span>
-        <span><span><span>&lt;</span>artifactId</span><span>></span></span>junit<span><span><span>&lt;/</span>artifactId</span><span>></span></span>
-        <span><span><span>&lt;</span>version</span><span>></span></span>4.13<span><span><span>&lt;/</span>version</span><span>></span></span>
-        <span><span><span>&lt;</span>scope</span><span>></span></span>test<span><span><span>&lt;/</span>scope</span><span>></span></span>
-    <span><span><span>&lt;/</span>dependency</span><span>></span></span>
-<span><span><span>&lt;/</span>dependencies</span><span>></span></span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br></div></div><h3 id="使用-junit-进行单元测试" tabindex="-1"> 使用 Junit 进行单元测试</h3>
-<p>首先我们需要有一个主类，然后基于改类来进行测试，这里我们以简单的运算器为例；</p>
-<p>创建一个简易计算机类 <code>Calc</code>，然后包括加法 <code>add</code> 和减法 <code>sub</code> 两个方法；</p>
-<div><pre><code><span>package</span> <span>com<span>.</span>cunyu</span><span>;</span>
-
-<span>/**
- * <span>@author</span> : cunyu
- * <span>@version</span> : 1.0
- * <span>@className</span> : Calc
- * <span>@date</span> : 2021/3/30 10:04
- * <span>@description</span> : 简易计算器
- */</span>
-
-<span>public</span> <span>class</span> <span>Calc</span> <span>{</span>
-    <span>/**
-     * <span>@param</span> <span>num1</span> 加数
-     * <span>@param</span> <span>num2</span> 加数
-     * <span>@return</span> 两数之和
-     * <span>@description</span> 加法
-     * <span>@date</span> 2021/3/30 10:04
-     * <span>@author</span> cunyu
-     * <span>@version</span> 1.0
-     */</span>
-    <span>public</span> <span>int</span> <span>add</span><span>(</span><span>int</span> num1<span>,</span> <span>int</span> num2<span>)</span> <span>{</span>
-        <span>return</span> num1 <span>+</span> num2<span>;</span>
-    <span>}</span>
-
-    <span>/**
-     * <span>@param</span> <span>num1</span> 减数
-     * <span>@param</span> <span>num2</span> 被减数
-     * <span>@return</span> 两数之差
-     * <span>@description</span> 两数之差
-     * <span>@date</span> 2021/3/30 10:11
-     * <span>@author</span> cunyu
-     * <span>@version</span> 1.0
-     */</span>
-    <span>public</span> <span>int</span> <span>sub</span><span>(</span><span>int</span> num1<span>,</span> <span>int</span> num2<span>)</span> <span>{</span>
-        <span>return</span> num1 <span>-</span> num2<span>;</span>
-    <span>}</span>
-<span>}</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br><span>27</span><br><span>28</span><br><span>29</span><br><span>30</span><br><span>31</span><br><span>32</span><br><span>33</span><br><span>34</span><br><span>35</span><br><span>36</span><br><span>37</span><br></div></div><p>定义好上述主类之后，我们来进行测试，测试步骤如下；</p>
-<ol>
-<li><strong>定义测试类</strong></li>
-</ol>
-<p>定义测试类时，我们推荐定义类名时就是 <strong>主类Test</strong> 的形式，比如我们上面的类为 <code>Calc</code>，我们要对其进行测试，则测试类的类名为 <code>CalcTest</code>；</p>
-<div><pre><code><span>package</span> <span>com<span>.</span>cunyu</span><span>;</span>
-
-<span>/**
- * <span>@author</span> : cunyu
- * <span>@version</span> : 1.0
- * <span>@className</span> : CalcTest
- * <span>@date</span> : 2021/3/30 10:15
- * <span>@description</span> : 简易计算器测试
- */</span>
-
-<span>public</span> <span>class</span> <span>CalcTest</span> <span>{</span>
-<span>}</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br></div></div><ol start="2">
-<li><strong>定义测试方法</strong></li>
-</ol>
-<p>测试类定义好之后，我们就可以定义测试方法了，而定义测试方法时，我们也有几点建议；</p>
-<ul>
-<li>测试方法名是在主类方法名前加上 <code>test</code>，比如我们上边的方法为 <code>add</code>，则我们对应的测试方法名为 <code>testAdd</code>；</li>
-<li>针对测试方法的返回值，因为我们只需要在方法内给出结果即可，不用再供其他人调用，所以建议返回值设置为 <code>void</code>；</li>
-<li>针对测试方法的参数列表，由于我们主要还是针对传统建类调用方法测试的方法，所以此时最好是保持参数列表为空；</li>
-</ul>
-<div><pre><code><span>package</span> <span>com<span>.</span>cunyu</span><span>;</span>
-
-<span>import</span> <span>org<span>.</span>junit<span>.</span></span><span>Assert</span><span>;</span>
-<span>import</span> <span>org<span>.</span>junit<span>.</span></span><span>Test</span><span>;</span>
-
-<span>/**
- * <span>@author</span> : cunyu
- * <span>@version</span> : 1.0
- * <span>@className</span> : CalcTest
- * <span>@date</span> : 2021/3/30 10:15
- * <span>@description</span> : 简易计算器测试
- */</span>
-
-<span>public</span> <span>class</span> <span>CalcTest</span> <span>{</span>
-
-    <span>@Test</span>
-    <span>public</span> <span>void</span> <span>testAdd</span><span>(</span><span>)</span><span>{</span>
-        <span>Calc</span> calc <span>=</span> <span>new</span> <span>Calc</span><span>(</span><span>)</span><span>;</span>
-        <span>int</span> result <span>=</span> calc<span>.</span><span>add</span><span>(</span><span>1</span><span>,</span><span>5</span><span>)</span><span>;</span>
-        <span>Assert</span><span>.</span><span>assertEquals</span><span>(</span><span>6</span><span>,</span>result<span>)</span><span>;</span>
-    <span>}</span>
-<span>}</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br></div></div><p>其中，<code>@Test</code> 为注解，用来注释一个普通的方法为一条测试用例。<code>assertEquals</code> 方法用于断言两个值是否相等。</p>
-<p>如果测试成功，则在 IDE 中会出现如下提示。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/cunyu1943/blog-imgs/picgo/image-20210330103051677.png" alt="" loading="lazy"></p>
-<p>一般来讲，测试成功一般是绿色，而测试失败则是红色。</p>
-<ul>
-<li>测试成功的界面</li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/cunyu1943/blog-imgs@main/blog/image-20210619112210147.png" alt="" loading="lazy"></p>
-<ul>
-<li>测试失败的界面</li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/cunyu1943/blog-imgs@main/blog/image-20210619112134376.png" alt="" loading="lazy"></p>
-<p>总结起来，我们针对一个方法的具体测试的步骤如下：</p>
-<ol>
-<li>首先是创建被测试类的对象；</li>
-<li>然后调用被测试的方法；</li>
-<li>最后加入断言，判断调用方法得到结果和实际的结果之间是否相同；</li>
-</ol>
-<h2 id="junit-常用注解" tabindex="-1"> JUnit 常用注解</h2>
-<p>由于现在主要用到的有 Junit4 和 Junit5 两个版本，而两者之间也是存在一些区别的，所以在这里给出两者中常用注解的一些差异。</p>
-<p>下表中，给出了 Junit4 和 Junit5 中所共有功能的对应注解：</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">Junit4 注解</th>
-<th>Junit5 注解</th>
-<th style="text-align:left">说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center"><code>@Test</code></td>
-<td><code>@Test</code></td>
-<td style="text-align:left">标识一条测试用例</td>
-</tr>
-<tr>
-<td style="text-align:center"><code>@Ignore</code></td>
-<td><code>@Disable</code></td>
-<td style="text-align:left">忽略的测试用例</td>
-</tr>
-<tr>
-<td style="text-align:center"><code>@Before</code></td>
-<td><code>@BeforeEach</code></td>
-<td style="text-align:left">每一个测试方法之前运行</td>
-</tr>
-<tr>
-<td style="text-align:center"><code>@After </code></td>
-<td><code>@AfterEach</code></td>
-<td style="text-align:left">每一个测试方法之后运行</td>
-</tr>
-<tr>
-<td style="text-align:center"><code>@BefreClass</code></td>
-<td><code>@BeforeAll</code></td>
-<td style="text-align:left">所有测试开始之前运行</td>
-</tr>
-<tr>
-<td style="text-align:center"><code>@AfterClass </code></td>
-<td><code>@AfterAll</code></td>
-<td style="text-align:left">所有测试结果之后运行</td>
-</tr>
-<tr>
-<td style="text-align:center"><code>@Category</code></td>
-<td><code>@Tag</code></td>
-<td style="text-align:left">标记和过滤</td>
-</tr>
-</tbody>
-</table>
-<p>而相对于 Junit4，Junit5 也有做出升级，其特有的一些注解如下：</p>
-<table>
-<thead>
-<tr>
-<th>注解</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>@TestFactory</code></td>
-<td>测试工厂进行动态测试</td>
-</tr>
-<tr>
-<td><code>@Nested</code></td>
-<td>嵌套测试</td>
-</tr>
-<tr>
-<td><code>@ExtendWith</code></td>
-<td>注册自定义扩展</td>
-</tr>
-</tbody>
-</table>
-<h2 id="常用断言方法" tabindex="-1"> 常用断言方法</h2>
-<p>而在测试中，我们经常用到断言方法。这些断言方法都来自于由继承了 <code>java.lang.Object</code> 的 <code>Assert</code> 类，用于提供编写测试。</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">方法</th>
-<th style="text-align:left">说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left"><code>void assertArrayEquals([String message],expected array, result array)</code></td>
-<td style="text-align:left">断言预期数组和结果数组相等</td>
-</tr>
-<tr>
-<td style="text-align:left"><code>void assertEquals([String message],expected value, actual value)</code></td>
-<td style="text-align:left">断言两个值是否相等。类似于字符串比较使用的 <code>equals()</code> 方法</td>
-</tr>
-<tr>
-<td style="text-align:left"><code>void assertNotEquals(String message], first, second)</code></td>
-<td style="text-align:left">查看两个对象是否不相等</td>
-</tr>
-<tr>
-<td style="text-align:left"><code>void assertNull(String message], object)</code></td>
-<td style="text-align:left">查看对象是否为空</td>
-</tr>
-<tr>
-<td style="text-align:left"><code>void assertNotNull(String message], object)</code></td>
-<td style="text-align:left">查看对象是否不为空</td>
-</tr>
-<tr>
-<td style="text-align:left"><code>void assertSame(String message], expected, actual)</code></td>
-<td style="text-align:left">查看两个对象的引用是否相等。类似于使用 <code>==</code> 比较两个对象</td>
-</tr>
-<tr>
-<td style="text-align:left"><code>void assertNotSame(String message], unexpected, actual)</code></td>
-<td style="text-align:left">查看两个对象的引用是否不相等。类似于使用 <code>!=</code> 比较两个对象</td>
-</tr>
-<tr>
-<td style="text-align:left"><code>void assertTrue(String message], boolean condition)</code></td>
-<td style="text-align:left">查看运行结果是否为 <code>true</code></td>
-</tr>
-<tr>
-<td style="text-align:left"><code>void assertFalse([String message], boolean condition)</code></td>
-<td style="text-align:left">查看运行结果是否为 <code>false</code></td>
-</tr>
-<tr>
-<td style="text-align:left"><code>void assertThat([String message], actual, matcher)</code></td>
-<td style="text-align:left">查看实际值是否满足指定的条件</td>
-</tr>
-<tr>
-<td style="text-align:left"><code>fail()</code></td>
-<td style="text-align:left">让测试失败</td>
-</tr>
-</tbody>
-</table>
-<div><pre><code><span>package</span> <span>com<span>.</span>cunyu</span><span>;</span>
-
-<span>import</span> <span>org<span>.</span>junit<span>.</span>jupiter<span>.</span>api<span>.</span></span><span>AfterEach</span><span>;</span>
-<span>import</span> <span>org<span>.</span>junit<span>.</span>jupiter<span>.</span>api<span>.</span></span><span>BeforeEach</span><span>;</span>
-<span>import</span> <span>org<span>.</span>junit<span>.</span>jupiter<span>.</span>api<span>.</span></span><span>Test</span><span>;</span>
-
-<span>import</span> <span>static</span> <span>org<span>.</span>junit<span>.</span>jupiter<span>.</span>api<span>.</span></span><span>Assertions</span><span>.</span>*<span>;</span>
-
-<span>public</span> <span>class</span> <span>CalcTest</span> <span>{</span>
-
-    <span>@Test</span>
-    <span>public</span> <span>void</span> <span>test</span><span>(</span><span>)</span> <span>{</span>
-        <span>String</span> obj1 <span>=</span> <span>"村雨遥"</span><span>;</span>
-        <span>String</span> obj2 <span>=</span> <span>"村雨遥"</span><span>;</span>
-        <span>String</span> obj3 <span>=</span> <span>"1943"</span><span>;</span>
-        <span>String</span> obj4 <span>=</span> <span>"1943"</span><span>;</span>
-        <span>String</span> obj5 <span>=</span> <span>null</span><span>;</span>
-        <span>int</span> var1 <span>=</span> <span>1</span><span>;</span>
-        <span>int</span> var2 <span>=</span> <span>2</span><span>;</span>
-        <span>int</span><span>[</span><span>]</span> arithmetic1 <span>=</span> <span>{</span><span>1</span><span>,</span> <span>2</span><span>,</span> <span>3</span><span>}</span><span>;</span>
-        <span>int</span><span>[</span><span>]</span> arithmetic2 <span>=</span> <span>{</span><span>1</span><span>,</span> <span>2</span><span>,</span> <span>3</span><span>}</span><span>;</span>
-
-        <span>assertEquals</span><span>(</span>obj1<span>,</span> obj2<span>)</span><span>;</span>
-
-        <span>assertSame</span><span>(</span>obj3<span>,</span> obj4<span>)</span><span>;</span>
-
-        <span>assertNotSame</span><span>(</span>obj2<span>,</span> obj4<span>)</span><span>;</span>
-
-        <span>assertNotNull</span><span>(</span>obj1<span>)</span><span>;</span>
-
-        <span>assertNull</span><span>(</span>obj5<span>)</span><span>;</span>
-
-        <span>assertTrue</span><span>(</span>var1 <span>==</span> var2<span>)</span><span>;</span>
-
-        <span>assertArrayEquals</span><span>(</span>arithmetic1<span>,</span> arithmetic2<span>)</span><span>;</span>
-    <span>}</span>
-<span>}</span>
-
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br><span>27</span><br><span>28</span><br><span>29</span><br><span>30</span><br><span>31</span><br><span>32</span><br><span>33</span><br><span>34</span><br><span>35</span><br><span>36</span><br><span>37</span><br><span>38</span><br></div></div><p><img src="https://cdn.jsdelivr.net/gh/cunyu1943/blog-imgs@main/blog/image-20210619115316524.png" alt="" loading="lazy"></p>
-<h2 id="总结" tabindex="-1"> 总结</h2>
-<p>好了，以上就是有关单元测试 Junit 的简单使用指南了。虽说大家现在还是有很多人在使用 Junit4，但如果你之前并未接触过 Junit，个人建议那就直接学习 Junit5 吧。当然了，Junit4 了解也是很有必要的，毕竟技多不压身，多一份技能少求人嘛。</p>
-<p><strong>关注公众号，获取最新文章更新</strong></p>
-<img src="https://cdn.jsdelivr.net/gh/cunyu1943/cunyu1943@main/imgs/wepublic.gif" width="200" alt="公众号" />
-]]></content>
-    <category term="Java 菜鸟入门"/>
-    <published>2022-01-16T09:21:33.000Z</published>
   </entry>
 </feed>
