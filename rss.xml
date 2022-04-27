@@ -6,10 +6,11 @@
     <link>https://cunyu1943.github.io/JavaPark/JavaPark/</link>
     <description>Java 自学编程之路</description>
     <language>zh-CN</language>
-    <pubDate>Tue, 26 Apr 2022 05:36:49 GMT</pubDate>
-    <lastBuildDate>Tue, 26 Apr 2022 05:36:49 GMT</lastBuildDate>
+    <pubDate>Wed, 27 Apr 2022 03:24:00 GMT</pubDate>
+    <lastBuildDate>Wed, 27 Apr 2022 03:24:00 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+    <category>Spring 教程</category>
     <category>工具教程</category>
     <category>PostgreSQL 教程</category>
     <category>HTML 教程</category>
@@ -19,7 +20,6 @@
     <category>IDEA 教程</category>
     <category>MyBatis 专栏</category>
     <category>MyBatis Plus 指南</category>
-    <category>Spring 教程</category>
     <category>Spring MVC 合辑</category>
     <category>SQL 必知必会 50 题</category>
     <category>Java 编程实例</category>
@@ -27,6 +27,128 @@
     <category>Maven 入门教程</category>
     <category>博客搭建</category>
     <category>Java 菜鸟入门</category>
+    <item>
+      <title>Spring 篇：IoC 简介及入门实例（XML 版）</title>
+      <link>https://cunyu1943.github.io/JavaPark/JavaPark/java/spring/ioc.html</link>
+      <guid>https://cunyu1943.github.io/JavaPark/JavaPark/java/spring/ioc.html</guid>
+      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">Spring 篇：IoC 简介及入门实例（XML 版）</source>
+      <category>Spring 教程</category>
+      <pubDate>Wed, 27 Apr 2022 11:08:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h2 id="ioc" tabindex="-1"> IoC</h2>
+<p>IoC（<code>Inversion of Control</code>），中文名又叫做控制反转。</p>
+<p>针对当前书写代码时耦合度偏高的现状，大牛们提出了对应的解决方案。那就是在使用对象时，不要再通过主动使用 <code>new</code> 来创建对象，而是转变为由外部来提供对象。而这种将对象的创建控制权从程序转移到<strong>外部</strong>的思想就叫做<strong>控制反转</strong>。</p>
+<p>总结来说，IoC 就是指在使用对象时由主动 <code>new</code> 创建对象的方式转换为由外部提供，这个过程中对象的创建控制权由程序转移到了外部，这个思想就叫做控制反转。而 Spring 实现了 IoC 思想，它提供了一个容器用来充当 IoC 思想中的外部，而我们将这个容器称为 IoC 容器。</p>
+<p>IoC 容器专门负责对象创建、初始化等一系列工作，而这些由 IoC 容器所管理的对象我们统称为 <code>Bean</code>。</p>
+<h2 id="di" tabindex="-1"> DI</h2>
+<p>DI（<code>Dependency Injection</code>），中文名又叫做依赖注入。</p>
+<p>IoC 容器虽然负责了创建和初始化对象等一系列工作，但实际上不同的对象之间或多或少存在着依赖关系，这个问题 IoC 是解决不了的，因此才有了 DI 的提出。依赖注入实现了容器中 Bean 与 Bean 之间依赖关系的建立。</p>
+<h2 id="入门案例" tabindex="-1"> 入门案例</h2>
+<p>接下来我们来看看 IoC 的一个入门实例。</p>
+<p>首先，我们创建一个 Maven 项目，如果不太熟悉如何创建，可以参考我之前的一篇教程 -&gt; <a href="https://cunyu1943.github.io/JavaPark/java/maven/maven-project-with-idea.html" target="_blank" rel="noopener noreferrer">Maven 入门手册：使用 IDEA 创建 Maven 项目 | JavaPark<ExternalLinkIcon/></a></p>
+<p>接着我们分别创建 DAO 层和 Service 层接口，并实现其接口，最后则是在主程序入口中调用，创建后的项目结构如下：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/cunyu1943/blog-imgs@main/2022/04/image-20220427100328543.png" alt="" loading="lazy"></p>
+<ul>
+<li><strong>DAO 层</strong></li>
+</ul>
+<div><pre><code><span>public</span> <span>interface</span> <span>BookDao</span> <span>{</span>
+    <span>public</span> <span>void</span> <span>save</span><span>(</span><span>)</span><span>;</span>
+<span>}</span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br></div></div><div><pre><code><span>public</span> <span>class</span> <span>BookDaoImpl</span> <span>implements</span> <span>BookDao</span> <span>{</span>
+    <span>@Override</span>
+    <span>public</span> <span>void</span> <span>save</span><span>(</span><span>)</span> <span>{</span>
+        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>"book dao save ……"</span><span>)</span><span>;</span>
+    <span>}</span>
+<span>}</span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br></div></div><ul>
+<li><strong>Service 层</strong></li>
+</ul>
+<div><pre><code><span>public</span> <span>interface</span> <span>BookService</span> <span>{</span>
+    <span>public</span> <span>void</span> <span>save</span><span>(</span><span>)</span><span>;</span>
+<span>}</span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br></div></div><div><pre><code><span>public</span> <span>class</span> <span>BookServiceImpl</span> <span>implements</span> <span>BookService</span> <span>{</span>
+    <span>private</span> <span>BookDao</span> bookDao <span>=</span> <span>new</span> <span>BookDaoImpl</span><span>(</span><span>)</span><span>;</span>
+
+    <span>@Override</span>
+    <span>public</span> <span>void</span> <span>save</span><span>(</span><span>)</span> <span>{</span>
+        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>"book service save ……"</span><span>)</span><span>;</span>
+        bookDao<span>.</span><span>save</span><span>(</span><span>)</span><span>;</span>
+    <span>}</span>
+<span>}</span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br></div></div><h3 id="传统方式" tabindex="-1"> 传统方式</h3>
+<p>我们先以传统的方式，通过手动创建对象的方式。通过创建一个 <code>BookService</code> 对象，调用接口后打印结果如下。</p>
+<div><pre><code><span>public</span> <span>class</span> <span>AppCommon</span> <span>{</span>
+    <span>public</span> <span>static</span> <span>void</span> <span>main</span><span>(</span><span>String</span><span>[</span><span>]</span> args<span>)</span> <span>{</span>
+        <span>BookService</span> bookService <span>=</span> <span>new</span> <span>BookServiceImpl</span><span>(</span><span>)</span><span>;</span>
+        bookService<span>.</span><span>save</span><span>(</span><span>)</span><span>;</span>
+    <span>}</span>
+<span>}</span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br></div></div><p><img src="https://cdn.jsdelivr.net/gh/cunyu1943/blog-imgs@main/2022/04/image-20220427100959404.png" alt="" loading="lazy"></p>
+<h3 id="ioc-方式" tabindex="-1"> IoC 方式</h3>
+<p>以上还是通过我们手动创建对象的方式，接下来看看利用 IoC 的方式。</p>
+<p>首先，要使用 IoC  的特性，我们需要在项目的 <code>pom.xml</code> 中引入 Spring 的依赖。</p>
+<div><pre><code><span><span><span>&lt;</span>dependencies</span><span>></span></span>
+        <span><span><span>&lt;</span>dependency</span><span>></span></span>
+            <span><span><span>&lt;</span>groupId</span><span>></span></span>org.springframework<span><span><span>&lt;/</span>groupId</span><span>></span></span>
+            <span><span><span>&lt;</span>artifactId</span><span>></span></span>spring-context<span><span><span>&lt;/</span>artifactId</span><span>></span></span>
+            <span><span><span>&lt;</span>version</span><span>></span></span>5.3.16<span><span><span>&lt;/</span>version</span><span>></span></span>
+        <span><span><span>&lt;/</span>dependency</span><span>></span></span>    
+<span><span><span>&lt;/</span>dependencies</span><span>></span></span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br></div></div><p>接着我们创建配置文件，告知 IoC 容器需要管理的对象。</p>
+<p>在 <code>resource</code> 目录下创建 Spring 配置文件 <code>applicationContext.xml</code>，然后配置需要管理的 <code>BookService</code> 和 <code>BookDao</code> 对象。</p>
+<div><pre><code><span>&lt;!--  配置 bean  --></span>
+<span><span><span>&lt;</span>bean</span> <span>id</span><span><span>=</span><span>"</span>bookDao<span>"</span></span> <span>class</span><span><span>=</span><span>"</span>com.cunyu.dao.impl.BookDaoImpl<span>"</span></span><span>/></span></span>
+<span><span><span>&lt;</span>bean</span> <span>id</span><span><span>=</span><span>"</span>bookService<span>"</span></span> <span>class</span><span><span>=</span><span>"</span>com.cunyu.service.impl.BookServiceImpl<span>"</span></span><span>/></span></span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br></div></div><p>最后，我们创建一个主程序入口，通过从配置文件中获取对象，然后调用对应方法。</p>
+<div><pre><code><span>public</span> <span>class</span> <span>AppIoC</span> <span>{</span>
+    <span>public</span> <span>static</span> <span>void</span> <span>main</span><span>(</span><span>String</span><span>[</span><span>]</span> args<span>)</span> <span>{</span>
+        <span>//    加载配置文件，获取 IoC 容器</span>
+        <span>ApplicationContext</span> app <span>=</span> <span>new</span> <span>ClassPathXmlApplicationContext</span><span>(</span><span>"applicationContext.xml"</span><span>)</span><span>;</span>
+        <span>//    获取 Bean</span>
+        <span>BookService</span> bookService <span>=</span> <span>(</span><span>BookService</span><span>)</span> app<span>.</span><span>getBean</span><span>(</span><span>"bookService"</span><span>)</span><span>;</span>
+        bookService<span>.</span><span>save</span><span>(</span><span>)</span><span>;</span>
+    <span>}</span>
+<span>}</span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br></div></div><p><img src="https://cdn.jsdelivr.net/gh/cunyu1943/blog-imgs@main/2022/04/image-20220427100959404.png" alt="" loading="lazy"></p>
+<h3 id="di-方式" tabindex="-1"> DI 方式</h3>
+<p>之前的方式有一点不知道有没有注意，那就是在 Service 层中，无论是使用传统方式还是 IoC 的方式，我们都是通过手动创建的 <code>BookDao</code> 的对象，那有没有什么方式让我们不用通过手动创建 <code>BookDao</code> 对象的呢？答案是：有的，那就是 DI。接下来我们就来看看基于依赖注入的方式，来解决 <code>BookDao</code> 和 <code>BookService</code> 之间的依赖关系。</p>
+<p>DAO 层中的代码我们依旧保持不变，主要修改 Service 中的代码，去掉通过 <code>new</code> 方式来创建对象，修改后 Service 层 的代码如下。</p>
+<div><pre><code><span>public</span> <span>interface</span> <span>BookService</span> <span>{</span>
+    <span>public</span> <span>void</span> <span>save</span><span>(</span><span>)</span><span>;</span>
+<span>}</span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br></div></div><div><pre><code><span>public</span> <span>class</span> <span>BookServiceImpl</span> <span>implements</span> <span>BookService</span> <span>{</span> 
+    <span>private</span> <span>BookDao</span> bookDao<span>;</span>
+
+    <span>@Override</span>
+    <span>public</span> <span>void</span> <span>save</span><span>(</span><span>)</span> <span>{</span>
+        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>"book service save ……"</span><span>)</span><span>;</span>
+        bookDao<span>.</span><span>save</span><span>(</span><span>)</span><span>;</span>
+    <span>}</span>
+    
+    <span>public</span> <span>void</span> <span>setBookDao</span><span>(</span><span>BookDao</span> bookDao<span>)</span><span>{</span>
+        <span>this</span><span>.</span>bookDao <span>=</span> bookDao<span>;</span>
+    <span>}</span>
+<span>}</span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br></div></div><p>然后在 Spring 配置文件 <code>applicationContext</code> 中配置 <code>BookDao</code> 和 <code>BookService</code> 的关系。</p>
+<div><pre><code><span>&lt;!--  配置 bean  --></span>
+<span><span><span>&lt;</span>bean</span> <span>id</span><span><span>=</span><span>"</span>bookDao<span>"</span></span> <span>class</span><span><span>=</span><span>"</span>com.cunyu.dao.impl.BookDaoImpl<span>"</span></span><span>/></span></span>
+<span><span><span>&lt;</span>bean</span> <span>id</span><span><span>=</span><span>"</span>bookService<span>"</span></span> <span>class</span><span><span>=</span><span>"</span>com.cunyu.service.impl.BookServiceImpl<span>"</span></span><span>></span></span>
+    <span>&lt;!-- property 表示配置当前 Bean 的属性
+             name 表示配置哪一个具体的属性
+             ref 表示参照的 Bean
+             --></span>
+    <span><span><span>&lt;</span>property</span> <span>name</span><span><span>=</span><span>"</span>bookDao<span>"</span></span> <span>ref</span><span><span>=</span><span>"</span>bookDao<span>"</span></span><span>/></span></span>
+<span><span><span>&lt;/</span>bean</span><span>></span></span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br></div></div><p>最后，用 IoC 方式中同样的方式，在主程序入口获取配置文件，然后获取对象调用接口即可。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/cunyu1943/blog-imgs@main/2022/04/image-20220427100959404.png" alt="" loading="lazy"></p>
+<h2 id="总结" tabindex="-1"> 总结</h2>
+<p>本文主要讲了 IoC 和 DI 的定义，然后对比了传统方式、IoC 方式和 DI 方式用来管理对象，而且最终三者的结果都是一样的，但其中还是有一点的区别。通过引入 Spring 中的 IoC 和 DI 特性，我们只需要配置相关配置即可，而不用再去通过 <code>new</code> 手动创建对象以及管理 Bean 之间的依赖关系。</p>
+<p>最后，关于本文的示例代码，我已经上传到远程仓库，有需要的小伙伴可以自取。</p>
+<blockquote>
+<p><a href="https://github.com/cunyu1943/java-learning-demos/tree/main/spring-ioc-demo" target="_blank" rel="noopener noreferrer">Spring-IoC-Demo<ExternalLinkIcon/></a></p>
+</blockquote>
+]]></content:encoded>
+      <enclosure url="https://cdn.jsdelivr.net/gh/cunyu1943/blog-imgs@main/2022/04/image-20220427100328543.png" type="image/png"/>
+    </item>
     <item>
       <title>macOS 教程：iTerm2 + Fish 打造高效终端</title>
       <link>https://cunyu1943.github.io/JavaPark/JavaPark/efficiency/macos/fish-shell.html</link>
@@ -108,8 +230,8 @@ fish <span>install</span>
 <td>显示本地已安装的所有插件</td>
 </tr>
 <tr>
-<td>`omf install [url</td>
-<td>name]`</td>
+<td><code>omf install [url | name]</code></td>
+<td>安装一个或多个插件</td>
 </tr>
 <tr>
 <td><code>omf destroy</code></td>
@@ -118,7 +240,7 @@ fish <span>install</span>
 </tbody>
 </table>
 <h2 id="总结" tabindex="-1"> 总结</h2>
-<p>以上就是我们关于 <code>Fish</code> 的安装以及简单的配置教程了，如果你也想拥有如此酷炫的终端，那就赶紧来试试吧！t</p>
+<p>以上就是我们关于 <code>Fish</code> 的安装以及简单的配置教程了，如果你也想拥有如此酷炫的终端，那就赶紧来试试吧！</p>
 ]]></content:encoded>
       <enclosure url="https://cdn.jsdelivr.net/gh/cunyu1943/blog-imgs@main/2022/04/image-20220426101405092.png" type="image/png"/>
     </item>
@@ -21013,7 +21135,7 @@ ORDER BY ……
 <p>默认情况下，IDEA 给每个新建的项目分配的接口都是 <code>8080</code>，如果我们想要自定义，则需要在配置 Tomcat 时注意，设置位置如下。</p>
 <p><img src="https://cdn.jsdelivr.net/gh/cunyu1943/blog-imgs@main/blog/tomcat-port.png" alt="" loading="lazy"></p>
 <h2 id="总结" tabindex="-1"> 总结</h2>
-<p>OK，今天的学习就到这里了！如果您在学习实践过程中遇到任何困难，欢迎加入我的<a href="https://raw.githubusercontent.com/cunyu1943/ebooks/main/img/%E5%BE%AE%E4%BF%A1%E7%BE%A4.png" target="_blank" rel="noopener noreferrer">技术交流群<ExternalLinkIcon/></a>，和大家一起交流讨论，更好的学习与进步！更多精彩内容可以<a href="https://cunyu1943.github.io" target="_blank" rel="noopener noreferrer">点击直达<ExternalLinkIcon/></a>，您的收藏、转发与点赞就是对我最大的支持！</p>
+<p>OK，今天的学习就到这里了！如果您在学习实践过程中遇到任何困难，欢迎加入我的<a href="https://raw.githubusercontent.com/cunyu1943/ebooks/main/img/%E5%BE%AE%E4%BF%A1%E7%BE%A4.png" target="_blank" rel="noopener noreferrer">技术交流群<ExternalLinkIcon/></a>，和大家一起交流讨论，更好的学习与进步！更多精彩内容可以<a href="https://cunyu1943.github.io/JavaPark" target="_blank" rel="noopener noreferrer">点击直达<ExternalLinkIcon/></a>，您的收藏、转发与点赞就是对我最大的支持！</p>
 ]]></content:encoded>
       <enclosure url="https://cdn.jsdelivr.net/gh/cunyu1943/blog-imgs@main/blog/image-new-project.png" type="image/png"/>
     </item>
@@ -28271,557 +28393,6 @@ method<span>.</span><span>invoke</span><span>(</span>object<span>)</span><span>;
 <img src="https://cdn.jsdelivr.net/gh/cunyu1943/cunyu1943@main/imgs/wepublic.gif" width="200" alt="公众号" />
 ]]></content:encoded>
       <enclosure url="https://cdn.jsdelivr.net/gh/cunyu1943/blog-imgs/picgo/image-20210330095328265.png" type="image/png"/>
-    </item>
-    <item>
-      <title>Java 菜鸟入门：变量与数据类型</title>
-      <link>https://cunyu1943.github.io/JavaPark/JavaPark/java/java-se/variable-and-datatype.html</link>
-      <guid>https://cunyu1943.github.io/JavaPark/JavaPark/java/java-se/variable-and-datatype.html</guid>
-      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">Java 菜鸟入门：变量与数据类型</source>
-      <category>Java 菜鸟入门</category>
-      <pubDate>Tue, 11 Jan 2022 22:28:36 GMT</pubDate>
-      <content:encoded><![CDATA[<h2 id="前情回顾" tabindex="-1"> 前情回顾</h2>
-<p>在之前的文章中，我们已经介绍了如何搭建 Java 开发环境以及如何使用 IDEA，现在就开始正式学习 Java 语言的相关语法吧！😎</p>
-<p>本期内容预告如下：</p>
-<ol>
-<li><strong>变量</strong></li>
-<li><strong>数据类型</strong></li>
-<li><strong>变量作用域</strong></li>
-<li><strong>常量</strong></li>
-</ol>
-<p>本文将主要从以上四个方面出发，带领大家来看一下 Java 中的变量和数据类型。</p>
-<h2 id="变量" tabindex="-1"> 变量</h2>
-<h3 id="什么是变量" tabindex="-1"> 什么是变量？</h3>
-<p>所谓变量，就是用来命名一个数据的标识符，在 Java 中，变量又可以分为两种：</p>
-<ul>
-<li><strong>基本类型的变量</strong></li>
-<li><strong>引用类型的变量</strong></li>
-</ul>
-<div><pre><code><span>// 基本类型的变量</span>
-<span>int</span> id <span>=</span> <span>1</span><span>;</span>
-<span>// 引用类型的变量</span>
-<span>String</span> name <span>=</span> <span>"村雨遥"</span><span>;</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br></div></div><p>其中 <code>int</code> 是基本数据类型，表示这是一个整型数；而 <code>String</code> 则是引用类型，表示这是一个引用类型；</p>
-<p><code>id</code> 和 <code>name</code> 则是标识符，也就是我们所说的 <strong>变量</strong>；</p>
-<p><code>=</code> 则是赋值操作符，而 <code>1</code> 则是基本类型的值，<code>村雨遥</code> 则是引用类型的值；</p>
-<h3 id="变量的特点" tabindex="-1"> 变量的特点</h3>
-<p>变量的最重要的一个特点就是可以重新赋值；</p>
-<div><pre><code><span>public</span> <span>class</span> <span>Main</span> <span>{</span>
-    <span>public</span> <span>static</span> <span>void</span> <span>main</span><span>(</span><span>String</span><span>[</span><span>]</span> args<span>)</span> <span>{</span>
-		<span>// 定义int类型变量id，并赋予初始值1</span>
-        <span>int</span> id <span>=</span> <span>1</span><span>;</span> 
-		<span>// 打印该变量的值，观察是否为1</span>
-        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span>id<span>)</span><span>;</span> 
- 		<span>// 重新赋值为2</span>
-        id <span>=</span> <span>2</span><span>;</span> 
-        <span>// 打印该变量的值，观察是否为2</span>
-        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span>id<span>)</span><span>;</span> 
-    <span>}</span>
-<span>}</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br></div></div><h3 id="变量命名规则" tabindex="-1"> 变量命名规则</h3>
-<p>变量命名也是一门学问，并不是我们想怎么命名就怎么命名，日常开发中最常见的变量命名规则主要有如下几条：</p>
-<ol>
-<li><strong>强制</strong>：变量命名只能使用 <strong>字母（大小写均可）、数字、$、_</strong>；</li>
-<li><strong>强制</strong>：变量名不能使用关键字（就是 Java 中内置的一些关键字，如 <code>int、for、long…</code>）；</li>
-<li><strong>强制</strong>：变量第一个字符不能使用数字，只能用字母、<code>$</code>、<code>_</code>；</li>
-<li>更多命名规则推荐参考阿里巴巴推出的《Java 开发手册》，下载链接：https://github.com/cunyu1943/ebooks</li>
-</ol>
-<h3 id="常见关键字" tabindex="-1"> 常见关键字</h3>
-<p>这是一种事先定义好的，有特定意义的标识符，也叫做保留字。对于 Java 编译器有着特殊意义，用来表示一种数据类型，或者表示程序的结构等。此外，关键字不能用作变量名、方法名、类名、包名和参数名。常见的关键字可以分为如下几类，具体的关键字如下图所示：</p>
-<ul>
-<li><strong>访问控制类</strong></li>
-<li><strong>类、方法及变量修饰符类</strong></li>
-<li><strong>程序控制类</strong></li>
-<li><strong>错误处理</strong></li>
-<li><strong>包相关</strong></li>
-<li><strong>基本类型</strong></li>
-<li><strong>变量引用</strong></li>
-<li><strong>保留字</strong></li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/cunyu1943/image-hosting-for-blog/imgJava 关键字.png" alt="Java 关键字" loading="lazy"></p>
-<h2 id="数据类型" tabindex="-1"> 数据类型</h2>
-<h3 id="基本数据类型" tabindex="-1"> 基本数据类型</h3>
-<p>Java 中，共有 8 种基本数据类型，由 Java 语言预定好的，每个数据类型都属于关键字，而且每种基本变量都有其对应的封装类，这 8 中基本数据类型分别是：</p>
-<ul>
-<li><strong>整型（4 种）</strong></li>
-<li><strong>浮点型（2 种）</strong></li>
-<li><strong>字符型（1 种）</strong></li>
-<li><strong>布尔型（1 种）</strong></li>
-</ul>
-<p>下面的表就是 Java 中 8 大数据类型所占的内存空间，对应封装类，数据表示范围以及默认值的一下相关情况。</p>
-<table>
-<thead>
-<tr>
-<th>数据类型</th>
-<th>bit</th>
-<th>字节</th>
-<th>封装类</th>
-<th>数据范围</th>
-<th>默认值</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>byte</code></td>
-<td>8</td>
-<td>1</td>
-<td><code>Byte</code></td>
-<td><span><span><i>Content not supported</i></span><span aria-hidden="true"><span><span style="height:0.8974em;vertical-align:-0.0833em;"></span><span>−</span><span><span>2</span><span><span><span><span style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span style="height:2.7em;"></span><span><span>7</span></span></span></span></span></span></span></span></span></span></span> ~ <span><span><i>Content not supported</i></span><span aria-hidden="true"><span><span style="height:0.8974em;vertical-align:-0.0833em;"></span><span><span>2</span><span><span><span><span style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span style="height:2.7em;"></span><span><span>7</span></span></span></span></span></span></span></span><span style="margin-right:0.2222em;"></span><span>−</span><span style="margin-right:0.2222em;"></span></span><span><span style="height:0.6444em;"></span><span>1</span></span></span></span></td>
-<td><code>0</code></td>
-</tr>
-<tr>
-<td><code>short</code></td>
-<td>16</td>
-<td>2</td>
-<td><code>Short</code></td>
-<td><span><span><i>Content not supported</i></span><span aria-hidden="true"><span><span style="height:0.8974em;vertical-align:-0.0833em;"></span><span>−</span><span><span>2</span><span><span><span><span style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span style="height:2.7em;"></span><span><span><span>15</span></span></span></span></span></span></span></span></span></span></span></span> ~ <span><span><i>Content not supported</i></span><span aria-hidden="true"><span><span style="height:0.8974em;vertical-align:-0.0833em;"></span><span><span>2</span><span><span><span><span style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span style="height:2.7em;"></span><span><span><span>15</span></span></span></span></span></span></span></span></span><span style="margin-right:0.2222em;"></span><span>−</span><span style="margin-right:0.2222em;"></span></span><span><span style="height:0.6444em;"></span><span>1</span></span></span></span></td>
-<td><code>0</code></td>
-</tr>
-<tr>
-<td><code>char</code></td>
-<td>16</td>
-<td>2</td>
-<td><code>Character</code></td>
-<td><code>\u0000</code> ~ <code>\uffff</code>（<span><span><i>Content not supported</i></span><span aria-hidden="true"><span><span style="height:0.6444em;"></span><span>0</span></span></span></span> ~ <span><span><i>Content not supported</i></span><span aria-hidden="true"><span><span style="height:0.6444em;"></span><span>65535</span></span></span></span>）</td>
-<td><code>u0000</code></td>
-</tr>
-<tr>
-<td><code>int</code></td>
-<td>32</td>
-<td>4</td>
-<td><code>Integer</code></td>
-<td><span><span><i>Content not supported</i></span><span aria-hidden="true"><span><span style="height:0.8974em;vertical-align:-0.0833em;"></span><span>−</span><span><span>2</span><span><span><span><span style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span style="height:2.7em;"></span><span><span><span>31</span></span></span></span></span></span></span></span></span></span></span></span> ~ <span><span><i>Content not supported</i></span><span aria-hidden="true"><span><span style="height:0.8974em;vertical-align:-0.0833em;"></span><span><span>2</span><span><span><span><span style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span style="height:2.7em;"></span><span><span><span>31</span></span></span></span></span></span></span></span></span><span style="margin-right:0.2222em;"></span><span>−</span><span style="margin-right:0.2222em;"></span></span><span><span style="height:0.6444em;"></span><span>1</span></span></span></span></td>
-<td><code>0</code></td>
-</tr>
-<tr>
-<td><code>long</code></td>
-<td>64</td>
-<td>8</td>
-<td><code>Long</code></td>
-<td><span><span><i>Content not supported</i></span><span aria-hidden="true"><span><span style="height:0.8974em;vertical-align:-0.0833em;"></span><span>−</span><span><span>2</span><span><span><span><span style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span style="height:2.7em;"></span><span><span><span>63</span></span></span></span></span></span></span></span></span></span></span></span> ~ <span><span><i>Content not supported</i></span><span aria-hidden="true"><span><span style="height:0.8974em;vertical-align:-0.0833em;"></span><span><span>2</span><span><span><span><span style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span style="height:2.7em;"></span><span><span><span>63</span></span></span></span></span></span></span></span></span><span style="margin-right:0.2222em;"></span><span>−</span><span style="margin-right:0.2222em;"></span></span><span><span style="height:0.6444em;"></span><span>1</span></span></span></span></td>
-<td><code>0L</code></td>
-</tr>
-<tr>
-<td><code>float</code></td>
-<td>32</td>
-<td>4</td>
-<td><code>Float</code></td>
-<td><span><span><i>Content not supported</i></span><span aria-hidden="true"><span><span style="height:0.8141em;"></span><span>3.4</span><span><span>e</span><span><span><span><span style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span style="height:2.7em;"></span><span><span><span>−</span><span>45</span></span></span></span></span></span></span></span></span></span></span></span> ~ <span><span><i>Content not supported</i></span><span aria-hidden="true"><span><span style="height:0.8141em;"></span><span>1.4</span><span><span>e</span><span><span><span><span style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span style="height:2.7em;"></span><span><span><span>38</span></span></span></span></span></span></span></span></span></span></span></span></td>
-<td><code>0.0f</code></td>
-</tr>
-<tr>
-<td><code>double</code></td>
-<td>64</td>
-<td>8</td>
-<td><code>Double</code></td>
-<td><span><span><i>Content not supported</i></span><span aria-hidden="true"><span><span style="height:0.8141em;"></span><span>4.9</span><span><span>e</span><span><span><span><span style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span style="height:2.7em;"></span><span><span><span>−</span><span>324</span></span></span></span></span></span></span></span></span></span></span></span> ~ <span><span><i>Content not supported</i></span><span aria-hidden="true"><span><span style="height:0.8141em;"></span><span>1.8</span><span><span>e</span><span><span><span><span style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span style="height:2.7em;"></span><span><span><span>308</span></span></span></span></span></span></span></span></span></span></span></span></td>
-<td><code>0.0D</code></td>
-</tr>
-<tr>
-<td><code>boolean</code></td>
-<td>1</td>
-<td>不确定</td>
-<td><code>Boolean</code></td>
-<td><code>true</code> 或 <code>false</code></td>
-<td><code>false</code></td>
-</tr>
-</tbody>
-</table>
-<p><strong>注意：</strong></p>
-<ol>
-<li><code>boolean</code> 一般用 1 <code>bit</code> 来存储，但是具体大小并未规定，JVM 在编译期将 <code>boolean</code> 类型转换为 <code>int</code>，此时 1 代表 <code>true</code>，<code>0</code> 代表 <code>false</code>。此外，JVM 还指出 <code>boolean</code> 数组，但底层是通过 <code>byte</code> 数组来实现;</li>
-<li>使用 <code>long</code> 类型时，需要在后边加上 <code>L</code>，否则将其作为整型解析，可能会导致越界；</li>
-<li>浮点数如果没有明确指定 <code>float</code> 还是 <code>double</code>，统一按 <code>double</code> 处理；</li>
-<li><code>char</code> 是用 <strong>单引号 <code>''</code></strong> 将内容括起来，<strong>只能存放一个字符</strong>，相当于一个整型值（ASCII 值），能够参加表达式运算；而 <code>String</code> 是用 <strong>双引号 <code>&quot;&quot;</code></strong> 将内容括起来，代表的是一个地址值；</li>
-<li>Java 在内存中是采用 Unicode 表示，所以无论是一个中文字符还是英文字符，都能用 <code>char</code> 来表示；</li>
-</ol>
-<p>那么如何个一个基本类型变量赋值呢？</p>
-<p>在 Java 中，基本数据类型属于 Java 的一种内置的特殊数据类型，不属于任何类，所以可以直接对其进行赋值；给基本类型的变量赋值的方式就叫做 <strong>字面值</strong>；</p>
-<div><pre><code><span>float</span> score <span>=</span> <span>89.0f</span><span>;</span>
-<span>int</span> age <span>=</span> <span>26</span><span>;</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br></div></div><h3 id="引用数据类型" tabindex="-1"> 引用数据类型</h3>
-<h4 id="常见引用数据类型" tabindex="-1"> 常见引用数据类型</h4>
-<table>
-<thead>
-<tr>
-<th>数据类型</th>
-<th>默认值</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>数组</td>
-<td><code>null</code></td>
-</tr>
-<tr>
-<td>类</td>
-<td><code>null</code></td>
-</tr>
-<tr>
-<td>接口</td>
-<td><code>null</code></td>
-</tr>
-</tbody>
-</table>
-<p>而对于引用数据类型，我们经常是需要 <code>new</code> 关键字来进行赋值，但是引用类型中的 <strong>接口是不能被实例化的，我们需要对其进行实现</strong>；</p>
-<div><pre><code><span>// 初始化一个对象</span>
-<span>Pet</span> dog <span>=</span> <span>new</span> <span>Pet</span><span>(</span><span>)</span><span>;</span>
-<span>// 初始化一个数组</span>
-<span>int</span><span>[</span><span>]</span> arr <span>=</span> <span>new</span> <span>int</span><span>[</span><span>10</span><span>]</span><span>;</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br></div></div><h4 id="string" tabindex="-1"> String</h4>
-<p>对于引用数据类型中的 <code>String</code>，我们需要特别关注。</p>
-<p><code>String</code> 不同于 <code>char</code>，它属于引用类型，而 <code>char</code> 属于基本数据类型。用双引号 <code>&quot;&quot;</code> 括起来表示字符串，一个字符串能够保存 0 个到任意个字符，它一旦创建就不能被改变。</p>
-<p>而针对字符串，如果我们要打印一些特殊的字符，比如字符串本来就包含 <code>&quot;</code>，那么这个时候就需要借助于转义字符 <code>\</code>，最常见的转义字符主要有：</p>
-<table>
-<thead>
-<tr>
-<th>转义字符</th>
-<th>含义</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>\&quot;</code></td>
-<td>字符 <code>&quot;</code></td>
-</tr>
-<tr>
-<td><code>\'</code></td>
-<td>字符 <code>'</code></td>
-</tr>
-<tr>
-<td><code>\\</code></td>
-<td>字符 <code>\</code></td>
-</tr>
-<tr>
-<td><code>\n</code></td>
-<td>换行符</td>
-</tr>
-<tr>
-<td><code>\t</code></td>
-<td>制表符 <code>Tab</code></td>
-</tr>
-<tr>
-<td><code>\r</code></td>
-<td>回车符</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>那多个字符串之间或者字符串和其他类型数据之间，该如何进行连接呢？</p>
-</blockquote>
-<p>Java 编译器中，对于字符串和其他数据类型之间，可以使用 <code>+</code> 进行连接，编译器会自动将其他数据类型自动转换为字符串，然后再进行连接；</p>
-<blockquote>
-<p><code>String</code> 既然是不可变，那有什么优点呢？</p>
-</blockquote>
-<ol>
-<li><strong>用于缓存 <code>hash</code> 值</strong></li>
-</ol>
-<p>由于 <code>String</code> 的 <code>hash</code> 值被频繁使用，它的不可变性使得 <code>hash</code> 值也不可变，此时只需要进行一次计算；</p>
-<ol start="2">
-<li><strong>字符串常量池（String Pool）的需要</strong></li>
-</ol>
-<p>如果一个 <code>String</code> 对象已经被创建过，那么就会优先从字符串常量池中获取其引用，其不可变性确保了不同引用指向同一 <code>String</code> 对象；</p>
-<ol start="3">
-<li><strong>安全性</strong></li>
-</ol>
-<p>我们经常用 <code>String</code> 作为我们方法的参数，其不变性能够保证参数不可变；</p>
-<ol start="4">
-<li><strong>线程安全</strong></li>
-</ol>
-<p><code>String</code> 的不可变性让它天生 <strong>具备线程安全</strong>，能够在多个线程中方便使用而不用考虑线程安全问题。</p>
-<blockquote>
-<p><code>String、StringBuilder、StringBuffer</code> 对比，该如何选择？</p>
-</blockquote>
-<table>
-<thead>
-<tr>
-<th></th>
-<th>可变性</th>
-<th>线程安全</th>
-<th>适用场景</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>String</code></td>
-<td>不可变</td>
-<td>安全</td>
-<td>操作少量的数据</td>
-</tr>
-<tr>
-<td><code>StringBuffer</code></td>
-<td>可变</td>
-<td>安全，内部使用 <code>synchronized</code> 进行同步</td>
-<td>多线程操作字符串缓冲区下操作大量数据</td>
-</tr>
-<tr>
-<td><code>StringBuilder</code></td>
-<td>可变</td>
-<td>不安全</td>
-<td>单线程操作字符串缓冲区下操作大量数据，性能高于 <code>StringBuffer</code></td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>通过 <code>new String(“xxx”)</code> 创建字符串的两种情况？</p>
-</blockquote>
-<p>使用 <code>new</code> 的方式创建字符串对象，会有两种不同的情况：</p>
-<ol>
-<li><strong>String Pool 中不存在 “xxx”</strong></li>
-</ol>
-<p>此时会创建两个字符串对象，“xxx” 属于字符串字面量，因此在编译期会在 String Pool 中创建一个字符串对象，用于指向该字符串的字面量 “xxx”；然后 <code>new</code> 会在堆中创建一个字符串对象；</p>
-<p><img src="https://s1.ax1x.com/2020/07/25/UxXxC8.png" alt="" loading="lazy"></p>
-<ol start="2">
-<li><strong>String Pool 中存在 “xxx”</strong></li>
-</ol>
-<p>此时只需要创建一个字符串对象，由于 String Pool 中已经存在指向 “xxx” 的对象，所以直接在堆中创建一个字符串对象；</p>
-<p><img src="https://s1.ax1x.com/2020/07/25/UxjpvQ.png" alt="" loading="lazy"></p>
-<h3 id="数据类型转换" tabindex="-1"> 数据类型转换</h3>
-<p>对于基本数据类型，不同类型之间是可以相互转换的，但是需要满足一定的条件；</p>
-<blockquote>
-<p><strong>从小到大自动转，从大到小强制转</strong>。</p>
-</blockquote>
-<p>即就是，对于低精度的数据类型，如果要转换为高精度的数据类型，直接将低精度的值赋给高精度的值即可；</p>
-<p>但对于高精度的数据类型，如果想要转换为低精度的数据类型，则需要采用 <strong>强制转换</strong> 的手段，但此时需要承担精度丢失的风险，就像从一个大杯子往一个小杯子里倒水，你要做好小杯子可能装不下溢出的情况；</p>
-<div><pre><code><span>int</span> a <span>=</span> <span>110</span><span>;</span>
-<span>long</span> b <span>=</span> <span>113</span><span>;</span>
-<span>// 低精度转高精度，由于 long 的范围比 int 大，所以可以自动转</span>
-b <span>=</span> a<span>;</span>
-<span>// 高精度住哪低精度，由于 long 的范围比 int 大，所以需要强制转</span>
-a <span>=</span> <span>(</span><span>int</span><span>)</span>b<span>;</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br></div></div><h4 id="隐式转换-自动类型转换" tabindex="-1"> 隐式转换（自动类型转换）</h4>
-<p>当满足如下条件时，如果将一种类型的数据赋值给另一种数据类型变量时，将执行自动类型转换：</p>
-<blockquote>
-<ol>
-<li>两种数据类型彼此兼容；</li>
-<li>目标数据类型的取值范围大于源数据类型；</li>
-</ol>
-</blockquote>
-<p>一般而言，隐式转换的规则是从低级类型数据转换为高级类型数据，对应规则如下：</p>
-<blockquote>
-<ul>
-<li><strong>数值类型</strong>：<code>byte -&gt; short -&gt; int -&gt; long -&gt; float -&gt; double</code></li>
-<li><strong>字符类型转整型</strong>：<code>char -&gt; int</code></li>
-</ul>
-</blockquote>
-<h4 id="显式转换-强制类型转换" tabindex="-1"> 显式转换（强制类型转换）</h4>
-<p>那既然满足上述两个条件时会发生隐式转换，那不满足同时我们又想进行数据类型转换时，我们该怎么办呢？</p>
-<p>这个时候就需要我们的 <strong>显式转换</strong> 登场了，其语法格式如下：</p>
-<div><pre><code><span>(</span>type<span>)</span> variableName<span>;</span>
-</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p>我们举个 🌰 来说下：</p>
-<div><pre><code><span>int</span> num <span>=</span> <span>3</span><span>;</span>
-<span>double</span> ans <span>=</span> <span>5.0</span><span>;</span>
-<span>// 要将 double 类型的值赋值给 int，则需要强制转换</span>
-num <span>=</span> <span>(</span><span>int</span><span>)</span>ans<span>;</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br></div></div><p>**注意：**强制转换可能会导致精度丢失，所以一般情况下尽量能不用就不用。</p>
-<h4 id="常见数据类型转换方法" tabindex="-1"> 常见数据类型转换方法</h4>
-<ol>
-<li><strong>字符串与其他类型之间的转换</strong></li>
-</ol>
-<ul>
-<li><strong>其他类型 -&gt; 字符串</strong></li>
-</ul>
-<blockquote>
-<ol>
-<li>调用类的串转换方法：<code>X.toString()</code>；</li>
-<li>自动转换：<code>&quot;&quot; + X</code>；</li>
-<li>利用 <code>String</code> 的方法：<code>String.valueOf(X)</code>；</li>
-</ol>
-</blockquote>
-<div><pre><code><span>// 方法 1</span>
-<span>String</span> str1 <span>=</span> <span>Integer</span><span>.</span><span>toString</span><span>(</span><span>int</span> num<span>)</span><span>;</span>
-<span>String</span> str2 <span>=</span> <span>Long</span><span>.</span><span>toString</span><span>(</span><span>long</span> num<span>)</span><span>;</span>
-<span>String</span> str3 <span>=</span> <span>Float</span><span>.</span><span>toString</span><span>(</span>flaot num<span>)</span><span>;</span>
-<span>String</span> str4 <span>=</span> <span>Double</span><span>.</span><span>toString</span><span>(</span><span>double</span> num<span>)</span><span>;</span>
-<span>// 方法 2</span>
-<span>String</span> str <span>=</span> <span>""</span> <span>+</span> num <span>;</span> <span>// num 是 int、long、float、double 类型</span>
-
-<span>// 方法 3</span>
-<span>String</span> str1 <span>=</span> <span>String</span><span>.</span><span>valueOf</span><span>(</span><span>int</span> num<span>)</span><span>;</span>
-<span>String</span> str2 <span>=</span> <span>String</span><span>.</span><span>valueOf</span><span>(</span><span>long</span> num<span>)</span><span>;</span>
-<span>String</span> str3 <span>=</span> <span>String</span><span>.</span><span>valueOf</span><span>(</span><span>float</span> num<span>)</span><span>;</span>
-<span>String</span> str4 <span>=</span> <span>String</span><span>.</span><span>valueOf</span><span>(</span><span>double</span> num<span>)</span><span>;</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br></div></div><ul>
-<li><strong>字符串 - &gt; 其他类型</strong></li>
-</ul>
-<ol>
-<li>调用 <code>parseXXX</code> 方法，比如 <code>parseLong、parseFloat、parseDouble...</code>；</li>
-<li>先调用 <code>valueOf()</code>，方法，然后再调用 <code>xxxValue()</code> 方法；</li>
-</ol>
-<div><pre><code><span>// 方法 1</span>
-<span>int</span> num1 <span>=</span> <span>Integer</span><span>.</span><span>parseInt</span><span>(</span><span>String</span> str<span>)</span><span>;</span>
-<span>Long</span> num2 <span>=</span> <span>Long</span><span>.</span><span>parseLong</span><span>(</span><span>String</span> str<span>)</span><span>;</span>
-<span>Float</span> num3 <span>=</span> <span>Float</span><span>.</span><span>parseFloat</span><span>(</span><span>String</span> str<span>)</span><span>;</span>
-<span>Double</span> num4 <span>=</span> <span>Double</span><span>.</span><span>parseDouble</span><span>(</span><span>String</span> str<span>)</span><span>;</span>
-
-<span>// 方法 2</span>
-<span>int</span> num1 <span>=</span> <span>Integer</span><span>.</span><span>valueOf</span><span>(</span><span>String</span> str<span>)</span><span>.</span><span>intValue</span><span>(</span><span>)</span><span>;</span>
-<span>Long</span> num2 <span>=</span> <span>Long</span><span>.</span><span>valueOf</span><span>(</span><span>String</span> str<span>)</span><span>.</span><span>longValue</span><span>(</span><span>)</span><span>;</span>
-<span>Float</span> num1 <span>=</span> <span>Float</span><span>.</span><span>valueOf</span><span>(</span><span>String</span> str<span>)</span><span>.</span><span>floatValue</span><span>(</span><span>)</span><span>;</span>
-<span>Double</span> num1 <span>=</span> <span>Double</span><span>.</span><span>valueOf</span><span>(</span><span>String</span> str<span>)</span><span>.</span><span>doubleValue</span><span>(</span><span>)</span><span>;</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br></div></div><ol start="2">
-<li><strong>int、float、double</strong> 之间的转换</li>
-</ol>
-<ul>
-<li><code>float -&gt; double</code></li>
-</ul>
-<div><pre><code><span>float</span> num <span>=</span> <span>1.0f</span><span>;</span>
-<span>Float</span> num1 <span>=</span> <span>new</span> <span>Float</span><span>(</span>num<span>)</span><span>;</span>
-<span>double</span> num2 <span>=</span> num1<span>.</span><span>doubleValue</span><span>(</span><span>)</span><span>;</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br></div></div><ul>
-<li><code>double -&gt; float</code></li>
-</ul>
-<div><pre><code><span>double</span> num <span>=</span> <span>100.0</span><span>;</span>
-<span>float</span> num1 <span>=</span> <span>(</span><span>float</span><span>)</span>num<span>;</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br></div></div><ul>
-<li><code>double -&gt; int</code></li>
-</ul>
-<div><pre><code><span>double</span> num <span>=</span> <span>100.0</span><span>;</span>
-<span>Double</span> num1 <span>=</span> <span>new</span> <span>Double</span><span>(</span>num<span>)</span><span>;</span>
-<span>int</span> num2 <span>=</span> num1<span>.</span><span>intValue</span><span>(</span><span>)</span><span>;</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br></div></div><ul>
-<li><code>int -&gt; double</code></li>
-</ul>
-<div><pre><code><span>int</span> num <span>=</span> <span>200</span><span>;</span>
-<span>double</span> num1 <span>=</span> num<span>;</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br></div></div><h2 id="变量作用域" tabindex="-1"> 变量作用域</h2>
-<p>我们已经学会了如何定义变量，也知道了使用各种数据类型来定义变量。但是还有一点不知道大家有没有注意到，如果我们的定义变量在不同的位置，其作用是不是相同的呢？</p>
-<p>这就涉及到变量的作用域，一般根据其作用域的不同，可以分为：</p>
-<ul>
-<li><strong>成员变量</strong>：定义在方法体和语句块外，不属于任何一个方法，能在整个类中起作用；</li>
-<li><strong>局部变量</strong>：定义在方法或方法体中的变量，作用域是其所在的代码块；</li>
-</ul>
-<h3 id="成员变量" tabindex="-1"> 成员变量</h3>
-<p>成员变量又可以分为 <strong>全局变量（又叫实例变量）</strong> 和 <strong>静态变量（也叫类变量）</strong>，两者的区别如下：</p>
-<table>
-<thead>
-<tr>
-<th>名称</th>
-<th>修饰符</th>
-<th>访问方式</th>
-<th>生命周期</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>全局变量</td>
-<td>无</td>
-<td>对象名.变量名</td>
-<td>一旦对象被引用，则实例变量就存在</td>
-</tr>
-<tr>
-<td>静态变量</td>
-<td><code>static</code></td>
-<td>类名.变量名</td>
-<td>同类共生死，只有当类被 GC 回收时才会被销毁</td>
-</tr>
-</tbody>
-</table>
-<div><pre><code><span>public</span> <span>class</span> <span>Person</span> <span>{</span>
-    <span>// 成员变量，全局变量</span>
-    <span>String</span> name<span>;</span> 
-    <span>// 成员变量，全局变量</span>
-    <span>int</span> age<span>;</span> 
-
-    <span>// 成员变量，静态变量</span>
-    <span>public</span> <span>static</span> <span>final</span> <span>String</span> wechatPublic <span>=</span> <span>"公众号：村雨遥"</span><span>;</span> 
-    <span>// 成员变量，静态变量</span>
-    <span>public</span> <span>static</span> <span>final</span> <span>String</span> website <span>=</span> <span>"http://cunyu1943.site"</span><span>;</span> 
-<span>}</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br></div></div><h3 id="局部变量" tabindex="-1"> 局部变量</h3>
-<p>成员变量指定义在方法或方法体中的变量，作用域是其所在的代码块，可以分为如下三种：</p>
-<ul>
-<li>形参</li>
-</ul>
-<div><pre><code><span>public</span> <span>class</span> <span>Main</span> <span>{</span>
-    <span>// 方法中的参数</span>
-    <span>public</span> <span>static</span> <span>void</span> <span>func</span><span>(</span><span>int</span> num<span>)</span> <span>{</span>
-        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>"num = "</span> <span>+</span> num<span>)</span><span>;</span>
-    <span>}</span>
-
-    <span>public</span> <span>static</span> <span>void</span> <span>main</span><span>(</span><span>String</span><span>[</span><span>]</span> args<span>)</span> <span>{</span>
-        <span>func</span><span>(</span><span>3</span><span>)</span><span>;</span>
-    <span>}</span>
-<span>}</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br></div></div><ul>
-<li>方法内定义</li>
-</ul>
-<div><pre><code><span>public</span> <span>class</span> <span>Main</span> <span>{</span>
-    <span>public</span> <span>static</span> <span>void</span> <span>main</span><span>(</span><span>String</span><span>[</span><span>]</span> args<span>)</span> <span>{</span>
-        <span>int</span> num <span>=</span> <span>10</span><span>;</span>
-        <span>if</span> <span>(</span>num <span>></span> <span>5</span><span>)</span> <span>{</span>
-            <span>// 声明一个 int 类型的局部变量</span>
-            <span>int</span> tmp <span>=</span> <span>5</span><span>;</span> 
-            <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>"tmp = "</span> <span>+</span> tmp<span>)</span><span>;</span>
-            <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>"num = "</span> <span>+</span> num<span>)</span><span>;</span>
-        <span>}</span>
-        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>"num = "</span> <span>+</span> num<span>)</span><span>;</span>
-    <span>}</span>
-<span>}</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br></div></div><ul>
-<li>代码块定义</li>
-</ul>
-<div><pre><code><span>public</span> <span>class</span> <span>Main</span> <span>{</span>
-    <span>public</span> <span>static</span> <span>void</span> <span>func</span><span>(</span><span>)</span> <span>{</span>
-        <span>try</span> <span>{</span>
-            <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>"Hello!Exception!"</span><span>)</span><span>;</span>
-        <span>}</span> <span>catch</span> <span>(</span><span>Exception</span> e<span>)</span> <span>{</span> <span>// 异常处理块，参数为 Exception 类型</span>
-            e<span>.</span><span>printStackTrace</span><span>(</span><span>)</span><span>;</span>
-        <span>}</span>
-    <span>}</span>
-
-    <span>public</span> <span>static</span> <span>void</span> <span>main</span><span>(</span><span>String</span><span>[</span><span>]</span> args<span>)</span> <span>{</span>
-        <span>func</span><span>(</span><span>)</span><span>;</span>
-    <span>}</span>
-<span>}</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br></div></div><h2 id="常量" tabindex="-1"> 常量</h2>
-<h3 id="简介" tabindex="-1"> 简介</h3>
-<p>既然有变量，那就有与之相对的常量（也就是值是固定的，不能再变）。</p>
-<p>常量又叫做字面常量，是通过数据直接来表示的，在程序运行过程中不能发生改变。通常我们把 Java 中用 <code>final</code> 关键字所修饰的成员变量叫做常量，它的值一旦给定就无法再进行改变！</p>
-<h3 id="分类" tabindex="-1"> 分类</h3>
-<p>Java 中使用 <code>final</code> 关键字来声明常量，其语法格式如下：</p>
-<div><pre><code><span>final</span> 数据类型 常量名 <span>=</span> 常量初始值<span>;</span>
-</code></pre><div aria-hidden="true"><span>1</span><br></div></div><div><pre><code><span>public</span> <span>class</span> <span>Main</span><span>{</span>
-    <span>public</span> <span>static</span> <span>void</span> <span>main</span><span>(</span><span>String</span><span>[</span><span>]</span> args<span>)</span><span>{</span>
-        <span>// 声明一个常量并赋值</span>
-        <span>final</span> <span>int</span> num <span>=</span> <span>1024</span><span>;</span>
-        
-        <span>// 再次赋值，将导致编译错误</span>
-        num <span>=</span> <span>1943</span><span>;</span>
-        
-        <span>// 声明一个常量但不赋值</span>
-        <span>final</span> <span>int</span> id<span>;</span>
-        <span>// 因为声明时未赋值，所以可以进程初次赋值</span>
-        id <span>=</span> <span>1</span><span>;</span>
-        <span>// 常量已经赋值过了，再次赋值将导致编译错误</span>
-        id <span>=</span> <span>2</span><span>;</span>
-    <span>}</span>
-<span>}</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br></div></div><p>常量可以分为如下 3 种类型：</p>
-<ul>
-<li><strong>静态常量</strong>：<code>final</code> 之前用 <code>public staic</code> 修饰，表示该常量的作用域是全局的，我们不用创建对象就能够访问它。</li>
-<li><strong>成员常量</strong>：类似于成员变量，但是最大的不同在于它不能被修改。</li>
-<li><strong>局部常量</strong>：作用类似于局部变量，不同之处也在于不能修改。</li>
-</ul>
-<div><pre><code><span>public</span> <span>class</span> <span>Main</span><span>{</span>
-    <span>// 静态变量</span>
-    <span>public</span> <span>static</span> <span>final</span> dobule PI <span>=</span> <span>3.14</span><span>;</span>
-    
-    <span>// 成员常量</span>
-    <span>final</span> <span>int</span> num <span>=</span> <span>1024</span><span>;</span>
-    
-    <span>public</span> <span>static</span> <span>void</span> <span>main</span><span>(</span><span>String</span><span>[</span><span>]</span> args<span>)</span><span>{</span>
-        <span>// 局部变量</span>
-        <span>final</span> <span>long</span> count <span>=</span> <span>1000</span><span>;</span>
-    <span>}</span>
-<span>}</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br></div></div><p>PS：<code>final</code> 修饰变量后，该变量则变为常量。而 <code>final</code> 也还可以用来修饰类和方法，修饰方法时，表示这个方法不能被重写（但可以重载）；修饰类时，则表明该类无法被继承。这些东西这时候你可能会觉得很陌生，不过等我们后续学习了面向对象之后，你就会发现其实很简单。</p>
-<h2 id="总结" tabindex="-1"> 总结</h2>
-<p>以上就是本期文章的所有内容了，集中介绍了 Java 中的变量、数据类型、变量作用域以及常量等主要知识点。内容虽然蛮多的，但如果大家能够静下心来慢慢学习，掌握起来还是不难的。</p>
-<p>最后，码字不易，如果觉得本文对您有所帮助，可以点赞关注，帮忙分享一波哦！🙏</p>
-<p><strong>关注公众号，获取最新文章更新</strong></p>
-<img src="https://cdn.jsdelivr.net/gh/cunyu1943/cunyu1943@main/imgs/wepublic.gif" width="200" alt="公众号" />
-]]></content:encoded>
-      <enclosure url="https://cdn.jsdelivr.net/gh/cunyu1943/image-hosting-for-blog/imgJava%20%E5%85%B3%E9%94%AE%E5%AD%97.png" type="image/png"/>
     </item>
   </channel>
 </rss>
