@@ -3,7 +3,7 @@
   <id>https://cunyu1943.github.io/JavaPark/JavaPark/</id>
   <title>JavaPark</title>
   <subtitle>Java 自学编程之路</subtitle>
-  <updated>2022-04-29T03:18:05.885Z</updated>
+  <updated>2022-04-29T04:03:34.435Z</updated>
   <generator>vuepress-plugin-feed2</generator>
   <link rel="self" href="https://cunyu1943.github.io/JavaPark/JavaPark/atom.xml"/>
   <link rel="alternate" href="https://cunyu1943.github.io/JavaPark/JavaPark/"/>
@@ -28,7 +28,7 @@
     <title type="html">Spring 篇：Bean 详解</title>
     <id>https://cunyu1943.github.io/JavaPark/JavaPark/java/spring/bean.html</id>
     <link href="https://cunyu1943.github.io/JavaPark/JavaPark/java/spring/bean.html"/>
-    <updated>2022-04-27T12:37:00.000Z</updated>
+    <updated>2022-04-29T04:02:21.000Z</updated>
     <content type="html"><![CDATA[<h2 id="bean-的别名配置" tabindex="-1"> Bean 的别名配置</h2>
 <p>接着上一篇文章中的 <code>&lt;bean&gt;</code> 配置，其中配置了 <code>id</code> 属性，通过 <code>id</code> 属性我们就可以获取到对象。其实 <code>&lt;bean&gt;</code> 配置也提供了 <code>name</code> 属性，它是用于定义 Bean 的别名，一个 Bean 的别名是可以有多个的，各个别名之间可以通过逗号（<code>,</code>）、分号（<code>;</code>）、空格（<code> </code>）分隔。</p>
 <div><pre><code><span>&lt;!--  配置 bean  --></span>
@@ -56,7 +56,7 @@
 <tbody>
 <tr>
 <td><code>singleton</code></td>
-<td>单例，也是 Bean 磨人的作用范围</td>
+<td>单例，也是 Bean 默认的作用范围</td>
 </tr>
 <tr>
 <td><code>prototype</code></td>
