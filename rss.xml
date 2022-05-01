@@ -6,8 +6,8 @@
     <link>https://cunyu1943.github.io/JavaPark/JavaPark/</link>
     <description>Java 自学编程之路</description>
     <language>zh-CN</language>
-    <pubDate>Sun, 01 May 2022 02:00:58 GMT</pubDate>
-    <lastBuildDate>Sun, 01 May 2022 02:00:58 GMT</lastBuildDate>
+    <pubDate>Sun, 01 May 2022 02:03:25 GMT</pubDate>
+    <lastBuildDate>Sun, 01 May 2022 02:03:25 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>Spring Boot 基础教程</category>
@@ -2770,10 +2770,10 @@ A[开始] -->B[出示证件]
       <enclosure url="https://gitee.com/cunyu1943/images/raw/master/ImgsUbuntu/20200507164716.png" type="image/png"/>
     </item>
     <item>
-      <title>工具教程：技术写作中的神兵利器</title>
+      <title>效率工具：技术写作中的神兵利器</title>
       <link>https://cunyu1943.github.io/JavaPark/JavaPark/efficiency/write-tools.html</link>
       <guid>https://cunyu1943.github.io/JavaPark/JavaPark/efficiency/write-tools.html</guid>
-      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">工具教程：技术写作中的神兵利器</source>
+      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">效率工具：技术写作中的神兵利器</source>
       <category>工具教程</category>
       <pubDate>Sat, 01 Jan 2022 20:38:05 GMT</pubDate>
       <content:encoded><![CDATA[<h2 id="前言" tabindex="-1"> 前言</h2>

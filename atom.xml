@@ -3,7 +3,7 @@
   <id>https://cunyu1943.github.io/JavaPark/JavaPark/</id>
   <title>JavaPark</title>
   <subtitle>Java 自学编程之路</subtitle>
-  <updated>2022-05-01T02:00:58.921Z</updated>
+  <updated>2022-05-01T02:03:25.995Z</updated>
   <generator>vuepress-plugin-feed2</generator>
   <link rel="self" href="https://cunyu1943.github.io/JavaPark/JavaPark/atom.xml"/>
   <link rel="alternate" href="https://cunyu1943.github.io/JavaPark/JavaPark/"/>
@@ -2751,10 +2751,10 @@ A[开始] -->B[出示证件]
     <published>2022-01-16T21:10:15.000Z</published>
   </entry>
   <entry>
-    <title type="html">工具教程：技术写作中的神兵利器</title>
+    <title type="html">效率工具：技术写作中的神兵利器</title>
     <id>https://cunyu1943.github.io/JavaPark/JavaPark/efficiency/write-tools.html</id>
     <link href="https://cunyu1943.github.io/JavaPark/JavaPark/efficiency/write-tools.html"/>
-    <updated>2022-04-26T05:35:46.000Z</updated>
+    <updated>2022-05-01T02:02:13.000Z</updated>
     <content type="html"><![CDATA[<h2 id="前言" tabindex="-1"> 前言</h2>
 <p>之前参加了由掘金社区组织的创作者训练营第二期活动，有幸见到了比如月影、工业聚、张晋涛等许多这个行业的大佬，也认识了许多技术写作的博主，可谓是一场大型网友面基会，哈哈哈 🤣. 针对大佬们的演讲和各位博主的提问，发现大家对于多平台分发这一块很感兴趣，也被这个问题困扰了许久，所以今天就来讲讲我这个小菜鸟在平常创作和发布这一块中摸索使用的一些工具总结，希望能对大家有所帮助。下面就来看看文章的主要内容，我主要会从如下几个方面来进行展开：</p>
 <ul>
