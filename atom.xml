@@ -3,10 +3,11 @@
   <id>https://cunyu1943.github.io/JavaPark/JavaPark/</id>
   <title>JavaPark</title>
   <subtitle>Java 自学编程之路</subtitle>
-  <updated>2022-05-01T13:33:04.186Z</updated>
+  <updated>2022-05-02T15:12:55.972Z</updated>
   <generator>vuepress-plugin-feed2</generator>
   <link rel="self" href="https://cunyu1943.github.io/JavaPark/JavaPark/atom.xml"/>
   <link rel="alternate" href="https://cunyu1943.github.io/JavaPark/JavaPark/"/>
+  <category term="数据结构与算法"/>
   <category term="Spring Boot 基础教程"/>
   <category term="Spring 教程"/>
   <category term="工具教程"/>
@@ -25,6 +26,86 @@
   <category term="Maven 入门教程"/>
   <category term="博客搭建"/>
   <category term="Java 菜鸟入门"/>
+  <entry>
+    <title type="html">数据结构与算法：数据结构简介</title>
+    <id>https://cunyu1943.github.io/JavaPark/JavaPark/cs-basics/algorithm/datastructure.html</id>
+    <link href="https://cunyu1943.github.io/JavaPark/JavaPark/cs-basics/algorithm/datastructure.html"/>
+    <updated>2022-05-02T15:09:52.000Z</updated>
+    <content type="html"><![CDATA[<h2 id="什么是数据结构" tabindex="-1"> 什么是数据结构</h2>
+<p>在开始正式学习数据结构前，咱们先来看看什么是数据。所谓数据，就是用来描述客观事物的符号，在计算机中就是可以操作的对象，能够被计算机识别并输入给计算机处理的符号集合。数据不仅包括整型、浮点型等数值类型，还包括字符、声音、图像、视频等非数值型类型。</p>
+<p>而数据元素就是组成数据的、有一定意义的基本单位，在计算机中一般作为整体来处理，而这些数据元素也叫做记录。</p>
+<p>除了数据元素之外，还可以有数据项，一个数据元素可以由若干个数据项所组成，而数据项则是数据中不可分割的最小单位。</p>
+<p>不同数据之间，或多或少都存在着一定的关系，而我们把这些关系就叫做结构。所谓数据结构，就是相互间存在一种或多种特定关系的数据元素的集合。</p>
+<p>用 Java 中的类来类比，数据就像 Java 中的一个类，数据元素就是类中的各个对象，而数据项则是各个对象中的属性。</p>
+<h2 id="逻辑结构与物理结构" tabindex="-1"> 逻辑结构与物理结构</h2>
+<h3 id="逻辑结构" tabindex="-1"> 逻辑结构</h3>
+<p>逻辑结构，就是指数据对象中数据元素之间的相互关系。逻辑结构主要又可以分为 4 种，总结如下：</p>
+<ul>
+<li>集合结构</li>
+<li>线性结构</li>
+<li>树形结构</li>
+<li>图形结构</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/cunyu1943/blog-imgs@main/2022/05/image-20220502224347120.png" alt="" loading="lazy"></p>
+<ol>
+<li><strong>集合结构</strong></li>
+</ol>
+<p>集合结构中的数据元素除了共同属于一个集合之外，元素之间没有其他任何关系，各元素之间是平等的，类似于数学中的集合，如下图所示。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/cunyu1943/blog-imgs@main/2022/05/image-20220502153924771.png" alt="" loading="lazy"></p>
+<ol start="2">
+<li><strong>线性结构</strong></li>
+</ol>
+<p>线性结构中用于描述数据元素之间一对一的关系，最常见就是数组。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/cunyu1943/blog-imgs@main/2022/05/image-20220502162333322.png" alt="" loading="lazy"></p>
+<ol start="3">
+<li><strong>树形结构</strong></li>
+</ol>
+<p>树形结构用于描述数据元素之间的层次关系，最常见的莫过于二叉树。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/cunyu1943/blog-imgs@main/2022/05/image-20220502163054693.png" alt="" loading="lazy"></p>
+<ol start="4">
+<li><strong>图形结构</strong></li>
+</ol>
+<p>用于描述数据元素之间多对多的关系，在用示意图表示图形结构时，需要注意：</p>
+<ul>
+<li>每个数据元素看做一个节点，用圆圈表示。</li>
+<li>数据元素间的逻辑关系用节点之间的连线表示，若连线是带箭头的，则说明该关系是有方向的。</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/cunyu1943/blog-imgs@main/2022/05/image-20220502213748625.png" alt="" loading="lazy"></p>
+<h3 id="物理结构" tabindex="-1"> 物理结构</h3>
+<p>除开逻辑结构之外，还有另一种物理结构，有的书里也叫存储结构。所谓物理结构，指的是数据的逻辑结构在计算机中的存储形式。数据元素的存储结构形式同样主要有四种：</p>
+<ul>
+<li>顺序存储</li>
+<li>链式存储</li>
+<li>索引存储</li>
+<li>散列存储</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/cunyu1943/blog-imgs@main/2022/05/image-20220502224756094.png" alt="" loading="lazy"></p>
+<ol>
+<li><strong>顺序存储</strong></li>
+</ol>
+<p>所谓顺序存储结构，就是把数据元素放在地址连续的存储单元中，其数据之间的逻辑关系和物理关系是一致的。</p>
+<p>顺序存储的数据元素只能顺序存放，每个存储结点中只含有一个元素，存储位置反映数据元素间的逻辑关系。这种方式存储密度大，但是插入、删除等操作的效率较差。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/cunyu1943/blog-imgs@main/2022/05/image-20220502215536213.png" alt="" loading="lazy"></p>
+<ol start="2">
+<li><strong>链式存储</strong></li>
+</ol>
+<p>所谓链式存储结构，就是将数据元素存放在任意的存储单元中，这组存储单元既可以是连续的，也可以是不连续的。但是数据元素的链式存储关系并不能反映其逻辑关系，因此需要用一个指针来存放数据元素的地址。通过该指针，我们就能找到相关联数据元素的位置。</p>
+<p>链式存储不要求存储空间连续，方便动态操作（插入、删除等），但是存储空间开销大。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/cunyu1943/blog-imgs@main/2022/05/image-20220502221418236.png" alt="" loading="lazy"></p>
+<ol start="3">
+<li><strong>索引存储</strong></li>
+</ol>
+<p>数据元素出了存在一组地址连续的内存空间外，还需要建立一个索引表，索引表中索引知识存储结点的㽾位置或存储区间端点。</p>
+<ol start="4">
+<li><strong>散列存储</strong></li>
+</ol>
+<p>通过散列函数和解决冲突的方式，将关键字散列在连续有限的地址空间中，并将散列函数的值解释成关键字所在元素的存储地址。散列存储的特点是存取速度快，但只能按关键字随机存储，不能顺序存储，也不能折半存储。</p>
+<h2 id="总结" tabindex="-1"> 总结</h2>
+<p>本文的内容到此就结束了，主要介绍了数据结构的定义，并了解了数据结构中的四种逻辑结构和四种物理结构。关于更多数据结构的知识，咱们就下期文章再见吧！</p>
+]]></content>
+    <category term="数据结构与算法"/>
+    <published>2022-05-02T22:00:00.000Z</published>
+  </entry>
   <entry>
     <title type="html">Spring Boot 基础教程：集成 Knife4j</title>
     <id>https://cunyu1943.github.io/JavaPark/JavaPark/java/spring-boot/integrated-knife4j.html</id>
@@ -26709,272 +26790,5 @@ java
 ]]></content>
     <category term="Java 菜鸟入门"/>
     <published>2022-01-16T20:51:19.000Z</published>
-  </entry>
-  <entry>
-    <title type="html">Java 菜鸟入门：面向对象（上）</title>
-    <id>https://cunyu1943.github.io/JavaPark/JavaPark/java/java-se/oop-1.html</id>
-    <link href="https://cunyu1943.github.io/JavaPark/JavaPark/java/java-se/oop-1.html"/>
-    <updated>2022-04-18T07:35:02.000Z</updated>
-    <content type="html"><![CDATA[<h2 id="前言" tabindex="-1"> 前言</h2>
-<p>前面已经讲了 Java 的一些环境搭建、IDE 使用、变量及数据类型、操作符、控制流程以及数组操作，今天就来看看 Java 里边的一个核心思想 - <strong>面向对象编程</strong>。内容预告如下：</p>
-<ul>
-<li><strong>面向对象简介</strong></li>
-<li><strong>面向对象实例</strong></li>
-</ul>
-<h2 id="面向对象" tabindex="-1"> 面向对象</h2>
-<h3 id="什么是面向对象" tabindex="-1"> 什么是面向对象？</h3>
-<p>所谓面向对象，是一种通过对象的方式，将现实中的事物映射到计算机模型的一种编程方法；</p>
-<p>对象的含义指的是具体的某一个事物，即我们在现实生活中能够看得见摸得着的。在面向对象程序设计中，对象指的是计算机系统中的某一个成分，主要有两层含义。一个是指 <strong>数据</strong>，另一个则是 <strong>动作</strong>。即对象是两者的结合体，通过对象不仅能够进行操作，还能对操作的结果进行记录。</p>
-<p>在这之前，另一种编程方式是 <strong>面向过程</strong>，用一个具体的例子来讲，可以描述成下面这样：</p>
-<blockquote>
-<p>将如有一天你很想吃酸菜鱼，那么你该怎么办呢？下面就以面向对象和面向过程给你两个选择，让你决定来选哪一个！</p>
-<ol>
-<li><strong>面向对象</strong>：打开手机，打开外卖软件，搜索酸菜鱼，然后下单，等着外卖送到家就行！</li>
-<li><strong>面向过程</strong>：先去买菜，鱼、酸菜、调料……，然后回家杀鱼、切酸菜、切调料……，再接着开始炒，最后做好盛到盘子里！</li>
-</ol>
-</blockquote>
-<p>对比可以发现两者的优缺点：</p>
-<ul>
-<li><strong>面向过程</strong>
-<ul>
-<li><strong>优点</strong>：性能好；以例子来说自己做比起点外卖，经济又实惠，还吃得放心；</li>
-<li><strong>缺点</strong>：不易维护、不易复用、不易扩展；以例子来讲，要是我们自己做，临时又想吃其他的菜，又得跑去买材料啥的，麻烦！但外卖就不一样了，直接打开手机再点就是！</li>
-</ul>
-</li>
-<li><strong>面向对象</strong>
-<ul>
-<li><strong>优点</strong>：易维护、易复用、易扩展，也就是面向过程的缺点；</li>
-<li><strong>缺点</strong>：性能较差；比起自己做，点外卖成本啥的可能就比较高了；</li>
-</ul>
-</li>
-</ul>
-<h3 id="面向对象的-3-大特性" tabindex="-1"> 面向对象的 3 大特性</h3>
-<ol>
-<li><strong>封装</strong></li>
-</ol>
-<p>隐藏对象的属性和实现细节，对外只提供访问的接口，提高复用性和安全性；</p>
-<ol start="2">
-<li><strong>继承</strong></li>
-</ol>
-<p>定义父类之后，子类可以从基础类进行继承，提高了代码的复用率，重要的一点：<strong>类只能单继承</strong>；</p>
-<ol start="3">
-<li><strong>多态</strong></li>
-</ol>
-<p>父类或者接口定义的引用变量可以指向子类或具体实现类的实例对象，提高了程序的扩展性；</p>
-<h3 id="面向对象的-5-大原则" tabindex="-1"> 面向对象的 5 大原则</h3>
-<ol>
-<li><strong>单一职责原则 SRP</strong></li>
-</ol>
-<p>类的功能要单一，不能太复杂；</p>
-<ol start="2">
-<li><strong>开放封闭原则 OCP</strong></li>
-</ol>
-<p>一个模块对于扩展是开放的，对于修改则是封闭的，可以增加功能，但是修改功能却不行；</p>
-<ol start="3">
-<li><strong>里氏替换原则 LSP</strong></li>
-</ol>
-<p>子类能够替换父类出现在父类能够出现的任何地方；</p>
-<ol start="4">
-<li><strong>依赖倒置原则 DIP</strong></li>
-</ol>
-<p>高层次的模块不应该依赖于低层次的模块，而应该都依赖于抽象。抽象不应该依赖于具体实现，但具体实现应该依赖于抽象；</p>
-<ol start="5">
-<li><strong>接口分离原则 ISP</strong></li>
-</ol>
-<p>设计时采用多个与特定客户类相关的接口比采用一个通用接口要好；</p>
-<h2 id="面向对象的具体实例" tabindex="-1"> 面向对象的具体实例</h2>
-<h3 id="类与对象" tabindex="-1"> 类与对象</h3>
-<p>以我们日常生活为例，我们现在很多人都养宠物，而宠物 <strong>都有一些共同状态</strong>，比如名字、毛色、年龄…… 这样一来我们就可以设计一个叫做 <strong>类</strong> 的东西，用来 <strong>代表宠物</strong> 这一类事物；</p>
-<div><pre><code><span>public</span> <span>class</span> <span>Pet</span><span>{</span>
-    <span>// 名字</span>
-    <span>public</span> <span>String</span> name<span>;</span>
-    
-    <span>// 毛色</span>
-    <span>public</span> <span>String</span> furColor<span>;</span>
-    
-    <span>// 年龄</span>
-    <span>public</span> <span>int</span> age<span>;</span>
-<span>}</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br></div></div><p>有了这个类之后，它就相当于我们的一个模板，根据这个模板我们就能够创建一个个具体的宠物，而这些宠物，就叫做 <strong>对象</strong>；</p>
-<div><pre><code><span>public</span> <span>class</span> <span>Pet</span><span>{</span>
-    <span>// 名字</span>
-    <span>public</span> <span>String</span> name<span>;</span>
-    
-    <span>// 毛色</span>
-    <span>public</span> <span>String</span> furColor<span>;</span>
-    
-    <span>// 年龄</span>
-    <span>public</span> <span>int</span> age<span>;</span>
-    
-    <span>public</span> <span>static</span> <span>void</span> <span>main</span><span>(</span><span>String</span><span>[</span><span>]</span> args<span>)</span><span>{</span>
-        <span>// 创建一个对象</span>
-        <span>Pet</span> dog <span>=</span> <span>new</span> <span>Pet</span><span>(</span><span>)</span><span>;</span>
-        dog<span>.</span>name <span>=</span> <span>"博美"</span><span>;</span>
-        dog<span>.</span>furColor <span>=</span> <span>"white"</span><span>;</span>
-        dog<span>.</span>age <span>=</span> <span>1</span><span>;</span>
-        
-        <span>Pet</span> cat <span>=</span> <span>new</span> <span>Pet</span><span>(</span><span>)</span><span>;</span>
-        cat<span>.</span>name <span>=</span> <span>"英短"</span><span>;</span>
-        cat<span>.</span>furColor <span>=</span> <span>"orange"</span><span>;</span>
-        cat<span>.</span>age <span>=</span> <span>2</span><span>;</span>
-        
-    <span>}</span>
-<span>}</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br></div></div><h3 id="属性" tabindex="-1"> 属性</h3>
-<p>每个宠物都有自己的名字、毛色和年龄等一系列状态，而这些状态就叫做一个类的 <strong>属性</strong>。而属性的类型既可以是基本类型（比如上述例子中的 <code>int</code>），也可以是引用类型（上述例子中的 <code>String</code>）。而在 Java 语言中，属性的命名虽然没有强制规定，但是一般都是有一套大家通用的命名方法，即：</p>
-<blockquote>
-<p>若属性是一个单词组成，那么一般都是小写；</p>
-<p>若属性是多个单词组成，那么则采用驼峰法；</p>
-<p>关于更多的命名规定，推荐参考阿里巴巴出品的 《Java 开发手册》，下载地址：https://github.com/cunyu1943/amazing-books</p>
-</blockquote>
-<h3 id="方法" tabindex="-1"> 方法</h3>
-<p>而除开属性之后，每个对象还能够有许多其他的功能，就像宠物都能吃东西、会叫……，那么这些他们能够做的事情，在类里边就可以用 <strong>方法</strong> 来进行表示；</p>
-<div><pre><code><span>public</span> <span>class</span> <span>Pet</span><span>{</span>
-    <span>// 名字</span>
-    <span>public</span> <span>String</span> name<span>;</span>
-    
-    <span>// 毛色</span>
-    <span>public</span> <span>String</span> furColor<span>;</span>
-    
-    <span>// 年龄</span>
-    <span>public</span> <span>int</span> age<span>;</span>
-    
-    <span>// 吃东西对应的方法</span>
-    <span>public</span> <span>void</span> <span>eat</span><span>(</span><span>)</span><span>{</span>
-        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>"吃东西！"</span><span>)</span><span>;</span>
-    <span>}</span>
-    
-    <span>// 叫唤对应的方法</span>
-    <span>public</span> <span>void</span> <span>bark</span><span>(</span><span>)</span><span>{</span>
-        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>"叫唤！"</span><span>)</span><span>;</span>
-    <span>}</span>
-<span>}</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br></div></div><p>而对于方法，也有需要注意的几点：</p>
-<ol>
-<li>方法是可以有返回值的，如果要返回对应值，则其返回值的类型要与返回值相对于，对于不需要返回值的方法，则将其返回类型设置为 <code>void</code>；</li>
-<li>方法是可以有参数的，我们上述例子的方法中都是不带参数的，但如果我们有需要，就可以加上自己需要的参数，但此时注意要带上参数的类型；</li>
-</ol>
-<p>总结起来，可以分为如下四种方法：</p>
-<ol>
-<li><strong>无参无返回值</strong></li>
-</ol>
-<div><pre><code><span>public</span> <span>void</span> <span>methodName</span><span>(</span><span>)</span><span>{</span>
-    ……
-<span>}</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br></div></div><ol start="2">
-<li><strong>无参有返回值</strong></li>
-</ol>
-<div><pre><code><span>public</span> <span>boolean</span> <span>methodName</span><span>(</span><span>)</span><span>{</span>
-    ……
-    <span>return</span> <span>false</span><span>;</span>
-<span>}</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br></div></div><ol start="3">
-<li><strong>有参无返回值</strong></li>
-</ol>
-<div><pre><code><span>public</span> <span>void</span> <span>methodName</span><span>(</span><span>String</span> name<span>)</span><span>{</span>
-    ……
-<span>}</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br></div></div><ol start="4">
-<li><strong>有参有返回值</strong></li>
-</ol>
-<div><pre><code><span>public</span> <span>boolean</span> <span>methodName</span><span>(</span><span>String</span> name<span>)</span><span>{</span>
-    ……
-    <span>return</span> <span>false</span><span>;</span>
-<span>}</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br></div></div><div><pre><code><span>public</span> <span>class</span> <span>Pet</span><span>{</span>
-    <span>// 名字</span>
-    <span>public</span> <span>String</span> name<span>;</span>
-    
-    <span>// 毛色</span>
-    <span>public</span> <span>String</span> furColor<span>;</span>
-    
-    <span>// 年龄</span>
-    <span>public</span> <span>int</span> age<span>;</span>
-    
-    <span>// 具有返回值的方法</span>
-    <span>int</span> <span>getAge</span><span>(</span><span>)</span><span>{</span>
-        <span>return</span> age<span>;</span>
-    <span>}</span>
-
-    <span>// 带有参数的方法</span>
-    <span>void</span> <span>setAge</span><span>(</span><span>int</span> age<span>)</span><span>{</span>
-        <span>this</span><span>.</span>age <span>=</span> age<span>;</span>
-    <span>}</span>
-    
-    <span>// 吃东西对应的方法</span>
-    <span>void</span> <span>eat</span><span>(</span><span>)</span><span>{</span>
-        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>"吃东西！"</span><span>)</span><span>;</span>
-    <span>}</span>
-    
-    <span>// 叫唤对应的方法</span>
-    <span>void</span> <span>bark</span><span>(</span><span>)</span><span>{</span>
-        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>"叫唤！"</span><span>)</span><span>;</span>
-    <span>}</span>
-<span>}</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br><span>27</span><br><span>28</span><br><span>29</span><br><span>30</span><br></div></div><p>而对于方法命名的方式，也是有一定讲究的。因为一般而言方法都是一个类的动作行为，所以 <strong>一般都是以动词开头，而如果有多个单词组合，则除开第一个单词全部小写之外，后面每个单词的第一个字母都要使用大写</strong>。</p>
-<h3 id="构造方法" tabindex="-1"> 构造方法</h3>
-<p>上面我们说了实例（也就是对象）和属性，那么当我们创建一个实例的时候，通常我们想要把它的属性也给它设置好。为了实现这一功能，这时候我们可以添加方法，从而达到这一目的，以上述设置宠物的年龄为例。</p>
-<div><pre><code><span>// 首先创建一个实例</span>
-<span>Pet</span> pet <span>=</span> <span>new</span> <span>Pet</span><span>(</span><span>)</span><span>;</span>
-<span>// 接着调用方法设置年龄</span>
-pet<span>.</span><span>setAge</span><span>(</span><span>3</span><span>)</span><span>;</span>
-<span>// 查看设置年龄是否成功</span>
-<span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span>pet<span>.</span><span>getAge</span><span>(</span><span>)</span><span>)</span><span>;</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br></div></div><p>可以发现通过上述调用方法的方式是可以完成这一目的的，但假设我们需要设置的属性很多，此时要全部设置属性值时就需要调用许多次 <code>setter</code> 方法，一旦遗漏一个，则实例内部状态就紊乱了。那我们就想了，有没有一种简单点的方法，能够让我们在创建实例对象的同时就把内部属性初始化了呢？</p>
-<p>答案是：Yes！🎉🎉🎉</p>
-<p>这时候我们就可以用到一类特殊的方法 - <strong>构造方法</strong>，以下就来看看这个构造方法的特殊之处。</p>
-<p>其实在上面我们创建实例的时候就已经调用了构造方法了，只不过它是没有带任何参数的构造方法。以上述动物类 <code>Pet</code> 为实例，我们来看看如何编写它的构造方法。</p>
-<div><pre><code><span>public</span> <span>class</span> <span>Pet</span><span>{</span>
-        <span>// 名字</span>
-    <span>public</span> <span>String</span> name<span>;</span>
-    
-    <span>// 毛色</span>
-    <span>public</span> <span>String</span> furColor<span>;</span>
-    
-    <span>// 年龄</span>
-    <span>public</span> <span>int</span> age<span>;</span>
-    
-    <span>// 无参构造方法</span>
-    <span>public</span> <span>Pet</span><span>(</span><span>)</span><span>{</span><span>}</span>
-    
-    <span>// 带参构造方法</span>
-    <span>public</span> <span>Pet</span><span>(</span><span>String</span> name<span>,</span> <span>String</span> furColor<span>,</span> <span>int</span> age<span>)</span><span>{</span>
-        <span>this</span><span>.</span>name <span>=</span> name<span>;</span>
-        <span>this</span><span>.</span>furColor <span>=</span> furColor<span>;</span>
-        <span>this</span><span>.</span>age <span>=</span> age<span>;</span>
-    <span>}</span>
-<span>}</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br></div></div><p>以上我们只是给出了无参的构造方法和带了所有属性的构造方法，除了上面的两个构造方法之外，我们还可以根据需要创建带有部分属性的构造方法。可以看到，相比于普通的方法，构造方法有着明显的特点：</p>
-<ol>
-<li><strong>没有返回值</strong>：是的，无论是带参还是不带参的构造函数，它们都是没有返回值的，而它也是 <strong>每个类默认的构造方法</strong>；</li>
-<li><strong>方法名同类名一样</strong>：必须确保构造方法的名字和类名一致，否则它就不是构造方法了；</li>
-</ol>
-<p>有了构造方法之后，我们创建实例时就可以直接给它初始化了，而不用再去麻烦地调用各个 <code>setter</code> 方法来初始化实例。</p>
-<div><pre><code><span>// 调用无参构造方法</span>
-<span>Pet</span> pet1 <span>=</span> <span>new</span> <span>Pet</span><span>(</span><span>)</span><span>;</span>
-<span>// 调用有参构造方法</span>
-<span>Pet</span> pet2 <span>=</span> <span>new</span> <span>Pet</span><span>(</span><span>"柯基"</span><span>,</span> <span>"黄色"</span><span>,</span> <span>1</span><span>)</span><span>;</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br></div></div><p>🎈 Tips：对于实例的属性值，在未经构造方法初始化时，各数据类型都有默认值，整型默认值为 <code>0</code>，浮点型默认值为 <code>0.0</code>，布尔类型默认值为 <code>false</code>，引用类型默认值为 <code>null</code>。</p>
-<h3 id="引用" tabindex="-1"> 引用</h3>
-<p>既然知道了什么是面向对象以及面向对象中的一些关键知识点如对象、属性、方法的概念，那我们就趁热来看看啥是引用。</p>
-<p>所谓引用，其实在之前学习的时候就已经涉及到了。你是否还记得 <code>String</code> 这个特殊的数据类型，其实在我们创建一个 <code>String</code> 对象时，也就创建了一个引用。</p>
-<div><pre><code><span>String</span> str <span>=</span> <span>new</span> <span>String</span><span>(</span><span>"村雨遥"</span><span>)</span><span>;</span>
-</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p>其中 <code>str</code> 既是一个变量，也是一个引用，指向一个值为 <code>&quot;村雨遥&quot;</code> 的 <code>String</code> 对象，后续如果我们要访问这个 <code>String</code> 对象，就需要使用 <code>str</code> 这个引用来代表它。</p>
-<p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/8c6475fcddda4b19b7f1ba10ec940b09~tplv-k3u1fbpfcp-watermark.image" alt="" loading="lazy"></p>
-<p>以上我们说的是一个引用指向一个对象，但是我们也可以用多个引用指向同一个对象。就好比你家买了一俩车，不仅你可以开，你老婆也可以开，你爸妈也可以开。而这时候的车就好比一个“对象”，而使用它的人就是多个“引用”。</p>
-<div><pre><code><span>// 对象 1</span>
-<span>String</span> str1 <span>=</span> <span>new</span> <span>String</span><span>(</span><span>"村雨遥"</span><span>)</span><span>;</span>
-<span>// 对象 2</span>
-<span>String</span> str2 <span>=</span> str1<span>;</span>
-<span>// 对象 3</span>
-<span>String</span> str3 <span>=</span> str1<span>;</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br></div></div><p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/3d8d0a440f60445f9b6f8c249a79caa0~tplv-k3u1fbpfcp-watermark.image" alt="" loading="lazy"></p>
-<h2 id="总结" tabindex="-1"> 总结</h2>
-<p>XDM，今天的内容就到此结束了。主要讲了面向对象的相关概念以及特性，并对面向对象中的类、对象、属性、方法、构造方法以及引用做了介绍，关于更多面向对象的知识，我们下一篇文章中再见！</p>
-<p><strong>关注公众号，获取最新文章更新</strong></p>
-<img src="https://cdn.jsdelivr.net/gh/cunyu1943/cunyu1943@main/imgs/wepublic.gif" width="200" alt="公众号" />
-]]></content>
-    <category term="Java 菜鸟入门"/>
-    <published>2022-01-15T11:31:47.000Z</published>
   </entry>
 </feed>
