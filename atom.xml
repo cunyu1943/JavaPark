@@ -3,7 +3,7 @@
   <id>https://cunyu1943.github.io/JavaPark/JavaPark/</id>
   <title>JavaPark</title>
   <subtitle>Java 自学编程之路</subtitle>
-  <updated>2022-05-02T15:12:55.972Z</updated>
+  <updated>2022-05-02T15:28:48.671Z</updated>
   <generator>vuepress-plugin-feed2</generator>
   <link rel="self" href="https://cunyu1943.github.io/JavaPark/JavaPark/atom.xml"/>
   <link rel="alternate" href="https://cunyu1943.github.io/JavaPark/JavaPark/"/>
@@ -30,7 +30,7 @@
     <title type="html">数据结构与算法：数据结构简介</title>
     <id>https://cunyu1943.github.io/JavaPark/JavaPark/cs-basics/algorithm/datastructure.html</id>
     <link href="https://cunyu1943.github.io/JavaPark/JavaPark/cs-basics/algorithm/datastructure.html"/>
-    <updated>2022-05-02T15:09:52.000Z</updated>
+    <updated>2022-05-02T15:26:05.000Z</updated>
     <content type="html"><![CDATA[<h2 id="什么是数据结构" tabindex="-1"> 什么是数据结构</h2>
 <p>在开始正式学习数据结构前，咱们先来看看什么是数据。所谓数据，就是用来描述客观事物的符号，在计算机中就是可以操作的对象，能够被计算机识别并输入给计算机处理的符号集合。数据不仅包括整型、浮点型等数值类型，还包括字符、声音、图像、视频等非数值型类型。</p>
 <p>而数据元素就是组成数据的、有一定意义的基本单位，在计算机中一般作为整体来处理，而这些数据元素也叫做记录。</p>
