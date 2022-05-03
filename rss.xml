@@ -6,8 +6,8 @@
     <link>https://cunyu1943.github.io/JavaPark/JavaPark/</link>
     <description>Java 自学编程之路</description>
     <language>zh-CN</language>
-    <pubDate>Mon, 02 May 2022 15:28:48 GMT</pubDate>
-    <lastBuildDate>Mon, 02 May 2022 15:28:48 GMT</lastBuildDate>
+    <pubDate>Tue, 03 May 2022 09:37:35 GMT</pubDate>
+    <lastBuildDate>Tue, 03 May 2022 09:37:35 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>数据结构与算法</category>
@@ -30,6 +30,282 @@
     <category>博客搭建</category>
     <category>Java 菜鸟入门</category>
     <item>
+      <title>数据结构与算法：算法简介</title>
+      <link>https://cunyu1943.github.io/JavaPark/JavaPark/cs-basics/algorithm/algorithm.html</link>
+      <guid>https://cunyu1943.github.io/JavaPark/JavaPark/cs-basics/algorithm/algorithm.html</guid>
+      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">数据结构与算法：算法简介</source>
+      <category>数据结构与算法</category>
+      <pubDate>Tue, 03 May 2022 17:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h2 id="什么是算法" tabindex="-1"> 什么是算法</h2>
+<p>什么是算法？简单来讲，算法就是用于描述解决问题的方法。而现今普遍对算法的定义为：解决特定问题求解步骤的描述，在计算机中表现为指令的有限序列，并且每条指令含有一个或多个操作。</p>
+<h2 id="算法的特性" tabindex="-1"> 算法的特性</h2>
+<p>算法具有五个基本特性，分别是：</p>
+<ul>
+<li>输入</li>
+<li>输出</li>
+<li>有穷性</li>
+<li>确定性</li>
+<li>可行性</li>
+</ul>
+<ol>
+<li><strong>输入 &amp; 输出</strong></li>
+</ol>
+<p>一个算法，必不可少的是输入输出。算法具有零个或者多个输入，但是至少得有一个或者以上的输出。也就是说，算法可以没有输入，但一定得有输出，输出可以是打印输出，也可以是返回一个或多个值。</p>
+<ol start="2">
+<li><strong>有穷性</strong></li>
+</ol>
+<p>所谓有穷性，就是指一个算法在执行一定的步骤之后将自动结束，而不会出现无限循环的情况，而且每个步骤需要在有限的时间内完成。</p>
+<ol start="3">
+<li><strong>确定性</strong></li>
+</ol>
+<p>确定性指的是算法的每个步骤都要有具体的含义，不能有歧义。打个简单的比方来说，就像一个人只能沿着一条道走到底，而不能出现遇见分叉路口的情况。</p>
+<p>也就是说，在一定条件下，算法只能有一条执行路径，同样的输入只能有唯一的输出结果。</p>
+<ol start="4">
+<li><strong>可行性</strong></li>
+</ol>
+<p>指算法的每一步都必须是可行的，也就是说每一步都可以通过执行一定的次数来完成。</p>
+<h2 id="算法的设计要求" tabindex="-1"> 算法的设计要求</h2>
+<p>同一个问题，我们可以通过不同的算法来解决。俗话说得好，条条大路通罗马。同一个目的地，我们可以通过不同的方式到达。</p>
+<p>话虽然这么说，但是在设计算法时也得遵循一定的要求。</p>
+<ol>
+<li><strong>正确性</strong></li>
+</ol>
+<p>一个算法，必须得保证它能达到最终目的，不然还谈什么。算法的正确性，指的是算法至少应该具有输入、输出和加工处理无歧义性，能够得到问题的正确答案。</p>
+<p>算法的正确性也有不同程度的差别，由浅入深大致可以分为以下层次：</p>
+<ul>
+<li>算法程序无语法错误。</li>
+<li>算法程序对于合法的输入能得到满足要求的输出。</li>
+<li>算法程序对于非法的输入能得到满足规格说明的输出。</li>
+<li>算法程序对于的特殊的测试数据也有满足要求的输出。</li>
+</ul>
+<ol start="2">
+<li><strong>可读性</strong></li>
+</ol>
+<p>可读性是指算法设计出来应该便于阅读、理解和交流。高可读性能够帮助我们更好地理解算法，更加方便我们调试和修改。</p>
+<ol start="3">
+<li><strong>健壮性</strong></li>
+</ol>
+<p>一个算法不仅需要对输入的合理情况做出正确的处理，而且对于不合理的情况，也能做出相应的介绍。所谓健壮性，指的就是当算法中输入数据不合法时，它也能做出相关处理，而不会产生异常或者莫名其妙的结果。</p>
+<ol start="4">
+<li><strong>高时间效率</strong></li>
+</ol>
+<p>对于同一个问题，虽然有不同解决的算法，但是算法也有好有坏。时间效率指的是算法的执行时间，执行时间越长，效率也低，执行时间越短，效率越高。</p>
+<ol start="5">
+<li><strong>低存储量</strong></li>
+</ol>
+<p>除开时间效率之外，存储量也是一个重要的指标。存储量指的是算法在执行过程中所需的最大存储空间，主要指算法程序运行时所占用的内存或外部存储空间。针对同一问题，算法所需空间越少，则算法效果越好，所需空间越多，则算法效果越差。</p>
+<h2 id="算法效率衡量方法" tabindex="-1"> 算法效率衡量方法</h2>
+<p>前边讲了算法的特性以及算法的设计要求，但都没有明确的方式来衡量一个算法的好坏。为了衡量一个算法的好坏，又提出了时间复杂度和空间复杂度的概念。</p>
+<h3 id="时间复杂度" tabindex="-1"> 时间复杂度</h3>
+<h4 id="定义" tabindex="-1"> 定义</h4>
+<p>若存在函数 <span><span><i>Content not supported</i></span><span aria-hidden="true"><span><span style="height:1em;vertical-align:-0.25em;"></span><span style="margin-right:0.10764em;">f</span><span>(</span><span>n</span><span>)</span></span></span></span>，使得当 <span><span><i>Content not supported</i></span><span aria-hidden="true"><span><span style="height:0.4306em;"></span><span>n</span></span></span></span> 趋向无穷大时，<span><span><i>Content not supported</i></span><span aria-hidden="true"><span><span style="height:1em;vertical-align:-0.25em;"></span><span style="margin-right:0.13889em;">T</span><span>(</span><span>n</span><span>)</span><span>/</span><span style="margin-right:0.10764em;">f</span><span>(</span><span>n</span><span>)</span></span></span></span> 的极限值为不等于 0 的常数，则称 <span><span><i>Content not supported</i></span><span aria-hidden="true"><span><span style="height:1em;vertical-align:-0.25em;"></span><span style="margin-right:0.10764em;">f</span><span>(</span><span>n</span><span>)</span></span></span></span> 是 <span><span><i>Content not supported</i></span><span aria-hidden="true"><span><span style="height:1em;vertical-align:-0.25em;"></span><span style="margin-right:0.13889em;">T</span><span>(</span><span>n</span><span>)</span></span></span></span> 的同数量级函数，记作 <span><span><i>Content not supported</i></span><span aria-hidden="true"><span><span style="height:1em;vertical-align:-0.25em;"></span><span style="margin-right:0.13889em;">T</span><span>(</span><span>n</span><span>)</span><span style="margin-right:0.2778em;"></span><span>=</span><span style="margin-right:0.2778em;"></span></span><span><span style="height:1em;vertical-align:-0.25em;"></span><span style="margin-right:0.02778em;">O</span><span>(</span><span style="margin-right:0.10764em;">f</span><span>(</span><span>n</span><span>))</span></span></span></span>，称 <span><span><i>Content not supported</i></span><span aria-hidden="true"><span><span style="height:1em;vertical-align:-0.25em;"></span><span style="margin-right:0.02778em;">O</span><span>(</span><span style="margin-right:0.10764em;">f</span><span>(</span><span>n</span><span>))</span></span></span></span> 为算法的 <strong>渐进时间复杂度</strong>，简称 <strong>时间复杂度</strong>，用大 O 来表示，称为 <strong>大 O 表示法</strong>；</p>
+<h4 id="推导时间复杂度的原则" tabindex="-1"> 推导时间复杂度的原则</h4>
+<ol>
+<li><strong>若运行时间是常数量级，则用常数 1 表示</strong>；</li>
+<li><strong>只保留时间函数中最高阶项</strong>，如 <span><span><i>Content not supported</i></span><span aria-hidden="true"><span><span style="height:1.0641em;vertical-align:-0.25em;"></span><span style="margin-right:0.02778em;">O</span><span>(</span><span><span>n</span><span><span><span><span style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span style="height:2.7em;"></span><span><span>2</span></span></span></span></span></span></span></span><span style="margin-right:0.2222em;"></span><span>+</span><span style="margin-right:0.2222em;"></span></span><span><span style="height:1em;vertical-align:-0.25em;"></span><span>4</span><span>n</span><span>)</span></span></span></span>，保留最高阶项后，成为 <span><span><i>Content not supported</i></span><span aria-hidden="true"><span><span style="height:1.0641em;vertical-align:-0.25em;"></span><span style="margin-right:0.02778em;">O</span><span>(</span><span><span>n</span><span><span><span><span style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span style="height:2.7em;"></span><span><span>2</span></span></span></span></span></span></span></span><span>)</span></span></span></span>；</li>
+<li><strong>若最高阶项存在，则省去最高阶项前的系数</strong>，如 <span><span><i>Content not supported</i></span><span aria-hidden="true"><span><span style="height:1.0641em;vertical-align:-0.25em;"></span><span style="margin-right:0.02778em;">O</span><span>(</span><span>4</span><span><span>n</span><span><span><span><span style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span style="height:2.7em;"></span><span><span>2</span></span></span></span></span></span></span></span><span>)</span></span></span></span>，省去最高阶项的系数后，成为 <span><span><i>Content not supported</i></span><span aria-hidden="true"><span><span style="height:1.0641em;vertical-align:-0.25em;"></span><span style="margin-right:0.02778em;">O</span><span>(</span><span><span>n</span><span><span><span><span style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span style="height:2.7em;"></span><span><span>2</span></span></span></span></span></span></span></span><span>)</span></span></span></span>；</li>
+</ol>
+<h4 id="分析时间复杂度的方法" tabindex="-1"> 分析时间复杂度的方法</h4>
+<p>总结起来，对于如何分析一段代码的时间复杂度，主要有如下 3 个实用方法：</p>
+<ol>
+<li><strong>只关注循环执行次数最多的一行代码；</strong></li>
+<li><strong>加法原则：总复杂度等于量度最大的那段代码的复杂度；</strong></li>
+<li><strong>乘法原则：嵌套代码的复杂度等于嵌套内外代码复杂度的乘积</strong>；</li>
+</ol>
+<h4 id="常见的时间复杂度曲线" tabindex="-1"> 常见的时间复杂度曲线</h4>
+<p><img src="https://cdn.jsdelivr.net/gh/cunyu1943/image-hosting-for-blog/image-20200626143247469.png" alt="" loading="lazy"></p>
+<h4 id="常见时间复杂度" tabindex="-1"> 常见时间复杂度</h4>
+<h5 id="" tabindex="-1"> <span><span><i>Content not supported</i></span><span aria-hidden="true"><span><span style="height:1em;vertical-align:-0.25em;"></span><span style="margin-right:0.02778em;">O</span><span>(</span><span>1</span><span>)</span></span></span></span></h5>
+<p>即无论执行多少行，都不会影响到其他区域，此时代码的复杂度就是 <span><span><i>Content not supported</i></span><span aria-hidden="true"><span><span style="height:1em;vertical-align:-0.25em;"></span><span style="margin-right:0.02778em;">O</span><span>(</span><span>1</span><span>)</span></span></span></span>，如下面的代码中，假设执行每行代码时间都相同切为 <span><span><i>Content not supported</i></span><span aria-hidden="true"><span><span style="height:0.6151em;"></span><span>t</span></span></span></span>，则 2,3 行各需 1 个执行时间，即为 $t + t = 2t。此时执行时间复杂度为常数。</p>
+<div><pre><code><span>void</span> <span>sayHello</span><span>(</span><span>String</span> name<span>)</span><span>{</span>
+    <span>System</span><span>.</span>out<span>.</span><span>prinln</span><span>(</span><span>"Hello, "</span> <span>+</span> <span>String</span><span>)</span><span>;</span>
+    <span>System</span><span>.</span>out<span>.</span><span>prinln</span><span>(</span><span>"欢迎关注我的公众号：【村雨遥】"</span><span>)</span><span>;</span>
+<span>}</span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br></div></div><h5 id="-1" tabindex="-1"> <span><span><i>Content not supported</i></span><span aria-hidden="true"><span><span style="height:1em;vertical-align:-0.25em;"></span><span style="margin-right:0.02778em;">O</span><span>(</span><span style="margin-right:0.01968em;">l</span><span>o</span><span style="margin-right:0.03588em;">g</span><span>n</span><span>)</span></span></span></span></h5>
+<p>如下列二分查找代码中，通过 <code>while</code> 循环，能够成倍的缩减搜索范围，假设需要 <code>x</code> 次才能跳出循环，则有 <code>num * 2 * 2 * ... = n</code> ，其中 <code>num</code> 是常数，有 <code>n</code> 个 2 相乘，则有 <span><span><i>Content not supported</i></span><span aria-hidden="true"><span><span style="height:0.4653em;"></span><span>n</span><span>u</span><span>m</span><span style="margin-right:0.2222em;"></span><span>∗</span><span style="margin-right:0.2222em;"></span></span><span><span style="height:0.6644em;"></span><span><span>2</span><span><span><span><span style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span style="height:2.7em;"></span><span><span>x</span></span></span></span></span></span></span></span><span style="margin-right:0.2778em;"></span><span>=</span><span style="margin-right:0.2778em;"></span></span><span><span style="height:0.4306em;"></span><span>n</span></span></span></span>，从而推出 <span><span><i>Content not supported</i></span><span aria-hidden="true"><span><span style="height:0.4306em;"></span><span>x</span><span style="margin-right:0.2778em;"></span><span>=</span><span style="margin-right:0.2778em;"></span></span><span><span style="height:1em;vertical-align:-0.25em;"></span><span style="margin-right:0.01968em;">l</span><span>o</span><span><span style="margin-right:0.03588em;">g</span><span><span><span><span style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span style="height:2.7em;"></span><span><span>2</span></span></span></span><span>​</span></span><span><span style="height:0.15em;"><span></span></span></span></span></span></span><span>(</span><span>n</span><span>/</span><span>n</span><span>u</span><span>m</span><span>)</span></span></span></span> ，因此时间复杂度用大 O 表示法表示为 <span><span><i>Content not supported</i></span><span aria-hidden="true"><span><span style="height:1em;vertical-align:-0.25em;"></span><span style="margin-right:0.02778em;">O</span><span>(</span><span style="margin-right:0.01968em;">l</span><span>o</span><span style="margin-right:0.03588em;">g</span><span>n</span><span>)</span><span>。</span></span></span></span></p>
+<div><pre><code><span>int</span> <span>binarySearch</span><span>(</span><span>int</span><span>[</span><span>]</span> arr<span>,</span> <span>int</span> target<span>)</span><span>{</span>
+    <span>int</span> left <span>=</span> <span>0</span><span>;</span>
+    <span>int</span> right <span>=</span> arr<span>.</span>length <span>-</span> <span>1</span><span>;</span>
+    <span>while</span><span>(</span>left <span>&lt;=</span> right<span>)</span><span>{</span>
+        <span>int</span> middle <span>=</span> left <span>+</span> <span>(</span>left <span>-</span> right<span>)</span> <span>/</span> <span>2</span><span>;</span>
+        <span>if</span><span>(</span>arr<span>[</span>middle<span>]</span> <span>==</span> target<span>)</span><span>{</span>
+            <span>return</span> middle<span>;</span>
+        <span>}</span><span>else</span> <span>if</span><span>(</span>arr<span>[</span>middle<span>]</span> <span>></span> target<span>)</span><span>{</span>
+            right <span>=</span> middle <span>-</span> <span>1</span><span>;</span>
+        <span>}</span><span>else</span> <span>{</span>
+            left <span>=</span> middle <span>+</span> <span>1</span><span>;</span>
+        <span>}</span>
+    <span>}</span>
+
+    <span>return</span> <span>-</span><span>1</span><span>;</span>
+<span>}</span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br></div></div><h5 id="-2" tabindex="-1"> <span><span><i>Content not supported</i></span><span aria-hidden="true"><span><span style="height:1em;vertical-align:-0.25em;"></span><span style="margin-right:0.02778em;">O</span><span>(</span><span>n</span><span>)</span></span></span></span></h5>
+<p>如下面这段代码中，<code>for</code> 循环中的代码被执行了 <code>arr.length</code> 次，因此所需要的时间和数组长度成正比的，因此可以用 <span><span><i>Content not supported</i></span><span aria-hidden="true"><span><span style="height:1em;vertical-align:-0.25em;"></span><span style="margin-right:0.02778em;">O</span><span>(</span><span>n</span><span>)</span></span></span></span> 来表示它的时间复杂度。利用上述推到原则和分析的方法，可以知道下面代码中循环次数最多的是 4,5 行，总的执行时间是 <span><span><i>Content not supported</i></span><span aria-hidden="true"><span><span style="height:1em;vertical-align:-0.25em;"></span><span style="margin-right:0.02778em;">O</span><span>(</span><span>2</span><span>n</span><span>)</span></span></span></span>，抛去系数后，得到最终时间复杂度 <span><span><i>Content not supported</i></span><span aria-hidden="true"><span><span style="height:1em;vertical-align:-0.25em;"></span><span style="margin-right:0.02778em;">O</span><span>(</span><span>n</span><span>)</span></span></span></span>.</p>
+<div><pre><code><span>int</span> <span>sum</span><span>(</span><span>int</span><span>[</span><span>]</span> arr<span>)</span><span>{</span>
+    <span>int</span> total <span>=</span> <span>0</span><span>;</span>
+
+    <span>for</span><span>(</span><span>int</span> i <span>=</span> <span>0</span><span>;</span> i <span>&lt;</span> arr<span>.</span>length<span>;</span> i<span>++</span><span>)</span><span>{</span>
+        total <span>+=</span> arr<span>[</span>i<span>]</span><span>;</span>
+    <span>}</span>
+
+    <span>return</span> total<span>;</span>
+<span>}</span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br></div></div><h5 id="-3" tabindex="-1"> <span><span><i>Content not supported</i></span><span aria-hidden="true"><span><span style="height:1em;vertical-align:-0.25em;"></span><span style="margin-right:0.02778em;">O</span><span>(</span><span>n</span><span style="margin-right:0.01968em;">l</span><span>o</span><span style="margin-right:0.03588em;">g</span><span>n</span><span>)</span></span></span></span></h5>
+<p>如果我们将一个复杂度为 <span><span><i>Content not supported</i></span><span aria-hidden="true"><span><span style="height:1em;vertical-align:-0.25em;"></span><span style="margin-right:0.02778em;">O</span><span>(</span><span style="margin-right:0.01968em;">l</span><span>o</span><span style="margin-right:0.03588em;">g</span><span>n</span><span>)</span></span></span></span> 的代码重复执行 <span><span><i>Content not supported</i></span><span aria-hidden="true"><span><span style="height:0.4306em;"></span><span>n</span></span></span></span> 次，那么此时代码的复杂度不就变成 <span><span><i>Content not supported</i></span><span aria-hidden="true"><span><span style="height:1em;vertical-align:-0.25em;"></span><span style="margin-right:0.02778em;">O</span><span>(</span><span>n</span><span style="margin-right:0.01968em;">l</span><span>o</span><span style="margin-right:0.03588em;">g</span><span>n</span><span>)</span></span></span></span> 了吗。</p>
+<div><pre><code><span>void</span> hello <span>(</span><span>int</span> n<span>)</span><span>{</span>
+    <span>for</span><span>(</span> <span>int</span> i <span>=</span> <span>1</span> <span>;</span> i <span>&lt;</span> n <span>;</span> i<span>++</span><span>)</span><span>{</span>
+        <span>int</span> m <span>=</span> <span>1</span><span>;</span>
+        <span>while</span><span>(</span> m <span>&lt;</span> n <span>)</span><span>{</span>
+            m <span>*=</span> <span>2</span><span>;</span>
+        <span>}</span>
+    <span>}</span>
+<span>}</span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br></div></div><h5 id="-4" tabindex="-1"> <span><span><i>Content not supported</i></span><span aria-hidden="true"><span><span style="height:1.0641em;vertical-align:-0.25em;"></span><span style="margin-right:0.02778em;">O</span><span>(</span><span><span>n</span><span><span><span><span style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span style="height:2.7em;"></span><span><span>2</span></span></span></span></span></span></span></span><span>)</span></span></span></span></h5>
+<p>假设我们将时间复杂度为 <span><span><i>Content not supported</i></span><span aria-hidden="true"><span><span style="height:1em;vertical-align:-0.25em;"></span><span style="margin-right:0.02778em;">O</span><span>(</span><span>n</span><span>)</span></span></span></span> 的代码重复执行 <span><span><i>Content not supported</i></span><span aria-hidden="true"><span><span style="height:0.4306em;"></span><span>n</span></span></span></span> 次，那么此时的时间复杂度就是 <span><span><i>Content not supported</i></span><span aria-hidden="true"><span><span style="height:0.4653em;"></span><span>n</span><span style="margin-right:0.2222em;"></span><span>∗</span><span style="margin-right:0.2222em;"></span></span><span><span style="height:1em;vertical-align:-0.25em;"></span><span style="margin-right:0.02778em;">O</span><span>(</span><span>n</span><span>)</span></span></span></span>，即可表示为 <span><span><i>Content not supported</i></span><span aria-hidden="true"><span><span style="height:1.0641em;vertical-align:-0.25em;"></span><span style="margin-right:0.02778em;">O</span><span>(</span><span><span>n</span><span><span><span><span style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span style="height:2.7em;"></span><span><span>2</span></span></span></span></span></span></span></span><span>)</span></span></span></span>，表现出来就是双重循环的形式。</p>
+<div><pre><code><span>void</span> <span>selectionSort</span><span>(</span><span>int</span><span>[</span><span>]</span> arr<span>,</span> <span>int</span> n<span>)</span><span>{</span>
+    <span>for</span><span>(</span><span>int</span> i <span>=</span> <span>0</span><span>;</span> i <span>&lt;</span> n<span>;</span> i<span>++</span><span>)</span><span>{</span>
+        <span>int</span> min <span>=</span> i<span>;</span>
+        <span>for</span><span>(</span><span>int</span> j <span>=</span> i <span>+</span> <span>1</span><span>;</span> j <span>&lt;</span> n<span>;</span> j<span>++</span><span>)</span><span>{</span>
+            <span>if</span><span>(</span>arr<span>[</span>j<span>]</span> <span>&lt;</span> arr<span>[</span>min<span>]</span><span>)</span><span>{</span>
+                <span>int</span> tmp <span>=</span> arr<span>[</span>i<span>]</span><span>;</span>
+                arr<span>[</span>i<span>]</span> <span>=</span> arr<span>[</span>j<span>]</span><span>;</span>
+                arr<span>[</span>j<span>]</span> <span>=</span> tmp<span>;</span>
+            <span>}</span>
+        <span>}</span>
+    <span>}</span>
+<span>}</span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br></div></div><h5 id="-5" tabindex="-1"> <span><span><i>Content not supported</i></span><span aria-hidden="true"><span><span style="height:1.0641em;vertical-align:-0.25em;"></span><span style="margin-right:0.02778em;">O</span><span>(</span><span><span>n</span><span><span><span><span style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span style="height:2.7em;"></span><span><span>3</span></span></span></span></span></span></span></span><span>)</span></span></span></span></h5>
+<p>和 <span><span><i>Content not supported</i></span><span aria-hidden="true"><span><span style="height:1.0641em;vertical-align:-0.25em;"></span><span style="margin-right:0.02778em;">O</span><span>(</span><span><span>n</span><span><span><span><span style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span style="height:2.7em;"></span><span><span>2</span></span></span></span></span></span></span></span><span>)</span></span></span></span>，类似，将时间复杂度为 <span><span><i>Content not supported</i></span><span aria-hidden="true"><span><span style="height:1.0641em;vertical-align:-0.25em;"></span><span style="margin-right:0.02778em;">O</span><span>(</span><span><span>n</span><span><span><span><span style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span style="height:2.7em;"></span><span><span>2</span></span></span></span></span></span></span></span><span>)</span></span></span></span> 的代码嵌套循环一次，此时复杂度就变成了  <span><span><i>Content not supported</i></span><span aria-hidden="true"><span><span style="height:1.0641em;vertical-align:-0.25em;"></span><span style="margin-right:0.02778em;">O</span><span>(</span><span><span>n</span><span><span><span><span style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span style="height:2.7em;"></span><span><span>3</span></span></span></span></span></span></span></span><span>)</span></span></span></span>，表现出来就是三重循环嵌套的形式。</p>
+<div><pre><code><span>void</span> <span>demo</span><span>(</span><span>int</span> n<span>)</span><span>{</span>
+    <span>for</span><span>(</span><span>int</span> i <span>=</span> <span>0</span><span>;</span> i <span>&lt;</span> n<span>;</span> i<span>++</span><span>)</span><span>{</span>
+        <span>for</span><span>(</span><span>int</span> j <span>=</span> <span>0</span><span>;</span> j <span>&lt;</span> n<span>;</span> j<span>++</span><span>)</span><span>{</span>
+            <span>for</span><span>(</span><span>int</span> k <span>=</span> <span>0</span><span>;</span> k <span>&lt;</span> n<span>;</span> k<span>++</span><span>)</span><span>{</span>
+                <span>System</span><span>.</span>out<span>.</span><span>print</span><span>(</span><span>"Hello, World"</span><span>)</span><span>;</span>
+            <span>}</span>
+            <span>System</span><span>.</span>out<span>.</span><span>print</span><span>(</span><span>"------"</span><span>)</span><span>;</span>
+        <span>}</span>
+        <span>System</span><span>.</span>out<span>.</span><span>print</span><span>(</span><span>"******"</span><span>)</span><span>;</span>
+    <span>}</span>
+<span>}</span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br></div></div><h5 id="-6" tabindex="-1"> <span><span><i>Content not supported</i></span><span aria-hidden="true"><span><span style="height:1em;vertical-align:-0.25em;"></span><span style="margin-right:0.02778em;">O</span><span>(</span><span>n</span><span>!)</span></span></span></span></h5>
+<p>虽然理论上存在时间复杂度为 <span><span><i>Content not supported</i></span><span aria-hidden="true"><span><span style="height:1em;vertical-align:-0.25em;"></span><span style="margin-right:0.02778em;">O</span><span>(</span><span>n</span><span>!)</span></span></span></span> 的算法，但实践中基本遇不到，所以这里就不展开了。</p>
+<h3 id="空间复杂度" tabindex="-1"> 空间复杂度</h3>
+<h4 id="定义-1" tabindex="-1"> 定义</h4>
+<p>空间复杂度是对一个算法在运行过程中临时占用存储空间大小的一个量度（即除开原始序列大小的内存，在算法过程中用到的额外的存储空间），反映的对内存占用的趋势，而不是具体内存，也叫作 <strong>渐进空间复杂度</strong> ，<strong>表示算法的存储空间与数据规模间的增长关系</strong>，用 <span><span><i>Content not supported</i></span><span aria-hidden="true"><span><span style="height:1em;vertical-align:-0.25em;"></span><span style="margin-right:0.05764em;">S</span><span>(</span><span>n</span><span>)</span></span></span></span> 来代替；</p>
+<h4 id="常用空间复杂度" tabindex="-1"> 常用空间复杂度</h4>
+<h5 id="-7" tabindex="-1"> <span><span><i>Content not supported</i></span><span aria-hidden="true"><span><span style="height:1em;vertical-align:-0.25em;"></span><span style="margin-right:0.02778em;">O</span><span>(</span><span>1</span><span>)</span></span></span></span></h5>
+<p>算法执行所需临时空间不随某一变量 <code>n</code> 的大小而变化，则该算法空间复杂度为一个常量，表示为 <span><span><i>Content not supported</i></span><span aria-hidden="true"><span><span style="height:1em;vertical-align:-0.25em;"></span><span style="margin-right:0.05764em;">S</span><span>(</span><span>n</span><span>)</span><span style="margin-right:0.2778em;"></span><span>=</span><span style="margin-right:0.2778em;"></span></span><span><span style="height:1em;vertical-align:-0.25em;"></span><span style="margin-right:0.02778em;">O</span><span>(</span><span>1</span><span>)</span></span></span></span>；</p>
+<div><pre><code><span>int</span> num1 <span>=</span> <span>1</span><span>;</span>
+<span>int</span> num2 <span>=</span> <span>2</span><span>;</span>
+<span>int</span> total <span>=</span> num1 <span>+</span> num2<span>;</span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br></div></div><h5 id="-8" tabindex="-1"> <span><span><i>Content not supported</i></span><span aria-hidden="true"><span><span style="height:1em;vertical-align:-0.25em;"></span><span style="margin-right:0.02778em;">O</span><span>(</span><span>n</span><span>)</span></span></span></span></h5>
+<p>数组占用内存大小为 <code>n</code>，而且后续未分配新的空间，因此该算法空间复杂度为 <span><span><i>Content not supported</i></span><span aria-hidden="true"><span><span style="height:1em;vertical-align:-0.25em;"></span><span style="margin-right:0.05764em;">S</span><span>(</span><span>n</span><span>)</span><span style="margin-right:0.2778em;"></span><span>=</span><span style="margin-right:0.2778em;"></span></span><span><span style="height:1em;vertical-align:-0.25em;"></span><span style="margin-right:0.02778em;">O</span><span>(</span><span>n</span><span>)</span></span></span></span>；</p>
+<div><pre><code><span>int</span><span>[</span><span>]</span> arr <span>=</span> <span>new</span> <span>int</span><span>[</span>n<span>]</span><span>;</span>
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><h5 id="-9" tabindex="-1"> <span><span><i>Content not supported</i></span><span aria-hidden="true"><span><span style="height:1.0641em;vertical-align:-0.25em;"></span><span style="margin-right:0.02778em;">O</span><span>(</span><span><span>n</span><span><span><span><span style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span style="height:2.7em;"></span><span><span>2</span></span></span></span></span></span></span></span><span>)</span></span></span></span></h5>
+<p>二维数组的情况；</p>
+<div><pre><code><span>int</span><span>[</span><span>]</span><span>[</span><span>]</span> arr <span>=</span> <span>new</span> <span>int</span><span>[</span>n<span>]</span><span>[</span>n<span>]</span><span>;</span>
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><h3 id="常见排序算法的时间复杂度和空间复杂度" tabindex="-1"> 常见排序算法的时间复杂度和空间复杂度</h3>
+<p>对于面试中常见的的排序算法，以下总结给出了其时间复杂度以及空间复杂度，以及算法稳定性。</p>
+<table>
+<thead>
+<tr>
+<th>排序算法</th>
+<th>平均时间复杂度</th>
+<th>最好时间复杂度</th>
+<th>最坏时间复杂度</th>
+<th>空间复杂度</th>
+<th>稳定性</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>插入排序</td>
+<td><span><span><i>Content not supported</i></span><span aria-hidden="true"><span><span style="height:1.0641em;vertical-align:-0.25em;"></span><span style="margin-right:0.02778em;">O</span><span>(</span><span><span>n</span><span><span><span><span style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span style="height:2.7em;"></span><span><span>2</span></span></span></span></span></span></span></span><span>)</span></span></span></span></td>
+<td><span><span><i>Content not supported</i></span><span aria-hidden="true"><span><span style="height:1em;vertical-align:-0.25em;"></span><span style="margin-right:0.02778em;">O</span><span>(</span><span>n</span><span>)</span></span></span></span></td>
+<td><span><span><i>Content not supported</i></span><span aria-hidden="true"><span><span style="height:1.0641em;vertical-align:-0.25em;"></span><span style="margin-right:0.02778em;">O</span><span>(</span><span><span>n</span><span><span><span><span style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span style="height:2.7em;"></span><span><span>2</span></span></span></span></span></span></span></span><span>)</span></span></span></span></td>
+<td><span><span><i>Content not supported</i></span><span aria-hidden="true"><span><span style="height:1em;vertical-align:-0.25em;"></span><span style="margin-right:0.02778em;">O</span><span>(</span><span>1</span><span>)</span></span></span></span></td>
+<td>稳定</td>
+</tr>
+<tr>
+<td>希尔排序</td>
+<td><span><span><i>Content not supported</i></span><span aria-hidden="true"><span><span style="height:1.0641em;vertical-align:-0.25em;"></span><span style="margin-right:0.02778em;">O</span><span>(</span><span><span>n</span><span><span><span><span style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span style="height:2.7em;"></span><span><span><span>1.3</span></span></span></span></span></span></span></span></span><span>)</span></span></span></span></td>
+<td><span><span><i>Content not supported</i></span><span aria-hidden="true"><span><span style="height:1em;vertical-align:-0.25em;"></span><span style="margin-right:0.02778em;">O</span><span>(</span><span>n</span><span>)</span></span></span></span></td>
+<td><span><span><i>Content not supported</i></span><span aria-hidden="true"><span><span style="height:1.0641em;vertical-align:-0.25em;"></span><span style="margin-right:0.02778em;">O</span><span>(</span><span><span>n</span><span><span><span><span style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span style="height:2.7em;"></span><span><span>2</span></span></span></span></span></span></span></span><span>)</span></span></span></span></td>
+<td><span><span><i>Content not supported</i></span><span aria-hidden="true"><span><span style="height:1em;vertical-align:-0.25em;"></span><span style="margin-right:0.02778em;">O</span><span>(</span><span>1</span><span>)</span></span></span></span></td>
+<td>不稳定</td>
+</tr>
+<tr>
+<td>选择排序</td>
+<td><span><span><i>Content not supported</i></span><span aria-hidden="true"><span><span style="height:1.0641em;vertical-align:-0.25em;"></span><span style="margin-right:0.02778em;">O</span><span>(</span><span><span>n</span><span><span><span><span style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span style="height:2.7em;"></span><span><span>2</span></span></span></span></span></span></span></span><span>)</span></span></span></span></td>
+<td><span><span><i>Content not supported</i></span><span aria-hidden="true"><span><span style="height:1.0641em;vertical-align:-0.25em;"></span><span style="margin-right:0.02778em;">O</span><span>(</span><span><span>n</span><span><span><span><span style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span style="height:2.7em;"></span><span><span>2</span></span></span></span></span></span></span></span><span>)</span></span></span></span></td>
+<td><span><span><i>Content not supported</i></span><span aria-hidden="true"><span><span style="height:1.0641em;vertical-align:-0.25em;"></span><span style="margin-right:0.02778em;">O</span><span>(</span><span><span>n</span><span><span><span><span style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span style="height:2.7em;"></span><span><span>2</span></span></span></span></span></span></span></span><span>)</span></span></span></span></td>
+<td><span><span><i>Content not supported</i></span><span aria-hidden="true"><span><span style="height:1em;vertical-align:-0.25em;"></span><span style="margin-right:0.02778em;">O</span><span>(</span><span>1</span><span>)</span></span></span></span></td>
+<td>不稳定</td>
+</tr>
+<tr>
+<td>堆排序</td>
+<td><span><span><i>Content not supported</i></span><span aria-hidden="true"><span><span style="height:1em;vertical-align:-0.25em;"></span><span style="margin-right:0.02778em;">O</span><span>(</span><span>n</span><span style="margin-right:0.01968em;">l</span><span>o</span><span><span style="margin-right:0.03588em;">g</span><span><span><span><span style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span style="height:2.7em;"></span><span><span>2</span></span></span></span><span>​</span></span><span><span style="height:0.15em;"><span></span></span></span></span></span></span><span>n</span><span>)</span></span></span></span></td>
+<td><span><span><i>Content not supported</i></span><span aria-hidden="true"><span><span style="height:1em;vertical-align:-0.25em;"></span><span style="margin-right:0.02778em;">O</span><span>(</span><span>n</span><span style="margin-right:0.01968em;">l</span><span>o</span><span><span style="margin-right:0.03588em;">g</span><span><span><span><span style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span style="height:2.7em;"></span><span><span>2</span></span></span></span><span>​</span></span><span><span style="height:0.15em;"><span></span></span></span></span></span></span><span>n</span><span>)</span></span></span></span></td>
+<td><span><span><i>Content not supported</i></span><span aria-hidden="true"><span><span style="height:1em;vertical-align:-0.25em;"></span><span style="margin-right:0.02778em;">O</span><span>(</span><span>n</span><span style="margin-right:0.01968em;">l</span><span>o</span><span><span style="margin-right:0.03588em;">g</span><span><span><span><span style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span style="height:2.7em;"></span><span><span>2</span></span></span></span><span>​</span></span><span><span style="height:0.15em;"><span></span></span></span></span></span></span><span>n</span><span>)</span></span></span></span></td>
+<td><span><span><i>Content not supported</i></span><span aria-hidden="true"><span><span style="height:1em;vertical-align:-0.25em;"></span><span style="margin-right:0.02778em;">O</span><span>(</span><span>1</span><span>)</span></span></span></span></td>
+<td>不稳定</td>
+</tr>
+<tr>
+<td>冒泡排序</td>
+<td><span><span><i>Content not supported</i></span><span aria-hidden="true"><span><span style="height:1.0641em;vertical-align:-0.25em;"></span><span style="margin-right:0.02778em;">O</span><span>(</span><span><span>n</span><span><span><span><span style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span style="height:2.7em;"></span><span><span>2</span></span></span></span></span></span></span></span><span>)</span></span></span></span></td>
+<td><span><span><i>Content not supported</i></span><span aria-hidden="true"><span><span style="height:1em;vertical-align:-0.25em;"></span><span style="margin-right:0.02778em;">O</span><span>(</span><span>n</span><span>)</span></span></span></span></td>
+<td><span><span><i>Content not supported</i></span><span aria-hidden="true"><span><span style="height:1.0641em;vertical-align:-0.25em;"></span><span style="margin-right:0.02778em;">O</span><span>(</span><span><span>n</span><span><span><span><span style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span style="height:2.7em;"></span><span><span>2</span></span></span></span></span></span></span></span><span>)</span></span></span></span></td>
+<td><span><span><i>Content not supported</i></span><span aria-hidden="true"><span><span style="height:1em;vertical-align:-0.25em;"></span><span style="margin-right:0.02778em;">O</span><span>(</span><span>1</span><span>)</span></span></span></span></td>
+<td>稳定</td>
+</tr>
+<tr>
+<td>快速排序</td>
+<td><span><span><i>Content not supported</i></span><span aria-hidden="true"><span><span style="height:1em;vertical-align:-0.25em;"></span><span style="margin-right:0.02778em;">O</span><span>(</span><span>n</span><span style="margin-right:0.01968em;">l</span><span>o</span><span><span style="margin-right:0.03588em;">g</span><span><span><span><span style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span style="height:2.7em;"></span><span><span>2</span></span></span></span><span>​</span></span><span><span style="height:0.15em;"><span></span></span></span></span></span></span><span>n</span><span>)</span></span></span></span></td>
+<td><span><span><i>Content not supported</i></span><span aria-hidden="true"><span><span style="height:1em;vertical-align:-0.25em;"></span><span style="margin-right:0.02778em;">O</span><span>(</span><span>n</span><span style="margin-right:0.01968em;">l</span><span>o</span><span><span style="margin-right:0.03588em;">g</span><span><span><span><span style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span style="height:2.7em;"></span><span><span>2</span></span></span></span><span>​</span></span><span><span style="height:0.15em;"><span></span></span></span></span></span></span><span>n</span><span>)</span></span></span></span></td>
+<td><span><span><i>Content not supported</i></span><span aria-hidden="true"><span><span style="height:1.0641em;vertical-align:-0.25em;"></span><span style="margin-right:0.02778em;">O</span><span>(</span><span><span>n</span><span><span><span><span style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span style="height:2.7em;"></span><span><span>2</span></span></span></span></span></span></span></span><span>)</span></span></span></span></td>
+<td><span><span><i>Content not supported</i></span><span aria-hidden="true"><span><span style="height:1em;vertical-align:-0.25em;"></span><span style="margin-right:0.02778em;">O</span><span>(</span><span>n</span><span style="margin-right:0.01968em;">l</span><span>o</span><span><span style="margin-right:0.03588em;">g</span><span><span><span><span style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span style="height:2.7em;"></span><span><span>2</span></span></span></span><span>​</span></span><span><span style="height:0.15em;"><span></span></span></span></span></span></span><span>n</span><span>)</span></span></span></span></td>
+<td>不稳定</td>
+</tr>
+<tr>
+<td>归并排序</td>
+<td><span><span><i>Content not supported</i></span><span aria-hidden="true"><span><span style="height:1em;vertical-align:-0.25em;"></span><span style="margin-right:0.02778em;">O</span><span>(</span><span>n</span><span style="margin-right:0.01968em;">l</span><span>o</span><span><span style="margin-right:0.03588em;">g</span><span><span><span><span style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span style="height:2.7em;"></span><span><span>2</span></span></span></span><span>​</span></span><span><span style="height:0.15em;"><span></span></span></span></span></span></span><span>n</span><span>)</span></span></span></span></td>
+<td><span><span><i>Content not supported</i></span><span aria-hidden="true"><span><span style="height:1em;vertical-align:-0.25em;"></span><span style="margin-right:0.02778em;">O</span><span>(</span><span>n</span><span style="margin-right:0.01968em;">l</span><span>o</span><span><span style="margin-right:0.03588em;">g</span><span><span><span><span style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span style="height:2.7em;"></span><span><span>2</span></span></span></span><span>​</span></span><span><span style="height:0.15em;"><span></span></span></span></span></span></span><span>n</span><span>)</span></span></span></span></td>
+<td><span><span><i>Content not supported</i></span><span aria-hidden="true"><span><span style="height:1em;vertical-align:-0.25em;"></span><span style="margin-right:0.02778em;">O</span><span>(</span><span>n</span><span style="margin-right:0.01968em;">l</span><span>o</span><span><span style="margin-right:0.03588em;">g</span><span><span><span><span style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span style="height:2.7em;"></span><span><span>2</span></span></span></span><span>​</span></span><span><span style="height:0.15em;"><span></span></span></span></span></span></span><span>n</span><span>)</span></span></span></span></td>
+<td><span><span><i>Content not supported</i></span><span aria-hidden="true"><span><span style="height:1em;vertical-align:-0.25em;"></span><span style="margin-right:0.02778em;">O</span><span>(</span><span>n</span><span>)</span></span></span></span></td>
+<td>稳定</td>
+</tr>
+<tr>
+<td>计数排序</td>
+<td><span><span><i>Content not supported</i></span><span aria-hidden="true"><span><span style="height:1em;vertical-align:-0.25em;"></span><span style="margin-right:0.02778em;">O</span><span>(</span><span>n</span><span style="margin-right:0.2222em;"></span><span>+</span><span style="margin-right:0.2222em;"></span></span><span><span style="height:1em;vertical-align:-0.25em;"></span><span style="margin-right:0.03148em;">k</span><span>)</span></span></span></span></td>
+<td><span><span><i>Content not supported</i></span><span aria-hidden="true"><span><span style="height:1em;vertical-align:-0.25em;"></span><span style="margin-right:0.02778em;">O</span><span>(</span><span>n</span><span style="margin-right:0.2222em;"></span><span>+</span><span style="margin-right:0.2222em;"></span></span><span><span style="height:1em;vertical-align:-0.25em;"></span><span style="margin-right:0.03148em;">k</span><span>)</span></span></span></span></td>
+<td><span><span><i>Content not supported</i></span><span aria-hidden="true"><span><span style="height:1em;vertical-align:-0.25em;"></span><span style="margin-right:0.02778em;">O</span><span>(</span><span>n</span><span style="margin-right:0.2222em;"></span><span>+</span><span style="margin-right:0.2222em;"></span></span><span><span style="height:1em;vertical-align:-0.25em;"></span><span style="margin-right:0.03148em;">k</span><span>)</span></span></span></span></td>
+<td><span><span><i>Content not supported</i></span><span aria-hidden="true"><span><span style="height:1em;vertical-align:-0.25em;"></span><span style="margin-right:0.02778em;">O</span><span>(</span><span>n</span><span style="margin-right:0.2222em;"></span><span>+</span><span style="margin-right:0.2222em;"></span></span><span><span style="height:1em;vertical-align:-0.25em;"></span><span style="margin-right:0.03148em;">k</span><span>)</span></span></span></span></td>
+<td>稳定</td>
+</tr>
+<tr>
+<td>桶排序</td>
+<td><span><span><i>Content not supported</i></span><span aria-hidden="true"><span><span style="height:1em;vertical-align:-0.25em;"></span><span style="margin-right:0.02778em;">O</span><span>(</span><span>n</span><span style="margin-right:0.2222em;"></span><span>+</span><span style="margin-right:0.2222em;"></span></span><span><span style="height:1em;vertical-align:-0.25em;"></span><span style="margin-right:0.03148em;">k</span><span>)</span></span></span></span></td>
+<td><span><span><i>Content not supported</i></span><span aria-hidden="true"><span><span style="height:1em;vertical-align:-0.25em;"></span><span style="margin-right:0.02778em;">O</span><span>(</span><span>n</span><span>)</span></span></span></span></td>
+<td><span><span><i>Content not supported</i></span><span aria-hidden="true"><span><span style="height:1.0641em;vertical-align:-0.25em;"></span><span style="margin-right:0.02778em;">O</span><span>(</span><span><span>n</span><span><span><span><span style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span style="height:2.7em;"></span><span><span>2</span></span></span></span></span></span></span></span><span>)</span></span></span></span></td>
+<td><span><span><i>Content not supported</i></span><span aria-hidden="true"><span><span style="height:1em;vertical-align:-0.25em;"></span><span style="margin-right:0.02778em;">O</span><span>(</span><span>n</span><span style="margin-right:0.2222em;"></span><span>+</span><span style="margin-right:0.2222em;"></span></span><span><span style="height:1em;vertical-align:-0.25em;"></span><span style="margin-right:0.03148em;">k</span><span>)</span></span></span></span></td>
+<td>稳定</td>
+</tr>
+<tr>
+<td>基数排序</td>
+<td><span><span><i>Content not supported</i></span><span aria-hidden="true"><span><span style="height:1em;vertical-align:-0.25em;"></span><span style="margin-right:0.02778em;">O</span><span>(</span><span>n</span><span style="margin-right:0.2222em;"></span><span>∗</span><span style="margin-right:0.2222em;"></span></span><span><span style="height:1em;vertical-align:-0.25em;"></span><span style="margin-right:0.03148em;">k</span><span>)</span></span></span></span></td>
+<td><span><span><i>Content not supported</i></span><span aria-hidden="true"><span><span style="height:1em;vertical-align:-0.25em;"></span><span style="margin-right:0.02778em;">O</span><span>(</span><span>n</span><span style="margin-right:0.2222em;"></span><span>∗</span><span style="margin-right:0.2222em;"></span></span><span><span style="height:1em;vertical-align:-0.25em;"></span><span style="margin-right:0.03148em;">k</span><span>)</span></span></span></span></td>
+<td><span><span><i>Content not supported</i></span><span aria-hidden="true"><span><span style="height:1em;vertical-align:-0.25em;"></span><span style="margin-right:0.02778em;">O</span><span>(</span><span>n</span><span style="margin-right:0.2222em;"></span><span>∗</span><span style="margin-right:0.2222em;"></span></span><span><span style="height:1em;vertical-align:-0.25em;"></span><span style="margin-right:0.03148em;">k</span><span>)</span></span></span></span></td>
+<td><span><span><i>Content not supported</i></span><span aria-hidden="true"><span><span style="height:1em;vertical-align:-0.25em;"></span><span style="margin-right:0.02778em;">O</span><span>(</span><span>n</span><span style="margin-right:0.2222em;"></span><span>+</span><span style="margin-right:0.2222em;"></span></span><span><span style="height:1em;vertical-align:-0.25em;"></span><span style="margin-right:0.03148em;">k</span><span>)</span></span></span></span></td>
+<td>稳定</td>
+</tr>
+</tbody>
+</table>
+<h2 id="总结" tabindex="-1"> 总结</h2>
+<p>好了，以上就是今天文章的内容了。主要介绍了算法的定义、算法的特性、算法的设计要求以及算法效率的衡量方法。时间复杂度的定义、推导原则以及常见时间复杂度，还对空间复杂度定义以及常见空间复杂度进行了介绍，最后则是总结了常见排序算法的时间复杂度和空间复杂度。</p>
+]]></content:encoded>
+      <enclosure url="https://cdn.jsdelivr.net/gh/cunyu1943/image-hosting-for-blog/image-20200626143247469.png" type="image/png"/>
+    </item>
+    <item>
       <title>数据结构与算法：数据结构简介</title>
       <link>https://cunyu1943.github.io/JavaPark/JavaPark/cs-basics/algorithm/datastructure.html</link>
       <guid>https://cunyu1943.github.io/JavaPark/JavaPark/cs-basics/algorithm/datastructure.html</guid>
@@ -42,6 +318,7 @@
 <p>除了数据元素之外，还可以有数据项，一个数据元素可以由若干个数据项所组成，而数据项则是数据中不可分割的最小单位。</p>
 <p>不同数据之间，或多或少都存在着一定的关系，而我们把这些关系就叫做结构。所谓数据结构，就是相互间存在一种或多种特定关系的数据元素的集合。</p>
 <p>用 Java 中的类来类比，数据就像 Java 中的一个类，数据元素就是类中的各个对象，而数据项则是各个对象中的属性。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/cunyu1943/blog-imgs@main/2022/05/image-20220503152633196.png" alt="" loading="lazy"></p>
 <h2 id="逻辑结构与物理结构" tabindex="-1"> 逻辑结构与物理结构</h2>
 <h3 id="逻辑结构" tabindex="-1"> 逻辑结构</h3>
 <p>逻辑结构，就是指数据对象中数据元素之间的相互关系。逻辑结构主要又可以分为 4 种，总结如下：</p>
@@ -108,7 +385,7 @@
 <h2 id="总结" tabindex="-1"> 总结</h2>
 <p>本文的内容到此就结束了，主要介绍了数据结构的定义，并了解了数据结构中的四种逻辑结构和四种物理结构。关于更多数据结构的知识，咱们就下期文章再见吧！</p>
 ]]></content:encoded>
-      <enclosure url="https://cdn.jsdelivr.net/gh/cunyu1943/blog-imgs@main/2022/05/image-20220502224347120.png" type="image/png"/>
+      <enclosure url="https://cdn.jsdelivr.net/gh/cunyu1943/blog-imgs@main/2022/05/image-20220503152633196.png" type="image/png"/>
     </item>
     <item>
       <title>Spring Boot 基础教程：集成 Knife4j</title>
@@ -25859,1025 +26136,6 @@ java
 <img src="https://cdn.jsdelivr.net/gh/cunyu1943/cunyu1943@main/imgs/wepublic.gif" width="200" alt="公众号" />
 ]]></content:encoded>
       <enclosure url="https://img-blog.csdnimg.cn/20200604092817501.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2dpdGh1Yl8zOTY1NTAyOQ==,size_16,color_FFFFFF,t_70" type="image/"/>
-    </item>
-    <item>
-      <title>Java 菜鸟入门：Lombok 安装及使用指南</title>
-      <link>https://cunyu1943.github.io/JavaPark/JavaPark/java/java-se/lombok-install-and-usage.html</link>
-      <guid>https://cunyu1943.github.io/JavaPark/JavaPark/java/java-se/lombok-install-and-usage.html</guid>
-      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">Java 菜鸟入门：Lombok 安装及使用指南</source>
-      <category>Java 菜鸟入门</category>
-      <pubDate>Sun, 16 Jan 2022 20:51:19 GMT</pubDate>
-      <content:encoded><![CDATA[<h2 id="简介" tabindex="-1"> 简介</h2>
-<p>为了减少写一些 <code>get/set/toString</code> 方法，让项目代码更加整洁，提高开发效率，发现大家都开始采用 Lombok 这个工具。Lombok 是一个 Java 类库，它会自动插入编辑器和构建工具，用于帮助开发人员消除 Java 中冗长样板代码。而我们开发人员所要做的，仅仅是添加几个 Lombok 中的注解，就可以替换掉原来的多行 <code>get/set/toString</code> 方法代码，既简洁也易于维护。下面我们就来看看，如何安装并使用这一工具。</p>
-<h2 id="安装-lombok" tabindex="-1"> 安装 Lombok</h2>
-<p>日常开发中，相信大多数人现在使用的都是 IDEA 这个 Java 神器了，如果你还在使用 Eclipse 或者 MyEclipse 等工具，那强烈推荐你去体验一把 IDEA，相信你一用上它就会爱上他它的强大！下面我就一在 IDEA 中使用 Lombok 为例，看看如何安装并使用它。</p>
-<p>在先前 IDEA 的版本中，Lombok 是需要通过插件来安装的，安装方法如下：依次进入<code>File -&gt; Settings -&gt; Plugins</code>，然后搜索 Lombok ，最后进行安装即可。而在新版本的 IDEA 中，Lombok 已经被集成到 IDEA 中，我们不用再去安装它就可以直接使用，可以说是十分方便了。</p>
-<ul>
-<li>老版本 IDEA 安装 Lombok</li>
-</ul>
-<p><img src="https://gitee.com/cunyu1943/images/raw/master/imgsUbuntu/20200519140731.png" alt="img" loading="lazy"></p>
-<ul>
-<li>新版本中集成了 Lombok</li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/cunyu1943/blog-imgs@main//blog/image-20210830093437410.png" alt="img" loading="lazy"></p>
-<p>以上就是 Lombok 的安装过程了，是不是十分简单？那接下来我们就来看看，如何在我们的项目中使用 Lombok！</p>
-<h2 id="lombok-使用" tabindex="-1"> Lombok 使用</h2>
-<p>现在大家进行项目管理时用的工具大多应该都是 Maven，所以我们直接在需要使用 Lombok 的项目中加入 Lombok 编译支持，也就是在 <code>pom.xml</code> 文件中加入以下依赖。</p>
-<div><pre><code><span><span><span>&lt;</span>dependency</span><span>></span></span>
-    <span><span><span>&lt;</span>groupId</span><span>></span></span>org.projectlombok<span><span><span>&lt;/</span>groupId</span><span>></span></span>
-    <span><span><span>&lt;</span>artifactId</span><span>></span></span>lombok<span><span><span>&lt;/</span>artifactId</span><span>></span></span>
-<span><span><span>&lt;/</span>dependency</span><span>></span></span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br></div></div><p>导入相关依赖之后，接下来就是具体使用过程了。</p>
-<h3 id="具体使用" tabindex="-1"> 具体使用</h3>
-<p>在需要的实体类中引入相关注解即可，只不过注解不同它们所对应的功能也不同，而且同一个注解可能在不同位置的功能也不一样。如下图；</p>
-<p><img src="https://gitee.com/cunyu1943/images/raw/master/imgsUbuntu/20200519141238.png" alt="img" loading="lazy"></p>
-<h3 id="常用注解" tabindex="-1"> 常用注解</h3>
-<h4 id="data" tabindex="-1"> <a href="">@Data </a></h4>
-<p>注解在 <strong>类</strong> 上：给类的所有属性提供 <code>get</code> 和 <code>set</code> 方法，此外还有 <code>equals、canEqual、hashCode、toString</code> 方法以及 <strong>默认参数为空的构造方法</strong>；</p>
-<ul>
-<li><strong>使用前</strong></li>
-</ul>
-<div><pre><code><span>package</span> <span>com<span>.</span>cunyu<span>.</span>user<span>.</span>entity</span><span>;</span>
-
-<span>public</span> <span>class</span> <span>User</span> <span>{</span>
-    <span>private</span> <span>Long</span> id<span>;</span>
-    <span>private</span> <span>String</span> name<span>;</span>
-    <span>private</span> <span>Integer</span> age<span>;</span>
-    <span>private</span> <span>String</span> email<span>;</span>
-
-    <span>public</span> <span>User</span><span>(</span><span>)</span> <span>{</span>
-    <span>}</span>
-
-    <span>public</span> <span>Long</span> <span>getId</span><span>(</span><span>)</span> <span>{</span>
-        <span>return</span> <span>this</span><span>.</span>id<span>;</span>
-    <span>}</span>
-
-    <span>public</span> <span>String</span> <span>getName</span><span>(</span><span>)</span> <span>{</span>
-        <span>return</span> <span>this</span><span>.</span>name<span>;</span>
-    <span>}</span>
-
-    <span>public</span> <span>Integer</span> <span>getAge</span><span>(</span><span>)</span> <span>{</span>
-        <span>return</span> <span>this</span><span>.</span>age<span>;</span>
-    <span>}</span>
-
-    <span>public</span> <span>String</span> <span>getEmail</span><span>(</span><span>)</span> <span>{</span>
-        <span>return</span> <span>this</span><span>.</span>email<span>;</span>
-    <span>}</span>
-
-    <span>public</span> <span>void</span> <span>setId</span><span>(</span><span>final</span> <span>Long</span> id<span>)</span> <span>{</span>
-        <span>this</span><span>.</span>id <span>=</span> id<span>;</span>
-    <span>}</span>
-
-    <span>public</span> <span>void</span> <span>setName</span><span>(</span><span>final</span> <span>String</span> name<span>)</span> <span>{</span>
-        <span>this</span><span>.</span>name <span>=</span> name<span>;</span>
-    <span>}</span>
-
-    <span>public</span> <span>void</span> <span>setAge</span><span>(</span><span>final</span> <span>Integer</span> age<span>)</span> <span>{</span>
-        <span>this</span><span>.</span>age <span>=</span> age<span>;</span>
-    <span>}</span>
-
-    <span>public</span> <span>void</span> <span>setEmail</span><span>(</span><span>final</span> <span>String</span> email<span>)</span> <span>{</span>
-        <span>this</span><span>.</span>email <span>=</span> email<span>;</span>
-    <span>}</span>
-
-    <span>public</span> <span>boolean</span> <span>equals</span><span>(</span><span>final</span> <span>Object</span> o<span>)</span> <span>{</span>
-        <span>if</span> <span>(</span>o <span>==</span> <span>this</span><span>)</span> <span>{</span>
-            <span>return</span> <span>true</span><span>;</span>
-        <span>}</span> <span>else</span> <span>if</span> <span>(</span><span>!</span><span>(</span>o <span>instanceof</span> <span>User</span><span>)</span><span>)</span> <span>{</span>
-            <span>return</span> <span>false</span><span>;</span>
-        <span>}</span> <span>else</span> <span>{</span>
-            <span>User</span> other <span>=</span> <span>(</span><span>User</span><span>)</span>o<span>;</span>
-            <span>if</span> <span>(</span><span>!</span>other<span>.</span><span>canEqual</span><span>(</span><span>this</span><span>)</span><span>)</span> <span>{</span>
-                <span>return</span> <span>false</span><span>;</span>
-            <span>}</span> <span>else</span> <span>{</span>
-                label59<span>:</span> <span>{</span>
-                    <span>Object</span> <span>this</span>$id <span>=</span> <span>this</span><span>.</span><span>getId</span><span>(</span><span>)</span><span>;</span>
-                    <span>Object</span> other$id <span>=</span> other<span>.</span><span>getId</span><span>(</span><span>)</span><span>;</span>
-                    <span>if</span> <span>(</span><span>this</span>$id <span>==</span> <span>null</span><span>)</span> <span>{</span>
-                        <span>if</span> <span>(</span>other$id <span>==</span> <span>null</span><span>)</span> <span>{</span>
-                            <span>break</span> label59<span>;</span>
-                        <span>}</span>
-                    <span>}</span> <span>else</span> <span>if</span> <span>(</span><span>this</span>$id<span>.</span><span>equals</span><span>(</span>other$id<span>)</span><span>)</span> <span>{</span>
-                        <span>break</span> label59<span>;</span>
-                    <span>}</span>
-
-                    <span>return</span> <span>false</span><span>;</span>
-                <span>}</span>
-
-                <span>Object</span> <span>this</span>$age <span>=</span> <span>this</span><span>.</span><span>getAge</span><span>(</span><span>)</span><span>;</span>
-                <span>Object</span> other$age <span>=</span> other<span>.</span><span>getAge</span><span>(</span><span>)</span><span>;</span>
-                <span>if</span> <span>(</span><span>this</span>$age <span>==</span> <span>null</span><span>)</span> <span>{</span>
-                    <span>if</span> <span>(</span>other$age <span>!=</span> <span>null</span><span>)</span> <span>{</span>
-                        <span>return</span> <span>false</span><span>;</span>
-                    <span>}</span>
-                <span>}</span> <span>else</span> <span>if</span> <span>(</span><span>!</span><span>this</span>$age<span>.</span><span>equals</span><span>(</span>other$age<span>)</span><span>)</span> <span>{</span>
-                    <span>return</span> <span>false</span><span>;</span>
-                <span>}</span>
-
-                <span>Object</span> <span>this</span>$name <span>=</span> <span>this</span><span>.</span><span>getName</span><span>(</span><span>)</span><span>;</span>
-                <span>Object</span> other$name <span>=</span> other<span>.</span><span>getName</span><span>(</span><span>)</span><span>;</span>
-                <span>if</span> <span>(</span><span>this</span>$name <span>==</span> <span>null</span><span>)</span> <span>{</span>
-                    <span>if</span> <span>(</span>other$name <span>!=</span> <span>null</span><span>)</span> <span>{</span>
-                        <span>return</span> <span>false</span><span>;</span>
-                    <span>}</span>
-                <span>}</span> <span>else</span> <span>if</span> <span>(</span><span>!</span><span>this</span>$name<span>.</span><span>equals</span><span>(</span>other$name<span>)</span><span>)</span> <span>{</span>
-                    <span>return</span> <span>false</span><span>;</span>
-                <span>}</span>
-
-                <span>Object</span> <span>this</span>$email <span>=</span> <span>this</span><span>.</span><span>getEmail</span><span>(</span><span>)</span><span>;</span>
-                <span>Object</span> other$email <span>=</span> other<span>.</span><span>getEmail</span><span>(</span><span>)</span><span>;</span>
-                <span>if</span> <span>(</span><span>this</span>$email <span>==</span> <span>null</span><span>)</span> <span>{</span>
-                    <span>if</span> <span>(</span>other$email <span>!=</span> <span>null</span><span>)</span> <span>{</span>
-                        <span>return</span> <span>false</span><span>;</span>
-                    <span>}</span>
-                <span>}</span> <span>else</span> <span>if</span> <span>(</span><span>!</span><span>this</span>$email<span>.</span><span>equals</span><span>(</span>other$email<span>)</span><span>)</span> <span>{</span>
-                    <span>return</span> <span>false</span><span>;</span>
-                <span>}</span>
-
-                <span>return</span> <span>true</span><span>;</span>
-            <span>}</span>
-        <span>}</span>
-    <span>}</span>
-
-    <span>protected</span> <span>boolean</span> <span>canEqual</span><span>(</span><span>final</span> <span>Object</span> other<span>)</span> <span>{</span>
-        <span>return</span> other <span>instanceof</span> <span>User</span><span>;</span>
-    <span>}</span>
-
-    <span>public</span> <span>int</span> <span>hashCode</span><span>(</span><span>)</span> <span>{</span>
-        <span>int</span> PRIME <span>=</span> <span>true</span><span>;</span>
-        <span>int</span> result <span>=</span> <span>1</span><span>;</span>
-        <span>Object</span> $id <span>=</span> <span>this</span><span>.</span><span>getId</span><span>(</span><span>)</span><span>;</span>
-        <span>int</span> result <span>=</span> result <span>*</span> <span>59</span> <span>+</span> <span>(</span>$id <span>==</span> <span>null</span> <span>?</span> <span>43</span> <span>:</span> $id<span>.</span><span>hashCode</span><span>(</span><span>)</span><span>)</span><span>;</span>
-        <span>Object</span> $age <span>=</span> <span>this</span><span>.</span><span>getAge</span><span>(</span><span>)</span><span>;</span>
-        result <span>=</span> result <span>*</span> <span>59</span> <span>+</span> <span>(</span>$age <span>==</span> <span>null</span> <span>?</span> <span>43</span> <span>:</span> $age<span>.</span><span>hashCode</span><span>(</span><span>)</span><span>)</span><span>;</span>
-        <span>Object</span> $name <span>=</span> <span>this</span><span>.</span><span>getName</span><span>(</span><span>)</span><span>;</span>
-        result <span>=</span> result <span>*</span> <span>59</span> <span>+</span> <span>(</span>$name <span>==</span> <span>null</span> <span>?</span> <span>43</span> <span>:</span> $name<span>.</span><span>hashCode</span><span>(</span><span>)</span><span>)</span><span>;</span>
-        <span>Object</span> $email <span>=</span> <span>this</span><span>.</span><span>getEmail</span><span>(</span><span>)</span><span>;</span>
-        result <span>=</span> result <span>*</span> <span>59</span> <span>+</span> <span>(</span>$email <span>==</span> <span>null</span> <span>?</span> <span>43</span> <span>:</span> $email<span>.</span><span>hashCode</span><span>(</span><span>)</span><span>)</span><span>;</span>
-        <span>return</span> result<span>;</span>
-    <span>}</span>
-
-    <span>public</span> <span>String</span> <span>toString</span><span>(</span><span>)</span> <span>{</span>
-        <span>Long</span> var10000 <span>=</span> <span>this</span><span>.</span><span>getId</span><span>(</span><span>)</span><span>;</span>
-        <span>return</span> <span>"User(id="</span> <span>+</span> var10000 <span>+</span> <span>", name="</span> <span>+</span> <span>this</span><span>.</span><span>getName</span><span>(</span><span>)</span> <span>+</span> <span>", age="</span> <span>+</span> <span>this</span><span>.</span><span>getAge</span><span>(</span><span>)</span> <span>+</span> <span>", email="</span> <span>+</span> <span>this</span><span>.</span><span>getEmail</span><span>(</span><span>)</span> <span>+</span> <span>")"</span><span>;</span>
-    <span>}</span>
-<span>}</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br><span>27</span><br><span>28</span><br><span>29</span><br><span>30</span><br><span>31</span><br><span>32</span><br><span>33</span><br><span>34</span><br><span>35</span><br><span>36</span><br><span>37</span><br><span>38</span><br><span>39</span><br><span>40</span><br><span>41</span><br><span>42</span><br><span>43</span><br><span>44</span><br><span>45</span><br><span>46</span><br><span>47</span><br><span>48</span><br><span>49</span><br><span>50</span><br><span>51</span><br><span>52</span><br><span>53</span><br><span>54</span><br><span>55</span><br><span>56</span><br><span>57</span><br><span>58</span><br><span>59</span><br><span>60</span><br><span>61</span><br><span>62</span><br><span>63</span><br><span>64</span><br><span>65</span><br><span>66</span><br><span>67</span><br><span>68</span><br><span>69</span><br><span>70</span><br><span>71</span><br><span>72</span><br><span>73</span><br><span>74</span><br><span>75</span><br><span>76</span><br><span>77</span><br><span>78</span><br><span>79</span><br><span>80</span><br><span>81</span><br><span>82</span><br><span>83</span><br><span>84</span><br><span>85</span><br><span>86</span><br><span>87</span><br><span>88</span><br><span>89</span><br><span>90</span><br><span>91</span><br><span>92</span><br><span>93</span><br><span>94</span><br><span>95</span><br><span>96</span><br><span>97</span><br><span>98</span><br><span>99</span><br><span>100</span><br><span>101</span><br><span>102</span><br><span>103</span><br><span>104</span><br><span>105</span><br><span>106</span><br><span>107</span><br><span>108</span><br><span>109</span><br><span>110</span><br><span>111</span><br><span>112</span><br><span>113</span><br><span>114</span><br><span>115</span><br><span>116</span><br><span>117</span><br><span>118</span><br><span>119</span><br><span>120</span><br><span>121</span><br><span>122</span><br><span>123</span><br><span>124</span><br><span>125</span><br></div></div><ul>
-<li><strong>使用后</strong></li>
-</ul>
-<div><pre><code><span>package</span> <span>com<span>.</span>cunyu<span>.</span>user<span>.</span>entity</span><span>;</span>
-
-<span>import</span> <span>lombok<span>.</span></span><span>Data</span><span>;</span>
-
-<span>/**
- * Created with IntelliJ IDEA.
- *
- * <span>@author</span> : zhangliang
- * <span>@version</span> : 1.0
- * <span>@project</span> : User
- * <span>@package</span> : com.cunyu.user.entity
- * <span>@className</span> : User
- * <span>@createTime</span> : 2021/8/6 17:14
- * <span>@description</span> : 用户实体类
- */</span>
-
-<span>@Data</span>
-<span>public</span> <span>class</span> <span>User</span> <span>{</span>
-    <span>private</span> <span>Long</span> id<span>;</span>
-    <span>private</span> <span>String</span> name<span>;</span>
-    <span>private</span> <span>Integer</span> age<span>;</span>
-    <span>private</span> <span>String</span> email<span>;</span>
-<span>}</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br></div></div><h4 id="setter" tabindex="-1"> <a href="">@Setter </a></h4>
-<p>注解在 <strong>类</strong> 上：为该类所有属性均提供 <code>set</code> 方法，同时提供 <strong>默认构造方法</strong>；</p>
-<ul>
-<li><strong>使用前</strong></li>
-</ul>
-<div><pre><code><span>package</span> <span>com<span>.</span>cunyu<span>.</span>user<span>.</span>entity</span><span>;</span>
-
-<span>public</span> <span>class</span> <span>User</span> <span>{</span>
-    <span>private</span> <span>Long</span> id<span>;</span>
-    <span>private</span> <span>String</span> name<span>;</span>
-    <span>private</span> <span>Integer</span> age<span>;</span>
-    <span>private</span> <span>String</span> email<span>;</span>
-
-    <span>public</span> <span>User</span><span>(</span><span>)</span> <span>{</span>
-    <span>}</span>
-
-    <span>public</span> <span>void</span> <span>setId</span><span>(</span><span>final</span> <span>Long</span> id<span>)</span> <span>{</span>
-        <span>this</span><span>.</span>id <span>=</span> id<span>;</span>
-    <span>}</span>
-
-    <span>public</span> <span>void</span> <span>setName</span><span>(</span><span>final</span> <span>String</span> name<span>)</span> <span>{</span>
-        <span>this</span><span>.</span>name <span>=</span> name<span>;</span>
-    <span>}</span>
-
-    <span>public</span> <span>void</span> <span>setAge</span><span>(</span><span>final</span> <span>Integer</span> age<span>)</span> <span>{</span>
-        <span>this</span><span>.</span>age <span>=</span> age<span>;</span>
-    <span>}</span>
-
-    <span>public</span> <span>void</span> <span>setEmail</span><span>(</span><span>final</span> <span>String</span> email<span>)</span> <span>{</span>
-        <span>this</span><span>.</span>email <span>=</span> email<span>;</span>
-    <span>}</span>
-<span>}</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br><span>27</span><br></div></div><ul>
-<li><strong>使用后</strong></li>
-</ul>
-<div><pre><code><span>package</span> <span>com<span>.</span>cunyu<span>.</span>user<span>.</span>entity</span><span>;</span>
-
-<span>import</span> <span>lombok<span>.</span></span><span>Setter</span><span>;</span>
-
-<span>/**
- * Created with IntelliJ IDEA.
- *
- * <span>@author</span> : zhangliang
- * <span>@version</span> : 1.0
- * <span>@project</span> : User
- * <span>@package</span> : com.cunyu.user.entity
- * <span>@className</span> : User
- * <span>@createTime</span> : 2021/8/6 17:14
- * <span>@description</span> : 用户实体类
- */</span>
-
-<span>@Setter</span>
-<span>public</span> <span>class</span> <span>User</span> <span>{</span>
-    <span>private</span> <span>Long</span> id<span>;</span>
-    <span>private</span> <span>String</span> name<span>;</span>
-    <span>private</span> <span>Integer</span> age<span>;</span>
-    <span>private</span> <span>String</span> email<span>;</span>
-<span>}</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br></div></div><p>注解在 <strong>属性</strong> 上：为该属性提供 <code>set</code> 方法，同时提供 <strong>默认构造方法</strong>；</p>
-<ul>
-<li><strong>使用前</strong></li>
-</ul>
-<div><pre><code><span>package</span> <span>com<span>.</span>cunyu<span>.</span>user<span>.</span>entity</span><span>;</span>
-
-<span>public</span> <span>class</span> <span>User</span> <span>{</span>
-    <span>private</span> <span>Long</span> id<span>;</span>
-    <span>private</span> <span>String</span> name<span>;</span>
-    <span>private</span> <span>Integer</span> age<span>;</span>
-    <span>private</span> <span>String</span> email<span>;</span>
-
-    <span>public</span> <span>User</span><span>(</span><span>)</span> <span>{</span>
-    <span>}</span>
-
-    <span>public</span> <span>void</span> <span>setId</span><span>(</span><span>final</span> <span>Long</span> id<span>)</span> <span>{</span>
-        <span>this</span><span>.</span>id <span>=</span> id<span>;</span>
-    <span>}</span>
-<span>}</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br></div></div><ul>
-<li><strong>使用后</strong></li>
-</ul>
-<div><pre><code><span>package</span> <span>com<span>.</span>cunyu<span>.</span>user<span>.</span>entity</span><span>;</span>
-
-<span>import</span> <span>lombok<span>.</span></span><span>Setter</span><span>;</span>
-
-<span>/**
- * Created with IntelliJ IDEA.
- *
- * <span>@author</span> : zhangliang
- * <span>@version</span> : 1.0
- * <span>@project</span> : User
- * <span>@package</span> : com.cunyu.user.entity
- * <span>@className</span> : User
- * <span>@createTime</span> : 2021/8/6 17:14
- * <span>@description</span> : 用户实体类
- */</span>
-
-<span>public</span> <span>class</span> <span>User</span> <span>{</span>
-    <span>@Setter</span>
-    <span>private</span> <span>Long</span> id<span>;</span>
-    <span>private</span> <span>String</span> name<span>;</span>
-    <span>private</span> <span>Integer</span> age<span>;</span>
-    <span>private</span> <span>String</span> email<span>;</span>
-<span>}</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br></div></div><h4 id="getter" tabindex="-1"> <a href="">@Getter </a></h4>
-<p>注解在 <strong>类</strong> 上：为该类所有属性均提供 <code>get</code> 方法，同时提供 <strong>默认构造方法</strong>；</p>
-<ul>
-<li><strong>使用前</strong></li>
-</ul>
-<div><pre><code><span>package</span> <span>com<span>.</span>cunyu<span>.</span>user<span>.</span>entity</span><span>;</span>
-
-<span>public</span> <span>class</span> <span>User</span> <span>{</span>
-    <span>private</span> <span>Long</span> id<span>;</span>
-    <span>private</span> <span>String</span> name<span>;</span>
-    <span>private</span> <span>Integer</span> age<span>;</span>
-    <span>private</span> <span>String</span> email<span>;</span>
-
-    <span>public</span> <span>User</span><span>(</span><span>)</span> <span>{</span>
-    <span>}</span>
-
-    <span>public</span> <span>Long</span> <span>getId</span><span>(</span><span>)</span> <span>{</span>
-        <span>return</span> <span>this</span><span>.</span>id<span>;</span>
-    <span>}</span>
-
-    <span>public</span> <span>String</span> <span>getName</span><span>(</span><span>)</span> <span>{</span>
-        <span>return</span> <span>this</span><span>.</span>name<span>;</span>
-    <span>}</span>
-
-    <span>public</span> <span>Integer</span> <span>getAge</span><span>(</span><span>)</span> <span>{</span>
-        <span>return</span> <span>this</span><span>.</span>age<span>;</span>
-    <span>}</span>
-
-    <span>public</span> <span>String</span> <span>getEmail</span><span>(</span><span>)</span> <span>{</span>
-        <span>return</span> <span>this</span><span>.</span>email<span>;</span>
-    <span>}</span>
-<span>}</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br><span>27</span><br></div></div><ul>
-<li><strong>使用后</strong></li>
-</ul>
-<div><pre><code><span>package</span> <span>com<span>.</span>cunyu<span>.</span>user<span>.</span>entity</span><span>;</span>
-
-<span>import</span> <span>lombok<span>.</span></span><span>Getter</span><span>;</span>
-
-<span>/**
- * Created with IntelliJ IDEA.
- *
- * <span>@author</span> : zhangliang
- * <span>@version</span> : 1.0
- * <span>@project</span> : User
- * <span>@package</span> : com.cunyu.user.entity
- * <span>@className</span> : User
- * <span>@createTime</span> : 2021/8/6 17:14
- * <span>@description</span> : 用户实体类
- */</span>
-
-<span>@Getter</span>
-<span>public</span> <span>class</span> <span>User</span> <span>{</span>
-    <span>private</span> <span>Long</span> id<span>;</span>
-    <span>private</span> <span>String</span> name<span>;</span>
-    <span>private</span> <span>Integer</span> age<span>;</span>
-    <span>private</span> <span>String</span> email<span>;</span>
-<span>}</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br></div></div><p>注解在 <strong>属性</strong> 上：为该属性提供 <code>get</code> 方法，同时提供 <strong>默认构造方法</strong>；</p>
-<ul>
-<li><strong>使用前</strong></li>
-</ul>
-<div><pre><code><span>package</span> <span>com<span>.</span>cunyu<span>.</span>user<span>.</span>entity</span><span>;</span>
-
-<span>public</span> <span>class</span> <span>User</span> <span>{</span>
-    <span>private</span> <span>Long</span> id<span>;</span>
-    <span>private</span> <span>String</span> name<span>;</span>
-    <span>private</span> <span>Integer</span> age<span>;</span>
-    <span>private</span> <span>String</span> email<span>;</span>
-
-    <span>public</span> <span>User</span><span>(</span><span>)</span> <span>{</span>
-    <span>}</span>
-
-    <span>public</span> <span>Long</span> <span>getId</span><span>(</span><span>)</span> <span>{</span>
-        <span>return</span> <span>this</span><span>.</span>id<span>;</span>
-    <span>}</span>
-<span>}</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br></div></div><ul>
-<li><strong>使用后</strong></li>
-</ul>
-<div><pre><code><span>package</span> <span>com<span>.</span>cunyu<span>.</span>user<span>.</span>entity</span><span>;</span>
-
-<span>import</span> <span>lombok<span>.</span></span><span>Getter</span><span>;</span>
-
-<span>/**
- * Created with IntelliJ IDEA.
- *
- * <span>@author</span> : zhangliang
- * <span>@version</span> : 1.0
- * <span>@project</span> : User
- * <span>@package</span> : com.cunyu.user.entity
- * <span>@className</span> : User
- * <span>@createTime</span> : 2021/8/6 17:14
- * <span>@description</span> : 用户实体类
- */</span>
-
-<span>public</span> <span>class</span> <span>User</span> <span>{</span>
-    <span>@Getter</span>
-    <span>private</span> <span>Long</span> id<span>;</span>
-    <span>private</span> <span>String</span> name<span>;</span>
-    <span>private</span> <span>Integer</span> age<span>;</span>
-    <span>private</span> <span>String</span> email<span>;</span>
-<span>}</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br></div></div><h4 id="tostring" tabindex="-1"> <a href="">@ToString </a></h4>
-<p>注解在 <strong>类</strong> 上：生成所有参数的 <code>toString()</code> 方法，同时提供 <strong>默认构造方法</strong>；</p>
-<ul>
-<li><strong>使用前</strong></li>
-</ul>
-<div><pre><code><span>package</span> <span>com<span>.</span>cunyu<span>.</span>user<span>.</span>entity</span><span>;</span>
-
-<span>public</span> <span>class</span> <span>User</span> <span>{</span>
-    <span>private</span> <span>Long</span> id<span>;</span>
-    <span>private</span> <span>String</span> name<span>;</span>
-    <span>private</span> <span>Integer</span> age<span>;</span>
-    <span>private</span> <span>String</span> email<span>;</span>
-
-    <span>public</span> <span>User</span><span>(</span><span>)</span> <span>{</span>
-    <span>}</span>
-
-    <span>public</span> <span>String</span> <span>toString</span><span>(</span><span>)</span> <span>{</span>
-        <span>return</span> <span>"User(id="</span> <span>+</span> <span>this</span><span>.</span>id <span>+</span> <span>", name="</span> <span>+</span> <span>this</span><span>.</span>name <span>+</span> <span>", age="</span> <span>+</span> <span>this</span><span>.</span>age <span>+</span> <span>", email="</span> <span>+</span> <span>this</span><span>.</span>email <span>+</span> <span>")"</span><span>;</span>
-    <span>}</span>
-<span>}</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br></div></div><ul>
-<li><strong>使用后</strong></li>
-</ul>
-<div><pre><code><span>package</span> <span>com<span>.</span>cunyu<span>.</span>user<span>.</span>entity</span><span>;</span>
-
-<span>import</span> <span>lombok<span>.</span></span><span>ToString</span><span>;</span>
-
-<span>/**
- * Created with IntelliJ IDEA.
- *
- * <span>@author</span> : zhangliang
- * <span>@version</span> : 1.0
- * <span>@project</span> : User
- * <span>@package</span> : com.cunyu.user.entity
- * <span>@className</span> : User
- * <span>@createTime</span> : 2021/8/6 17:14
- * <span>@description</span> : 用户实体类
- */</span>
-
-<span>@ToString</span>
-<span>public</span> <span>class</span> <span>User</span> <span>{</span>
-    <span>private</span> <span>Long</span> id<span>;</span>
-    <span>private</span> <span>String</span> name<span>;</span>
-    <span>private</span> <span>Integer</span> age<span>;</span>
-    <span>private</span> <span>String</span> email<span>;</span>
-<span>}</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br></div></div><h4 id="value" tabindex="-1"> <a href="">@Value </a></h4>
-<p>注解在 <strong>类</strong> 上：生成 <code>get</code> 方法，以及 <code>equals、hashCode、toString</code> 方法，同时提供 <strong>含所有参数的构造方法</strong>；</p>
-<ul>
-<li><strong>使用前</strong></li>
-</ul>
-<div><pre><code><span>package</span> <span>com<span>.</span>cunyu<span>.</span>user<span>.</span>entity</span><span>;</span>
-
-<span>public</span> <span>final</span> <span>class</span> <span>User</span> <span>{</span>
-    <span>private</span> <span>final</span> <span>Long</span> id<span>;</span>
-    <span>private</span> <span>final</span> <span>String</span> name<span>;</span>
-    <span>private</span> <span>final</span> <span>Integer</span> age<span>;</span>
-    <span>private</span> <span>final</span> <span>String</span> email<span>;</span>
-
-    <span>public</span> <span>User</span><span>(</span><span>final</span> <span>Long</span> id<span>,</span> <span>final</span> <span>String</span> name<span>,</span> <span>final</span> <span>Integer</span> age<span>,</span> <span>final</span> <span>String</span> email<span>)</span> <span>{</span>
-        <span>this</span><span>.</span>id <span>=</span> id<span>;</span>
-        <span>this</span><span>.</span>name <span>=</span> name<span>;</span>
-        <span>this</span><span>.</span>age <span>=</span> age<span>;</span>
-        <span>this</span><span>.</span>email <span>=</span> email<span>;</span>
-    <span>}</span>
-
-    <span>public</span> <span>Long</span> <span>getId</span><span>(</span><span>)</span> <span>{</span>
-        <span>return</span> <span>this</span><span>.</span>id<span>;</span>
-    <span>}</span>
-
-    <span>public</span> <span>String</span> <span>getName</span><span>(</span><span>)</span> <span>{</span>
-        <span>return</span> <span>this</span><span>.</span>name<span>;</span>
-    <span>}</span>
-
-    <span>public</span> <span>Integer</span> <span>getAge</span><span>(</span><span>)</span> <span>{</span>
-        <span>return</span> <span>this</span><span>.</span>age<span>;</span>
-    <span>}</span>
-
-    <span>public</span> <span>String</span> <span>getEmail</span><span>(</span><span>)</span> <span>{</span>
-        <span>return</span> <span>this</span><span>.</span>email<span>;</span>
-    <span>}</span>
-
-    <span>public</span> <span>boolean</span> <span>equals</span><span>(</span><span>final</span> <span>Object</span> o<span>)</span> <span>{</span>
-        <span>if</span> <span>(</span>o <span>==</span> <span>this</span><span>)</span> <span>{</span>
-            <span>return</span> <span>true</span><span>;</span>
-        <span>}</span> <span>else</span> <span>if</span> <span>(</span><span>!</span><span>(</span>o <span>instanceof</span> <span>User</span><span>)</span><span>)</span> <span>{</span>
-            <span>return</span> <span>false</span><span>;</span>
-        <span>}</span> <span>else</span> <span>{</span>
-            <span>User</span> other<span>;</span>
-            label56<span>:</span> <span>{</span>
-                other <span>=</span> <span>(</span><span>User</span><span>)</span>o<span>;</span>
-                <span>Object</span> <span>this</span>$id <span>=</span> <span>this</span><span>.</span><span>getId</span><span>(</span><span>)</span><span>;</span>
-                <span>Object</span> other$id <span>=</span> other<span>.</span><span>getId</span><span>(</span><span>)</span><span>;</span>
-                <span>if</span> <span>(</span><span>this</span>$id <span>==</span> <span>null</span><span>)</span> <span>{</span>
-                    <span>if</span> <span>(</span>other$id <span>==</span> <span>null</span><span>)</span> <span>{</span>
-                        <span>break</span> label56<span>;</span>
-                    <span>}</span>
-                <span>}</span> <span>else</span> <span>if</span> <span>(</span><span>this</span>$id<span>.</span><span>equals</span><span>(</span>other$id<span>)</span><span>)</span> <span>{</span>
-                    <span>break</span> label56<span>;</span>
-                <span>}</span>
-
-                <span>return</span> <span>false</span><span>;</span>
-            <span>}</span>
-
-            label49<span>:</span> <span>{</span>
-                <span>Object</span> <span>this</span>$age <span>=</span> <span>this</span><span>.</span><span>getAge</span><span>(</span><span>)</span><span>;</span>
-                <span>Object</span> other$age <span>=</span> other<span>.</span><span>getAge</span><span>(</span><span>)</span><span>;</span>
-                <span>if</span> <span>(</span><span>this</span>$age <span>==</span> <span>null</span><span>)</span> <span>{</span>
-                    <span>if</span> <span>(</span>other$age <span>==</span> <span>null</span><span>)</span> <span>{</span>
-                        <span>break</span> label49<span>;</span>
-                    <span>}</span>
-                <span>}</span> <span>else</span> <span>if</span> <span>(</span><span>this</span>$age<span>.</span><span>equals</span><span>(</span>other$age<span>)</span><span>)</span> <span>{</span>
-                    <span>break</span> label49<span>;</span>
-                <span>}</span>
-
-                <span>return</span> <span>false</span><span>;</span>
-            <span>}</span>
-
-            <span>Object</span> <span>this</span>$name <span>=</span> <span>this</span><span>.</span><span>getName</span><span>(</span><span>)</span><span>;</span>
-            <span>Object</span> other$name <span>=</span> other<span>.</span><span>getName</span><span>(</span><span>)</span><span>;</span>
-            <span>if</span> <span>(</span><span>this</span>$name <span>==</span> <span>null</span><span>)</span> <span>{</span>
-                <span>if</span> <span>(</span>other$name <span>!=</span> <span>null</span><span>)</span> <span>{</span>
-                    <span>return</span> <span>false</span><span>;</span>
-                <span>}</span>
-            <span>}</span> <span>else</span> <span>if</span> <span>(</span><span>!</span><span>this</span>$name<span>.</span><span>equals</span><span>(</span>other$name<span>)</span><span>)</span> <span>{</span>
-                <span>return</span> <span>false</span><span>;</span>
-            <span>}</span>
-
-            <span>Object</span> <span>this</span>$email <span>=</span> <span>this</span><span>.</span><span>getEmail</span><span>(</span><span>)</span><span>;</span>
-            <span>Object</span> other$email <span>=</span> other<span>.</span><span>getEmail</span><span>(</span><span>)</span><span>;</span>
-            <span>if</span> <span>(</span><span>this</span>$email <span>==</span> <span>null</span><span>)</span> <span>{</span>
-                <span>if</span> <span>(</span>other$email <span>!=</span> <span>null</span><span>)</span> <span>{</span>
-                    <span>return</span> <span>false</span><span>;</span>
-                <span>}</span>
-            <span>}</span> <span>else</span> <span>if</span> <span>(</span><span>!</span><span>this</span>$email<span>.</span><span>equals</span><span>(</span>other$email<span>)</span><span>)</span> <span>{</span>
-                <span>return</span> <span>false</span><span>;</span>
-            <span>}</span>
-
-            <span>return</span> <span>true</span><span>;</span>
-        <span>}</span>
-    <span>}</span>
-
-    <span>public</span> <span>int</span> <span>hashCode</span><span>(</span><span>)</span> <span>{</span>
-        <span>int</span> PRIME <span>=</span> <span>true</span><span>;</span>
-        <span>int</span> result <span>=</span> <span>1</span><span>;</span>
-        <span>Object</span> $id <span>=</span> <span>this</span><span>.</span><span>getId</span><span>(</span><span>)</span><span>;</span>
-        <span>int</span> result <span>=</span> result <span>*</span> <span>59</span> <span>+</span> <span>(</span>$id <span>==</span> <span>null</span> <span>?</span> <span>43</span> <span>:</span> $id<span>.</span><span>hashCode</span><span>(</span><span>)</span><span>)</span><span>;</span>
-        <span>Object</span> $age <span>=</span> <span>this</span><span>.</span><span>getAge</span><span>(</span><span>)</span><span>;</span>
-        result <span>=</span> result <span>*</span> <span>59</span> <span>+</span> <span>(</span>$age <span>==</span> <span>null</span> <span>?</span> <span>43</span> <span>:</span> $age<span>.</span><span>hashCode</span><span>(</span><span>)</span><span>)</span><span>;</span>
-        <span>Object</span> $name <span>=</span> <span>this</span><span>.</span><span>getName</span><span>(</span><span>)</span><span>;</span>
-        result <span>=</span> result <span>*</span> <span>59</span> <span>+</span> <span>(</span>$name <span>==</span> <span>null</span> <span>?</span> <span>43</span> <span>:</span> $name<span>.</span><span>hashCode</span><span>(</span><span>)</span><span>)</span><span>;</span>
-        <span>Object</span> $email <span>=</span> <span>this</span><span>.</span><span>getEmail</span><span>(</span><span>)</span><span>;</span>
-        result <span>=</span> result <span>*</span> <span>59</span> <span>+</span> <span>(</span>$email <span>==</span> <span>null</span> <span>?</span> <span>43</span> <span>:</span> $email<span>.</span><span>hashCode</span><span>(</span><span>)</span><span>)</span><span>;</span>
-        <span>return</span> result<span>;</span>
-    <span>}</span>
-
-    <span>public</span> <span>String</span> <span>toString</span><span>(</span><span>)</span> <span>{</span>
-        <span>Long</span> var10000 <span>=</span> <span>this</span><span>.</span><span>getId</span><span>(</span><span>)</span><span>;</span>
-        <span>return</span> <span>"User(id="</span> <span>+</span> var10000 <span>+</span> <span>", name="</span> <span>+</span> <span>this</span><span>.</span><span>getName</span><span>(</span><span>)</span> <span>+</span> <span>", age="</span> <span>+</span> <span>this</span><span>.</span><span>getAge</span><span>(</span><span>)</span> <span>+</span> <span>", email="</span> <span>+</span> <span>this</span><span>.</span><span>getEmail</span><span>(</span><span>)</span> <span>+</span> <span>")"</span><span>;</span>
-    <span>}</span>
-<span>}</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br><span>27</span><br><span>28</span><br><span>29</span><br><span>30</span><br><span>31</span><br><span>32</span><br><span>33</span><br><span>34</span><br><span>35</span><br><span>36</span><br><span>37</span><br><span>38</span><br><span>39</span><br><span>40</span><br><span>41</span><br><span>42</span><br><span>43</span><br><span>44</span><br><span>45</span><br><span>46</span><br><span>47</span><br><span>48</span><br><span>49</span><br><span>50</span><br><span>51</span><br><span>52</span><br><span>53</span><br><span>54</span><br><span>55</span><br><span>56</span><br><span>57</span><br><span>58</span><br><span>59</span><br><span>60</span><br><span>61</span><br><span>62</span><br><span>63</span><br><span>64</span><br><span>65</span><br><span>66</span><br><span>67</span><br><span>68</span><br><span>69</span><br><span>70</span><br><span>71</span><br><span>72</span><br><span>73</span><br><span>74</span><br><span>75</span><br><span>76</span><br><span>77</span><br><span>78</span><br><span>79</span><br><span>80</span><br><span>81</span><br><span>82</span><br><span>83</span><br><span>84</span><br><span>85</span><br><span>86</span><br><span>87</span><br><span>88</span><br><span>89</span><br><span>90</span><br><span>91</span><br><span>92</span><br><span>93</span><br><span>94</span><br><span>95</span><br><span>96</span><br><span>97</span><br><span>98</span><br><span>99</span><br><span>100</span><br><span>101</span><br><span>102</span><br><span>103</span><br><span>104</span><br><span>105</span><br><span>106</span><br><span>107</span><br><span>108</span><br><span>109</span><br><span>110</span><br></div></div><ul>
-<li><strong>使用后</strong></li>
-</ul>
-<div><pre><code><span>package</span> <span>com<span>.</span>cunyu<span>.</span>user<span>.</span>entity</span><span>;</span>
-
-<span>import</span> <span>lombok<span>.</span></span><span>Value</span><span>;</span>
-
-<span>/**
- * Created with IntelliJ IDEA.
- *
- * <span>@author</span> : zhangliang
- * <span>@version</span> : 1.0
- * <span>@project</span> : User
- * <span>@package</span> : com.cunyu.user.entity
- * <span>@className</span> : User
- * <span>@createTime</span> : 2021/8/6 17:14
- * <span>@description</span> : 用户实体类
- */</span>
-
-<span>@Value</span>
-<span>public</span> <span>class</span> <span>User</span> <span>{</span>
-    <span>private</span> <span>Long</span> id<span>;</span>
-    <span>private</span> <span>String</span> name<span>;</span>
-    <span>private</span> <span>Integer</span> age<span>;</span>
-    <span>private</span> <span>String</span> email<span>;</span>
-<span>}</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br></div></div><h4 id="allargsconstructor" tabindex="-1"> <a href="">@AllArgsConstructor </a></h4>
-<p>注解在 <strong>类</strong> 上：为类提供一个 <strong>全参构造方法</strong>，但此时不再提供默认构造方法；</p>
-<ul>
-<li><strong>使用前</strong></li>
-</ul>
-<div><pre><code><span>package</span> <span>com<span>.</span>cunyu<span>.</span>user<span>.</span>entity</span><span>;</span>
-
-<span>public</span> <span>class</span> <span>User</span> <span>{</span>
-    <span>private</span> <span>Long</span> id<span>;</span>
-    <span>private</span> <span>String</span> name<span>;</span>
-    <span>private</span> <span>Integer</span> age<span>;</span>
-    <span>private</span> <span>String</span> email<span>;</span>
-
-    <span>public</span> <span>User</span><span>(</span><span>final</span> <span>Long</span> id<span>,</span> <span>final</span> <span>String</span> name<span>,</span> <span>final</span> <span>Integer</span> age<span>,</span> <span>final</span> <span>String</span> email<span>)</span> <span>{</span>
-        <span>this</span><span>.</span>id <span>=</span> id<span>;</span>
-        <span>this</span><span>.</span>name <span>=</span> name<span>;</span>
-        <span>this</span><span>.</span>age <span>=</span> age<span>;</span>
-        <span>this</span><span>.</span>email <span>=</span> email<span>;</span>
-    <span>}</span>
-<span>}</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br></div></div><ul>
-<li><strong>使用后</strong></li>
-</ul>
-<div><pre><code><span>package</span> <span>com<span>.</span>cunyu<span>.</span>user<span>.</span>entity</span><span>;</span>
-
-<span>import</span> <span>lombok<span>.</span></span><span>AllArgsConstructor</span><span>;</span>
-
-<span>/**
- * Created with IntelliJ IDEA.
- *
- * <span>@author</span> : zhangliang
- * <span>@version</span> : 1.0
- * <span>@project</span> : User
- * <span>@package</span> : com.cunyu.user.entity
- * <span>@className</span> : User
- * <span>@createTime</span> : 2021/8/6 17:14
- * <span>@description</span> : 用户实体类
- */</span>
-
-<span>@AllArgsConstructor</span>
-<span>public</span> <span>class</span> <span>User</span> <span>{</span>
-    <span>private</span> <span>Long</span> id<span>;</span>
-    <span>private</span> <span>String</span> name<span>;</span>
-    <span>private</span> <span>Integer</span> age<span>;</span>
-    <span>private</span> <span>String</span> email<span>;</span>
-<span>}</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br></div></div><h4 id="noargsconstructor" tabindex="-1"> <a href="">@NoArgsConstructor </a></h4>
-<p>注解在 <strong>类</strong> 上：为类提供一个 <strong>无参构造方法</strong>；</p>
-<ul>
-<li><strong>使用前</strong></li>
-</ul>
-<div><pre><code><span>package</span> <span>com<span>.</span>cunyu<span>.</span>user<span>.</span>entity</span><span>;</span>
-
-<span>public</span> <span>class</span> <span>User</span> <span>{</span>
-    <span>private</span> <span>Long</span> id<span>;</span>
-    <span>private</span> <span>String</span> name<span>;</span>
-    <span>private</span> <span>Integer</span> age<span>;</span>
-    <span>private</span> <span>String</span> email<span>;</span>
-
-    <span>public</span> <span>User</span><span>(</span><span>)</span> <span>{</span>
-    <span>}</span>
-<span>}</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br></div></div><ul>
-<li><strong>使用后</strong></li>
-</ul>
-<div><pre><code><span>package</span> <span>com<span>.</span>cunyu<span>.</span>user<span>.</span>entity</span><span>;</span>
-
-<span>import</span> <span>lombok<span>.</span></span><span>NoArgsConstructor</span><span>;</span>
-
-<span>/**
- * Created with IntelliJ IDEA.
- *
- * <span>@author</span> : zhangliang
- * <span>@version</span> : 1.0
- * <span>@project</span> : User
- * <span>@package</span> : com.cunyu.user.entity
- * <span>@className</span> : User
- * <span>@createTime</span> : 2021/8/6 17:14
- * <span>@description</span> : 用户实体类
- */</span>
-
-<span>@NoArgsConstructor</span>
-<span>public</span> <span>class</span> <span>User</span> <span>{</span>
-    <span>private</span> <span>Long</span> id<span>;</span>
-    <span>private</span> <span>String</span> name<span>;</span>
-    <span>private</span> <span>Integer</span> age<span>;</span>
-    <span>private</span> <span>String</span> email<span>;</span>
-<span>}</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br></div></div><h4 id="requiredargsconstructor" tabindex="-1"> @RequiredArgsConstructor</h4>
-<p>注解在 <strong>类</strong> 上：使用类中所有带 <code>@NonNull</code> 注解的或带有 <code>final</code> 修饰的成员变量生成对应构造方法；</p>
-<ul>
-<li><strong>使用前</strong></li>
-</ul>
-<div><pre><code><span>package</span> <span>com<span>.</span>cunyu<span>.</span>user<span>.</span>entity</span><span>;</span>
-
-<span>import</span> <span>lombok<span>.</span></span><span>NonNull</span><span>;</span>
-
-<span>public</span> <span>class</span> <span>User</span> <span>{</span>
-    <span>@NonNull</span>
-    <span>private</span> <span>Long</span> id<span>;</span>
-    <span>private</span> <span>String</span> name<span>;</span>
-    <span>private</span> <span>Integer</span> age<span>;</span>
-    <span>@NonNull</span>
-    <span>private</span> <span>String</span> email<span>;</span>
-
-    <span>public</span> <span>User</span><span>(</span><span>@NonNull</span> <span>final</span> <span>Long</span> id<span>,</span> <span>@NonNull</span> <span>final</span> <span>String</span> email<span>)</span> <span>{</span>
-        <span>if</span> <span>(</span>id <span>==</span> <span>null</span><span>)</span> <span>{</span>
-            <span>throw</span> <span>new</span> <span>NullPointerException</span><span>(</span><span>"id is marked non-null but is null"</span><span>)</span><span>;</span>
-        <span>}</span> <span>else</span> <span>if</span> <span>(</span>email <span>==</span> <span>null</span><span>)</span> <span>{</span>
-            <span>throw</span> <span>new</span> <span>NullPointerException</span><span>(</span><span>"email is marked non-null but is null"</span><span>)</span><span>;</span>
-        <span>}</span> <span>else</span> <span>{</span>
-            <span>this</span><span>.</span>id <span>=</span> id<span>;</span>
-            <span>this</span><span>.</span>email <span>=</span> email<span>;</span>
-        <span>}</span>
-    <span>}</span>
-<span>}</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br></div></div><ul>
-<li><strong>使用后</strong></li>
-</ul>
-<div><pre><code><span>package</span> <span>com<span>.</span>cunyu<span>.</span>user<span>.</span>entity</span><span>;</span>
-
-<span>import</span> <span>lombok<span>.</span></span><span>RequiredArgsConstructor</span><span>;</span>
-
-<span>/**
- * Created with IntelliJ IDEA.
- *
- * <span>@author</span> : zhangliang
- * <span>@version</span> : 1.0
- * <span>@project</span> : User
- * <span>@package</span> : com.cunyu.user.entity
- * <span>@className</span> : User
- * <span>@createTime</span> : 2021/8/6 17:14
- * <span>@description</span> : 用户实体类
- */</span>
-
-<span>@RequiredArgsConstructor</span>
-<span>public</span> <span>class</span> <span>User</span> <span>{</span>
-    <span>@NonNull</span>
-    <span>private</span> <span>Long</span> id<span>;</span>
-    <span>private</span> <span>String</span> name<span>;</span>
-    <span>private</span> <span>Integer</span> age<span>;</span>
-    <span>@NonNull</span>
-    <span>private</span> <span>String</span> email<span>;</span>
-<span>}</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br></div></div><h4 id="nonnull" tabindex="-1"> <a href="">@NonNull </a></h4>
-<p>注解在 <strong>属性</strong> 上，自动生成一个关于该参数的非空检查，若参数为 <code>null</code>，则抛出一个空指针异常，同时提供 <strong>默认构造方法</strong>，具体用法可以参照上面的例子；</p>
-<h4 id="equalsandhashcode" tabindex="-1"> <a href="">@EqualsAndHashCode </a></h4>
-<p>注解在 <strong>类</strong> 上，生成 <code>equals、canEquals、hasnCode</code> 方法，同时会生成默认构造方法；</p>
-<ul>
-<li><strong>使用前</strong></li>
-</ul>
-<div><pre><code><span>//</span>
-<span>// Source code recreated from a .class file by IntelliJ IDEA</span>
-<span>// (powered by FernFlower decompiler)</span>
-<span>//</span>
-
-<span>package</span> <span>com<span>.</span>cunyu<span>.</span>user<span>.</span>entity</span><span>;</span>
-
-<span>public</span> <span>class</span> <span>User</span> <span>{</span>
-    <span>private</span> <span>Long</span> id<span>;</span>
-    <span>private</span> <span>String</span> name<span>;</span>
-    <span>private</span> <span>Integer</span> age<span>;</span>
-    <span>private</span> <span>String</span> email<span>;</span>
-
-    <span>public</span> <span>User</span><span>(</span><span>)</span> <span>{</span>
-    <span>}</span>
-
-    <span>public</span> <span>boolean</span> <span>equals</span><span>(</span><span>final</span> <span>Object</span> o<span>)</span> <span>{</span>
-        <span>if</span> <span>(</span>o <span>==</span> <span>this</span><span>)</span> <span>{</span>
-            <span>return</span> <span>true</span><span>;</span>
-        <span>}</span> <span>else</span> <span>if</span> <span>(</span><span>!</span><span>(</span>o <span>instanceof</span> <span>User</span><span>)</span><span>)</span> <span>{</span>
-            <span>return</span> <span>false</span><span>;</span>
-        <span>}</span> <span>else</span> <span>{</span>
-            <span>User</span> other <span>=</span> <span>(</span><span>User</span><span>)</span>o<span>;</span>
-            <span>if</span> <span>(</span><span>!</span>other<span>.</span><span>canEqual</span><span>(</span><span>this</span><span>)</span><span>)</span> <span>{</span>
-                <span>return</span> <span>false</span><span>;</span>
-            <span>}</span> <span>else</span> <span>{</span>
-                label59<span>:</span> <span>{</span>
-                    <span>Object</span> <span>this</span>$id <span>=</span> <span>this</span><span>.</span>id<span>;</span>
-                    <span>Object</span> other$id <span>=</span> other<span>.</span>id<span>;</span>
-                    <span>if</span> <span>(</span><span>this</span>$id <span>==</span> <span>null</span><span>)</span> <span>{</span>
-                        <span>if</span> <span>(</span>other$id <span>==</span> <span>null</span><span>)</span> <span>{</span>
-                            <span>break</span> label59<span>;</span>
-                        <span>}</span>
-                    <span>}</span> <span>else</span> <span>if</span> <span>(</span><span>this</span>$id<span>.</span><span>equals</span><span>(</span>other$id<span>)</span><span>)</span> <span>{</span>
-                        <span>break</span> label59<span>;</span>
-                    <span>}</span>
-
-                    <span>return</span> <span>false</span><span>;</span>
-                <span>}</span>
-
-                <span>Object</span> <span>this</span>$age <span>=</span> <span>this</span><span>.</span>age<span>;</span>
-                <span>Object</span> other$age <span>=</span> other<span>.</span>age<span>;</span>
-                <span>if</span> <span>(</span><span>this</span>$age <span>==</span> <span>null</span><span>)</span> <span>{</span>
-                    <span>if</span> <span>(</span>other$age <span>!=</span> <span>null</span><span>)</span> <span>{</span>
-                        <span>return</span> <span>false</span><span>;</span>
-                    <span>}</span>
-                <span>}</span> <span>else</span> <span>if</span> <span>(</span><span>!</span><span>this</span>$age<span>.</span><span>equals</span><span>(</span>other$age<span>)</span><span>)</span> <span>{</span>
-                    <span>return</span> <span>false</span><span>;</span>
-                <span>}</span>
-
-                <span>Object</span> <span>this</span>$name <span>=</span> <span>this</span><span>.</span>name<span>;</span>
-                <span>Object</span> other$name <span>=</span> other<span>.</span>name<span>;</span>
-                <span>if</span> <span>(</span><span>this</span>$name <span>==</span> <span>null</span><span>)</span> <span>{</span>
-                    <span>if</span> <span>(</span>other$name <span>!=</span> <span>null</span><span>)</span> <span>{</span>
-                        <span>return</span> <span>false</span><span>;</span>
-                    <span>}</span>
-                <span>}</span> <span>else</span> <span>if</span> <span>(</span><span>!</span><span>this</span>$name<span>.</span><span>equals</span><span>(</span>other$name<span>)</span><span>)</span> <span>{</span>
-                    <span>return</span> <span>false</span><span>;</span>
-                <span>}</span>
-
-                <span>Object</span> <span>this</span>$email <span>=</span> <span>this</span><span>.</span>email<span>;</span>
-                <span>Object</span> other$email <span>=</span> other<span>.</span>email<span>;</span>
-                <span>if</span> <span>(</span><span>this</span>$email <span>==</span> <span>null</span><span>)</span> <span>{</span>
-                    <span>if</span> <span>(</span>other$email <span>!=</span> <span>null</span><span>)</span> <span>{</span>
-                        <span>return</span> <span>false</span><span>;</span>
-                    <span>}</span>
-                <span>}</span> <span>else</span> <span>if</span> <span>(</span><span>!</span><span>this</span>$email<span>.</span><span>equals</span><span>(</span>other$email<span>)</span><span>)</span> <span>{</span>
-                    <span>return</span> <span>false</span><span>;</span>
-                <span>}</span>
-
-                <span>return</span> <span>true</span><span>;</span>
-            <span>}</span>
-        <span>}</span>
-    <span>}</span>
-
-    <span>protected</span> <span>boolean</span> <span>canEqual</span><span>(</span><span>final</span> <span>Object</span> other<span>)</span> <span>{</span>
-        <span>return</span> other <span>instanceof</span> <span>User</span><span>;</span>
-    <span>}</span>
-
-    <span>public</span> <span>int</span> <span>hashCode</span><span>(</span><span>)</span> <span>{</span>
-        <span>int</span> PRIME <span>=</span> <span>true</span><span>;</span>
-        <span>int</span> result <span>=</span> <span>1</span><span>;</span>
-        <span>Object</span> $id <span>=</span> <span>this</span><span>.</span>id<span>;</span>
-        <span>int</span> result <span>=</span> result <span>*</span> <span>59</span> <span>+</span> <span>(</span>$id <span>==</span> <span>null</span> <span>?</span> <span>43</span> <span>:</span> $id<span>.</span><span>hashCode</span><span>(</span><span>)</span><span>)</span><span>;</span>
-        <span>Object</span> $age <span>=</span> <span>this</span><span>.</span>age<span>;</span>
-        result <span>=</span> result <span>*</span> <span>59</span> <span>+</span> <span>(</span>$age <span>==</span> <span>null</span> <span>?</span> <span>43</span> <span>:</span> $age<span>.</span><span>hashCode</span><span>(</span><span>)</span><span>)</span><span>;</span>
-        <span>Object</span> $name <span>=</span> <span>this</span><span>.</span>name<span>;</span>
-        result <span>=</span> result <span>*</span> <span>59</span> <span>+</span> <span>(</span>$name <span>==</span> <span>null</span> <span>?</span> <span>43</span> <span>:</span> $name<span>.</span><span>hashCode</span><span>(</span><span>)</span><span>)</span><span>;</span>
-        <span>Object</span> $email <span>=</span> <span>this</span><span>.</span>email<span>;</span>
-        result <span>=</span> result <span>*</span> <span>59</span> <span>+</span> <span>(</span>$email <span>==</span> <span>null</span> <span>?</span> <span>43</span> <span>:</span> $email<span>.</span><span>hashCode</span><span>(</span><span>)</span><span>)</span><span>;</span>
-        <span>return</span> result<span>;</span>
-    <span>}</span>
-<span>}</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br><span>27</span><br><span>28</span><br><span>29</span><br><span>30</span><br><span>31</span><br><span>32</span><br><span>33</span><br><span>34</span><br><span>35</span><br><span>36</span><br><span>37</span><br><span>38</span><br><span>39</span><br><span>40</span><br><span>41</span><br><span>42</span><br><span>43</span><br><span>44</span><br><span>45</span><br><span>46</span><br><span>47</span><br><span>48</span><br><span>49</span><br><span>50</span><br><span>51</span><br><span>52</span><br><span>53</span><br><span>54</span><br><span>55</span><br><span>56</span><br><span>57</span><br><span>58</span><br><span>59</span><br><span>60</span><br><span>61</span><br><span>62</span><br><span>63</span><br><span>64</span><br><span>65</span><br><span>66</span><br><span>67</span><br><span>68</span><br><span>69</span><br><span>70</span><br><span>71</span><br><span>72</span><br><span>73</span><br><span>74</span><br><span>75</span><br><span>76</span><br><span>77</span><br><span>78</span><br><span>79</span><br><span>80</span><br><span>81</span><br><span>82</span><br><span>83</span><br><span>84</span><br><span>85</span><br><span>86</span><br><span>87</span><br><span>88</span><br><span>89</span><br><span>90</span><br><span>91</span><br><span>92</span><br><span>93</span><br></div></div><ul>
-<li><strong>使用后</strong></li>
-</ul>
-<div><pre><code><span>package</span> <span>com<span>.</span>cunyu<span>.</span>user<span>.</span>entity</span><span>;</span>
-
-<span>import</span> <span>lombok<span>.</span></span><span>EqualsAndHashCode</span><span>;</span>
-
-<span>/**
- * Created with IntelliJ IDEA.
- *
- * <span>@author</span> : zhangliang
- * <span>@version</span> : 1.0
- * <span>@project</span> : User
- * <span>@package</span> : com.cunyu.user.entity
- * <span>@className</span> : User
- * <span>@createTime</span> : 2021/8/6 17:14
- * <span>@description</span> : 用户实体类
- */</span>
-
-<span>@EqualsAndHashCode</span>
-<span>public</span> <span>class</span> <span>User</span> <span>{</span>
-    <span>private</span> <span>Long</span> id<span>;</span>
-    <span>private</span> <span>String</span> name<span>;</span>
-    <span>private</span> <span>Integer</span> age<span>;</span>
-    <span>private</span> <span>String</span> email<span>;</span>
-<span>}</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br></div></div><h4 id="cleanup" tabindex="-1"> <a href="">@Cleanup </a></h4>
-<p>注解在 <strong>局部变量</strong> 前，保证该变量代表的资源使用后自动关闭，默认调用资源的 <code>close()</code> 方法，若该资源有其它关闭方法，可用 <code>@Cleanup(&quot;方法名&quot;)</code> 来指定要调用的方法，同时提供 默认构造方法；</p>
-<ul>
-<li><strong>使用前</strong></li>
-</ul>
-<div><pre><code><span>import</span> <span>java<span>.</span>io<span>.</span></span><span>*</span><span>;</span>
-
-<span>public</span> <span>class</span> <span>CleanupExample</span> <span>{</span>
-    <span>public</span> <span>static</span> <span>void</span> <span>main</span><span>(</span><span>String</span><span>[</span><span>]</span> args<span>)</span> <span>throws</span> <span>IOException</span> <span>{</span>
-        <span>InputStream</span> in <span>=</span> <span>new</span> <span>FileInputStream</span><span>(</span>args<span>[</span><span>0</span><span>]</span><span>)</span><span>;</span>
-        <span>try</span> <span>{</span>
-            <span>OutputStream</span> out <span>=</span> <span>new</span> <span>FileOutputStream</span><span>(</span>args<span>[</span><span>1</span><span>]</span><span>)</span><span>;</span>
-            <span>try</span> <span>{</span>
-                <span>byte</span><span>[</span><span>]</span> b <span>=</span> <span>new</span> <span>byte</span><span>[</span><span>10000</span><span>]</span><span>;</span>
-                <span>while</span> <span>(</span><span>true</span><span>)</span> <span>{</span>
-                    <span>int</span> r <span>=</span> in<span>.</span><span>read</span><span>(</span>b<span>)</span><span>;</span>
-                    <span>if</span> <span>(</span>r <span>==</span> <span>-</span><span>1</span><span>)</span> <span>break</span><span>;</span>
-                    out<span>.</span><span>write</span><span>(</span>b<span>,</span> <span>0</span><span>,</span> r<span>)</span><span>;</span>
-                <span>}</span>
-            <span>}</span> <span>finally</span> <span>{</span>
-                <span>if</span> <span>(</span>out <span>!=</span> <span>null</span><span>)</span> <span>{</span>
-                    out<span>.</span><span>close</span><span>(</span><span>)</span><span>;</span>
-                <span>}</span>
-            <span>}</span>
-        <span>}</span> <span>finally</span> <span>{</span>
-            <span>if</span> <span>(</span>in <span>!=</span> <span>null</span><span>)</span> <span>{</span>
-                in<span>.</span><span>close</span><span>(</span><span>)</span><span>;</span>
-            <span>}</span>
-        <span>}</span>
-    <span>}</span>
-<span>}</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br></div></div><ul>
-<li><strong>使用后</strong></li>
-</ul>
-<div><pre><code><span>import</span> <span>lombok<span>.</span></span><span>Cleanup</span><span>;</span>
-<span>import</span> <span>java<span>.</span>io<span>.</span></span><span>*</span><span>;</span>
-
-<span>public</span> <span>class</span> <span>CleanupExample</span> <span>{</span>
-    <span>public</span> <span>static</span> <span>void</span> <span>main</span><span>(</span><span>String</span><span>[</span><span>]</span> args<span>)</span> <span>throws</span> <span>IOException</span> <span>{</span>
-        <span>@Cleanup</span> <span>InputStream</span> in <span>=</span> <span>new</span> <span>FileInputStream</span><span>(</span>args<span>[</span><span>0</span><span>]</span><span>)</span><span>;</span>
-        <span>@Cleanup</span> <span>OutputStream</span> out <span>=</span> <span>new</span> <span>FileOutputStream</span><span>(</span>args<span>[</span><span>1</span><span>]</span><span>)</span><span>;</span>
-        <span>byte</span><span>[</span><span>]</span> b <span>=</span> <span>new</span> <span>byte</span><span>[</span><span>10000</span><span>]</span><span>;</span>
-        <span>while</span> <span>(</span><span>true</span><span>)</span> <span>{</span>
-            <span>int</span> r <span>=</span> in<span>.</span><span>read</span><span>(</span>b<span>)</span><span>;</span>
-            <span>if</span> <span>(</span>r <span>==</span> <span>-</span><span>1</span><span>)</span> <span>break</span><span>;</span>
-            out<span>.</span><span>write</span><span>(</span>b<span>,</span> <span>0</span><span>,</span> r<span>)</span><span>;</span>
-        <span>}</span>
-    <span>}</span>
-<span>}</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br></div></div><h4 id="synchronized" tabindex="-1"> <a href="">@Synchronized </a></h4>
-<p>注解在 <strong>类方法 或 实例方法</strong>：效果与 <code>synchronized</code> 关键字相同，区别在于锁对象不同，对于类方法和实例方法，<code>synchronized</code> 关键字的锁对象分别是 <strong>类的</strong> <code>**class**</code> <strong>对象和</strong> <code>**this**</code> <strong>对象</strong>，而 <code>@Synchronized</code> 的锁对象分别是 <strong>私有静态</strong> <code>**final**</code> <strong>对象</strong> <code>**lock**</code> <strong>和 私有</strong> <code>**final**</code> <strong>对象</strong> <code>**lock**</code>，也可以自己指定锁对象，同时提供默认构造方法；</p>
-<ul>
-<li><strong>使用前</strong></li>
-</ul>
-<div><pre><code><span>public</span> <span>class</span> <span>SynchronizedExample</span> <span>{</span>
-    <span>private</span> <span>static</span> <span>final</span> <span>Object</span> $LOCK <span>=</span> <span>new</span> <span>Object</span><span>[</span><span>0</span><span>]</span><span>;</span>
-    <span>private</span> <span>final</span> <span>Object</span> $lock <span>=</span> <span>new</span> <span>Object</span><span>[</span><span>0</span><span>]</span><span>;</span>
-    <span>private</span> <span>final</span> <span>Object</span> readLock <span>=</span> <span>new</span> <span>Object</span><span>(</span><span>)</span><span>;</span>
-
-    <span>public</span> <span>static</span> <span>void</span> <span>hello</span><span>(</span><span>)</span> <span>{</span>
-        <span>synchronized</span><span>(</span>$LOCK<span>)</span> <span>{</span>
-            <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>"world"</span><span>)</span><span>;</span>
-        <span>}</span>
-    <span>}</span>
-
-    <span>public</span> <span>int</span> <span>answerToLife</span><span>(</span><span>)</span> <span>{</span>
-        <span>synchronized</span><span>(</span>$lock<span>)</span> <span>{</span>
-            <span>return</span> <span>42</span><span>;</span>
-        <span>}</span>
-    <span>}</span>
-
-    <span>public</span> <span>void</span> <span>foo</span><span>(</span><span>)</span> <span>{</span>
-        <span>synchronized</span><span>(</span>readLock<span>)</span> <span>{</span>
-            <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>"bar"</span><span>)</span><span>;</span>
-        <span>}</span>
-    <span>}</span>
-<span>}</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br></div></div><ul>
-<li><strong>使用后</strong></li>
-</ul>
-<div><pre><code><span>import</span> <span>lombok<span>.</span></span><span>Synchronized</span><span>;</span>
-
-<span>public</span> <span>class</span> <span>SynchronizedExample</span> <span>{</span>
-    <span>private</span> <span>final</span> <span>Object</span> readLock <span>=</span> <span>new</span> <span>Object</span><span>(</span><span>)</span><span>;</span>
-
-    <span>@Synchronized</span>
-    <span>public</span> <span>static</span> <span>void</span> <span>hello</span><span>(</span><span>)</span> <span>{</span>
-        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>"world"</span><span>)</span><span>;</span>
-    <span>}</span>
-
-    <span>@Synchronized</span>
-    <span>public</span> <span>int</span> <span>answerToLife</span><span>(</span><span>)</span> <span>{</span>
-        <span>return</span> <span>42</span><span>;</span>
-    <span>}</span>
-
-    <span>@Synchronized</span><span>(</span><span>"readLock"</span><span>)</span>
-    <span>public</span> <span>void</span> <span>foo</span><span>(</span><span>)</span> <span>{</span>
-        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>"bar"</span><span>)</span><span>;</span>
-    <span>}</span>
-<span>}</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br></div></div><h4 id="sneakythrows" tabindex="-1"> <a href="">@SneakyThrows </a></h4>
-<p>注解在 <strong>方法</strong> 上：将方法中的代码用 <code>try-catch</code> 语句包裹，捕获异常并在 <code>catch</code> 中用 <code>Lombok.sneakyThrow(e)</code> 将异常抛出，还可以用 <code>@SneakyThrows(Exception.class)</code> 的形式指定抛出异常类型，同时提供 <strong>默认构造方法</strong>；</p>
-<ul>
-<li><strong>使用前</strong></li>
-</ul>
-<div><pre><code><span>import</span> <span>lombok<span>.</span></span><span>Lombok</span><span>;</span>
-
-<span>public</span> <span>class</span> <span>SneakyThrowsExample</span> <span>implements</span> <span>Runnable</span> <span>{</span>
-    <span>public</span> <span>String</span> <span>utf8ToString</span><span>(</span><span>byte</span><span>[</span><span>]</span> bytes<span>)</span> <span>{</span>
-        <span>try</span> <span>{</span>
-            <span>return</span> <span>new</span> <span>String</span><span>(</span>bytes<span>,</span> <span>"UTF-8"</span><span>)</span><span>;</span>
-        <span>}</span> <span>catch</span> <span>(</span><span>UnsupportedEncodingException</span> e<span>)</span> <span>{</span>
-            <span>throw</span> <span>Lombok</span><span>.</span><span>sneakyThrow</span><span>(</span>e<span>)</span><span>;</span>
-        <span>}</span>
-    <span>}</span>
-
-    <span>public</span> <span>void</span> <span>run</span><span>(</span><span>)</span> <span>{</span>
-        <span>try</span> <span>{</span>
-            <span>throw</span> <span>new</span> <span>Throwable</span><span>(</span><span>)</span><span>;</span>
-        <span>}</span> <span>catch</span> <span>(</span><span>Throwable</span> t<span>)</span> <span>{</span>
-            <span>throw</span> <span>Lombok</span><span>.</span><span>sneakyThrow</span><span>(</span>t<span>)</span><span>;</span>
-        <span>}</span>
-    <span>}</span>
-<span>}</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br></div></div><ul>
-<li><strong>使用后</strong></li>
-</ul>
-<div><pre><code><span>import</span> <span>lombok<span>.</span></span><span>SneakyThrows</span><span>;</span>
-
-<span>public</span> <span>class</span> <span>SneakyThrowsExample</span> <span>implements</span> <span>Runnable</span> <span>{</span>
-    <span>@SneakyThrows</span><span>(</span><span>UnsupportedEncodingException</span><span>.</span><span>class</span><span>)</span>
-    <span>public</span> <span>String</span> <span>utf8ToString</span><span>(</span><span>byte</span><span>[</span><span>]</span> bytes<span>)</span> <span>{</span>
-        <span>return</span> <span>new</span> <span>String</span><span>(</span>bytes<span>,</span> <span>"UTF-8"</span><span>)</span><span>;</span>
-    <span>}</span>
-
-    <span>@SneakyThrows</span>
-    <span>public</span> <span>void</span> <span>run</span><span>(</span><span>)</span> <span>{</span>
-        <span>throw</span> <span>new</span> <span>Throwable</span><span>(</span><span>)</span><span>;</span>
-    <span>}</span>
-<span>}</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br></div></div><h4 id="log" tabindex="-1"> <a href="">@Log </a></h4>
-<p>注解在 <strong>类</strong> 上：主要用于我们记录日志信息，同时提供 <strong>默认构造方法</strong>。它封装了多个主流 <code>Log</code> 库，主要有如下几个；</p>
-<ul>
-<li>
-<p><code>@Log</code></p>
-</li>
-<li>
-<p><code>@Slf4j</code></p>
-</li>
-<li>
-<p><code>Log4j</code></p>
-</li>
-<li>
-<p><code>Log4j2</code></p>
-</li>
-</ul>
-<h2 id="总结" tabindex="-1"> 总结</h2>
-<p>以上就是关于 Lombok 的相关使用小技巧了，如果你还没有使用过它，那就赶紧去试试吧！</p>
-<p>最后，创作不易，如果你觉得我的文章对你有所帮助，那就来个一键三连吧！</p>
-<h2 id="参考资料" tabindex="-1"> 参考资料</h2>
-<ol>
-<li>https://projectlombok.org/features/all</li>
-</ol>
-<p><strong>关注公众号，获取最新文章更新</strong></p>
-<img src="https://cdn.jsdelivr.net/gh/cunyu1943/cunyu1943@main/imgs/wepublic.gif" width="200" alt="公众号" />
-]]></content:encoded>
-      <enclosure url="https://gitee.com/cunyu1943/images/raw/master/imgsUbuntu/20200519140731.png" type="image/png"/>
     </item>
   </channel>
 </rss>
