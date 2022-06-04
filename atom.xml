@@ -3,13 +3,13 @@
   <id>https://cunyu1943.github.io/JavaPark/JavaPark/</id>
   <title>JavaPark</title>
   <subtitle>Java 自学编程之路</subtitle>
-  <updated>2022-06-02T14:44:47.651Z</updated>
+  <updated>2022-06-04T14:13:56.632Z</updated>
   <generator>vuepress-plugin-feed2</generator>
   <link rel="self" href="https://cunyu1943.github.io/JavaPark/JavaPark/atom.xml"/>
   <link rel="alternate" href="https://cunyu1943.github.io/JavaPark/JavaPark/"/>
+  <category term="Spring Boot 基础教程"/>
   <category term="Java Web"/>
   <category term="数据结构与算法"/>
-  <category term="Spring Boot 基础教程"/>
   <category term="Spring 教程"/>
   <category term="工具教程"/>
   <category term="PostgreSQL 教程"/>
@@ -26,6 +26,86 @@
   <category term="Maven 入门教程"/>
   <category term="博客搭建"/>
   <category term="Java 菜鸟入门"/>
+  <entry>
+    <title type="html">Spring Boot 基础教程：集成 Spring Security</title>
+    <id>https://cunyu1943.github.io/JavaPark/JavaPark/java/spring-boot/integrated-security.html</id>
+    <link href="https://cunyu1943.github.io/JavaPark/JavaPark/java/spring-boot/integrated-security.html"/>
+    <updated>2022-06-04T14:12:36.000Z</updated>
+    <content type="html"><![CDATA[<h2 id="前言" tabindex="-1"> 前言</h2>
+<p>Spring Security 是 Spring 家族中一个强大可定制的身份验证和访问控制框架，和 Shiro 一样，它们都具有认证、授权、加密等用于权限管理的功能。但相比于 Shiro，Spring Security 的功能无疑更加强大。而且作为 Spring 家族中的一份子，配合家族中的其它兄弟 - Spring Boot、Spring Cloud 使用起来更加丝滑。</p>
+<p>今天就来看看，如何在 Spring Boot 集成 Spring Security，实现最简单的认证授权功能。</p>
+<h2 id="集成过程" tabindex="-1"> 集成过程</h2>
+<p>要在 Spring Boot 集成 Security，其实很简单，可以总结为如下几个步骤：</p>
+<ol>
+<li>首先是创建一个 Spring Boot 项目。</li>
+<li>添加 Spring Security 相关依赖。</li>
+</ol>
+<h3 id="创建-spring-boot-项目" tabindex="-1"> 创建 Spring Boot 项目</h3>
+<p>这个过程只要你学习过 Spring Boot，那么你肯定是已经很熟悉了，所以在这里我也就不再赘述了。当然，如果你对这个过程还是不太熟悉，那么可以参考我之前的一篇文章：</p>
+<blockquote>
+<p><a href="https://cunyu1943.github.io/JavaPark/java/spring-boot/the-methods-to-create-springboot-project.html" target="_blank" rel="noopener noreferrer">Spring Boot 基础教程：创建项目的 3 种方式<ExternalLinkIcon/></a></p>
+</blockquote>
+<h3 id="添加相关依赖" tabindex="-1"> 添加相关依赖</h3>
+<p>项目创建好之后，一般默认是已经添加了 <code>Web</code> 依赖，这个时候，我们只需要在项目的 <code>pom.xml</code> 文件中添加 Spring Security 的相关依赖即可。</p>
+<div><pre><code><span><span><span>&lt;</span>dependency</span><span>></span></span>
+    <span><span><span>&lt;</span>groupId</span><span>></span></span>org.springframework.boot<span><span><span>&lt;/</span>groupId</span><span>></span></span>
+    <span><span><span>&lt;</span>artifactId</span><span>></span></span>spring-boot-starter-security<span><span><span>&lt;/</span>artifactId</span><span>></span></span>
+<span><span><span>&lt;/</span>dependency</span><span>></span></span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br></div></div><h3 id="启动项目" tabindex="-1"> 启动项目</h3>
+<p>完成上面步骤的操作后，接下来我们直接启动项目，然后在浏览器中访问以下地址：</p>
+<blockquote>
+<p><code>http://localhost:8080</code></p>
+</blockquote>
+<p>不出意外应该会跳出以下的界面，让我们登录。此时你可能会很纳闷，为什么我们只加了个 Spring Security 的依赖，怎么就需要登陆了呢？而且，登录的话，用户名和密码又是多少呢？</p>
+<p>再仔细观察浏览器的地址栏，此时我们访问的地址也变了，变成了：</p>
+<blockquote>
+<p><code>http://localhost:8080/login</code></p>
+</blockquote>
+<p>这又是怎么一回事呢？</p>
+<p>原来这就是 Spring Security 为我们的项目所提供的保护机制。在添加 Spring Security 之后，此时再去访问项目，它就会自动重定向到 Security 所提供的登录页面，也就是下面的界面。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/cunyu1943/blog-imgs@main/2022/06/image-20220604210658161.png" alt="" loading="lazy"></p>
+<p>同样的 Spring Security 也为我们所提供了一个默认的用户名，也就是 <code>user</code>，至于密码，这就谁都说不准了。因为它会随着我们项目的每次启动而自动生成，所以每次的登录密码都是不一样的。至于要如何获取，那就得去我们的 IDEA 查看控制台查看日志了。</p>
+<p>查看日志我们可以发现如下的一行，其实这就是 Spring Security 所提供的登录密码了。这是一个 <code>UUID</code> 字符串，是 Spring Security 为默认的 <code>user</code> 用户所生成的临时密码。</p>
+<div><pre><code>Using generated security password: 67511bb5-a3e4-4113-9e47-4d733956c860
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p><img src="https://cdn.jsdelivr.net/gh/cunyu1943/blog-imgs@main/2022/06/image-20220604214310375.png" alt="" loading="lazy"></p>
+<h3 id="修改默认登录用户密码" tabindex="-1"> 修改默认登录用户密码</h3>
+<p>虽然 Security 提供了默认的 <code>user</code> 用户，但是大家都知道这是默认的，而且需要每次去日志中找登录密码，那有没有方法可以自定义我们的用户和密码呢？答案是，有的。</p>
+<p>Security 为我们提供了配置，我们可以在项目的配置文件 <code>application.yml</code> 中去定义自己的用户名和密码，然后它就会覆盖掉 Security 为我们提供的默认用户和密码。</p>
+<p>在项目的配置文件中配置用户和密码，当然，项目生成的默认配置文件是位于 <code>resources</code> 目录下的 <code>application.properties</code>，所以需要将其后缀改成 <code>.yml</code>。关于 Spring Boot 中的这两种配置文件的区别，可以参考我之前的一篇文章：</p>
+<blockquote>
+<p><a href="https://cunyu1943.github.io/JavaPark/java/spring-boot/configuration.html" target="_blank" rel="noopener noreferrer">Spring Boot 基础教程：配置详解<ExternalLinkIcon/></a></p>
+</blockquote>
+<div><pre><code><span>spring</span><span>:</span>
+  <span>security</span><span>:</span>
+    <span>user</span><span>:</span>
+      <span>name</span><span>:</span> cunyu1943
+      <span>password</span><span>:</span> cunyu1943@
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br></div></div><p>然后重启我们的项目，就可以用我们配置的用户和密码来进行登陆了。</p>
+<h3 id="创建页面" tabindex="-1"> 创建页面</h3>
+<p>新建一个 <code>Controller</code> 页面，用于打印最经典的 <code>Hello World!</code>。</p>
+<div><pre><code><span>@RestController</span>
+<span>public</span> <span>class</span> <span>HelloController</span> <span>{</span>
+    <span>@GetMapping</span><span>(</span><span>"/hello"</span><span>)</span>
+    <span>public</span> <span>String</span> <span>hello</span><span>(</span><span>)</span> <span>{</span>
+        <span>return</span> <span>"Hello World！"</span><span>;</span>
+    <span>}</span>
+<span>}</span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br></div></div><p>重新启动项目后，在浏览器中访问以下地址：</p>
+<blockquote>
+<p><code>http://localhost:8080/hello</code></p>
+</blockquote>
+<p>然后 Spring Security 就会重定向到 <code>http://localhost:8080/login</code> 页面，此时我们用上面配置的用户名和密码进行登录，登录成功后就会跳转到我们的 <code>/hello</code> 页面了，页面中会打印 <code>Hello  World!</code></p>
+<p><img src="https://cdn.jsdelivr.net/gh/cunyu1943/blog-imgs@main/2022/06/image-20220604220751289.png" alt="image-20220604220751289" loading="lazy"></p>
+<h2 id="总结" tabindex="-1"> 总结</h2>
+<p>以上就是 <code>Spring Boot</code> 集成 <code>Spring Security</code> 的实例了，主要演示了最经典的 <code>Hello World</code> 程序。关于更多 <code>Spring Security</code> 的知识，我们后续的文章再见吧！</p>
+<p>最后，关于本文的中的代码，我已经上传到云端，有需要的小伙伴可以自取。</p>
+<blockquote>
+<p><a href="https://github.com/cunyu1943/java-learning-demos" target="_blank" rel="noopener noreferrer">➛ 传送门<ExternalLinkIcon/></a></p>
+</blockquote>
+]]></content>
+    <category term="Spring Boot 基础教程"/>
+    <published>2022-06-04T17:20:00.000Z</published>
+  </entry>
   <entry>
     <title type="html">Java Web 篇：Mockito + JUnit 单元测试实例</title>
     <id>https://cunyu1943.github.io/JavaPark/JavaPark/java/java-web/mockito-junit5.html</id>
@@ -24926,946 +25006,5 @@ arr <span>=</span> <span>new</span> <span>String</span><span>[</span><span>]</sp
 ]]></content>
     <category term="Java 菜鸟入门"/>
     <published>2022-01-15T21:41:48.000Z</published>
-  </entry>
-  <entry>
-    <title type="html">Java 菜鸟入门：JDBC 入门指南</title>
-    <id>https://cunyu1943.github.io/JavaPark/JavaPark/java/java-se/jdbc-introduction.html</id>
-    <link href="https://cunyu1943.github.io/JavaPark/JavaPark/java/java-se/jdbc-introduction.html"/>
-    <updated>2022-04-18T07:35:02.000Z</updated>
-    <content type="html"><![CDATA[<h2 id="前言" tabindex="-1"> 前言</h2>
-<p>在我们日常使用的 APP 或网站中，往往需要存取数据，比如在微信中，需要存储我们的用户名、手机号、用户密码…… 等一系列信息。依靠之前所学习的 Java 相关知识已经无法满足这一需求。现在的应用程序中最基本、应用最广的也就是关系型数据库，如 MySQL。Java 语言中为了实现与关系型数据库的通信，制定了标准的访问接口，即 JDBC（Java Database Connectivity）。本文主要介绍在 Java 中使用 JDBC 的相关知识，主要内容如下：</p>
-<ul>
-<li><strong>JDBC 简介</strong></li>
-<li><strong>数据的增删改查</strong></li>
-<li><strong>事务</strong></li>
-<li><strong>连接池</strong></li>
-</ul>
-<h2 id="jdbc-简介" tabindex="-1"> JDBC 简介</h2>
-<p>JDBC（Java Database Connectivity），即 Java 数据库连接。是 Java 语言中用于规范客户端程序如何来访问数据库的应用程序接口，它是面向关系型数据库的，提供了查询和更新数据库中数据的方法。</p>
-<p>本文以 MySQL 来演示如何使用 JDBC，所以需要事先在你的机器上准备好 MySQL，而且最好是懂一些 MySQL 的使用。</p>
-<p>首先我们需要建立 MySQL 与 Java 程序间的联系，所以需要事先好 mysql-connector-java 这个第三方包，下载地址：https://downloads.mysql.com/archives/c-j/</p>
-<h3 id="导入驱动包" tabindex="-1"> 导入驱动包</h3>
-<p>以在 IDEA 中导入 jar 包为例，当我们建立好项目后，导包过程如下：</p>
-<ol>
-<li>首先依次打开 <code>File -&gt; Project Structure -&gt; Modules -&gt; Dependencies</code>；</li>
-</ol>
-<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c379a613f5064fde85a2a3bbcddea59d~tplv-k3u1fbpfcp-watermark.image" alt="" loading="lazy"></p>
-<ol start="2">
-<li>然后点击 <code>+</code> 号，选择 <code>1 JARs or Directories</code>，找到你下载好的 jar 包导入；</li>
-</ol>
-<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/71dfa2be556d46979af00cc9ec648219~tplv-k3u1fbpfcp-watermark.image" alt="" loading="lazy"></p>
-<ol start="3">
-<li>导入成功，点击 <code>OK</code> 即可；</li>
-</ol>
-<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/5feba852a1a4447395edfdda93894483~tplv-k3u1fbpfcp-watermark.image" alt="" loading="lazy"></p>
-<p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/54f6d70128034f359b4863fc047bc40c~tplv-k3u1fbpfcp-watermark.image" alt="" loading="lazy"></p>
-<h3 id="初始化并建立连接" tabindex="-1"> 初始化并建立连接</h3>
-<p>导入我们的 jar 包之后，就需要进行初始化工作。新建一个类，用于初始化并连接。先将驱动类加载到 JVM 中，加载过程中会执行其中的静态初始化块，从而完成驱动的初始化工作。然后建立数据库与程序之间的连接，此时需要提供数据库的 IP 地址、端口号、数据库名、编码方式、用户名、用户密码等信息。</p>
-<p>首先，我们在数据库中建立一个表 <code>student</code>，建表语句如下，用于后续实践。</p>
-<div><pre><code><span>-- 创建数据库 javalearning</span>
-<span>CREATE</span> <span>DATABASE</span> <span>if</span> <span>not</span> <span>exists</span> javalearning<span>;</span>
-<span>-- 创建表 students</span>
-<span>USE</span> javalearning<span>;</span>
-<span>CREATE</span> <span>TABLE</span> students <span>(</span>
-  id <span>BIGINT</span> <span>AUTO_INCREMENT</span> <span>NOT</span> <span>NULL</span><span>,</span> <span>-- 学号</span>
-  name <span>VARCHAR</span><span>(</span><span>50</span><span>)</span> <span>NOT</span> <span>NULL</span><span>,</span> <span>-- 姓名</span>
-  gender <span>TINYINT</span><span>(</span><span>1</span><span>)</span> <span>NOT</span> <span>NULL</span><span>,</span> <span>-- 性别</span>
-  grade <span>INT</span> <span>NOT</span> <span>NULL</span><span>,</span> <span>-- 年级</span>
-  score <span>INT</span> <span>NOT</span> <span>NULL</span><span>,</span> <span>-- 分数</span>
-  <span>PRIMARY</span> <span>KEY</span><span>(</span>id<span>)</span> <span>-- 主键</span>
-<span>)</span> <span>Engine</span><span>=</span><span>INNODB</span> <span>DEFAULT</span> <span>CHARSET</span><span>=</span>UTF8<span>;</span>
-
-<span>-- 插入部分数据</span>
-<span>INSERT</span> <span>INTO</span> students <span>(</span>id<span>,</span> name<span>,</span> gender<span>,</span> grade<span>,</span> score<span>)</span> <span>VALUES</span> <span>(</span><span>101</span><span>,</span><span>'小红'</span><span>,</span> <span>0</span><span>,</span> <span>1</span><span>,</span> <span>100</span><span>)</span><span>;</span>
-<span>INSERT</span> <span>INTO</span> students <span>(</span>id<span>,</span> name<span>,</span> gender<span>,</span> grade<span>,</span> score<span>)</span> <span>VALUES</span> <span>(</span><span>102</span><span>,</span><span>'小橙'</span><span>,</span> <span>0</span><span>,</span> <span>1</span><span>,</span> <span>89</span><span>)</span><span>;</span>
-<span>INSERT</span> <span>INTO</span> students <span>(</span>id<span>,</span> name<span>,</span> gender<span>,</span> grade<span>,</span> score<span>)</span> <span>VALUES</span> <span>(</span><span>201</span><span>,</span><span>'小黄'</span><span>,</span> <span>1</span><span>,</span> <span>2</span><span>,</span> <span>97</span><span>)</span><span>;</span>
-<span>INSERT</span> <span>INTO</span> students <span>(</span>id<span>,</span> name<span>,</span> gender<span>,</span> grade<span>,</span> score<span>)</span> <span>VALUES</span> <span>(</span><span>301</span><span>,</span><span>'小绿'</span><span>,</span> <span>1</span><span>,</span> <span>3</span><span>,</span> <span>99</span><span>)</span><span>;</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br></div></div><p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/5b39d14fe78b400bb0f8f9f445e2e5a2~tplv-k3u1fbpfcp-watermark.image" alt="" loading="lazy"></p>
-<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/244698bd3c3d4e8aa05183e4d384a87f~tplv-k3u1fbpfcp-watermark.image" alt="" loading="lazy"></p>
-<p>创建好数据库及表之后，我们就可以进行初始化和连接工作了，这里的步骤主要分为如下几步：</p>
-<ol>
-<li>首先需要加载驱动，主要是利用 <code>Class.forName()</code> 将驱动类加载到 JVM；</li>
-<li>建立程序和数据库之间的连接，主要是创建 <code>Connection</code> 对象；</li>
-<li>接着是创建用于执行 SQL 语句的 <code>Statement</code> 对象；</li>
-<li>最后则是关闭连接从而释放资源，先关闭 <code>Statement</code> ，再关闭 <code>Connection</code> ；</li>
-</ol>
-<div><pre><code><span>import</span> <span>java<span>.</span>sql<span>.</span></span><span>Connection</span><span>;</span>
-<span>import</span> <span>java<span>.</span>sql<span>.</span></span><span>DriverManager</span><span>;</span>
-<span>import</span> <span>java<span>.</span>sql<span>.</span></span><span>SQLException</span><span>;</span>
-<span>import</span> <span>java<span>.</span>sql<span>.</span></span><span>Statement</span><span>;</span>
-
-<span>/**
- * <span>@author</span> : cunyu
- * <span>@version</span> : 1.0
- * <span>@className</span> : InitJDBC
- * <span>@date</span> : 2021/4/23 10:56
- * <span>@description</span> : 初始化并建立连接
- */</span>
-
-<span>public</span> <span>class</span> <span>InitJDBC</span> <span>{</span>
-    <span>public</span> <span>static</span> <span>void</span> <span>main</span><span>(</span><span>String</span><span>[</span><span>]</span> args<span>)</span> <span>{</span>
-        <span>Connection</span> connection <span>=</span> <span>null</span><span>;</span>
-        <span>Statement</span> statement <span>=</span> <span>null</span><span>;</span>
-        <span>try</span> <span>{</span>
-<span>//            初始化，注册驱动</span>
-            <span>Class</span><span>.</span><span>forName</span><span>(</span><span>"com.mysql.cj.jdbc.Driver"</span><span>)</span><span>;</span>
-<span>//            建立连接</span>
-            connection <span>=</span> <span>DriverManager</span><span>.</span><span>getConnection</span><span>(</span><span>"jdbc:mysql://localhost:3306/javalearning?characterEncoding=UTF-8"</span><span>,</span> <span>"root"</span><span>,</span> <span>"12345"</span><span>)</span><span>;</span>
-            <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>"连接成功！"</span><span>)</span><span>;</span>
-<span>//            创建 Statement 用于执行 SQL 语句</span>
-            statement <span>=</span> connection<span>.</span><span>createStatement</span><span>(</span><span>)</span><span>;</span>
-            <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>"Statement 对象："</span> <span>+</span> statement<span>)</span><span>;</span>
-        <span>}</span> <span>catch</span> <span>(</span><span>ClassNotFoundException</span> <span>|</span> <span>SQLException</span> e<span>)</span> <span>{</span>
-            e<span>.</span><span>printStackTrace</span><span>(</span><span>)</span><span>;</span>
-        <span>}</span> <span>finally</span> <span>{</span>
-            <span>try</span> <span>{</span>
-                <span>if</span> <span>(</span>statement <span>!=</span> <span>null</span><span>)</span> <span>{</span>
-                    statement<span>.</span><span>close</span><span>(</span><span>)</span><span>;</span>
-                <span>}</span>
-            <span>}</span> <span>catch</span> <span>(</span><span>SQLException</span> throwables<span>)</span> <span>{</span>
-                throwables<span>.</span><span>printStackTrace</span><span>(</span><span>)</span><span>;</span>
-            <span>}</span>
-            <span>try</span> <span>{</span>
-
-                <span>if</span> <span>(</span>connection <span>!=</span> <span>null</span><span>)</span> <span>{</span>
-                    connection<span>.</span><span>close</span><span>(</span><span>)</span><span>;</span>
-                <span>}</span>
-            <span>}</span> <span>catch</span> <span>(</span><span>SQLException</span> throwables<span>)</span> <span>{</span>
-                throwables<span>.</span><span>printStackTrace</span><span>(</span><span>)</span><span>;</span>
-            <span>}</span>
-        <span>}</span>
-    <span>}</span>
-<span>}</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br><span>27</span><br><span>28</span><br><span>29</span><br><span>30</span><br><span>31</span><br><span>32</span><br><span>33</span><br><span>34</span><br><span>35</span><br><span>36</span><br><span>37</span><br><span>38</span><br><span>39</span><br><span>40</span><br><span>41</span><br><span>42</span><br><span>43</span><br><span>44</span><br><span>45</span><br><span>46</span><br><span>47</span><br></div></div><p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/605cda3f1bd54dbc95ba062e4f1fa368~tplv-k3u1fbpfcp-watermark.image" alt="" loading="lazy"></p>
-<p>对于上述关闭 <code>Connection</code> 和 <code>Statement</code> 的方式，可能略显繁琐，为了进一步简化，可以使用 <code>try-with-source</code> 的方式自动关闭，简化后的代码如下；</p>
-<div><pre><code><span>import</span> <span>java<span>.</span>sql<span>.</span></span><span>Connection</span><span>;</span>
-<span>import</span> <span>java<span>.</span>sql<span>.</span></span><span>DriverManager</span><span>;</span>
-<span>import</span> <span>java<span>.</span>sql<span>.</span></span><span>SQLException</span><span>;</span>
-<span>import</span> <span>java<span>.</span>sql<span>.</span></span><span>Statement</span><span>;</span>
-
-<span>/**
- * <span>@author</span> : cunyu
- * <span>@version</span> : 1.0
- * <span>@className</span> : InitJDBC2
- * <span>@date</span> : 2021/4/23 13:53
- * <span>@description</span> : 初始化与连接
- */</span>
-
-<span>public</span> <span>class</span> <span>InitJDBC2</span> <span>{</span>
-    <span>public</span> <span>static</span> <span>void</span> <span>main</span><span>(</span><span>String</span><span>[</span><span>]</span> args<span>)</span> <span>{</span>
-        <span>try</span> <span>{</span>
-            <span>Class</span><span>.</span><span>forName</span><span>(</span><span>"com.mysql.cj.jdbc.Driver"</span><span>)</span><span>;</span>
-        <span>}</span> <span>catch</span> <span>(</span><span>ClassNotFoundException</span> e<span>)</span> <span>{</span>
-            e<span>.</span><span>printStackTrace</span><span>(</span><span>)</span><span>;</span>
-        <span>}</span>
-
-        <span>try</span> <span>(</span><span>Connection</span> connection <span>=</span> <span>DriverManager</span><span>.</span><span>getConnection</span><span>(</span><span>"jdbc:mysql://localhost:3306/javalearning?characterEncoding=UTF-8"</span><span>,</span> <span>"root"</span><span>,</span> <span>"12345"</span><span>)</span><span>;</span> <span>Statement</span> statement <span>=</span> connection<span>.</span><span>createStatement</span><span>(</span><span>)</span><span>;</span><span>)</span> <span>{</span>
-            <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>"连接成功"</span><span>)</span><span>;</span>
-            <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>"State 对象："</span> <span>+</span> statement<span>)</span><span>;</span>
-        <span>}</span> <span>catch</span> <span>(</span><span>SQLException</span> throwables<span>)</span> <span>{</span>
-            throwables<span>.</span><span>printStackTrace</span><span>(</span><span>)</span><span>;</span>
-        <span>}</span>
-    <span>}</span>
-<span>}</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br><span>27</span><br><span>28</span><br><span>29</span><br></div></div><h3 id="jdbc-对象详解" tabindex="-1"> JDBC 对象详解</h3>
-<p>在我们上述利用 JDBC 进行初始化并建立连接的过程中，涉及到了如下几个对象：</p>
-<ol>
-<li><code>DriverManager</code></li>
-<li><code>Connection</code></li>
-<li><code>Statement</code></li>
-</ol>
-<p>此外，对于数据已经后续操作，我们还会涉及到:</p>
-<ol>
-<li><code>ResultSet</code></li>
-<li><code>PreparedStatement</code></li>
-</ol>
-<p>这里就对这 5 个 JDBC 中的对象进行解释，从而方便后续知识点的学习。</p>
-<h4 id="drivermanager" tabindex="-1"> DriverManager</h4>
-<p>这是驱动管理对象，主要是用于 <strong>注册驱动</strong> 和 <strong>获取数据库连接</strong>。</p>
-<ul>
-<li><strong>注册驱动</strong>：主要用于告知程序应该使用哪一个数据库驱动 jar，对应到上述代码中为 <code>Class.forName(&quot;com.mysql.cj.jdbc.Driver&quot;)</code>；</li>
-<li><strong>获取数据库连接</strong>：对应到上述代码中为 <code>static Connection getConnection(String url, String user, String password)</code>；</li>
-</ul>
-<h4 id="connection" tabindex="-1"> Connection</h4>
-<p>数据库连接对象，主要用于 <strong>获取执行 SQL 的对象</strong> 和 <strong>管理事务</strong>。</p>
-<ul>
-<li><strong>获取执行 SQL 的对象</strong>：涉及代码 <code>Statement createStatement()</code> 和 <code>PreparedStatement prepareStatement（String sql)</code></li>
-<li><strong>管理事务</strong>
-<ul>
-<li><strong>开启事务</strong>：<code>setAutoCommit(boolean autoCommit)</code>，当参数值为 <code>false</code> 时，表示开启事务；</li>
-<li><strong>提交事务</strong>：<code>commit()</code></li>
-<li><strong>回滚事务</strong>：<code>rollback()</code></li>
-</ul>
-</li>
-</ul>
-<h4 id="statement" tabindex="-1"> Statement</h4>
-<p>用于执行静态 SQL 语句并返回其生成结果的对象，涉及的代码：</p>
-<ul>
-<li><code>boolean execute(String sql)</code>：可以执行任意的 SQL 语句；</li>
-<li><code>int executeUpdate(String sql)</code>：执行  DML 语句（<code>insert</code>、<code>update</code>、<code>delete</code>）和 DDL 语句（<code>create</code>、<code>alter</code>、<code>drop</code>）。</li>
-</ul>
-<h4 id="preparedstatement" tabindex="-1"> PreparedStatement</h4>
-<p>用于执行 SQL 语句并返回其生成结果的对象，涉及的代码：</p>
-<h4 id="resultset" tabindex="-1"> ResultSet</h4>
-<p>执行 SQL 语句后的结果集对象，用于封装查询结果。涉及的方法：</p>
-<ul>
-<li><code>next()</code>：游标向下移动一行，注意游标是从 1 开始；</li>
-<li><code>getXXX()</code>：用于获取对应数据类型 <code>XXX</code> 的数据；</li>
-</ul>
-<h2 id="jdbc-增删改查" tabindex="-1"> JDBC 增删改查</h2>
-<p>当我们初始化并建立 JDBC 连接之后，我们就可以对数据库进行 CRUD （增加、查询、更新、删除）等操作。</p>
-<p>在正式开始 CRUD 前，我们最好先了解下 MySQL 中的数据类型在 Java 中所对应的数据类型，以便后续操作数据。一般来讲，两者中的数据类型对应关系如下表所示。</p>
-<table>
-<thead>
-<tr>
-<th>SQL 中的数据类型</th>
-<th>对应的 Java 数据类型</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>BIT</code>、<code>BOOL</code></td>
-<td><code>boolean</code></td>
-</tr>
-<tr>
-<td><code>INTEGER</code></td>
-<td><code>int</code></td>
-</tr>
-<tr>
-<td><code>BIGINT</code></td>
-<td><code>long</code></td>
-</tr>
-<tr>
-<td><code>REAL</code></td>
-<td><code>float</code></td>
-</tr>
-<tr>
-<td><code>FLOAT</code>、 <code>DOUBLE</code></td>
-<td><code>double</code></td>
-</tr>
-<tr>
-<td><code>CHAR</code>、 <code>VARCHAR</code></td>
-<td><code>String</code></td>
-</tr>
-<tr>
-<td><code>DECIMAL</code></td>
-<td><code>BigDecimal</code></td>
-</tr>
-<tr>
-<td><code>DATE</code></td>
-<td><code>java.sql.Date</code>、<code>LocalDate</code></td>
-</tr>
-<tr>
-<td><code>TIME</code></td>
-<td><code>java.sql.Time</code>、 <code>LocalTime</code></td>
-</tr>
-</tbody>
-</table>
-<p>此外，虽然我们在 JDBC 的简介部分在初始化和建立连接时使用的是用 <code>Statement</code> 来创建一个对象并用于后续操作，但是在实际使用过程中时，SQL 参数基本都是从方法参数传入的，这时使用 <code>Statement</code> 就十分容易引起 SQL 注入，为了解决这一问题，大牛们提出了如下两个办法：</p>
-<ol>
-<li>对字符串中的参数进行转义，然后利用转义后的参数来进行操作。但是转义十分麻烦，而且一使用 SQL，我们就必须增加转义代码。</li>
-<li>利用 <code>PreparedStatement</code>，它利用 <code>?</code> 作为占位符，将数据连同 SQL 本身传递给数据库，从而保证每次传给数据库的 SQL 语句都是保持一致的，每次变动的只是占位符中的数据不同。通过使用 <code>PreparedStatement</code>，我们就能够 <strong>完全避免 SQL 注入 问题</strong>。</li>
-</ol>
-<p>针对后续利用 JDBC 操作数据库的过程，为了尽量避免 SQL 注入问题，我们优先采用 <code>PreparedStatement</code> 而非 <code>Statement</code>.</p>
-<h3 id="查询数据" tabindex="-1"> 查询数据</h3>
-<p>首先，我们来进行查询操作。进行查询时，可以总结为如下几个步骤：</p>
-<ol>
-<li>通过创建一个 <code>Connection</code> 对象从而建立连接；</li>
-<li>然后利用 <code>prepareStatement()</code>  方法创建一个 <code>PreparedStatement</code> 对象并传入 SQL 语句，用于执行查询操作；</li>
-<li>接着执行 <code>PreparedStatement</code>  对象所提供的 <code>executeQuery()</code> 方法，获取查询结果并返回到一个 <code>ResultSet</code> 结果集中；</li>
-<li>最后则是利用  <code>ResultSet</code> 对象的 <code>next()</code> 方法去读取我们所查询返回的结果；</li>
-</ol>
-<blockquote>
-<p>需要注意的地方：</p>
-<ol>
-<li>如果你不是利用 <code>try-with-source</code> 的方式，那么一定要记得在使用完连接之后记得释放资源；</li>
-<li>结果集 <code>ResultSet</code> 中，索引位置是从 <code>1</code> 开始的，而不是从 <code>0</code> 开始，这一点要特别注意！</li>
-</ol>
-</blockquote>
-<div><pre><code><span>import</span> <span>java<span>.</span>sql<span>.</span></span><span>*</span><span>;</span>
-
-<span>/**
- * <span>@author</span> : cunyu
- * <span>@version</span> : 1.0
- * <span>@className</span> : QueryTest
- * <span>@date</span> : 2021/4/23 14:01
- * <span>@description</span> : 查询
- */</span>
-
-<span>public</span> <span>class</span> <span>QueryTest</span> <span>{</span>
-    <span>public</span> <span>static</span> <span>void</span> <span>main</span><span>(</span><span>String</span><span>[</span><span>]</span> args<span>)</span> <span>{</span>
-        <span>try</span> <span>{</span>
-            <span>Class</span><span>.</span><span>forName</span><span>(</span><span>"com.mysql.cj.jdbc.Driver"</span><span>)</span><span>;</span>
-        <span>}</span> <span>catch</span> <span>(</span><span>ClassNotFoundException</span> e<span>)</span> <span>{</span>
-            e<span>.</span><span>printStackTrace</span><span>(</span><span>)</span><span>;</span>
-        <span>}</span>
-
-        <span>String</span> url <span>=</span> <span>"jdbc:mysql://localhost:3306/javalearning?characterEncoding=UTF-8"</span><span>;</span>
-        <span>String</span> username <span>=</span> <span>"root"</span><span>;</span>
-        <span>String</span> password <span>=</span> <span>"0908"</span><span>;</span>
-        <span>String</span> queryString <span>=</span> <span>"SELECT * FROM students"</span><span>;</span>
-        <span>try</span> <span>(</span><span>Connection</span> connection <span>=</span> <span>DriverManager</span><span>.</span><span>getConnection</span><span>(</span>url<span>,</span> username<span>,</span> password<span>)</span><span>;</span> <span>PreparedStatement</span> preparedStatement <span>=</span> connection<span>.</span><span>prepareStatement</span><span>(</span>queryString<span>)</span><span>;</span> <span>ResultSet</span> resultSet <span>=</span> preparedStatement<span>.</span><span>executeQuery</span><span>(</span><span>)</span><span>;</span><span>)</span> <span>{</span>
-            <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>"连接成功"</span><span>)</span><span>;</span>
-
-            <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>"查询到的信息如下："</span><span>)</span><span>;</span>
-            <span>while</span> <span>(</span>resultSet<span>.</span><span>next</span><span>(</span><span>)</span><span>)</span> <span>{</span>
-<span>//                查询到的结果索引从 1 开始</span>
-                <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>"id："</span> <span>+</span> resultSet<span>.</span><span>getLong</span><span>(</span><span>1</span><span>)</span> <span>+</span> <span>"\tname："</span> <span>+</span> resultSet<span>.</span><span>getString</span><span>(</span><span>2</span><span>)</span> <span>+</span> <span>"\tgender："</span> <span>+</span> resultSet<span>.</span><span>getInt</span><span>(</span><span>3</span><span>)</span> <span>+</span> <span>"\tgrade："</span> <span>+</span> resultSet<span>.</span><span>getLong</span><span>(</span><span>4</span><span>)</span> <span>+</span> <span>"\tscore："</span> <span>+</span> resultSet<span>.</span><span>getLong</span><span>(</span><span>5</span><span>)</span><span>)</span><span>;</span>
-            <span>}</span>
-        <span>}</span> <span>catch</span> <span>(</span><span>SQLException</span> throwables<span>)</span> <span>{</span>
-            throwables<span>.</span><span>printStackTrace</span><span>(</span><span>)</span><span>;</span>
-        <span>}</span>
-    <span>}</span>
-<span>}</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br><span>27</span><br><span>28</span><br><span>29</span><br><span>30</span><br><span>31</span><br><span>32</span><br><span>33</span><br><span>34</span><br><span>35</span><br></div></div><p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c1b4cfe5d36b43e081cf5bc2521e690f~tplv-k3u1fbpfcp-watermark.image" alt="" loading="lazy"></p>
-<h3 id="增加数据" tabindex="-1"> 增加数据</h3>
-<p>即插入一条新记录，和查询语句很像，但是区别在于最后 <code>PreparedStatement</code> 对象执行的不是 <code>executeQuery()</code>，而是 <code>executeUpdate()</code>. 插入记录的步骤总结如下：</p>
-<ol>
-<li>创建 <code>Connection</code> 对象从而建立连接；</li>
-<li>利用 <code>prepareStatement()</code>  方法创建一个 <code>PreparedStatement</code> 对象并传入 SQL 语句，用于执行插入操作；</li>
-<li>然后依次设置占位符所代表的值；</li>
-<li>执行 <code>PreparedStatement</code>  对象所提供的 <code>executeUpdate()</code> 方法，此时返回的是一个 <code>int</code> 类型的数，表示插入记录的条数；</li>
-</ol>
-<div><pre><code><span>import</span> <span>java<span>.</span>sql<span>.</span></span><span>Connection</span><span>;</span>
-<span>import</span> <span>java<span>.</span>sql<span>.</span></span><span>DriverManager</span><span>;</span>
-<span>import</span> <span>java<span>.</span>sql<span>.</span></span><span>PreparedStatement</span><span>;</span>
-<span>import</span> <span>java<span>.</span>sql<span>.</span></span><span>SQLException</span><span>;</span>
-
-<span>/**
- * <span>@author</span> : cunyu
- * <span>@version</span> : 1.0
- * <span>@className</span> : InsertTest
- * <span>@date</span> : 2021/4/23 15:04
- * <span>@description</span> : 新增数据
- */</span>
-
-<span>public</span> <span>class</span> <span>InsertTest</span> <span>{</span>
-    <span>public</span> <span>static</span> <span>void</span> <span>main</span><span>(</span><span>String</span><span>[</span><span>]</span> args<span>)</span> <span>{</span>
-        <span>try</span> <span>{</span>
-            <span>Class</span><span>.</span><span>forName</span><span>(</span><span>"com.mysql.cj.jdbc.Driver"</span><span>)</span><span>;</span>
-        <span>}</span> <span>catch</span> <span>(</span><span>ClassNotFoundException</span> e<span>)</span> <span>{</span>
-            e<span>.</span><span>printStackTrace</span><span>(</span><span>)</span><span>;</span>
-        <span>}</span>
-
-        <span>String</span> url <span>=</span> <span>"jdbc:mysql://localhost:3306/javalearning?characterEncoding=UTF-8"</span><span>;</span>
-        <span>String</span> username <span>=</span> <span>"root"</span><span>;</span>
-        <span>String</span> password <span>=</span> <span>"110120"</span><span>;</span>
-        <span>String</span> insertString <span>=</span> <span>"INSERT INTO students VALUES (?,?,?,?,?)"</span><span>;</span>
-
-        <span>try</span> <span>(</span><span>Connection</span> connection <span>=</span> <span>DriverManager</span><span>.</span><span>getConnection</span><span>(</span>url<span>,</span> username<span>,</span> password<span>)</span><span>;</span> <span>PreparedStatement</span> preparedStatement <span>=</span> connection<span>.</span><span>prepareStatement</span><span>(</span>insertString<span>)</span><span>;</span><span>)</span> <span>{</span>
-            <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>"连接成功"</span><span>)</span><span>;</span>
-            <span>//            依次插入数据</span>
-            preparedStatement<span>.</span><span>setLong</span><span>(</span><span>1</span><span>,</span> <span>302</span><span>)</span><span>;</span>
-            preparedStatement<span>.</span><span>setString</span><span>(</span><span>2</span><span>,</span> <span>"小蓝"</span><span>)</span><span>;</span>
-            preparedStatement<span>.</span><span>setInt</span><span>(</span><span>3</span><span>,</span> <span>0</span><span>)</span><span>;</span>
-            preparedStatement<span>.</span><span>setLong</span><span>(</span><span>4</span><span>,</span> <span>3</span><span>)</span><span>;</span>
-            preparedStatement<span>.</span><span>setLong</span><span>(</span><span>5</span><span>,</span> <span>100</span><span>)</span><span>;</span>
-            <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>"插入数据成功"</span><span>)</span><span>;</span>
-            preparedStatement<span>.</span><span>executeUpdate</span><span>(</span><span>)</span><span>;</span>
-        <span>}</span> <span>catch</span> <span>(</span><span>SQLException</span> throwables<span>)</span> <span>{</span>
-            throwables<span>.</span><span>printStackTrace</span><span>(</span><span>)</span><span>;</span>
-        <span>}</span>
-    <span>}</span>
-<span>}</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br><span>27</span><br><span>28</span><br><span>29</span><br><span>30</span><br><span>31</span><br><span>32</span><br><span>33</span><br><span>34</span><br><span>35</span><br><span>36</span><br><span>37</span><br><span>38</span><br><span>39</span><br><span>40</span><br><span>41</span><br></div></div><p>新增数据后，接着查询数据，得到如下结果，可以看到我们新插入的数据成功加入到了数据库中！</p>
-<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f06ef5ab46b34f19a910e49778535692~tplv-k3u1fbpfcp-watermark.image" alt="" loading="lazy"></p>
-<h3 id="删除数据" tabindex="-1"> 删除数据</h3>
-<p>删除数据和新增数据的方式基本一样，两者最大的区别在于 SQL 语句的不同，删除操作利用的是 <code>DELETE</code> 语句，能一次删除若干列。</p>
-<div><pre><code><span>import</span> <span>java<span>.</span>sql<span>.</span></span><span>Connection</span><span>;</span>
-<span>import</span> <span>java<span>.</span>sql<span>.</span></span><span>DriverManager</span><span>;</span>
-<span>import</span> <span>java<span>.</span>sql<span>.</span></span><span>PreparedStatement</span><span>;</span>
-<span>import</span> <span>java<span>.</span>sql<span>.</span></span><span>SQLException</span><span>;</span>
-
-<span>/**
- * <span>@author</span> : cunyu
- * <span>@version</span> : 1.0
- * <span>@className</span> : DeleteTest
- * <span>@date</span> : 2021/4/23 15:23
- * <span>@description</span> : 删除数据
- */</span>
-
-<span>public</span> <span>class</span> <span>DeleteTest</span> <span>{</span>
-    <span>public</span> <span>static</span> <span>void</span> <span>main</span><span>(</span><span>String</span><span>[</span><span>]</span> args<span>)</span> <span>{</span>
-        <span>try</span> <span>{</span>
-            <span>Class</span><span>.</span><span>forName</span><span>(</span><span>"com.mysql.cj.jdbc.Driver"</span><span>)</span><span>;</span>
-        <span>}</span> <span>catch</span> <span>(</span><span>ClassNotFoundException</span> e<span>)</span> <span>{</span>
-            e<span>.</span><span>printStackTrace</span><span>(</span><span>)</span><span>;</span>
-        <span>}</span>
-
-        <span>String</span> url <span>=</span> <span>"jdbc:mysql://localhost:3306/javalearning?charactersetEncoding=UTF-8"</span><span>;</span>
-        <span>String</span> username <span>=</span> <span>"root"</span><span>;</span>
-        <span>String</span> password <span>=</span> <span>"0908"</span><span>;</span>
-        <span>String</span> deleteString <span>=</span> <span>"DELETE FROM students WHERE id = ?"</span><span>;</span>
-        <span>try</span> <span>(</span><span>Connection</span> connection <span>=</span> <span>DriverManager</span><span>.</span><span>getConnection</span><span>(</span>url<span>,</span> username<span>,</span> password<span>)</span><span>;</span> <span>PreparedStatement</span> preparedStatement <span>=</span> connection<span>.</span><span>prepareStatement</span><span>(</span>deleteString<span>)</span><span>;</span><span>)</span> <span>{</span>
-            <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>"连接成功"</span><span>)</span><span>;</span>
-            preparedStatement<span>.</span><span>setLong</span><span>(</span><span>1</span><span>,</span> <span>101</span><span>)</span><span>;</span>
-            preparedStatement<span>.</span><span>executeUpdate</span><span>(</span><span>)</span><span>;</span>
-            <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>"删除成功"</span><span>)</span><span>;</span>
-        <span>}</span> <span>catch</span> <span>(</span><span>SQLException</span> throwables<span>)</span> <span>{</span>
-            throwables<span>.</span><span>printStackTrace</span><span>(</span><span>)</span><span>;</span>
-        <span>}</span>
-    <span>}</span>
-<span>}</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br><span>27</span><br><span>28</span><br><span>29</span><br><span>30</span><br><span>31</span><br><span>32</span><br><span>33</span><br><span>34</span><br><span>35</span><br></div></div><p>删除数据后，接着查询数据，得到如下结果，可以看到 <code>id = 101</code> 的数据列已经被删除了，说明我们删除数据成功了！</p>
-<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/84568c5fb6354c82919a7e89c5d5d283~tplv-k3u1fbpfcp-watermark.image" alt="" loading="lazy"></p>
-<h3 id="修改数据" tabindex="-1"> 修改数据</h3>
-<p>修改数据的方式同删除数据和新增数据基本一致，最大的区别在于 SQL 语句的不同，修改操作利用的是 <code>UPDATE</code> 语句，能一次更新若干列。</p>
-<div><pre><code><span>import</span> <span>java<span>.</span>sql<span>.</span></span><span>Connection</span><span>;</span>
-<span>import</span> <span>java<span>.</span>sql<span>.</span></span><span>DriverManager</span><span>;</span>
-<span>import</span> <span>java<span>.</span>sql<span>.</span></span><span>PreparedStatement</span><span>;</span>
-<span>import</span> <span>java<span>.</span>sql<span>.</span></span><span>SQLException</span><span>;</span>
-
-<span>/**
- * <span>@author</span> : cunyu
- * <span>@version</span> : 1.0
- * <span>@className</span> : UpdateTest
- * <span>@date</span> : 2021/4/23 15:23
- * <span>@description</span> : 更新数据
- */</span>
-
-<span>public</span> <span>class</span> <span>UpdateTest</span> <span>{</span>
-    <span>public</span> <span>static</span> <span>void</span> <span>main</span><span>(</span><span>String</span><span>[</span><span>]</span> args<span>)</span> <span>{</span>
-        <span>try</span> <span>{</span>
-            <span>Class</span><span>.</span><span>forName</span><span>(</span><span>"com.mysql.cj.jdbc.Driver"</span><span>)</span><span>;</span>
-        <span>}</span> <span>catch</span> <span>(</span><span>ClassNotFoundException</span> e<span>)</span> <span>{</span>
-            e<span>.</span><span>printStackTrace</span><span>(</span><span>)</span><span>;</span>
-        <span>}</span>
-
-        <span>String</span> url <span>=</span> <span>"jdbc:mysql://localhost:3306/javalearning?charactersetEncoding=UTF-8"</span><span>;</span>
-        <span>String</span> username <span>=</span> <span>"root"</span><span>;</span>
-        <span>String</span> password <span>=</span> <span>"0908"</span><span>;</span>
-        <span>String</span> updateString <span>=</span> <span>"UPDATE students SET name = ? WHERE id = ?"</span><span>;</span>
-        <span>try</span> <span>(</span><span>Connection</span> connection <span>=</span> <span>DriverManager</span><span>.</span><span>getConnection</span><span>(</span>url<span>,</span> username<span>,</span> password<span>)</span><span>;</span> <span>PreparedStatement</span> preparedStatement <span>=</span> connection<span>.</span><span>prepareStatement</span><span>(</span>updateString<span>)</span><span>;</span><span>)</span> <span>{</span>
-            <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>"连接成功"</span><span>)</span><span>;</span>
-            preparedStatement<span>.</span><span>setString</span><span>(</span><span>1</span><span>,</span> <span>"村雨遥"</span><span>)</span><span>;</span>
-            preparedStatement<span>.</span><span>setLong</span><span>(</span><span>2</span><span>,</span> <span>201</span><span>)</span><span>;</span>
-            preparedStatement<span>.</span><span>executeUpdate</span><span>(</span><span>)</span><span>;</span>
-            <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>"更新成功"</span><span>)</span><span>;</span>
-        <span>}</span> <span>catch</span> <span>(</span><span>SQLException</span> throwables<span>)</span> <span>{</span>
-            throwables<span>.</span><span>printStackTrace</span><span>(</span><span>)</span><span>;</span>
-        <span>}</span>
-    <span>}</span>
-<span>}</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br><span>27</span><br><span>28</span><br><span>29</span><br><span>30</span><br><span>31</span><br><span>32</span><br><span>33</span><br><span>34</span><br><span>35</span><br><span>36</span><br></div></div><p>修改数据后，接着查询数据，得到如下结果，可以看到 <code>id = 201</code> 对应的数据列中，<code>name</code> 从小黄变成了村雨遥，说明数据更新成功。</p>
-<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/07cd90892b554bf883a27f5c38c33934~tplv-k3u1fbpfcp-watermark.image" alt="" loading="lazy"></p>
-<h3 id="注意" tabindex="-1"> 注意</h3>
-<p>当我们的数据库表设置自增主键后，在新增数据时无需指定主键也会自动更新。但是在获取自增主键的值时，不能先插入再查询，否则可能会导致冲突。要正确获取自增主键，需要在创建 <code>PreparedStatement</code> 时，指定一个标志位 <code>RETURN_GENERATED_KEYS</code>，用于表示 JDBC 驱动必须返回插入的自增主键。</p>
-<p>假设我们创建表时，设置了自增长的键：</p>
-<div><pre><code><span>CREATE</span> <span>TABLE</span> students<span>(</span>
-	id <span>int</span><span>(</span><span>11</span><span>)</span> <span>AUTO_INCREMENT</span><span>,</span>
-    …
-<span>)</span><span>;</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br></div></div><p>此时无论是 <code>executeQuery()</code> 还是 <code>execureUpdate()</code> 都不会返回这个自增长的 <code>id</code>，所以需要在创建 <code>PreparedStatement</code> 对象时加入 <code>Statement.RETURN_GENERATED_KEYS</code> 参数以确保会返回自增长 ID，然后通过 <code>getGeneratedKeys</code> 获取该字段；</p>
-<div><pre><code><span>import</span> <span>java<span>.</span>sql<span>.</span></span><span>*</span><span>;</span>
-
-<span>/**
- * <span>@author</span> : cunyu
- * <span>@version</span> : 1.0
- * <span>@className</span> : QueryTest
- * <span>@date</span> : 2021/4/23 18:01
- * <span>@description</span> : 自增主键查询
- */</span>
-
-<span>public</span> <span>class</span> <span>QueryTest</span> <span>{</span>
-    <span>public</span> <span>static</span> <span>void</span> <span>main</span><span>(</span><span>String</span><span>[</span><span>]</span> args<span>)</span> <span>{</span>
-        <span>try</span> <span>{</span>
-            <span>Class</span><span>.</span><span>forName</span><span>(</span><span>"com.mysql.cj.jdbc.Driver"</span><span>)</span><span>;</span>
-        <span>}</span> <span>catch</span> <span>(</span><span>ClassNotFoundException</span> e<span>)</span> <span>{</span>
-            e<span>.</span><span>printStackTrace</span><span>(</span><span>)</span><span>;</span>
-        <span>}</span>
-
-        <span>String</span> url <span>=</span> <span>"jdbc:mysql://localhost:3306/javalearning?characterEncoding=UTF-8"</span><span>;</span>
-        <span>String</span> username <span>=</span> <span>"root"</span><span>;</span>
-        <span>String</span> password <span>=</span> <span>"12345"</span><span>;</span>
-        <span>String</span> queryString <span>=</span> <span>"INSET INTO students VALUES(null,?,……)"</span><span>;</span>
-        <span>try</span> <span>(</span><span>Connection</span> connection <span>=</span> <span>DriverManager</span><span>.</span><span>getConnection</span><span>(</span>url<span>,</span> username<span>,</span> password<span>)</span><span>;</span> <span>PreparedStatement</span> preparedStatement <span>=</span> connection<span>.</span><span>prepareStatement</span><span>(</span>queryString<span>,</span> <span>Statement</span><span>.</span>RETURN_GENERATED_KEYS<span>)</span><span>;</span> <span>ResultSet</span> resultSet <span>=</span> preparedStatement<span>.</span><span>getGeneratedKeys</span><span>(</span><span>)</span><span>;</span><span>)</span> <span>{</span>
-            <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>"连接成功"</span><span>)</span><span>;</span>
-            preparedStatement<span>.</span><span>setString</span><span>(</span><span>1</span><span>,</span> <span>"村雨遥"</span><span>)</span><span>;</span>
-            ……
-            preparedStatement<span>.</span><span>executeUpdate</span><span>(</span><span>)</span><span>;</span>
-            <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>"查询到的信息如下："</span><span>)</span><span>;</span>
-            <span>while</span> <span>(</span>resultSet<span>.</span><span>next</span><span>(</span><span>)</span><span>)</span> <span>{</span>
-<span>//                查询到的结果索引从 1 开始</span>
-                <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>"id："</span> <span>+</span> resultSet<span>.</span><span>getLong</span><span>(</span><span>1</span><span>)</span><span>)</span><span>;</span>
-            <span>}</span>
-        <span>}</span> <span>catch</span> <span>(</span><span>SQLException</span> throwables<span>)</span> <span>{</span>
-            throwables<span>.</span><span>printStackTrace</span><span>(</span><span>)</span><span>;</span>
-        <span>}</span>
-    <span>}</span>
-<span>}</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br><span>27</span><br><span>28</span><br><span>29</span><br><span>30</span><br><span>31</span><br><span>32</span><br><span>33</span><br><span>34</span><br><span>35</span><br><span>36</span><br><span>37</span><br></div></div><h3 id="jdbc-工具类" tabindex="-1"> JDBC 工具类</h3>
-<p>观察上面的代码，我们可以注意到每次都需要注册驱动、传递参数，关闭连接等操作，为了提高工具通用性，我们利用配置文件来配置数据库相关信息，然后创建一个 JDBC 工具类来简化上述操作。</p>
-<ol>
-<li>首先在 <code>src</code> 目录下创建一个配置文件 <code>jdbc.properties</code>，并且填入数据库的相关信息；</li>
-</ol>
-<div><pre><code><span>url</span><span>=</span><span>jdbc:mysql://localhost/demo?characterEncoding=UTF-8</span>
-<span>user</span><span>=</span><span>root</span>
-<span>password</span><span>=</span><span>"12345"</span>
-<span>driver</span><span>=</span><span>com.mysql.cj.jdbc.Driver</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br></div></div><ol start="2">
-<li>创建工具类</li>
-</ol>
-<div><pre><code><span>import</span> <span>java<span>.</span>io<span>.</span></span><span>FileReader</span><span>;</span>
-<span>import</span> <span>java<span>.</span>io<span>.</span></span><span>IOException</span><span>;</span>
-<span>import</span> <span>java<span>.</span>net<span>.</span></span>URL<span>;</span>
-<span>import</span> <span>java<span>.</span>sql<span>.</span></span><span>*</span><span>;</span>
-<span>import</span> <span>java<span>.</span>util<span>.</span></span><span>Properties</span><span>;</span>
-
-<span>/**
- * <span>@author</span> : cunyu
- * <span>@version</span> : 1.0
- * <span>@className</span> : JDBCUtils
- * <span>@date</span> : 2021/4/24 15:10
- * <span>@description</span> : JDBC 工具类
- */</span>
-
-<span>public</span> <span>class</span> <span>JDBCUtils</span> <span>{</span>
-    <span>//    配置文件中的各个参数</span>
-    <span>private</span> <span>static</span> <span>String</span> url<span>;</span>
-    <span>private</span> <span>static</span> <span>String</span> user<span>;</span>
-    <span>private</span> <span>static</span> <span>String</span> password<span>;</span>
-    <span>private</span> <span>static</span> <span>String</span> driver<span>;</span>
-
-    <span>//    静态代码块</span>
-    <span>static</span> <span>{</span>
-        <span>try</span> <span>{</span>
-<span>//        读取配置文件并获取参数值</span>
-<span>//        创建集合类</span>
-            <span>Properties</span> properties <span>=</span> <span>new</span> <span>Properties</span><span>(</span><span>)</span><span>;</span>
-
-<span>//        获取配置文件所在位置</span>
-            <span>ClassLoader</span> classLoader <span>=</span> <span>JDBCUtils</span><span>.</span><span>class</span><span>.</span><span>getClassLoader</span><span>(</span><span>)</span><span>;</span>
-            <span>URL</span> resource <span>=</span> classLoader<span>.</span><span>getResource</span><span>(</span><span>"jdbc.properties"</span><span>)</span><span>;</span>
-            <span>String</span> path <span>=</span> resource<span>.</span><span>getPath</span><span>(</span><span>)</span><span>;</span>
-            <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>"配置文件所在位置"</span> <span>+</span> path<span>)</span><span>;</span>
-<span>//        加载配置文件</span>
-            properties<span>.</span><span>load</span><span>(</span><span>new</span> <span>FileReader</span><span>(</span>path<span>)</span><span>)</span><span>;</span>
-
-<span>//            获取参数的值并赋值</span>
-            url <span>=</span> properties<span>.</span><span>getProperty</span><span>(</span><span>"url"</span><span>)</span><span>;</span>
-            user <span>=</span> properties<span>.</span><span>getProperty</span><span>(</span><span>"user"</span><span>)</span><span>;</span>
-            password <span>=</span> properties<span>.</span><span>getProperty</span><span>(</span><span>"password"</span><span>)</span><span>;</span>
-            driver <span>=</span> properties<span>.</span><span>getProperty</span><span>(</span><span>"driver"</span><span>)</span><span>;</span>
-
-<span>//            注册驱动</span>
-            <span>Class</span><span>.</span><span>forName</span><span>(</span>driver<span>)</span><span>;</span>
-        <span>}</span> <span>catch</span> <span>(</span><span>IOException</span> <span>|</span> <span>ClassNotFoundException</span> e<span>)</span> <span>{</span>
-            e<span>.</span><span>printStackTrace</span><span>(</span><span>)</span><span>;</span>
-        <span>}</span>
-    <span>}</span>
-
-    <span>/**
-     * <span>@param</span>
-     * <span>@return</span> 连接对象
-     * <span>@description</span> 获取连接
-     * <span>@date</span> 2021/4/24 15:24
-     * <span>@author</span> cunyu1943
-     * <span>@version</span> 1.0
-     */</span>
-    <span>public</span> <span>static</span> <span>Connection</span> <span>getConnection</span><span>(</span><span>)</span> <span>{</span>
-        <span>try</span> <span>{</span>
-            <span>return</span> <span>DriverManager</span><span>.</span><span>getConnection</span><span>(</span>url<span>,</span> user<span>,</span> password<span>)</span><span>;</span>
-        <span>}</span> <span>catch</span> <span>(</span><span>SQLException</span> throwables<span>)</span> <span>{</span>
-            throwables<span>.</span><span>printStackTrace</span><span>(</span><span>)</span><span>;</span>
-        <span>}</span>
-        <span>return</span> <span>null</span><span>;</span>
-    <span>}</span>
-
-    <span>/**
-     * <span>@param</span> <span>preparedStatement</span> 预声明
-     * <span>@param</span> <span>connection</span>        连接对象
-     * <span>@return</span>
-     * <span>@description</span> 关闭连接
-     * <span>@date</span> 2021/4/24 15:27
-     * <span>@author</span> cunyu1943
-     * <span>@version</span> 1.0
-     */</span>
-    <span>public</span> <span>static</span> <span>void</span> <span>close</span><span>(</span><span>PreparedStatement</span> preparedStatement<span>,</span> <span>Connection</span> connection<span>)</span> <span>{</span>
-        <span>if</span> <span>(</span>preparedStatement <span>!=</span> <span>null</span><span>)</span> <span>{</span>
-            <span>try</span> <span>{</span>
-                preparedStatement<span>.</span><span>close</span><span>(</span><span>)</span><span>;</span>
-            <span>}</span> <span>catch</span> <span>(</span><span>SQLException</span> throwables<span>)</span> <span>{</span>
-                throwables<span>.</span><span>printStackTrace</span><span>(</span><span>)</span><span>;</span>
-            <span>}</span>
-        <span>}</span>
-
-        <span>if</span> <span>(</span>connection <span>!=</span> <span>null</span><span>)</span> <span>{</span>
-            <span>try</span> <span>{</span>
-                connection<span>.</span><span>close</span><span>(</span><span>)</span><span>;</span>
-            <span>}</span> <span>catch</span> <span>(</span><span>SQLException</span> throwables<span>)</span> <span>{</span>
-                throwables<span>.</span><span>printStackTrace</span><span>(</span><span>)</span><span>;</span>
-            <span>}</span>
-        <span>}</span>
-    <span>}</span>
-
-
-    <span>/**
-     * <span>@param</span> <span>resultSet</span>         结果集
-     * <span>@param</span> <span>preparedStatement</span> 预声明对象
-     * <span>@param</span> <span>connection</span>        连接对象
-     * <span>@return</span>
-     * <span>@description</span> 关闭连接
-     * <span>@date</span> 2021/4/24 15:28
-     * <span>@author</span> cunyu1943
-     * <span>@version</span> 1.0
-     */</span>
-    <span>public</span> <span>static</span> <span>void</span> <span>close</span><span>(</span><span>ResultSet</span> resultSet<span>,</span> <span>PreparedStatement</span> preparedStatement<span>,</span> <span>Connection</span> connection<span>)</span> <span>{</span>
-        <span>if</span> <span>(</span>resultSet <span>!=</span> <span>null</span><span>)</span> <span>{</span>
-            <span>try</span> <span>{</span>
-                resultSet<span>.</span><span>close</span><span>(</span><span>)</span><span>;</span>
-            <span>}</span> <span>catch</span> <span>(</span><span>SQLException</span> throwables<span>)</span> <span>{</span>
-                throwables<span>.</span><span>printStackTrace</span><span>(</span><span>)</span><span>;</span>
-            <span>}</span>
-        <span>}</span>
-
-        <span>if</span> <span>(</span>preparedStatement <span>!=</span> <span>null</span><span>)</span> <span>{</span>
-            <span>try</span> <span>{</span>
-                preparedStatement<span>.</span><span>close</span><span>(</span><span>)</span><span>;</span>
-            <span>}</span> <span>catch</span> <span>(</span><span>SQLException</span> throwables<span>)</span> <span>{</span>
-                throwables<span>.</span><span>printStackTrace</span><span>(</span><span>)</span><span>;</span>
-            <span>}</span>
-        <span>}</span>
-
-        <span>if</span> <span>(</span>connection <span>!=</span> <span>null</span><span>)</span> <span>{</span>
-            <span>try</span> <span>{</span>
-                connection<span>.</span><span>close</span><span>(</span><span>)</span><span>;</span>
-            <span>}</span> <span>catch</span> <span>(</span><span>SQLException</span> throwables<span>)</span> <span>{</span>
-                throwables<span>.</span><span>printStackTrace</span><span>(</span><span>)</span><span>;</span>
-            <span>}</span>
-        <span>}</span>
-    <span>}</span>
-<span>}</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br><span>27</span><br><span>28</span><br><span>29</span><br><span>30</span><br><span>31</span><br><span>32</span><br><span>33</span><br><span>34</span><br><span>35</span><br><span>36</span><br><span>37</span><br><span>38</span><br><span>39</span><br><span>40</span><br><span>41</span><br><span>42</span><br><span>43</span><br><span>44</span><br><span>45</span><br><span>46</span><br><span>47</span><br><span>48</span><br><span>49</span><br><span>50</span><br><span>51</span><br><span>52</span><br><span>53</span><br><span>54</span><br><span>55</span><br><span>56</span><br><span>57</span><br><span>58</span><br><span>59</span><br><span>60</span><br><span>61</span><br><span>62</span><br><span>63</span><br><span>64</span><br><span>65</span><br><span>66</span><br><span>67</span><br><span>68</span><br><span>69</span><br><span>70</span><br><span>71</span><br><span>72</span><br><span>73</span><br><span>74</span><br><span>75</span><br><span>76</span><br><span>77</span><br><span>78</span><br><span>79</span><br><span>80</span><br><span>81</span><br><span>82</span><br><span>83</span><br><span>84</span><br><span>85</span><br><span>86</span><br><span>87</span><br><span>88</span><br><span>89</span><br><span>90</span><br><span>91</span><br><span>92</span><br><span>93</span><br><span>94</span><br><span>95</span><br><span>96</span><br><span>97</span><br><span>98</span><br><span>99</span><br><span>100</span><br><span>101</span><br><span>102</span><br><span>103</span><br><span>104</span><br><span>105</span><br><span>106</span><br><span>107</span><br><span>108</span><br><span>109</span><br><span>110</span><br><span>111</span><br><span>112</span><br><span>113</span><br><span>114</span><br><span>115</span><br><span>116</span><br><span>117</span><br><span>118</span><br><span>119</span><br><span>120</span><br><span>121</span><br><span>122</span><br><span>123</span><br><span>124</span><br><span>125</span><br><span>126</span><br><span>127</span><br><span>128</span><br><span>129</span><br><span>130</span><br></div></div><h2 id="jdbc-事务" tabindex="-1"> JDBC 事务</h2>
-<h3 id="事务-4-大特性" tabindex="-1"> 事务 4 大特性</h3>
-<p>事务是一个不可分割的数据库操作序列，也是数据库并发控制的基本单位，其执行结果必须使数据库从一种一致性状态切换到另一中一致性状态。事务是逻辑上的一组操作，要么都执行，要么都不执行。事务能够在数据库提交工作时确保要么所有修改都保存，要么所有修改都不保存。<strong>即事务是逻辑上的一组操作，要么都执行，要么都不执行</strong>。</p>
-<ol>
-<li><strong>原子性（Atomicity）</strong></li>
-</ol>
-<p>原子性是整个数据库事务中不可分割的工作单位，只有事务中的所有的数据库操作都执行成功，才代表整个事务成功，如果其中任一环节执行失败，那么就算已经执行成功的 SQL 语句也必须撤销，回滚到事务执行前的状态。即原子性能够保证 <strong>动作要么全部完成，要么完全不起作用。</strong> <strong>即事务是最小的执行单位，不允许分割</strong>。</p>
-<ol start="2">
-<li><strong>一致性（Consistency）</strong></li>
-</ol>
-<p>指事务将数据库从一种一致性状态变为另一种一致性状态。在事务开始前后，数据库的完整性约束未被破坏。<strong>在事务执行前后，数据能够保持一致，多个事务对统一数据读取的结果相同</strong>。</p>
-<ol start="3">
-<li><strong>隔离性（Isolation）</strong></li>
-</ol>
-<p>并发访问数据库时，隔离性要求每个读写事务对其他事务的操作对象能够相互分离，即一个用户的事务不被其他事务所干扰，各并发事务间数据库是独立的；</p>
-<ol start="4">
-<li><strong>持久性（Durability）</strong></li>
-</ol>
-<p>表示事务一旦被提交，其结果就是永久性的，它对数据库中数据的改变是持久的，即便数据库发生故障也不应该对其产生影响；</p>
-<h3 id="脏读、幻读-不可重复读" tabindex="-1"> 脏读、幻读 &amp; 不可重复读</h3>
-<p>了解事务隔离级别之前，先来看看这几个读的概念：</p>
-<ol>
-<li><strong>脏读（Dirty Read）</strong></li>
-</ol>
-<p>表示某一事务已经更新了一份数据，另一个事务在此时读取了同一份数据。当前一个事务撤销操作后，就会导致后一个事务所读取的数据不正确。</p>
-<ol start="2">
-<li><strong>幻读（Phantom Read）</strong></li>
-</ol>
-<p>在一个事务的两次查询中数据量不一致，假如有一个事务查询了几列数据，同时另一个事务中在此时查询了新的数据，则查询事务在后续查询中，就会发现数据比最开始的查询数据更丰富。</p>
-<ol start="3">
-<li><strong>不可重复读（Non-repeatable Read）</strong></li>
-</ol>
-<p>一个事务中两次查询数据不一致，有可能是因为两次查询过程中插入了一个更新原有数据的事务。</p>
-<p><strong>注意：不可重复读和幻读的区别在于：</strong></p>
-<blockquote>
-<p><strong>不可重复读的重点在于修改，</strong> 比如多次读取一条记录发现其中某些列的值被修改，而 <strong>幻读的重点在于新增或删除</strong>，比如多次读取一条记录发现记录增多或减少了。</p>
-</blockquote>
-<h3 id="隔离级别" tabindex="-1"> 隔离级别</h3>
-<p>SQL 标准定义了 4 个隔离级别，隔离级别从低到高分别是：</p>
-<ol>
-<li><strong>READ-UNCOMMITTED（读取未提交）</strong></li>
-</ol>
-<p>最低的隔离级别，允许读取尚未提交的数据变更，<strong>可能导致脏读、幻读或不可重复读</strong>。</p>
-<ol start="2">
-<li><strong>READ-COMMITTED（读取已提交）</strong></li>
-</ol>
-<p>允许读取并发事务已经提交的数据，<strong>能够阻止脏读，但可能导致幻读或不可重复读</strong>。</p>
-<ol start="3">
-<li><strong>REPEATABLE-READ（可重复读）</strong></li>
-</ol>
-<p>对同一字段的多次读取结果时一致的，除非数据是被本身事务自己所修改，<strong>能够阻止脏读和不可重复读，但可能导致幻读</strong>。</p>
-<ol start="4">
-<li><strong>SERIALIZABLE（可串行化）</strong></li>
-</ol>
-<p>最高的隔离级别，完全服从 ACID 的隔离级别，所有事务依次逐个执行，这样事务之间就完全不可能产生干扰，<strong>能够防止脏读、幻读以及不可重复读</strong>。</p>
-<p>以下是 SQL 隔离级别和各种读之间的关系：</p>
-<table>
-<thead>
-<tr>
-<th>隔离级别</th>
-<th>脏读</th>
-<th>不可重复读</th>
-<th>幻读</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>READ-UNCOMMITTED</code></td>
-<td>✔</td>
-<td>✔</td>
-<td>✔</td>
-</tr>
-<tr>
-<td><code>READ-COMMITTED</code></td>
-<td>❌</td>
-<td>✔</td>
-<td>✔</td>
-</tr>
-<tr>
-<td><code>REPEATABLE-READ</code></td>
-<td>❌</td>
-<td>❌</td>
-<td>✔</td>
-</tr>
-<tr>
-<td><code>SERIALIZABLE</code></td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-</tr>
-</tbody>
-</table>
-<h3 id="实例" tabindex="-1"> 实例</h3>
-<p>关于回滚，主要涉及 <code>Connection</code> 对象，常用的三个方法如下：</p>
-<table>
-<thead>
-<tr>
-<th>返回值</th>
-<th>方法</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>void</code></td>
-<td><code>setAutoCommit(boolean autoCommit)</code></td>
-<td>设定连接的自动提交模式，<code>true</code> 表示自动提交，<code>false</code> 表示手动提交</td>
-</tr>
-<tr>
-<td><code>void</code></td>
-<td><code>commit()</code></td>
-<td>使上次提交/回滚以来所做的所有更改成为永久更改，并释放此 <code>Connection</code> 对象当前持有的所有数据库锁</td>
-</tr>
-<tr>
-<td><code>void</code></td>
-<td><code>rollback()</code></td>
-<td>撤销当前十五中所做的所有更改，并释放此 <code>Connection</code> 对象当前持有的所有数据库锁</td>
-</tr>
-</tbody>
-</table>
-<p>以下是一个回滚实例，我们当我们第一次插入一条数据时，由于是新数据，所以不会报错，但是如果我们执行一次程序之后再次执行，此时按理来说就会报错，因为插入的数据重复，这时候利用事务就可以十分方便的解决这个问题，我们设置插入出错就回滚到未出错之前的状态，这样就能保证插入数据不会报错了。</p>
-<div><pre><code><span>import</span> <span>java<span>.</span>sql<span>.</span></span><span>Connection</span><span>;</span>
-<span>import</span> <span>java<span>.</span>sql<span>.</span></span><span>DriverManager</span><span>;</span>
-<span>import</span> <span>java<span>.</span>sql<span>.</span></span><span>PreparedStatement</span><span>;</span>
-<span>import</span> <span>java<span>.</span>sql<span>.</span></span><span>SQLException</span><span>;</span>
-
-<span>/**
- * <span>@author</span> : cunyu
- * <span>@version</span> : 1.0
- * <span>@className</span> : AffairTest
- * <span>@date</span> : 2021/4/23 22:35
- * <span>@description</span> : 事务
- */</span>
-
-<span>public</span> <span>class</span> <span>AffairTest</span> <span>{</span>
-    <span>public</span> <span>static</span> <span>void</span> <span>main</span><span>(</span><span>String</span><span>[</span><span>]</span> args<span>)</span> <span>{</span>
-        <span>try</span> <span>{</span>
-            <span>Class</span><span>.</span><span>forName</span><span>(</span><span>"com.mysql.cj.jdbc.Driver"</span><span>)</span><span>;</span>
-        <span>}</span> <span>catch</span> <span>(</span><span>ClassNotFoundException</span> e<span>)</span> <span>{</span>
-            e<span>.</span><span>printStackTrace</span><span>(</span><span>)</span><span>;</span>
-        <span>}</span>
-
-        <span>String</span> url <span>=</span> <span>"jdbc:mysql://localhost:3306/javalearning?characterEncoding=UTF-8"</span><span>;</span>
-        <span>String</span> username <span>=</span> <span>"root"</span><span>;</span>
-        <span>String</span> password <span>=</span> <span>"12345"</span><span>;</span>       
-        <span>String</span> insertString <span>=</span> <span>"INSERT INTO students VALUES (?,?,?,?,?)"</span><span>;</span>
-        <span>Connection</span> connection <span>=</span> <span>null</span><span>;</span>
-        <span>PreparedStatement</span> preparedStatement <span>=</span> <span>null</span><span>;</span>
-        
-        <span>try</span> <span>{</span>
-            connection <span>=</span> <span>DriverManager</span><span>.</span><span>getConnection</span><span>(</span>url<span>,</span> username<span>,</span> password<span>)</span><span>;</span>
-<span>//            关闭自动提交</span>
-            connection<span>.</span><span>setAutoCommit</span><span>(</span><span>false</span><span>)</span><span>;</span>
-            preparedStatement <span>=</span> connection<span>.</span><span>prepareStatement</span><span>(</span>insertString<span>)</span><span>;</span>
-            <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>"连接成功"</span><span>)</span><span>;</span>
-<span>//            依次插入数据</span>
-            preparedStatement<span>.</span><span>setLong</span><span>(</span><span>1</span><span>,</span> <span>401</span><span>)</span><span>;</span>
-            preparedStatement<span>.</span><span>setString</span><span>(</span><span>2</span><span>,</span> <span>"小紫"</span><span>)</span><span>;</span>
-            preparedStatement<span>.</span><span>setInt</span><span>(</span><span>3</span><span>,</span> <span>0</span><span>)</span><span>;</span>
-            preparedStatement<span>.</span><span>setLong</span><span>(</span><span>4</span><span>,</span> <span>4</span><span>)</span><span>;</span>
-            preparedStatement<span>.</span><span>setLong</span><span>(</span><span>5</span><span>,</span> <span>88</span><span>)</span><span>;</span>
-            preparedStatement<span>.</span><span>executeUpdate</span><span>(</span><span>)</span><span>;</span>
-<span>//            如果没有出错，则提交事务</span>
-            connection<span>.</span><span>commit</span><span>(</span><span>)</span><span>;</span>
-            <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>"插入数据成功"</span><span>)</span><span>;</span>
-
-        <span>}</span> <span>catch</span> <span>(</span><span>SQLException</span> throwables<span>)</span> <span>{</span>
-<span>//            一旦出错，则回滚事务</span>
-            <span>try</span> <span>{</span>
-                connection<span>.</span><span>rollback</span><span>(</span><span>)</span><span>;</span>
-            <span>}</span> <span>catch</span> <span>(</span><span>SQLException</span> e<span>)</span> <span>{</span>
-                e<span>.</span><span>printStackTrace</span><span>(</span><span>)</span><span>;</span>
-            <span>}</span>
-        <span>}</span> <span>finally</span> <span>{</span>
-<span>//            最后关闭连接</span>
-            <span>if</span> <span>(</span>connection <span>!=</span> <span>null</span><span>)</span> <span>{</span>
-                <span>try</span> <span>{</span>
-                    connection<span>.</span><span>close</span><span>(</span><span>)</span><span>;</span>
-                <span>}</span> <span>catch</span> <span>(</span><span>SQLException</span> throwables<span>)</span> <span>{</span>
-                    throwables<span>.</span><span>printStackTrace</span><span>(</span><span>)</span><span>;</span>
-                <span>}</span>
-            <span>}</span>
-            <span>if</span> <span>(</span>preparedStatement <span>!=</span> <span>null</span><span>)</span> <span>{</span>
-                <span>try</span> <span>{</span>
-                    preparedStatement<span>.</span><span>close</span><span>(</span><span>)</span><span>;</span>
-                <span>}</span> <span>catch</span> <span>(</span><span>SQLException</span> throwables<span>)</span> <span>{</span>
-                    throwables<span>.</span><span>printStackTrace</span><span>(</span><span>)</span><span>;</span>
-                <span>}</span>
-            <span>}</span>
-        <span>}</span>
-    <span>}</span>
-<span>}</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br><span>27</span><br><span>28</span><br><span>29</span><br><span>30</span><br><span>31</span><br><span>32</span><br><span>33</span><br><span>34</span><br><span>35</span><br><span>36</span><br><span>37</span><br><span>38</span><br><span>39</span><br><span>40</span><br><span>41</span><br><span>42</span><br><span>43</span><br><span>44</span><br><span>45</span><br><span>46</span><br><span>47</span><br><span>48</span><br><span>49</span><br><span>50</span><br><span>51</span><br><span>52</span><br><span>53</span><br><span>54</span><br><span>55</span><br><span>56</span><br><span>57</span><br><span>58</span><br><span>59</span><br><span>60</span><br><span>61</span><br><span>62</span><br><span>63</span><br><span>64</span><br><span>65</span><br><span>66</span><br><span>67</span><br><span>68</span><br><span>69</span><br><span>70</span><br><span>71</span><br></div></div><p>除了上述回滚的方式外，JDBC 还支持设置保存点的方式，我们可以使用事务回滚到指定的保存点，主要涉及的方法如下：</p>
-<ul>
-<li><code>setSavepoint(String savePointName)</code>：创建新的保存点，返回一个 <code>SavePoint</code> 对象；</li>
-<li><code>rollback(String savePointName)</code>：回滚到指定保存点；</li>
-</ul>
-<h2 id="连接池" tabindex="-1"> 连接池</h2>
-<h3 id="简介" tabindex="-1"> 简介</h3>
-<p>当我们使用多线程时，每个线程如果都需要连接数据库来执行 SQL 语句，那么每个线程都得创建一个连接，然后在使用之后关闭。这个创建和关闭连接的过程是十分耗时的，一旦多线程并发时，就容易导致系统卡顿。针对这一问题，提出使用数据库连接池。数据库连接池，其实就相当于一个集合，是一个存放数据库连接的容器。当我们的系统初始化好之后，集合就被创建，集合中会申请一些连接对象，当用户来访问数据库时，从集合中获取连接对象，一旦用户访问完毕，就将连接对象返还给容器。</p>
-<p>使用数据库连接池的优点：一来是节约资源，二来提高了用户访问的效率。</p>
-<h3 id="常用数据库连接池" tabindex="-1"> 常用数据库连接池</h3>
-<h4 id="c3p0" tabindex="-1"> C3P0</h4>
-<ol>
-<li>导包</li>
-</ol>
-<p>首先需要导包，先去下载 C3P0 对象的 jar 包，下载地址：https://sourceforge.net/projects/c3p0/，然后将其中的如下两个包导入；</p>
-<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/cfd9c3f1db524f9395fa95d8de623ab4~tplv-k3u1fbpfcp-watermark.image" alt="" loading="lazy"></p>
-<ol start="2">
-<li>定义配置文件</li>
-</ol>
-<p>创建 C3P0 对应的配置文件，注意：配置文件一般放在 <code>src</code> 路径下，而且文件的名称要必须为以下其中的一个：</p>
-<ul>
-<li><code>c3p0.properties</code></li>
-<li><code>c3p0-config.xml</code></li>
-</ul>
-<div><pre><code><span><span><span>&lt;</span>c3p0-config</span><span>></span></span>
-    <span>&lt;!-- 使用默认的配置读取连接池对象 --></span>
-    <span><span><span>&lt;</span>default-config</span><span>></span></span>
-        <span>&lt;!--  连接参数 --></span>
-        <span><span><span>&lt;</span>property</span> <span>name</span><span><span>=</span><span>"</span>driverClass<span>"</span></span><span>></span></span>com.mysql.cj.jdbc.Driver<span><span><span>&lt;/</span>property</span><span>></span></span>
-        <span><span><span>&lt;</span>property</span> <span>name</span><span><span>=</span><span>"</span>jdbcUrl<span>"</span></span><span>></span></span>jdbc:mysql://localhost:3306/javalearning?characterEncoding=UTF-8<span><span><span>&lt;/</span>property</span><span>></span></span>
-        <span><span><span>&lt;</span>property</span> <span>name</span><span><span>=</span><span>"</span>user<span>"</span></span><span>></span></span>root<span><span><span>&lt;/</span>property</span><span>></span></span>
-        <span><span><span>&lt;</span>property</span> <span>name</span><span><span>=</span><span>"</span>password<span>"</span></span><span>></span></span>0908<span><span><span>&lt;/</span>property</span><span>></span></span>
-
-        <span>&lt;!-- 连接池参数 --></span>
-        <span>&lt;!--    初始化申请的连接数--></span>
-        <span><span><span>&lt;</span>property</span> <span>name</span><span><span>=</span><span>"</span>initialPoolSize<span>"</span></span><span>></span></span>5<span><span><span>&lt;/</span>property</span><span>></span></span>
-        <span>&lt;!--        最大连接数--></span>
-        <span><span><span>&lt;</span>property</span> <span>name</span><span><span>=</span><span>"</span>maxPoolSize<span>"</span></span><span>></span></span>10<span><span><span>&lt;/</span>property</span><span>></span></span>
-        <span>&lt;!--      超时时间--></span>
-        <span><span><span>&lt;</span>property</span> <span>name</span><span><span>=</span><span>"</span>checkoutTimeout<span>"</span></span><span>></span></span>3000<span><span><span>&lt;/</span>property</span><span>></span></span>
-    <span><span><span>&lt;/</span>default-config</span><span>></span></span>
-<span><span><span>&lt;/</span>c3p0-config</span><span>></span></span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br></div></div><ol start="3">
-<li>
-<p>创建连接池对象</p>
-</li>
-<li>
-<p>获取连接对象</p>
-</li>
-</ol>
-<div><pre><code><span>import</span> <span>com<span>.</span>mchange<span>.</span>v2<span>.</span>c3p0<span>.</span></span><span>ComboPooledDataSource</span><span>;</span>
-
-<span>import</span> <span>javax<span>.</span>sql<span>.</span></span><span>DataSource</span><span>;</span>
-<span>import</span> <span>java<span>.</span>sql<span>.</span></span><span>Connection</span><span>;</span>
-<span>import</span> <span>java<span>.</span>sql<span>.</span></span><span>SQLException</span><span>;</span>
-
-<span>/**
- * <span>@author</span> : cunyu
- * <span>@version</span> : 1.0
- * <span>@className</span> : C3POTest
- * <span>@date</span> : 2021/4/24 16:01
- * <span>@description</span> : C3PO 连接池
- */</span>
-
-<span>public</span> <span>class</span> <span>C3POTest</span> <span>{</span>
-    <span>public</span> <span>static</span> <span>void</span> <span>main</span><span>(</span><span>String</span><span>[</span><span>]</span> args<span>)</span> <span>{</span>
-<span>//        创建数据库连接池对象</span>
-        <span>DataSource</span> dataSource <span>=</span> <span>new</span> <span>ComboPooledDataSource</span><span>(</span><span>)</span><span>;</span>
-<span>//        获取连接对象</span>
-        <span>try</span> <span>{</span>
-            <span>Connection</span> connection <span>=</span> dataSource<span>.</span><span>getConnection</span><span>(</span><span>)</span><span>;</span>
-            <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span>connection<span>)</span><span>;</span>
-        <span>}</span> <span>catch</span> <span>(</span><span>SQLException</span> throwables<span>)</span> <span>{</span>
-            throwables<span>.</span><span>printStackTrace</span><span>(</span><span>)</span><span>;</span>
-        <span>}</span>
-    <span>}</span>
-<span>}</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br><span>27</span><br></div></div><p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/dea833ede35949b280f74cf1f17c2dc7~tplv-k3u1fbpfcp-watermark.image" alt="" loading="lazy"></p>
-<h4 id="druid" tabindex="-1"> Druid</h4>
-<ol>
-<li>导包</li>
-</ol>
-<p>导入 Druid 的 jar 包，下载地址：https://repo1.maven.org/maven2/com/alibaba/druid/</p>
-<ol start="2">
-<li>定义配置文件</li>
-</ol>
-<p>配置文件名称无要求，但是后缀名为 <code>.properties</code>，而且可以存放在任意目录下；</p>
-<div><pre><code><span>driver</span><span>=</span><span>com.mysql.cj.jdbc.Driver</span>
-<span>url</span><span>=</span><span>jdbc:mysql://localhost:3306/javalearning?characterEncoding=UTF-8</span>
-<span>username</span><span>=</span><span>root</span>
-<span>password</span><span>=</span><span>12345</span>
-<span>initialSize</span><span>=</span><span>5</span>
-<span>maxActive</span><span>=</span><span>10</span>
-<span>maxWait</span><span>=</span><span>3000</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br></div></div><ol start="3">
-<li>加载配置文件</li>
-<li>创建连接池对象</li>
-<li>获取连接对象</li>
-</ol>
-<div><pre><code><span>import</span> <span>com<span>.</span>alibaba<span>.</span>druid<span>.</span>pool<span>.</span></span><span>DruidDataSourceFactory</span><span>;</span>
-
-<span>import</span> <span>javax<span>.</span>sql<span>.</span></span><span>DataSource</span><span>;</span>
-<span>import</span> <span>java<span>.</span>io<span>.</span></span><span>InputStream</span><span>;</span>
-<span>import</span> <span>java<span>.</span>sql<span>.</span></span><span>Connection</span><span>;</span>
-<span>import</span> <span>java<span>.</span>util<span>.</span></span><span>Properties</span><span>;</span>
-
-<span>/**
- * <span>@author</span> : cunyu
- * <span>@version</span> : 1.0
- * <span>@className</span> : DruidTest
- * <span>@date</span> : 2021/4/24 19:56
- * <span>@description</span> : Druid 连接池
- */</span>
-
-<span>public</span> <span>class</span> <span>DruidTest</span> <span>{</span>
-    <span>public</span> <span>static</span> <span>void</span> <span>main</span><span>(</span><span>String</span><span>[</span><span>]</span> args<span>)</span> <span>{</span>
-        <span>try</span> <span>{</span>
-<span>//            加载配置文件</span>
-            <span>Properties</span> properties <span>=</span> <span>new</span> <span>Properties</span><span>(</span><span>)</span><span>;</span>
-            <span>InputStream</span> resourceAsStream <span>=</span> <span>DruidTest</span><span>.</span><span>class</span><span>.</span><span>getClassLoader</span><span>(</span><span>)</span><span>.</span><span>getResourceAsStream</span><span>(</span><span>"druid.properties"</span><span>)</span><span>;</span>
-            properties<span>.</span><span>load</span><span>(</span>resourceAsStream<span>)</span><span>;</span>
-<span>//            获取连接池对象</span>
-            <span>DataSource</span> dataSource <span>=</span> <span>DruidDataSourceFactory</span><span>.</span><span>createDataSource</span><span>(</span>properties<span>)</span><span>;</span>
-<span>//            获取连接</span>
-            <span>Connection</span> connection <span>=</span> dataSource<span>.</span><span>getConnection</span><span>(</span><span>)</span><span>;</span>
-            <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span>connection<span>)</span><span>;</span>
-        <span>}</span> <span>catch</span> <span>(</span><span>Exception</span> e<span>)</span> <span>{</span>
-            e<span>.</span><span>printStackTrace</span><span>(</span><span>)</span><span>;</span>
-        <span>}</span>
-    <span>}</span>
-<span>}</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br><span>27</span><br><span>28</span><br><span>29</span><br><span>30</span><br><span>31</span><br><span>32</span><br></div></div><p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/dccdd27421fc4fc8a687d4e2b5becabd~tplv-k3u1fbpfcp-watermark.image" alt="" loading="lazy"></p>
-<h2 id="总结" tabindex="-1"> 总结</h2>
-<p>今天的内容到此就结束了，老规矩，点赞关注走一波 🧐。</p>
-<p>对于文中有错或遗漏的地方，还烦请各位大佬在评论区指出来。我是村雨遥，一个技术栈主要为 Java 的菜鸟程序员，关注我，一起学习成长吧！</p>
-<p><strong>关注公众号，获取最新文章更新</strong></p>
-<img src="https://cdn.jsdelivr.net/gh/cunyu1943/cunyu1943@main/imgs/wepublic.gif" width="200" alt="公众号" />
-]]></content>
-    <category term="Java 菜鸟入门"/>
-    <published>2022-01-15T21:59:14.000Z</published>
   </entry>
 </feed>
