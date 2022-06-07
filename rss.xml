@@ -6,8 +6,8 @@
     <link>https://cunyu1943.github.io/JavaPark/JavaPark/</link>
     <description>Java 自学编程之路</description>
     <language>zh-CN</language>
-    <pubDate>Tue, 07 Jun 2022 14:46:55 GMT</pubDate>
-    <lastBuildDate>Tue, 07 Jun 2022 14:46:55 GMT</lastBuildDate>
+    <pubDate>Tue, 07 Jun 2022 14:51:26 GMT</pubDate>
+    <lastBuildDate>Tue, 07 Jun 2022 14:51:26 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>Java 菜鸟入门</category>
@@ -121,7 +121,8 @@
         <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span>platformArray<span>.</span><span>toJSONString</span><span>(</span><span>)</span><span>)</span><span>;</span>
     <span>}</span>
 <span>}</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br></div></div><h2 id="总结" tabindex="-1"> 总结</h2>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br></div></div><p><img src="https://img-blog.csdnimg.cn/67b323159a2d4ff79bc6075bc452ccac.png" alt="" loading="lazy"></p>
+<h2 id="总结" tabindex="-1"> 总结</h2>
 <p>以上就是日常开发中常见的 4 种其他格式和 <code>JSON</code> 格式之间的转换过程了，其中，最常用的应该莫过于 <code>JSON</code> 和 Java 对象之间的相互转换了，一定要熟练掌握！关于 <code>Fastjson V2</code> 的简单使用就介绍到这里了，关于更多 <code>Fastjson V2</code> 的高级使用技巧，等待我们后续文章再见吧！</p>
 ]]></content:encoded>
       <enclosure url="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/3415afdb4769490fbf486399dd6a2534~tplv-k3u1fbpfcp-watermark.image?" type="image/"/>
