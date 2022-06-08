@@ -6,12 +6,12 @@
     <link>https://cunyu1943.github.io/JavaPark/JavaPark/</link>
     <description>Java 自学编程之路</description>
     <language>zh-CN</language>
-    <pubDate>Tue, 07 Jun 2022 14:51:26 GMT</pubDate>
-    <lastBuildDate>Tue, 07 Jun 2022 14:51:26 GMT</lastBuildDate>
+    <pubDate>Wed, 08 Jun 2022 13:59:44 GMT</pubDate>
+    <lastBuildDate>Wed, 08 Jun 2022 13:59:44 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
-    <category>Java 菜鸟入门</category>
     <category>Vue3 笔记</category>
+    <category>Java 菜鸟入门</category>
     <category>Spring Boot 基础教程</category>
     <category>Java Web</category>
     <category>数据结构与算法</category>
@@ -30,6 +30,213 @@
     <category>Java 编程实例</category>
     <category>Maven 入门教程</category>
     <category>博客搭建</category>
+    <item>
+      <title>Vue3 笔记：Axios 简单使用指南</title>
+      <link>https://cunyu1943.github.io/JavaPark/JavaPark/java/java-web/vue3/axios-quickstart.html</link>
+      <guid>https://cunyu1943.github.io/JavaPark/JavaPark/java/java-web/vue3/axios-quickstart.html</guid>
+      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">Vue3 笔记：Axios 简单使用指南</source>
+      <category>Vue3 笔记</category>
+      <pubDate>Wed, 08 Jun 2022 20:22:22 GMT</pubDate>
+      <content:encoded><![CDATA[<h2 id="概述" tabindex="-1"> 概述</h2>
+<h3 id="什么是-axios" tabindex="-1"> 什么是 Axios ？</h3>
+<p><code>Axios</code> 是一个开源的基于 <code>promise</code> 的 <code>HTTP</code> 请求库，一般常用于浏览器和 <code>node.js</code> 中。它能够在具有相同代码库的浏览器和 <code>nodejs</code> 中同时运行，在服务器侧，它利用服务器端原生的 <code>node.js</code>  <code>http</code> 模块，而在客户端侧（一般是浏览器），则使用的是 <code>XMLHttpRequest</code>。</p>
+<p>从 <code>Vue 2.0</code> 版本开始，就极力推荐使用 <code>Axios</code> 来进行 <code>ajax</code> 请求，其源码仓库为：</p>
+<blockquote>
+<p><code>https://github.com/axios/axios</code></p>
+</blockquote>
+<h3 id="特性" tabindex="-1"> 特性</h3>
+<ul>
+<li>从浏览器中创建 <code>XMLHttpRequests</code></li>
+<li>从 <code>node.js</code> 创建 <code>http</code> 请求</li>
+<li>支持 <code>Promise API</code></li>
+<li>拦截请求和响应</li>
+<li>转换请求数据和响应数据</li>
+<li>取消请求</li>
+<li>支持自动转换 <code>JSON</code> 数据</li>
+<li>客户端侧支持防御 <code>XSRF</code></li>
+</ul>
+<h3 id="axios-的安装" tabindex="-1"> Axios 的安装</h3>
+<p><code>Axios</code> 安装主要有两种方式，一种是通过引入 <code>CDN</code>，另一种则是通过 <code>npm</code> 进行安装，两中安装的方式介绍如下。</p>
+<ol>
+<li>使用 CDN</li>
+</ol>
+<div><pre><code><span><span><span>&lt;</span>script</span> <span>src</span><span><span>=</span><span>"</span>https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js<span>"</span></span><span>></span></span><span></span><span><span><span>&lt;/</span>script</span><span>></span></span>
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><ol start="2">
+<li>使用 npm</li>
+</ol>
+<div><pre><code><span>npm</span> <span>install</span> axios
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><h3 id="支持的浏览器" tabindex="-1"> 支持的浏览器</h3>
+<table>
+<thead>
+<tr>
+<th><img src="https://raw.github.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" alt="Chrome" loading="lazy"></th>
+<th><img src="https://raw.github.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png" alt="Firefox" loading="lazy"></th>
+<th><img src="https://raw.github.com/alrra/browser-logos/master/src/safari/safari_48x48.png" alt="Safari" loading="lazy"></th>
+<th><img src="https://raw.github.com/alrra/browser-logos/master/src/opera/opera_48x48.png" alt="Opera" loading="lazy"></th>
+<th><img src="https://raw.github.com/alrra/browser-logos/master/src/edge/edge_48x48.png" alt="Edge" loading="lazy"></th>
+<th><img src="https://raw.github.com/alrra/browser-logos/master/src/archive/internet-explorer_9-11/internet-explorer_9-11_48x48.png" alt="IE" loading="lazy"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Latest ✔</td>
+<td>Latest ✔</td>
+<td>Latest ✔</td>
+<td>Latest ✔</td>
+<td>Latest ✔</td>
+<td>8+ ✔</td>
+</tr>
+</tbody>
+</table>
+<h2 id="axios-的使用" tabindex="-1"> Axios 的使用</h2>
+<p><code>Axios</code> 提供了两种不同的方式来发送 <code>HTTP</code> 请求，其中一种是直接通过 <code>axios()</code> 方法，而另一种则是通过 <code>axios</code> 对象提供的跟 <code>HTTP</code> 方法对应起来的方法来发起请求，例如：</p>
+<ul>
+<li><code>axios.get()</code></li>
+<li><code>axios.post()</code></li>
+<li><code>axios.update()</code></li>
+<li><code>axios.put()</code></li>
+<li>……</li>
+</ul>
+<h3 id="get-请求" tabindex="-1"> get 请求</h3>
+<ul>
+<li>语法</li>
+</ul>
+<div><pre><code>axios<span>.</span><span>get</span><span>(</span>url<span>?</span>key<span>=</span>value<span>&amp;</span>key2<span>=</span>value2<span>)</span><span>.</span><span>then</span><span>(</span><span>function</span><span>(</span><span>response</span><span>)</span><span>{</span><span>}</span><span>,</span> <span>function</span><span>(</span><span>err</span><span>)</span><span>{</span><span>}</span><span>)</span><span>;</span>
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><ul>
+<li>实例</li>
+</ul>
+<div><pre><code><span><span>&lt;!</span><span>DOCTYPE</span> <span>html</span><span>></span></span>
+<span><span><span>&lt;</span>html</span> <span>lang</span><span><span>=</span><span>"</span>zh<span>"</span></span><span>></span></span>
+	<span><span><span>&lt;</span>head</span><span>></span></span>
+		<span><span><span>&lt;</span>meta</span> <span>charset</span><span><span>=</span><span>"</span>UTF-8<span>"</span></span><span>></span></span>
+		<span><span><span>&lt;</span>meta</span> <span>http-equiv</span><span><span>=</span><span>"</span>X-UA-Compatible<span>"</span></span> <span>content</span><span><span>=</span><span>"</span>IE=edge<span>"</span></span><span>></span></span>
+		<span><span><span>&lt;</span>meta</span> <span>name</span><span><span>=</span><span>"</span>viewport<span>"</span></span> <span>content</span><span><span>=</span><span>"</span>width=device-width, initial-scale=1.0<span>"</span></span><span>></span></span>
+		<span><span><span>&lt;</span>title</span><span>></span></span>Axios 使用<span><span><span>&lt;/</span>title</span><span>></span></span>
+		<span><span><span>&lt;</span>link</span> <span>href</span><span><span>=</span><span>"</span>https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.6.1/css/bootstrap.css<span>"</span></span> <span>rel</span><span><span>=</span><span>"</span>stylesheet<span>"</span></span><span>></span></span>
+		<span><span><span>&lt;</span>script</span> <span>src</span><span><span>=</span><span>"</span>https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js<span>"</span></span><span>></span></span><span></span><span><span><span>&lt;/</span>script</span><span>></span></span>
+	<span><span><span>&lt;/</span>head</span><span>></span></span>
+	<span><span><span>&lt;</span>body</span><span>></span></span>
+		<span><span><span>&lt;</span>div</span> <span>class</span><span><span>=</span><span>"</span>container<span>"</span></span><span>></span></span>
+			<span><span><span>&lt;</span>button</span> <span>class</span><span><span>=</span><span>"</span>btn btn-primary<span>"</span></span><span>></span></span>GET 请求<span><span><span>&lt;/</span>button</span><span>></span></span>
+		<span><span><span>&lt;/</span>div</span><span>></span></span>
+		<span><span><span>&lt;</span>script</span><span>></span></span><span><span>
+			<span>const</span> btn <span>=</span> document<span>.</span><span>querySelector</span><span>(</span><span>"button"</span><span>)</span><span>;</span>
+			btn<span>.</span><span>onclick</span> <span>=</span> <span>function</span><span>(</span><span>)</span> <span>{</span>
+				axios<span>.</span><span>get</span><span>(</span><span>"https://www.baidu.com/s?wd=村雨遥"</span><span>)</span><span>.</span><span>then</span><span>(</span><span>response</span> <span>=></span> <span>{</span>
+					console<span>.</span><span>log</span><span>(</span>response<span>)</span>
+				<span>}</span><span>)</span><span>;</span>
+			<span>}</span>
+		</span></span><span><span><span>&lt;/</span>script</span><span>></span></span>
+	<span><span><span>&lt;/</span>body</span><span>></span></span>
+<span><span><span>&lt;/</span>html</span><span>></span></span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br></div></div><h3 id="post-请求" tabindex="-1"> post 请求</h3>
+<ul>
+<li>语法：</li>
+</ul>
+<div><pre><code>axios<span>.</span><span>post</span><span>(</span>url<span>,</span> <span>{</span>key<span>=</span>value<span>,</span> key2<span>=</span>value2<span>}</span><span>)</span><span>.</span><span>then</span><span>(</span><span>function</span><span>(</span><span>response</span><span>)</span><span>{</span><span>}</span><span>,</span> <span>function</span><span>(</span><span>err</span><span>)</span><span>{</span><span>}</span><span>)</span><span>;</span>
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><ul>
+<li>实例</li>
+</ul>
+<div><pre><code><span><span>&lt;!</span><span>DOCTYPE</span> <span>html</span><span>></span></span>
+<span><span><span>&lt;</span>html</span> <span>lang</span><span><span>=</span><span>"</span>zh<span>"</span></span><span>></span></span>
+	<span><span><span>&lt;</span>head</span><span>></span></span>
+		<span><span><span>&lt;</span>meta</span> <span>charset</span><span><span>=</span><span>"</span>UTF-8<span>"</span></span><span>></span></span>
+		<span><span><span>&lt;</span>meta</span> <span>http-equiv</span><span><span>=</span><span>"</span>X-UA-Compatible<span>"</span></span> <span>content</span><span><span>=</span><span>"</span>IE=edge<span>"</span></span><span>></span></span>
+		<span><span><span>&lt;</span>meta</span> <span>name</span><span><span>=</span><span>"</span>viewport<span>"</span></span> <span>content</span><span><span>=</span><span>"</span>width=device-width, initial-scale=1.0<span>"</span></span><span>></span></span>
+		<span><span><span>&lt;</span>title</span><span>></span></span>Axios 使用<span><span><span>&lt;/</span>title</span><span>></span></span>
+		<span><span><span>&lt;</span>link</span> <span>href</span><span><span>=</span><span>"</span>https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.6.1/css/bootstrap.css<span>"</span></span> <span>rel</span><span><span>=</span><span>"</span>stylesheet<span>"</span></span><span>></span></span>
+		<span><span><span>&lt;</span>script</span> <span>src</span><span><span>=</span><span>"</span>https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js<span>"</span></span><span>></span></span><span></span><span><span><span>&lt;/</span>script</span><span>></span></span>
+	<span><span><span>&lt;/</span>head</span><span>></span></span>
+	<span><span><span>&lt;</span>body</span><span>></span></span>
+		<span><span><span>&lt;</span>div</span> <span>class</span><span><span>=</span><span>"</span>container<span>"</span></span><span>></span></span>			
+			<span><span><span>&lt;</span>button</span> <span>class</span><span><span>=</span><span>"</span>btn btn-warning<span>"</span></span><span>></span></span>POTST 请求<span><span><span>&lt;/</span>button</span><span>></span></span>
+		<span><span><span>&lt;/</span>div</span><span>></span></span>
+		<span><span><span>&lt;</span>script</span><span>></span></span><span><span>
+            <span>data</span><span>:</span> <span>{</span>
+                <span>wd</span><span>:</span> <span>"村雨遥"</span>
+            <span>}</span>
+			<span>const</span> btn <span>=</span> document<span>.</span><span>querySelector</span><span>(</span><span>"button"</span><span>)</span><span>;</span>           
+			btn<span>.</span><span>onclick</span> <span>=</span> <span>function</span><span>(</span><span>)</span> <span>{</span>
+				axios<span>.</span><span>post</span><span>(</span><span>'https://www.baidu.com/s'</span><span>,</span> data<span>)</span><span>.</span><span>then</span><span>(</span><span>response</span> <span>=></span> <span>{</span>
+					console<span>.</span><span>log</span><span>(</span>response<span>)</span>
+				<span>}</span><span>)</span><span>;</span>
+			<span>}</span>
+		</span></span><span><span><span>&lt;/</span>script</span><span>></span></span>
+	<span><span><span>&lt;/</span>body</span><span>></span></span>
+<span><span><span>&lt;/</span>html</span><span>></span></span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br><span>27</span><br></div></div><h3 id="put-请求" tabindex="-1"> put 请求</h3>
+<ul>
+<li>语法</li>
+</ul>
+<div><pre><code>axios<span>.</span><span>put</span><span>(</span>url<span>,</span> <span>{</span>key<span>=</span>value<span>,</span> key2<span>=</span>value2<span>}</span><span>)</span><span>.</span><span>then</span><span>(</span><span>function</span><span>(</span><span>response</span><span>)</span><span>{</span><span>}</span><span>,</span> <span>function</span><span>(</span><span>err</span><span>)</span><span>{</span><span>}</span><span>)</span><span>;</span>
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><ul>
+<li>实例</li>
+</ul>
+<div><pre><code><span><span>&lt;!</span><span>DOCTYPE</span> <span>html</span><span>></span></span>
+<span><span><span>&lt;</span>html</span> <span>lang</span><span><span>=</span><span>"</span>zh<span>"</span></span><span>></span></span>
+	<span><span><span>&lt;</span>head</span><span>></span></span>
+		<span><span><span>&lt;</span>meta</span> <span>charset</span><span><span>=</span><span>"</span>UTF-8<span>"</span></span><span>></span></span>
+		<span><span><span>&lt;</span>meta</span> <span>http-equiv</span><span><span>=</span><span>"</span>X-UA-Compatible<span>"</span></span> <span>content</span><span><span>=</span><span>"</span>IE=edge<span>"</span></span><span>></span></span>
+		<span><span><span>&lt;</span>meta</span> <span>name</span><span><span>=</span><span>"</span>viewport<span>"</span></span> <span>content</span><span><span>=</span><span>"</span>width=device-width, initial-scale=1.0<span>"</span></span><span>></span></span>
+		<span><span><span>&lt;</span>title</span><span>></span></span>Axios 使用<span><span><span>&lt;/</span>title</span><span>></span></span>
+		<span><span><span>&lt;</span>link</span> <span>href</span><span><span>=</span><span>"</span>https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.6.1/css/bootstrap.css<span>"</span></span> <span>rel</span><span><span>=</span><span>"</span>stylesheet<span>"</span></span><span>></span></span>
+		<span><span><span>&lt;</span>script</span> <span>src</span><span><span>=</span><span>"</span>https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js<span>"</span></span><span>></span></span><span></span><span><span><span>&lt;/</span>script</span><span>></span></span>
+	<span><span><span>&lt;/</span>head</span><span>></span></span>
+	<span><span><span>&lt;</span>body</span><span>></span></span>
+		<span><span><span>&lt;</span>div</span> <span>class</span><span><span>=</span><span>"</span>container<span>"</span></span><span>></span></span>
+			<span><span><span>&lt;</span>button</span> <span>class</span><span><span>=</span><span>"</span>btn btn-success<span>"</span></span><span>></span></span>PUT 请求<span><span><span>&lt;/</span>button</span><span>></span></span>
+		<span><span><span>&lt;/</span>div</span><span>></span></span>
+		<span><span><span>&lt;</span>script</span><span>></span></span><span><span>
+			<span>data</span><span>:</span> <span>{</span>
+				<span>name</span><span>:</span> <span>"村雨遥"</span><span>,</span>
+				<span>id</span><span>:</span> <span>"cunyu1943"</span>
+			<span>}</span>
+			<span>const</span> btn <span>=</span> document<span>.</span><span>querySelector</span><span>(</span><span>"button"</span><span>)</span><span>;</span>
+			btn<span>.</span><span>onclick</span> <span>=</span> <span>function</span><span>(</span><span>)</span> <span>{</span>
+				axios<span>.</span><span>put</span><span>(</span><span>'https://www.baidu.com/s'</span><span>,</span> data<span>)</span><span>.</span><span>then</span><span>(</span><span>response</span> <span>=></span> <span>{</span>
+					console<span>.</span><span>log</span><span>(</span>response<span>)</span>
+				<span>}</span><span>)</span><span>;</span>
+			<span>}</span>
+		</span></span><span><span><span>&lt;/</span>script</span><span>></span></span>
+	<span><span><span>&lt;/</span>body</span><span>></span></span>
+<span><span><span>&lt;/</span>html</span><span>></span></span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br><span>27</span><br><span>28</span><br></div></div><h3 id="delete-请求" tabindex="-1"> delete 请求</h3>
+<ul>
+<li>语法</li>
+</ul>
+<div><pre><code>axios<span>.</span><span>delete</span><span>(</span>url<span>?</span>key<span>=</span>value<span>&amp;</span>key2<span>=</span>value2<span>)</span><span>.</span><span>then</span><span>(</span><span>function</span><span>(</span><span>response</span><span>)</span><span>{</span><span>}</span><span>,</span> <span>function</span><span>(</span><span>err</span><span>)</span><span>{</span><span>}</span><span>)</span><span>;</span>
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><ul>
+<li>实例</li>
+</ul>
+<div><pre><code><span><span>&lt;!</span><span>DOCTYPE</span> <span>html</span><span>></span></span>
+<span><span><span>&lt;</span>html</span> <span>lang</span><span><span>=</span><span>"</span>zh<span>"</span></span><span>></span></span>
+	<span><span><span>&lt;</span>head</span><span>></span></span>
+		<span><span><span>&lt;</span>meta</span> <span>charset</span><span><span>=</span><span>"</span>UTF-8<span>"</span></span><span>></span></span>
+		<span><span><span>&lt;</span>meta</span> <span>http-equiv</span><span><span>=</span><span>"</span>X-UA-Compatible<span>"</span></span> <span>content</span><span><span>=</span><span>"</span>IE=edge<span>"</span></span><span>></span></span>
+		<span><span><span>&lt;</span>meta</span> <span>name</span><span><span>=</span><span>"</span>viewport<span>"</span></span> <span>content</span><span><span>=</span><span>"</span>width=device-width, initial-scale=1.0<span>"</span></span><span>></span></span>
+		<span><span><span>&lt;</span>title</span><span>></span></span>Axios 使用<span><span><span>&lt;/</span>title</span><span>></span></span>
+		<span><span><span>&lt;</span>link</span> <span>href</span><span><span>=</span><span>"</span>https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.6.1/css/bootstrap.css<span>"</span></span> <span>rel</span><span><span>=</span><span>"</span>stylesheet<span>"</span></span><span>></span></span>
+		<span><span><span>&lt;</span>script</span> <span>src</span><span><span>=</span><span>"</span>https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js<span>"</span></span><span>></span></span><span></span><span><span><span>&lt;/</span>script</span><span>></span></span>
+	<span><span><span>&lt;/</span>head</span><span>></span></span>
+	<span><span><span>&lt;</span>body</span><span>></span></span>
+		<span><span><span>&lt;</span>div</span> <span>class</span><span><span>=</span><span>"</span>container<span>"</span></span><span>></span></span>
+			<span><span><span>&lt;</span>button</span> <span>class</span><span><span>=</span><span>"</span>btn btn-danger<span>"</span></span><span>></span></span>DELETE 请求<span><span><span>&lt;/</span>button</span><span>></span></span>
+		<span><span><span>&lt;/</span>div</span><span>></span></span>
+		<span><span><span>&lt;</span>script</span><span>></span></span><span><span>
+			<span>const</span> btn <span>=</span> document<span>.</span><span>querySelector</span><span>(</span><span>"button"</span><span>)</span><span>;</span>
+			btn<span>.</span><span>onclick</span> <span>=</span> <span>function</span><span>(</span><span>)</span> <span>{</span>
+				axios<span>.</span><span>delete</span><span>(</span><span>"https://www.baidu.com/s?wd=村雨遥"</span><span>)</span><span>.</span><span>then</span><span>(</span><span>response</span> <span>=></span> <span>{</span>
+					console<span>.</span><span>log</span><span>(</span>response<span>)</span>
+				<span>}</span><span>)</span><span>;</span>
+			<span>}</span>
+		</span></span><span><span><span>&lt;/</span>script</span><span>></span></span>
+	<span><span><span>&lt;/</span>body</span><span>></span></span>
+<span><span><span>&lt;/</span>html</span><span>></span></span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br></div></div><h2 id="总结" tabindex="-1"> 总结</h2>
+<p>以上就是本文的所有内容了，主要介绍了 <code>Axios</code> 的定义、特性、如何安装以及所支持的浏览器，然后介绍了如何使用 <code>Axios</code> 来模拟发起最常用的 <code>GET</code>、<code>POST</code>、<code>PUT</code> 以及 <code>DELETE</code> 请求。</p>
+]]></content:encoded>
+      <enclosure url="https://raw.github.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" type="image/png"/>
+    </item>
     <item>
       <title>Java 菜鸟入门：Fastjson V2 简单使用手册</title>
       <link>https://cunyu1943.github.io/JavaPark/JavaPark/java/java-se/fastjson2-quickstart.html</link>
