@@ -3,7 +3,7 @@
   <id>https://cunyu1943.github.io/JavaPark/JavaPark/</id>
   <title>JavaPark</title>
   <subtitle>Java 自学编程之路</subtitle>
-  <updated>2022-06-10T14:21:03.569Z</updated>
+  <updated>2022-06-11T09:10:09.588Z</updated>
   <generator>vuepress-plugin-feed2</generator>
   <link rel="self" href="https://cunyu1943.github.io/JavaPark/JavaPark/atom.xml"/>
   <link rel="alternate" href="https://cunyu1943.github.io/JavaPark/JavaPark/"/>
@@ -27,6 +27,70 @@
   <category term="SQL 必知必会 50 题"/>
   <category term="Java 编程实例"/>
   <category term="Maven 入门教程"/>
+  <entry>
+    <title type="html">博客搭建：Hugo 博客搭建教程</title>
+    <id>https://cunyu1943.github.io/JavaPark/JavaPark/efficiency/blog/hugo.html</id>
+    <link href="https://cunyu1943.github.io/JavaPark/JavaPark/efficiency/blog/hugo.html"/>
+    <updated>2022-06-11T09:08:13.000Z</updated>
+    <content type="html"><![CDATA[<h2 id="前言" tabindex="-1"> 前言</h2>
+<p>有了利用 <code>Hexo</code>、<code>docsify</code>、<code>vuepress</code> 等框架来搭建博客的经历之后，我们来今天又来看看 <code>Hugo</code>。<code>Hugo</code> 是一款基于 <code>Go</code> 语言而实现的静态网站生成器，具有简单易用、高效易扩展、快速部署的特点。</p>
+<p>这里先给出 <code>Hugo</code> 的中英文官方文档，方便大家遇到问题时查阅：</p>
+<ol>
+<li><a href="https://www.gohugo.org/" target="_blank" rel="noopener noreferrer"><code>Hugo</code> 中文文档<ExternalLinkIcon/></a></li>
+<li><a href="https://gohugo.io/documentation/" target="_blank" rel="noopener noreferrer"><code>Hugo</code> 英文文档<ExternalLinkIcon/></a></li>
+</ol>
+<p>接下来就来看看，如何利用 <code>Hugo</code> 来搭建一个博客。</p>
+<h2 id="搭建过程" tabindex="-1"> 搭建过程</h2>
+<h3 id="安装-hugo" tabindex="-1"> 安装 Hugo</h3>
+<p>既然要使用 <code>Hugo</code>，那么首先需要对它进行安装。如果要通过二进制安装包的方式进行安装，那么首先需要到这里去进行选择适合自己平台的安装包，然后下载它。</p>
+<blockquote>
+<p><a href="https://github.com/gohugoio/hugo/releases" target="_blank" rel="noopener noreferrer">下载链接<ExternalLinkIcon/></a></p>
+</blockquote>
+<p>这里不仅有适合 <code>Windows</code> 平台的安装包，还包括了 <code>Linux</code> 平台和 <code>macOS</code> 平台的安装包。不仅如此，针对不同用户，还细心地提供了 <code>32</code> 位和 <code>64</code> 位来供选择。更甚至针对不同架构的芯片也提供了相应的安装包，可以说是十分细心了。
+<img src="https://img-blog.csdnimg.cn/d129c163bfb14533ad38844607808030.png" alt="" loading="lazy"></p>
+<p>不过这里我演示主要是基于 <code>macOS</code> 平台，所以我就不通过安装包的形式来进行安装了，这里通过 <code>homebrew</code> 一行命令就能够轻松搞定。</p>
+<div><pre><code>brew <span>install</span> hugo
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p><img src="https://img-blog.csdnimg.cn/d2ab8bfcb35a4b65b08a80fb15047b25.png" alt="" loading="lazy"></p>
+<p>如果你的 <code>macOS</code> 上还没有安装 <code>homebrew</code>，那么先抓紧去安装下吧。</p>
+<p>这里温馨提示下，国内用户依照 <code>homebrew</code> 官网的方式来进行安装基本上都是会失败的，所以这里给大家推荐另一种安装方式，通过以下脚本进行安装即可。</p>
+<div><pre><code>/bin/bash -c <span>"<span><span>$(</span><span>curl</span> -fsSL https://gitee.com/ineo6/homebrew-install/raw/master/install.sh<span>)</span></span>"</span>
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p><img src="https://img-blog.csdnimg.cn/6122b0668d65457d98601503ce079660.png" alt="" loading="lazy"></p>
+<h3 id="检查是否成功" tabindex="-1"> 检查是否成功</h3>
+<p>虽然通过上述的命令安装后，控制台是提示我们安装成功了，但我们心里没谱呀，就想看看到低安装成功了没。那这个时候就可以通过查看 <code>Hugo</code> 版本号的方式，来却 <code>Hugo</code> 是否安装成功。</p>
+<div><pre><code>hugo version
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p><img src="https://img-blog.csdnimg.cn/33ac00bbeecb40a4b9d8c9ac2f8d845a.png" alt="" loading="lazy"></p>
+<p>如果安装成功了，那么执行命令后就会像我们上面那样，提示你所安装的 <code>Hugo</code> 的版本。</p>
+<h3 id="初始化网站" tabindex="-1"> 初始化网站</h3>
+<p>既然安装好了，接下来就是初始化我们的网站目录了。通过以下命令，我们就能够完成 <code>Hugo</code> 项目的初始化了！</p>
+<div><pre><code>hugo new site <span>[</span>项目名称<span>]</span>
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><div><pre><code>hugo new site JavaPark
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p><img src="https://img-blog.csdnimg.cn/65a1e46ad4944cf88da661fdaa64e27e.png" alt="" loading="lazy"></p>
+<p>项目初始化后，得到的目录如下。</p>
+<p><img src="https://img-blog.csdnimg.cn/28806f5981a5420c9000e5ec1a3d5794.png" alt="" loading="lazy"></p>
+<p>这里主要需要需要注意 <code>config.toml</code> ，这是项目的配置文件，主要用于配置 <code>Hugo</code>，该文件中的配置会对整个工程有效。<code>theme</code> 目录下主要用于放置主题，里边一般还会有一个 <code>theme.toml</code>，用于配置主题。</p>
+<p>默认情况下，<code>config.toml</code> 里边只会有以下三个配置。</p>
+<p><img src="https://img-blog.csdnimg.cn/e45101bacfe645d681b9445223e2558c.png" alt="" loading="lazy"></p>
+<h3 id="设置主题" tabindex="-1"> 设置主题</h3>
+<p>为了给我们的网站设置样式，我们需要去选择一个喜欢的主题。<code>Hugo</code> 虽然不像 <code>Hexo</code> 提供了较多的主题，但是也还是有很多不错的，大家可以去皮肤列表找。</p>
+<blockquote>
+<p><a href="https://themes.gohugo.io/" target="_blank" rel="noopener noreferrer">皮肤列表<ExternalLinkIcon/></a></p>
+</blockquote>
+<p>这里我选择了一个皮肤 <a href="https://themes.gohugo.io/themes/hugo-theme-m10c/" target="_blank" rel="noopener noreferrer"><code>m10c</code><ExternalLinkIcon/></a>，进入我们初始化的项目，然后利用如下命令将主题下载到 <code>theme</code> 文件夹下。</p>
+<div><pre><code><span>git</span> clone https://github.com/vaga/hugo-theme-m10c.git themes/m10c
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p><img src="https://img-blog.csdnimg.cn/f263ad2e4ba943089bc164f3ffa1028d.png" alt="" loading="lazy"></p>
+<p>接着到项目配置文件 <code>config.toml</code> 中，设置主题。</p>
+<div><pre><code><span>theme</span> <span>=</span> <span>"m10c"</span>
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p><img src="https://img-blog.csdnimg.cn/5d23f2e7cafe49b5adcf4d605ee60209.png" alt="" loading="lazy"></p>
+<h3 id="预览" tabindex="-1"> 预览</h3>
+<p>设置好主题之后，就可以进行预览了！使用如下命令启动 <code>Hugo</code> 服务器，然后进入 <code>http://localhost:1313</code> 就可以进行预览了！</p>
+<div><pre><code>hugo server -D
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p><img src="https://img-blog.csdnimg.cn/ce1fbd19b3bf45bbaa86b66d171c5921.png" alt="" loading="lazy"></p>
+<h2 id="总结" tabindex="-1"> 总结</h2>
+<p>以上就是如何利用 <code>Hugo</code> 搭建一个博客了，主要从 <code>Hugo</code> 安装、初始化项目、主题设置、预览等几个方面介绍了 <code>Hugo</code> 的使用，剩下的就是写作了。这是件很难的事，希望大家能一直坚持下去。其实 <code>Hugo</code> 里边还有好多玩法，这里就不做一一介绍了，大家可以去官网探索更多玩法。</p>
+]]></content>
+    <category term="博客搭建"/>
+    <published>2022-06-11T11:06:52.000Z</published>
+  </entry>
   <entry>
     <title type="html">博客搭建：dumi 搭建文档型博客</title>
     <id>https://cunyu1943.github.io/JavaPark/JavaPark/efficiency/blog/dumi.html</id>
@@ -23354,179 +23418,5 @@ halo:
 <img src="https://github.com/cunyu1943/cunyu1943/blob/main/imgs/wepublic.gif" width="200" alt="公众号" />]]></content>
     <category term="博客搭建"/>
     <published>2022-01-01T20:42:01.000Z</published>
-  </entry>
-  <entry>
-    <title type="html">博客搭建：超详细 Hexo + Github Pages 搭建教程</title>
-    <id>https://cunyu1943.github.io/JavaPark/JavaPark/efficiency/blog/hexo.html</id>
-    <link href="https://cunyu1943.github.io/JavaPark/JavaPark/efficiency/blog/hexo.html"/>
-    <updated>2022-04-18T14:16:18.000Z</updated>
-    <content type="html"><![CDATA[<h2 id="前言" tabindex="-1"> 前言</h2>
-<p>现在市面上已经有许多博客了，比如 CSDN、掘金、博客园、简书等等。我们可以直接在上面发表内容，而且交互比较人性化，而且也能被搜索引擎检索到。但是总归是别人的平台，经常会受限，因此我们就希望能有自己的博客。之前也尝试过搭建过不同的博客类型，折腾了不少工作，最终决定定型，采用 Hexo + Github Pages 的方式。今天就带大家一起来搭建自己的博客。由于是采用 Hexo + Github Pages 的方式，所以都是免费的，只是需要有一定的动手能力！</p>
-<h2 id="hexo-简介" tabindex="-1"> Hexo 简介</h2>
-<p><a href="https://hexo.io/zh-cn/docs/" title="Hexo" target="_blank" rel="noopener noreferrer">Hexo<ExternalLinkIcon/></a> 是一个快速、简洁且高效的静态博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。我们只需要通过 Markdown 语法写好自己的博客内容，然后通过简单的命令就能够将生成的网页上传到 Github，然后大家都可以来访问你的网页了。既方便了自己，也给了自己一个展示自己成果的平台，是不是一举两得。</p>
-<h2 id="搭建步骤" tabindex="-1"> 搭建步骤</h2>
-<p>搭建之前，需要做一些准备工作，首先需要确保你的电脑上已经上安装好了 Git 和 Node.Js，然后才能开始安装 Hexo，那么首先我们先来看看如何准备这这些环境。</p>
-<h3 id="git" tabindex="-1"> Git</h3>
-<h4 id="安装" tabindex="-1"> 安装</h4>
-<ol>
-<li><strong>Window</strong>：<a href="https://git-scm.com/download/win" title="下载并安装" target="_blank" rel="noopener noreferrer">下载并安装<ExternalLinkIcon/></a></li>
-<li><strong>macOS</strong>：<a href="https://sourceforge.net/projects/git-osx-installer/" title="下载并安装" target="_blank" rel="noopener noreferrer">下载并安装<ExternalLinkIcon/></a></li>
-<li><strong>Linux（Debian，Ubuntu）</strong>：<code>sudo apt-get install git-core</code></li>
-<li><strong>Linux（Fedora、RedHat、CentOS）</strong>：<code>sudo yum install git-core</code></li>
-</ol>
-<h4 id="设置" tabindex="-1"> 设置</h4>
-<p>安装成功后，将 git 与 GitHub 账号绑定，右键打开 Git Bash，然后设置配置信息：</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/9f214e62438f3061eb4e3e371dac06a2.png" alt="" loading="lazy"></p>
-<div><pre><code><span># 配置用户名和邮箱</span>
-<span>git</span> config --global user.name <span>"github 用户名"</span>
-<span>git</span> config --global user.email <span>"github 注册邮箱"</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br></div></div><p>比如我的配置就是：</p>
-<div><pre><code>git config <span>--</span>global user<span>.</span>name <span>"cunyu1943"</span>
-git config <span>--</span>global user<span>.</span>email <span>"747731461@qq.com"</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br></div></div><p>接着生成 ssh 密钥文件，输入如下命令后直接三次回车即可，一般不需要设置密码；</p>
-<div><pre><code><span># 生成 ssh 密钥</span>
-ssh-keygen -t rsa -C <span>"github 注册邮箱"</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br></div></div><p>我生成秘钥的命令：</p>
-<div><pre><code>ssh-keygen -t rsa -C <span>"747731461@qq.com"</span>
-</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p><img src="https://img-blog.csdnimg.cn/img_convert/55ebc468cd27b89b8a96e53b2be37a83.png" alt="" loading="lazy"></p>
-<p>一般执行上述命令之后，会生成 <code>id_rsa</code> 和 <code>id_rsa.pub</code> 两个文件，前者是我们私有的，而后者则是对外开放的。接着找到生成的 <code>.ssh</code> 的文件夹中的 id_rsa.pub 密钥，将内容复制；</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/0411108dec507c1bbe92577ed494d74c.png" alt="" loading="lazy"></p>
-<p>然后打开 <a href="https://github.com/settings/keys" title="GitHub-Settings-Keys" target="_blank" rel="noopener noreferrer">GitHub-Settings-Keys<ExternalLinkIcon/></a> 页面，创建一个新的 SSH key，填写 <code>Title</code> 和 <code>Key</code>，<code>Title</code> 可以随意，而 <code>Key</code> 的内容则是我们刚才复制的 <code>id_rsa.pub</code> 中的内容，最后点击 <code>Add SSH key</code> 即可；</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/5f24db5b06ddc011da5d1410cc3b1898.png" alt="" loading="lazy"></p>
-<h3 id="node-js-安装" tabindex="-1"> Node.Js 安装</h3>
-<h4 id="安装-1" tabindex="-1"> 安装</h4>
-<p>去官网下载最新的稳定版 <a href="https://nodejs.org/en/" title="Node.JS" target="_blank" rel="noopener noreferrer">Node.JS<ExternalLinkIcon/></a> ，一般推荐 64 位（大家应该现在用的电脑基本都是 64 位的吧），安装的话很简单，基本就是下一步下一步点击就好了。如果还是不知道如何安装，可以参考我的另一篇博客：<a href="https://blog.csdn.net/github_39655029/article/details/105397485" title="Windows 下 Node.js 的安装（多图版）" target="_blank" rel="noopener noreferrer">Windows 下 Node.js 的安装（多图版）<ExternalLinkIcon/></a></p>
-<h4 id="验证" tabindex="-1"> 验证</h4>
-<p>安装完成后，要查看我们是否安装成功，可以打开命令提示符（<code>Win + R</code>），输入 <code>cmd</code> 打开控制台，输入如下命令，如果出现对应版本号，说明安装成功了；</p>
-<div><pre><code><span>node</span> -v
-<span>npm</span> -v
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br></div></div><p><img src="https://img-blog.csdnimg.cn/img_convert/25231850a3b1ea577a2e435bccc4226a.png" alt="" loading="lazy"></p>
-<h4 id="设置-1" tabindex="-1"> 设置</h4>
-<p>由于下载包是从国外服务器，所以速度较慢，因此我们推荐用阿里的国内镜像进行设置；</p>
-<div><pre><code><span>npm</span> config <span>set</span> registry https://registry.npm.taobao.org
-</code></pre><div aria-hidden="true"><span>1</span><br></div></div><h3 id="hexo-安装" tabindex="-1"> Hexo 安装</h3>
-<p>在你的硬盘上找个地儿，用来存放你的博客文件，比如我的就在 <code>D:personalFiles/github/blog</code>，这个文件夹你可以根据自己的喜好来设置。然后从命令台进入当前文件夹，接下来就是安装过程了；</p>
-<ol>
-<li>首先安装 Hexo</li>
-</ol>
-<div><pre><code><span>npm</span> i hexo-cli -g
-</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p><img src="https://img-blog.csdnimg.cn/img_convert/677f0c2187eb990da1691fedab237596.png" alt="" loading="lazy"></p>
-<ol start="2">
-<li>新建一个文件夹用于存放你的博客，比如我的是 <code>blog</code>，然后进入该文件夹，并用如下命令进行初始化并安装必备组件；</li>
-</ol>
-<div><pre><code>hexo init <span>.</span>
-<span>npm</span> <span>install</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br></div></div><p><img src="https://img-blog.csdnimg.cn/img_convert/4350b00e1562e51b4960250544eaa884.png" alt="" loading="lazy"></p>
-<ol start="3">
-<li>初始化后，目录结构如下；</li>
-</ol>
-<div><pre><code><span>.</span>
-├── _config.yml <span># 网站配置信息</span>
-├── package.json <span># 应用程序信息</span>
-├── scaffolds <span># 模板文件夹</span>
-├── <span>source</span> <span># 存放用户资源</span>
-<span>|</span>   ├── _drafts
-<span>|</span>   └── _posts
-└── themes <span># 主题文件夹</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br></div></div><ol start="4">
-<li>然后输入如下命令，然后在浏览器中打开 <code>http://localhost:4000</code>；</li>
-</ol>
-<div><pre><code><span># 新建博客</span>
-hexo new <span>"博客名"</span>
-<span># 生成静态网页</span>
-hexo g
-<span># 打开本地服务器</span>
-hexo s
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br></div></div><p>然后就可以看到如下的界面，不过我的是经过修改过的，所以和你的会不一样。</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/535f3847ee858f27e637558157da3133.png" alt="" loading="lazy"></p>
-<h3 id="github-个人仓库" tabindex="-1"> Github 个人仓库</h3>
-<p>完成上面的步骤之后，我们就能在本地进行预览了，不过我们如果想要发布到网上供别人看的话，那就得利用 Github Pages 的功能了，下边就来介绍如何结合 Hexo + Github Pages ，将我们的博客推送到网上去，方便大家在任何地方访问！</p>
-<blockquote>
-<p>首先你得有个 GitHub 账号，如果没有的，请出门 <a href="https://github.com/" title="右转" target="_blank" rel="noopener noreferrer">右转<ExternalLinkIcon/></a> 先去注册个账号；</p>
-</blockquote>
-<p>有了账号之后，新建一个仓库，而且得确保你的仓库是 <code>public</code>，你要搞个 <code>private</code>，谁能访问的了？？？同时，仓库名一定要是：</p>
-<blockquote>
-<p><strong>用户名.github.io</strong></p>
-<p><strong>用户名.github.io</strong></p>
-<p><strong>用户名.github.io</strong></p>
-</blockquote>
-<p>这个用户名建议不要太复杂，但是又要能体现你个人特点，因为后续让别人访问你的博客时，就要通过 <code>https://用户名.github.io</code> 这个域名来访问。比如我的用户名是 <strong>cunyu1943</strong>，所以我的仓库就是 <a href="https://github.com/cunyu1943/cunyu1943.github.io" title="cunyu1943.github.io" target="_blank" rel="noopener noreferrer">cunyu1943.github.io<ExternalLinkIcon/></a>：</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/0a6e5cdf9098a51f48d33b5c096be223.png" alt="" loading="lazy"></p>
-<h3 id="部署到-github" tabindex="-1"> 部署到 Github</h3>
-<p>完成上面的步骤后，你应该能在本地进行预览了，接下来就是推送网站到 Github Pages 了，然后我们就能被其他人访问了。</p>
-<p>只需要在我们刚才的博客根目录中的站点配置文件 <code>_config.yml</code> ，设置为你的个人仓库名即可：</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/68519976be11905dd3d69f9c7e6b1bd9.png" alt="" loading="lazy"></p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/c70585f9bfd39a935240959f7c907fac.png" alt="" loading="lazy"></p>
-<p>完成上述步骤之后，主要使用如下命令，就能将我们本地的内容推送到远程 GitHub 仓库了，然后在浏览器中访问：</p>
-<blockquote>
-<p>https://用户名.github.io</p>
-</blockquote>
-<p>比如我的博客 <a href="https://cunyu1943.github.io/" title="村雨遥的博客" target="_blank" rel="noopener noreferrer">村雨遥的博客<ExternalLinkIcon/></a>；</p>
-<div><pre><code>hexo clean
-hexo g
-hexo d
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br></div></div><p><img src="https://img-blog.csdnimg.cn/img_convert/d5697ef15cda2973caab9df285cae840.png" alt="" loading="lazy"></p>
-<h3 id="gitee-个人仓库" tabindex="-1"> Gitee 个人仓库</h3>
-<p>上面说完部署到 Github，接下来就说说怎么部署到 Gitee，老规矩，首先你得需要一个 Gitee 账号，如果没有的，出门 <a href="https://gitee.com/" title="右转" target="_blank" rel="noopener noreferrer">右转<ExternalLinkIcon/></a> 先去注册个账号。</p>
-<p>然后新建一个仓库，同样有几点需要注意的：</p>
-<ol>
-<li>保证你的仓库是 <code>public</code>；</li>
-<li>仓库名是 <strong>你的用户名</strong>，这一点和 Github 略有不同，不需要是 <strong>用户名.gitee.io</strong>；</li>
-</ol>
-<p>比如我的用户名是 <code>cunyu1943</code>，所以我的仓库名就是 <a href="https://gitee.com/cunyu1943/cunyu1943" title="cunyu1943" target="_blank" rel="noopener noreferrer">cunyu1943<ExternalLinkIcon/></a>。</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/e52925336dd43a2855f20c4b8070aec1.png" alt="" loading="lazy"></p>
-<h3 id="部署到-gitee" tabindex="-1"> 部署到 Gitee</h3>
-<p>完成上面的步骤后，你应该能在本地进行预览了，接下来就是推送网站到 Gitee Pages 了，然后我们就能被其他人访问了。这里需要注意的是，Gitee Pages 不像 Github Pages 会自动更新，它需要你每次推送后，去更新一下，如果想要自动更新，就需要开通 Gitee 的会员。</p>
-<p>然后需要在我们刚才的博客根目录中的站点配置文件 <code>_config.yml</code> ，设置为你的个人仓库名即可：</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/68519976be11905dd3d69f9c7e6b1bd9.png" alt="" loading="lazy"></p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/acf71e19a8e282048961690fb61789eb.png" alt="" loading="lazy"></p>
-<p>完成上述步骤之后，主要使用如下命令，就能将我们本地的内容推送到远程 Gitee 仓库了，去手动更新 Gitee Pages 后，然后在浏览器中访问：</p>
-<blockquote>
-<p>https://用户名.gitee.io</p>
-</blockquote>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/ad5783dd0f33293d94d0c2ca04a29a31.png" alt="" loading="lazy"></p>
-<h2 id="如何写新博客并推送到远程" tabindex="-1"> 如何写新博客并推送到远程</h2>
-<p>通过上面的步骤后，你的博客应该就已经搭建成功，而且能通过 <code>https://用户名.github.io</code> 的方式进行访问了。接下来如果我们要发一篇新的博客内容，又应该怎么办呢？接下来就详细讲一下如何操作。</p>
-<ol>
-<li>首先进入博客所在文件夹，然后右键进入控制台，用如下命令进行创建新的文章；</li>
-</ol>
-<div><pre><code>hexo n <span>"博客标题名"</span>
-</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p><img src="https://img-blog.csdnimg.cn/img_convert/b07c430fcf115fc31016addcd91f9003.png" alt="" loading="lazy"></p>
-<ol start="2">
-<li>接着在 <code>blog/source/_posts</code> 目录下应该就会有创建好的以文章标题名命名的 Markdown 文件；</li>
-</ol>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/d07a96180d7ecbf8556be4e7d8cf6440.png" alt="" loading="lazy"></p>
-<ol start="3">
-<li>接着打开该文件，编写你自己想要的内容即可；</li>
-</ol>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/8cef628ef730e4deb715823a5e1a91b5.png" alt="" loading="lazy"></p>
-<ol start="4">
-<li>接着在控制台使用如下命令，将其推送到远程 GitHub 仓库，等过一会儿之后，访问即可看到刚才推送的新文章了！</li>
-</ol>
-<div><pre><code>hexo g
-hexo d
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br></div></div><p><img src="https://img-blog.csdnimg.cn/img_convert/9830d8a8159ea45fd40bbffb35411bed.png" alt="" loading="lazy"></p>
-<h2 id="如何绑定自定义域名" tabindex="-1"> 如何绑定自定义域名</h2>
-<p>通过 <code>用户名.github.io</code> 的方式来访问总归是有些不方便，如果我们需要自己的个性域名，又应该如何设置呢？那么在此之前，你需要有一个已经备案好的域名，如果没有的话，请到阿里云、腾讯云等场商购买自己的域名，然后通过该平台备案，然后添加两条解析记录，以我的腾讯云为例：</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/cc5d3b48e7cfb72790a978a91f2b7cce.png" alt="" loading="lazy"></p>
-<p>备好案并设置解析之后，在 Github 的博客项目中，依次点击 <code>Settings-&gt;Pages</code>，然后在 <code>Custom domain</code> 添加你的域名即可，最后 <code>Save</code> 即可，此时你的博客根目录下应该会多一个 <code>CNAME</code> 的文件，然后你就可以通过自己的域名来访问你的博客了。</p>
-<p>当然，有时候可能经过上面的设置后，博客根目录下不会出现名为 <code>CNAME</code> 的文件，如果没有，我们可以通过在本地博客 <code>/source</code> 目录下手动建立一个 <code>CNAME</code> 文件（无后缀），然后把你的域名填进去并保存，最后依次执行如下命令将设置上传到 Github 即可 ~</p>
-<div><pre><code>hexo g
-hexo d
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br></div></div><p><img src="https://img-blog.csdnimg.cn/img_convert/4c8c10d34cd0a17cf16ca8ccf790e037.png" alt="" loading="lazy"></p>
-<p>比如我的域名为 <code>cunyu1943.site</code>，通过设置之后，我们就可以通过 https://cunyu1943.site 来访问我的博客了。</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/8618f69960bda326648f46a003d03241.png" alt="" loading="lazy"></p>
-<h2 id="美化" tabindex="-1"> 美化</h2>
-<p>经过上面的设置之后，我们只是得到了一个简单地博客，如果你也想让你的博客像我的一样酷（zhuang）炫（bi），就要用到主题了，我采用的主题是 <a href="https://github.com/blinkfox/hexo-theme-matery" title="hexo-theme-matery" target="_blank" rel="noopener noreferrer">hexo-theme-matery<ExternalLinkIcon/></a>，一个基于材料设计和响应式设计而成的主题，而且关于如何设置它也有十分详细的文档，如果存在不懂得问题，还可以及时提交 issue，作者回复也十分及时。</p>
-<p>如果你不想过于折腾，那么你完成上面的步骤之后，也可以直接采用我的博客源代码，然后把里边的个人配置改一下就 ok 了，我的博客源码地址：<a href="https://github.com/cunyu1943/hexo-theme-matery-personal" title="cunyu1943/hexo-theme-matery-personal" target="_blank" rel="noopener noreferrer">hexo-theme-matery-personal<ExternalLinkIcon/></a></p>
-<p>大家直接下载下来，然后把 <code>node_modules.zip</code> 进行解压，然后修改其中的部分配置（也就是你的 Github、网名啥的呀个人信息），主要是修改根目录下的 <code>_config.yml</code> 和 <code>_config.hexo-theme-matery.yml</code>，然后就可以直接写博客了。当然，前提是你把环境啥的都搭建好了。</p>
-<p>PS：我对于配置文件中的某些关键信息进行了隐藏，比如 <code>gitalk</code>、<code>gitment</code>、<code>Valine</code>、<code>baiduAnalytics</code> 等，这些需要你自己去注册并获取自己的信息，请记得修改，否则可能导致失败。</p>
-<h2 id="总结" tabindex="-1"> 总结</h2>
-<p>至此，我们的博客就搭建完成了，是不是很简单，赶紧去试试吧！</p>
-<p>对于文中不清楚的地方，欢迎留言，我会在看到的第一时间回复你！</p>
-<p>关注公众号，获取最新文章更新</p>
-<img src="https://github.com/cunyu1943/cunyu1943/blob/main/imgs/wepublic.gif" width="200" alt="公众号" />]]></content>
-    <category term="博客搭建"/>
-    <published>2021-12-30T22:06:52.000Z</published>
   </entry>
 </feed>
