@@ -3,10 +3,11 @@
   <id>https://cunyu1943.github.io/JavaPark/JavaPark/</id>
   <title>JavaPark</title>
   <subtitle>Java 自学编程之路</subtitle>
-  <updated>2022-06-11T09:10:09.588Z</updated>
+  <updated>2022-06-12T08:44:02.286Z</updated>
   <generator>vuepress-plugin-feed2</generator>
   <link rel="self" href="https://cunyu1943.github.io/JavaPark/JavaPark/atom.xml"/>
   <link rel="alternate" href="https://cunyu1943.github.io/JavaPark/JavaPark/"/>
+  <category term="SQL 进阶挑战"/>
   <category term="博客搭建"/>
   <category term="Vue3 笔记"/>
   <category term="Java 菜鸟入门"/>
@@ -27,6 +28,557 @@
   <category term="SQL 必知必会 50 题"/>
   <category term="Java 编程实例"/>
   <category term="Maven 入门教程"/>
+  <entry>
+    <title type="html">SQL 进阶挑战（1 - 5）</title>
+    <id>https://cunyu1943.github.io/JavaPark/JavaPark/database/sql-advanced/1-5.html</id>
+    <link href="https://cunyu1943.github.io/JavaPark/JavaPark/database/sql-advanced/1-5.html"/>
+    <updated>2022-06-12T08:38:05.000Z</updated>
+    <content type="html"><![CDATA[<h2 id="sql1-插入记录-一" tabindex="-1"> SQL1 插入记录（一）</h2>
+<h3 id="描述" tabindex="-1"> 描述</h3>
+<p>牛客后台会记录每个用户的试卷作答记录到 exam_record 表，现在有两个用户的作答记录详情如下：</p>
+<ul>
+<li>用户 1001 在 2021 年 9 月 1 日晚上 10 点 11 分 12 秒开始作答试卷 9001，并在 50分钟后提交，得了 90 分；</li>
+<li>用户 1002 在2021年9月4日上午7点1分2秒开始作答试卷 9002，并在10分钟后退出了平台。</li>
+</ul>
+<p>试卷作答记录表 exam_record 中，表已建好，其结构如下。</p>
+<table>
+<thead>
+<tr>
+<th>Filed</th>
+<th>Type</th>
+<th>Null</th>
+<th>Key</th>
+<th>Extra</th>
+<th>Default</th>
+<th>Comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>int(11)</td>
+<td>NO</td>
+<td>PRI</td>
+<td>auto_increment</td>
+<td>(NULL)</td>
+<td>自增ID</td>
+</tr>
+<tr>
+<td>uid</td>
+<td>int(11)</td>
+<td>NO</td>
+<td></td>
+<td></td>
+<td>(NULL)</td>
+<td>用户ID</td>
+</tr>
+<tr>
+<td>exam_id</td>
+<td>int(11)</td>
+<td>NO</td>
+<td></td>
+<td></td>
+<td>(NULL)</td>
+<td>试卷ID</td>
+</tr>
+<tr>
+<td>start_time</td>
+<td>datetime</td>
+<td>NO</td>
+<td></td>
+<td></td>
+<td>(NULL)</td>
+<td>开始时间</td>
+</tr>
+<tr>
+<td>submit_time</td>
+<td>datetime</td>
+<td>YES</td>
+<td></td>
+<td></td>
+<td>(NULL)</td>
+<td>提交时间</td>
+</tr>
+<tr>
+<td>score</td>
+<td>tinyint(4)</td>
+<td>YES</td>
+<td></td>
+<td></td>
+<td>(NULL)</td>
+<td>得分</td>
+</tr>
+</tbody>
+</table>
+<p>该题最后会通过执行 SELECT uid, exam_id, start_time, submit_time, score FROM exam_record;来对比结果</p>
+<h3 id="问题" tabindex="-1"> 问题</h3>
+<p>请用一条语句将这两条记录插入表中。</p>
+<h3 id="示例" tabindex="-1"> 示例</h3>
+<div><pre><code>输入：
+<span>drop</span> <span>table</span> <span>if</span> <span>EXISTS</span> exam_record<span>;</span>
+<span>CREATE</span> <span>TABLE</span> <span>IF</span> <span>NOT</span> <span>EXISTS</span> exam_record <span>(</span>
+id <span>int</span> <span>PRIMARY</span> <span>KEY</span> <span>AUTO_INCREMENT</span> <span>COMMENT</span> <span>'自增ID'</span><span>,</span>
+uid <span>int</span> <span>NOT</span> <span>NULL</span> <span>COMMENT</span> <span>'用户ID'</span><span>,</span>
+exam_id <span>int</span> <span>NOT</span> <span>NULL</span> <span>COMMENT</span> <span>'试卷ID'</span><span>,</span>
+start_time <span>datetime</span> <span>NOT</span> <span>NULL</span> <span>COMMENT</span> <span>'开始时间'</span><span>,</span>
+submit_time <span>datetime</span> <span>COMMENT</span> <span>'提交时间'</span><span>,</span>
+score <span>tinyint</span> <span>COMMENT</span> <span>'得分'</span>
+<span>)</span><span>CHARACTER</span> <span>SET</span> utf8 <span>COLLATE</span> utf8_general_ci<span>;</span>
+<span>TRUNCATE</span> exam_record<span>;</span>
+复制
+输出：
+<span>1001</span><span>|</span><span>9001</span><span>|</span><span>2021</span><span>-</span><span>09</span><span>-</span><span>01</span> <span>22</span>:<span>11</span>:<span>12</span><span>|</span><span>2021</span><span>-</span><span>09</span><span>-</span><span>01</span> <span>23</span>:<span>01</span>:<span>12</span><span>|</span><span>90</span>
+<span>1002</span><span>|</span><span>9002</span><span>|</span><span>2021</span><span>-</span><span>09</span><span>-</span><span>04</span> <span>07</span>:<span>01</span>:<span>02</span><span>|</span>None<span>|</span>None
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br></div></div><h3 id="解答" tabindex="-1"> 解答</h3>
+<p>主要考察的是插入语句，其语法如下：</p>
+<div><pre><code><span>INSERT</span> <span>INTO</span> <span>[</span>表名<span>]</span> <span>[</span>字段名<span>]</span> <span>VALUES</span> <span>[</span>记录<span>1</span>、记录<span>2</span><span>]</span><span>;</span>
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p>要注意的是表中的 <code>id</code> 是自增的，所以我们不需要插入该字段，所以此处需要指定插入记录所对应的字段，最终得到的答案如下。</p>
+<div><pre><code><span>INSERT</span> <span>INTO</span> exam_record <span>(</span>uid<span>,</span> exam_id<span>,</span> start_time<span>,</span> submit_time<span>,</span> score<span>)</span>
+<span>VALUES</span>
+<span>(</span><span>1001</span><span>,</span> <span>9001</span><span>,</span> <span>"2021-09-01 22:11:12"</span><span>,</span> <span>"2021-09-01 23:01:12"</span><span>,</span> <span>90</span><span>)</span><span>,</span>
+<span>(</span><span>1002</span><span>,</span> <span>9002</span><span>,</span> <span>'2021-09-04 07:01:02'</span><span>,</span> <span>NULL</span><span>,</span> <span>NULL</span><span>)</span><span>;</span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br></div></div><p>当然，我们也可以不用指定字段，但是此时需要指定 <code>id</code> 字段的值，因为该字段设置的是自增，所以插值时只需要将其设置为 <code>NULL</code> 即可，最终得到的答案如下。</p>
+<div><pre><code><span>INSERT</span> <span>INTO</span> exam_record
+<span>VALUES</span>
+<span>(</span><span>NULL</span><span>,</span> <span>1001</span><span>,</span> <span>9001</span><span>,</span> <span>"2021-09-01 22:11:12"</span><span>,</span> <span>"2021-09-01 23:01:12"</span><span>,</span> <span>90</span><span>)</span><span>,</span>
+<span>(</span><span>NULL</span><span>,</span> <span>1002</span><span>,</span> <span>9002</span><span>,</span> <span>'2021-09-04 07:01:02'</span><span>,</span> <span>NULL</span><span>,</span> <span>NULL</span><span>)</span><span>;</span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br></div></div><h2 id="sql2-插入记录-二" tabindex="-1"> SQL2 插入记录（二）</h2>
+<h3 id="描述-1" tabindex="-1"> 描述</h3>
+<p>现有一张试卷作答记录表 exam_record，结构如下表，其中包含多年来的用户作答试卷记录，由于数据越来越多，维护难度越来越大，需要对数据表内容做精简，历史数据做备份。</p>
+<p>表 exam_record：</p>
+<table>
+<thead>
+<tr>
+<th>Filed</th>
+<th>Type</th>
+<th>Null</th>
+<th>Key</th>
+<th>Extra</th>
+<th>Default</th>
+<th>Comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>int(11)</td>
+<td>NO</td>
+<td>PRI</td>
+<td>auto_increment</td>
+<td>(NULL)</td>
+<td>自增ID</td>
+</tr>
+<tr>
+<td>uid</td>
+<td>int(11)</td>
+<td>NO</td>
+<td></td>
+<td></td>
+<td>(NULL)</td>
+<td>用户ID</td>
+</tr>
+<tr>
+<td>exam_id</td>
+<td>int(11)</td>
+<td>NO</td>
+<td></td>
+<td></td>
+<td>(NULL)</td>
+<td>试卷ID</td>
+</tr>
+<tr>
+<td>start_time</td>
+<td>datetime</td>
+<td>NO</td>
+<td></td>
+<td></td>
+<td>(NULL)</td>
+<td>开始时间</td>
+</tr>
+<tr>
+<td>submit_time</td>
+<td>datetime</td>
+<td>YES</td>
+<td></td>
+<td></td>
+<td>(NULL)</td>
+<td>提交时间</td>
+</tr>
+<tr>
+<td>score</td>
+<td>tinyint(4)</td>
+<td>YES</td>
+<td></td>
+<td></td>
+<td>(NULL)</td>
+<td>得分</td>
+</tr>
+</tbody>
+</table>
+<h3 id="问题-1" tabindex="-1"> 问题</h3>
+<p>我们已经创建了一张新表 exam_record_before_2021 用来备份 2021 年之前的试题作答记录，结构和 exam_record 表一致，请将2021年之前的已完成了的试题作答纪录导入到该表。</p>
+<p>后台会通过执行 &quot;SELECT * FROM exam_record_before_2021;&quot; 语句来对比结果。</p>
+<h3 id="示例-1" tabindex="-1"> 示例</h3>
+<div><pre><code>输入：
+<span>drop</span> <span>table</span> <span>if</span> <span>EXISTS</span> exam_record<span>;</span>
+<span>CREATE</span> <span>TABLE</span> <span>IF</span> <span>NOT</span> <span>EXISTS</span> exam_record <span>(</span>
+id <span>int</span> <span>PRIMARY</span> <span>KEY</span> <span>AUTO_INCREMENT</span> <span>COMMENT</span> <span>'自增ID'</span><span>,</span>
+uid <span>int</span> <span>NOT</span> <span>NULL</span> <span>COMMENT</span> <span>'用户ID'</span><span>,</span>
+exam_id <span>int</span> <span>NOT</span> <span>NULL</span> <span>COMMENT</span> <span>'试卷ID'</span><span>,</span>
+start_time <span>datetime</span> <span>NOT</span> <span>NULL</span> <span>COMMENT</span> <span>'开始时间'</span><span>,</span>
+submit_time <span>datetime</span> <span>COMMENT</span> <span>'提交时间'</span><span>,</span>
+score <span>tinyint</span> <span>COMMENT</span> <span>'得分'</span>
+<span>)</span><span>CHARACTER</span> <span>SET</span> utf8 <span>COLLATE</span> utf8_general_ci<span>;</span>
+<span>CREATE</span> <span>TABLE</span> <span>IF</span> <span>NOT</span> <span>EXISTS</span> exam_record_before_2021 <span>(</span>
+id <span>int</span> <span>PRIMARY</span> <span>KEY</span> <span>AUTO_INCREMENT</span> <span>COMMENT</span> <span>'自增ID'</span><span>,</span>
+uid <span>int</span> <span>NOT</span> <span>NULL</span> <span>COMMENT</span> <span>'用户ID'</span><span>,</span>
+exam_id <span>int</span> <span>NOT</span> <span>NULL</span> <span>COMMENT</span> <span>'试卷ID'</span><span>,</span>
+start_time <span>datetime</span> <span>NOT</span> <span>NULL</span> <span>COMMENT</span> <span>'开始时间'</span><span>,</span>
+submit_time <span>datetime</span> <span>COMMENT</span> <span>'提交时间'</span><span>,</span>
+score <span>tinyint</span> <span>COMMENT</span> <span>'得分'</span>
+<span>)</span><span>CHARACTER</span> <span>SET</span> utf8 <span>COLLATE</span> utf8_general_ci<span>;</span>
+<span>TRUNCATE</span> exam_record<span>;</span>
+<span>TRUNCATE</span> exam_record_before_2021<span>;</span>
+<span>INSERT</span> <span>INTO</span> exam_record<span>(</span>uid<span>,</span>exam_id<span>,</span>start_time<span>,</span>submit_time<span>,</span>score<span>)</span> <span>VALUES</span>
+<span>(</span><span>1001</span><span>,</span> <span>9001</span><span>,</span> <span>'2020-01-01 09:00:01'</span><span>,</span> <span>null</span><span>,</span> <span>null</span><span>)</span><span>,</span>
+<span>(</span><span>1001</span><span>,</span> <span>9002</span><span>,</span> <span>'2020-01-02 09:01:01'</span><span>,</span> <span>'2020-01-02 09:21:01'</span><span>,</span> <span>70</span><span>)</span><span>,</span>
+<span>(</span><span>1001</span><span>,</span> <span>9002</span><span>,</span> <span>'2020-09-02 09:00:01'</span><span>,</span> <span>null</span><span>,</span> <span>null</span><span>)</span><span>,</span>
+<span>(</span><span>1002</span><span>,</span> <span>9001</span><span>,</span> <span>'2021-05-02 10:01:01'</span><span>,</span> <span>'2021-05-02 10:30:01'</span><span>,</span> <span>81</span><span>)</span><span>,</span>
+<span>(</span><span>1002</span><span>,</span> <span>9002</span><span>,</span> <span>'2021-09-02 12:01:01'</span><span>,</span> <span>null</span><span>,</span> <span>null</span><span>)</span><span>;</span>
+输出：
+<span>1</span><span>|</span><span>1001</span><span>|</span><span>9002</span><span>|</span><span>2020</span><span>-</span><span>01</span><span>-</span><span>02</span> <span>09</span>:<span>01</span>:<span>01</span><span>|</span><span>2020</span><span>-</span><span>01</span><span>-</span><span>02</span> <span>09</span>:<span>21</span>:<span>01</span><span>|</span><span>70</span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br><span>27</span><br><span>28</span><br></div></div><h3 id="解答-1" tabindex="-1"> 解答</h3>
+<p>主要考察从一个表插入到另一个表，其语法如下：</p>
+<div><pre><code><span>INSERT</span> <span>INTO</span> <span>[</span>新数据表名<span>]</span> <span>SELECT</span> <span>*</span> <span>FROM</span> <span>[</span>旧数据表名<span>]</span> <span>WHERE</span> <span>[</span>条件语句<span>]</span><span>;</span>
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p>然后套用上面的语法，将对应数据表名和字段进行替换即可。</p>
+<div><pre><code><span>INSERT</span> <span>INTO</span> exam_record_before_2021<span>(</span>uid<span>,</span> exam_id<span>,</span> start_time<span>,</span> submit_time<span>,</span> score<span>)</span>
+<span>SELECT</span> uid<span>,</span> exam_id<span>,</span> start_time<span>,</span> submit_time<span>,</span> score
+<span>FROM</span> exam_record
+<span>WHERE</span> <span>YEAR</span><span>(</span>submit_time<span>)</span> <span>&lt;</span> <span>'2021'</span><span>;</span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br></div></div><h2 id="sql3-插入记录-三" tabindex="-1"> SQL3 插入记录（三）</h2>
+<h3 id="描述-2" tabindex="-1"> 描述</h3>
+<p>现在有一套ID为9003的高难度SQL试卷，时长为一个半小时，请你将 2021-01-01 00:00:00 作为发布时间插入到试题信息表 examination_info（其表结构如下图）。</p>
+<p>试题信息表 examination_info：</p>
+<table>
+<thead>
+<tr>
+<th>Filed</th>
+<th>Type</th>
+<th>Null</th>
+<th>Key</th>
+<th>Extra</th>
+<th>Default</th>
+<th>Comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>int(11)</td>
+<td>NO</td>
+<td>PRI</td>
+<td>auto_increment</td>
+<td>(NULL)</td>
+<td>自增ID</td>
+</tr>
+<tr>
+<td>exam_id</td>
+<td>int(11)</td>
+<td>NO</td>
+<td>UNI</td>
+<td></td>
+<td>(NULL)</td>
+<td>试卷ID</td>
+</tr>
+<tr>
+<td>tag</td>
+<td>varchar(32)</td>
+<td>YES</td>
+<td></td>
+<td></td>
+<td>(NULL)</td>
+<td>类别标签</td>
+</tr>
+<tr>
+<td>difficulty</td>
+<td>varchar(8)</td>
+<td>YES</td>
+<td></td>
+<td></td>
+<td>(NULL)</td>
+<td>难度</td>
+</tr>
+<tr>
+<td>duration</td>
+<td>int(11)</td>
+<td>NO</td>
+<td></td>
+<td></td>
+<td>(NULL)</td>
+<td>时长(分钟数)</td>
+</tr>
+<tr>
+<td>release_time</td>
+<td>datetime</td>
+<td>YES</td>
+<td></td>
+<td></td>
+<td>(NULL)</td>
+<td>发布时间</td>
+</tr>
+</tbody>
+</table>
+<h3 id="问题-2" tabindex="-1"> 问题</h3>
+<p>不管该ID试卷是否存在，都要插入成功，请尝试插入它。</p>
+<p>后台会通过执行 <strong>SELECT exam_id,tag,difficulty,duration,release_time FROM examination_info</strong> 语句来对比结果。</p>
+<h3 id="示例-2" tabindex="-1"> 示例</h3>
+<div><pre><code>输入：
+<span>drop</span> <span>table</span> <span>if</span> <span>EXISTS</span> examination_info<span>;</span>
+<span>CREATE</span> <span>TABLE</span> <span>IF</span> <span>NOT</span> <span>EXISTS</span> examination_info <span>(</span>
+id <span>int</span> <span>PRIMARY</span> <span>KEY</span> <span>AUTO_INCREMENT</span> <span>COMMENT</span> <span>'自增ID'</span><span>,</span>
+exam_id <span>int</span> <span>UNIQUE</span> <span>NOT</span> <span>NULL</span> <span>COMMENT</span> <span>'试卷ID'</span><span>,</span>
+tag <span>varchar</span><span>(</span><span>32</span><span>)</span> <span>COMMENT</span> <span>'类别标签'</span><span>,</span>
+difficulty <span>varchar</span><span>(</span><span>8</span><span>)</span> <span>COMMENT</span> <span>'难度'</span><span>,</span>
+duration <span>int</span> <span>NOT</span> <span>NULL</span> <span>COMMENT</span> <span>'时长(分钟数)'</span><span>,</span>
+release_time <span>datetime</span> <span>COMMENT</span> <span>'发布时间'</span>
+<span>)</span><span>CHARACTER</span> <span>SET</span> utf8 <span>COLLATE</span> utf8_bin<span>;</span>
+<span>TRUNCATE</span> examination_info<span>;</span>
+<span>INSERT</span> <span>INTO</span> examination_info<span>(</span>exam_id<span>,</span>tag<span>,</span>difficulty<span>,</span>duration<span>,</span>release_time<span>)</span> <span>VALUES</span>
+<span>(</span><span>9001</span><span>,</span> <span>'SQL'</span><span>,</span> <span>'hard'</span><span>,</span> <span>60</span><span>,</span> <span>'2020-01-01 10:00:00'</span><span>)</span><span>,</span>
+<span>(</span><span>9002</span><span>,</span> <span>'算法'</span><span>,</span> <span>'easy'</span><span>,</span> <span>60</span><span>,</span> <span>'2020-01-01 10:00:00'</span><span>)</span><span>,</span>
+<span>(</span><span>9003</span><span>,</span> <span>'SQL'</span><span>,</span> <span>'medium'</span><span>,</span> <span>60</span><span>,</span> <span>'2020-01-02 10:00:00'</span><span>)</span><span>,</span>
+<span>(</span><span>9004</span><span>,</span> <span>'算法'</span><span>,</span> <span>'hard'</span><span>,</span> <span>80</span><span>,</span> <span>'2020-01-01 10:00:00'</span><span>)</span><span>;</span>
+输出：
+<span>9001</span><span>|</span><span>SQL</span><span>|</span>hard<span>|</span><span>60</span><span>|</span><span>2020</span><span>-</span><span>01</span><span>-</span><span>01</span> <span>10</span>:<span>00</span>:<span>00</span>
+<span>9002</span><span>|</span>算法<span>|</span>easy<span>|</span><span>60</span><span>|</span><span>2020</span><span>-</span><span>01</span><span>-</span><span>01</span> <span>10</span>:<span>00</span>:<span>00</span>
+<span>9004</span><span>|</span>算法<span>|</span>hard<span>|</span><span>80</span><span>|</span><span>2020</span><span>-</span><span>01</span><span>-</span><span>01</span> <span>10</span>:<span>00</span>:<span>00</span>
+<span>9003</span><span>|</span><span>SQL</span><span>|</span>hard<span>|</span><span>90</span><span>|</span><span>2021</span><span>-</span><span>01</span><span>-</span><span>01</span> <span>00</span>:<span>00</span>:<span>00</span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br></div></div><h3 id="解答-2" tabindex="-1"> 解答</h3>
+<p>一种是曲线救国的方式，我们假设 <code>examination_info</code> 中有 <code>exam_id</code> 为 <code>9003</code> 的数据，先将其从数据库中删除，然后再将数据插入进去。</p>
+<div><pre><code><span>DELETE</span> <span>FROM</span> examination_info
+<span>WHERE</span> exam_id <span>=</span> <span>9003</span><span>;</span>
+<span>INSERT</span> <span>INTO</span> examination_info
+<span>VALUES</span> <span>(</span><span>NULL</span><span>,</span> <span>9003</span><span>,</span> <span>"SQL"</span><span>,</span> <span>"hard"</span><span>,</span> <span>"90"</span><span>,</span> <span>"2021-01-01 00:00:00"</span><span>)</span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br></div></div><p>而另一种则是利用 <code>REPLACE</code> 语句实现带更新的插入，其语法结构如下：</p>
+<div><pre><code><span>REPLACE</span> <span>INTO</span> <span>[</span>表名<span>]</span> <span>VALUES</span> <span>(</span>value1<span>,</span> value2……<span>)</span>
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><div><pre><code><span>REPLACE</span> <span>INTO</span> examination_info <span>VALUES</span>
+ <span>(</span><span>NULL</span><span>,</span> <span>9003</span><span>,</span> <span>"SQL"</span><span>,</span> <span>"hard"</span><span>,</span> <span>90</span><span>,</span> <span>"2021-01-01 00:00:00"</span><span>)</span><span>;</span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br></div></div><h2 id="sql4-更新记录-一" tabindex="-1"> SQL4 更新记录（一）</h2>
+<h3 id="描述-3" tabindex="-1"> 描述</h3>
+<p>现有一张试卷信息表examination_info，表结构如下图所示：</p>
+<table>
+<thead>
+<tr>
+<th>Filed</th>
+<th>Type</th>
+<th>Null</th>
+<th>Key</th>
+<th>Extra</th>
+<th>Default</th>
+<th>Comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>int(11)</td>
+<td>NO</td>
+<td>PRI</td>
+<td>auto_increment</td>
+<td>(NULL)</td>
+<td>自增ID</td>
+</tr>
+<tr>
+<td>exam_id</td>
+<td>int(11)</td>
+<td>NO</td>
+<td>UNI</td>
+<td></td>
+<td>(NULL)</td>
+<td>试卷ID</td>
+</tr>
+<tr>
+<td>tag</td>
+<td>char(32)</td>
+<td>YES</td>
+<td></td>
+<td></td>
+<td>(NULL)</td>
+<td>类别标签</td>
+</tr>
+<tr>
+<td>difficulty</td>
+<td>char(8)</td>
+<td>YES</td>
+<td></td>
+<td></td>
+<td>(NULL)</td>
+<td>难度</td>
+</tr>
+<tr>
+<td>duration</td>
+<td>int(11)</td>
+<td>NO</td>
+<td></td>
+<td></td>
+<td>(NULL)</td>
+<td>时长</td>
+</tr>
+<tr>
+<td>release_time</td>
+<td>datetime</td>
+<td>YES</td>
+<td></td>
+<td></td>
+<td>(NULL)</td>
+<td>发布时间</td>
+</tr>
+</tbody>
+</table>
+<h3 id="问题-3" tabindex="-1"> 问题</h3>
+<p>请把 examination_info 表中 tag 为 PYTHON 的 tag 字段全部修改为 Python。</p>
+<p>后台会通过执行 'SELECT exam_id,tag,difficulty,duration,release_time FROM examination_info;'语句来对比结果。</p>
+<h3 id="示例-3" tabindex="-1"> 示例</h3>
+<div><pre><code>输入：
+<span>drop</span> <span>table</span> <span>if</span> <span>EXISTS</span> examination_info<span>;</span>
+<span>CREATE</span> <span>TABLE</span> <span>IF</span> <span>NOT</span> <span>EXISTS</span> examination_info <span>(</span>
+id <span>int</span> <span>PRIMARY</span> <span>KEY</span> <span>AUTO_INCREMENT</span> <span>COMMENT</span> <span>'自增ID'</span><span>,</span>
+exam_id <span>int</span> <span>UNIQUE</span> <span>NOT</span> <span>NULL</span> <span>COMMENT</span> <span>'试卷ID'</span><span>,</span>
+tag <span>varchar</span><span>(</span><span>32</span><span>)</span> <span>COMMENT</span> <span>'类别标签'</span><span>,</span>
+difficulty <span>varchar</span><span>(</span><span>8</span><span>)</span> <span>COMMENT</span> <span>'难度'</span><span>,</span>
+duration <span>int</span> <span>NOT</span> <span>NULL</span> <span>COMMENT</span> <span>'时长'</span><span>,</span>
+release_time <span>datetime</span> <span>COMMENT</span> <span>'发布时间'</span>
+<span>)</span><span>CHARACTER</span> <span>SET</span> utf8 <span>COLLATE</span> utf8_bin<span>;</span>
+<span>TRUNCATE</span> examination_info<span>;</span>
+<span>INSERT</span> <span>INTO</span> examination_info<span>(</span>exam_id<span>,</span>tag<span>,</span>difficulty<span>,</span>duration<span>,</span>release_time<span>)</span> <span>VALUES</span>
+<span>(</span><span>9001</span><span>,</span> <span>'SQL'</span><span>,</span> <span>'hard'</span><span>,</span> <span>60</span><span>,</span> <span>'2020-01-01 10:00:00'</span><span>)</span><span>,</span>
+<span>(</span><span>9002</span><span>,</span> <span>'python'</span><span>,</span> <span>'easy'</span><span>,</span> <span>60</span><span>,</span> <span>'2020-01-01 10:00:00'</span><span>)</span><span>,</span>
+<span>(</span><span>9003</span><span>,</span> <span>'Python'</span><span>,</span> <span>'medium'</span><span>,</span> <span>80</span><span>,</span> <span>'2020-01-01 10:00:00'</span><span>)</span><span>,</span>
+<span>(</span><span>9004</span><span>,</span> <span>'PYTHON'</span><span>,</span> <span>'hard'</span><span>,</span> <span>80</span><span>,</span> <span>'2020-01-01 10:00:00'</span><span>)</span><span>;</span>
+输出：
+<span>9001</span><span>|</span><span>SQL</span><span>|</span>hard<span>|</span><span>60</span><span>|</span><span>2020</span><span>-</span><span>01</span><span>-</span><span>01</span> <span>10</span>:<span>00</span>:<span>00</span>
+<span>9002</span><span>|</span>python<span>|</span>easy<span>|</span><span>60</span><span>|</span><span>2020</span><span>-</span><span>01</span><span>-</span><span>01</span> <span>10</span>:<span>00</span>:<span>00</span>
+<span>9003</span><span>|</span>Python<span>|</span>medium<span>|</span><span>80</span><span>|</span><span>2020</span><span>-</span><span>01</span><span>-</span><span>01</span> <span>10</span>:<span>00</span>:<span>00</span>
+<span>9004</span><span>|</span>Python<span>|</span>hard<span>|</span><span>80</span><span>|</span><span>2020</span><span>-</span><span>01</span><span>-</span><span>01</span> <span>10</span>:<span>00</span>:<span>00</span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br></div></div><h3 id="解答-3" tabindex="-1"> 解答</h3>
+<p>主要考察更新语句。</p>
+<div><pre><code><span>UPDATE</span> 表名 <span>SET</span> 字段<span>1</span><span>=</span>‘替换内容<span>1</span>’，字段<span>2</span><span>=</span>‘替换内容<span>3</span>’ <span>WHERE</span> <span>.</span><span>.</span><span>.</span><span>.</span>
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p>将标签满足为 <code>PYTHON</code> 的记录的 <code>tag</code> 全部更新为 <code>Python</code> 即可。</p>
+<div><pre><code><span>UPDATE</span> examination_info
+<span>SET</span> tag <span>=</span> <span>"Python"</span>
+<span>WHERE</span> tag <span>=</span> <span>"PYTHON"</span><span>;</span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br></div></div><h2 id="sql5-更新记录-二" tabindex="-1"> SQL5 更新记录（二）</h2>
+<h3 id="描述-4" tabindex="-1"> 描述</h3>
+<p>现有一张试卷作答记录表exam_record，其中包含多年来的用户作答试卷记录，结构如下表：</p>
+<p>作答记录表exam_record：</p>
+<p>submit_time为 完成时间</p>
+<table>
+<thead>
+<tr>
+<th>Filed</th>
+<th>Type</th>
+<th>Null</th>
+<th>Key</th>
+<th>Extra</th>
+<th>Default</th>
+<th>Comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>int(11)</td>
+<td>NO</td>
+<td>PRI</td>
+<td>auto_increment</td>
+<td>(NULL)</td>
+<td>自增ID</td>
+</tr>
+<tr>
+<td>uid</td>
+<td>int(11)</td>
+<td>NO</td>
+<td></td>
+<td></td>
+<td>(NULL)</td>
+<td>用户ID</td>
+</tr>
+<tr>
+<td>exam_id</td>
+<td>int(11)</td>
+<td>NO</td>
+<td></td>
+<td></td>
+<td>(NULL)</td>
+<td>试卷ID</td>
+</tr>
+<tr>
+<td>start_time</td>
+<td>datetime</td>
+<td>NO</td>
+<td></td>
+<td></td>
+<td>(NULL)</td>
+<td>开始时间</td>
+</tr>
+<tr>
+<td>submit_time</td>
+<td>datetime</td>
+<td>YES</td>
+<td></td>
+<td></td>
+<td>(NULL)</td>
+<td>提交时间</td>
+</tr>
+<tr>
+<td>score</td>
+<td>tinyint(4)</td>
+<td>YES</td>
+<td></td>
+<td></td>
+<td>(NULL)</td>
+<td>得分</td>
+</tr>
+</tbody>
+</table>
+<h3 id="问题-4" tabindex="-1"> 问题</h3>
+<p>请把exam_record表中2021年9月1日之前开始作答的未完成记录全部改为被动完成，即：将完成时间改为'2099-01-01 00:00:00'，分数改为0。</p>
+<h3 id="示例-4" tabindex="-1"> 示例</h3>
+<div><pre><code>输入：
+<span>drop</span> <span>table</span> <span>if</span> <span>EXISTS</span> exam_record<span>;</span>
+<span>CREATE</span> <span>TABLE</span> <span>IF</span> <span>NOT</span> <span>EXISTS</span> exam_record <span>(</span>
+id <span>int</span> <span>PRIMARY</span> <span>KEY</span> <span>AUTO_INCREMENT</span> <span>COMMENT</span> <span>'自增ID'</span><span>,</span>
+uid <span>int</span> <span>NOT</span> <span>NULL</span> <span>COMMENT</span> <span>'用户ID'</span><span>,</span>
+exam_id <span>int</span> <span>NOT</span> <span>NULL</span> <span>COMMENT</span> <span>'试卷ID'</span><span>,</span>
+start_time <span>datetime</span> <span>NOT</span> <span>NULL</span> <span>COMMENT</span> <span>'开始时间'</span><span>,</span>
+submit_time <span>datetime</span> <span>COMMENT</span> <span>'提交时间'</span><span>,</span>
+score <span>tinyint</span> <span>COMMENT</span> <span>'得分'</span>
+<span>)</span><span>CHARACTER</span> <span>SET</span> utf8 <span>COLLATE</span> utf8_general_ci<span>;</span>
+<span>INSERT</span> <span>INTO</span> exam_record<span>(</span>uid<span>,</span>exam_id<span>,</span>start_time<span>,</span>submit_time<span>,</span>score<span>)</span> <span>VALUES</span>
+<span>(</span><span>1001</span><span>,</span> <span>9001</span><span>,</span> <span>'2020-01-02 09:01:01'</span><span>,</span> <span>'2020-01-02 09:21:01'</span><span>,</span> <span>80</span><span>)</span><span>,</span>
+<span>(</span><span>1001</span><span>,</span> <span>9002</span><span>,</span> <span>'2021-09-01 09:01:01'</span><span>,</span> <span>'2021-09-01 09:21:01'</span><span>,</span> <span>90</span><span>)</span><span>,</span>
+<span>(</span><span>1002</span><span>,</span> <span>9001</span><span>,</span> <span>'2021-08-02 19:01:01'</span><span>,</span> <span>null</span><span>,</span> <span>null</span><span>)</span><span>,</span>
+<span>(</span><span>1002</span><span>,</span> <span>9002</span><span>,</span> <span>'2021-09-05 19:01:01'</span><span>,</span> <span>'2021-09-05 19:40:01'</span><span>,</span> <span>89</span><span>)</span><span>,</span>
+<span>(</span><span>1003</span><span>,</span> <span>9001</span><span>,</span> <span>'2021-09-02 12:01:01'</span><span>,</span> <span>null</span><span>,</span> <span>null</span><span>)</span><span>,</span>
+<span>(</span><span>1003</span><span>,</span> <span>9002</span><span>,</span> <span>'2021-09-01 12:01:01'</span><span>,</span> <span>null</span><span>,</span> <span>null</span><span>)</span><span>;</span>
+输出：
+<span>1001</span><span>|</span><span>9001</span><span>|</span><span>2020</span><span>-</span><span>01</span><span>-</span><span>02</span> <span>09</span>:<span>01</span>:<span>01</span><span>|</span><span>2020</span><span>-</span><span>01</span><span>-</span><span>02</span> <span>09</span>:<span>21</span>:<span>01</span><span>|</span><span>80</span>
+<span>1001</span><span>|</span><span>9002</span><span>|</span><span>2021</span><span>-</span><span>09</span><span>-</span><span>01</span> <span>09</span>:<span>01</span>:<span>01</span><span>|</span><span>2021</span><span>-</span><span>09</span><span>-</span><span>01</span> <span>09</span>:<span>21</span>:<span>01</span><span>|</span><span>90</span>
+<span>1002</span><span>|</span><span>9001</span><span>|</span><span>2021</span><span>-</span><span>08</span><span>-</span><span>02</span> <span>19</span>:<span>01</span>:<span>01</span><span>|</span><span>2099</span><span>-</span><span>01</span><span>-</span><span>01</span> <span>00</span>:<span>00</span>:<span>00</span><span>|</span><span>0</span>
+<span>1002</span><span>|</span><span>9002</span><span>|</span><span>2021</span><span>-</span><span>09</span><span>-</span><span>05</span> <span>19</span>:<span>01</span>:<span>01</span><span>|</span><span>2021</span><span>-</span><span>09</span><span>-</span><span>05</span> <span>19</span>:<span>40</span>:<span>01</span><span>|</span><span>89</span>
+<span>1003</span><span>|</span><span>9001</span><span>|</span><span>2021</span><span>-</span><span>09</span><span>-</span><span>02</span> <span>12</span>:<span>01</span>:<span>01</span><span>|</span>None<span>|</span>None
+<span>1003</span><span>|</span><span>9002</span><span>|</span><span>2021</span><span>-</span><span>09</span><span>-</span><span>01</span> <span>12</span>:<span>01</span>:<span>01</span><span>|</span>None<span>|</span>None
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br></div></div><h3 id="解答-4" tabindex="-1"> 解答</h3>
+<p>同样主要考察更新语句：</p>
+<div><pre><code><span>UPDATE</span> <span>[</span>表名<span>]</span> <span>SET</span> 字段名<span>=</span><span>"新值"</span> <span>WHERE</span> 条件语句<span>;</span>
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p>根据题意，要将满足条件的记录全部改成被动完成即可。</p>
+<div><pre><code><span>UPDATE</span> exam_record
+<span>SET</span> submit_time<span>=</span><span>'2099-01-01 00:00:00'</span><span>,</span> score <span>=</span> <span>0</span>
+<span>WHERE</span> start_time <span>&lt;</span> <span>'2021-09-01 00:00:00'</span> <span>AND</span> score <span>IS</span> <span>NULL</span><span>;</span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br></div></div>]]></content>
+    <category term="SQL 进阶挑战"/>
+    <published>2022-06-12T15:00:00.000Z</published>
+  </entry>
   <entry>
     <title type="html">博客搭建：Hugo 博客搭建教程</title>
     <id>https://cunyu1943.github.io/JavaPark/JavaPark/efficiency/blog/hugo.html</id>
@@ -23143,280 +23695,5 @@ ORDER BY ……
 <img src="https://github.com/cunyu1943/cunyu1943/blob/main/imgs/wepublic.gif" width="200" alt="公众号" />]]></content>
     <category term="博客搭建"/>
     <published>2022-01-01T20:47:42.000Z</published>
-  </entry>
-  <entry>
-    <title type="html">博客搭建：从 0 到 1 搭建 Halo</title>
-    <id>https://cunyu1943.github.io/JavaPark/JavaPark/efficiency/blog/halo.html</id>
-    <link href="https://cunyu1943.github.io/JavaPark/JavaPark/efficiency/blog/halo.html"/>
-    <updated>2022-04-18T14:16:18.000Z</updated>
-    <content type="html"><![CDATA[<h2 id="前言" tabindex="-1"> 前言</h2>
-<h3 id="说在前面" tabindex="-1"> 说在前面</h3>
-<p>之前一直有在各大平台发布博客内容，然后个人博客一直使用的是 Hexo + Github Pages 的方式，但随着内容增多，Github Pages 访问的也不稳定，所以想着自己搞个服务器和域名搭个博客，最终选定 <a href="https://halo.run/" target="_blank" rel="noopener noreferrer">Halo<ExternalLinkIcon/></a> 这个博客框架，搭建属于自己的博客。</p>
-<p>此内容从零到一手把手记录如何搭建，记录自己的搭建过程，也给后面的朋友们提供一个指南，少走些冤枉路，尽快上手。</p>
-<h3 id="环境配置" tabindex="-1"> 环境配置</h3>
-<p>自己花了 210 左右在 UCloud 买了三年的服务器，然后在腾讯花了将近 200 买了个域名，服务器版本是 Ubuntu 18.04 64 位，理论上讲下面的配置适合于 Ubuntu 系所有版本，个别有出入的地方还请谅解。所以在正式开始之前，你需要满足以下几个条件：</p>
-<ol>
-<li>一台 Ubuntu 系统的服务器（Centos 系统的参考 <a href="https://halo.run/archives/install-with-linux.html" target="_blank" rel="noopener noreferrer">官网教程<ExternalLinkIcon/></a> 即可）；</li>
-<li>一个域名；</li>
-</ol>
-<h2 id="java-环境配置" tabindex="-1"> Java 环境配置</h2>
-<h3 id="安装" tabindex="-1"> 安装</h3>
-<ol>
-<li>首先去 <a href="https://www.oracle.com/java/technologies/javase-downloads.html" target="_blank" rel="noopener noreferrer">官网<ExternalLinkIcon/></a> 下载 JDK，选择自己想要的版本即可，一般推荐 JDK 1.8+ 的版本；</li>
-</ol>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/9edf4e765f7b9c1e7aa34c667f663557.png" alt="" loading="lazy"></p>
-<ol start="2">
-<li>解压下载后的文件；</li>
-</ol>
-<div><pre><code><span>tar</span> -zxvf jdk-11.0.9_linux-x64_bin.tar.gz
-</code></pre><div aria-hidden="true"><span>1</span><br></div></div><ol start="3">
-<li>配置环境变量，切换到 root 用户，然后编辑 <code>/etc/profile</code> 文件，添加如下内容（注意路径切换为你自己放置解压缩包后的位置）；</li>
-</ol>
-<div><pre><code>export JAVA_HOME=/environment/jdk/jdk-11.0.9
-export PATH=$JAVA_HOME/bin:$PATH
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br></div></div><h3 id="验证" tabindex="-1"> 验证</h3>
-<p>安装好之后就是验证是否成功，一般我们用如下命令进行检测；</p>
-<div><pre><code><span># 查看 jdk 版本</span>
-java -version
-
-<span># 编译命令</span>
-javac
-
-<span># 运行命令</span>
-java
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br></div></div><h2 id="安装-halo" tabindex="-1"> 安装 Halo</h2>
-<h3 id="下载-halo-运行包" tabindex="-1"> 下载 Halo 运行包</h3>
-<p>要下载 Halo 运行包，可以通过两种方式，更推荐第二种，下载起来更快：</p>
-<ol>
-<li>Github releases：https://github.com/halo-dev/halo/releases</li>
-<li>Nova 提供的下载站：<a href="https://dl.halo.run/" target="_blank" rel="noopener noreferrer">https://dl.halo.run<ExternalLinkIcon/></a></li>
-</ol>
-<p>利用如下命令进行下载，以 1.4.2 版本为例，如果要下载其他版本，换版本号即可！</p>
-<div><pre><code><span>wget</span> https://dl.halo.run/release/halo-1.4.2.jar
-</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p><img src="https://img-blog.csdnimg.cn/img_convert/5762059b50b9a217169ca9ebc02b90bd.png" alt="" loading="lazy"></p>
-<h3 id="配置" tabindex="-1"> 配置</h3>
-<ol>
-<li>下载配置文件（下载后的文件存放在 <code>~/.halo/application.yaml</code>）；</li>
-</ol>
-<div><pre><code><span>curl</span> -o ~/.halo/application.yaml --create-dirs https://dl.halo.run/config/application-template.yaml
-</code></pre><div aria-hidden="true"><span>1</span><br></div></div><ol start="2">
-<li>修改配置，参考 <a href="https://halo.run/archives/install-with-linux.html" target="_blank" rel="noopener noreferrer">官方文档<ExternalLinkIcon/></a> 修改即可；</li>
-</ol>
-<div><pre><code>server:
-  port: <span>8090</span>
-
-  <span># Response data gzip.</span>
-  compression:
-    enabled: <span>false</span>
-spring:
-  datasource:
-    <span># H2 database configuration.</span>
-    driver-class-name: org.h2.Driver
-    url: jdbc:h2:file:~/.halo/db/halo
-    username: admin
-    password: <span>123456</span>
-
-    <span># MySQL database configuration.</span>
-  <span>#    driver-class-name: com.mysql.cj.jdbc.Driver</span>
-  <span>#    url: jdbc:mysql://127.0.0.1:3306/halodb?characterEncoding=utf8&amp;useSSL=false&amp;serverTimezone=Asia/Shanghai&amp;allowPublicKeyRetrieval=true</span>
-  <span>#    username: root</span>
-  <span>#    password: 123456</span>
-
-  <span># H2 database console configuration.</span>
-  h2:
-    console:
-      settings:
-        web-allow-others: <span>false</span>
-      path: /h2-console
-      enabled: <span>false</span>
-
-halo:
-  <span># Your admin client path is https://your-domain/{admin-path}</span>
-  admin-path: admin
-
-  <span># memory or level</span>
-  cache: memory
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br><span>27</span><br><span>28</span><br><span>29</span><br><span>30</span><br><span>31</span><br><span>32</span><br><span>33</span><br><span>34</span><br></div></div><h3 id="运行-halo" tabindex="-1"> 运行 Halo</h3>
-<p>配置好 Java  环境，同时下载好 Halo 运行包之后，我们就可以使用如下命令运行了；</p>
-<div><pre><code>java -jar halo-latest.jar
-</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p>然后在本地浏览器中访问如下地址即可；</p>
-<blockquote>
-<p>http://ip:8090</p>
-</blockquote>
-<h2 id="进阶配置" tabindex="-1"> 进阶配置</h2>
-<h3 id="开机自启" tabindex="-1"> 开机自启</h3>
-<ol>
-<li>下载 Halo 官方 <code>service</code> 模板，然后对其进行修改（此时需要管理员权限）；</li>
-</ol>
-<div><pre><code><span>sudo</span> <span>curl</span> -o /etc/systemd/system/halo.service --create-dirs https://dl.halo.run/config/halo.service
-</code></pre><div aria-hidden="true"><span>1</span><br></div></div><ol start="2">
-<li>修改配置文件</li>
-</ol>
-<p>具体可以参考 <a href="https://halo.run/archives/install-with-linux.html" target="_blank" rel="noopener noreferrer">官方文档<ExternalLinkIcon/></a>；</p>
-<p>需要注意的几点：</p>
-<ul>
-<li>填写你的 JDK 绝对路径；</li>
-<li>填写你的 Halo 运行包所在绝对路径；</li>
-<li>填写运行 Halo 服务的用户名；</li>
-</ul>
-<ol start="3">
-<li>测试</li>
-</ol>
-<div><pre><code><span># 修改 service 后需要 Systemd</span>
-<span>sudo</span> systemctl daemon-reload
-
-<span># 使 Halo 开机自启</span>
-<span>sudo</span> systemctl <span>enable</span> halo
-
-<span># 启动 Halo</span>
-<span>sudo</span> <span>service</span> halo start
-
-<span># 重启 Halo</span>
-<span>sudo</span> <span>service</span> halo restart
-
-<span># 停止 Halo</span>
-<span>sudo</span> <span>service</span> halo stop
-
-<span># 查看 Halo 的运行状态</span>
-<span>sudo</span> <span>service</span> halo status
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br></div></div><h3 id="halo-更新" tabindex="-1"> Halo 更新</h3>
-<p>Halo 是一个活跃的社区，目前一直在开发迭代中，后续如果发布了新的版本，而我们又想要升级，这时候就可以按照如下步骤来进行操作了；</p>
-<ol>
-<li>首先，我们需要对我们原有数据进行备份，防止丢失</li>
-</ol>
-<div><pre><code><span>cp</span> -r ~/.halo ~/.halo.bak
-</code></pre><div aria-hidden="true"><span>1</span><br></div></div><ol start="2">
-<li>接着备份久的 Halo 安装包，防止新的安装包出现问题后无法回滚；</li>
-</ol>
-<div><pre><code><span>mv</span> halo-latest.jar halo-latest.jar.bak
-</code></pre><div aria-hidden="true"><span>1</span><br></div></div><ol start="3">
-<li>做好备份工作之后，就是下载最新的 Halo 安装包了，其中 <code>{{verison}}</code> 对应最新版本号；</li>
-</ol>
-<div><pre><code><span>wget</span> https://dl.halo.run/release/halo-<span>{</span><span>{</span>version<span>}</span><span>}</span>.jar -O halo-latest.jar
-</code></pre><div aria-hidden="true"><span>1</span><br></div></div><ol start="4">
-<li>测试一下最新版的 Halo 能否运行成功；</li>
-</ol>
-<div><pre><code>java -jar halo-latest.jar
-</code></pre><div aria-hidden="true"><span>1</span><br></div></div><ol start="5">
-<li>测试步骤如果成功了，那我们直接重启 Halo 服务就好了；</li>
-</ol>
-<div><pre><code><span>sudo</span> <span>service</span> halo restart
-</code></pre><div aria-hidden="true"><span>1</span><br></div></div><h2 id="域名访问" tabindex="-1"> 域名访问</h2>
-<p>通过上面的配置之后，我们只能通过 <code>ip:port</code> 的方式进行访问，如果我们想让别人来访问，那么有一个域名就十分有必要了。在正式进行配置域名之前，需要确保如下几件准备工作：</p>
-<ol>
-<li>Halo 已经能够正确运行，且运行端口不是 <code>80</code> 端口；</li>
-<li>确保域名解析到服务器 IP，而且确保服务器已经备案（国内服务器都需要，国外无需）；</li>
-<li>打开服务器的 <code>80</code> 和 <code>443</code> 端口；</li>
-</ol>
-<h3 id="配置域名解析服务器-ip" tabindex="-1"> 配置域名解析服务器 IP</h3>
-<p>因为我的域名是在腾讯买的，所以这里以腾讯为例；</p>
-<ol>
-<li>首先打开 <a href="https://console.cloud.tencent.com/cns" target="_blank" rel="noopener noreferrer">域名解析列表<ExternalLinkIcon/></a>，并点击右侧解析进入解析界面；</li>
-</ol>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/bed2bee9316c15d75553b80522b8d686.png" alt="" loading="lazy"></p>
-<ol start="2">
-<li>接着添加记录；</li>
-</ol>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/2726bb06b3ed74295099be252fe59ae7.png" alt="" loading="lazy"></p>
-<p>添加如下两条记录，其他字段保持默认即可；</p>
-<table>
-<thead>
-<tr>
-<th>主机记录</th>
-<th>记录类型</th>
-<th>记录值</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>@</code></td>
-<td><code>A</code></td>
-<td>你的服务器 IP</td>
-</tr>
-<tr>
-<td><code>www</code></td>
-<td><code>A</code></td>
-<td>你的服务器 IP</td>
-</tr>
-</tbody>
-</table>
-<h3 id="打开服务器对应端口" tabindex="-1"> 打开服务器对应端口</h3>
-<ol>
-<li>登录你的服务器，然后打开主机管理界面；</li>
-<li>接着编辑防火墙，将需要打开的端口打开即可，一般打开如下的协议端口就可以了；</li>
-</ol>
-<ul>
-<li>ICMP</li>
-<li>3389</li>
-<li>80</li>
-<li>443</li>
-<li>21</li>
-<li>22</li>
-<li>8090</li>
-</ul>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/39a6d494380610a19da62949d7927967.png" alt="" loading="lazy"></p>
-<h3 id="利用-nginx-进行反向代理" tabindex="-1"> 利用 Nginx 进行反向代理</h3>
-<ol>
-<li>安装 Nginx</li>
-</ol>
-<div><pre><code><span>sudo</span> <span>apt-get</span> <span>install</span> nginx
-</code></pre><div aria-hidden="true"><span>1</span><br></div></div><ol start="2">
-<li>设置开机自启动 Nginx</li>
-</ol>
-<div><pre><code>systemctl <span>enable</span> nginx
-</code></pre><div aria-hidden="true"><span>1</span><br></div></div><ol start="3">
-<li>启动 Nginx</li>
-</ol>
-<div><pre><code><span>sudo</span> <span>service</span> nginx start
-</code></pre><div aria-hidden="true"><span>1</span><br></div></div><ol start="4">
-<li>配置 Nginx</li>
-</ol>
-<p>首先下载 Halo 官方的 Nginx 配置模板；</p>
-<div><pre><code><span>curl</span> -o /etc/nginx/conf.d/halo.conf --create-dirs https://dl.halo.run/config/nginx.conf
-</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p>然后对其进行修改；</p>
-<div><pre><code><span>sudo</span> <span>vim</span> /etc/nginx/conf.d/halo.conf
-</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p>只需要将其中的 <code>example.com</code> 修改成自己的域名即可，比如我的域名是 <code>cunyu1943.site</code>；</p>
-<div><pre><code>server <span>{</span>
-    listen <span>80</span><span>;</span>
-
-    server_name example.com www.example.com<span>;</span>
-
-    location / <span>{</span>
-        proxy_set_header HOST <span>$host</span><span>;</span>
-        proxy_set_header X-Forwarded-Proto <span>$scheme</span><span>;</span>
-        proxy_set_header X-Real-IP <span>$remote_addr</span><span>;</span>
-        proxy_set_header X-Forwarded-For <span>$proxy_add_x_forwarded_for</span><span>;</span>
-
-        proxy_pass http://127.0.0.1:8090/<span>;</span>
-    <span>}</span>
-<span>}</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br></div></div><ol start="5">
-<li>自动配置 SSL 证书</li>
-</ol>
-<p>首先安装 certbot nginx 插件；</p>
-<div><pre><code><span>sudo</span> <span>apt-get</span> <span>install</span> python-certbot-nginx
-</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p>接着执行配置，过程中会询问为哪个域名添加证书，以及是否重定向，如实选择即可；</p>
-<div><pre><code><span>sudo</span> certbot --nginx 
-</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p><img src="https://img-blog.csdnimg.cn/img_convert/f44b8d7753c628576920afee7cb73c56.png" alt="" loading="lazy"></p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/0ea59523b032883f42611d5e49c52513.png" alt="" loading="lazy"></p>
-<p>最后，设置自动续约即可；</p>
-<div><pre><code><span>sudo</span> certbot renew --dry-run
-</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p><img src="https://img-blog.csdnimg.cn/img_convert/1bbb76ec98a28520bbb4b1b12fded507.png" alt="" loading="lazy"></p>
-<ol start="6">
-<li>完成上述步骤之后，大功告成了，我们就可以通过自己的域名来访问自己的博客了，比如我的博客就是：</li>
-</ol>
-<blockquote>
-<p>https://cunyu1943.site</p>
-</blockquote>
-<h2 id="总结" tabindex="-1"> 总结</h2>
-<p>好了，经过上面的一系列设置，我们的博客就搭建完成了，是不是好简单的说，那就别犹豫，赶紧动手搞起来吧！</p>
-<p>最后再贴以下自己的博客地址，欢迎大家来留言，交换友链呀！</p>
-<blockquote>
-<p>https://cunyu1943.site</p>
-</blockquote>
-<p>关注公众号，获取最新文章更新</p>
-<img src="https://github.com/cunyu1943/cunyu1943/blob/main/imgs/wepublic.gif" width="200" alt="公众号" />]]></content>
-    <category term="博客搭建"/>
-    <published>2022-01-01T20:42:01.000Z</published>
   </entry>
 </feed>
