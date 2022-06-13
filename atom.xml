@@ -3,7 +3,7 @@
   <id>https://cunyu1943.github.io/JavaPark/JavaPark/</id>
   <title>JavaPark</title>
   <subtitle>Java 自学编程之路</subtitle>
-  <updated>2022-06-12T08:44:02.286Z</updated>
+  <updated>2022-06-13T14:18:21.268Z</updated>
   <generator>vuepress-plugin-feed2</generator>
   <link rel="self" href="https://cunyu1943.github.io/JavaPark/JavaPark/atom.xml"/>
   <link rel="alternate" href="https://cunyu1943.github.io/JavaPark/JavaPark/"/>
@@ -28,6 +28,776 @@
   <category term="SQL 必知必会 50 题"/>
   <category term="Java 编程实例"/>
   <category term="Maven 入门教程"/>
+  <entry>
+    <title type="html">SQL 进阶挑战（6 - 10）</title>
+    <id>https://cunyu1943.github.io/JavaPark/JavaPark/database/sql-advanced/6-10.html</id>
+    <link href="https://cunyu1943.github.io/JavaPark/JavaPark/database/sql-advanced/6-10.html"/>
+    <updated>2022-06-13T14:17:00.000Z</updated>
+    <content type="html"><![CDATA[<h2 id="sql6-删除记录-一" tabindex="-1"> SQL6 删除记录（一）</h2>
+<h3 id="描述" tabindex="-1"> 描述</h3>
+<p>现有一张试卷作答记录表exam_record，其中包含多年来的用户作答试卷记录，结构如下表：</p>
+<p>作答记录表exam_record：</p>
+<p>start_time是试卷开始时间</p>
+<p>submit_time 是交卷，即结束时间</p>
+<table>
+<thead>
+<tr>
+<th>Filed</th>
+<th>Type</th>
+<th>Null</th>
+<th>Key</th>
+<th>Extra</th>
+<th>Default</th>
+<th>Comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>int(11)</td>
+<td>NO</td>
+<td>PRI</td>
+<td>auto_increment</td>
+<td>(NULL)</td>
+<td>自增ID</td>
+</tr>
+<tr>
+<td>uid</td>
+<td>int(11)</td>
+<td>NO</td>
+<td></td>
+<td></td>
+<td>(NULL)</td>
+<td>用户ID</td>
+</tr>
+<tr>
+<td>exam_id</td>
+<td>int(11)</td>
+<td>NO</td>
+<td></td>
+<td></td>
+<td>(NULL)</td>
+<td>试卷ID</td>
+</tr>
+<tr>
+<td>start_time</td>
+<td>datetime</td>
+<td>NO</td>
+<td></td>
+<td></td>
+<td>(NULL)</td>
+<td>开始时间</td>
+</tr>
+<tr>
+<td>submit_time</td>
+<td>datetime</td>
+<td>YES</td>
+<td></td>
+<td></td>
+<td>(NULL)</td>
+<td>提交时间</td>
+</tr>
+<tr>
+<td>score</td>
+<td>tinyint(4)</td>
+<td>YES</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="问题" tabindex="-1"> 问题</h3>
+<p>请删除exam_record表中作答时间小于5分钟整且分数不及格（及格线为60分）的记录；</p>
+<h3 id="示例" tabindex="-1"> 示例</h3>
+<div><pre><code>输入：
+<span>drop</span> <span>table</span> <span>if</span> <span>EXISTS</span> exam_record<span>;</span>
+<span>CREATE</span> <span>TABLE</span> <span>IF</span> <span>NOT</span> <span>EXISTS</span> exam_record <span>(</span>
+id <span>int</span> <span>PRIMARY</span> <span>KEY</span> <span>AUTO_INCREMENT</span> <span>COMMENT</span> <span>'自增ID'</span><span>,</span>
+uid <span>int</span> <span>NOT</span> <span>NULL</span> <span>COMMENT</span> <span>'用户ID'</span><span>,</span>
+exam_id <span>int</span> <span>NOT</span> <span>NULL</span> <span>COMMENT</span> <span>'试卷ID'</span><span>,</span>
+start_time <span>datetime</span> <span>NOT</span> <span>NULL</span> <span>COMMENT</span> <span>'开始时间'</span><span>,</span>
+submit_time <span>datetime</span> <span>COMMENT</span> <span>'提交时间'</span><span>,</span>
+score <span>tinyint</span> <span>COMMENT</span> <span>'得分'</span>
+<span>)</span><span>CHARACTER</span> <span>SET</span> utf8 <span>COLLATE</span> utf8_general_ci<span>;</span>
+<span>TRUNCATE</span> exam_record<span>;</span>
+<span>INSERT</span> <span>INTO</span> exam_record<span>(</span>uid<span>,</span> exam_id<span>,</span> start_time<span>,</span> submit_time<span>,</span> score<span>)</span> <span>VALUES</span>
+<span>(</span><span>1001</span><span>,</span> <span>9001</span><span>,</span> <span>'2020-01-01 22:11:12'</span><span>,</span> <span>'2020-01-01 23:16:12'</span><span>,</span> <span>50</span><span>)</span><span>,</span>
+<span>(</span><span>1001</span><span>,</span> <span>9002</span><span>,</span> <span>'2020-01-02 09:01:01'</span><span>,</span> <span>'2020-01-02 09:06:00'</span><span>,</span> <span>58</span><span>)</span><span>,</span>
+<span>(</span><span>1002</span><span>,</span> <span>9001</span><span>,</span> <span>'2021-05-02 10:01:01'</span><span>,</span> <span>'2021-05-02 10:05:58'</span><span>,</span> <span>60</span><span>)</span><span>,</span>
+<span>(</span><span>1002</span><span>,</span> <span>9002</span><span>,</span> <span>'2021-06-02 19:01:01'</span><span>,</span> <span>'2021-06-02 19:05:01'</span><span>,</span> <span>54</span><span>)</span><span>,</span>
+<span>(</span><span>1003</span><span>,</span> <span>9001</span><span>,</span> <span>'2021-09-05 19:01:01'</span><span>,</span> <span>'2021-09-05 19:40:01'</span><span>,</span> <span>49</span><span>)</span><span>,</span>
+<span>(</span><span>1003</span><span>,</span> <span>9001</span><span>,</span> <span>'2021-09-05 19:01:01'</span><span>,</span> <span>'2021-09-05 19:15:01'</span><span>,</span> <span>70</span><span>)</span><span>,</span>
+<span>(</span><span>1003</span><span>,</span> <span>9001</span><span>,</span> <span>'2021-09-06 19:01:01'</span><span>,</span> <span>'2021-09-06 19:05:01'</span><span>,</span> <span>80</span><span>)</span><span>,</span>
+<span>(</span><span>1003</span><span>,</span> <span>9002</span><span>,</span> <span>'2021-09-09 07:01:02'</span><span>,</span> <span>null</span><span>,</span> <span>null</span><span>)</span><span>;</span>
+输出：
+<span>1</span><span>|</span><span>1001</span><span>|</span><span>9001</span><span>|</span><span>2020</span><span>-</span><span>01</span><span>-</span><span>01</span> <span>22</span>:<span>11</span>:<span>12</span><span>|</span><span>2020</span><span>-</span><span>01</span><span>-</span><span>01</span> <span>23</span>:<span>16</span>:<span>12</span><span>|</span><span>50</span>
+<span>3</span><span>|</span><span>1002</span><span>|</span><span>9001</span><span>|</span><span>2021</span><span>-</span><span>05</span><span>-</span><span>02</span> <span>10</span>:<span>01</span>:<span>01</span><span>|</span><span>2021</span><span>-</span><span>05</span><span>-</span><span>02</span> <span>10</span>:<span>05</span>:<span>58</span><span>|</span><span>60</span>
+<span>5</span><span>|</span><span>1003</span><span>|</span><span>9001</span><span>|</span><span>2021</span><span>-</span><span>09</span><span>-</span><span>05</span> <span>19</span>:<span>01</span>:<span>01</span><span>|</span><span>2021</span><span>-</span><span>09</span><span>-</span><span>05</span> <span>19</span>:<span>40</span>:<span>01</span><span>|</span><span>49</span>
+<span>6</span><span>|</span><span>1003</span><span>|</span><span>9001</span><span>|</span><span>2021</span><span>-</span><span>09</span><span>-</span><span>05</span> <span>19</span>:<span>01</span>:<span>01</span><span>|</span><span>2021</span><span>-</span><span>09</span><span>-</span><span>05</span> <span>19</span>:<span>15</span>:<span>01</span><span>|</span><span>70</span>
+<span>7</span><span>|</span><span>1003</span><span>|</span><span>9001</span><span>|</span><span>2021</span><span>-</span><span>09</span><span>-</span><span>06</span> <span>19</span>:<span>01</span>:<span>01</span><span>|</span><span>2021</span><span>-</span><span>09</span><span>-</span><span>06</span> <span>19</span>:<span>05</span>:<span>01</span><span>|</span><span>80</span>
+<span>8</span><span>|</span><span>1003</span><span>|</span><span>9002</span><span>|</span><span>2021</span><span>-</span><span>09</span><span>-</span><span>09</span> <span>07</span>:<span>01</span>:<span>02</span><span>|</span>None<span>|</span>None
+
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br><span>27</span><br><span>28</span><br></div></div><h3 id="解答" tabindex="-1"> 解答</h3>
+<p>主要考察删除语句，条件删除语句语法如下：</p>
+<div><pre><code><span>DELETE</span> <span>FROM</span> <span>[</span>数据表名<span>]</span> <span>WHERE</span> <span>[</span>条件语句<span>]</span><span>;</span>
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p>除此之外，注意题意可以发现是两个条件相联合，所以要用关键字 <code>AND</code>。而为了计算结束时间和开始之间的时间差，需要用到函数 <code>TIMESTAMPDIFF(interval, time_start, time_end)</code>，其中 <code>iterval</code> 可以指定的单位为：</p>
+<ul>
+<li><code>SECOND</code></li>
+<li><code>MINUTE</code></li>
+<li><code>HOUR</code></li>
+<li><code>DAY</code></li>
+<li><code>MONTH</code></li>
+<li><code>YEAR</code></li>
+</ul>
+<div><pre><code><span>DELETE</span> <span>FROM</span> 
+exam_record 
+<span>WHERE</span> 
+score <span>&lt;</span> <span>60</span> 
+<span>AND</span>
+TIMESTAMPDIFF<span>(</span><span>MINUTE</span><span>,</span> start_time<span>,</span> submit_time<span>)</span> <span>&lt;</span> <span>5</span><span>;</span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br></div></div><h2 id="sql7-删除记录-二" tabindex="-1"> SQL7 删除记录（二）</h2>
+<h3 id="描述-1" tabindex="-1"> 描述</h3>
+<p>现有一张试卷作答记录表exam_record，其中包含多年来的用户作答试卷记录，结构如下表：</p>
+<p><strong>作答记录表exam_record：</strong></p>
+<p>start_time是试卷开始时间</p>
+<p>submit_time 是交卷时间，即结束时间，如果未完成的话，则为空</p>
+<table>
+<thead>
+<tr>
+<th>Filed</th>
+<th>Type</th>
+<th>Null</th>
+<th>Key</th>
+<th>Extra</th>
+<th>Default</th>
+<th>Comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>int(11)</td>
+<td>NO</td>
+<td>PRI</td>
+<td>auto_increment</td>
+<td>(NULL)</td>
+<td>自增ID</td>
+</tr>
+<tr>
+<td>uid</td>
+<td>int(11)</td>
+<td>NO</td>
+<td></td>
+<td></td>
+<td>(NULL)</td>
+<td>用户ID</td>
+</tr>
+<tr>
+<td>exam_id</td>
+<td>int(11)</td>
+<td>NO</td>
+<td></td>
+<td></td>
+<td>(NULL)</td>
+<td>试卷ID</td>
+</tr>
+<tr>
+<td>start_time</td>
+<td>datetime</td>
+<td>NO</td>
+<td></td>
+<td></td>
+<td>(NULL)</td>
+<td>开始时间</td>
+</tr>
+<tr>
+<td>submit_time</td>
+<td>datetime</td>
+<td>YES</td>
+<td></td>
+<td></td>
+<td>(NULL)</td>
+<td>提交时间</td>
+</tr>
+<tr>
+<td>score</td>
+<td>tinyint(4)</td>
+<td>YES</td>
+<td></td>
+<td></td>
+<td>(NULL)</td>
+<td>得分</td>
+</tr>
+</tbody>
+</table>
+<h3 id="问题-1" tabindex="-1"> 问题</h3>
+<p>请删除exam_record表中未完成作答或作答时间小于5分钟整的记录中，开始作答时间最早的3条记录。</p>
+<h3 id="示例-1" tabindex="-1"> 示例</h3>
+<div><pre><code>输入：
+<span>drop</span> <span>table</span> <span>if</span> <span>EXISTS</span> exam_record<span>;</span>
+<span>CREATE</span> <span>TABLE</span> <span>IF</span> <span>NOT</span> <span>EXISTS</span> exam_record <span>(</span>
+id <span>int</span> <span>PRIMARY</span> <span>KEY</span> <span>AUTO_INCREMENT</span> <span>COMMENT</span> <span>'自增ID'</span><span>,</span>
+uid <span>int</span> <span>NOT</span> <span>NULL</span> <span>COMMENT</span> <span>'用户ID'</span><span>,</span>
+exam_id <span>int</span> <span>NOT</span> <span>NULL</span> <span>COMMENT</span> <span>'试卷ID'</span><span>,</span>
+start_time <span>datetime</span> <span>NOT</span> <span>NULL</span> <span>COMMENT</span> <span>'开始时间'</span><span>,</span>
+submit_time <span>datetime</span> <span>COMMENT</span> <span>'提交时间'</span><span>,</span>
+score <span>tinyint</span> <span>COMMENT</span> <span>'得分'</span>
+<span>)</span><span>CHARACTER</span> <span>SET</span> utf8 <span>COLLATE</span> utf8_general_ci<span>;</span>
+<span>TRUNCATE</span> exam_record<span>;</span>
+<span>INSERT</span> <span>INTO</span> exam_record<span>(</span>uid<span>,</span> exam_id<span>,</span> start_time<span>,</span> submit_time<span>,</span> score<span>)</span> <span>VALUES</span>
+<span>(</span><span>1001</span><span>,</span> <span>9001</span><span>,</span> <span>'2020-01-01 22:11:12'</span><span>,</span> <span>'2020-01-01 23:16:12'</span><span>,</span> <span>50</span><span>)</span><span>,</span>
+<span>(</span><span>1001</span><span>,</span> <span>9002</span><span>,</span> <span>'2020-01-02 09:01:01'</span><span>,</span> <span>'2020-01-02 09:06:00'</span><span>,</span> <span>58</span><span>)</span><span>,</span>
+<span>(</span><span>1001</span><span>,</span> <span>9002</span><span>,</span> <span>'2020-01-02 09:01:01'</span><span>,</span> <span>'2020-01-02 09:05:01'</span><span>,</span> <span>58</span><span>)</span><span>,</span>
+<span>(</span><span>1002</span><span>,</span> <span>9001</span><span>,</span> <span>'2021-05-02 10:01:01'</span><span>,</span> <span>'2021-05-02 10:06:58'</span><span>,</span> <span>60</span><span>)</span><span>,</span>
+<span>(</span><span>1002</span><span>,</span> <span>9002</span><span>,</span> <span>'2021-06-02 19:01:01'</span><span>,</span> <span>null</span><span>,</span> <span>null</span><span>)</span><span>,</span>
+<span>(</span><span>1003</span><span>,</span> <span>9001</span><span>,</span> <span>'2021-09-05 19:01:01'</span><span>,</span> <span>null</span><span>,</span> <span>null</span><span>)</span><span>,</span>
+<span>(</span><span>1003</span><span>,</span> <span>9001</span><span>,</span> <span>'2021-09-05 19:01:01'</span><span>,</span> <span>null</span><span>,</span> <span>null</span><span>)</span><span>,</span>
+<span>(</span><span>1003</span><span>,</span> <span>9002</span><span>,</span> <span>'2021-09-09 07:01:02'</span><span>,</span> <span>null</span><span>,</span> <span>null</span><span>)</span><span>;</span>
+输出：
+<span>1</span><span>|</span><span>1001</span><span>|</span><span>9001</span><span>|</span><span>2020</span><span>-</span><span>01</span><span>-</span><span>01</span> <span>22</span>:<span>11</span>:<span>12</span><span>|</span><span>2020</span><span>-</span><span>01</span><span>-</span><span>01</span> <span>23</span>:<span>16</span>:<span>12</span><span>|</span><span>50</span>
+<span>4</span><span>|</span><span>1002</span><span>|</span><span>9001</span><span>|</span><span>2021</span><span>-</span><span>05</span><span>-</span><span>02</span> <span>10</span>:<span>01</span>:<span>01</span><span>|</span><span>2021</span><span>-</span><span>05</span><span>-</span><span>02</span> <span>10</span>:<span>06</span>:<span>58</span><span>|</span><span>60</span>
+<span>6</span><span>|</span><span>1003</span><span>|</span><span>9001</span><span>|</span><span>2021</span><span>-</span><span>09</span><span>-</span><span>05</span> <span>19</span>:<span>01</span>:<span>01</span><span>|</span>None<span>|</span>None
+<span>7</span><span>|</span><span>1003</span><span>|</span><span>9001</span><span>|</span><span>2021</span><span>-</span><span>09</span><span>-</span><span>05</span> <span>19</span>:<span>01</span>:<span>01</span><span>|</span>None<span>|</span>None
+<span>8</span><span>|</span><span>1003</span><span>|</span><span>9002</span><span>|</span><span>2021</span><span>-</span><span>09</span><span>-</span><span>09</span> <span>07</span>:<span>01</span>:<span>02</span><span>|</span>None<span>|</span>None
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br></div></div><h3 id="解答-1" tabindex="-1"> 解答</h3>
+<p>同样考察删除语句，不过此时加入了多的限制，其语法结构如下：</p>
+<div><pre><code><span>DELETE</span> <span>FROM</span> <span>[</span>数据表名<span>]</span> <span>WHERE</span> <span>[</span>条件语句<span>]</span> <span>ORDER</span> <span>BY</span> <span>[</span>字段名<span>]</span> <span>LIMIT</span> <span>[</span>数量<span>]</span><span>;</span>
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p>要删除未作答或作答时间小于 5 分钟的记录，需要用到关键字 <code>OR</code> 将两个条件并联，其次，要对结果进行排序，则需要用到 <code>ORDER BY</code>，最后则是限制输出记录的调试，用到 <code>LIMIT</code> 关键字。</p>
+<div><pre><code><span>DELETE</span> <span>FROM</span> 
+exam_record
+<span>WHERE</span>
+TIMESTAMPDIFF<span>(</span><span>MINUTE</span><span>,</span> start_time<span>,</span> submit_time<span>)</span> <span>&lt;</span> <span>5</span>
+<span>OR</span>
+submit_time 
+<span>IS</span> <span>NULL</span>
+<span>ORDER</span> <span>BY</span> 
+start_time
+<span>LIMIT</span> <span>3</span><span>;</span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br></div></div><h2 id="sql8-删除记录-三" tabindex="-1"> SQL8 删除记录（三）</h2>
+<h3 id="描述-2" tabindex="-1"> 描述</h3>
+<p>现有一张试卷作答记录表 exam_record，其中包含多年来的用户作答试卷记录，结构如下表：</p>
+<table>
+<thead>
+<tr>
+<th>Filed</th>
+<th>Type</th>
+<th>Null</th>
+<th>Key</th>
+<th>Extra</th>
+<th>Default</th>
+<th>Comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>int(11)</td>
+<td>NO</td>
+<td>PRI</td>
+<td>auto_increment</td>
+<td>(NULL)</td>
+<td>自增ID</td>
+</tr>
+<tr>
+<td>uid</td>
+<td>int(11)</td>
+<td>NO</td>
+<td></td>
+<td></td>
+<td>(NULL)</td>
+<td>用户ID</td>
+</tr>
+<tr>
+<td>exam_id</td>
+<td>int(11)</td>
+<td>NO</td>
+<td></td>
+<td></td>
+<td>(NULL)</td>
+<td>试卷ID</td>
+</tr>
+<tr>
+<td>start_time</td>
+<td>datetime</td>
+<td>NO</td>
+<td></td>
+<td></td>
+<td>(NULL)</td>
+<td>开始时间</td>
+</tr>
+<tr>
+<td>submit_time</td>
+<td>datetime</td>
+<td>YES</td>
+<td></td>
+<td></td>
+<td>(NULL)</td>
+<td>提交时间</td>
+</tr>
+<tr>
+<td>score</td>
+<td>tinyint(4)</td>
+<td>YES</td>
+<td></td>
+<td></td>
+<td>(NULL)</td>
+<td>得分</td>
+</tr>
+</tbody>
+</table>
+<h3 id="问题-2" tabindex="-1"> 问题</h3>
+<p>请删除 exam_record 表中所有记录，并重置自增主键。</p>
+<h3 id="示例-2" tabindex="-1"> 示例</h3>
+<div><pre><code>输入：
+<span>drop</span> <span>table</span> <span>if</span> <span>EXISTS</span> exam_record<span>;</span>
+<span>CREATE</span> <span>TABLE</span> <span>IF</span> <span>NOT</span> <span>EXISTS</span> exam_record <span>(</span>
+id <span>int</span> <span>PRIMARY</span> <span>KEY</span> <span>AUTO_INCREMENT</span> <span>COMMENT</span> <span>'自增ID'</span><span>,</span>
+uid <span>int</span> <span>NOT</span> <span>NULL</span> <span>COMMENT</span> <span>'用户ID'</span><span>,</span>
+exam_id <span>int</span> <span>NOT</span> <span>NULL</span> <span>COMMENT</span> <span>'试卷ID'</span><span>,</span>
+start_time <span>datetime</span> <span>NOT</span> <span>NULL</span> <span>COMMENT</span> <span>'开始时间'</span><span>,</span>
+submit_time <span>datetime</span> <span>COMMENT</span> <span>'提交时间'</span><span>,</span>
+score <span>tinyint</span> <span>COMMENT</span> <span>'得分'</span>
+<span>)</span><span>CHARACTER</span> <span>SET</span> utf8 <span>COLLATE</span> utf8_general_ci<span>;</span>
+<span>TRUNCATE</span> exam_record<span>;</span>
+<span>INSERT</span> <span>INTO</span> exam_record<span>(</span>uid<span>,</span> exam_id<span>,</span> start_time<span>,</span> submit_time<span>,</span> score<span>)</span> <span>VALUES</span>
+<span>(</span><span>1001</span><span>,</span> <span>9001</span><span>,</span> <span>'2020-01-01 22:11:12'</span><span>,</span> <span>'2020-01-01 23:16:12'</span><span>,</span> <span>50</span><span>)</span><span>,</span>
+<span>(</span><span>1001</span><span>,</span> <span>9002</span><span>,</span> <span>'2020-01-02 09:01:01'</span><span>,</span> <span>'2020-01-02 09:06:00'</span><span>,</span> <span>58</span><span>)</span><span>;</span>
+输出：
+<span>0</span><span>|</span>None
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br></div></div><h3 id="解答-2" tabindex="-1"> 解答</h3>
+<p>题目中是需要删除所有记录并重置自增计数器，所以此时可以直接使用 <code>TRUNCATE</code> 语句，其语法结构如下：</p>
+<div><pre><code><span>TRUNCATE</span> <span>[</span>数据表名<span>]</span><span>;</span>
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><div><pre><code><span>TRUNCATE</span> exam_record<span>;</span>
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p>当然，以上方式虽然简单，但我们也可以用一种手动重置自增计数器的方式，即先删除记录，然后在手动重置自增计数器。</p>
+<div><pre><code><span>DELETE</span> <span>FROM</span> exam_record<span>;</span>
+<span>ALTER</span> <span>TABLE</span> exam_record <span>auto_increment</span> <span>=</span> <span>1</span><span>;</span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br></div></div><h2 id="sql9-创建一张新表" tabindex="-1"> SQL9 创建一张新表</h2>
+<h3 id="描述-3" tabindex="-1"> 描述</h3>
+<p>现有一张用户信息表，其中包含多年来在平台注册过的用户信息，随着牛客平台的不断壮大，用户量飞速增长，为了高效地为高活跃用户提供服务，现需要将部分用户拆分出一张新表。</p>
+<p>原来的用户信息表：</p>
+<table>
+<thead>
+<tr>
+<th>Filed</th>
+<th>Type</th>
+<th>Null</th>
+<th>Key</th>
+<th>Default</th>
+<th>Extra</th>
+<th>Comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>int(11)</td>
+<td>NO</td>
+<td>PRI</td>
+<td>(NULL)</td>
+<td>auto_increment</td>
+<td>自增ID</td>
+</tr>
+<tr>
+<td>uid</td>
+<td>int(11)</td>
+<td>NO</td>
+<td>UNI</td>
+<td>(NULL)</td>
+<td></td>
+<td>用户ID</td>
+</tr>
+<tr>
+<td>nick_name</td>
+<td>varchar(64)</td>
+<td>YES</td>
+<td></td>
+<td>(NULL)</td>
+<td></td>
+<td>昵称</td>
+</tr>
+<tr>
+<td>achievement</td>
+<td>int(11)</td>
+<td>YES</td>
+<td></td>
+<td>0</td>
+<td></td>
+<td>成就值</td>
+</tr>
+<tr>
+<td>level</td>
+<td>int(11)</td>
+<td>YES</td>
+<td></td>
+<td>(NULL)</td>
+<td></td>
+<td>用户等级</td>
+</tr>
+<tr>
+<td>job</td>
+<td>varchar(32)</td>
+<td>YES</td>
+<td></td>
+<td>(NULL)</td>
+<td></td>
+<td>职业方向</td>
+</tr>
+<tr>
+<td>register_time</td>
+<td>datetime</td>
+<td>YES</td>
+<td></td>
+<td>CURRENT_TIMESTAMP</td>
+<td></td>
+<td>注册时间</td>
+</tr>
+</tbody>
+</table>
+<h3 id="问题-3" tabindex="-1"> 问题</h3>
+<p>请<strong>创建一张优质用户信息表user_info_vip</strong>，表结构和用户信息表一致。</p>
+<p>你应该返回的输出如下表格所示，请写出建表语句将表格中所有限制和说明记录到表里。</p>
+<table>
+<thead>
+<tr>
+<th>Filed</th>
+<th>Type</th>
+<th>Null</th>
+<th>Key</th>
+<th>Default</th>
+<th>Extra</th>
+<th>Comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>int(11)</td>
+<td>NO</td>
+<td>PRI</td>
+<td></td>
+<td>auto_increment</td>
+<td>自增ID</td>
+</tr>
+<tr>
+<td>uid</td>
+<td>int(11)</td>
+<td>NO</td>
+<td>UNI</td>
+<td></td>
+<td></td>
+<td>用户ID</td>
+</tr>
+<tr>
+<td>nick_name</td>
+<td>varchar(64)</td>
+<td>YES</td>
+<td></td>
+<td></td>
+<td></td>
+<td>昵称</td>
+</tr>
+<tr>
+<td>achievement</td>
+<td>int(11)</td>
+<td>YES</td>
+<td></td>
+<td>0</td>
+<td></td>
+<td>成就值</td>
+</tr>
+<tr>
+<td>level</td>
+<td>int(11)</td>
+<td>YES</td>
+<td></td>
+<td></td>
+<td></td>
+<td>用户等级</td>
+</tr>
+<tr>
+<td>job</td>
+<td>varchar(32)</td>
+<td>YES</td>
+<td></td>
+<td></td>
+<td></td>
+<td>职业方向</td>
+</tr>
+<tr>
+<td>register_time</td>
+<td>datetime</td>
+<td>YES</td>
+<td></td>
+<td>CURRENT_TIMESTAMP</td>
+<td></td>
+<td>注册时间</td>
+</tr>
+</tbody>
+</table>
+<h3 id="示例-3" tabindex="-1"> 示例</h3>
+<div><pre><code>输入：
+<span>drop</span> <span>table</span> <span>if</span> <span>EXISTS</span> user_info_vip<span>;</span>
+输出：
+id<span>|</span><span>int</span><span>|</span>None<span>|</span><span>NO</span><span>|</span>PRI<span>|</span>None<span>|</span><span>auto_increment</span><span>|</span><span>select</span><span>,</span><span>insert</span><span>,</span><span>update</span><span>,</span><span>references</span><span>|</span>自增ID
+uid<span>|</span><span>int</span><span>|</span>None<span>|</span><span>NO</span><span>|</span>UNI<span>|</span>None<span>||</span><span>select</span><span>,</span><span>insert</span><span>,</span><span>update</span><span>,</span><span>references</span><span>|</span>用户ID
+nick_name<span>|</span><span>varchar</span><span>(</span><span>64</span><span>)</span><span>|</span>utf8_general_ci<span>|</span>YES<span>||</span>None<span>||</span><span>select</span><span>,</span><span>insert</span><span>,</span><span>update</span><span>,</span><span>references</span><span>|</span>昵称
+achievement<span>|</span><span>int</span><span>|</span>None<span>|</span>YES<span>||</span><span>0</span><span>||</span><span>select</span><span>,</span><span>insert</span><span>,</span><span>update</span><span>,</span><span>references</span><span>|</span>成就值
+<span>level</span><span>|</span><span>int</span><span>|</span>None<span>|</span>YES<span>||</span>None<span>||</span><span>select</span><span>,</span><span>insert</span><span>,</span><span>update</span><span>,</span><span>references</span><span>|</span>用户等级
+job<span>|</span><span>varchar</span><span>(</span><span>32</span><span>)</span><span>|</span>utf8_general_ci<span>|</span>YES<span>||</span>None<span>||</span><span>select</span><span>,</span><span>insert</span><span>,</span><span>update</span><span>,</span><span>references</span><span>|</span>职业方向
+register_time<span>|</span><span>datetime</span><span>|</span>None<span>|</span>YES<span>||</span><span>CURRENT_TIMESTAMP</span><span>|</span>DEFAULT_GENERATED<span>|</span><span>select</span><span>,</span><span>insert</span><span>,</span><span>update</span><span>,</span><span>references</span><span>|</span>注册时间
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br></div></div><h3 id="解答-3" tabindex="-1"> 解答</h3>
+<p>考察表的创建方式，其语法结构如下：</p>
+<div><pre><code><span>CREATE</span> <span>TABLE</span>
+<span>[</span><span>IF</span> <span>NOT</span> <span>EXISTS</span><span>]</span> <span>[</span>数据表名<span>]</span> <span>-- 不存在才创建，存在就跳过</span>
+<span>(</span>列名 <span>[</span>列类型<span>]</span> <span>-- 列名和类型必选</span>
+  <span>[</span> <span>PRIMARY</span> <span>KEY</span> <span>-- 可选的约束，主键</span>
+   <span>|</span> <span>FOREIGN</span> <span>KEY</span> <span>-- 外键，引用其他表的键值</span>
+   <span>|</span> <span>AUTO_INCREMENT</span> <span>-- 自增ID</span>
+   <span>|</span> <span>COMMENT</span> <span>comment</span> <span>-- 列注释（评论）</span>
+   <span>|</span> <span>DEFAULT</span> default_value <span>-- 默认值</span>
+   <span>|</span> <span>UNIQUE</span> <span>-- 唯一性约束，不允许两条记录该列值相同</span>
+   <span>|</span> <span>NOT</span> <span>NULL</span> <span>-- 该列非空</span>
+  <span>]</span><span>,</span> <span>.</span><span>.</span><span>.</span>
+<span>)</span> <span>[</span><span>CHARACTER</span> <span>SET</span> <span>charset</span><span>]</span> <span>-- 字符集编码</span>
+<span>[</span><span>COLLATE</span> collate_value<span>]</span> <span>-- 列排序和比较时的规则（是否区分大小写等）</span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br></div></div><p>然后按照上述语法，套入相关字段即可。</p>
+<div><pre><code><span>CREATE</span> <span>TABLE</span> <span>IF</span> <span>NOT</span> <span>EXISTS</span> user_info_vip <span>(</span>
+    id <span>int</span> <span>PRIMARY</span> <span>KEY</span> <span>AUTO_INCREMENT</span> <span>COMMENT</span> <span>'自增ID'</span><span>,</span>
+    uid <span>int</span> <span>UNIQUE</span> <span>NOT</span> <span>NULL</span> <span>COMMENT</span> <span>'用户ID'</span><span>,</span>
+    nick_name <span>varchar</span><span>(</span><span>64</span><span>)</span> <span>COMMENT</span> <span>'昵称'</span><span>,</span>
+    achievement <span>int</span> <span>DEFAULT</span> <span>0</span> <span>COMMENT</span> <span>'成就值'</span><span>,</span>
+    <span>level</span> <span>int</span> <span>COMMENT</span> <span>'用户等级'</span><span>,</span>
+    job <span>varchar</span><span>(</span><span>32</span><span>)</span> <span>COMMENT</span> <span>'职业方向'</span><span>,</span>
+    register_time <span>datetime</span> <span>DEFAULT</span> <span>CURRENT_TIMESTAMP</span> <span>COMMENT</span> <span>'注册时间'</span>
+<span>)</span> <span>CHARACTER</span> <span>SET</span> utf8 <span>COLLATE</span> utf8_general_ci<span>;</span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br></div></div><h2 id="sql10-修改表" tabindex="-1"> SQL10 修改表</h2>
+<h3 id="描述-4" tabindex="-1"> 描述</h3>
+<p>现有一张用户信息表user_info，其中包含多年来在平台注册过的用户信息。</p>
+<p><strong>用户信息表user_info：</strong></p>
+<table>
+<thead>
+<tr>
+<th>Filed</th>
+<th>Type</th>
+<th>Null</th>
+<th>Key</th>
+<th>Default</th>
+<th>Extra</th>
+<th>Comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>int(11)</td>
+<td>NO</td>
+<td>PRI</td>
+<td>(NULL)</td>
+<td>auto_increment</td>
+<td>自增ID</td>
+</tr>
+<tr>
+<td>uid</td>
+<td>int(11)</td>
+<td>NO</td>
+<td>UNI</td>
+<td>(NULL)</td>
+<td></td>
+<td>用户ID</td>
+</tr>
+<tr>
+<td>nick_name</td>
+<td>varchar(64)</td>
+<td>YES</td>
+<td></td>
+<td>(NULL)</td>
+<td></td>
+<td>昵称</td>
+</tr>
+<tr>
+<td>achievement</td>
+<td>int(11)</td>
+<td>YES</td>
+<td></td>
+<td>0</td>
+<td></td>
+<td>成就值</td>
+</tr>
+<tr>
+<td>level</td>
+<td>int(11)</td>
+<td>YES</td>
+<td></td>
+<td>(NULL)</td>
+<td></td>
+<td>用户等级</td>
+</tr>
+<tr>
+<td>job</td>
+<td>varchar(32)</td>
+<td>YES</td>
+<td></td>
+<td>(NULL)</td>
+<td></td>
+<td>职业方向</td>
+</tr>
+<tr>
+<td>register_time</td>
+<td>datetime</td>
+<td>YES</td>
+<td></td>
+<td>CURRENT_TIMESTAMP</td>
+<td></td>
+<td>注册时间</td>
+</tr>
+</tbody>
+</table>
+<h3 id="问题-4" tabindex="-1"> 问题</h3>
+<p>请在用户信息表，字段level的后面增加一列最多可保存15个汉字的字段school；并将表中job列名改为profession，同时varchar字段长度变为10；achievement的默认值设置为0。</p>
+<p>输出结果示例：</p>
+<table>
+<thead>
+<tr>
+<th>Filed</th>
+<th>Type</th>
+<th>Null</th>
+<th>Key</th>
+<th>Default</th>
+<th>Extra</th>
+<th>Comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>int(11)</td>
+<td>NO</td>
+<td>PRI</td>
+<td></td>
+<td>auto_increment</td>
+<td>自增ID</td>
+</tr>
+<tr>
+<td>uid</td>
+<td>int(11)</td>
+<td>NO</td>
+<td>UNI</td>
+<td></td>
+<td></td>
+<td>用户ID</td>
+</tr>
+<tr>
+<td>nick_name</td>
+<td>varchar(64)</td>
+<td>YES</td>
+<td></td>
+<td></td>
+<td></td>
+<td>昵称</td>
+</tr>
+<tr>
+<td>achievement</td>
+<td>int(11)</td>
+<td>YES</td>
+<td></td>
+<td>0</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>level</td>
+<td>int(11)</td>
+<td>YES</td>
+<td></td>
+<td></td>
+<td></td>
+<td>用户等级</td>
+</tr>
+<tr>
+<td>school</td>
+<td>varchar(15)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>profession</td>
+<td>varchar(10)</td>
+<td>YES</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>register_time</td>
+<td>datetime</td>
+<td>YES</td>
+<td></td>
+<td>CURRENT_TIMESTAMP</td>
+<td></td>
+<td>注册时间</td>
+</tr>
+</tbody>
+</table>
+<h3 id="示例-4" tabindex="-1"> 示例</h3>
+<div><pre><code>输入：
+<span>drop</span> <span>table</span> <span>if</span> <span>exists</span> user_info<span>;</span>
+<span>CREATE</span> <span>TABLE</span> <span>IF</span> <span>NOT</span> <span>EXISTS</span> user_info <span>(</span>
+id <span>int</span> <span>PRIMARY</span> <span>KEY</span> <span>AUTO_INCREMENT</span> <span>COMMENT</span> <span>'自增ID'</span><span>,</span>
+uid <span>int</span> <span>UNIQUE</span> <span>NOT</span> <span>NULL</span> <span>COMMENT</span> <span>'用户ID'</span><span>,</span>
+<span><span>`</span>nick_name<span>`</span></span> <span>varchar</span><span>(</span><span>64</span><span>)</span> <span>COMMENT</span> <span>'昵称'</span><span>,</span>
+achievement <span>int</span> <span>COMMENT</span> <span>'成就值'</span><span>,</span>
+<span>level</span> <span>int</span> <span>COMMENT</span> <span>'用户等级'</span><span>,</span>
+job <span>varchar</span><span>(</span><span>10</span><span>)</span> <span>COMMENT</span> <span>'职业方向'</span><span>,</span>
+register_time <span>datetime</span> <span>DEFAULT</span> <span>CURRENT_TIMESTAMP</span> <span>COMMENT</span> <span>'注册时间'</span>
+<span>)</span><span>CHARACTER</span> <span>SET</span> utf8 <span>COLLATE</span> utf8_general_ci<span>;</span>
+输出：
+id<span>|</span><span>int</span><span>|</span>None<span>|</span><span>NO</span><span>|</span>PRI<span>|</span>None<span>|</span><span>auto_increment</span><span>|</span><span>select</span><span>,</span><span>insert</span><span>,</span><span>update</span><span>,</span><span>references</span><span>|</span>自增ID
+uid<span>|</span><span>int</span><span>|</span>None<span>|</span><span>NO</span><span>|</span>UNI<span>|</span>None<span>||</span><span>select</span><span>,</span><span>insert</span><span>,</span><span>update</span><span>,</span><span>references</span><span>|</span>用户ID
+nick_name<span>|</span><span>varchar</span><span>(</span><span>64</span><span>)</span><span>|</span>utf8_general_ci<span>|</span>YES<span>||</span>None<span>||</span><span>select</span><span>,</span><span>insert</span><span>,</span><span>update</span><span>,</span><span>references</span><span>|</span>昵称
+achievement<span>|</span><span>int</span><span>|</span>None<span>|</span>YES<span>||</span><span>0</span><span>||</span><span>select</span><span>,</span><span>insert</span><span>,</span><span>update</span><span>,</span><span>references</span><span>|</span>
+<span>level</span><span>|</span><span>int</span><span>|</span>None<span>|</span>YES<span>||</span>None<span>||</span><span>select</span><span>,</span><span>insert</span><span>,</span><span>update</span><span>,</span><span>references</span><span>|</span>用户等级
+school<span>|</span><span>varchar</span><span>(</span><span>15</span><span>)</span><span>|</span>utf8_general_ci<span>|</span>YES<span>||</span>None<span>||</span><span>select</span><span>,</span><span>insert</span><span>,</span><span>update</span><span>,</span><span>references</span><span>|</span>
+profession<span>|</span><span>varchar</span><span>(</span><span>10</span><span>)</span><span>|</span>utf8_general_ci<span>|</span>YES<span>||</span>None<span>||</span><span>select</span><span>,</span><span>insert</span><span>,</span><span>update</span><span>,</span><span>references</span><span>|</span>
+register_time<span>|</span><span>datetime</span><span>|</span>None<span>|</span>YES<span>||</span><span>CURRENT_TIMESTAMP</span><span>|</span>DEFAULT_GENERATED<span>|</span><span>select</span><span>,</span><span>insert</span><span>,</span><span>update</span><span>,</span><span>references</span><span>|</span>注册时间
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br></div></div><h3 id="解答-4" tabindex="-1"> 解答</h3>
+<p>主要考察数据表结构的修改，主要语法如下：</p>
+<ul>
+<li>在已有列后新增列</li>
+</ul>
+<div><pre><code><span>ALTER</span> <span>TABLE</span> <span>[</span>数据表名<span>]</span> <span>ADD</span> <span>[</span>列名<span>]</span> <span>[</span>列类型<span>]</span> <span>AFTER</span> <span>[</span>列名<span>]</span><span>;</span>
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><ul>
+<li>修改已有列名和列类型</li>
+</ul>
+<div><pre><code><span>ALTER</span> <span>TABLE</span> <span>[</span>数据表名<span>]</span> CHANGE <span>[</span>旧列名<span>]</span> <span>[</span>新列名<span>]</span> <span>[</span>列类型<span>]</span><span>;</span>
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><ul>
+<li>修改已有列的默认值</li>
+</ul>
+<div><pre><code><span>ALTER</span> <span>TABLE</span> <span>[</span>数据表名<span>]</span> CHANGE <span>COLUMN</span> <span>[</span>旧列名<span>]</span> <span>[</span>新列名<span>]</span> <span>[</span>新列类型<span>]</span> <span>DEFAULT</span> <span>[</span>默认值<span>]</span><span>;</span>
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p>依照题意，主要实现以下功能：</p>
+<ul>
+<li>
+<p><code>level</code> 后面增加一列最多可保存 15 个汉字的字段 <code>school</code></p>
+</li>
+<li>
+<p>将表中 <code>job</code> 列名改为 <code>profession</code></p>
+</li>
+<li>
+<p>设置 <code>achievement</code> 的默认值为 0</p>
+</li>
+</ul>
+<div><pre><code><span>ALTER</span> <span>TABLE</span> user_info <span>ADD</span> school <span>varchar</span><span>(</span><span>15</span><span>)</span> <span>AFTER</span> <span><span>`</span>level<span>`</span></span><span>;</span>
+<span>ALTER</span> <span>TABLE</span> user_info CHANGE job profession <span>varchar</span><span>(</span><span>10</span><span>)</span><span>;</span>
+<span>ALTER</span> <span>TABLE</span> user_info CHANGE <span>COLUMN</span> achievement achievement <span>int</span> <span>DEFAULT</span> <span>0</span><span>;</span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br></div></div>]]></content>
+    <category term="SQL 进阶挑战"/>
+    <published>2022-06-13T20:00:00.000Z</published>
+  </entry>
   <entry>
     <title type="html">SQL 进阶挑战（1 - 5）</title>
     <id>https://cunyu1943.github.io/JavaPark/JavaPark/database/sql-advanced/1-5.html</id>
@@ -23557,143 +24327,5 @@ ORDER BY ……
 ]]></content>
     <category term="Maven 入门教程"/>
     <published>2022-01-09T23:03:24.000Z</published>
-  </entry>
-  <entry>
-    <title type="html">博客搭建：docsify 搭建高颜值文档网站</title>
-    <id>https://cunyu1943.github.io/JavaPark/JavaPark/efficiency/blog/docsify.html</id>
-    <link href="https://cunyu1943.github.io/JavaPark/JavaPark/efficiency/blog/docsify.html"/>
-    <updated>2022-04-18T14:16:18.000Z</updated>
-    <content type="html"><![CDATA[<h2 id="前言" tabindex="-1"> 前言</h2>
-<p>在开始之前，请先确保你已经满足以下两个条件：</p>
-<ul>
-<li>
-<p>自己的电脑上安装了 <code>Node.js</code> ，如果还没有安装，可以参照我的另一篇教程 <a href="https://blog.csdn.net/github_39655029/article/details/105397485" target="_blank" rel="noopener noreferrer"><code>Node.js</code> 的安装（多图版）<ExternalLinkIcon/></a>；</p>
-</li>
-<li>
-<p>拥有自己的 <code>Github/Gitee</code> 账号；</p>
-</li>
-</ul>
-<h2 id="快速安装并开始" tabindex="-1"> 快速安装并开始</h2>
-<h3 id="安装" tabindex="-1"> 安装</h3>
-<p>首先使用如下命令在自己的电脑上安装 <code>docsify-cli</code> 工具，方便后续的创建和预览自己的文档网站；</p>
-<div><pre><code><span>npm</span> i docsify-cli -g
-</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9naXRlZS5jb20vY3VueXUxOTQzL2ltYWdlcy9yYXcvbWFzdGVyL0ltZ3NXaW4vZG9jc2lmeS1pLnBuZw?x-oss-process=image/format,png" alt="" loading="lazy"></p>
-<h3 id="项目初始化" tabindex="-1"> 项目初始化</h3>
-<p>在自己的电脑上创建一个项目文件夹，比如我的是 <code>Docsify</code>，然后进入该文件夹并打开命令行工具，通过如下命令来初始化项目；</p>
-<div><pre><code>docsify init ./
-</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9naXRlZS5jb20vY3VueXUxOTQzL2ltYWdlcy9yYXcvbWFzdGVyL0ltZ3NXaW4vZG9jc2lmeS1pbml0LnBuZw?x-oss-process=image/format,png" alt="" loading="lazy"></p>
-<h3 id="项目目录结构" tabindex="-1"> 项目目录结构</h3>
-<p>经过初始化后，可以发现项目文件夹的目录结构如下，主要有三个文件，其功能如下：</p>
-<div><pre><code><span>.</span>
-    .nojekyll
-    index.html
-    README.md
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br></div></div><ul>
-<li>
-<p><code>index.html</code> : 入口文件，也叫配置文件，相关配置均在其中；</p>
-</li>
-<li>
-<p><code>README.md</code> :  作为主页内容渲染；</p>
-</li>
-<li>
-<p><code>.nojekyll</code> : 防止 <code>Github Pages</code> 忽略下划线开头的文件；</p>
-</li>
-</ul>
-<h3 id="本地预览" tabindex="-1"> 本地预览</h3>
-<p>当我们编辑好文档后，想要在本地预览时，可通过如下命令运行本地服务器，然后在浏览器中访问 <code>http://localhost:3000</code> 进行实时预览（其中 3000 端口是 <code>docsify</code> 默认访问端口）；</p>
-<div><pre><code>docsify serve ./
-</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9naXRlZS5jb20vY3VueXUxOTQzL2ltYWdlcy9yYXcvbWFzdGVyL0ltZ3NXaW4vZG9jc2lmeS1zZXJ2ZS5wbmc?x-oss-process=image/format,png" alt="" loading="lazy"></p>
-<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9naXRlZS5jb20vY3VueXUxOTQzL2ltYWdlcy9yYXcvbWFzdGVyL0ltZ3NXaW4vZG9jc2lmeSVFOSVBMiU4NCVFOCVBNyU4OC5wbmc?x-oss-process=image/format,png" alt="" loading="lazy"></p>
-<h2 id="项目配置" tabindex="-1"> 项目配置</h2>
-<h3 id="配置文件-index-html" tabindex="-1"> 配置文件 <code>index.html</code></h3>
-<p>该文件中主要配置了文档网站的名字以及开启一些配置选项，比如我修改后的配置如下：</p>
-<div><pre><code><span><span>&lt;!</span><span>DOCTYPE</span> <span>html</span><span>></span></span>
-<span><span><span>&lt;</span>html</span> <span>lang</span><span><span>=</span><span>"</span>en<span>"</span></span><span>></span></span>
-
-<span><span><span>&lt;</span>head</span><span>></span></span>
-  <span><span><span>&lt;</span>meta</span> <span>charset</span><span><span>=</span><span>"</span>UTF-8<span>"</span></span><span>></span></span>
-  <span><span><span>&lt;</span>title</span><span>></span></span>村雨遥<span><span><span>&lt;/</span>title</span><span>></span></span>
-  <span><span><span>&lt;</span>meta</span> <span>http-equiv</span><span><span>=</span><span>"</span>X-UA-Compatible<span>"</span></span> <span>content</span><span><span>=</span><span>"</span>IE=edge,chrome=1<span>"</span></span> <span>/></span></span>
-  <span><span><span>&lt;</span>meta</span> <span>name</span><span><span>=</span><span>"</span>description<span>"</span></span> <span>content</span><span><span>=</span><span>"</span>Description<span>"</span></span><span>></span></span>
-  <span><span><span>&lt;</span>meta</span> <span>name</span><span><span>=</span><span>"</span>viewport<span>"</span></span>
-    <span>content</span><span><span>=</span><span>"</span>width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0<span>"</span></span><span>></span></span>
-  <span><span><span>&lt;</span>link</span> <span>rel</span><span><span>=</span><span>"</span>stylesheet<span>"</span></span> <span>href</span><span><span>=</span><span>"</span>//unpkg.com/docsify/lib/themes/dark.css<span>"</span></span><span>></span></span>
-<span><span><span>&lt;/</span>head</span><span>></span></span>
-
-<span><span><span>&lt;</span>body</span><span>></span></span>
-  <span><span><span>&lt;</span>div</span> <span>id</span><span><span>=</span><span>"</span>app<span>"</span></span><span>></span></span><span><span><span>&lt;/</span>div</span><span>></span></span>
-  <span>&lt;!-- docsify-edit-on-github --></span>
-  <span><span><span>&lt;</span>script</span> <span>src</span><span><span>=</span><span>"</span>//unpkg.com/docsify-edit-on-github/index.js<span>"</span></span><span>></span></span><span></span><span><span><span>&lt;/</span>script</span><span>></span></span>
-  <span><span><span>&lt;</span>script</span><span>></span></span><span><span>
-    window<span>.</span>$docsify <span>=</span> <span>{</span>
-      <span>name</span><span>:</span> <span>'村雨遥'</span><span>,</span>
-      <span>repo</span><span>:</span> <span>'https://gitub.com/cunyu1943/cunyu1943'</span><span>,</span>
-      <span>maxLevel</span><span>:</span> <span>5</span><span>,</span><span>//最大支持渲染的标题层级</span>
-      <span>subMaxLevel</span><span>:</span> <span>3</span><span>,</span>
-      <span>homepage</span><span>:</span> <span>'README.md'</span><span>,</span>
-      <span>coverpage</span><span>:</span> <span>true</span><span>,</span> <span>// 封面</span>
-      <span>loadSidebar</span><span>:</span> <span>true</span><span>,</span> <span>// 侧边栏</span>
-      <span>autoHeader</span><span>:</span> <span>true</span><span>,</span>
-      <span>notFoundPage</span><span>:</span> <span>true</span><span>,</span> <span>// 找不到页面时</span>
-      <span>auto2top</span><span>:</span> <span>true</span><span>,</span><span>//切换页面后是否自动跳转到页面顶部</span>
-      <span>//全文搜索</span>
-      <span>search</span><span>:</span> <span>{</span>
-        <span>//maxAge: 86400000, // 过期时间，单位毫秒，默认一天</span>
-        <span>paths</span><span>:</span> <span>'auto'</span><span>,</span>
-        <span>placeholder</span><span>:</span> <span>'搜索'</span><span>,</span>
-        <span>noData</span><span>:</span> <span>'未找到结果'</span><span>,</span>
-        <span>// 搜索标题的最大程级, 1 - 6</span>
-        <span>depth</span><span>:</span> <span>3</span><span>,</span>
-      <span>}</span><span>,</span>
-      <span>plugins</span><span>:</span> <span>[</span>
-        EditOnGithubPlugin<span>.</span><span>create</span><span>(</span><span>'https://githee.com/cunyu1943/cunyu1943/'</span><span>)</span>
-      <span>]</span><span>,</span>
-    <span>}</span>
-  </span></span><span><span><span>&lt;/</span>script</span><span>></span></span>
-  <span><span><span>&lt;</span>script</span> <span>src</span><span><span>=</span><span>"</span>//unpkg.com/docsify/lib/docsify.min.js<span>"</span></span><span>></span></span><span></span><span><span><span>&lt;/</span>script</span><span>></span></span>
-  <span>&lt;!--Java代码高亮--></span>
-  <span><span><span>&lt;</span>script</span> <span>src</span><span><span>=</span><span>"</span>//unpkg.com/prismjs/components/prism-java.js<span>"</span></span><span>></span></span><span></span><span><span><span>&lt;/</span>script</span><span>></span></span>
-  <span><span><span>&lt;</span>script</span> <span>src</span><span><span>=</span><span>"</span>//unpkg.com/prismjs/components/prism-python.js<span>"</span></span><span>></span></span><span></span><span><span><span>&lt;/</span>script</span><span>></span></span>
-  <span>&lt;!--全文搜索,直接用官方提供的无法生效--></span>
-  <span><span><span>&lt;</span>script</span> <span>src</span><span><span>=</span><span>"</span>https://cdn.bootcss.com/docsify/4.5.9/plugins/search.min.js<span>"</span></span><span>></span></span><span></span><span><span><span>&lt;/</span>script</span><span>></span></span>
-  <span>&lt;!-- 复制到剪贴板 --></span>
-  <span><span><span>&lt;</span>script</span> <span>src</span><span><span>=</span><span>"</span>//unpkg.com/docsify-copy-code<span>"</span></span><span>></span></span><span></span><span><span><span>&lt;/</span>script</span><span>></span></span>
-  <span>&lt;!-- emoji --></span>
-  <span><span><span>&lt;</span>script</span> <span>src</span><span><span>=</span><span>"</span>//unpkg.com/docsify/lib/plugins/emoji.js<span>"</span></span><span>></span></span><span></span><span><span><span>&lt;/</span>script</span><span>></span></span>
-  <span>&lt;!-- 图片缩放 --></span>
-  <span><span><span>&lt;</span>script</span> <span>src</span><span><span>=</span><span>"</span>//unpkg.com/docsify/lib/plugins/zoom-image.js<span>"</span></span><span>></span></span><span></span><span><span><span>&lt;/</span>script</span><span>></span></span>
-  <span>&lt;!-- 字数统计 --></span>
-  <span><span><span>&lt;</span>script</span> <span>src</span><span><span>=</span><span>"</span>//unpkg.com/docsify-count/dist/countable.js<span>"</span></span><span>></span></span><span></span><span><span><span>&lt;/</span>script</span><span>></span></span>
-<span><span><span>&lt;/</span>body</span><span>></span></span>
-
-<span><span><span>&lt;/</span>html</span><span>></span></span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br><span>27</span><br><span>28</span><br><span>29</span><br><span>30</span><br><span>31</span><br><span>32</span><br><span>33</span><br><span>34</span><br><span>35</span><br><span>36</span><br><span>37</span><br><span>38</span><br><span>39</span><br><span>40</span><br><span>41</span><br><span>42</span><br><span>43</span><br><span>44</span><br><span>45</span><br><span>46</span><br><span>47</span><br><span>48</span><br><span>49</span><br><span>50</span><br><span>51</span><br><span>52</span><br><span>53</span><br><span>54</span><br><span>55</span><br><span>56</span><br><span>57</span><br><span>58</span><br><span>59</span><br><span>60</span><br></div></div><h3 id="侧边栏" tabindex="-1"> 侧边栏</h3>
-<p>上述配置中侧边栏已经打开，即 <code>loadSidebar: true</code>，此时新建一个 <code>_sidebar.md</code> 文件，在其中加入你所要显示的内容；</p>
-<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9naXRlZS5jb20vY3VueXUxOTQzL2ltYWdlcy9yYXcvbWFzdGVyL0ltZ3NXaW4vc2lkZWJhci5wbmc?x-oss-process=image/format,png" alt="" loading="lazy"></p>
-<h3 id="封面" tabindex="-1"> 封面</h3>
-<p>上述配置中封面已经打开，即 <code>coverpage: true</code>，此时新建一个 <code>_coverpage.md</code> 文件，在其中加入你所要显示的内容，比如我的封面；</p>
-<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9naXRlZS5jb20vY3VueXUxOTQzL2ltYWdlcy9yYXcvbWFzdGVyL0ltZ3NXaW4vY292ZXIucG5n?x-oss-process=image/format,png" alt="" loading="lazy"></p>
-<h3 id="主页内容" tabindex="-1"> 主页内容</h3>
-<p>即 <code>README.md</code> 的内容，比如我的最终结果显示如下；</p>
-<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9naXRlZS5jb20vY3VueXUxOTQzL2ltYWdlcy9yYXcvbWFzdGVyL0ltZ3NXaW4vYWJvdXRtZS5wbmc?x-oss-process=image/format,png" alt="" loading="lazy"></p>
-<h3 id="更多" tabindex="-1"> 更多</h3>
-<p>如果还需要了解更多详情，可以访问<a href="https://docsify.js.org/#/zh-cn/quickstart" target="_blank" rel="noopener noreferrer">官网教程<ExternalLinkIcon/></a>；</p>
-<h2 id="部署" tabindex="-1"> 部署</h2>
-<p>进行上述操作之后，我们就可以将其部署到 <code>GitHub Pages</code>，然后供别人访问了是不是很激动，部署详情如下：</p>
-<h3 id="新建仓库" tabindex="-1"> 新建仓库</h3>
-<p>即和平常创建的步骤一样，但是要注意打开 <code>Github Pages</code> 功能；</p>
-<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9naXRlZS5jb20vY3VueXUxOTQzL2ltYWdlcy9yYXcvbWFzdGVyL0ltZ3NXaW4vZ2l0aHVicGFnZXMucG5n?x-oss-process=image/format,png" alt="" loading="lazy"></p>
-<h3 id="提交项目" tabindex="-1"> 提交项目</h3>
-<p>将本地的项目提交到远程；</p>
-<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9naXRlZS5jb20vY3VueXUxOTQzL2ltYWdlcy9yYXcvbWFzdGVyL0ltZ3NXaW4vY29tbWl0LnBuZw?x-oss-process=image/format,png" alt="" loading="lazy"></p>
-<h3 id="预览" tabindex="-1"> 预览</h3>
-<p>在浏览器中访问创建仓库时的给的网址即可在线预览我们的网站了，比如我的是：<code>https://cunyu1943.github.io/cunyu1943</code>，默认会显示封面页；</p>
-<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9naXRlZS5jb20vY3VueXUxOTQzL2ltYWdlcy9yYXcvbWFzdGVyL0ltZ3NXaW4vJUU5JUEyJTg0JUU4JUE3JTg4LnBuZw?x-oss-process=image/format,png" alt="" loading="lazy"></p>
-<h2 id="总结" tabindex="-1"> 总结</h2>
-<p>经过上述的配置之后，我们就成功利用 <code>docsify</code> 成功搭建自己的文档类型网站了。</p>
-<p>关注公众号，获取最新文章更新</p>
-<img src="https://github.com/cunyu1943/cunyu1943/blob/main/imgs/wepublic.gif" width="200" alt="公众号" />]]></content>
-    <category term="博客搭建"/>
-    <published>2022-01-01T20:47:42.000Z</published>
   </entry>
 </feed>
