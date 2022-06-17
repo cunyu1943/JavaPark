@@ -6,8 +6,8 @@
     <link>https://cunyu1943.github.io/JavaPark/JavaPark/</link>
     <description>Java 自学编程之路</description>
     <language>zh-CN</language>
-    <pubDate>Wed, 15 Jun 2022 13:40:42 GMT</pubDate>
-    <lastBuildDate>Wed, 15 Jun 2022 13:40:42 GMT</lastBuildDate>
+    <pubDate>Fri, 17 Jun 2022 13:54:12 GMT</pubDate>
+    <lastBuildDate>Fri, 17 Jun 2022 13:54:12 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>工具教程</category>
@@ -31,6 +31,80 @@
     <category>SQL 必知必会 50 题</category>
     <category>Java 编程实例</category>
     <category>Maven 入门教程</category>
+    <item>
+      <title>效率工具：10 个效率网站，助力带薪摸鱼</title>
+      <link>https://cunyu1943.github.io/JavaPark/JavaPark/efficiency/useful-website.html</link>
+      <guid>https://cunyu1943.github.io/JavaPark/JavaPark/efficiency/useful-website.html</guid>
+      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">效率工具：10 个效率网站，助力带薪摸鱼</source>
+      <category>工具教程</category>
+      <pubDate>Fri, 17 Jun 2022 21:10:15 GMT</pubDate>
+      <content:encoded><![CDATA[<h2 id="前言" tabindex="-1"> 前言</h2>
+<p>在日常工作中，为了提高工作时的效率，我常常会在闲暇时光去网上冲冲浪，寻找那些能够给我工作工作带来帮助的网站或者 <code>APP</code>。而随着时间的推移，我的收藏夹藏货越来越满了。秉承着独乐乐不如众乐乐，就想着随便挑几个分享出来，让大家也开心开心！</p>
+<h2 id="docsmall" tabindex="-1"> docsmall</h2>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/9d33d4ffd08b6d673f53eae95548cacc.png" alt="" loading="lazy"></p>
+<ul>
+<li><a href="https://docsmall.com/" target="_blank" rel="noopener noreferrer">链接<ExternalLinkIcon/></a></li>
+</ul>
+<p>docsmall，这是一个神奇的网站。通过它，你不仅可以实现图片压缩、<code>Gif</code> 压缩等图片操作，同时你还能进行 <code>PDF</code> 压缩、<code>PDF</code> 合并、<code>PDF</code> 分割，让我们操作 <code>PDF</code> 更加方便。听了这么多，你是不是觉得得开个会员才能用吧。答案是：<code>No</code>，这个网站它完全免费！！如果你有这方面的需求，那就赶紧去试试吧！</p>
+<h2 id="白描网页版" tabindex="-1"> 白描网页版</h2>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/b06786bc14b8cc4929a4389f9e4d419c.png" alt="img" loading="lazy"></p>
+<ul>
+<li><a href="https://web.baimiaoapp.com/" target="_blank" rel="noopener noreferrer">链接<ExternalLinkIcon/></a></li>
+</ul>
+<p>有时候，我们想要提取图片中的文字、表格、公式等等，又或者想要将文件扫描成 <code>PDF</code> 保存，那这个工具你觉得不能错过！虽然不能一直白嫖，但如果只是偶尔应急使用，完全是足够的。这么强大的工具，不得赶紧取用起来？</p>
+<h2 id="deepl-翻译器" tabindex="-1"> DeepL 翻译器</h2>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/a5d4ac05b3bb6a0d9fa42e2907a49e2a.png" alt="img" loading="lazy"></p>
+<ul>
+<li><a href="https://www.deepl.com/translator" target="_blank" rel="noopener noreferrer">链接<ExternalLinkIcon/></a></li>
+</ul>
+<p>支持多达 28 种语言的翻译，而且还支持 <code>PDF</code>、<code>Word</code>、<code>PPT</code> 等文件翻译！</p>
+<h2 id="bigjpg" tabindex="-1"> BigJpg</h2>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/056bfd7142319889abbef059c1a456de.png" alt="img" loading="lazy"></p>
+<ul>
+<li><a href="https://bigjpg.com/" target="_blank" rel="noopener noreferrer">链接<ExternalLinkIcon/></a></li>
+</ul>
+<p>AI 人工智能图片放大！使用最新的人工智能深度学习技术，将图片中的噪点和锯齿部分进行补充，从而实现图片的无损放大。</p>
+<h2 id="undraw" tabindex="-1"> unDraw</h2>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/ca2d77c94ba85104131af8db27543076.png" alt="img" loading="lazy"></p>
+<ul>
+<li><a href="https://undraw.co/illustrations" target="_blank" rel="noopener noreferrer">链接<ExternalLinkIcon/></a></li>
+</ul>
+<p>免费可商用高清矢量图下载，还支持编辑！</p>
+<h2 id="iconfont" tabindex="-1"> IconFont</h2>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/b89fc7397f8bd6b756a7587cdcb822d0.png" alt="" loading="lazy"></p>
+<ul>
+<li><a href="http://www.iconfont.cn/" target="_blank" rel="noopener noreferrer">链接<ExternalLinkIcon/></a></li>
+</ul>
+<p>阿里巴巴出品的矢量图标库，汇聚了大概 20479523 个图标，可以说是十分齐全了，平常网站的图标我都是来这里找。</p>
+<h2 id="iconpark" tabindex="-1"> IconPark</h2>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/866528a021da01def1ebb0f22000bc9a.png" alt="img" loading="lazy"></p>
+<ul>
+<li><a href="https://iconpark.oceanengine.com/home" target="_blank" rel="noopener noreferrer">链接<ExternalLinkIcon/></a></li>
+</ul>
+<p>隔壁有的我也要有，字节跳动出品的免费资源库，丰富多彩的资源库免费使用，汇聚了 2900+ 基础图标，更有 29 中图标分类，提供了更多的选择，对标阿里的 IconFont！</p>
+<h2 id="font-awesome" tabindex="-1"> Font Awesome</h2>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/6ba2ca2cb8aa2e60c74e61237e4a0aea.png" alt="img" loading="lazy"></p>
+<ul>
+<li><a href="https://fontawesome.com/" target="_blank" rel="noopener noreferrer">链接<ExternalLinkIcon/></a></li>
+</ul>
+<p>跟字节的 IconPark 和阿里的 IconFont 一样，是一个图标资源库！</p>
+<h2 id="第-1-ppt" tabindex="-1"> 第 1 PPT</h2>
+<p><img src="https://img-blog.csdnimg.cn/81c34f60febe42aca79b8baebdc9a7c7.png" alt="" loading="lazy"></p>
+<ul>
+<li><a href="https://www.1ppt.com/" target="_blank" rel="noopener noreferrer">链接<ExternalLinkIcon/></a></li>
+</ul>
+<p>这里提供了各种海量 PPT 素材，幻灯片背景图片，专注于 PPT 模板免费下载！</p>
+<h2 id="优品-ppt" tabindex="-1"> 优品 PPT</h2>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/44f8e2802e1a639b6129b468e2247372.png" alt="" loading="lazy"></p>
+<ul>
+<li><a href="https://www.ypppt.com/moban/" target="_blank" rel="noopener noreferrer">链接<ExternalLinkIcon/></a></li>
+</ul>
+<p>这里有各种 <code>PPT</code> 模板、背景、图表、素材、教程、课件等资源下载，除开第 1 PPT，我也经常来这里找模板。</p>
+<h2 id="总结" tabindex="-1"> 总结</h2>
+<p>以上就是今天给大家推荐的 10 款我在日常工作学习中经常用到的效率神器了，如果你也想提高你的效率，那就不妨也来试试这些网站吧！</p>
+]]></content:encoded>
+      <enclosure url="https://img-blog.csdnimg.cn/img_convert/9d33d4ffd08b6d673f53eae95548cacc.png" type="image/png"/>
+    </item>
     <item>
       <title>效率工具：笑出腹肌的 Emoji 表情符号，你值得拥有！</title>
       <link>https://cunyu1943.github.io/JavaPark/JavaPark/efficiency/emoji.html</link>
@@ -93,6 +167,537 @@
 <p>除此之外，说一点题外话，好像现在大家写博客之类的都挺喜欢插入各种表情包，之前也尝试过写过几篇文章，里边加了些表情包，但始终觉得不适合我，于是就放弃了。作为我个人来讲，觉得还是能避免就尽量避免。当然，关于这一点，大家都可以有不同的看法。你可以不认同我，但我仍然坚持！</p>
 ]]></content:encoded>
       <enclosure url="https://img-blog.csdnimg.cn/7982fb6c7ca94c9790786e5dc4248205.png" type="image/png"/>
+    </item>
+    <item>
+      <title>SQL 进阶挑战（11 - 15）</title>
+      <link>https://cunyu1943.github.io/JavaPark/JavaPark/database/sql-advanced/11-15.html</link>
+      <guid>https://cunyu1943.github.io/JavaPark/JavaPark/database/sql-advanced/11-15.html</guid>
+      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">SQL 进阶挑战（11 - 15）</source>
+      <category>SQL 进阶挑战</category>
+      <pubDate>Tue, 14 Jun 2022 20:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h2 id="sql11-删除表" tabindex="-1"> SQL11 删除表</h2>
+<h3 id="描述" tabindex="-1"> 描述</h3>
+<p>现有一张试卷作答记录表exam_record，其中包含多年来的用户作答试卷记录。一般每年都会为exam_record表建立一张备份表exam_record_{YEAR}，{YEAR}为对应年份。</p>
+<h3 id="问题" tabindex="-1"> 问题</h3>
+<p>现在随着数据越来越多，存储告急，请你把很久前的（2011到2014年）备份表都删掉（如果存在的话）。</p>
+<h3 id="示例" tabindex="-1"> 示例</h3>
+<div><pre><code>输入：
+<span>drop</span> <span>table</span> <span>if</span> <span>EXISTS</span> exam_record<span>;</span>
+<span>CREATE</span> <span>TABLE</span> <span>IF</span> <span>NOT</span> <span>EXISTS</span> exam_record <span>(</span>
+id <span>int</span> <span>PRIMARY</span> <span>KEY</span> <span>AUTO_INCREMENT</span> <span>COMMENT</span> <span>'自增ID'</span><span>,</span>
+uid <span>int</span> <span>NOT</span> <span>NULL</span> <span>COMMENT</span> <span>'用户ID'</span><span>,</span>
+exam_id <span>int</span> <span>NOT</span> <span>NULL</span> <span>COMMENT</span> <span>'试卷ID'</span><span>,</span>
+start_time <span>datetime</span> <span>NOT</span> <span>NULL</span> <span>COMMENT</span> <span>'开始时间'</span><span>,</span>
+submit_time <span>datetime</span> <span>COMMENT</span> <span>'提交时间'</span><span>,</span>
+score <span>tinyint</span> <span>COMMENT</span> <span>'得分'</span>
+<span>)</span><span>CHARACTER</span> <span>SET</span> utf8 <span>COLLATE</span> utf8_general_ci<span>;</span>
+<span>CREATE</span> <span>TABLE</span> <span>IF</span> <span>NOT</span> <span>EXISTS</span> exam_record_2010 <span>(</span><span>LIKE</span> exam_record<span>)</span><span>;</span> 
+<span>CREATE</span> <span>TABLE</span> <span>IF</span> <span>NOT</span> <span>EXISTS</span> exam_record_2012 <span>(</span><span>LIKE</span> exam_record<span>)</span><span>;</span> 
+<span>CREATE</span> <span>TABLE</span> <span>IF</span> <span>NOT</span> <span>EXISTS</span> exam_record_2013 <span>(</span><span>LIKE</span> exam_record<span>)</span><span>;</span> 
+<span>CREATE</span> <span>TABLE</span> <span>IF</span> <span>NOT</span> <span>EXISTS</span> exam_record_2014 <span>(</span><span>LIKE</span> exam_record<span>)</span><span>;</span> 
+<span>CREATE</span> <span>TABLE</span> <span>IF</span> <span>NOT</span> <span>EXISTS</span> exam_record_2015 <span>(</span><span>LIKE</span> exam_record<span>)</span><span>;</span> 
+输出：
+exam_record_2010
+exam_record_2015
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br></div></div><h3 id="解答" tabindex="-1"> 解答</h3>
+<p>根据题意可知，2011 - 2014 的备份表的表名分别是：</p>
+<ul>
+<li><code>exam_record_2011</code></li>
+<li><code>exam_record_2012</code></li>
+<li><code>exam_record_2013</code></li>
+<li><code>exam_record_2014</code></li>
+</ul>
+<p>要删除一个表，需要用到 <code>DROP TABLE</code> 语句，此外，题意说了如果存在备份表才删除，所以我们需要加入关键字 <code>IF EXISTS</code>，其语法如下，接着套用到本题就可以得到答案。</p>
+<div><pre><code><span>DROP</span> <span>TABLE</span> <span>[</span><span>IF</span> <span>EXISTS</span><span>]</span> <span>[</span>数据表<span>]</span><span>;</span>
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><div><pre><code><span>DROP</span> <span>TABLE</span> <span>IF</span> <span>EXISTS</span>
+exam_record_2011<span>,</span> exam_record_2012<span>,</span> exam_record_2013<span>,</span> exam_record_2014<span>;</span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br></div></div><h2 id="sql12-创建索引" tabindex="-1"> SQL12 创建索引</h2>
+<h3 id="描述-1" tabindex="-1"> 描述</h3>
+<p>现有一张试卷信息表examination_info，其中包含各种类型试卷的信息。</p>
+<h3 id="问题-1" tabindex="-1"> 问题</h3>
+<p>为了对表更方便快捷地查询，需要在examination_info表创建以下索引，规则如下：</p>
+<p>在duration列创建普通索引idx_duration、在exam_id列创建唯一性索引uniq_idx_exam_id、在tag列创建全文索引full_idx_tag。</p>
+<p>根据题意，将返回如下结果：</p>
+<table>
+<thead>
+<tr>
+<th>examination_info</th>
+<th>0</th>
+<th>PRIMARY</th>
+<th>1</th>
+<th>id</th>
+<th>A</th>
+<th>0</th>
+<th></th>
+<th></th>
+<th></th>
+<th>BTREE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>examination_info</td>
+<td>0</td>
+<td>uniq_idx_exam_id</td>
+<td>1</td>
+<td>exam_id</td>
+<td>A</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td>YES</td>
+<td>BTREE</td>
+</tr>
+<tr>
+<td>examination_info</td>
+<td>1</td>
+<td>idx_duration</td>
+<td>1</td>
+<td>duration</td>
+<td>A</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+<td>BTREE</td>
+</tr>
+<tr>
+<td>examination_info</td>
+<td>1</td>
+<td>full_idx_tag</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="示例-1" tabindex="-1"> 示例</h3>
+<div><pre><code>输入：
+<span>drop</span> <span>table</span> <span>if</span> <span>exists</span> examination_info<span>;</span>
+<span>CREATE</span> <span>TABLE</span> <span>IF</span> <span>NOT</span> <span>EXISTS</span> examination_info <span>(</span>
+id <span>int</span> <span>PRIMARY</span> <span>KEY</span> <span>AUTO_INCREMENT</span> <span>COMMENT</span> <span>'自增ID'</span><span>,</span>
+exam_id <span>int</span> <span>UNIQUE</span> <span>NOT</span> <span>NULL</span> <span>COMMENT</span> <span>'试卷ID'</span><span>,</span>
+tag <span>varchar</span><span>(</span><span>32</span><span>)</span> <span>COMMENT</span> <span>'类别标签'</span><span>,</span>
+difficulty <span>varchar</span><span>(</span><span>8</span><span>)</span> <span>COMMENT</span> <span>'难度'</span><span>,</span>
+duration <span>int</span> <span>NOT</span> <span>NULL</span> <span>COMMENT</span> <span>'时长'</span><span>,</span>
+release_time <span>datetime</span> <span>COMMENT</span> <span>'发布时间'</span>
+<span>)</span><span>CHARACTER</span> <span>SET</span> utf8 <span>COLLATE</span> utf8_bin<span>;</span>
+输出：
+examination_info<span>|</span><span>0</span><span>|</span><span>PRIMARY</span><span>|</span><span>1</span><span>|</span>id<span>|</span>A<span>|</span><span>0</span><span>|</span>None<span>|</span>None<span>||</span><span>BTREE</span><span>||</span><span>|</span>YES<span>|</span>None
+examination_info<span>|</span><span>0</span><span>|</span>exam_id<span>|</span><span>1</span><span>|</span>exam_id<span>|</span>A<span>|</span><span>0</span><span>|</span>None<span>|</span>None<span>||</span><span>BTREE</span><span>||</span><span>|</span>YES<span>|</span>None
+examination_info<span>|</span><span>0</span><span>|</span>uniq_idx_exam_id<span>|</span><span>1</span><span>|</span>exam_id<span>|</span>A<span>|</span><span>0</span><span>|</span>None<span>|</span>None<span>||</span><span>BTREE</span><span>||</span><span>|</span>YES<span>|</span>None
+examination_info<span>|</span><span>1</span><span>|</span>idx_duration<span>|</span><span>1</span><span>|</span>duration<span>|</span>A<span>|</span><span>0</span><span>|</span>None<span>|</span>None<span>||</span><span>BTREE</span><span>||</span><span>|</span>YES<span>|</span>None
+examination_info<span>|</span><span>1</span><span>|</span>full_idx_tag<span>|</span><span>1</span><span>|</span>tag<span>|</span>None<span>|</span><span>0</span><span>|</span>None<span>|</span>None<span>|</span>YES<span>|</span>FULLTEXT<span>||</span><span>|</span>YES<span>|</span>None
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br></div></div><h3 id="解答-1" tabindex="-1"> 解答</h3>
+<p>索引有三种，一种是普通索引，其创建方式如下：</p>
+<div><pre><code><span>CREATE</span> <span>INDEX</span> <span>[</span>索引名<span>]</span> <span>ON</span> <span>[</span>数据表名<span>]</span><span>(</span><span>[</span>列名<span>]</span><span>)</span><span>;</span>
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p>第二种是唯一索引，其创建方式如下：</p>
+<div><pre><code><span>CREATE</span> <span>UNIQUE</span> <span>INDEX</span> <span>[</span>索引名<span>]</span> <span>ON</span> <span>[</span>数据表名<span>]</span><span>(</span><span>[</span>列名<span>]</span><span>)</span><span>;</span>
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p>第三种是创建全文索引，其创建方式如下：</p>
+<div><pre><code><span>CREATE</span> FULLTEXT <span>INDEX</span> <span>[</span>索引名<span>]</span> <span>ON</span> <span>[</span>数据表名<span>]</span><span>(</span><span>[</span>列名<span>]</span><span>)</span><span>;</span>
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p>根据题意，得到最终的解答结果如下：</p>
+<div><pre><code><span>CREATE</span> <span>INDEX</span> idx_duration <span>ON</span> examination_info<span>(</span>duration<span>)</span><span>;</span>
+<span>CREATE</span> <span>UNIQUE</span> <span>INDEX</span> uniq_idx_exam_id <span>ON</span> examination_info<span>(</span>exam_id<span>)</span><span>;</span>
+<span>CREATE</span> FULLTEXT <span>INDEX</span> full_idx_tag <span>ON</span> examination_info<span>(</span>tag<span>)</span><span>;</span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br></div></div><h2 id="sql13-删除索引" tabindex="-1"> SQL13 删除索引</h2>
+<h3 id="描述-2" tabindex="-1"> 描述</h3>
+<p>根据上题，完成以下问题。</p>
+<h3 id="问题-2" tabindex="-1"> 问题</h3>
+<p>请删除examination_info表上的唯一索引uniq_idx_exam_id和全文索引full_idx_tag。</p>
+<h3 id="示例-2" tabindex="-1"> 示例</h3>
+<div><pre><code>输入：
+<span>drop</span> <span>table</span> <span>if</span> <span>exists</span> examination_info<span>;</span>
+<span>CREATE</span> <span>TABLE</span> <span>IF</span> <span>NOT</span> <span>EXISTS</span> examination_info <span>(</span>
+id <span>int</span> <span>PRIMARY</span> <span>KEY</span> <span>AUTO_INCREMENT</span> <span>COMMENT</span> <span>'自增ID'</span><span>,</span>
+exam_id <span>int</span> <span>COMMENT</span> <span>'试卷ID'</span><span>,</span>
+tag <span>varchar</span><span>(</span><span>32</span><span>)</span> <span>COMMENT</span> <span>'类别标签'</span><span>,</span>
+difficulty <span>varchar</span><span>(</span><span>8</span><span>)</span> <span>COMMENT</span> <span>'难度'</span><span>,</span>
+duration <span>int</span> <span>NOT</span> <span>NULL</span> <span>COMMENT</span> <span>'时长(分钟数)'</span><span>,</span>
+release_time <span>datetime</span> <span>COMMENT</span> <span>'发布时间'</span>
+<span>)</span><span>CHARACTER</span> <span>SET</span> utf8 <span>COLLATE</span> utf8_bin<span>;</span>
+<span>CREATE</span> <span>INDEX</span> idx_duration <span>ON</span> examination_info<span>(</span>duration<span>)</span><span>;</span>
+<span>CREATE</span> <span>UNIQUE</span> <span>INDEX</span> uniq_idx_exam_id <span>ON</span> examination_info<span>(</span>exam_id<span>)</span><span>;</span>
+<span>ALTER</span> <span>TABLE</span> examination_info <span>ADD</span> FULLTEXT full_idx_tag<span>(</span>tag<span>)</span><span>;</span>
+复制
+输出：
+examination_info<span>|</span><span>0</span><span>|</span><span>PRIMARY</span><span>|</span><span>1</span><span>|</span>id<span>|</span>A<span>|</span><span>0</span><span>|</span>None<span>|</span>None<span>||</span><span>BTREE</span><span>||</span><span>|</span>YES<span>|</span>None
+examination_info<span>|</span><span>1</span><span>|</span>idx_duration<span>|</span><span>1</span><span>|</span>duration<span>|</span>A<span>|</span><span>0</span><span>|</span>None<span>|</span>None<span>||</span><span>BTREE</span><span>||</span><span>|</span>YES<span>|</span>None
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br></div></div><h3 id="解答-2" tabindex="-1"> 解答</h3>
+<p>主要有两种方式，第一种是通过 <code>DROP</code> 的方式，其语法如下：</p>
+<div><pre><code><span>DROP</span> <span>INDEX</span> <span>[</span>索引名<span>]</span> <span>ON</span> <span>[</span>数据表名<span>]</span><span>;</span>
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><div><pre><code><span>DROP</span> <span>INDEX</span> uniq_idx_exam_id <span>ON</span> examination_info<span>;</span>
+<span>DROP</span> <span>INDEX</span> full_idx_tag <span>ON</span> examination_info<span>;</span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br></div></div><p>第二种是通过 <code>ALTER</code> 的方式，其语法如下：</p>
+<div><pre><code><span>ALTER</span> <span>TABLE</span> <span>[</span>数据表名<span>]</span> <span>DROP</span> <span>INDEX</span> <span>[</span>索引名<span>]</span><span>;</span>
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><div><pre><code><span>ALTER</span> <span>TABLE</span> examination_info <span>DROP</span> <span>INDEX</span> uniq_idx_exam_id<span>;</span>
+<span>ALTER</span> <span>TABLE</span> examination_info <span>DROP</span> <span>INDEX</span> full_idx_tag<span>;</span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br></div></div><h2 id="sql14-sql类别高难度试卷得分的截断平均值" tabindex="-1"> SQL14 SQL类别高难度试卷得分的截断平均值</h2>
+<h3 id="描述-3" tabindex="-1"> 描述</h3>
+<p>牛客的运营同学想要查看大家在SQL类别中高难度试卷的得分情况。</p>
+<p>示例数据：examination_info（exam_id试卷ID, tag试卷类别, difficulty试卷难度, duration考试时长, release_time发布时间）</p>
+<table>
+<thead>
+<tr>
+<th>id</th>
+<th>exam_id</th>
+<th>tag</th>
+<th>difficulty</th>
+<th>duration</th>
+<th>release_time</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>9001</td>
+<td>SQL</td>
+<td>hard</td>
+<td>60</td>
+<td>2020-01-01 10:00:00</td>
+</tr>
+<tr>
+<td>2</td>
+<td>9002</td>
+<td>算法</td>
+<td>medium</td>
+<td>80</td>
+<td>2020-08-02 10:00:00</td>
+</tr>
+</tbody>
+</table>
+<p>示例数据：exam_record（uid用户ID, exam_id试卷ID, start_time开始作答时间, submit_time交卷时间, score得分）</p>
+<table>
+<thead>
+<tr>
+<th>id</th>
+<th>uid</th>
+<th>exam_id</th>
+<th>start_time</th>
+<th>submit_time</th>
+<th>score</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>1001</td>
+<td>9001</td>
+<td>2020-01-02 09:01:01</td>
+<td>2020-01-02 09:21:01</td>
+<td>80</td>
+</tr>
+<tr>
+<td>2</td>
+<td>1001</td>
+<td>9001</td>
+<td>2021-05-02 10:01:01</td>
+<td>2021-05-02 10:30:01</td>
+<td>81</td>
+</tr>
+<tr>
+<td>3</td>
+<td>1001</td>
+<td>9001</td>
+<td>2021-06-02 19:01:01</td>
+<td>2021-06-02 19:31:01</td>
+<td>84</td>
+</tr>
+<tr>
+<td>4</td>
+<td>1001</td>
+<td>9002</td>
+<td>2021-09-05 19:01:01</td>
+<td>2021-09-05 19:40:01</td>
+<td>89</td>
+</tr>
+<tr>
+<td>5</td>
+<td>1001</td>
+<td>9001</td>
+<td>2021-09-02 12:01:01</td>
+<td>(NULL)</td>
+<td>(NULL)</td>
+</tr>
+<tr>
+<td>6</td>
+<td>1001</td>
+<td>9002</td>
+<td>2021-09-01 12:01:01</td>
+<td>(NULL)</td>
+<td>(NULL)</td>
+</tr>
+<tr>
+<td>7</td>
+<td>1002</td>
+<td>9002</td>
+<td>2021-02-02 19:01:01</td>
+<td>2021-02-02 19:30:01</td>
+<td>87</td>
+</tr>
+<tr>
+<td>8</td>
+<td>1002</td>
+<td>9001</td>
+<td>2021-05-05 18:01:01</td>
+<td>2021-05-05 18:59:02</td>
+<td>90</td>
+</tr>
+<tr>
+<td>9</td>
+<td>1003</td>
+<td>9001</td>
+<td>2021-09-07 12:01:01</td>
+<td>2021-09-07 10:31:01</td>
+<td>50</td>
+</tr>
+<tr>
+<td>10</td>
+<td>1004</td>
+<td>9001</td>
+<td>2021-09-06 10:01:01</td>
+<td>(NULL)</td>
+<td>(NULL)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="问题-3" tabindex="-1"> 问题</h3>
+<p>请你帮她从exam_record数据表中计算所有用户完成SQL类别高难度试卷得分的截断平均值（去掉一个最大值和一个最小值后的平均值）。</p>
+<p>根据输入你的查询结果如下：</p>
+<table>
+<thead>
+<tr>
+<th>tag</th>
+<th>difficulty</th>
+<th>clip_avg_score</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SQL</td>
+<td>hard</td>
+<td>81.7</td>
+</tr>
+</tbody>
+</table>
+<p>从examination_info表可知，试卷9001为高难度SQL试卷，该试卷被作答的得分有[80,81,84,90,50]，去除最高分和最低分后为[80,81,84]，平均分为81.6666667，保留一位小数后为81.7</p>
+<h3 id="输入描述" tabindex="-1"> 输入描述：</h3>
+<p>输入数据中至少有3个有效分数</p>
+<h3 id="示例-3" tabindex="-1"> 示例</h3>
+<div><pre><code>输入：
+<span>drop</span> <span>table</span> <span>if</span> <span>exists</span> examination_info<span>;</span>
+<span>CREATE</span> <span>TABLE</span>  examination_info <span>(</span>
+    id <span>int</span> <span>PRIMARY</span> <span>KEY</span> <span>AUTO_INCREMENT</span> <span>COMMENT</span> <span>'自增ID'</span><span>,</span>
+    exam_id <span>int</span> <span>UNIQUE</span> <span>NOT</span> <span>NULL</span> <span>COMMENT</span> <span>'试卷ID'</span><span>,</span>
+    tag <span>varchar</span><span>(</span><span>32</span><span>)</span> <span>COMMENT</span> <span>'类别标签'</span><span>,</span>
+    difficulty <span>varchar</span><span>(</span><span>8</span><span>)</span> <span>COMMENT</span> <span>'难度'</span><span>,</span>
+    duration <span>int</span> <span>NOT</span> <span>NULL</span> <span>COMMENT</span> <span>'时长'</span><span>,</span>
+    release_time <span>datetime</span> <span>COMMENT</span> <span>'发布时间'</span>
+<span>)</span><span>CHARACTER</span> <span>SET</span> utf8 <span>COLLATE</span> utf8_general_ci<span>;</span>
+
+<span>drop</span> <span>table</span> <span>if</span> <span>exists</span> exam_record<span>;</span>
+<span>CREATE</span> <span>TABLE</span> exam_record <span>(</span>
+    id <span>int</span> <span>PRIMARY</span> <span>KEY</span> <span>AUTO_INCREMENT</span> <span>COMMENT</span> <span>'自增ID'</span><span>,</span>
+    uid <span>int</span> <span>NOT</span> <span>NULL</span> <span>COMMENT</span> <span>'用户ID'</span><span>,</span>
+    exam_id <span>int</span> <span>NOT</span> <span>NULL</span> <span>COMMENT</span> <span>'试卷ID'</span><span>,</span>
+    start_time <span>datetime</span> <span>NOT</span> <span>NULL</span> <span>COMMENT</span> <span>'开始时间'</span><span>,</span>
+    submit_time <span>datetime</span> <span>COMMENT</span> <span>'提交时间'</span><span>,</span>
+    score <span>tinyint</span> <span>COMMENT</span> <span>'得分'</span>
+<span>)</span><span>CHARACTER</span> <span>SET</span> utf8 <span>COLLATE</span> utf8_general_ci<span>;</span>
+
+<span>INSERT</span> <span>INTO</span> examination_info<span>(</span>exam_id<span>,</span>tag<span>,</span>difficulty<span>,</span>duration<span>,</span>release_time<span>)</span> <span>VALUES</span>
+  <span>(</span><span>9001</span><span>,</span> <span>'SQL'</span><span>,</span> <span>'hard'</span><span>,</span> <span>60</span><span>,</span> <span>'2020-01-01 10:00:00'</span><span>)</span><span>,</span>
+  <span>(</span><span>9002</span><span>,</span> <span>'算法'</span><span>,</span> <span>'medium'</span><span>,</span> <span>80</span><span>,</span> <span>'2020-08-02 10:00:00'</span><span>)</span><span>;</span>
+
+<span>INSERT</span> <span>INTO</span> exam_record<span>(</span>uid<span>,</span>exam_id<span>,</span>start_time<span>,</span>submit_time<span>,</span>score<span>)</span> <span>VALUES</span>
+<span>(</span><span>1001</span><span>,</span> <span>9001</span><span>,</span> <span>'2020-01-02 09:01:01'</span><span>,</span> <span>'2020-01-02 09:21:01'</span><span>,</span> <span>80</span><span>)</span><span>,</span>
+<span>(</span><span>1001</span><span>,</span> <span>9001</span><span>,</span> <span>'2021-05-02 10:01:01'</span><span>,</span> <span>'2021-05-02 10:30:01'</span><span>,</span> <span>81</span><span>)</span><span>,</span>
+<span>(</span><span>1001</span><span>,</span> <span>9001</span><span>,</span> <span>'2021-06-02 19:01:01'</span><span>,</span> <span>'2021-06-02 19:31:01'</span><span>,</span> <span>84</span><span>)</span><span>,</span>
+<span>(</span><span>1001</span><span>,</span> <span>9002</span><span>,</span> <span>'2021-09-05 19:01:01'</span><span>,</span> <span>'2021-09-05 19:40:01'</span><span>,</span> <span>89</span><span>)</span><span>,</span>
+<span>(</span><span>1001</span><span>,</span> <span>9001</span><span>,</span> <span>'2021-09-02 12:01:01'</span><span>,</span> <span>null</span><span>,</span> <span>null</span><span>)</span><span>,</span>
+<span>(</span><span>1001</span><span>,</span> <span>9002</span><span>,</span> <span>'2021-09-01 12:01:01'</span><span>,</span> <span>null</span><span>,</span> <span>null</span><span>)</span><span>,</span>
+<span>(</span><span>1002</span><span>,</span> <span>9002</span><span>,</span> <span>'2021-02-02 19:01:01'</span><span>,</span> <span>'2021-02-02 19:30:01'</span><span>,</span> <span>87</span><span>)</span><span>,</span>
+<span>(</span><span>1002</span><span>,</span> <span>9001</span><span>,</span> <span>'2021-05-05 18:01:01'</span><span>,</span> <span>'2021-05-05 18:59:02'</span><span>,</span> <span>90</span><span>)</span><span>,</span>
+<span>(</span><span>1003</span><span>,</span> <span>9001</span><span>,</span> <span>'2021-02-06 12:01:01'</span><span>,</span> <span>null</span><span>,</span> <span>null</span><span>)</span><span>,</span>
+<span>(</span><span>1003</span><span>,</span> <span>9001</span><span>,</span> <span>'2021-09-07 10:01:01'</span><span>,</span> <span>'2021-09-07 10:31:01'</span><span>,</span> <span>50</span><span>)</span><span>;</span>
+输出：
+<span>SQL</span><span>|</span>hard<span>|</span><span>81.7</span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br><span>27</span><br><span>28</span><br><span>29</span><br><span>30</span><br><span>31</span><br><span>32</span><br><span>33</span><br><span>34</span><br><span>35</span><br><span>36</span><br><span>37</span><br><span>38</span><br></div></div><h3 id="解答-3" tabindex="-1"> 解答</h3>
+<p>要求除开最大最小值后的平均值，这里需要用到聚合函数 <code>SUM()</code>、<code>MAX()</code>、<code>MIN()</code> 等，其次，为了统计记录数，需要用到 <code>COUNT()</code> 函数。</p>
+<p>要保留平均分的 1 位小数，所以可以用 <code>ROUND()</code> 函数。</p>
+<p>其次，要筛选出对应难度为 <code>hard</code>，标签为 <code>SQL</code> 的记录，需要用到 <code>WHERE</code> 筛选，并用 <code>AND</code> 将两个条件串联。</p>
+<p>最后，依照题意将上边的细节问题一组合即可。</p>
+<div><pre><code><span>SELECT</span> tag<span>,</span> difficulty<span>,</span>
+    <span>ROUND</span><span>(</span><span>(</span><span>SUM</span><span>(</span>score<span>)</span> <span>-</span> <span>MAX</span><span>(</span>score<span>)</span> <span>-</span> <span>MIN</span><span>(</span>score<span>)</span><span>)</span> <span>/</span> <span>(</span><span>COUNT</span><span>(</span>score<span>)</span> <span>-</span> <span>2</span><span>)</span><span>,</span> <span>1</span><span>)</span> 
+<span>AS</span> clip_avg_score
+<span>FROM</span> exam_record
+<span>JOIN</span> examination_info <span>USING</span><span>(</span>exam_id<span>)</span>
+<span>WHERE</span> 
+tag <span>=</span> <span>"SQL"</span> <span>AND</span> difficulty<span>=</span><span>"hard"</span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br></div></div><h2 id="sql15-统计作答次数" tabindex="-1"> SQL15 统计作答次数</h2>
+<h3 id="描述-4" tabindex="-1"> 描述</h3>
+<p>有一个试卷作答记录表exam_record。</p>
+<table>
+<thead>
+<tr>
+<th>id</th>
+<th>uid</th>
+<th>exam_id</th>
+<th>start_time</th>
+<th>submit_time</th>
+<th>score</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>1001</td>
+<td>9001</td>
+<td>2020-01-02 09:01:01</td>
+<td>2020-01-02 09:21:01</td>
+<td>80</td>
+</tr>
+<tr>
+<td>2</td>
+<td>1001</td>
+<td>9001</td>
+<td>2021-05-02 10:01:01</td>
+<td>2021-05-02 10:30:01</td>
+<td>81</td>
+</tr>
+<tr>
+<td>3</td>
+<td>1001</td>
+<td>9001</td>
+<td>2021-06-02 19:01:01</td>
+<td>2021-06-02 19:31:01</td>
+<td>84</td>
+</tr>
+<tr>
+<td>4</td>
+<td>1001</td>
+<td>9002</td>
+<td>2021-09-05 19:01:01</td>
+<td>2021-09-05 19:40:01</td>
+<td>89</td>
+</tr>
+<tr>
+<td>5</td>
+<td>1001</td>
+<td>9001</td>
+<td>2021-09-02 12:01:01</td>
+<td>(NULL)</td>
+<td>(NULL)</td>
+</tr>
+<tr>
+<td>6</td>
+<td>1001</td>
+<td>9002</td>
+<td>2021-09-01 12:01:01</td>
+<td>(NULL)</td>
+<td>(NULL)</td>
+</tr>
+<tr>
+<td>7</td>
+<td>1002</td>
+<td>9002</td>
+<td>2021-02-02 19:01:01</td>
+<td>2021-02-02 19:30:01</td>
+<td>87</td>
+</tr>
+<tr>
+<td>8</td>
+<td>1002</td>
+<td>9001</td>
+<td>2021-05-05 18:01:01</td>
+<td>2021-05-05 18:59:02</td>
+<td>90</td>
+</tr>
+<tr>
+<td>9</td>
+<td>1003</td>
+<td>9001</td>
+<td>2021-02-06 12:01:01</td>
+<td>(NULL)</td>
+<td>(NULL)</td>
+</tr>
+<tr>
+<td>10</td>
+<td>1003</td>
+<td>9001</td>
+<td>2021-09-07 10:01:01</td>
+<td>2021-09-07 10:31:01</td>
+<td>88</td>
+</tr>
+<tr>
+<td>11</td>
+<td>1004</td>
+<td>9001</td>
+<td>2021-09-06 12:01:01</td>
+<td>(NULL)</td>
+<td>(NULL)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="问题-4" tabindex="-1"> 问题</h3>
+<p>请从中统计出总作答次数total_pv、试卷已完成作答数complete_pv、已完成的试卷数complete_exam_cnt。</p>
+<p>示例数据 exam_record表（uid用户ID, exam_id试卷ID, start_time开始作答时间, submit_time交卷时间, score得分）。</p>
+<p>示例输出：</p>
+<table>
+<thead>
+<tr>
+<th>total_pv</th>
+<th>complete_pv</th>
+<th>complete_exam_cnt</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>11</td>
+<td>7</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<h3 id="示例-4" tabindex="-1"> 示例</h3>
+<div><pre><code>输入：
+<span>drop</span> <span>table</span> <span>if</span> <span>exists</span> exam_record<span>;</span>
+<span>CREATE</span> <span>TABLE</span> exam_record <span>(</span>
+    id <span>int</span> <span>PRIMARY</span> <span>KEY</span> <span>AUTO_INCREMENT</span> <span>COMMENT</span> <span>'自增ID'</span><span>,</span>
+    uid <span>int</span> <span>NOT</span> <span>NULL</span> <span>COMMENT</span> <span>'用户ID'</span><span>,</span>
+    exam_id <span>int</span> <span>NOT</span> <span>NULL</span> <span>COMMENT</span> <span>'试卷ID'</span><span>,</span>
+    start_time <span>datetime</span> <span>NOT</span> <span>NULL</span> <span>COMMENT</span> <span>'开始时间'</span><span>,</span>
+    submit_time <span>datetime</span> <span>COMMENT</span> <span>'提交时间'</span><span>,</span>
+    score <span>tinyint</span> <span>COMMENT</span> <span>'得分'</span>
+<span>)</span><span>CHARACTER</span> <span>SET</span> utf8 <span>COLLATE</span> utf8_general_ci<span>;</span>
+
+<span>INSERT</span> <span>INTO</span> exam_record<span>(</span>uid<span>,</span>exam_id<span>,</span>start_time<span>,</span>submit_time<span>,</span>score<span>)</span> <span>VALUES</span>
+<span>(</span><span>1001</span><span>,</span> <span>9001</span><span>,</span> <span>'2020-01-02 09:01:01'</span><span>,</span> <span>'2020-01-02 09:21:01'</span><span>,</span> <span>80</span><span>)</span><span>,</span>
+<span>(</span><span>1001</span><span>,</span> <span>9001</span><span>,</span> <span>'2021-05-02 10:01:01'</span><span>,</span> <span>'2021-05-02 10:30:01'</span><span>,</span> <span>81</span><span>)</span><span>,</span>
+<span>(</span><span>1001</span><span>,</span> <span>9001</span><span>,</span> <span>'2021-06-02 19:01:01'</span><span>,</span> <span>'2021-06-02 19:31:01'</span><span>,</span> <span>84</span><span>)</span><span>,</span>
+<span>(</span><span>1001</span><span>,</span> <span>9002</span><span>,</span> <span>'2021-09-05 19:01:01'</span><span>,</span> <span>'2021-09-05 19:40:01'</span><span>,</span> <span>89</span><span>)</span><span>,</span>
+<span>(</span><span>1001</span><span>,</span> <span>9001</span><span>,</span> <span>'2021-09-02 12:01:01'</span><span>,</span> <span>null</span><span>,</span> <span>null</span><span>)</span><span>,</span>
+<span>(</span><span>1001</span><span>,</span> <span>9002</span><span>,</span> <span>'2021-09-01 12:01:01'</span><span>,</span> <span>null</span><span>,</span> <span>null</span><span>)</span><span>,</span>
+<span>(</span><span>1002</span><span>,</span> <span>9002</span><span>,</span> <span>'2021-02-02 19:01:01'</span><span>,</span> <span>'2021-02-02 19:30:01'</span><span>,</span> <span>87</span><span>)</span><span>,</span>
+<span>(</span><span>1002</span><span>,</span> <span>9001</span><span>,</span> <span>'2021-05-05 18:01:01'</span><span>,</span> <span>'2021-05-05 18:59:02'</span><span>,</span> <span>90</span><span>)</span><span>,</span>
+<span>(</span><span>1003</span><span>,</span> <span>9001</span><span>,</span> <span>'2021-02-06 12:01:01'</span><span>,</span> <span>null</span><span>,</span> <span>null</span><span>)</span><span>,</span>
+<span>(</span><span>1003</span><span>,</span> <span>9001</span><span>,</span> <span>'2021-09-07 10:01:01'</span><span>,</span> <span>'2021-09-07 10:31:01'</span><span>,</span> <span>89</span><span>)</span><span>,</span>
+<span>(</span><span>1004</span><span>,</span> <span>9001</span><span>,</span> <span>'2021-09-06 12:01:01'</span><span>,</span> <span>null</span><span>,</span> <span>null</span><span>)</span><span>;</span>
+输出：
+<span>11</span><span>|</span><span>7</span><span>|</span><span>2</span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br></div></div><h3 id="解答-4" tabindex="-1"> 解答</h3>
+<p>要统计总作答词数、试卷已完成作答数、已完成的试卷数，都只要用一个聚合函数 <code>COUNT()</code>，它会忽略所统计列中值为 <code>NULL</code> 的行。</p>
+<p>而针对已完成的试卷数，需要用到 <code>IF</code> 来判断。同时，一套试卷可能会被完成很多次，所以需要去用到 <code>DISTINCT</code> 去重。</p>
+<div><pre><code><span>SELECT</span>
+<span>COUNT</span><span>(</span>exam_id<span>)</span> <span>AS</span> total_pv<span>,</span>
+<span>COUNT</span><span>(</span>submit_time<span>)</span> <span>AS</span> complete_pv<span>,</span>
+<span>COUNT</span><span>(</span><span>DISTINCT</span> <span>IF</span><span>(</span>submit_time <span>IS</span> <span>NOT</span> <span>NULL</span><span>,</span> exam_id<span>,</span> <span>NULL</span><span>)</span><span>)</span> <span>AS</span> complete_exam_cnt
+<span>FROM</span> exam_record<span>;</span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br></div></div>]]></content:encoded>
     </item>
     <item>
       <title>SQL 进阶挑战（6 - 10）</title>
@@ -24125,239 +24730,6 @@ ORDER BY ……
 <p>好了，以上就是 Maven 中的一些常用命令和如何利用 Archetype 来生成项目骨架，以及利用 Maven 所生成的项目的总体结构了。如果你觉得对你有所帮助，还请点赞关注一波哦。今天就到此为止了，下一期我们继续来看如何利用 Maven 进行依赖管理，敬请期待吧！</p>
 ]]></content:encoded>
       <enclosure url="https://s1.ax1x.com/2020/07/07/UFZGW9.png" type="image/png"/>
-    </item>
-    <item>
-      <title>Maven 入门手册：简介，安装及配置</title>
-      <link>https://cunyu1943.github.io/JavaPark/JavaPark/java/maven/maven-intro-install.html</link>
-      <guid>https://cunyu1943.github.io/JavaPark/JavaPark/java/maven/maven-intro-install.html</guid>
-      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">Maven 入门手册：简介，安装及配置</source>
-      <category>Maven 入门教程</category>
-      <pubDate>Thu, 30 Dec 2021 15:07:13 GMT</pubDate>
-      <content:encoded><![CDATA[<h2 id="前言" tabindex="-1"> 前言</h2>
-<p>在我们之前的开发过程中，往往会遇到以下问题：</p>
-<ul>
-<li>一个项目就是一个工程，当项目过大时，难以管理；</li>
-<li>项目中的 jar 包（也就是我们的依赖文件），需要我们手动进行移动到 Web 项目的 <code>WEB-INF/lib</code> 目录中；</li>
-<li>jar 一般是通过下载或其他人打包后获取；</li>
-<li>各个 jar 包之间繁琐的依赖关系需要我们自行解决；</li>
-</ul>
-<p>针对以上的问题，我们提出采用项目管理工具来对我们的项目进行管理，而这就是我们今天所要讲的 Maven。</p>
-<p>通过使用 Maven，我们就能将一个大型的项目拆分为多个工程。此外，通过 Maven，我们可以很方便的对各个 jar 包进行统一管理，而且它也能解决各个包之间的依赖关系。</p>
-<h2 id="什么是-maven" tabindex="-1"> 什么是 Maven</h2>
-<p>Maven 是一个项目管理工具，包含了一个项目对象模型（<code>Project Object Model</code>），反映在配置中就是 <code>pom.xml</code> 文件。其中包含了一个项目的生命周期、一个依赖管理系统，以及定义在项目生命周期阶段的插件（<code>plugin</code>）和目标（<code>goal</code>）。</p>
-<p>其中 Maven 最核心的两大概念包括 <strong>依赖管理</strong> 和 <strong>项目构建</strong>。</p>
-<ul>
-<li><strong>依赖管理</strong>：提供对 <code>jar</code> 的统一管理。（Maven 提供了一个中央仓库，当我们在项目中添加完依赖后，Maven 就会自动去中央仓库中下载相关依赖）。</li>
-<li><strong>项目构建</strong>：Maven 提供对项目的编译、测试、打包、部署、上传到私服等。</li>
-</ul>
-<h2 id="maven-安装" tabindex="-1"> Maven 安装</h2>
-<p>Maven 属于 Java 项目，因此使用 Maven 必须依赖于 JDK。</p>
-<p>首先我们要确保我们的电脑上已经安装了 JDK，可以使用如下命令来进行确认。</p>
-<div><pre><code>java -version
-</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p>如果出现如下的提示，则说明我们的 JDK 安装成功了（当然，你可能和我安装的不是一个版本，但只要出现下面类似的提示，就代表你也成功了）。</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/07b231ac8f0c6addd6c9baba7e69bae4.png" alt="" loading="lazy"></p>
-<p>安装好 JDK 之后，然后接下来在安装 Maven，安装过程如下：</p>
-<ol>
-<li>下载 Maven，下载地址：https://maven.apache.org/download.cgi。如下图，我们在 Windows 中一般选择第二项进行下载，而在 macOS 或者 Linux 系统中，则选择第一项进行下载。</li>
-</ol>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/7723ba221f40ec7f0d5beefb7542f47a.png" alt="" loading="lazy"></p>
-<ol start="2">
-<li>将下载后的压缩包进行解压</li>
-</ol>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/6761f1ec34dbb0f014b10d8134424a64.png" alt="" loading="lazy"></p>
-<ol start="3">
-<li>配置环境变量</li>
-</ol>
-<p>这里需要配置环境变量，一个是新建一个系统变量用于指向 Maven 解压缩后的路径，另一个则是修改 Path 变量环境，新加上一条指向 Maven 的 bin 目录的路径。</p>
-<ul>
-<li>MAVEN_HOME：即刚才解压缩后 Maven 的存放路径</li>
-</ul>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/27d6940eb47536577ab32d83d880752e.png" alt="" loading="lazy"></p>
-<ul>
-<li>Path：<code>%MAVEN_HOME%\bin</code></li>
-</ul>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/8db1d5da10c87044b037bb192d00bea2.png" alt="" loading="lazy"></p>
-<ol start="4">
-<li>校验安装是否成功</li>
-</ol>
-<p>当我们配置环境变量之后，此时就可以打开一个新的 cmd 窗口，然后利用如下校验命令来测试我们的 Maven 是否安装成功，安装成功则会出现如下提示。</p>
-<div><pre><code>mvn -v
-</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p><img src="https://img-blog.csdnimg.cn/img_convert/e36aee427c695641584f215e3d97145b.png" alt="" loading="lazy"></p>
-<h2 id="maven-目录结构" tabindex="-1"> Maven 目录结构</h2>
-<p>安装好 Maven 之后，其目录和内容如下，各目录内容如下：</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/168fbc6eee963079342fa276d8b9aa8a.png" alt="" loading="lazy"></p>
-<ul>
-<li><strong>bin</strong></li>
-</ul>
-<p>包含 mvn 运行的脚步，用于配置 Java 命令，准备好 classpath 和相关的 Java 系统属性，然后执行 Java 命令。</p>
-<ul>
-<li><strong>boot</strong></li>
-</ul>
-<p>只包含一个文件，是一个类加载器框架，相对于默认的 Java 类加载器，提供了更丰富的语法以方便配置。</p>
-<ul>
-<li><strong>conf</strong></li>
-</ul>
-<p>包含 <code>settings.xml</code> ，通过修改该文件，能在机器中全局定制 Maven 的行为。</p>
-<ul>
-<li><strong>lib</strong></li>
-</ul>
-<p>包含所有 Maven 运行时所需的 Java 类库，Maven 本身是分模块开发，所以里边有不同模块之类的类库。此外还包含了一些 Maven 用到的第三方依赖。</p>
-<h2 id="maven-配置" tabindex="-1"> Maven 配置</h2>
-<h3 id="仓库镜像配置" tabindex="-1"> 仓库镜像配置</h3>
-<p>通常安装好 Maven 之后就可以使用了，但是由于 Maven 的中央仓库服务器位于国外，国内使用网速较慢，所以我们最好将中央仓库换为国内的阿里云镜像。</p>
-<p>打开 <code>apache-maven-xxx/conf/</code> 目录下的 <code>settings.xml</code> 文件，然后在 <code>mirrors</code> 节点下加入如下配置：</p>
-<div><pre><code><span><span><span>&lt;</span>mirror</span><span>></span></span>
-    <span><span><span>&lt;</span>id</span><span>></span></span>aliyunmaven<span><span><span>&lt;/</span>id</span><span>></span></span>
-    <span><span><span>&lt;</span>mirrorOf</span><span>></span></span>*<span><span><span>&lt;/</span>mirrorOf</span><span>></span></span>
-    <span><span><span>&lt;</span>name</span><span>></span></span>阿里云公共仓库<span><span><span>&lt;/</span>name</span><span>></span></span>
-    <span><span><span>&lt;</span>url</span><span>></span></span>https://maven.aliyun.com/repository/public<span><span><span>&lt;/</span>url</span><span>></span></span>
-<span><span><span>&lt;/</span>mirror</span><span>></span></span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br></div></div><p><img src="https://img-blog.csdnimg.cn/img_convert/940699ffc4d8704d0370faa22fa337e2.png" alt="" loading="lazy"></p>
-<h3 id="本地仓库配置" tabindex="-1"> 本地仓库配置</h3>
-<p>安装好 Maven 后，本地仓库默认在 <code>当前用户名/.m2/repository</code> 下，但是这个位置比较隐蔽，所以建议自定义为其他路径：</p>
-<p>还是打开 <code>apache-maven-xxx/conf/</code> 目录下的 <code>settings.xml</code> 文件，然后将如下路径修改为自己要设置的本地仓库，比如我的本地仓库路径如下图：</p>
-<div><pre><code><span><span><span>&lt;</span>localRepository</span><span>></span></span>/path/to/local/repo<span><span><span>&lt;/</span>localRepository</span><span>></span></span>
-</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p><img src="https://img-blog.csdnimg.cn/img_convert/c73f0bb7e00acb4eece937dd37afe39e.png" alt="" loading="lazy"></p>
-<h2 id="总结" tabindex="-1"> 总结</h2>
-<p>好了，以上就是关于我们日常项目开发中经常使用的 Maven 的相关知识点了。文章介绍了 Maven 是干什么的，以及我们应该如何安装 Maven 和安装后常见的一些设置，最后则是对 Maven 的目录结构进行详解。而在下一篇博客中，我将讲述 Maven 中最常见的命令，看看大家都是用什么命令来进行工作的吧！</p>
-]]></content:encoded>
-      <enclosure url="https://img-blog.csdnimg.cn/img_convert/07b231ac8f0c6addd6c9baba7e69bae4.png" type="image/png"/>
-    </item>
-    <item>
-      <title>Maven 入门手册：使用 IDEA 创建 Maven 项目</title>
-      <link>https://cunyu1943.github.io/JavaPark/JavaPark/java/maven/maven-project-with-idea.html</link>
-      <guid>https://cunyu1943.github.io/JavaPark/JavaPark/java/maven/maven-project-with-idea.html</guid>
-      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">Maven 入门手册：使用 IDEA 创建 Maven 项目</source>
-      <category>Maven 入门教程</category>
-      <pubDate>Sun, 09 Jan 2022 23:03:42 GMT</pubDate>
-      <content:encoded><![CDATA[<h2 id="前言" tabindex="-1"> 前言</h2>
-<p>之前我们已经学习过 Maven 是什么，我们可以用它来干什么。接着我们又介绍了如何安装和配置 Maven，再接着，我们又了解了 Maven 中常用的一些命令以及如何利用 Archetype 来生成项目骨架，并对利用 Maven 所生成项目的结构进行了描述。最后则是 Maven 中的一些核心概念和如何进行依赖管理，并说明当依赖产生冲突时，应该如何解决。但以上始终还是停留在概念的阶段，并未进入我们实际的开发中。那么今天的内容就主要来看看，我们如何利用 IDEA 搭配 Maven 来开发一个简单的 Demo。</p>
-<h2 id="idea-中的-maven-配置" tabindex="-1"> IDEA 中的 Maven 配置</h2>
-<p>依次进入 <code>File -&gt; Settings -&gt; Build,Execution,Deployment -&gt; Build Tools -&gt; Maven</code>，IDEA 默认使用它自带的 Maven，我们可以自定义为自己的 Maven，更加方便管理。</p>
-<p>这里主要配置的项目有：</p>
-<ul>
-<li><strong>Maven home directory</strong>：也就是我们 Maven 安装的路径；</li>
-<li><strong>User settings file</strong>：Maven 安装路径下配置文件夹中的 <code>settings.xml</code> 所在路径；</li>
-<li><strong>Local repository</strong>：也就是我们前边文章中所配置的本地仓库位置。</li>
-</ul>
-<p>比如我 IDEA 中的 Maven 相关设置就可以参照下图。</p>
-<p><img src="https://s1.ax1x.com/2020/07/07/UFUiPs.png" alt="" loading="lazy"></p>
-<h2 id="使用-idea-创建-maven-项目" tabindex="-1"> 使用 IDEA 创建 Maven 项目</h2>
-<p>接下来我们就来看看如何使用 IDEA 创建 Maven 项目，具体可以分为如下步骤：</p>
-<ol>
-<li>首先一次进入 <code>File -&gt; New -&gt; Project</code>，然后选择 Maven，表示新建一个 Maven 项目；</li>
-</ol>
-<p><img src="https://s1.ax1x.com/2020/07/07/UFZmMq.png" alt="" loading="lazy"></p>
-<ol start="2">
-<li>填写相关信息，也就是我们之前所介绍的 Maven 的坐标。这里我们只要提供 GroupId、ArtifactId 以及 Version 这三项就足够了。关于其他的配置，我们可以到后续的 <code>pom.xml</code> 中去进行配置；</li>
-</ol>
-<p><img src="https://s1.ax1x.com/2020/07/07/UFZZzn.png" alt="" loading="lazy"></p>
-<ol start="3">
-<li>新建项目完成，完成后的项目目录结构如下，基本上也就是之前介绍过的项目结构；</li>
-</ol>
-<div><pre><code>ProjectName/
-    | ----src/ |
-    | -------- || main/ |
-| ----- ||     |  | java/ |
-| --- ||     | resources/ |
-| --- | ---------- || test/ |
-| ----- ||     | java/ |
-| --- ||  |resources/
-    |----pom.xml
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br></div></div><p><img src="https://s1.ax1x.com/2020/07/07/UFZVRs.png" alt="" loading="lazy"></p>
-<ol start="4">
-<li>默认生成的 <code>pom.xml</code> 如下。</li>
-</ol>
-<div><pre><code><span>&lt;!-- 指定 xml 的版本和编码 --></span>
-<span>&lt;?xml version="1.0" encoding="UTF-8"?></span>
-<span>&lt;!-- 所有 pom.xml 的根元素，同时声明一些 pom 相关的命名空间及 xsd 元素--></span>
-<span><span><span>&lt;</span>project</span> <span>xmlns</span><span><span>=</span><span>"</span>http://maven.apache.org/POM/4.0.0<span>"</span></span>
-         <span><span>xmlns:</span>xsi</span><span><span>=</span><span>"</span>http://www.w3.org/2001/XMLSchema-instance<span>"</span></span>
-         <span><span>xsi:</span>schemaLocation</span><span><span>=</span><span>"</span>http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd<span>"</span></span><span>></span></span>
-    <span>&lt;!--  指定 POM 模型版本  --></span>
-    <span><span><span>&lt;</span>modelVersion</span><span>></span></span>4.0.0<span><span><span>&lt;/</span>modelVersion</span><span>></span></span>
-
-    <span>&lt;!--  定义一个项目的基本坐标  --></span>
-    <span><span><span>&lt;</span>groupId</span><span>></span></span>com.cunyu<span><span><span>&lt;/</span>groupId</span><span>></span></span>
-    <span><span><span>&lt;</span>artifactId</span><span>></span></span>maven-demo<span><span><span>&lt;/</span>artifactId</span><span>></span></span>
-    <span><span><span>&lt;</span>version</span><span>></span></span>1.0-SNAPSHOT<span><span><span>&lt;/</span>version</span><span>></span></span>
-
-<span><span><span>&lt;/</span>project</span><span>></span></span>
-
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br></div></div><ol start="5">
-<li>到上一步之后，一个新的 Maven 项目就完成了，接下来就是去编写业务代码了。</li>
-</ol>
-<h2 id="业务代码编写" tabindex="-1"> 业务代码编写</h2>
-<p>上面已经学会了如何创建一个 Maven 项目，接下来就是编写业务代码了，我们以最经典的 <code>HelloWorld</code> 为例。</p>
-<h3 id="项目主代码" tabindex="-1"> 项目主代码</h3>
-<p>项目主代码会打包到最终构件中，默认位于 <code>src/main/java</code> 目录下，我们创建一个 <code>HelloWorld</code> 的主类；</p>
-<div><pre><code><span>package</span> <span>com<span>.</span>cunyu<span>.</span>helloworld</span><span>;</span>
-
-<span>/**
- * <span>@author</span> : cunyu
- * <span>@version</span> : 1.0
- * <span>@className</span> : HelloWorld
- * <span>@date</span> : 2020/6/30 11:06
- * <span>@description</span> : HelloWorld 实例
- */</span>
-
-<span>public</span> <span>class</span> <span>HelloWorld</span> <span>{</span>
-    <span>public</span> <span>String</span> <span>sayHello</span><span>(</span><span>)</span> <span>{</span>
-        <span>return</span> <span>"Hello World"</span><span>;</span>
-    <span>}</span>
-
-    <span>public</span> <span>static</span> <span>void</span> <span>main</span><span>(</span><span>String</span><span>[</span><span>]</span> args<span>)</span> <span>{</span>
-        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>new</span> <span>HelloWorld</span><span>(</span><span>)</span><span>.</span><span>sayHello</span><span>(</span><span>)</span><span>)</span><span>;</span>
-    <span>}</span>
-<span>}</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br></div></div><h3 id="项目测试代码" tabindex="-1"> 项目测试代码</h3>
-<p>要对主代码进行测试，那么则需要编写测试代码，测试代码默认位于 <code>src/test/java</code> 目录，要对指定主代码进行测试，编写测试代码时要和主代码保持相同的目录结构。如上述主代码位于 <code>com.cunyu.helloworld</code> 包下，那么测试代码也应该位于 <code>com.cunyu.helloworld</code> 包下，只是根目录不同。而要进行测试，通常首选 JUnit 单元测试。所以编写测试代码对主代码进行测试主要有如下步骤。</p>
-<ol>
-<li>首先在 <code>pom.xml</code> 添加 JUnit 依赖；</li>
-</ol>
-<div><pre><code><span><span><span>&lt;</span>dependencies</span><span>></span></span>
-    <span><span><span>&lt;</span>dependency</span><span>></span></span>
-        <span><span><span>&lt;</span>groupId</span><span>></span></span>junit<span><span><span>&lt;/</span>groupId</span><span>></span></span>
-        <span><span><span>&lt;</span>artifactId</span><span>></span></span>junit<span><span><span>&lt;/</span>artifactId</span><span>></span></span>
-        <span><span><span>&lt;</span>version</span><span>></span></span>RELEASE<span><span><span>&lt;/</span>version</span><span>></span></span>
-        <span><span><span>&lt;</span>scope</span><span>></span></span>test<span><span><span>&lt;/</span>scope</span><span>></span></span>
-    <span><span><span>&lt;/</span>dependency</span><span>></span></span>
-<span><span><span>&lt;/</span>dependencies</span><span>></span></span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br></div></div><ol start="2">
-<li>接着编写测试代码；</li>
-</ol>
-<div><pre><code><span>package</span> <span>com<span>.</span>cunyu<span>.</span>helloworld</span><span>;</span>
-
-<span>import</span> <span>org<span>.</span>junit<span>.</span></span><span>Test</span><span>;</span>
-
-<span>import</span> <span>static</span> <span>org<span>.</span>junit<span>.</span></span><span>Assert</span><span>.</span>assertEquals<span>;</span>
-
-<span>/**
- * <span>@author</span> : cunyu
- * <span>@version</span> : 1.0
- * <span>@className</span> : HelloWorldTest
- * <span>@date</span> : 2020/6/30 13:32
- * <span>@description</span> : HelloWorld 测试
- */</span>
-
-<span>public</span> <span>class</span> <span>HelloWorldTest</span> <span>{</span>
-    <span>@Test</span>
-    <span>public</span> <span>void</span> <span>testSayHello</span><span>(</span><span>)</span> <span>{</span>
-        <span>HelloWorld</span> helloWorld <span>=</span> <span>new</span> <span>HelloWorld</span><span>(</span><span>)</span><span>;</span>
-        <span>String</span> result <span>=</span> helloWorld<span>.</span><span>sayHello</span><span>(</span><span>)</span><span>;</span>
-
-        <span>// Assert.assertEquals() 及其重载方法功能:</span>
-        <span>// 1. 如果两者一致, 程序继续往下运行.</span>
-        <span>// 2. 如果两者不一致, 则中断测试方法,同时抛出异常信息 AssertionFailedError.</span>
-        <span>assertEquals</span><span>(</span><span>"Hello World"</span><span>,</span> result<span>)</span><span>;</span>
-        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>"测试通过"</span><span>)</span><span>;</span>
-    <span>}</span>
-<span>}</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br><span>27</span><br></div></div><h2 id="总结" tabindex="-1"> 总结</h2>
-<p>经过上边的项目创建以及业务代码编写之后，一个 Maven 版的 <code>Hello World</code> 项目到此就结束了。是不是很简单呢，赶快自己动手试试吧！</p>
-<p>创作不易，如果大家觉得我的文章对你所有帮助，那就动动你的小手，帮我点赞关注一波吧。💖💖💖</p>
-]]></content:encoded>
-      <enclosure url="https://s1.ax1x.com/2020/07/07/UFUiPs.png" type="image/png"/>
     </item>
   </channel>
 </rss>
