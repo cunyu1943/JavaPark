@@ -3,7 +3,7 @@
   <id>https://cunyu1943.github.io/JavaPark/JavaPark/</id>
   <title>JavaPark</title>
   <subtitle>Java 自学编程之路</subtitle>
-  <updated>2022-06-19T07:14:39.732Z</updated>
+  <updated>2022-06-20T14:35:40.334Z</updated>
   <generator>vuepress-plugin-feed2</generator>
   <link rel="self" href="https://cunyu1943.github.io/JavaPark/JavaPark/atom.xml"/>
   <link rel="alternate" href="https://cunyu1943.github.io/JavaPark/JavaPark/"/>
@@ -1631,28 +1631,1194 @@
     <title type="html">SQL 进阶挑战（26 - 30）</title>
     <id>https://cunyu1943.github.io/JavaPark/JavaPark/database/sql-advanced/26-30.html</id>
     <link href="https://cunyu1943.github.io/JavaPark/JavaPark/database/sql-advanced/26-30.html"/>
-    <updated>2022-06-19T07:12:40.000Z</updated>
-    <content type="html"><![CDATA[<h3 id="描述" tabindex="-1"> 描述</h3>
+    <updated>2022-06-20T14:32:27.000Z</updated>
+    <content type="html"><![CDATA[<h2 id="sql26-每个6-7级用户活跃情况" tabindex="-1"> SQL26 每个6/7级用户活跃情况</h2>
+<h3 id="描述" tabindex="-1"> 描述</h3>
+<p>现有用户信息表user_info（uid用户ID，nick_name昵称, achievement成就值, level等级, job职业方向, register_time注册时间）：</p>
+<table>
+<thead>
+<tr>
+<th>id</th>
+<th>uid</th>
+<th>nick_name</th>
+<th>achievement</th>
+<th>level</th>
+<th>job</th>
+<th>register_time</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>1001</td>
+<td>牛客1号</td>
+<td>3100</td>
+<td>7</td>
+<td>算法</td>
+<td>2020-01-01 10:00:00</td>
+</tr>
+<tr>
+<td>2</td>
+<td>1002</td>
+<td>牛客2号</td>
+<td>2300</td>
+<td>7</td>
+<td>算法</td>
+<td>2020-01-01 10:00:00</td>
+</tr>
+<tr>
+<td>3</td>
+<td>1003</td>
+<td>牛客3号</td>
+<td>2500</td>
+<td>7</td>
+<td>算法</td>
+<td>2020-01-01 10:00:00</td>
+</tr>
+<tr>
+<td>4</td>
+<td>1004</td>
+<td>牛客4号</td>
+<td>1200</td>
+<td>5</td>
+<td>算法</td>
+<td>2020-01-01 10:00:00</td>
+</tr>
+<tr>
+<td>5</td>
+<td>1005</td>
+<td>牛客5号</td>
+<td>1600</td>
+<td>6</td>
+<td>C++</td>
+<td>2020-01-01 10:00:00</td>
+</tr>
+<tr>
+<td>6</td>
+<td>1006</td>
+<td>牛客6号</td>
+<td>2600</td>
+<td>7</td>
+<td>C++</td>
+<td>2020-01-01 10:00:00</td>
+</tr>
+</tbody>
+</table>
+<p>试卷信息表examination_info（exam_id试卷ID, tag试卷类别, difficulty试卷难度, duration考试时长, release_time发布时间）：</p>
+<table>
+<thead>
+<tr>
+<th>id</th>
+<th>exam_id</th>
+<th>tag</th>
+<th>difficulty</th>
+<th>duration</th>
+<th>release_time</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>9001</td>
+<td>SQL</td>
+<td>hard</td>
+<td>60</td>
+<td>2021-09-01 06:00:00</td>
+</tr>
+<tr>
+<td>2</td>
+<td>9002</td>
+<td>C++</td>
+<td>easy</td>
+<td>60</td>
+<td>2021-09-01 06:00:00</td>
+</tr>
+<tr>
+<td>3</td>
+<td>9003</td>
+<td>算法</td>
+<td>medium</td>
+<td>80</td>
+<td>2021-09-01 10:00:00</td>
+</tr>
+</tbody>
+</table>
+<p>试卷作答记录表exam_record（uid用户ID, exam_id试卷ID, start_time开始作答时间, submit_time交卷时间, score得分）：</p>
+<table>
+<thead>
+<tr>
+<th>uid</th>
+<th>exam_id</th>
+<th>start_time</th>
+<th>submit_time</th>
+<th>score</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1001</td>
+<td>9001</td>
+<td>2021-09-01 09:01:01</td>
+<td>2021-09-01 09:31:00</td>
+<td>78</td>
+</tr>
+<tr>
+<td>1001</td>
+<td>9001</td>
+<td>2021-09-01 09:01:01</td>
+<td>2021-09-01 09:31:00</td>
+<td>81</td>
+</tr>
+<tr>
+<td>1005</td>
+<td>9001</td>
+<td>2021-09-01 19:01:01</td>
+<td>2021-09-01 19:30:01</td>
+<td>85</td>
+</tr>
+<tr>
+<td>1005</td>
+<td>9002</td>
+<td>2021-09-01 12:01:01</td>
+<td>2021-09-01 12:31:02</td>
+<td>85</td>
+</tr>
+<tr>
+<td>1006</td>
+<td>9003</td>
+<td>2021-09-07 10:01:01</td>
+<td>2021-09-07 10:21:59</td>
+<td>84</td>
+</tr>
+<tr>
+<td>1006</td>
+<td>9001</td>
+<td>2021-09-07 10:01:01</td>
+<td>2021-09-07 10:21:01</td>
+<td>81</td>
+</tr>
+<tr>
+<td>1002</td>
+<td>9001</td>
+<td>2020-09-01 13:01:01</td>
+<td>2020-09-01 13:41:01</td>
+<td>81</td>
+</tr>
+<tr>
+<td>1005</td>
+<td>9001</td>
+<td>2021-09-01 14:01:01</td>
+<td>(NULL)</td>
+<td>(NULL)</td>
+</tr>
+</tbody>
+</table>
+<p>题目练习记录表practice_record（uid用户ID, question_id题目ID, submit_time提交时间, score得分）：</p>
+<table>
+<thead>
+<tr>
+<th>uid</th>
+<th>question_id</th>
+<th>submit_time</th>
+<th>score</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1001</td>
+<td>8001</td>
+<td>2021-08-02 11:41:01</td>
+<td>60</td>
+</tr>
+<tr>
+<td>1004</td>
+<td>8001</td>
+<td>2021-08-02 19:38:01</td>
+<td>70</td>
+</tr>
+<tr>
+<td>1004</td>
+<td>8002</td>
+<td>2021-08-02 19:48:01</td>
+<td>90</td>
+</tr>
+<tr>
+<td>1001</td>
+<td>8002</td>
+<td>2021-08-02 19:38:01</td>
+<td>70</td>
+</tr>
+<tr>
+<td>1004</td>
+<td>8002</td>
+<td>2021-08-02 19:48:01</td>
+<td>90</td>
+</tr>
+<tr>
+<td>1006</td>
+<td>8002</td>
+<td>2021-08-04 19:58:01</td>
+<td>94</td>
+</tr>
+<tr>
+<td>1006</td>
+<td>8003</td>
+<td>2021-08-03 19:38:01</td>
+<td>70</td>
+</tr>
+<tr>
+<td>1006</td>
+<td>8003</td>
+<td>2021-08-02 19:48:01</td>
+<td>90</td>
+</tr>
+<tr>
+<td>1006</td>
+<td>8003</td>
+<td>2020-08-01 19:38:01</td>
+<td>80</td>
+</tr>
+</tbody>
+</table>
 <h3 id="问题" tabindex="-1"> 问题</h3>
+<p>请统计每个6/7级用户总活跃月份数、2021年活跃天数、2021年试卷作答活跃天数、2021年答题活跃天数，按照总活跃月份数、2021年活跃天数降序排序。由示例数据结果输出如下：</p>
+<table>
+<thead>
+<tr>
+<th>uid</th>
+<th>act_month_total</th>
+<th>act_days_2021</th>
+<th>act_days_2021_exam</th>
+<th>act_days_2021_question</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1006</td>
+<td>3</td>
+<td>4</td>
+<td>1</td>
+<td>3</td>
+</tr>
+<tr>
+<td>1001</td>
+<td>2</td>
+<td>2</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>1005</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>1002</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>1003</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<p>解释：6/7级用户共有5个，其中1006在202109、202108、202008共3个月活跃过，2021年活跃的日期有20210907、20210804、20210803、20210802共4天，2021年在试卷作答区20210907活跃1天，在题目练习区活跃了3天。</p>
 <h3 id="示例" tabindex="-1"> 示例</h3>
-<h3 id="解答" tabindex="-1"> 解答</h3>
+<div><pre><code>输入：
+<span>drop</span> <span>table</span> <span>if</span> <span>exists</span> examination_info<span>,</span>user_info<span>,</span>exam_record<span>,</span>practice_record<span>;</span>
+<span>CREATE</span> <span>TABLE</span> examination_info <span>(</span>
+    id <span>int</span> <span>PRIMARY</span> <span>KEY</span> <span>AUTO_INCREMENT</span> <span>COMMENT</span> <span>'自增ID'</span><span>,</span>
+    exam_id <span>int</span> <span>UNIQUE</span> <span>NOT</span> <span>NULL</span> <span>COMMENT</span> <span>'试卷ID'</span><span>,</span>
+    tag <span>varchar</span><span>(</span><span>32</span><span>)</span> <span>COMMENT</span> <span>'类别标签'</span><span>,</span>
+    difficulty <span>varchar</span><span>(</span><span>8</span><span>)</span> <span>COMMENT</span> <span>'难度'</span><span>,</span>
+    duration <span>int</span> <span>NOT</span> <span>NULL</span> <span>COMMENT</span> <span>'时长'</span><span>,</span>
+    release_time <span>datetime</span> <span>COMMENT</span> <span>'发布时间'</span>
+<span>)</span><span>CHARACTER</span> <span>SET</span> utf8 <span>COLLATE</span> utf8_general_ci<span>;</span>
+
+<span>CREATE</span> <span>TABLE</span> user_info <span>(</span>
+    id <span>int</span> <span>PRIMARY</span> <span>KEY</span> <span>AUTO_INCREMENT</span> <span>COMMENT</span> <span>'自增ID'</span><span>,</span>
+    uid <span>int</span> <span>UNIQUE</span> <span>NOT</span> <span>NULL</span> <span>COMMENT</span> <span>'用户ID'</span><span>,</span>
+    <span><span>`</span>nick_name<span>`</span></span> <span>varchar</span><span>(</span><span>64</span><span>)</span> <span>COMMENT</span> <span>'昵称'</span><span>,</span>
+    achievement <span>int</span> <span>COMMENT</span> <span>'成就值'</span><span>,</span>
+    <span>level</span> <span>int</span> <span>COMMENT</span> <span>'用户等级'</span><span>,</span>
+    job <span>varchar</span><span>(</span><span>32</span><span>)</span> <span>COMMENT</span> <span>'职业方向'</span><span>,</span>
+    register_time <span>datetime</span> <span>COMMENT</span> <span>'注册时间'</span>
+<span>)</span><span>CHARACTER</span> <span>SET</span> utf8 <span>COLLATE</span> utf8_general_ci<span>;</span>
+
+<span>CREATE</span> <span>TABLE</span> practice_record <span>(</span>
+    id <span>int</span> <span>PRIMARY</span> <span>KEY</span> <span>AUTO_INCREMENT</span> <span>COMMENT</span> <span>'自增ID'</span><span>,</span>
+    uid <span>int</span> <span>NOT</span> <span>NULL</span> <span>COMMENT</span> <span>'用户ID'</span><span>,</span>
+    question_id <span>int</span> <span>NOT</span> <span>NULL</span> <span>COMMENT</span> <span>'题目ID'</span><span>,</span>
+    submit_time <span>datetime</span> <span>COMMENT</span> <span>'提交时间'</span><span>,</span>
+    score <span>tinyint</span> <span>COMMENT</span> <span>'得分'</span>
+<span>)</span><span>CHARACTER</span> <span>SET</span> utf8 <span>COLLATE</span> utf8_general_ci<span>;</span>
+
+<span>CREATE</span> <span>TABLE</span> exam_record <span>(</span>
+    id <span>int</span> <span>PRIMARY</span> <span>KEY</span> <span>AUTO_INCREMENT</span> <span>COMMENT</span> <span>'自增ID'</span><span>,</span>
+    uid <span>int</span> <span>NOT</span> <span>NULL</span> <span>COMMENT</span> <span>'用户ID'</span><span>,</span>
+    exam_id <span>int</span> <span>NOT</span> <span>NULL</span> <span>COMMENT</span> <span>'试卷ID'</span><span>,</span>
+    start_time <span>datetime</span> <span>NOT</span> <span>NULL</span> <span>COMMENT</span> <span>'开始时间'</span><span>,</span>
+    submit_time <span>datetime</span> <span>COMMENT</span> <span>'提交时间'</span><span>,</span>
+    score <span>tinyint</span> <span>COMMENT</span> <span>'得分'</span>
+<span>)</span><span>CHARACTER</span> <span>SET</span> utf8 <span>COLLATE</span> utf8_general_ci<span>;</span>
+
+<span>INSERT</span> <span>INTO</span> user_info<span>(</span>uid<span>,</span><span><span>`</span>nick_name<span>`</span></span><span>,</span>achievement<span>,</span><span>level</span><span>,</span>job<span>,</span>register_time<span>)</span> <span>VALUES</span>
+  <span>(</span><span>1001</span><span>,</span> <span>'牛客1号'</span><span>,</span> <span>3100</span><span>,</span> <span>7</span><span>,</span> <span>'算法'</span><span>,</span> <span>'2020-01-01 10:00:00'</span><span>)</span><span>,</span>
+  <span>(</span><span>1002</span><span>,</span> <span>'牛客2号'</span><span>,</span> <span>2300</span><span>,</span> <span>7</span><span>,</span> <span>'算法'</span><span>,</span> <span>'2020-01-01 10:00:00'</span><span>)</span><span>,</span>
+  <span>(</span><span>1003</span><span>,</span> <span>'牛客3号'</span><span>,</span> <span>2500</span><span>,</span> <span>7</span><span>,</span> <span>'算法'</span><span>,</span> <span>'2020-01-01 10:00:00'</span><span>)</span><span>,</span>
+  <span>(</span><span>1004</span><span>,</span> <span>'牛客4号'</span><span>,</span> <span>1200</span><span>,</span> <span>5</span><span>,</span> <span>'算法'</span><span>,</span> <span>'2020-01-01 10:00:00'</span><span>)</span><span>,</span>
+  <span>(</span><span>1005</span><span>,</span> <span>'牛客5号'</span><span>,</span> <span>1600</span><span>,</span> <span>6</span><span>,</span> <span>'C++'</span><span>,</span> <span>'2020-01-01 10:00:00'</span><span>)</span><span>,</span>
+  <span>(</span><span>1006</span><span>,</span> <span>'牛客6号'</span><span>,</span> <span>2600</span><span>,</span> <span>7</span><span>,</span> <span>'C++'</span><span>,</span> <span>'2020-01-01 10:00:00'</span><span>)</span><span>;</span>
+
+<span>INSERT</span> <span>INTO</span> examination_info<span>(</span>exam_id<span>,</span>tag<span>,</span>difficulty<span>,</span>duration<span>,</span>release_time<span>)</span> <span>VALUES</span>
+  <span>(</span><span>9001</span><span>,</span> <span>'SQL'</span><span>,</span> <span>'hard'</span><span>,</span> <span>60</span><span>,</span> <span>'2021-09-01 06:00:00'</span><span>)</span><span>,</span>
+  <span>(</span><span>9002</span><span>,</span> <span>'C++'</span><span>,</span> <span>'easy'</span><span>,</span> <span>60</span><span>,</span> <span>'2021-09-01 06:00:00'</span><span>)</span><span>,</span>
+  <span>(</span><span>9003</span><span>,</span> <span>'算法'</span><span>,</span> <span>'medium'</span><span>,</span> <span>80</span><span>,</span> <span>'2021-09-01 10:00:00'</span><span>)</span><span>;</span>
+
+<span>INSERT</span> <span>INTO</span> practice_record<span>(</span>uid<span>,</span>question_id<span>,</span>submit_time<span>,</span>score<span>)</span> <span>VALUES</span>
+<span>(</span><span>1001</span><span>,</span> <span>8001</span><span>,</span> <span>'2021-08-02 11:41:01'</span><span>,</span> <span>60</span><span>)</span><span>,</span>
+<span>(</span><span>1004</span><span>,</span> <span>8001</span><span>,</span> <span>'2021-08-02 19:38:01'</span><span>,</span> <span>70</span><span>)</span><span>,</span>
+<span>(</span><span>1004</span><span>,</span> <span>8002</span><span>,</span> <span>'2021-08-02 19:48:01'</span><span>,</span> <span>90</span><span>)</span><span>,</span>
+<span>(</span><span>1001</span><span>,</span> <span>8002</span><span>,</span> <span>'2021-08-02 19:38:01'</span><span>,</span> <span>70</span><span>)</span><span>,</span>
+<span>(</span><span>1004</span><span>,</span> <span>8002</span><span>,</span> <span>'2021-08-02 19:48:01'</span><span>,</span> <span>90</span><span>)</span><span>,</span>
+<span>(</span><span>1006</span><span>,</span> <span>8002</span><span>,</span> <span>'2021-08-04 19:58:01'</span><span>,</span> <span>94</span><span>)</span><span>,</span>
+<span>(</span><span>1006</span><span>,</span> <span>8003</span><span>,</span> <span>'2021-08-03 19:38:01'</span><span>,</span> <span>70</span><span>)</span><span>,</span>
+<span>(</span><span>1006</span><span>,</span> <span>8003</span><span>,</span> <span>'2021-08-02 19:48:01'</span><span>,</span> <span>90</span><span>)</span><span>,</span>
+<span>(</span><span>1006</span><span>,</span> <span>8003</span><span>,</span> <span>'2020-08-01 19:38:01'</span><span>,</span> <span>80</span><span>)</span><span>;</span>
+
+<span>INSERT</span> <span>INTO</span> exam_record<span>(</span>uid<span>,</span>exam_id<span>,</span>start_time<span>,</span>submit_time<span>,</span>score<span>)</span> <span>VALUES</span>
+<span>(</span><span>1001</span><span>,</span> <span>9001</span><span>,</span> <span>'2021-09-01 09:01:01'</span><span>,</span> <span>'2021-09-01 09:31:00'</span><span>,</span> <span>78</span><span>)</span><span>,</span>
+<span>(</span><span>1001</span><span>,</span> <span>9001</span><span>,</span> <span>'2021-09-01 09:01:01'</span><span>,</span> <span>'2021-09-01 09:31:00'</span><span>,</span> <span>81</span><span>)</span><span>,</span>
+<span>(</span><span>1005</span><span>,</span> <span>9001</span><span>,</span> <span>'2021-09-01 19:01:01'</span><span>,</span> <span>'2021-09-01 19:30:01'</span><span>,</span> <span>85</span><span>)</span><span>,</span>
+<span>(</span><span>1005</span><span>,</span> <span>9002</span><span>,</span> <span>'2021-09-01 12:01:01'</span><span>,</span> <span>'2021-09-01 12:31:02'</span><span>,</span> <span>85</span><span>)</span><span>,</span>
+<span>(</span><span>1006</span><span>,</span> <span>9003</span><span>,</span> <span>'2021-09-07 10:01:01'</span><span>,</span> <span>'2021-09-07 10:21:59'</span><span>,</span> <span>84</span><span>)</span><span>,</span>
+<span>(</span><span>1006</span><span>,</span> <span>9001</span><span>,</span> <span>'2021-09-07 10:01:01'</span><span>,</span> <span>'2021-09-07 10:21:01'</span><span>,</span> <span>81</span><span>)</span><span>,</span>
+<span>(</span><span>1002</span><span>,</span> <span>9001</span><span>,</span> <span>'2020-09-01 13:01:01'</span><span>,</span> <span>'2020-09-01 13:41:01'</span><span>,</span> <span>81</span><span>)</span><span>,</span>
+<span>(</span><span>1005</span><span>,</span> <span>9001</span><span>,</span> <span>'2021-09-01 14:01:01'</span><span>,</span> <span>null</span><span>,</span> <span>null</span><span>)</span><span>;</span>
+输出：
+<span>1006</span><span>|</span><span>3</span><span>|</span><span>4</span><span>|</span><span>1</span><span>|</span><span>3</span>
+<span>1001</span><span>|</span><span>2</span><span>|</span><span>2</span><span>|</span><span>1</span><span>|</span><span>1</span>
+<span>1005</span><span>|</span><span>1</span><span>|</span><span>1</span><span>|</span><span>1</span><span>|</span><span>0</span>
+<span>1002</span><span>|</span><span>1</span><span>|</span><span>0</span><span>|</span><span>0</span><span>|</span><span>0</span>
+<span>1003</span><span>|</span><span>0</span><span>|</span><span>0</span><span>|</span><span>0</span><span>|</span><span>0</span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br><span>27</span><br><span>28</span><br><span>29</span><br><span>30</span><br><span>31</span><br><span>32</span><br><span>33</span><br><span>34</span><br><span>35</span><br><span>36</span><br><span>37</span><br><span>38</span><br><span>39</span><br><span>40</span><br><span>41</span><br><span>42</span><br><span>43</span><br><span>44</span><br><span>45</span><br><span>46</span><br><span>47</span><br><span>48</span><br><span>49</span><br><span>50</span><br><span>51</span><br><span>52</span><br><span>53</span><br><span>54</span><br><span>55</span><br><span>56</span><br><span>57</span><br><span>58</span><br><span>59</span><br><span>60</span><br><span>61</span><br><span>62</span><br><span>63</span><br><span>64</span><br><span>65</span><br><span>66</span><br><span>67</span><br><span>68</span><br><span>69</span><br><span>70</span><br><span>71</span><br><span>72</span><br><span>73</span><br><span>74</span><br><span>75</span><br><span>76</span><br><span>77</span><br></div></div><h3 id="解答" tabindex="-1"> 解答</h3>
+<div><pre><code><span>SELECT</span> 
+    ui<span>.</span>uid<span>,</span>
+    <span>COUNT</span><span>(</span><span>DISTINCT</span> <span>LEFT</span><span>(</span>s<span>,</span><span>6</span><span>)</span><span>)</span> <span>AS</span> act_month_total<span>,</span>
+    <span>COUNT</span><span>(</span><span>DISTINCT</span> <span>IF</span><span>(</span><span>LEFT</span><span>(</span>s<span>,</span><span>4</span><span>)</span><span>=</span><span>'2021'</span><span>,</span><span>RIGHT</span><span>(</span>s<span>,</span><span>4</span><span>)</span><span>,</span><span>null</span><span>)</span><span>)</span> <span>AS</span> act_days_2021<span>,</span>
+    <span>COUNT</span><span>(</span><span>DISTINCT</span> <span>IF</span><span>(</span><span>LEFT</span><span>(</span>s<span>,</span><span>4</span><span>)</span><span>=</span><span>'2021'</span> <span>AND</span> tag<span>=</span><span>'e'</span><span>,</span><span>RIGHT</span><span>(</span>s<span>,</span><span>4</span><span>)</span><span>,</span><span>null</span><span>)</span><span>)</span> <span>AS</span> act_days_2021_exam<span>,</span>
+    <span>COUNT</span><span>(</span><span>DISTINCT</span> <span>IF</span><span>(</span><span>LEFT</span><span>(</span>s<span>,</span><span>4</span><span>)</span><span>=</span><span>'2021'</span> <span>AND</span> tag<span>=</span><span>'p'</span><span>,</span><span>RIGHT</span><span>(</span>s<span>,</span><span>4</span><span>)</span><span>,</span><span>null</span><span>)</span><span>)</span> <span>AS</span> act_days_2021_question
+<span>FROM</span> <span>(</span>
+        <span>SELECT</span> uid<span>,</span>DATE_FORMAT<span>(</span>submit_time<span>,</span><span>'%Y%m%d'</span><span>)</span> <span>AS</span> s<span>,</span><span>'p'</span> tag <span>FROM</span> practice_record pr
+        <span>UNION</span> <span>ALL</span>
+        <span>SELECT</span> uid<span>,</span>DATE_FORMAT<span>(</span>start_time<span>,</span><span>'%Y%m%d'</span><span>)</span> <span>AS</span> s<span>,</span><span>'e'</span> <span>AS</span> tag <span>FROM</span> exam_record er 
+<span>)</span>mon
+<span>RIGHT</span> <span>JOIN</span> user_info ui
+<span>ON</span> ui<span>.</span>uid <span>=</span> mon<span>.</span>uid
+<span>WHERE</span> ui<span>.</span><span>level</span> <span>></span><span>5</span>
+<span>GROUP</span> <span>BY</span> uid
+<span>ORDER</span> <span>BY</span> act_month_total <span>DESC</span><span>,</span>act_days_2021 <span>DESC</span><span>;</span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br></div></div><h2 id="sql27-每类试卷得分前3名" tabindex="-1"> SQL27 每类试卷得分前3名</h2>
 <h3 id="描述-1" tabindex="-1"> 描述</h3>
+<p>现有试卷信息表examination_info（exam_id试卷ID, tag试卷类别, difficulty试卷难度, duration考试时长, release_time发布时间）：</p>
+<table>
+<thead>
+<tr>
+<th>id</th>
+<th>exam_id</th>
+<th>tag</th>
+<th>difficulty</th>
+<th>duration</th>
+<th>release_time</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>9001</td>
+<td>SQL</td>
+<td>hard</td>
+<td>60</td>
+<td>2021-09-01 06:00:00</td>
+</tr>
+<tr>
+<td>2</td>
+<td>9002</td>
+<td>SQL</td>
+<td>hard</td>
+<td>60</td>
+<td>2021-09-01 06:00:00</td>
+</tr>
+<tr>
+<td>3</td>
+<td>9003</td>
+<td>算法</td>
+<td>medium</td>
+<td>80</td>
+<td>2021-09-01 10:00:00</td>
+</tr>
+</tbody>
+</table>
+<p>试卷作答记录表exam_record（uid用户ID, exam_id试卷ID, start_time开始作答时间, submit_time交卷时间, score得分）：</p>
+<table>
+<thead>
+<tr>
+<th>id</th>
+<th>uid</th>
+<th>exam_id</th>
+<th>start_time</th>
+<th>submit_time</th>
+<th>score</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>1001</td>
+<td>9001</td>
+<td>2021-09-01 09:01:01</td>
+<td>2021-09-01 09:31:00</td>
+<td>78</td>
+</tr>
+<tr>
+<td>2</td>
+<td>1002</td>
+<td>9001</td>
+<td>2021-09-01 09:01:01</td>
+<td>2021-09-01 09:31:00</td>
+<td>81</td>
+</tr>
+<tr>
+<td>3</td>
+<td>1002</td>
+<td>9002</td>
+<td>2021-09-01 12:01:01</td>
+<td>2021-09-01 12:31:01</td>
+<td>81</td>
+</tr>
+<tr>
+<td>4</td>
+<td>1003</td>
+<td>9001</td>
+<td>2021-09-01 19:01:01</td>
+<td>2021-09-01 19:40:01</td>
+<td>86</td>
+</tr>
+<tr>
+<td>5</td>
+<td>1003</td>
+<td>9002</td>
+<td>2021-09-01 12:01:01</td>
+<td>2021-09-01 12:31:51</td>
+<td>89</td>
+</tr>
+<tr>
+<td>6</td>
+<td>1004</td>
+<td>9001</td>
+<td>2021-09-01 19:01:01</td>
+<td>2021-09-01 19:30:01</td>
+<td>85</td>
+</tr>
+<tr>
+<td>7</td>
+<td>1005</td>
+<td>9003</td>
+<td>2021-09-01 12:01:01</td>
+<td>2021-09-01 12:31:02</td>
+<td>85</td>
+</tr>
+<tr>
+<td>8</td>
+<td>1006</td>
+<td>9003</td>
+<td>2021-09-07 10:01:01</td>
+<td>2021-09-07 10:21:01</td>
+<td>84</td>
+</tr>
+<tr>
+<td>9</td>
+<td>1003</td>
+<td>9003</td>
+<td>2021-09-08 12:01:01</td>
+<td>2021-09-08 12:11:01</td>
+<td>40</td>
+</tr>
+<tr>
+<td>10</td>
+<td>1003</td>
+<td>9002</td>
+<td>2021-09-01 14:01:01</td>
+<td>(NULL)</td>
+<td>(NULL)</td>
+</tr>
+</tbody>
+</table>
 <h3 id="问题-1" tabindex="-1"> 问题</h3>
+<p>找到每类试卷得分的前3名，如果两人最大分数相同，选择最小分数大者，如果还相同，选择uid大者。由示例数据结果输出如下：</p>
+<table>
+<thead>
+<tr>
+<th>tid</th>
+<th>uid</th>
+<th>ranking</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SQL</td>
+<td>1003</td>
+<td>1</td>
+</tr>
+<tr>
+<td>SQL</td>
+<td>1004</td>
+<td>2</td>
+</tr>
+<tr>
+<td>SQL</td>
+<td>1002</td>
+<td>3</td>
+</tr>
+<tr>
+<td>算法</td>
+<td>1005</td>
+<td>1</td>
+</tr>
+<tr>
+<td>算法</td>
+<td>1006</td>
+<td>2</td>
+</tr>
+<tr>
+<td>算法</td>
+<td>1003</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<p>解释：有作答得分记录的试卷tag有SQL和算法，SQL试卷用户1001、1002、1003、1004有作答得分，最高得分分别为81、81、89、85，最低得分分别为78、81、86、40，因此先按最高得分排名再按最低得分排名取前三为1003、1004、1002。</p>
 <h3 id="示例-1" tabindex="-1"> 示例</h3>
-<h3 id="解答-1" tabindex="-1"> 解答</h3>
+<div><pre><code>输入：
+<span>drop</span> <span>table</span> <span>if</span> <span>exists</span> examination_info<span>,</span>exam_record<span>;</span>
+<span>CREATE</span> <span>TABLE</span> examination_info <span>(</span>
+    id <span>int</span> <span>PRIMARY</span> <span>KEY</span> <span>AUTO_INCREMENT</span> <span>COMMENT</span> <span>'自增ID'</span><span>,</span>
+    exam_id <span>int</span> <span>UNIQUE</span> <span>NOT</span> <span>NULL</span> <span>COMMENT</span> <span>'试卷ID'</span><span>,</span>
+    tag <span>varchar</span><span>(</span><span>32</span><span>)</span> <span>COMMENT</span> <span>'类别标签'</span><span>,</span>
+    difficulty <span>varchar</span><span>(</span><span>8</span><span>)</span> <span>COMMENT</span> <span>'难度'</span><span>,</span>
+    duration <span>int</span> <span>NOT</span> <span>NULL</span> <span>COMMENT</span> <span>'时长'</span><span>,</span>
+    release_time <span>datetime</span> <span>COMMENT</span> <span>'发布时间'</span>
+<span>)</span><span>CHARACTER</span> <span>SET</span> utf8 <span>COLLATE</span> utf8_general_ci<span>;</span>
+
+<span>CREATE</span> <span>TABLE</span> exam_record <span>(</span>
+    id <span>int</span> <span>PRIMARY</span> <span>KEY</span> <span>AUTO_INCREMENT</span> <span>COMMENT</span> <span>'自增ID'</span><span>,</span>
+    uid <span>int</span> <span>NOT</span> <span>NULL</span> <span>COMMENT</span> <span>'用户ID'</span><span>,</span>
+    exam_id <span>int</span> <span>NOT</span> <span>NULL</span> <span>COMMENT</span> <span>'试卷ID'</span><span>,</span>
+    start_time <span>datetime</span> <span>NOT</span> <span>NULL</span> <span>COMMENT</span> <span>'开始时间'</span><span>,</span>
+    submit_time <span>datetime</span> <span>COMMENT</span> <span>'提交时间'</span><span>,</span>
+    score <span>tinyint</span> <span>COMMENT</span> <span>'得分'</span>
+<span>)</span><span>CHARACTER</span> <span>SET</span> utf8 <span>COLLATE</span> utf8_general_ci<span>;</span>
+
+<span>INSERT</span> <span>INTO</span> examination_info<span>(</span>exam_id<span>,</span>tag<span>,</span>difficulty<span>,</span>duration<span>,</span>release_time<span>)</span> <span>VALUES</span>
+  <span>(</span><span>9001</span><span>,</span> <span>'SQL'</span><span>,</span> <span>'hard'</span><span>,</span> <span>60</span><span>,</span> <span>'2021-09-01 06:00:00'</span><span>)</span><span>,</span>
+  <span>(</span><span>9002</span><span>,</span> <span>'SQL'</span><span>,</span> <span>'hard'</span><span>,</span> <span>60</span><span>,</span> <span>'2021-09-01 06:00:00'</span><span>)</span><span>,</span>
+  <span>(</span><span>9003</span><span>,</span> <span>'算法'</span><span>,</span> <span>'medium'</span><span>,</span> <span>80</span><span>,</span> <span>'2021-09-01 10:00:00'</span><span>)</span><span>;</span>
+
+<span>INSERT</span> <span>INTO</span> exam_record<span>(</span>uid<span>,</span>exam_id<span>,</span>start_time<span>,</span>submit_time<span>,</span>score<span>)</span> <span>VALUES</span>
+<span>(</span><span>1001</span><span>,</span> <span>9001</span><span>,</span> <span>'2021-09-01 09:01:01'</span><span>,</span> <span>'2021-09-01 09:31:00'</span><span>,</span> <span>78</span><span>)</span><span>,</span>
+<span>(</span><span>1001</span><span>,</span> <span>9001</span><span>,</span> <span>'2021-09-01 09:01:01'</span><span>,</span> <span>'2021-09-01 09:31:00'</span><span>,</span> <span>81</span><span>)</span><span>,</span>
+<span>(</span><span>1002</span><span>,</span> <span>9002</span><span>,</span> <span>'2021-09-01 12:01:01'</span><span>,</span> <span>'2021-09-01 12:31:01'</span><span>,</span> <span>81</span><span>)</span><span>,</span>
+<span>(</span><span>1003</span><span>,</span> <span>9001</span><span>,</span> <span>'2021-09-01 19:01:01'</span><span>,</span> <span>'2021-09-01 19:40:01'</span><span>,</span> <span>86</span><span>)</span><span>,</span>
+<span>(</span><span>1003</span><span>,</span> <span>9002</span><span>,</span> <span>'2021-09-01 12:01:01'</span><span>,</span> <span>'2021-09-01 12:31:51'</span><span>,</span> <span>89</span><span>)</span><span>,</span>
+<span>(</span><span>1004</span><span>,</span> <span>9001</span><span>,</span> <span>'2021-09-01 19:01:01'</span><span>,</span> <span>'2021-09-01 19:30:01'</span><span>,</span> <span>85</span><span>)</span><span>,</span>
+<span>(</span><span>1005</span><span>,</span> <span>9003</span><span>,</span> <span>'2021-09-01 12:01:01'</span><span>,</span> <span>'2021-09-01 12:31:02'</span><span>,</span> <span>85</span><span>)</span><span>,</span>
+<span>(</span><span>1006</span><span>,</span> <span>9003</span><span>,</span> <span>'2021-09-07 10:01:01'</span><span>,</span> <span>'2021-09-07 10:21:01'</span><span>,</span> <span>84</span><span>)</span><span>,</span>
+<span>(</span><span>1003</span><span>,</span> <span>9003</span><span>,</span> <span>'2021-09-08 12:01:01'</span><span>,</span> <span>'2021-09-08 12:11:01'</span><span>,</span> <span>40</span><span>)</span><span>,</span>
+<span>(</span><span>1003</span><span>,</span> <span>9002</span><span>,</span> <span>'2021-09-01 14:01:01'</span><span>,</span> <span>null</span><span>,</span> <span>null</span><span>)</span><span>;</span>
+输出：
+<span>SQL</span><span>|</span><span>1003</span><span>|</span><span>1</span>
+<span>SQL</span><span>|</span><span>1004</span><span>|</span><span>2</span>
+<span>SQL</span><span>|</span><span>1002</span><span>|</span><span>3</span>
+算法<span>|</span><span>1005</span><span>|</span><span>1</span>
+算法<span>|</span><span>1006</span><span>|</span><span>2</span>
+算法<span>|</span><span>1003</span><span>|</span><span>3</span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br><span>27</span><br><span>28</span><br><span>29</span><br><span>30</span><br><span>31</span><br><span>32</span><br><span>33</span><br><span>34</span><br><span>35</span><br><span>36</span><br><span>37</span><br><span>38</span><br><span>39</span><br><span>40</span><br><span>41</span><br><span>42</span><br><span>43</span><br></div></div><h3 id="解答-1" tabindex="-1"> 解答</h3>
+<p>首先筛选出一个各类标签与用户和排名的结果集。</p>
+<div><pre><code><span>SELECT</span> tag<span>,</span> exam_record<span>.</span>uid<span>,</span>
+    row_number<span>(</span><span>)</span> <span>over</span> <span>(</span><span>PARTITION</span> <span>BY</span> tag <span>ORDER</span> <span>BY</span> tag<span>,</span> 
+                       <span>MAX</span><span>(</span>score<span>)</span> <span>DESC</span><span>,</span> 
+                       <span>MIN</span><span>(</span>score<span>)</span> <span>DESC</span><span>,</span> exam_record<span>.</span>uid <span>DESC</span><span>)</span> ranking
+    <span>FROM</span> exam_record <span>JOIN</span> examination_info
+    <span>ON</span> exam_record<span>.</span>exam_id <span>=</span> examination_info<span>.</span>exam_id
+    <span>GROUP</span> <span>BY</span> tag<span>,</span> exam_record<span>.</span>uid<span>;</span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br></div></div><p>然后就是从结果集中选出排名不大于 3 的标签、用户 <code>ID</code> 和排名，即 <code>SELECT ... FROM ... WHERE...</code>。</p>
+<div><pre><code><span>SELECT</span> tag<span>,</span> uid<span>,</span> ranking
+<span>FROM</span><span>(</span>
+    <span>SELECT</span> tag<span>,</span> exam_record<span>.</span>uid<span>,</span>
+    row_number<span>(</span><span>)</span> <span>over</span> <span>(</span><span>PARTITION</span> <span>BY</span> tag <span>ORDER</span> <span>BY</span> tag<span>,</span> 
+                       <span>MAX</span><span>(</span>score<span>)</span> <span>DESC</span><span>,</span> 
+                       <span>MIN</span><span>(</span>score<span>)</span> <span>DESC</span><span>,</span> exam_record<span>.</span>uid <span>DESC</span><span>)</span> ranking
+    <span>FROM</span> exam_record <span>JOIN</span> examination_info
+    <span>ON</span> exam_record<span>.</span>exam_id <span>=</span> examination_info<span>.</span>exam_id
+    <span>GROUP</span> <span>BY</span> tag<span>,</span> exam_record<span>.</span>uid
+<span>)</span> ranktable
+<span>WHERE</span> ranking <span>&lt;=</span> <span>3</span><span>;</span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br></div></div><h2 id="sql28-第二快-慢用时之差大于试卷时长一半的试卷" tabindex="-1"> SQL28 第二快/慢用时之差大于试卷时长一半的试卷</h2>
 <h3 id="描述-2" tabindex="-1"> 描述</h3>
+<p>现有试卷信息表examination_info（exam_id试卷ID, tag试卷类别, difficulty试卷难度, duration考试时长, release_time发布时间）：</p>
+<table>
+<thead>
+<tr>
+<th>id</th>
+<th>exam_id</th>
+<th>tag</th>
+<th>difficulty</th>
+<th>duration</th>
+<th>release_time</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>9001</td>
+<td>SQL</td>
+<td>hard</td>
+<td>60</td>
+<td>2021-09-01 06:00:00</td>
+</tr>
+<tr>
+<td>2</td>
+<td>9002</td>
+<td>C++</td>
+<td>hard</td>
+<td>60</td>
+<td>2021-09-01 06:00:00</td>
+</tr>
+<tr>
+<td>3</td>
+<td>9003</td>
+<td>算法</td>
+<td>medium</td>
+<td>80</td>
+<td>2021-09-01 10:00:00</td>
+</tr>
+</tbody>
+</table>
+<p>试卷作答记录表exam_record（uid用户ID, exam_id试卷ID, start_time开始作答时间, submit_time交卷时间, score得分）：</p>
+<table>
+<thead>
+<tr>
+<th>id</th>
+<th>uid</th>
+<th>exam_id</th>
+<th>start_time</th>
+<th>submit_time</th>
+<th>score</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>1001</td>
+<td>9001</td>
+<td>2021-09-01 09:01:01</td>
+<td>2021-09-01 09:51:01</td>
+<td>78</td>
+</tr>
+<tr>
+<td>2</td>
+<td>1001</td>
+<td>9002</td>
+<td>2021-09-01 09:01:01</td>
+<td>2021-09-01 09:31:00</td>
+<td>81</td>
+</tr>
+<tr>
+<td>3</td>
+<td>1002</td>
+<td>9002</td>
+<td>2021-09-01 12:01:01</td>
+<td>2021-09-01 12:31:01</td>
+<td>81</td>
+</tr>
+<tr>
+<td>4</td>
+<td>1003</td>
+<td>9001</td>
+<td>2021-09-01 19:01:01</td>
+<td>2021-09-01 19:59:01</td>
+<td>86</td>
+</tr>
+<tr>
+<td>5</td>
+<td>1003</td>
+<td>9002</td>
+<td>2021-09-01 12:01:01</td>
+<td>2021-09-01 12:31:51</td>
+<td>89</td>
+</tr>
+<tr>
+<td>6</td>
+<td>1004</td>
+<td>9002</td>
+<td>2021-09-01 19:01:01</td>
+<td>2021-09-01 19:30:01</td>
+<td>85</td>
+</tr>
+<tr>
+<td>7</td>
+<td>1005</td>
+<td>9001</td>
+<td>2021-09-01 12:01:01</td>
+<td>2021-09-01 12:31:02</td>
+<td>85</td>
+</tr>
+<tr>
+<td>8</td>
+<td>1006</td>
+<td>9001</td>
+<td>2021-09-07 10:01:01</td>
+<td>2021-09-07 10:21:01</td>
+<td>84</td>
+</tr>
+<tr>
+<td>9</td>
+<td>1003</td>
+<td>9001</td>
+<td>2021-09-08 12:01:01</td>
+<td>2021-09-08 12:11:01</td>
+<td>40</td>
+</tr>
+<tr>
+<td>10</td>
+<td>1003</td>
+<td>9002</td>
+<td>2021-09-01 14:01:01</td>
+<td>(NULL)</td>
+<td>(NULL)</td>
+</tr>
+<tr>
+<td>11</td>
+<td>1005</td>
+<td>9001</td>
+<td>2021-09-01 14:01:01</td>
+<td>(NULL)</td>
+<td>(NULL)</td>
+</tr>
+<tr>
+<td>12</td>
+<td>1003</td>
+<td>9003</td>
+<td>2021-09-08 15:01:01</td>
+<td>(NULL)</td>
+<td>(NULL)</td>
+</tr>
+</tbody>
+</table>
 <h3 id="问题-2" tabindex="-1"> 问题</h3>
+<p>找到第二快和第二慢用时之差大于试卷时长的一半的试卷信息，按试卷ID降序排序。由示例数据结果输出如下：</p>
+<table>
+<thead>
+<tr>
+<th>exam_id</th>
+<th>duration</th>
+<th>release_time</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>9001</td>
+<td>60</td>
+<td>2021-09-01 06:00:00</td>
+</tr>
+</tbody>
+</table>
+<p>解释：试卷9001被作答用时有50分钟、50分钟、30分1秒、11分钟、10分钟，第二快和第二慢用时之差为50分钟-11分钟=39分钟，试卷时长为60分钟，因此满足大于试卷时长一半的条件，输出试卷ID、时长、发布时间。</p>
 <h3 id="示例-2" tabindex="-1"> 示例</h3>
-<h3 id="解答-2" tabindex="-1"> 解答</h3>
+<div><pre><code>输入：
+<span>drop</span> <span>table</span> <span>if</span> <span>exists</span> examination_info<span>,</span>exam_record<span>;</span>
+<span>CREATE</span> <span>TABLE</span> examination_info <span>(</span>
+    id <span>int</span> <span>PRIMARY</span> <span>KEY</span> <span>AUTO_INCREMENT</span> <span>COMMENT</span> <span>'自增ID'</span><span>,</span>
+    exam_id <span>int</span> <span>UNIQUE</span> <span>NOT</span> <span>NULL</span> <span>COMMENT</span> <span>'试卷ID'</span><span>,</span>
+    tag <span>varchar</span><span>(</span><span>32</span><span>)</span> <span>COMMENT</span> <span>'类别标签'</span><span>,</span>
+    difficulty <span>varchar</span><span>(</span><span>8</span><span>)</span> <span>COMMENT</span> <span>'难度'</span><span>,</span>
+    duration <span>int</span> <span>NOT</span> <span>NULL</span> <span>COMMENT</span> <span>'时长'</span><span>,</span>
+    release_time <span>datetime</span> <span>COMMENT</span> <span>'发布时间'</span>
+<span>)</span><span>CHARACTER</span> <span>SET</span> utf8 <span>COLLATE</span> utf8_general_ci<span>;</span>
+
+<span>CREATE</span> <span>TABLE</span> exam_record <span>(</span>
+    id <span>int</span> <span>PRIMARY</span> <span>KEY</span> <span>AUTO_INCREMENT</span> <span>COMMENT</span> <span>'自增ID'</span><span>,</span>
+    uid <span>int</span> <span>NOT</span> <span>NULL</span> <span>COMMENT</span> <span>'用户ID'</span><span>,</span>
+    exam_id <span>int</span> <span>NOT</span> <span>NULL</span> <span>COMMENT</span> <span>'试卷ID'</span><span>,</span>
+    start_time <span>datetime</span> <span>NOT</span> <span>NULL</span> <span>COMMENT</span> <span>'开始时间'</span><span>,</span>
+    submit_time <span>datetime</span> <span>COMMENT</span> <span>'提交时间'</span><span>,</span>
+    score <span>tinyint</span> <span>COMMENT</span> <span>'得分'</span>
+<span>)</span><span>CHARACTER</span> <span>SET</span> utf8 <span>COLLATE</span> utf8_general_ci<span>;</span>
+
+<span>INSERT</span> <span>INTO</span> examination_info<span>(</span>exam_id<span>,</span>tag<span>,</span>difficulty<span>,</span>duration<span>,</span>release_time<span>)</span> <span>VALUES</span>
+  <span>(</span><span>9001</span><span>,</span> <span>'SQL'</span><span>,</span> <span>'hard'</span><span>,</span> <span>60</span><span>,</span> <span>'2021-09-01 06:00:00'</span><span>)</span><span>,</span>
+  <span>(</span><span>9002</span><span>,</span> <span>'C++'</span><span>,</span> <span>'hard'</span><span>,</span> <span>60</span><span>,</span> <span>'2021-09-01 06:00:00'</span><span>)</span><span>,</span>
+  <span>(</span><span>9003</span><span>,</span> <span>'算法'</span><span>,</span> <span>'medium'</span><span>,</span> <span>80</span><span>,</span> <span>'2021-09-01 10:00:00'</span><span>)</span><span>;</span>
+
+<span>INSERT</span> <span>INTO</span> exam_record<span>(</span>uid<span>,</span>exam_id<span>,</span>start_time<span>,</span>submit_time<span>,</span>score<span>)</span> <span>VALUES</span>
+<span>(</span><span>1001</span><span>,</span> <span>9001</span><span>,</span> <span>'2021-09-01 09:01:01'</span><span>,</span> <span>'2021-09-01 09:51:01'</span><span>,</span> <span>78</span><span>)</span><span>,</span>
+<span>(</span><span>1001</span><span>,</span> <span>9002</span><span>,</span> <span>'2021-09-01 09:01:01'</span><span>,</span> <span>'2021-09-01 09:31:00'</span><span>,</span> <span>81</span><span>)</span><span>,</span>
+<span>(</span><span>1002</span><span>,</span> <span>9002</span><span>,</span> <span>'2021-09-01 12:01:01'</span><span>,</span> <span>'2021-09-01 12:31:01'</span><span>,</span> <span>81</span><span>)</span><span>,</span>
+<span>(</span><span>1003</span><span>,</span> <span>9001</span><span>,</span> <span>'2021-09-01 19:01:01'</span><span>,</span> <span>'2021-09-01 19:59:01'</span><span>,</span> <span>86</span><span>)</span><span>,</span>
+<span>(</span><span>1003</span><span>,</span> <span>9002</span><span>,</span> <span>'2021-09-01 12:01:01'</span><span>,</span> <span>'2021-09-01 12:31:51'</span><span>,</span> <span>89</span><span>)</span><span>,</span>
+<span>(</span><span>1004</span><span>,</span> <span>9002</span><span>,</span> <span>'2021-09-01 19:01:01'</span><span>,</span> <span>'2021-09-01 19:30:01'</span><span>,</span> <span>85</span><span>)</span><span>,</span>
+<span>(</span><span>1005</span><span>,</span> <span>9001</span><span>,</span> <span>'2021-09-01 12:01:01'</span><span>,</span> <span>'2021-09-01 12:31:02'</span><span>,</span> <span>85</span><span>)</span><span>,</span>
+<span>(</span><span>1006</span><span>,</span> <span>9001</span><span>,</span> <span>'2021-09-07 10:01:01'</span><span>,</span> <span>'2021-09-07 10:12:01'</span><span>,</span> <span>84</span><span>)</span><span>,</span>
+<span>(</span><span>1003</span><span>,</span> <span>9001</span><span>,</span> <span>'2021-09-08 12:01:01'</span><span>,</span> <span>'2021-09-08 12:11:01'</span><span>,</span> <span>40</span><span>)</span><span>,</span>
+<span>(</span><span>1003</span><span>,</span> <span>9002</span><span>,</span> <span>'2021-09-01 14:01:01'</span><span>,</span> <span>null</span><span>,</span> <span>null</span><span>)</span><span>,</span>
+<span>(</span><span>1005</span><span>,</span> <span>9001</span><span>,</span> <span>'2021-09-01 14:01:01'</span><span>,</span> <span>null</span><span>,</span> <span>null</span><span>)</span><span>,</span>
+<span>(</span><span>1003</span><span>,</span> <span>9003</span><span>,</span> <span>'2021-09-08 15:01:01'</span><span>,</span> <span>null</span><span>,</span> <span>null</span><span>)</span><span>;</span>
+输出：
+<span>9001</span><span>|</span><span>60</span><span>|</span><span>2021</span><span>-</span><span>09</span><span>-</span><span>01</span> <span>06</span>:<span>00</span>:<span>00</span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br><span>27</span><br><span>28</span><br><span>29</span><br><span>30</span><br><span>31</span><br><span>32</span><br><span>33</span><br><span>34</span><br><span>35</span><br><span>36</span><br><span>37</span><br><span>38</span><br><span>39</span><br><span>40</span><br></div></div><h3 id="解答-2" tabindex="-1"> 解答</h3>
+<p>根据问题将题目进行拆解，首先将每套试卷完成第二快和完成第二慢的用时以及试卷信息统计出来。</p>
+<div><pre><code><span>SELECT</span> exam_id<span>,</span> duration<span>,</span> release_time
+<span>FROM</span> <span>(</span>
+    <span>SELECT</span> <span>DISTINCT</span> exam_id<span>,</span> duration<span>,</span> release_time<span>,</span>
+        NTH_VALUE<span>(</span>time_took<span>,</span> <span>2</span><span>)</span> <span>OVER</span> <span>(</span>
+            <span>PARTITION</span> <span>BY</span> exam_id <span>ORDER</span> <span>BY</span> time_took <span>DESC</span><span>)</span> <span>as</span> max2nd_time<span>,</span>
+        NTH_VALUE<span>(</span>time_took<span>,</span> <span>2</span><span>)</span> <span>OVER</span> <span>(</span>
+            <span>PARTITION</span> <span>BY</span> exam_id <span>ORDER</span> <span>BY</span> time_took <span>ASC</span><span>)</span> <span>as</span> min2nd_time
+    <span>FROM</span> <span>(</span>
+        <span>SELECT</span> exam_id<span>,</span> duration<span>,</span> release_time<span>,</span>
+            TimeStampDiff<span>(</span><span>SECOND</span><span>,</span> start_time<span>,</span> submit_time<span>)</span> <span>/</span> <span>60</span> <span>as</span> time_took
+        <span>FROM</span> exam_record <span>JOIN</span> examination_info <span>USING</span><span>(</span>exam_id<span>)</span>
+        <span>WHERE</span> submit_time <span>IS</span> <span>NOT</span> <span>NULL</span>
+    <span>)</span> <span>as</span> exam_record_timetook
+<span>)</span> <span>as</span> exam_time_took<span>;</span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br></div></div><p>然后筛选出第二快和第二慢用时之差大于试卷时长一半的试卷，即 <code>WHERE max2nd_time - min2nd_time &gt; duration / 2</code>。</p>
+<div><pre><code><span>SELECT</span> exam_id<span>,</span> duration<span>,</span> release_time
+<span>FROM</span> <span>(</span>
+    <span>SELECT</span> <span>DISTINCT</span> exam_id<span>,</span> duration<span>,</span> release_time<span>,</span>
+        NTH_VALUE<span>(</span>time_took<span>,</span> <span>2</span><span>)</span> <span>OVER</span> <span>(</span>
+            <span>PARTITION</span> <span>BY</span> exam_id <span>ORDER</span> <span>BY</span> time_took <span>DESC</span><span>)</span> <span>as</span> max2nd_time<span>,</span>
+        NTH_VALUE<span>(</span>time_took<span>,</span> <span>2</span><span>)</span> <span>OVER</span> <span>(</span>
+            <span>PARTITION</span> <span>BY</span> exam_id <span>ORDER</span> <span>BY</span> time_took <span>ASC</span><span>)</span> <span>as</span> min2nd_time
+    <span>FROM</span> <span>(</span>
+        <span>SELECT</span> exam_id<span>,</span> duration<span>,</span> release_time<span>,</span>
+            TimeStampDiff<span>(</span><span>SECOND</span><span>,</span> start_time<span>,</span> submit_time<span>)</span> <span>/</span> <span>60</span> <span>as</span> time_took
+        <span>FROM</span> exam_record <span>JOIN</span> examination_info <span>USING</span><span>(</span>exam_id<span>)</span>
+        <span>WHERE</span> submit_time <span>IS</span> <span>NOT</span> <span>NULL</span>
+    <span>)</span> <span>as</span> exam_record_timetook
+<span>)</span> <span>as</span> exam_time_took
+<span>WHERE</span> max2nd_time <span>-</span> min2nd_time <span>></span> duration <span>/</span> <span>2</span>
+<span>ORDER</span> <span>BY</span> exam_id <span>DESC</span><span>;</span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br></div></div><h2 id="sql29-连续两次作答试卷的最大时间窗" tabindex="-1"> SQL29 连续两次作答试卷的最大时间窗</h2>
 <h3 id="描述-3" tabindex="-1"> 描述</h3>
+<p>现有试卷作答记录表exam_record（uid用户ID, exam_id试卷ID, start_time开始作答时间, submit_time交卷时间, score得分）：</p>
+<table>
+<thead>
+<tr>
+<th>id</th>
+<th>uid</th>
+<th>exam_id</th>
+<th>start_time</th>
+<th>submit_time</th>
+<th>score</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>1006</td>
+<td>9003</td>
+<td>2021-09-07 10:01:01</td>
+<td>2021-09-07 10:21:02</td>
+<td>84</td>
+</tr>
+<tr>
+<td>2</td>
+<td>1006</td>
+<td>9001</td>
+<td>2021-09-01 12:11:01</td>
+<td>2021-09-01 12:31:01</td>
+<td>89</td>
+</tr>
+<tr>
+<td>3</td>
+<td>1006</td>
+<td>9002</td>
+<td>2021-09-06 10:01:01</td>
+<td>2021-09-06 10:21:01</td>
+<td>81</td>
+</tr>
+<tr>
+<td>4</td>
+<td>1005</td>
+<td>9002</td>
+<td>2021-09-05 10:01:01</td>
+<td>2021-09-05 10:21:01</td>
+<td>81</td>
+</tr>
+<tr>
+<td>5</td>
+<td>1005</td>
+<td>9001</td>
+<td>2021-09-05 10:31:01</td>
+<td>2021-09-05 10:51:01</td>
+<td>81</td>
+</tr>
+</tbody>
+</table>
 <h3 id="问题-3" tabindex="-1"> 问题</h3>
+<p>请计算在2021年至少有两天作答过试卷的人中，计算该年连续两次作答试卷的最大时间窗days_window，那么根据该年的历史规律他在days_window天里平均会做多少套试卷，按最大时间窗和平均做答试卷套数倒序排序。由示例数据结果输出如下：</p>
+<table>
+<thead>
+<tr>
+<th>uid</th>
+<th>days_window</th>
+<th>avg_exam_cnt</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1006</td>
+<td>6</td>
+<td>2.57</td>
+</tr>
+</tbody>
+</table>
+<p>解释：用户1006分别在20210901、20210906、20210907作答过3次试卷，连续两次作答最大时间窗为6天（1号到6号），他1号到7号这7天里共做了3张试卷，平均每天3/7=0.428571张，那么6天里平均会做0.428571*6=2.57张试卷（保留两位小数）；</p>
+<p>用户1005在20210905做了两张试卷，但是只有一天的作答记录，过滤掉。</p>
 <h3 id="示例-3" tabindex="-1"> 示例</h3>
-<h3 id="解答-3" tabindex="-1"> 解答</h3>
+<div><pre><code>示例<span>1</span>
+输入：
+<span>drop</span> <span>table</span> <span>if</span> <span>exists</span> exam_record<span>;</span>
+<span>CREATE</span> <span>TABLE</span> exam_record <span>(</span>
+    id <span>int</span> <span>PRIMARY</span> <span>KEY</span> <span>AUTO_INCREMENT</span> <span>COMMENT</span> <span>'自增ID'</span><span>,</span>
+    uid <span>int</span> <span>NOT</span> <span>NULL</span> <span>COMMENT</span> <span>'用户ID'</span><span>,</span>
+    exam_id <span>int</span> <span>NOT</span> <span>NULL</span> <span>COMMENT</span> <span>'试卷ID'</span><span>,</span>
+    start_time <span>datetime</span> <span>NOT</span> <span>NULL</span> <span>COMMENT</span> <span>'开始时间'</span><span>,</span>
+    submit_time <span>datetime</span> <span>COMMENT</span> <span>'提交时间'</span><span>,</span>
+    score <span>tinyint</span> <span>COMMENT</span> <span>'得分'</span>
+<span>)</span><span>CHARACTER</span> <span>SET</span> utf8 <span>COLLATE</span> utf8_general_ci<span>;</span>
+
+<span>INSERT</span> <span>INTO</span> exam_record<span>(</span>uid<span>,</span>exam_id<span>,</span>start_time<span>,</span>submit_time<span>,</span>score<span>)</span> <span>VALUES</span>
+<span>(</span><span>1006</span><span>,</span> <span>9003</span><span>,</span> <span>'2021-09-07 10:01:01'</span><span>,</span> <span>'2021-09-07 10:21:02'</span><span>,</span> <span>84</span><span>)</span><span>,</span>
+<span>(</span><span>1006</span><span>,</span> <span>9001</span><span>,</span> <span>'2021-09-01 12:11:01'</span><span>,</span> <span>'2021-09-01 12:31:01'</span><span>,</span> <span>89</span><span>)</span><span>,</span>
+<span>(</span><span>1006</span><span>,</span> <span>9002</span><span>,</span> <span>'2021-09-06 10:01:01'</span><span>,</span> <span>'2021-09-06 10:21:01'</span><span>,</span> <span>81</span><span>)</span><span>,</span>
+<span>(</span><span>1005</span><span>,</span> <span>9002</span><span>,</span> <span>'2021-09-05 10:01:01'</span><span>,</span> <span>'2021-09-05 10:21:01'</span><span>,</span> <span>81</span><span>)</span><span>,</span>
+<span>(</span><span>1005</span><span>,</span> <span>9001</span><span>,</span> <span>'2021-09-05 10:31:01'</span><span>,</span> <span>'2021-09-05 10:51:01'</span><span>,</span> <span>81</span><span>)</span><span>;</span>
+输出：
+<span>1006</span><span>|</span><span>6</span><span>|</span><span>2.57</span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br></div></div><h3 id="解答-3" tabindex="-1"> 解答</h3>
+<ol>
+<li>先统计 2021 年每个人的总作答数、最早最晚相隔天数、最大连续作答间隔。</li>
+</ol>
+<div><pre><code><span>SELECT</span> uid<span>,</span>
+        <span>COUNT</span><span>(</span>start_time<span>)</span> exam_cnt<span>,</span>
+        DATEDIFF<span>(</span><span>MAX</span><span>(</span>start_time<span>)</span><span>,</span> <span>MIN</span><span>(</span>start_time<span>)</span><span>)</span> <span>+</span> <span>1</span> diff_days<span>,</span> 
+        <span>MAX</span><span>(</span>DATEDIFF<span>(</span>next_start_time<span>,</span> start_time<span>)</span><span>)</span> <span>+</span> <span>1</span> days_window
+    <span>FROM</span> <span>(</span>
+        <span>SELECT</span> uid<span>,</span> exam_id<span>,</span> start_time<span>,</span>
+            lead<span>(</span>start_time<span>)</span> <span>over</span><span>(</span>
+                <span>PARTITION</span> <span>BY</span> uid <span>ORDER</span> <span>BY</span> start_time<span>)</span> next_start_time
+        <span>FROM</span> exam_record
+        <span>WHERE</span> <span>YEAR</span><span>(</span>start_time<span>)</span><span>=</span><span>2021</span>
+    <span>)</span> exam_record_lead
+    <span>GROUP</span> <span>BY</span> uid<span>;</span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br></div></div><ol start="2">
+<li>然后筛选出最早和最晚相隔大于 1 天的记录，即 <code>WHERE diff_days &gt; 1</code>。</li>
+<li>最后计算平均能做试卷的套数，即 <code>ROUND(days_window * exam_cnt / diff_days, 2) avg_exam_cnt</code>。</li>
+</ol>
+<div><pre><code><span>SELECT</span> uid<span>,</span> days_window<span>,</span> <span>ROUND</span><span>(</span>days_window <span>*</span> exam_cnt <span>/</span> diff_days<span>,</span> <span>2</span><span>)</span> avg_exam_cnt
+<span>FROM</span> <span>(</span>
+    <span>SELECT</span> uid<span>,</span>
+        <span>COUNT</span><span>(</span>start_time<span>)</span> exam_cnt<span>,</span>
+        DATEDIFF<span>(</span><span>MAX</span><span>(</span>start_time<span>)</span><span>,</span> <span>MIN</span><span>(</span>start_time<span>)</span><span>)</span> <span>+</span> <span>1</span> diff_days<span>,</span> 
+        <span>MAX</span><span>(</span>DATEDIFF<span>(</span>next_start_time<span>,</span> start_time<span>)</span><span>)</span> <span>+</span> <span>1</span> days_window
+    <span>FROM</span> <span>(</span>
+        <span>SELECT</span> uid<span>,</span> exam_id<span>,</span> start_time<span>,</span>
+            lead<span>(</span>start_time<span>)</span> <span>over</span><span>(</span>
+                <span>PARTITION</span> <span>BY</span> uid <span>ORDER</span> <span>BY</span> start_time<span>)</span> next_start_time
+        <span>FROM</span> exam_record
+        <span>WHERE</span> <span>YEAR</span><span>(</span>start_time<span>)</span><span>=</span><span>2021</span>
+    <span>)</span> exam_record_lead
+    <span>GROUP</span> <span>BY</span> uid
+<span>)</span> exam_record
+<span>WHERE</span> diff_days <span>></span> <span>1</span>
+<span>ORDER</span> <span>BY</span> days_window <span>DESC</span><span>,</span> avg_exam_cnt <span>DESC</span><span>;</span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br></div></div><h2 id="sql30-近三个月未完成试卷数为0的用户完成情况" tabindex="-1"> SQL30 近三个月未完成试卷数为0的用户完成情况</h2>
 <h3 id="描述-4" tabindex="-1"> 描述</h3>
+<p>现有试卷作答记录表exam_record（uid:用户ID, exam_id:试卷ID, start_time:开始作答时间, submit_time:交卷时间，为空的话则代表未完成, score:得分）：</p>
+<table>
+<thead>
+<tr>
+<th>id</th>
+<th>uid</th>
+<th>exam_id</th>
+<th>start_time</th>
+<th>submit_time</th>
+<th>score</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>1006</td>
+<td>9003</td>
+<td>2021-09-06 10:01:01</td>
+<td>2021-09-06 10:21:02</td>
+<td>84</td>
+</tr>
+<tr>
+<td>2</td>
+<td>1006</td>
+<td>9001</td>
+<td>2021-08-02 12:11:01</td>
+<td>2021-08-02 12:31:01</td>
+<td>89</td>
+</tr>
+<tr>
+<td>3</td>
+<td>1006</td>
+<td>9002</td>
+<td>2021-06-06 10:01:01</td>
+<td>2021-06-06 10:21:01</td>
+<td>81</td>
+</tr>
+<tr>
+<td>4</td>
+<td>1006</td>
+<td>9002</td>
+<td>2021-05-06 10:01:01</td>
+<td>2021-05-06 10:21:01</td>
+<td>81</td>
+</tr>
+<tr>
+<td>5</td>
+<td>1006</td>
+<td>9001</td>
+<td>2021-05-01 12:01:01</td>
+<td>(NULL)</td>
+<td>(NULL)</td>
+</tr>
+<tr>
+<td>6</td>
+<td>1001</td>
+<td>9001</td>
+<td>2021-09-05 10:31:01</td>
+<td>2021-09-05 10:51:01</td>
+<td>81</td>
+</tr>
+<tr>
+<td>7</td>
+<td>1001</td>
+<td>9003</td>
+<td>2021-08-01 09:01:01</td>
+<td>2021-08-01 09:51:11</td>
+<td>78</td>
+</tr>
+<tr>
+<td>8</td>
+<td>1001</td>
+<td>9002</td>
+<td>2021-07-01 09:01:01</td>
+<td>2021-07-01 09:31:00</td>
+<td>81</td>
+</tr>
+<tr>
+<td>9</td>
+<td>1001</td>
+<td>9002</td>
+<td>2021-07-01 12:01:01</td>
+<td>2021-07-01 12:31:01</td>
+<td>81</td>
+</tr>
+<tr>
+<td>10</td>
+<td>1001</td>
+<td>9002</td>
+<td>2021-07-01 12:01:01</td>
+<td>(NULL)</td>
+<td>(NULL)</td>
+</tr>
+</tbody>
+</table>
 <h3 id="问题-4" tabindex="-1"> 问题</h3>
+<p>找到每个人近三个有试卷作答记录的月份中没有试卷是未完成状态的用户的试卷作答完成数，按试卷完成数和用户ID降序排名。由示例数据结果输出如下：</p>
+<table>
+<thead>
+<tr>
+<th>uid</th>
+<th>exam_complete_cnt</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1006</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<p>解释：用户1006近三个有作答试卷的月份为202109、202108、202106，作答试卷数为3，全部完成；用户1001近三个有作答试卷的月份为202109、202108、202107，作答试卷数为5，完成试卷数为4，因为有未完成试卷，故过滤掉。</p>
 <h3 id="示例-4" tabindex="-1"> 示例</h3>
-<h3 id="解答-4" tabindex="-1"> 解答</h3>
-]]></content>
+<div><pre><code>输入：
+<span>drop</span> <span>table</span> <span>if</span> <span>exists</span> exam_record<span>;</span>
+<span>CREATE</span> <span>TABLE</span> exam_record <span>(</span>
+    id <span>int</span> <span>PRIMARY</span> <span>KEY</span> <span>AUTO_INCREMENT</span> <span>COMMENT</span> <span>'自增ID'</span><span>,</span>
+    uid <span>int</span> <span>NOT</span> <span>NULL</span> <span>COMMENT</span> <span>'用户ID'</span><span>,</span>
+    exam_id <span>int</span> <span>NOT</span> <span>NULL</span> <span>COMMENT</span> <span>'试卷ID'</span><span>,</span>
+    start_time <span>datetime</span> <span>NOT</span> <span>NULL</span> <span>COMMENT</span> <span>'开始时间'</span><span>,</span>
+    submit_time <span>datetime</span> <span>COMMENT</span> <span>'提交时间'</span><span>,</span>
+    score <span>tinyint</span> <span>COMMENT</span> <span>'得分'</span>
+<span>)</span><span>CHARACTER</span> <span>SET</span> utf8 <span>COLLATE</span> utf8_general_ci<span>;</span>
+
+<span>INSERT</span> <span>INTO</span> exam_record<span>(</span>uid<span>,</span>exam_id<span>,</span>start_time<span>,</span>submit_time<span>,</span>score<span>)</span> <span>VALUES</span>
+<span>(</span><span>1006</span><span>,</span> <span>9003</span><span>,</span> <span>'2021-09-06 10:01:01'</span><span>,</span> <span>'2021-09-06 10:21:02'</span><span>,</span> <span>84</span><span>)</span><span>,</span>
+<span>(</span><span>1006</span><span>,</span> <span>9001</span><span>,</span> <span>'2021-08-02 12:11:01'</span><span>,</span> <span>'2021-08-02 12:31:01'</span><span>,</span> <span>89</span><span>)</span><span>,</span>
+<span>(</span><span>1006</span><span>,</span> <span>9002</span><span>,</span> <span>'2021-06-06 10:01:01'</span><span>,</span> <span>'2021-06-06 10:21:01'</span><span>,</span> <span>81</span><span>)</span><span>,</span>
+<span>(</span><span>1006</span><span>,</span> <span>9002</span><span>,</span> <span>'2021-05-06 10:01:01'</span><span>,</span> <span>'2021-05-06 10:21:01'</span><span>,</span> <span>81</span><span>)</span><span>,</span>
+<span>(</span><span>1006</span><span>,</span> <span>9001</span><span>,</span> <span>'2021-05-01 12:01:01'</span><span>,</span> <span>null</span><span>,</span> <span>null</span><span>)</span><span>,</span>
+<span>(</span><span>1001</span><span>,</span> <span>9001</span><span>,</span> <span>'2021-09-05 10:31:01'</span><span>,</span> <span>'2021-09-05 10:51:01'</span><span>,</span> <span>81</span><span>)</span><span>,</span>
+<span>(</span><span>1001</span><span>,</span> <span>9003</span><span>,</span> <span>'2021-08-01 09:01:01'</span><span>,</span> <span>'2021-08-01 09:51:11'</span><span>,</span> <span>78</span><span>)</span><span>,</span>
+<span>(</span><span>1001</span><span>,</span> <span>9002</span><span>,</span> <span>'2021-07-01 09:01:01'</span><span>,</span> <span>'2021-07-01 09:31:00'</span><span>,</span> <span>81</span><span>)</span><span>,</span>
+<span>(</span><span>1001</span><span>,</span> <span>9002</span><span>,</span> <span>'2021-07-01 12:01:01'</span><span>,</span> <span>'2021-07-01 12:31:01'</span><span>,</span> <span>81</span><span>)</span><span>,</span>
+<span>(</span><span>1001</span><span>,</span> <span>9002</span><span>,</span> <span>'2021-07-01 12:01:01'</span><span>,</span> <span>null</span><span>,</span> <span>null</span><span>)</span><span>;</span>
+输出：
+<span>1006</span><span>|</span><span>3</span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br></div></div><h3 id="解答-4" tabindex="-1"> 解答</h3>
+<p>问题拆解：</p>
+<ol>
+<li>先从 <code>exam_record</code> 表中筛选出用户 <code>ID</code>、答题开始时间、得分，并按照月份的逆序排列。</li>
+</ol>
+<div><pre><code><span>SELECT</span> uid<span>,</span> start_time<span>,</span> score<span>,</span>
+           dense_rank<span>(</span><span>)</span> <span>OVER</span><span>(</span><span>PARTITION</span> <span>BY</span> uid <span>ORDER</span> <span>BY</span> date_format<span>(</span>start_time<span>,</span> <span>'%Y%m'</span><span>)</span> <span>DESC</span><span>;</span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br></div></div><ol start="2">
+<li>紧接着，基于上一步中筛选出的结果，然后从中筛选出每个人近三个月的答题数，但要注意其中的限制条件。</li>
+</ol>
+<div><pre><code><span>SELECT</span> uid<span>,</span>
+       <span>COUNT</span><span>(</span>score<span>)</span> <span>AS</span> exam_complete_cnt
+<span>FROM</span> <span>[</span>结果集<span>]</span> <span>WHERE</span> recent_months <span>&lt;=</span> <span>3</span><span>;</span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br></div></div><ol start="3">
+<li>最后按照答题数、用户 <code>ID</code> 降序输出，得到最终结果如下。</li>
+</ol>
+<div><pre><code><span>SELECT</span> uid<span>,</span>
+       <span>COUNT</span><span>(</span>score<span>)</span> <span>AS</span> exam_complete_cnt
+<span>FROM</span><span>(</span>
+    <span>SELECT</span> uid<span>,</span> start_time<span>,</span> score<span>,</span>
+           dense_rank<span>(</span><span>)</span> <span>OVER</span><span>(</span><span>PARTITION</span> <span>BY</span> uid <span>ORDER</span> <span>BY</span> date_format<span>(</span>start_time<span>,</span> <span>'%Y%m'</span><span>)</span> <span>DESC</span><span>)</span> 
+    <span>AS</span> recent_months
+    <span>FROM</span> exam_record
+<span>)</span> recent_table
+<span>WHERE</span> recent_months <span>&lt;=</span> <span>3</span>
+<span>GROUP</span> <span>BY</span> uid
+<span>HAVING</span> <span>COUNT</span><span>(</span>score<span>)</span> <span>=</span> <span>COUNT</span><span>(</span>uid<span>)</span>
+<span>ORDER</span> <span>BY</span> exam_complete_cnt <span>DESC</span><span>,</span> uid <span>DESC</span><span>;</span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br></div></div>]]></content>
     <category term="SQL 进阶挑战"/>
     <published>2022-06-19T12:00:00.000Z</published>
   </entry>
