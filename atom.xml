@@ -3,7 +3,7 @@
   <id>https://cunyu1943.github.io/JavaPark/JavaPark/</id>
   <title>JavaPark</title>
   <subtitle>Java 自学编程之路</subtitle>
-  <updated>2022-06-25T14:35:42.673Z</updated>
+  <updated>2022-06-26T14:37:02.883Z</updated>
   <generator>vuepress-plugin-feed2</generator>
   <link rel="self" href="https://cunyu1943.github.io/JavaPark/JavaPark/atom.xml"/>
   <link rel="alternate" href="https://cunyu1943.github.io/JavaPark/JavaPark/"/>
@@ -28,6 +28,206 @@
   <category term="Spring MVC 合辑"/>
   <category term="SQL 必知必会 50 题"/>
   <category term="Java 编程实例"/>
+  <entry>
+    <title type="html">Java 入门练习（6 - 10）</title>
+    <id>https://cunyu1943.github.io/JavaPark/JavaPark/practical-training-camp/intro-to-java/6-10.html</id>
+    <link href="https://cunyu1943.github.io/JavaPark/JavaPark/practical-training-camp/intro-to-java/6-10.html"/>
+    <updated>2022-06-26T14:35:42.000Z</updated>
+    <content type="html"><![CDATA[<h2 id="java6-判断体重指数" tabindex="-1"> JAVA6 判断体重指数</h2>
+<h3 id="描述" tabindex="-1"> 描述</h3>
+<p>体重指数 = 体重 (kg) / ( 身高 (m) × 身高 (m) )，小于18.5属于偏瘦，介于18.5和20.9之间（左闭右开）属于苗条，介于20.9和24.9之间（左闭右闭）属于适中，超过24.9属于偏胖。下面由你来编写一段逻辑，算出输入了身高和体重的用户的体重指数，并返回他们的身材状态。(体重指数请使用double类型)</p>
+<h4 id="输入描述" tabindex="-1"> 输入描述：</h4>
+<p>用户的身高（m）和用户的体重（kg）</p>
+<h4 id="输出描述" tabindex="-1"> 输出描述：</h4>
+<p>体重指数代表的用户身材状态</p>
+<h3 id="示例1" tabindex="-1"> 示例1</h3>
+<p>输入：</p>
+<div><pre><code>1.75 62.5
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p>输出：</p>
+<div><pre><code>苗条
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><h3 id="示例2" tabindex="-1"> 示例2</h3>
+<p>输入：</p>
+<div><pre><code>1.5 40
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p>输出：</p>
+<div><pre><code>偏瘦
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><h3 id="示例3" tabindex="-1"> 示例3</h3>
+<p>输入：</p>
+<div><pre><code>1.85 80
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p>输出：</p>
+<div><pre><code>适中
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><h3 id="示例4" tabindex="-1"> 示例4</h3>
+<p>输入：</p>
+<div><pre><code>2 100
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p>输出：</p>
+<div><pre><code>偏胖
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><h3 id="解答" tabindex="-1"> 解答</h3>
+<p>首先计算出体重指数 <code>bim = weight / height / height</code>，然后再用条件语句找出对应区间即可。</p>
+<div><pre><code><span>import</span> <span>java<span>.</span>util<span>.</span></span><span>Scanner</span><span>;</span>
+
+<span>public</span> <span>class</span> <span>Main</span> <span>{</span>
+    <span>public</span> <span>static</span> <span>void</span> <span>main</span><span>(</span><span>String</span><span>[</span><span>]</span> args<span>)</span> <span>{</span>
+        <span>Scanner</span> scanner <span>=</span> <span>new</span> <span>Scanner</span><span>(</span><span>System</span><span>.</span>in<span>)</span><span>;</span>
+        <span>double</span> height <span>=</span> scanner<span>.</span><span>nextDouble</span><span>(</span><span>)</span><span>;</span>
+        <span>double</span> weight <span>=</span> scanner<span>.</span><span>nextDouble</span><span>(</span><span>)</span><span>;</span>
+
+        <span>double</span> ibm <span>=</span> weight <span>/</span> height <span>/</span> height<span>;</span>
+
+        <span>if</span> <span>(</span>ibm <span>></span> <span>24.9</span><span>)</span> <span>{</span>
+            <span>System</span><span>.</span>out<span>.</span><span>print</span><span>(</span><span>"偏胖"</span><span>)</span><span>;</span>
+        <span>}</span> <span>else</span> <span>if</span> <span>(</span>ibm <span>>=</span> <span>20.9</span><span>)</span> <span>{</span>
+            <span>System</span><span>.</span>out<span>.</span><span>print</span><span>(</span><span>"适中"</span><span>)</span><span>;</span>
+        <span>}</span> <span>else</span> <span>if</span> <span>(</span>ibm <span>>=</span> <span>18.5</span><span>)</span> <span>{</span>
+            <span>System</span><span>.</span>out<span>.</span><span>print</span><span>(</span><span>"苗条"</span><span>)</span><span>;</span>
+        <span>}</span> <span>else</span> <span>{</span>
+            <span>System</span><span>.</span>out<span>.</span><span>print</span><span>(</span><span>"偏瘦"</span><span>)</span><span>;</span>
+        <span>}</span>
+    <span>}</span>
+<span>}</span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br></div></div><h2 id="java7-判断学生成绩等级" tabindex="-1"> JAVA7 判断学生成绩等级</h2>
+<h3 id="描述-1" tabindex="-1"> 描述</h3>
+<p>现有如下成绩等级A,B,C,D。其中A代表优秀，B代表良好，C代表及格，D代表不及格。现在请你来为学生的成绩进行分级，如果用户输入错误则输出未知等级。</p>
+<h4 id="输入描述-1" tabindex="-1"> 输入描述</h4>
+<p>成绩等级对应的中文表述</p>
+<h4 id="输出描述-1" tabindex="-1"> 输出描述</h4>
+<p>优秀，良好，及格，不及格，未知等级</p>
+<h3 id="示例1-1" tabindex="-1"> 示例1</h3>
+<p>输入：</p>
+<div><pre><code>A
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p>输出：</p>
+<div><pre><code>优秀
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><h3 id="示例2-1" tabindex="-1"> 示例2</h3>
+<p>输入：</p>
+<div><pre><code>B
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p>输出：</p>
+<div><pre><code>良好
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><h3 id="示例3-1" tabindex="-1"> 示例3</h3>
+<p>输入：</p>
+<div><pre><code>C
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p>输出：</p>
+<div><pre><code>及格
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><h3 id="示例4-1" tabindex="-1"> 示例4</h3>
+<p>输入：</p>
+<div><pre><code>D
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p>输出：</p>
+<div><pre><code>不及格
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><h3 id="示例5" tabindex="-1"> 示例5</h3>
+<p>输入：</p>
+<div><pre><code>E
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p>输出：</p>
+<div><pre><code>未知等级
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><h3 id="解答-1" tabindex="-1"> 解答</h3>
+<p>可以使用 <code>switch</code> 来匹配对应成绩等级，但是需要注意的是 <code>switch</code> 用来 <code>String</code> 需要 Java 8 及之后才行，否则可能会出错。</p>
+<div><pre><code><span>import</span> <span>java<span>.</span>util<span>.</span></span><span>Scanner</span><span>;</span>
+
+<span>public</span> <span>class</span> <span>Main</span> <span>{</span>
+    <span>public</span> <span>static</span> <span>void</span> <span>main</span><span>(</span><span>String</span><span>[</span><span>]</span> args<span>)</span> <span>{</span>
+        <span>Scanner</span> scanner <span>=</span> <span>new</span> <span>Scanner</span><span>(</span><span>System</span><span>.</span>in<span>)</span><span>;</span>
+        <span>String</span> grade <span>=</span> scanner<span>.</span><span>next</span><span>(</span><span>)</span><span>;</span>
+        <span>switch</span> <span>(</span>grade<span>)</span> <span>{</span>
+            <span>case</span> <span>"A"</span><span>:</span>
+                <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>"优秀"</span><span>)</span><span>;</span>
+                <span>break</span><span>;</span>
+            <span>case</span> <span>"B"</span><span>:</span>
+                <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>"良好"</span><span>)</span><span>;</span>
+                <span>break</span><span>;</span>
+            <span>case</span> <span>"C"</span><span>:</span>
+                <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>"及格"</span><span>)</span><span>;</span>
+                <span>break</span><span>;</span>
+            <span>case</span> <span>"D"</span><span>:</span>
+                <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>"不及格"</span><span>)</span><span>;</span>
+                <span>break</span><span>;</span>
+            <span>default</span><span>:</span>
+                <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>"未知等级"</span><span>)</span><span>;</span>
+                <span>break</span><span>;</span>
+        <span>}</span>
+    <span>}</span>
+<span>}</span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br></div></div><h2 id="java8-邮箱验证" tabindex="-1"> JAVA8 邮箱验证</h2>
+<h3 id="描述-2" tabindex="-1"> 描述</h3>
+<p>请根据给出的正则表达式来验证邮箱格式是否合法，如果用户输入的格式合法则输出「邮箱格式合法」，否则输出「邮箱格式不合法」。</p>
+<h4 id="输入描述-2" tabindex="-1"> 输入描述</h4>
+<p>任意字符串</p>
+<h4 id="输出描述-2" tabindex="-1"> 输出描述</h4>
+<p>根据输入的邮箱格式判断其合法于不合法，若输入字符串符合邮箱格式则输出邮箱格式合法，否则输出邮箱格式不合法</p>
+<h3 id="示例1-2" tabindex="-1"> 示例1</h3>
+<p>输入：</p>
+<div><pre><code>123123@nowcoder.com
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p>输出：</p>
+<div><pre><code>邮箱格式合法
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><h3 id="示例2-2" tabindex="-1"> 示例2</h3>
+<p>输入：</p>
+<div><pre><code>123123
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p>输出：</p>
+<div><pre><code>邮箱格式不合法
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><h3 id="解答-2" tabindex="-1"> 解答</h3>
+<p>利用 <code>String</code> 的 <code>matches()</code> 方法来讲输入的字符串和正则表达式进行匹配，然后根据匹配后的结果输出对应结果。</p>
+<div><pre><code><span>import</span> <span>java<span>.</span>util<span>.</span></span><span>Scanner</span><span>;</span>
+
+<span>public</span> <span>class</span> <span>Main</span> <span>{</span>
+    <span>public</span> <span>static</span> <span>void</span> <span>main</span><span>(</span><span>String</span><span>[</span><span>]</span> args<span>)</span> <span>{</span>
+
+        <span>Scanner</span> scanner <span>=</span> <span>new</span> <span>Scanner</span><span>(</span><span>System</span><span>.</span>in<span>)</span><span>;</span>
+        <span>String</span> str <span>=</span> scanner<span>.</span><span>next</span><span>(</span><span>)</span><span>;</span>
+        <span>String</span> emailMatcher <span>=</span> <span>"[a-zA-Z0-9]+@[a-zA-Z0-9]+\\.[a-zA-Z0-9]+"</span><span>;</span>
+
+        <span>if</span> <span>(</span>str<span>.</span><span>matches</span><span>(</span>emailMatcher<span>)</span><span>)</span> <span>{</span>
+            <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>"邮箱格式合法"</span><span>)</span><span>;</span>
+        <span>}</span> <span>else</span> <span>{</span>
+            <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>"邮箱格式不合法"</span><span>)</span><span>;</span>
+        <span>}</span>
+    <span>}</span>
+<span>}</span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br></div></div><h2 id="java9-数列求和" tabindex="-1"> JAVA9 数列求和</h2>
+<h3 id="描述-3" tabindex="-1"> 描述</h3>
+<p>有数列为：9，99，999，...，9999999999。要求使用程序计算此数列的和，并在控制台输出结果。（请尝试使用循环的方式生成这个数列并同时在循环中求和）</p>
+<h4 id="输入描述-3" tabindex="-1"> 输入描述</h4>
+<p>无</p>
+<h4 id="输出描述-3" tabindex="-1"> 输出描述</h4>
+<p>将该数列的和直接输出</p>
+<h3 id="解答-3" tabindex="-1"> 解答</h3>
+<p>假设数列第一个数为 <span><span><i>Content not supported</i></span><span aria-hidden="true"><span><span style="height:0.5806em;vertical-align:-0.15em;"></span><span><span>a</span><span><span><span><span style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span style="height:2.7em;"></span><span><span>1</span></span></span></span><span>​</span></span><span><span style="height:0.15em;"><span></span></span></span></span></span></span><span style="margin-right:0.2778em;"></span><span>=</span><span style="margin-right:0.2778em;"></span></span><span><span style="height:0.6444em;"></span><span>9</span></span></span></span>，那么后续递推公式 <span><span><i>Content not supported</i></span><span aria-hidden="true"><span><span style="height:0.5806em;vertical-align:-0.15em;"></span><span><span>a</span><span><span><span><span style="height:0.3117em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span style="height:2.7em;"></span><span><span>i</span></span></span></span><span>​</span></span><span><span style="height:0.15em;"><span></span></span></span></span></span></span><span style="margin-right:0.2778em;"></span><span>=</span><span style="margin-right:0.2778em;"></span></span><span><span style="height:0.6736em;vertical-align:-0.2083em;"></span><span><span>a</span><span><span><span><span style="height:0.3117em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span style="height:2.7em;"></span><span><span><span>i</span><span>−</span><span>1</span></span></span></span></span><span>​</span></span><span><span style="height:0.2083em;"><span></span></span></span></span></span></span><span style="margin-right:0.2222em;"></span><span>∗</span><span style="margin-right:0.2222em;"></span></span><span><span style="height:0.7278em;vertical-align:-0.0833em;"></span><span>10</span><span style="margin-right:0.2222em;"></span><span>+</span><span style="margin-right:0.2222em;"></span></span><span><span style="height:0.6444em;"></span><span>9</span></span></span></span>，然后利用循环求和即可。</p>
+<div><pre><code><span>public</span> <span>class</span> <span>Main</span> <span>{</span>
+    <span>public</span> <span>static</span> <span>void</span> <span>main</span><span>(</span><span>String</span><span>[</span><span>]</span> args<span>)</span> <span>{</span>
+        <span>long</span> sum <span>=</span> <span>0</span><span>;</span>
+        <span>long</span> num <span>=</span> <span>9</span><span>;</span>
+        <span>for</span> <span>(</span><span>int</span> i <span>=</span> <span>0</span><span>;</span> i <span>&lt;</span> <span>10</span><span>;</span> i<span>++</span><span>)</span> <span>{</span>
+            sum <span>+=</span> num<span>;</span>
+            num <span>=</span> num <span>*</span> <span>10</span> <span>+</span> <span>9</span><span>;</span>
+        <span>}</span>
+        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span>sum<span>)</span><span>;</span>
+    <span>}</span>
+<span>}</span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br></div></div><h2 id="java10-统计输入正数个数" tabindex="-1"> JAVA10 统计输入正数个数</h2>
+<h3 id="描述-4" tabindex="-1"> 描述</h3>
+<p>控制台输入整数，请设计一个死循环，当用户输入非正数时停止输入。请给出用户输入的正整数个数（默认输入个数不超过 2147483647）</p>
+<h4 id="输入描述-4" tabindex="-1"> 输入描述</h4>
+<p>若干整数，整数之间用空格隔开</p>
+<h4 id="输出描述-4" tabindex="-1"> 输出描述</h4>
+<p>控制台输入的正整数个数</p>
+<h3 id="示例1-3" tabindex="-1"> 示例1</h3>
+<p>输入：</p>
+<div><pre><code>1 2 3 4 5 6 7 0
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p>输出：</p>
+<div><pre><code>7
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><h3 id="解答-4" tabindex="-1"> 解答</h3>
+<p>要设计一个死循环，那么可以使用 <code>while</code> 语句，此外，要统计正整数个数，则利用 <code>count</code> 进行叠加即可。</p>
+<div><pre><code><span>import</span> <span>java<span>.</span>util<span>.</span></span><span>*</span><span>;</span>
+
+<span>public</span> <span>class</span> <span>Main</span> <span>{</span>
+    <span>public</span> <span>static</span> <span>void</span> <span>main</span><span>(</span><span>String</span><span>[</span><span>]</span> args<span>)</span> <span>{</span>
+        <span>int</span> count <span>=</span> <span>0</span><span>;</span>
+        <span>Scanner</span> scanner <span>=</span> <span>new</span> <span>Scanner</span><span>(</span><span>System</span><span>.</span>in<span>)</span><span>;</span>
+
+        <span>while</span> <span>(</span>scanner<span>.</span><span>nextInt</span><span>(</span><span>)</span> <span>></span> <span>0</span><span>)</span> <span>{</span>
+            count<span>++</span><span>;</span>
+        <span>}</span>
+        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span>count<span>)</span><span>;</span>
+    <span>}</span>
+<span>}</span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br></div></div>]]></content>
+    <category term="Java 入门练习"/>
+    <published>2022-06-26T21:07:48.000Z</published>
+  </entry>
   <entry>
     <title type="html">Java 入门练习（1 - 5）</title>
     <id>https://cunyu1943.github.io/JavaPark/JavaPark/practical-training-camp/intro-to-java/1-5.html</id>
@@ -26287,262 +26487,5 @@ ORDER BY ……
 ]]></content>
     <category term="Java 编程实例"/>
     <published>2022-01-16T20:03:50.000Z</published>
-  </entry>
-  <entry>
-    <title type="html">Java 编程实例（36-40）</title>
-    <id>https://cunyu1943.github.io/JavaPark/JavaPark/practical-training-camp/java-instance/36-40.html</id>
-    <link href="https://cunyu1943.github.io/JavaPark/JavaPark/practical-training-camp/java-instance/36-40.html"/>
-    <updated>2022-04-16T14:44:06.000Z</updated>
-    <content type="html"><![CDATA[<h2 id="实例-36" tabindex="-1"> 实例 36</h2>
-<h3 id="题目" tabindex="-1"> 题目</h3>
-<p>有 N 个整数，使其前面各数顺序向后移 M 个位置，最后 M 个数变成最前面的 M个数。</p>
-<h3 id="分析" tabindex="-1"> 分析</h3>
-<p>首先是设置输入，输入数组及相关参数值之后，将原数组复制到新数组中，然后通过计算新位置和原来位置的关系 <code>index = (i + m) % n</code>，将原数组中的元素进行位置交换。</p>
-<h3 id="实现" tabindex="-1"> 实现</h3>
-<div><pre><code><span>import</span> <span>java<span>.</span>util<span>.</span></span><span>Arrays</span><span>;</span>
-<span>import</span> <span>java<span>.</span>util<span>.</span></span><span>Scanner</span><span>;</span>
-
-<span>/**
- * Created with IntelliJ IDEA.
- *
- * <span>@author</span> : cunyu
- * <span>@version</span> : 1.0
- * <span>@email</span> : 747731461@qq.com
- * <span>@website</span> : https://cunyu1943.github.io
- * <span>@date</span> : 2021/6/4 14:34
- * <span>@project</span> : Java 编程实例
- * <span>@package</span> : PACKAGE_NAME
- * <span>@className</span> : Example36
- * <span>@description</span> :
- */</span>
-
-<span>public</span> <span>class</span> <span>Example36</span> <span>{</span>
-    <span>public</span> <span>static</span> <span>void</span> <span>main</span><span>(</span><span>String</span><span>[</span><span>]</span> args<span>)</span> <span>{</span>
-        <span>Scanner</span> scanner <span>=</span> <span>new</span> <span>Scanner</span><span>(</span><span>System</span><span>.</span>in<span>)</span><span>;</span>
-        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>"输入 n"</span><span>)</span><span>;</span>
-        <span>int</span> n <span>=</span> scanner<span>.</span><span>nextInt</span><span>(</span><span>)</span><span>;</span>
-        <span>int</span><span>[</span><span>]</span> arr <span>=</span> <span>new</span> <span>int</span><span>[</span>n<span>]</span><span>;</span>
-        <span>for</span> <span>(</span><span>int</span> i <span>=</span> <span>0</span><span>;</span> i <span>&lt;</span> n<span>;</span> i<span>++</span><span>)</span> <span>{</span>
-            <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>"输入第 "</span> <span>+</span> <span>(</span>i <span>+</span> <span>1</span><span>)</span> <span>+</span> <span>" 个整数"</span><span>)</span><span>;</span>
-            arr<span>[</span>i<span>]</span> <span>=</span> scanner<span>.</span><span>nextInt</span><span>(</span><span>)</span><span>;</span>
-        <span>}</span>
-
-        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>"输入的数组："</span> <span>+</span> <span>Arrays</span><span>.</span><span>toString</span><span>(</span>arr<span>)</span><span>)</span><span>;</span>
-
-        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>"输入 m"</span><span>)</span><span>;</span>
-        <span>int</span> m <span>=</span> scanner<span>.</span><span>nextInt</span><span>(</span><span>)</span><span>;</span>
-        <span>int</span><span>[</span><span>]</span> newArray <span>=</span> <span>new</span> <span>int</span><span>[</span>n<span>]</span><span>;</span>
-
-        <span>// 定义一个新的数组，与原来的数组长度相同</span>
-        <span>for</span> <span>(</span><span>int</span> i <span>=</span> <span>0</span><span>;</span> i <span>&lt;</span> n<span>;</span> i<span>++</span><span>)</span> <span>{</span>
-            newArray<span>[</span>i<span>]</span> <span>=</span> arr<span>[</span>i<span>]</span><span>;</span>
-        <span>}</span>
-
-        <span>// 计算新的位置</span>
-        <span>for</span> <span>(</span><span>int</span> i <span>=</span> <span>0</span><span>;</span> i <span>&lt;</span> n<span>;</span> i<span>++</span><span>)</span> <span>{</span>
-            <span>int</span> tmp <span>=</span> <span>(</span>i <span>+</span> m<span>)</span> <span>%</span> n<span>;</span>
-            arr<span>[</span>tmp<span>]</span> <span>=</span> newArray<span>[</span>i<span>]</span><span>;</span>
-        <span>}</span>
-
-        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>"位移后的数组："</span> <span>+</span> <span>Arrays</span><span>.</span><span>toString</span><span>(</span>arr<span>)</span><span>)</span><span>;</span>
-    <span>}</span>
-<span>}</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br><span>27</span><br><span>28</span><br><span>29</span><br><span>30</span><br><span>31</span><br><span>32</span><br><span>33</span><br><span>34</span><br><span>35</span><br><span>36</span><br><span>37</span><br><span>38</span><br><span>39</span><br><span>40</span><br><span>41</span><br><span>42</span><br><span>43</span><br><span>44</span><br><span>45</span><br><span>46</span><br><span>47</span><br><span>48</span><br></div></div><h3 id="结果" tabindex="-1"> 结果</h3>
-<p><img src="https://cdn.jsdelivr.net/gh/cunyu1943/blog-imgs@main/blog/image-20210610091707062.png" alt="img" loading="lazy"></p>
-<h2 id="实例-37" tabindex="-1"> 实例 37</h2>
-<h3 id="题目-1" tabindex="-1"> 题目</h3>
-<p>有 N 个人围成一圈，顺序排号。从第一个人开始报数（从 1 报到 3），凡是报到 3 的人则退出圈子，问最后留下的是原来第几号的人？</p>
-<h3 id="分析-1" tabindex="-1"> 分析</h3>
-<p>著名的约瑟夫环问题，用数组求解的基本思想就是用一个一维数组去标识这 n 个人的状态，默认全为 <code>true</code> ，也就是都在圈子内，当数到 m 的人出圈之后，标识置为 <code>false</code>（就是出圈了），同时报数器清 0，下一个人要从 1 开始。在每次报数之前要判断他是否在圈子内（也就是他的标识是否为 <code>true</code> ），如果在圈子里面才会继续报数。定义一个变量记录出圈的人数， 出圈的人数等于  n-1 时，则游戏结束。</p>
-<h3 id="实现-1" tabindex="-1"> 实现</h3>
-<div><pre><code><span>import</span> <span>java<span>.</span>util<span>.</span></span><span>Scanner</span><span>;</span>
-
-<span>/**
- * Created with IntelliJ IDEA.
- *
- * <span>@author</span> : cunyu
- * <span>@version</span> : 1.0
- * <span>@email</span> : 747731461@qq.com
- * <span>@website</span> : https://cunyu1943.github.io
- * <span>@date</span> : 2021/6/4 15:00
- * <span>@project</span> : Java 编程实例
- * <span>@package</span> : PACKAGE_NAME
- * <span>@className</span> : Example37
- * <span>@description</span> :
- */</span>
-
-<span>public</span> <span>class</span> <span>Example37</span> <span>{</span>
-    <span>public</span> <span>static</span> <span>void</span> <span>main</span><span>(</span><span>String</span><span>[</span><span>]</span> args<span>)</span> <span>{</span>
-        <span>// 输入围成圈的人数</span>
-        <span>Scanner</span> scanner <span>=</span> <span>new</span> <span>Scanner</span><span>(</span><span>System</span><span>.</span>in<span>)</span><span>;</span>
-        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>"输入围成圈的人数"</span><span>)</span><span>;</span>
-        <span>int</span> num <span>=</span> scanner<span>.</span><span>nextInt</span><span>(</span><span>)</span><span>;</span>
-
-        <span>// 设置对应人的标志</span>
-        <span>boolean</span><span>[</span><span>]</span> arr <span>=</span> <span>new</span> <span>boolean</span><span>[</span>num<span>]</span><span>;</span>
-        <span>for</span> <span>(</span><span>int</span> i <span>=</span> <span>0</span><span>;</span> i <span>&lt;</span> arr<span>.</span>length<span>;</span> i<span>++</span><span>)</span> <span>{</span>
-            arr<span>[</span>i<span>]</span> <span>=</span> <span>true</span><span>;</span>
-        <span>}</span>
-
-        <span>// 计数</span>
-        <span>int</span> left <span>=</span> num<span>;</span>
-        <span>// 报号</span>
-        <span>int</span> counter <span>=</span> <span>0</span><span>;</span>
-        <span>// 对应围成圈的人在标志数组中的索引</span>
-        <span>int</span> index <span>=</span> <span>0</span><span>;</span>
-        <span>while</span> <span>(</span>left <span>></span> <span>1</span><span>)</span> <span>{</span>
-            <span>// 一旦数到 3 的人，标志位置为 false，表示出局</span>
-            <span>if</span> <span>(</span>arr<span>[</span>index<span>]</span> <span>==</span> <span>true</span><span>)</span> <span>{</span>
-                counter<span>++</span><span>;</span>
-                <span>if</span> <span>(</span>counter <span>==</span> <span>3</span><span>)</span> <span>{</span>
-                    counter <span>=</span> <span>0</span><span>;</span>
-                    arr<span>[</span>index<span>]</span> <span>=</span> <span>false</span><span>;</span>
-                    left<span>--</span><span>;</span>
-                <span>}</span>
-            <span>}</span>
-            index<span>++</span><span>;</span>
-            <span>if</span> <span>(</span>index <span>==</span> num<span>)</span> <span>{</span>
-                index <span>=</span> <span>0</span><span>;</span>
-            <span>}</span>
-        <span>}</span>
-
-        <span>// 最后标志数组中为 true 的人，则代表最后留下来的人</span>
-        <span>for</span> <span>(</span><span>int</span> i <span>=</span> <span>0</span><span>;</span> i <span>&lt;</span> num<span>;</span> i<span>++</span><span>)</span> <span>{</span>
-            <span>if</span> <span>(</span>arr<span>[</span>i<span>]</span> <span>==</span> <span>true</span><span>)</span> <span>{</span>
-                <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>"原来排在第 "</span> <span>+</span> <span>(</span>i <span>+</span> <span>1</span><span>)</span> <span>+</span> <span>" 位的人留下了！"</span><span>)</span><span>;</span>
-            <span>}</span>
-        <span>}</span>
-    <span>}</span>
-<span>}</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br><span>27</span><br><span>28</span><br><span>29</span><br><span>30</span><br><span>31</span><br><span>32</span><br><span>33</span><br><span>34</span><br><span>35</span><br><span>36</span><br><span>37</span><br><span>38</span><br><span>39</span><br><span>40</span><br><span>41</span><br><span>42</span><br><span>43</span><br><span>44</span><br><span>45</span><br><span>46</span><br><span>47</span><br><span>48</span><br><span>49</span><br><span>50</span><br><span>51</span><br><span>52</span><br><span>53</span><br><span>54</span><br><span>55</span><br><span>56</span><br><span>57</span><br><span>58</span><br><span>59</span><br></div></div><h3 id="结果-1" tabindex="-1"> 结果</h3>
-<p><img src="https://cdn.jsdelivr.net/gh/cunyu1943/blog-imgs@main/blog/image-20210610092125761.png" alt="img" loading="lazy"></p>
-<h2 id="实例-38" tabindex="-1"> 实例 38</h2>
-<h3 id="题目-2" tabindex="-1"> 题目</h3>
-<p>写一个函数，求一个字符串的长度，在 <code>main</code> 函数中输入字符串，并输出其长度。</p>
-<h3 id="分析-2" tabindex="-1"> 分析</h3>
-<p>求一个字符串的长度，只需要调用 <code>length()</code> 方法即可，但是这里应该是不允许使用该方式，所以我们换用一种方式。</p>
-<h3 id="实现-2" tabindex="-1"> 实现</h3>
-<div><pre><code><span>import</span> <span>java<span>.</span>util<span>.</span></span><span>Scanner</span><span>;</span>
-
-<span>/**
- * Created with IntelliJ IDEA.
- *
- * <span>@author</span> : cunyu
- * <span>@version</span> : 1.0
- * <span>@email</span> : 747731461@qq.com
- * <span>@website</span> : https://cunyu1943.github.io
- * <span>@date</span> : 2021/6/4 15:16
- * <span>@project</span> : Java 编程实例
- * <span>@package</span> : PACKAGE_NAME
- * <span>@className</span> : Example38
- * <span>@description</span> :
- */</span>
-
-<span>public</span> <span>class</span> <span>Example38</span> <span>{</span>
-    <span>public</span> <span>static</span> <span>void</span> <span>main</span><span>(</span><span>String</span><span>[</span><span>]</span> args<span>)</span> <span>{</span>
-        <span>Scanner</span> scanner <span>=</span> <span>new</span> <span>Scanner</span><span>(</span><span>System</span><span>.</span>in<span>)</span><span>;</span>
-        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>"输入一个字符串："</span><span>)</span><span>;</span>
-        <span>String</span> str <span>=</span> scanner<span>.</span><span>nextLine</span><span>(</span><span>)</span><span>;</span>
-        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>"输入字符串的长度为："</span> <span>+</span> <span>getLength</span><span>(</span>str<span>)</span><span>)</span><span>;</span>
-    <span>}</span>
-
-    <span>public</span> <span>static</span> <span>int</span> <span>getLength</span><span>(</span><span>String</span> str<span>)</span> <span>{</span>
-        <span>char</span><span>[</span><span>]</span> chArr <span>=</span> str<span>.</span><span>toCharArray</span><span>(</span><span>)</span><span>;</span>
-        <span>return</span> chArr<span>.</span>length<span>;</span>
-    <span>}</span>
-<span>}</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br><span>27</span><br><span>28</span><br><span>29</span><br></div></div><h3 id="结果-2" tabindex="-1"> 结果</h3>
-<p><img src="https://cdn.jsdelivr.net/gh/cunyu1943/blog-imgs@main/blog/image-20210610092443754.png" alt="img" loading="lazy"></p>
-<h2 id="实例-39" tabindex="-1"> 实例 39</h2>
-<h3 id="题目-3" tabindex="-1"> 题目</h3>
-<p>编写一个函数，输入 N 为偶数时，调用函数求 <img src="https://g.yuque.com/gr/latex?1%2F2 %2B 1%2F4%2B…%2B1%2Fn" alt="img" loading="lazy">，当输入 N 为奇数时，调用函数求 <img src="https://g.yuque.com/gr/latex?1%2F1 %2B 1%2F3%2B…%2B1%2Fn" alt="img" loading="lazy">。</p>
-<h3 id="分析-3" tabindex="-1"> 分析</h3>
-<p>先判断输入的数的奇偶，然后调用对应求和即可。</p>
-<h3 id="实现-3" tabindex="-1"> 实现</h3>
-<div><pre><code><span>import</span> <span>java<span>.</span>util<span>.</span></span><span>Scanner</span><span>;</span>
-
-<span>/**
- * Created with IntelliJ IDEA.
- *
- * <span>@author</span> : cunyu
- * <span>@version</span> : 1.0
- * <span>@email</span> : 747731461@qq.com
- * <span>@website</span> : https://cunyu1943.github.io
- * <span>@date</span> : 2021/6/4 16:03
- * <span>@project</span> : Java 编程实例
- * <span>@package</span> : PACKAGE_NAME
- * <span>@className</span> : Example39
- * <span>@description</span> :
- */</span>
-
-<span>public</span> <span>class</span> <span>Example39</span> <span>{</span>
-    <span>public</span> <span>static</span> <span>void</span> <span>main</span><span>(</span><span>String</span><span>[</span><span>]</span> args<span>)</span> <span>{</span>
-        <span>Scanner</span> scanner <span>=</span> <span>new</span> <span>Scanner</span><span>(</span><span>System</span><span>.</span>in<span>)</span><span>;</span>
-        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>"请输入一个正整数："</span><span>)</span><span>;</span>
-        <span>int</span> num <span>=</span> scanner<span>.</span><span>nextInt</span><span>(</span><span>)</span><span>;</span>
-        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>"对应数列的和："</span> <span>+</span> <span>sum</span><span>(</span>num<span>)</span><span>)</span><span>;</span>
-    <span>}</span>
-
-    <span>public</span> <span>static</span> <span>double</span> <span>sum</span><span>(</span><span>int</span> num<span>)</span> <span>{</span>
-        <span>double</span> result <span>=</span> <span>0</span><span>;</span>
-        <span>if</span> <span>(</span>num <span>%</span> <span>2</span> <span>==</span> <span>0</span><span>)</span> <span>{</span>
-            <span>for</span> <span>(</span><span>int</span> i <span>=</span> <span>2</span><span>;</span> i <span>&lt;=</span> num<span>;</span> i <span>+=</span> <span>2</span><span>)</span> <span>{</span>
-                result <span>+=</span> <span>1.0</span> <span>/</span> i<span>;</span>
-            <span>}</span>
-        <span>}</span> <span>else</span> <span>{</span>
-            <span>for</span> <span>(</span><span>int</span> i <span>=</span> <span>1</span><span>;</span> i <span>&lt;=</span> num<span>;</span> i <span>+=</span> <span>2</span><span>)</span> <span>{</span>
-                result <span>+=</span> <span>1.0</span> <span>/</span> i<span>;</span>
-            <span>}</span>
-        <span>}</span>
-        <span>return</span> result<span>;</span>
-    <span>}</span>
-<span>}</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br><span>27</span><br><span>28</span><br><span>29</span><br><span>30</span><br><span>31</span><br><span>32</span><br><span>33</span><br><span>34</span><br><span>35</span><br><span>36</span><br><span>37</span><br><span>38</span><br></div></div><h3 id="结果-3" tabindex="-1"> 结果</h3>
-<p><img src="https://cdn.jsdelivr.net/gh/cunyu1943/blog-imgs@main/blog/image-20210610092600393.png" alt="img" loading="lazy"></p>
-<h2 id="实例-40" tabindex="-1"> 实例 40</h2>
-<h3 id="题目-4" tabindex="-1"> 题目</h3>
-<p>字符串排序。</p>
-<h3 id="分析-4" tabindex="-1"> 分析</h3>
-<p>分别输入字符串存入字符串，然后调用 <code>Arrays.sort()</code> 对数组进行排序即可。</p>
-<h3 id="实现-4" tabindex="-1"> 实现</h3>
-<div><pre><code><span>import</span> <span>java<span>.</span>util<span>.</span></span><span>Arrays</span><span>;</span>
-<span>import</span> <span>java<span>.</span>util<span>.</span></span><span>Scanner</span><span>;</span>
-
-<span>/**
- * Created with IntelliJ IDEA.
- *
- * <span>@author</span> : cunyu
- * <span>@version</span> : 1.0
- * <span>@email</span> : 747731461@qq.com
- * <span>@website</span> : https://cunyu1943.github.io
- * <span>@date</span> : 2021/6/4 18:52
- * <span>@project</span> : Java 编程实例
- * <span>@package</span> : PACKAGE_NAME
- * <span>@className</span> : Example40
- * <span>@description</span> :
- */</span>
-
-<span>public</span> <span>class</span> <span>Example40</span> <span>{</span>
-    <span>public</span> <span>static</span> <span>void</span> <span>main</span><span>(</span><span>String</span><span>[</span><span>]</span> args<span>)</span> <span>{</span>
-        <span>Scanner</span> scanner <span>=</span> <span>new</span> <span>Scanner</span><span>(</span><span>System</span><span>.</span>in<span>)</span><span>;</span>
-        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>"输入字符串个数"</span><span>)</span><span>;</span>
-        <span>int</span> size <span>=</span> scanner<span>.</span><span>nextInt</span><span>(</span><span>)</span><span>;</span>
-        <span>String</span><span>[</span><span>]</span> arr <span>=</span> <span>new</span> <span>String</span><span>[</span>size<span>]</span><span>;</span>
-
-        <span>for</span> <span>(</span><span>int</span> i <span>=</span> <span>0</span><span>;</span> i <span>&lt;</span> size<span>;</span> i<span>++</span><span>)</span> <span>{</span>
-            <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>"输入第 "</span> <span>+</span> <span>(</span>i <span>+</span> <span>1</span><span>)</span> <span>+</span> <span>" 个字符串"</span><span>)</span><span>;</span>
-            arr<span>[</span>i<span>]</span> <span>=</span> scanner<span>.</span><span>next</span><span>(</span><span>)</span><span>;</span>
-        <span>}</span>
-
-        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>"输入的字符为："</span> <span>+</span> <span>Arrays</span><span>.</span><span>toString</span><span>(</span>arr<span>)</span><span>)</span><span>;</span>
-        <span>Arrays</span><span>.</span><span>sort</span><span>(</span>arr<span>)</span><span>;</span>
-        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>"排序后的字符串数组："</span> <span>+</span> <span>Arrays</span><span>.</span><span>toString</span><span>(</span>arr<span>)</span><span>)</span><span>;</span>
-    <span>}</span>
-<span>}</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br><span>27</span><br><span>28</span><br><span>29</span><br><span>30</span><br><span>31</span><br><span>32</span><br><span>33</span><br><span>34</span><br></div></div><h3 id="结果-4" tabindex="-1"> 结果</h3>
-<p><img src="https://cdn.jsdelivr.net/gh/cunyu1943/blog-imgs@main/blog/image-20210610092729401.png" alt="" loading="lazy"></p>
-]]></content>
-    <category term="Java 编程实例"/>
-    <published>2022-01-16T20:04:18.000Z</published>
   </entry>
 </feed>
