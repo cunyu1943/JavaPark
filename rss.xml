@@ -6,8 +6,8 @@
     <link>https://cunyu1943.github.io/JavaPark/JavaPark/</link>
     <description>Java 自学编程之路</description>
     <language>zh-CN</language>
-    <pubDate>Tue, 28 Jun 2022 14:15:23 GMT</pubDate>
-    <lastBuildDate>Tue, 28 Jun 2022 14:15:23 GMT</lastBuildDate>
+    <pubDate>Wed, 29 Jun 2022 13:57:01 GMT</pubDate>
+    <lastBuildDate>Wed, 29 Jun 2022 13:57:01 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>Java 入门练习</category>
@@ -31,6 +31,365 @@
     <category>Spring MVC 合辑</category>
     <category>SQL 必知必会 50 题</category>
     <category>Java 编程实例</category>
+    <item>
+      <title>Java 入门练习（21 - 25）</title>
+      <link>https://cunyu1943.github.io/JavaPark/JavaPark/practical-training-camp/intro-to-java/21-25.html</link>
+      <guid>https://cunyu1943.github.io/JavaPark/JavaPark/practical-training-camp/intro-to-java/21-25.html</guid>
+      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">Java 入门练习（21 - 25）</source>
+      <category>Java 入门练习</category>
+      <pubDate>Wed, 29 Jun 2022 21:07:48 GMT</pubDate>
+      <content:encoded><![CDATA[<h2 id="java21-补全构造方法" tabindex="-1"> JAVA21 补全构造方法</h2>
+<h3 id="描述" tabindex="-1"> 描述</h3>
+<p>有父类 Base，内部定义了 x、y 属性。有子类 Sub，继承自父类 Base。子类新增了一个 z 属性，并且定义了 calculate 方法，在此方法内计算了父类和子类中 x、y、z 属性三者的乘积。请补全子类构造方法的初始化逻辑，使得该计算逻辑能够正确执行。</p>
+<h4 id="输入描述" tabindex="-1"> 输入描述</h4>
+<p>三个整数：x, y, z</p>
+<h4 id="输出描述" tabindex="-1"> 输出描述</h4>
+<p>三个整数的乘积：x<em>y</em>z</p>
+<h3 id="示例1" tabindex="-1"> 示例1</h3>
+<p>输入：</p>
+<p>1 2 3</p>
+<p>输出：</p>
+<h3 id="解答" tabindex="-1"> 解答</h3>
+<p>主要考察 <code>super</code> 关键字的运用，<code>Sub</code> 是子类，所以在初始化构造器时，需要先用 <code>super</code> 继承父类 <code>Base</code> 中的构造方法。</p>
+<div><pre><code><span>import</span> <span>java<span>.</span>util<span>.</span></span><span>Scanner</span><span>;</span>
+
+<span>public</span> <span>class</span> <span>Main</span> <span>{</span>
+
+    <span>public</span> <span>static</span> <span>void</span> <span>main</span><span>(</span><span>String</span><span>[</span><span>]</span> args<span>)</span> <span>{</span>
+        <span>Scanner</span> scanner <span>=</span> <span>new</span> <span>Scanner</span><span>(</span><span>System</span><span>.</span>in<span>)</span><span>;</span>
+        <span>while</span> <span>(</span>scanner<span>.</span><span>hasNextInt</span><span>(</span><span>)</span><span>)</span> <span>{</span>
+            <span>int</span> x <span>=</span> scanner<span>.</span><span>nextInt</span><span>(</span><span>)</span><span>;</span>
+            <span>int</span> y <span>=</span> scanner<span>.</span><span>nextInt</span><span>(</span><span>)</span><span>;</span>
+            <span>int</span> z <span>=</span> scanner<span>.</span><span>nextInt</span><span>(</span><span>)</span><span>;</span>
+            <span>Sub</span> sub <span>=</span> <span>new</span> <span>Sub</span><span>(</span>x<span>,</span> y<span>,</span> z<span>)</span><span>;</span>
+            <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span>sub<span>.</span><span>calculate</span><span>(</span><span>)</span><span>)</span><span>;</span>
+        <span>}</span>
+    <span>}</span>
+
+<span>}</span>
+
+<span>class</span> <span>Base</span> <span>{</span>
+
+    <span>private</span> <span>int</span> x<span>;</span>
+    <span>private</span> <span>int</span> y<span>;</span>
+
+    <span>public</span> <span>Base</span><span>(</span><span>int</span> x<span>,</span> <span>int</span> y<span>)</span> <span>{</span>
+        <span>this</span><span>.</span>x <span>=</span> x<span>;</span>
+        <span>this</span><span>.</span>y <span>=</span> y<span>;</span>
+    <span>}</span>
+
+    <span>public</span> <span>int</span> <span>getX</span><span>(</span><span>)</span> <span>{</span>
+        <span>return</span> x<span>;</span>
+    <span>}</span>
+
+    <span>public</span> <span>int</span> <span>getY</span><span>(</span><span>)</span> <span>{</span>
+        <span>return</span> y<span>;</span>
+    <span>}</span>
+
+<span>}</span>
+
+<span>class</span> <span>Sub</span> <span>extends</span> <span>Base</span> <span>{</span>
+
+    <span>private</span> <span>int</span> z<span>;</span>
+
+    <span>public</span> <span>Sub</span><span>(</span><span>int</span> x<span>,</span> <span>int</span> y<span>,</span> <span>int</span> z<span>)</span> <span>{</span>
+
+        <span>super</span><span>(</span>x<span>,</span> y<span>)</span><span>;</span>
+        <span>this</span><span>.</span>z <span>=</span> z<span>;</span>
+
+
+    <span>}</span>
+
+    <span>public</span> <span>int</span> <span>getZ</span><span>(</span><span>)</span> <span>{</span>
+        <span>return</span> z<span>;</span>
+    <span>}</span>
+
+    <span>public</span> <span>int</span> <span>calculate</span><span>(</span><span>)</span> <span>{</span>
+        <span>return</span> <span>super</span><span>.</span><span>getX</span><span>(</span><span>)</span> <span>*</span> <span>super</span><span>.</span><span>getY</span><span>(</span><span>)</span> <span>*</span> <span>this</span><span>.</span><span>getZ</span><span>(</span><span>)</span><span>;</span>
+    <span>}</span>
+
+<span>}</span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br><span>27</span><br><span>28</span><br><span>29</span><br><span>30</span><br><span>31</span><br><span>32</span><br><span>33</span><br><span>34</span><br><span>35</span><br><span>36</span><br><span>37</span><br><span>38</span><br><span>39</span><br><span>40</span><br><span>41</span><br><span>42</span><br><span>43</span><br><span>44</span><br><span>45</span><br><span>46</span><br><span>47</span><br><span>48</span><br><span>49</span><br><span>50</span><br><span>51</span><br><span>52</span><br><span>53</span><br><span>54</span><br><span>55</span><br><span>56</span><br><span>57</span><br><span>58</span><br></div></div><h2 id="java22-重写计算逻辑" tabindex="-1"> JAVA22 重写计算逻辑</h2>
+<h3 id="描述-1" tabindex="-1"> 描述</h3>
+<p>在父类 Base 中定义了计算方法 calculate()，该方法用于计算两个数的乘积（X*Y）。请在子类Sub中重写该方法，将计算逻辑由乘法改为除法（X/Y）。注意，当分母为0时输出 “Error”。</p>
+<h4 id="输入描述-1" tabindex="-1"> 输入描述</h4>
+<p>两个整数</p>
+<h4 id="输出描述-1" tabindex="-1"> 输出描述</h4>
+<p>两个整数的商(int类型，不考虑小数情况)</p>
+<h3 id="示例1-1" tabindex="-1"> 示例1</h3>
+<p>输入：</p>
+<div><pre><code>6 2
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p>复制</p>
+<p>输出：</p>
+<div><pre><code>3
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p>复制</p>
+<h3 id="示例2" tabindex="-1"> 示例2</h3>
+<p>输入：</p>
+<div><pre><code>1 0
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p>复制</p>
+<p>输出：</p>
+<div><pre><code>Error
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><h3 id="解答-1" tabindex="-1"> 解答</h3>
+<p>首先，既然是继承，那么要继承父类的构造方法，然后就是利用条件语句 <code>if...else...</code> 进行重写 <code>calculate()</code> 方法。</p>
+<div><pre><code><span>import</span> <span>java<span>.</span>util<span>.</span></span><span>Scanner</span><span>;</span>
+
+<span>public</span> <span>class</span> <span>Main</span> <span>{</span>
+
+    <span>public</span> <span>static</span> <span>void</span> <span>main</span><span>(</span><span>String</span><span>[</span><span>]</span> args<span>)</span> <span>{</span>
+        <span>Scanner</span> scanner <span>=</span> <span>new</span> <span>Scanner</span><span>(</span><span>System</span><span>.</span>in<span>)</span><span>;</span>
+        <span>while</span> <span>(</span>scanner<span>.</span><span>hasNextInt</span><span>(</span><span>)</span><span>)</span> <span>{</span>
+            <span>int</span> x <span>=</span> scanner<span>.</span><span>nextInt</span><span>(</span><span>)</span><span>;</span>
+            <span>int</span> y <span>=</span> scanner<span>.</span><span>nextInt</span><span>(</span><span>)</span><span>;</span>
+            <span>Sub</span> sub <span>=</span> <span>new</span> <span>Sub</span><span>(</span>x<span>,</span> y<span>)</span><span>;</span>
+            sub<span>.</span><span>calculate</span><span>(</span><span>)</span><span>;</span>
+        <span>}</span>
+    <span>}</span>
+
+<span>}</span>
+
+<span>class</span> <span>Base</span> <span>{</span>
+
+    <span>private</span> <span>int</span> x<span>;</span>
+    <span>private</span> <span>int</span> y<span>;</span>
+
+    <span>public</span> <span>Base</span><span>(</span><span>int</span> x<span>,</span> <span>int</span> y<span>)</span> <span>{</span>
+        <span>this</span><span>.</span>x <span>=</span> x<span>;</span>
+        <span>this</span><span>.</span>y <span>=</span> y<span>;</span>
+    <span>}</span>
+
+    <span>public</span> <span>int</span> <span>getX</span><span>(</span><span>)</span> <span>{</span>
+        <span>return</span> x<span>;</span>
+    <span>}</span>
+
+    <span>public</span> <span>int</span> <span>getY</span><span>(</span><span>)</span> <span>{</span>
+        <span>return</span> y<span>;</span>
+    <span>}</span>
+
+    <span>public</span> <span>void</span> <span>calculate</span><span>(</span><span>)</span> <span>{</span>
+        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>getX</span><span>(</span><span>)</span> <span>*</span> <span>getY</span><span>(</span><span>)</span><span>)</span><span>;</span>
+    <span>}</span>
+
+<span>}</span>
+
+<span>class</span> <span>Sub</span> <span>extends</span> <span>Base</span> <span>{</span>
+    <span>public</span> <span>Sub</span><span>(</span><span>int</span> x<span>,</span> <span>int</span> y<span>)</span> <span>{</span>
+        <span>super</span><span>(</span>x<span>,</span> y<span>)</span><span>;</span>
+    <span>}</span>
+
+    <span>public</span> <span>void</span> <span>calculate</span><span>(</span><span>)</span> <span>{</span>
+        <span>if</span> <span>(</span><span>getY</span><span>(</span><span>)</span> <span>==</span> <span>0</span><span>)</span>
+            <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>"Error"</span><span>)</span><span>;</span>
+        <span>else</span>
+            <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>getX</span><span>(</span><span>)</span> <span>/</span> <span>getY</span><span>(</span><span>)</span><span>)</span><span>;</span>
+    <span>}</span>
+<span>}</span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br><span>27</span><br><span>28</span><br><span>29</span><br><span>30</span><br><span>31</span><br><span>32</span><br><span>33</span><br><span>34</span><br><span>35</span><br><span>36</span><br><span>37</span><br><span>38</span><br><span>39</span><br><span>40</span><br><span>41</span><br><span>42</span><br><span>43</span><br><span>44</span><br><span>45</span><br><span>46</span><br><span>47</span><br><span>48</span><br><span>49</span><br><span>50</span><br><span>51</span><br><span>52</span><br></div></div><h2 id="java23-定义打印方法" tabindex="-1"> JAVA23 定义打印方法</h2>
+<h3 id="描述-2" tabindex="-1"> 描述</h3>
+<p>已知有三个类：First、Second、Third。要求定义一个打印方法，支持传入任意引用类型的参数（包括上述三个类），并在方法内部打印出对象的字符串形式。</p>
+<h4 id="输入描述-2" tabindex="-1"> 输入描述</h4>
+<p>类名</p>
+<h4 id="输出描述-2" tabindex="-1"> 输出描述</h4>
+<p>由该类实例化出来的对象的字符串表示</p>
+<h2 id="示例1-2" tabindex="-1"> 示例1</h2>
+<p>输入：</p>
+<div><pre><code>First
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p>复制</p>
+<p>输出：</p>
+<div><pre><code>First
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><h3 id="解答-2" tabindex="-1"> 解答</h3>
+<p>和简单的方法没啥两样，主要区别在于传参的类型，平常传参我们都是传的具体的类，但是这里传的参是一个 <code>Object</code> 类型，表示我们可以传任意类型的参数。</p>
+<div><pre><code><span>import</span> <span>java<span>.</span>util<span>.</span></span><span>Scanner</span><span>;</span>
+
+<span>public</span> <span>class</span> <span>Main</span> <span>{</span>
+
+    <span>public</span> <span>static</span> <span>void</span> <span>main</span><span>(</span><span>String</span><span>[</span><span>]</span> args<span>)</span> <span>throws</span> <span>Exception</span> <span>{</span>
+        <span>Scanner</span> scanner <span>=</span> <span>new</span> <span>Scanner</span><span>(</span><span>System</span><span>.</span>in<span>)</span><span>;</span>
+        <span>while</span> <span>(</span>scanner<span>.</span><span>hasNext</span><span>(</span><span>)</span><span>)</span> <span>{</span>
+            <span>String</span> className <span>=</span> scanner<span>.</span><span>next</span><span>(</span><span>)</span><span>;</span>
+            <span>// print就是需要你定义的方法</span>
+            <span>print</span><span>(</span><span>Class</span><span>.</span><span>forName</span><span>(</span>className<span>)</span><span>.</span><span>newInstance</span><span>(</span><span>)</span><span>)</span><span>;</span>
+        <span>}</span>
+    <span>}</span>
+
+    <span>public</span> <span>static</span> <span>void</span> <span>print</span><span>(</span><span>Object</span> obj<span>)</span> <span>{</span>
+        <span>System</span><span>.</span>out<span>.</span><span>print</span><span>(</span>obj<span>.</span><span>toString</span><span>(</span><span>)</span><span>)</span><span>;</span>
+    <span>}</span>
+
+<span>}</span>
+
+<span>class</span> <span>First</span> <span>{</span>
+    <span>public</span> <span>String</span> <span>toString</span><span>(</span><span>)</span> <span>{</span>
+        <span>return</span> <span>"First"</span><span>;</span>
+    <span>}</span>
+<span>}</span>
+
+<span>class</span> <span>Second</span> <span>{</span>
+    <span>public</span> <span>String</span> <span>toString</span><span>(</span><span>)</span> <span>{</span>
+        <span>return</span> <span>"Second"</span><span>;</span>
+    <span>}</span>
+<span>}</span>
+
+<span>class</span> <span>Third</span> <span>{</span>
+    <span>public</span> <span>String</span> <span>toString</span><span>(</span><span>)</span> <span>{</span>
+        <span>return</span> <span>"Third"</span><span>;</span>
+    <span>}</span>
+<span>}</span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br><span>27</span><br><span>28</span><br><span>29</span><br><span>30</span><br><span>31</span><br><span>32</span><br><span>33</span><br><span>34</span><br><span>35</span><br><span>36</span><br></div></div><h2 id="java24-类型判断" tabindex="-1"> JAVA24 类型判断</h2>
+<h3 id="描述-3" tabindex="-1"> 描述</h3>
+<p>父类Base有两个子类：Sub1、Sub2，现有一个方法getClassName()，要求传入Base类型的实例，在方法内部判定其具体的类型，返回的是类型的简单名字（不含包名），请补全getClassName()方法的判断逻辑。</p>
+<h4 id="输入描述-3" tabindex="-1"> 输入描述</h4>
+<p>输入要实例化的类名：Base、Sub1、Sub2 三者之一。</p>
+<h4 id="输出描述-3" tabindex="-1"> 输出描述</h4>
+<p>返回实例的实际类名（简化类名，不包含包的名字）。</p>
+<h3 id="示例1-3" tabindex="-1"> 示例1</h3>
+<p>输入：</p>
+<div><pre><code>Sub1
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p>复制</p>
+<p>输出：</p>
+<div><pre><code>Sub1
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p>复制</p>
+<h3 id="示例2-1" tabindex="-1"> 示例2</h3>
+<p>输入：</p>
+<div><pre><code>Sub2
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p>复制</p>
+<p>输出：</p>
+<div><pre><code>Sub2
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p>复制</p>
+<h3 id="示例3" tabindex="-1"> 示例3</h3>
+<p>输入：</p>
+<div><pre><code>Base
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p>复制</p>
+<p>输出：</p>
+<div><pre><code>Base
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><h3 id="解答-3" tabindex="-1"> 解答</h3>
+<p>利用关键字 <code>instanceof</code> 判断一个对象是否属于某个类，接着调用 <code>Object</code> 类的 <code>getClass()</code> 方法来获得 <code>Class</code> 对象，最后用 <code>getSimpleName()</code> 方法就可以或者获取这个对象所属类的名称。</p>
+<div><pre><code><span>import</span> <span>java<span>.</span>util<span>.</span></span><span>Scanner</span><span>;</span>
+
+<span>public</span> <span>class</span> <span>Main</span> <span>{</span>
+
+    <span>public</span> <span>static</span> <span>void</span> <span>main</span><span>(</span><span>String</span><span>[</span><span>]</span> args<span>)</span> <span>throws</span> <span>Exception</span> <span>{</span>
+        <span>Scanner</span> scanner <span>=</span> <span>new</span> <span>Scanner</span><span>(</span><span>System</span><span>.</span>in<span>)</span><span>;</span>
+        <span>while</span> <span>(</span>scanner<span>.</span><span>hasNext</span><span>(</span><span>)</span><span>)</span> <span>{</span>
+            <span>String</span> className <span>=</span> scanner<span>.</span><span>next</span><span>(</span><span>)</span><span>;</span>
+            <span>Base</span> obj <span>=</span> <span>(</span><span>Base</span><span>)</span> <span>Class</span><span>.</span><span>forName</span><span>(</span>className<span>)</span><span>.</span><span>newInstance</span><span>(</span><span>)</span><span>;</span>
+            <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>getClassName</span><span>(</span>obj<span>)</span><span>)</span><span>;</span>
+        <span>}</span>
+    <span>}</span>
+
+    <span>public</span> <span>static</span> <span>String</span> <span>getClassName</span><span>(</span><span>Base</span> obj<span>)</span> <span>{</span>
+
+        <span>if</span> <span>(</span>obj <span>instanceof</span> <span>Sub1</span><span>)</span> <span>{</span>
+            <span>Sub1</span> sub1 <span>=</span> <span>(</span><span>Sub1</span><span>)</span> obj<span>;</span>
+            <span>return</span> sub1<span>.</span><span>getClass</span><span>(</span><span>)</span><span>.</span><span>getSimpleName</span><span>(</span><span>)</span><span>;</span>
+        <span>}</span> <span>else</span> <span>if</span> <span>(</span>obj <span>instanceof</span> <span>Sub2</span><span>)</span> <span>{</span>
+            <span>Sub2</span> sub2 <span>=</span> <span>(</span><span>Sub2</span><span>)</span> obj<span>;</span>
+            <span>return</span> sub2<span>.</span><span>getClass</span><span>(</span><span>)</span><span>.</span><span>getSimpleName</span><span>(</span><span>)</span><span>;</span>
+        <span>}</span> <span>else</span> <span>{</span>
+            <span>return</span> obj<span>.</span><span>getClass</span><span>(</span><span>)</span><span>.</span><span>getSimpleName</span><span>(</span><span>)</span><span>;</span>
+        <span>}</span>
+    <span>}</span>
+
+<span>}</span>
+
+<span>class</span> <span>Base</span> <span>{</span>
+
+<span>}</span>
+
+<span>class</span> <span>Sub1</span> <span>extends</span> <span>Base</span> <span>{</span>
+
+<span>}</span>
+
+<span>class</span> <span>Sub2</span> <span>extends</span> <span>Base</span> <span>{</span>
+
+<span>}</span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br><span>27</span><br><span>28</span><br><span>29</span><br><span>30</span><br><span>31</span><br><span>32</span><br><span>33</span><br><span>34</span><br><span>35</span><br><span>36</span><br><span>37</span><br><span>38</span><br><span>39</span><br></div></div><h2 id="java25-实现抽象方法" tabindex="-1"> JAVA25 实现抽象方法</h2>
+<h3 id="描述-4" tabindex="-1"> 描述</h3>
+<p>已知抽象类Base中定义了calculate方法，该方法的计算过程依赖于sum()和avg()，而后两个方法均为抽象方法。要求定义Base的子类Sub类，并实现父类的抽象方法，使得main函数中的运算逻辑得以正确执行。</p>
+<h4 id="输入描述-4" tabindex="-1"> 输入描述</h4>
+<p>两个整数</p>
+<h4 id="输出描述-4" tabindex="-1"> 输出描述</h4>
+<p>两个整数的和除以两个整数的平均值（平均值为int类型，不考虑小数问题）</p>
+<h3 id="示例1-4" tabindex="-1"> 示例1</h3>
+<p>输入：</p>
+<div><pre><code>1 2
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p>复制</p>
+<p>输出：</p>
+<div><pre><code>3
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><h3 id="解答-4" tabindex="-1"> 解答</h3>
+<p>主要就是考察继承的知识点，继承了抽象方法，那么此时只需要对方法进行重写即可。</p>
+<div><pre><code><span>import</span> <span>java<span>.</span>util<span>.</span></span><span>Scanner</span><span>;</span>
+
+<span>public</span> <span>class</span> <span>Main</span> <span>{</span>
+
+    <span>public</span> <span>static</span> <span>void</span> <span>main</span><span>(</span><span>String</span><span>[</span><span>]</span> args<span>)</span> <span>{</span>
+        <span>// Sub是需要你定义的子类</span>
+        <span>Base</span> base <span>=</span> <span>new</span> <span>Sub</span><span>(</span><span>)</span><span>;</span>
+
+        <span>Scanner</span> scanner <span>=</span> <span>new</span> <span>Scanner</span><span>(</span><span>System</span><span>.</span>in<span>)</span><span>;</span>
+        <span>while</span> <span>(</span>scanner<span>.</span><span>hasNextInt</span><span>(</span><span>)</span><span>)</span> <span>{</span>
+            <span>int</span> x <span>=</span> scanner<span>.</span><span>nextInt</span><span>(</span><span>)</span><span>;</span>
+            <span>int</span> y <span>=</span> scanner<span>.</span><span>nextInt</span><span>(</span><span>)</span><span>;</span>
+            base<span>.</span><span>setX</span><span>(</span>x<span>)</span><span>;</span>
+            base<span>.</span><span>setY</span><span>(</span>y<span>)</span><span>;</span>
+            <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span>base<span>.</span><span>calculate</span><span>(</span><span>)</span><span>)</span><span>;</span>
+        <span>}</span>
+    <span>}</span>
+
+<span>}</span>
+
+<span>abstract</span> <span>class</span> <span>Base</span> <span>{</span>
+
+    <span>private</span> <span>int</span> x<span>;</span>
+    <span>private</span> <span>int</span> y<span>;</span>
+
+    <span>public</span> <span>int</span> <span>getX</span><span>(</span><span>)</span> <span>{</span>
+        <span>return</span> x<span>;</span>
+    <span>}</span>
+
+    <span>public</span> <span>void</span> <span>setX</span><span>(</span><span>int</span> x<span>)</span> <span>{</span>
+        <span>this</span><span>.</span>x <span>=</span> x<span>;</span>
+    <span>}</span>
+
+    <span>public</span> <span>int</span> <span>getY</span><span>(</span><span>)</span> <span>{</span>
+        <span>return</span> y<span>;</span>
+    <span>}</span>
+
+    <span>public</span> <span>void</span> <span>setY</span><span>(</span><span>int</span> y<span>)</span> <span>{</span>
+        <span>this</span><span>.</span>y <span>=</span> y<span>;</span>
+    <span>}</span>
+
+    <span>public</span> <span>int</span> <span>calculate</span><span>(</span><span>)</span> <span>{</span>
+        <span>if</span> <span>(</span><span>avg</span><span>(</span><span>)</span> <span>==</span> <span>0</span><span>)</span> <span>{</span>
+            <span>return</span> <span>0</span><span>;</span>
+        <span>}</span> <span>else</span> <span>{</span>
+            <span>return</span> <span>sum</span><span>(</span><span>)</span> <span>/</span> <span>avg</span><span>(</span><span>)</span><span>;</span>
+        <span>}</span>
+    <span>}</span>
+
+    <span>/**
+     * 返回x和y的和
+     */</span>
+    <span>public</span> <span>abstract</span> <span>int</span> <span>sum</span><span>(</span><span>)</span><span>;</span>
+
+    <span>/**
+     * 返回x和y的平均值
+     */</span>
+    <span>public</span> <span>abstract</span> <span>int</span> <span>avg</span><span>(</span><span>)</span><span>;</span>
+
+<span>}</span>
+
+<span>class</span> <span>Sub</span> <span>extends</span> <span>Base</span> <span>{</span>
+
+    <span>public</span>  <span>int</span> <span>sum</span><span>(</span><span>)</span> <span>{</span>
+        <span>return</span> <span>super</span><span>.</span><span>getX</span><span>(</span><span>)</span> <span>+</span> <span>super</span><span>.</span><span>getY</span><span>(</span><span>)</span><span>;</span>
+    <span>}</span>
+
+    <span>public</span>  <span>int</span> <span>avg</span><span>(</span><span>)</span> <span>{</span>
+        <span>return</span> <span>sum</span><span>(</span><span>)</span> <span>/</span> <span>2</span><span>;</span>
+    <span>}</span>
+<span>}</span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br><span>27</span><br><span>28</span><br><span>29</span><br><span>30</span><br><span>31</span><br><span>32</span><br><span>33</span><br><span>34</span><br><span>35</span><br><span>36</span><br><span>37</span><br><span>38</span><br><span>39</span><br><span>40</span><br><span>41</span><br><span>42</span><br><span>43</span><br><span>44</span><br><span>45</span><br><span>46</span><br><span>47</span><br><span>48</span><br><span>49</span><br><span>50</span><br><span>51</span><br><span>52</span><br><span>53</span><br><span>54</span><br><span>55</span><br><span>56</span><br><span>57</span><br><span>58</span><br><span>59</span><br><span>60</span><br><span>61</span><br><span>62</span><br><span>63</span><br><span>64</span><br><span>65</span><br><span>66</span><br><span>67</span><br><span>68</span><br><span>69</span><br><span>70</span><br><span>71</span><br></div></div>]]></content:encoded>
+    </item>
     <item>
       <title>Java 入门练习（16 - 20）</title>
       <link>https://cunyu1943.github.io/JavaPark/JavaPark/practical-training-camp/intro-to-java/16-20.html</link>
@@ -26281,198 +26640,6 @@ ORDER BY ……
 <p><img src="https://cdn.jsdelivr.net/gh/cunyu1943/blog-imgs@main/blog/20210603133527.png" alt="" loading="lazy"></p>
 ]]></content:encoded>
       <enclosure url="https://cdn.jsdelivr.net/gh/cunyu1943/blog-imgs@main/blog/image-20210603132818470.png" type="image/png"/>
-    </item>
-    <item>
-      <title>Java 编程实例（21-25）</title>
-      <link>https://cunyu1943.github.io/JavaPark/JavaPark/practical-training-camp/java-instance/21-25.html</link>
-      <guid>https://cunyu1943.github.io/JavaPark/JavaPark/practical-training-camp/java-instance/21-25.html</guid>
-      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">Java 编程实例（21-25）</source>
-      <category>Java 编程实例</category>
-      <pubDate>Sun, 16 Jan 2022 20:03:26 GMT</pubDate>
-      <content:encoded><![CDATA[<h2 id="实例-21" tabindex="-1"> 实例 21</h2>
-<h3 id="题目" tabindex="-1"> 题目</h3>
-<p>求 1! + 2! + 3! + … + 20! 的和。</p>
-<h3 id="分析" tabindex="-1"> 分析</h3>
-<p>循环求 1 ~ 20 的阶乘，然后将其进行求和即可。</p>
-<h3 id="实现" tabindex="-1"> 实现</h3>
-<div><pre><code><span>/**
- * Created with IntelliJ IDEA.
- *
- * <span>@author</span> : cunyu
- * <span>@version</span> : 1.0
- * <span>@email</span> : 747731461@qq.com
- * <span>@website</span> : https://cunyu1943.github.io
- * <span>@date</span> : 2021/6/3 22:48
- * <span>@project</span> : Java 编程实例
- * <span>@package</span> : PACKAGE_NAME
- * <span>@className</span> : Example21
- * <span>@description</span> :
- */</span>
-
-<span>public</span> <span>class</span> <span>Example21</span> <span>{</span>
-    <span>public</span> <span>static</span> <span>void</span> <span>main</span><span>(</span><span>String</span><span>[</span><span>]</span> args<span>)</span> <span>{</span>
-        <span>long</span> sum <span>=</span> <span>0</span><span>;</span>
-        <span>long</span> fac <span>=</span> <span>1</span><span>;</span>
-        <span>for</span> <span>(</span><span>int</span> i <span>=</span> <span>1</span><span>;</span> i <span>&lt;=</span> <span>20</span><span>;</span> i<span>++</span><span>)</span> <span>{</span>
-            fac <span>*=</span> i<span>;</span>
-            sum <span>+=</span> fac<span>;</span>
-        <span>}</span>
-
-        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>"1!+2!+3!+……+20！ = "</span> <span>+</span> sum<span>)</span><span>;</span>
-    <span>}</span>
-<span>}</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br></div></div><h3 id="结果" tabindex="-1"> 结果</h3>
-<p><img src="https://cdn.jsdelivr.net/gh/cunyu1943/blog-imgs@main/blog/image-20210607130739766.png" alt="img" loading="lazy"></p>
-<h2 id="实例-22" tabindex="-1"> 实例 22</h2>
-<h3 id="题目-1" tabindex="-1"> 题目</h3>
-<p>利用递归方法求 5！</p>
-<h3 id="分析-1" tabindex="-1"> 分析</h3>
-<p>找到边界条件 <code>num = 1</code>，然后调用 <code>fac(num) = num * fac(num - 1)</code> 即可！</p>
-<h3 id="实现-1" tabindex="-1"> 实现</h3>
-<div><pre><code><span>/**
- * Created with IntelliJ IDEA.
- *
- * <span>@author</span> : cunyu
- * <span>@version</span> : 1.0
- * <span>@email</span> : 747731461@qq.com
- * <span>@website</span> : https://cunyu1943.github.io
- * <span>@date</span> : 2021/6/3 22:50
- * <span>@project</span> : Java 编程实例
- * <span>@package</span> : PACKAGE_NAME
- * <span>@className</span> : Example22
- * <span>@description</span> :
- */</span>
-
-<span>public</span> <span>class</span> <span>Example22</span> <span>{</span>
-    <span>public</span> <span>static</span> <span>void</span> <span>main</span><span>(</span><span>String</span><span>[</span><span>]</span> args<span>)</span> <span>{</span>
-        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>"5! = "</span> <span>+</span> <span>fac</span><span>(</span><span>5</span><span>)</span><span>)</span><span>;</span>
-    <span>}</span>
-
-    <span>/**
-     * 求 num 的阶乘
-     *
-     * <span>@param</span> <span>num</span>
-     * <span>@return</span> num 的阶乘
-     */</span>
-    <span>public</span> <span>static</span> <span>long</span> <span>fac</span><span>(</span><span>int</span> num<span>)</span> <span>{</span>
-        <span>if</span> <span>(</span>num <span>==</span> <span>1</span><span>)</span> <span>{</span>
-            <span>return</span> <span>1</span><span>;</span>
-        <span>}</span> <span>else</span> <span>{</span>
-            <span>return</span> num <span>*</span> <span>fac</span><span>(</span>num <span>-</span> <span>1</span><span>)</span><span>;</span>
-        <span>}</span>
-    <span>}</span>
-<span>}</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br><span>27</span><br><span>28</span><br><span>29</span><br><span>30</span><br><span>31</span><br><span>32</span><br><span>33</span><br></div></div><h3 id="结果-1" tabindex="-1"> 结果</h3>
-<p><img src="https://cdn.jsdelivr.net/gh/cunyu1943/blog-imgs@main/blog/image-20210607130708493.png" alt="img" loading="lazy"></p>
-<h2 id="实例-23" tabindex="-1"> 实例 23</h2>
-<h3 id="题目-2" tabindex="-1"> 题目</h3>
-<p>有 5 个人坐在一起，问第五个人多少岁？他说比第 4 个人大 2 岁。问第 4 个人岁数，他说比第 3 个人大 2 岁。问第三个人，又说比第 2 人大两岁。问第 2 个人，说比第一个人大两岁。最后问第一个人，他说是 10 岁。请问第五个人多大？</p>
-<h3 id="分析-2" tabindex="-1"> 分析</h3>
-<p>其实就是一个反向遍历的过程，我们知道了第一个人的年龄，只要反推回去就可以知道第五个人的年龄了，这是一个等差数列。</p>
-<h3 id="实现-2" tabindex="-1"> 实现</h3>
-<div><pre><code><span>/**
- * Created with IntelliJ IDEA.
- *
- * <span>@author</span> : cunyu
- * <span>@version</span> : 1.0
- * <span>@email</span> : 747731461@qq.com
- * <span>@website</span> : https://cunyu1943.github.io
- * <span>@date</span> : 2021/6/3 22:54
- * <span>@project</span> : Java 编程实例
- * <span>@package</span> : PACKAGE_NAME
- * <span>@className</span> : Example23
- * <span>@description</span> :
- */</span>
-
-<span>public</span> <span>class</span> <span>Example23</span> <span>{</span>
-    <span>public</span> <span>static</span> <span>void</span> <span>main</span><span>(</span><span>String</span><span>[</span><span>]</span> args<span>)</span> <span>{</span>
-        <span>int</span> age <span>=</span> <span>10</span><span>;</span>
-        <span>for</span> <span>(</span><span>int</span> i <span>=</span> <span>2</span><span>;</span> i <span>&lt;=</span> <span>5</span><span>;</span> i<span>++</span><span>)</span> <span>{</span>
-            age <span>+=</span> <span>2</span><span>;</span>
-        <span>}</span>
-
-        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>"第 5 个人的年龄："</span> <span>+</span> age<span>)</span><span>;</span>
-    <span>}</span>
-<span>}</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br></div></div><h3 id="结果-2" tabindex="-1"> 结果</h3>
-<p><img src="https://cdn.jsdelivr.net/gh/cunyu1943/blog-imgs@main/blog/20210607130934.png" alt="img" loading="lazy"></p>
-<h2 id="实例-24" tabindex="-1"> 实例 24</h2>
-<h3 id="题目-3" tabindex="-1"> 题目</h3>
-<p>给一个不多于 5 位的正整数，要求：一、求它是几位数，二、逆序打印出各位数字</p>
-<h3 id="分析-3" tabindex="-1"> 分析</h3>
-<p>输入整数之后，然后将其转换为字符串，通过求字符串长度就知道这个数字时几位数了，然后再反向打印该字符串即可!</p>
-<h3 id="实现-3" tabindex="-1"> 实现</h3>
-<div><pre><code><span>import</span> <span>java<span>.</span>util<span>.</span></span><span>Scanner</span><span>;</span>
-
-<span>/**
- * Created with IntelliJ IDEA.
- *
- * <span>@author</span> : cunyu
- * <span>@version</span> : 1.0
- * <span>@email</span> : 747731461@qq.com
- * <span>@website</span> : https://cunyu1943.github.io
- * <span>@date</span> : 2021/6/3 23:14
- * <span>@project</span> : Java 编程实例
- * <span>@package</span> : PACKAGE_NAME
- * <span>@className</span> : Example24
- * <span>@description</span> :
- */</span>
-
-<span>public</span> <span>class</span> <span>Example24</span> <span>{</span>
-    <span>public</span> <span>static</span> <span>void</span> <span>main</span><span>(</span><span>String</span><span>[</span><span>]</span> args<span>)</span> <span>{</span>
-        <span>Scanner</span> scanner <span>=</span> <span>new</span> <span>Scanner</span><span>(</span><span>System</span><span>.</span>in<span>)</span><span>;</span>
-        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>"输入一个整数"</span><span>)</span><span>;</span>
-        <span>long</span> num <span>=</span> scanner<span>.</span><span>nextLong</span><span>(</span><span>)</span><span>;</span>
-        <span>String</span> str <span>=</span> <span>Long</span><span>.</span><span>toString</span><span>(</span>num<span>)</span><span>;</span>
-        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>"该数是一个 "</span> <span>+</span> str<span>.</span><span>length</span><span>(</span><span>)</span> <span>+</span> <span>" 位数！"</span><span>)</span><span>;</span>
-        <span>System</span><span>.</span>out<span>.</span><span>print</span><span>(</span><span>"该数逆序输出为："</span><span>)</span><span>;</span>
-        <span>for</span> <span>(</span><span>int</span> i <span>=</span> str<span>.</span><span>length</span><span>(</span><span>)</span> <span>-</span> <span>1</span><span>;</span> i <span>>=</span> <span>0</span><span>;</span> i<span>--</span><span>)</span> <span>{</span>
-            <span>System</span><span>.</span>out<span>.</span><span>print</span><span>(</span>str<span>.</span><span>charAt</span><span>(</span>i<span>)</span><span>)</span><span>;</span>
-        <span>}</span>
-    <span>}</span>
-<span>}</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br><span>27</span><br><span>28</span><br><span>29</span><br></div></div><h3 id="结果-3" tabindex="-1"> 结果</h3>
-<p><img src="https://cdn.jsdelivr.net/gh/cunyu1943/blog-imgs@main/blog/20210607131129.png" alt="img" loading="lazy"></p>
-<h2 id="实例-25" tabindex="-1"> 实例 25</h2>
-<h3 id="题目-4" tabindex="-1"> 题目</h3>
-<p>一个 5 位数，判断它是不是回文数。即 12321 是回文数，个位与万位相同，十位与千位相同。</p>
-<h3 id="分析-4" tabindex="-1"> 分析</h3>
-<p>既然已经限定了 5 位数，那么输入一个 5 位数之后，分解出各位上的数字，然后判断个位和万位、十位与千位是否相同即可！</p>
-<h3 id="实现-4" tabindex="-1"> 实现</h3>
-<div><pre><code><span>import</span> <span>java<span>.</span>util<span>.</span></span><span>Scanner</span><span>;</span>
-
-<span>/**
- * Created with IntelliJ IDEA.
- *
- * <span>@author</span> : cunyu
- * <span>@version</span> : 1.0
- * <span>@email</span> : 747731461@qq.com
- * <span>@website</span> : https://cunyu1943.github.io
- * <span>@date</span> : 2021/6/3 23:19
- * <span>@project</span> : Java 编程实例
- * <span>@package</span> : PACKAGE_NAME
- * <span>@className</span> : Example25
- * <span>@description</span> :
- */</span>
-
-<span>public</span> <span>class</span> <span>Example25</span> <span>{</span>
-    <span>public</span> <span>static</span> <span>void</span> <span>main</span><span>(</span><span>String</span><span>[</span><span>]</span> args<span>)</span> <span>{</span>
-        <span>Scanner</span> scanner <span>=</span> <span>new</span> <span>Scanner</span><span>(</span><span>System</span><span>.</span>in<span>)</span><span>;</span>
-        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>"输入一个 5 位数"</span><span>)</span><span>;</span>
-        <span>int</span> num <span>=</span> scanner<span>.</span><span>nextInt</span><span>(</span><span>)</span><span>;</span>
-        <span>String</span> str <span>=</span> <span>Integer</span><span>.</span><span>toString</span><span>(</span>num<span>)</span><span>;</span>
-        <span>if</span> <span>(</span>str<span>.</span><span>charAt</span><span>(</span><span>0</span><span>)</span> <span>==</span> str<span>.</span><span>charAt</span><span>(</span>str<span>.</span><span>length</span><span>(</span><span>)</span> <span>-</span> <span>1</span><span>)</span> <span>&amp;&amp;</span> str<span>.</span><span>charAt</span><span>(</span><span>1</span><span>)</span> <span>==</span> str<span>.</span><span>charAt</span><span>(</span>str<span>.</span><span>length</span><span>(</span><span>)</span> <span>-</span> <span>1</span> <span>-</span> <span>1</span><span>)</span><span>)</span> <span>{</span>
-            <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span>num <span>+</span> <span>" 是一个回文数"</span><span>)</span><span>;</span>
-        <span>}</span> <span>else</span> <span>{</span>
-            <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span>num <span>+</span> <span>" 不是一个回文数"</span><span>)</span><span>;</span>
-        <span>}</span>
-    <span>}</span>
-<span>}</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br><span>27</span><br><span>28</span><br><span>29</span><br></div></div><h3 id="结果-4" tabindex="-1"> 结果</h3>
-<p><img src="https://cdn.jsdelivr.net/gh/cunyu1943/blog-imgs@main/blog/20210607131302.png" alt="" loading="lazy"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/cunyu1943/blog-imgs@main/blog/20210607131322.png" alt="" loading="lazy"></p>
-]]></content:encoded>
-      <enclosure url="https://cdn.jsdelivr.net/gh/cunyu1943/blog-imgs@main/blog/image-20210607130739766.png" type="image/png"/>
     </item>
   </channel>
 </rss>
