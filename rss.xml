@@ -6,16 +6,16 @@
     <link>https://cunyu1943.github.io/JavaPark/JavaPark/</link>
     <description>Java 自学编程之路</description>
     <language>zh-CN</language>
-    <pubDate>Sat, 23 Jul 2022 06:57:09 GMT</pubDate>
-    <lastBuildDate>Sat, 23 Jul 2022 06:57:09 GMT</lastBuildDate>
+    <pubDate>Sun, 24 Jul 2022 03:30:04 GMT</pubDate>
+    <lastBuildDate>Sun, 24 Jul 2022 03:30:04 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+    <category>Java 菜鸟入门</category>
     <category>Java 入门练习</category>
     <category>工具教程</category>
     <category>SQL 进阶挑战</category>
     <category>博客搭建</category>
     <category>Vue3 笔记</category>
-    <category>Java 菜鸟入门</category>
     <category>Spring Boot 基础教程</category>
     <category>Java Web</category>
     <category>数据结构与算法</category>
@@ -30,6 +30,230 @@
     <category>MyBatis Plus 指南</category>
     <category>Spring MVC 合辑</category>
     <category>SQL 必知必会 50 题</category>
+    <item>
+      <title>Java 菜鸟入门：Java 简介</title>
+      <link>https://cunyu1943.github.io/JavaPark/JavaPark/java/java-se/intro-to-java.html</link>
+      <guid>https://cunyu1943.github.io/JavaPark/JavaPark/java/java-se/intro-to-java.html</guid>
+      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">Java 菜鸟入门：Java 简介</source>
+      <category>Java 菜鸟入门</category>
+      <pubDate>Sat, 23 Jul 2022 11:11:11 GMT</pubDate>
+      <content:encoded><![CDATA[<h2 id="前言" tabindex="-1"> 前言</h2>
+<p>既然要学习一门技术，那么就先来了解下它的历史，我们为什么要使用它，以及我们能用它来干啥。</p>
+<h2 id="历史背景" tabindex="-1"> 历史背景</h2>
+<p>1990 年代初，Sun 公司的詹姆斯·高斯林等人为了实现电视机、电话、闹钟等家用电器的控制和通信，开发了一套用于设置在家用电器等小型系统中的编程语言。在当时，这门语言被命名为 <code>Oka</code>。但由于市场需求不高，所以该计划被逐渐放弃。</p>
+<p>随着 1990 年代互联网的发展，Sun 公司发现 <code>Oka</code> 语言在互联网中的应用前景广泛。于是决定对 <code>Oka</code> 进行改造，并在 1995 年 5 月以 Java 的名义正式发布。</p>
+<p>随着互联网的迅猛发展，Java 也得以逐渐成为重要的网络编程语言，詹姆斯·高斯林也被大家公认为 Java 之父。</p>
+<p>到了 2009 年， Sun 公司被 Oracle 公司所收购，自此 Java 成为 Oracle 公司的一大产品直至今日。</p>
+<p>以下是截止到本文写作时间（2022 年 7 月 23 日）Java 的历史年表，累计经过了 18 次主要版本更新，目前来到了 Java SE 18。而 Java SE 19 早期预览版也已经流出，根据官方给出的发布时间表，大概会在 9 月份发布 Java SE 19 的 GA 版本。不过虽然 Java 已经经历了这么多版本的更新，但国内目前用的最多的应该还是 Java 1.8 版本。而处于对稳定性的考虑，企业开发更喜欢 LTS 版本，这也是为什么至今 Java 1.8 还占有如此高的市场比例。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">版本</th>
+<th style="text-align:center">发布日期</th>
+<th style="text-align:center">主要事件</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">JDK Beta</td>
+<td style="text-align:center">1995</td>
+<td style="text-align:center">Java 语言发布，用 Java 实现的浏览器和 Java Applet 被大量应用</td>
+</tr>
+<tr>
+<td style="text-align:center">JDK 1.0</td>
+<td style="text-align:center">1996 年 1 月</td>
+<td style="text-align:center">奠定了JDK、JRE、JVM 的体系结构</td>
+</tr>
+<tr>
+<td style="text-align:center">JDK 1.1</td>
+<td style="text-align:center">1997 年 2 月</td>
+<td style="text-align:center">加入 JIT，提升 JDK 效率</td>
+</tr>
+<tr>
+<td style="text-align:center">J2SE 1.2</td>
+<td style="text-align:center">1998 年 12 月</td>
+<td style="text-align:center">确立 J2SE、J2EE、J2ME 产品结构</td>
+</tr>
+<tr>
+<td style="text-align:center">J2SE 1.3</td>
+<td style="text-align:center">2000 年 5 月</td>
+<td style="text-align:center">内置 HotSpot JVM</td>
+</tr>
+<tr>
+<td style="text-align:center">J2SE 1.4</td>
+<td style="text-align:center">2002 年 2 月</td>
+<td style="text-align:center">XML 处理、断言、支持正则表达式</td>
+</tr>
+<tr>
+<td style="text-align:center">J2SE 5.0</td>
+<td style="text-align:center">2004 年 9 月</td>
+<td style="text-align:center">静态导入、泛型、for-each 循环、自动拆，装箱、枚举、可变参数</td>
+</tr>
+<tr>
+<td style="text-align:center">Java SE 6</td>
+<td style="text-align:center">2006 年 12 月</td>
+<td style="text-align:center">提供动态语言支持、同步垃圾回收</td>
+</tr>
+<tr>
+<td style="text-align:center">Java SE 7</td>
+<td style="text-align:center">2011 年 7 月</td>
+<td style="text-align:center">字符串的switch语句、多异常捕抓</td>
+</tr>
+<tr>
+<td style="text-align:center">Java SE 8 (LTS)</td>
+<td style="text-align:center">2014 年 3 月</td>
+<td style="text-align:center">Lambda表达式</td>
+</tr>
+<tr>
+<td style="text-align:center">Java SE 9</td>
+<td style="text-align:center">2017 年 9 月</td>
+<td style="text-align:center">轻量级 json API、垃圾收集机制更新</td>
+</tr>
+<tr>
+<td style="text-align:center">Java SE 10</td>
+<td style="text-align:center">2018 年 3 月</td>
+<td style="text-align:center">局部变量类型推断，Java 后续版本快速迭代更新</td>
+</tr>
+<tr>
+<td style="text-align:center">Java SE 11 (LTS)</td>
+<td style="text-align:center">2018 年 9 月</td>
+<td style="text-align:center">常用类增强，Java 11 是继 Java 8 之后的首个长期支持本版</td>
+</tr>
+<tr>
+<td style="text-align:center">Java SE 12</td>
+<td style="text-align:center">2019 年 3 月</td>
+<td style="text-align:center">switch 表达式增强</td>
+</tr>
+<tr>
+<td style="text-align:center">Java SE 13</td>
+<td style="text-align:center">2019 年 9 月</td>
+<td style="text-align:center">文本块支持</td>
+</tr>
+<tr>
+<td style="text-align:center">Java SE 14</td>
+<td style="text-align:center">2020 年 3 月</td>
+<td style="text-align:center">instanceof 支持模式匹配</td>
+</tr>
+<tr>
+<td style="text-align:center">Java SE 15</td>
+<td style="text-align:center">2020 年 9 月</td>
+<td style="text-align:center">EdDSA 数字签名算法、 密封类、隐藏类</td>
+</tr>
+<tr>
+<td style="text-align:center">Java SE 16</td>
+<td style="text-align:center">2021 年 3 月</td>
+<td style="text-align:center">启用 C++ 14 语言特性、Vector API</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>Java SE 17 (LTS)</strong></td>
+<td style="text-align:center">2021 年 9 月</td>
+<td style="text-align:center">恢复总是严格的浮点语义、增强型伪随机数生成器</td>
+</tr>
+<tr>
+<td style="text-align:center">Java SE 18</td>
+<td style="text-align:center">2022年 3月</td>
+<td style="text-align:center">默认 UTF-8 编码、代码片段、简单的网络服务器</td>
+</tr>
+</tbody>
+</table>
+<h2 id="为什么使用-java" tabindex="-1"> 为什么使用 Java</h2>
+<p>既然编程语言有那么多，那我们为什么要使用 Java 语言呢？以下就来看看 Java 被广泛使用的几个原因。</p>
+<ol>
+<li><strong>世界范围内流行，国内使用最为广泛的编程语言之一。</strong></li>
+</ol>
+<p>以下是截止 2022 年 7 月 TIOBE 统计的编程语言排行榜，可以看到 Java 处于前三的位置。而从历年编程语言所占市场份额趋势图也可以看出，Java 虽然没有一直独占鳌头，但绝大数时间都是占据领先地位。</p>
+<p><img src="https://img-blog.csdnimg.cn/6637fb1c44b9454f98a730133d895747.png" alt="" loading="lazy">
+<img src="https://img-blog.csdnimg.cn/f9b7d09d943c4bb38f8ec076c504fe41.png" alt="" loading="lazy"></p>
+<ol start="2">
+<li><strong>移植性高</strong></li>
+</ol>
+<p>由于 Java 中 JVM 的特性，所以能够做到一次编译，随处运行，其移植性也就更高。</p>
+<ol start="3">
+<li><strong>开发社区完善</strong></li>
+</ol>
+<p>社区完善也是 Java 为什么使用多的原因，各种封装 API，比起 C、C++ 语言使用起来更加方便。虽然 Python 的封装程度更高，但是其效率比起 Java 却打了折扣。毕竟封装程度和效率是成反比的，Java 兼具了效率高和使用方便的特点，所以更受人们青睐。</p>
+<h2 id="java-能做什么" tabindex="-1"> Java 能做什么</h2>
+<p>Java 应用广泛，在我们日常中就能经常见到由 Java 所开发的程序。常见的的应用应用领域如下：</p>
+<ol>
+<li><strong>桌面 GUI 应用开发</strong></li>
+<li><strong>服务器系统</strong></li>
+<li><strong>企业级应用开发</strong></li>
+<li><strong>大数据开发</strong></li>
+<li><strong>移动应用开发</strong></li>
+<li><strong>游戏开发</strong></li>
+<li>……</li>
+</ol>
+<h2 id="java-技术体系" tabindex="-1"> Java 技术体系</h2>
+<p>根据传统意义上 Sun 官方定义， Java 技术体系的组成主要就是我们常说的 JDK，即以下三部分：</p>
+<ol>
+<li><strong>Java 程序设计语言</strong></li>
+<li><strong>Java 虚拟机</strong></li>
+<li><strong>Java API 类库</strong></li>
+</ol>
+<p><img src="https://img-blog.csdnimg.cn/4dfc7057ff0f406187a2c7def724b99a.png" alt="" loading="lazy"></p>
+<p>同时，Java 技术体系又可以主要分为以下 3 个平台。</p>
+<ol>
+<li><strong>Java SE</strong></li>
+</ol>
+<p>Java Standard Edition，即 Java 标准版。主要是 Java 技术的核心和基础，要想学好 Java，那么首先你得掌握好这部分。主要运行在桌面级应用，如 Windows 应用程序。</p>
+<ol start="2">
+<li><strong>Java EE</strong></li>
+</ol>
+<p>Java Enterprise Editon，即 Java  企业版。从它的名字就不难看出，这是 Java 针对企业级应用开发所提供的一套解决方案，主要用于架设高性能企业网站。</p>
+<ol start="3">
+<li><strong>Java ME</strong></li>
+</ol>
+<p>Java Micro Edition，即 Java 小型版。主要是 Java  针对移动设备应用所提供的一套解决方案，主要运行在手机、pad 等移动端。</p>
+<p><img src="https://img-blog.csdnimg.cn/b0ad3b942def40e2a6cec69f15072a27.png" alt="" loading="lazy"></p>
+<h2 id="总结" tabindex="-1"> 总结</h2>
+<p>本文主要从 Java 历史背景、选择 Java 的理由、Java 能做什么、Java 技术体系等 4 方面对 Java 语言做了一个简单介绍。接下来的文章我们就来看看，如何搭建 Java 的开发环境以及实现一个简单的入门程序。</p>
+]]></content:encoded>
+      <enclosure url="https://img-blog.csdnimg.cn/6637fb1c44b9454f98a730133d895747.png" type="image/png"/>
+    </item>
+    <item>
+      <title>Java 入门练习（41 - 45）</title>
+      <link>https://cunyu1943.github.io/JavaPark/JavaPark/practical-training-camp/intro-to-java/41-45.html</link>
+      <guid>https://cunyu1943.github.io/JavaPark/JavaPark/practical-training-camp/intro-to-java/41-45.html</guid>
+      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">Java 入门练习（41 - 45）</source>
+      <category>Java 入门练习</category>
+      <pubDate>Sat, 23 Jul 2022 12:07:48 GMT</pubDate>
+      <content:encoded><![CDATA[<h2 id="java41-统计一句话中重复单词的个数" tabindex="-1"> JAVA41 统计一句话中重复单词的个数</h2>
+<h3 id="描述" tabindex="-1"> 描述</h3>
+<p>统计控制台输入的一句话中不同字⺟字符出现的次数。例如：现有字符串&quot;Hello World!&quot;，上述字符串中各个字符的出现的次数为：</p>
+<p>H:1
+e:1
+l:3
+o:2
+W:1
+r:1
+d:1
+（不考虑数字、空格和特殊字符的个数，按照字符在字符串中出现的顺序显示。相同字母的大小写算两个不同字符）</p>
+<h4 id="输入描述" tabindex="-1"> 输入描述</h4>
+<p>控制台任意输入一段话，可以有空格和特殊符号</p>
+<h4 id="输出描述" tabindex="-1"> 输出描述</h4>
+<p>输出字符和字符对应的出现字数（字符和出现次数之间用:隔开，输出逻辑已经给出）</p>
+<h3 id="示例1" tabindex="-1"> 示例1</h3>
+<p>输入：</p>
+<div><pre><code>Hello World
+</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p>输出：</p>
+<div><pre><code>H:1
+e:1
+l:3
+o:2
+W:1
+r:1
+d:1
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br></div></div><h3 id="解答" tabindex="-1"> 解答</h3>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>Java 入门练习（45 - 55）</title>
+      <link>https://cunyu1943.github.io/JavaPark/JavaPark/practical-training-camp/intro-to-java/46-50.html</link>
+      <guid>https://cunyu1943.github.io/JavaPark/JavaPark/practical-training-camp/intro-to-java/46-50.html</guid>
+      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">Java 入门练习（45 - 55）</source>
+      <category>Java 入门练习</category>
+      <pubDate>Sat, 23 Jul 2022 13:07:48 GMT</pubDate>
+    </item>
     <item>
       <title>Java 入门练习（36 - 40）</title>
       <link>https://cunyu1943.github.io/JavaPark/JavaPark/practical-training-camp/intro-to-java/36-40.html</link>
@@ -24915,1565 +25139,6 @@ ORDER BY ……
 <p>感谢<a href="http://nowcoder.com/" target="_blank" rel="noopener noreferrer">牛客网<ExternalLinkIcon/></a>提供的题目列表。</p>
 ]]></content:encoded>
       <enclosure url="https://cdn.jsdelivr.net/gh/cunyu1943/blog-imgs@main/2022/04/image-20220409152551464.png" type="image/png"/>
-    </item>
-    <item>
-      <title>SQL 必知必会 50 题（41 - 45）</title>
-      <link>https://cunyu1943.github.io/JavaPark/JavaPark/database/sql-in-10min/41-45.html</link>
-      <guid>https://cunyu1943.github.io/JavaPark/JavaPark/database/sql-in-10min/41-45.html</guid>
-      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">SQL 必知必会 50 题（41 - 45）</source>
-      <category>SQL 必知必会 50 题</category>
-      <pubDate>Sat, 09 Apr 2022 22:22:09 GMT</pubDate>
-      <content:encoded><![CDATA[<h2 id="sql41-确定最佳顾客的另一种方式-二" tabindex="-1"> SQL41 确定最佳顾客的另一种方式（二）</h2>
-<h3 id="描述" tabindex="-1"> 描述</h3>
-<p>OrderItems 表代表订单信息，确定最佳顾客的另一种方式是看他们花了多少钱，OrderItems 表有订单号 order_num 和 item_price 商品售出价格、quantity 商品数量</p>
-<table>
-<thead>
-<tr>
-<th>order_num</th>
-<th>item_price</th>
-<th>quantity</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>a1</td>
-<td>10</td>
-<td>105</td>
-</tr>
-<tr>
-<td>a2</td>
-<td>1</td>
-<td>1100</td>
-</tr>
-<tr>
-<td>a2</td>
-<td>1</td>
-<td>200</td>
-</tr>
-<tr>
-<td>a4</td>
-<td>2</td>
-<td>1121</td>
-</tr>
-<tr>
-<td>a5</td>
-<td>5</td>
-<td>10</td>
-</tr>
-<tr>
-<td>a2</td>
-<td>1</td>
-<td>19</td>
-</tr>
-<tr>
-<td>a7</td>
-<td>7</td>
-<td>5</td>
-</tr>
-</tbody>
-</table>
-<p>Orders 表含有字段 order_num 订单号、cust_id 顾客 id</p>
-<table>
-<thead>
-<tr>
-<th>order_num</th>
-<th>cust_id</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>a1</td>
-<td>cust10</td>
-</tr>
-<tr>
-<td>a2</td>
-<td>cust1</td>
-</tr>
-<tr>
-<td>a3</td>
-<td>cust2</td>
-</tr>
-<tr>
-<td>a4</td>
-<td>cust22</td>
-</tr>
-<tr>
-<td>a5</td>
-<td>cust221</td>
-</tr>
-<tr>
-<td>a7</td>
-<td>cust2217</td>
-</tr>
-</tbody>
-</table>
-<p>顾客表 Customers 有字段 cust_id 客户 id、cust_name 客户姓名</p>
-<table>
-<thead>
-<tr>
-<th>cust_id</th>
-<th>cust_name</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>cust10</td>
-<td>andy</td>
-</tr>
-<tr>
-<td>cust1</td>
-<td>ben</td>
-</tr>
-<tr>
-<td>cust2</td>
-<td>tony</td>
-</tr>
-<tr>
-<td>cust22</td>
-<td>tom</td>
-</tr>
-<tr>
-<td>cust221</td>
-<td>an</td>
-</tr>
-<tr>
-<td>cust2217</td>
-<td>hex</td>
-</tr>
-</tbody>
-</table>
-<h3 id="问题" tabindex="-1"> 问题</h3>
-<p>编写 SQL 语句，返回订单总价不小于 1000 的客户名称和总额（OrderItems 表中的 order_num）。</p>
-<p>提示：需要计算总和（item_price 乘以 quantity）。按总额对结果进行排序，请使用INNER JOIN 语法。</p>
-<h3 id="示例结果" tabindex="-1"> 示例结果</h3>
-<table>
-<thead>
-<tr>
-<th>cust_name</th>
-<th>total_price</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>andy</td>
-<td>1050</td>
-</tr>
-<tr>
-<td>ben</td>
-<td>1319</td>
-</tr>
-<tr>
-<td>tom</td>
-<td>2242</td>
-</tr>
-</tbody>
-</table>
-<h3 id="示例解析" tabindex="-1"> 示例解析</h3>
-<p>总额（item_price 乘以 quantity）大于等于 1000 的订单号，例如 a2 对应的顾客id 为 cust1，cust1 的顾客名称 cust_name 是 ben，最后返回 ben 作为 order_num a2 的quantity * item_price 总和的结果 1319。</p>
-<h3 id="示例" tabindex="-1"> 示例</h3>
-<div><pre><code><span>DROP</span> <span>TABLE</span> <span>IF</span> <span>EXISTS</span> <span><span>`</span>OrderItems<span>`</span></span><span>;</span>
-<span>CREATE</span> <span>TABLE</span> <span>IF</span> <span>NOT</span> <span>EXISTS</span> <span><span>`</span>OrderItems<span>`</span></span><span>(</span>
-	order_num <span>VARCHAR</span><span>(</span><span>255</span><span>)</span> <span>NOT</span> <span>NULL</span> <span>COMMENT</span> <span>'商品订单号'</span><span>,</span>
-	item_price <span>INT</span><span>(</span><span>16</span><span>)</span> <span>NOT</span> <span>NULL</span> <span>COMMENT</span> <span>'售出价格'</span><span>,</span>
-	quantity <span>INT</span><span>(</span><span>16</span><span>)</span> <span>NOT</span> <span>NULL</span> <span>COMMENT</span> <span>'商品数量'</span>
-<span>)</span><span>;</span>
-<span>INSERT</span> <span><span>`</span>OrderItems<span>`</span></span> <span>VALUES</span> <span>(</span><span>'a1'</span><span>,</span><span>10</span><span>,</span><span>105</span><span>)</span><span>,</span><span>(</span><span>'a2'</span><span>,</span><span>1</span><span>,</span><span>1100</span><span>)</span><span>,</span><span>(</span><span>'a2'</span><span>,</span><span>1</span><span>,</span><span>200</span><span>)</span><span>,</span><span>(</span><span>'a4'</span><span>,</span><span>2</span><span>,</span><span>1121</span><span>)</span><span>,</span><span>(</span><span>'a5'</span><span>,</span><span>5</span><span>,</span><span>10</span><span>)</span><span>,</span><span>(</span><span>'a2'</span><span>,</span><span>1</span><span>,</span><span>19</span><span>)</span><span>,</span><span>(</span><span>'a7'</span><span>,</span><span>7</span><span>,</span><span>5</span><span>)</span><span>;</span>
-
-
-<span>DROP</span> <span>TABLE</span> <span>IF</span> <span>EXISTS</span> <span><span>`</span>Customers<span>`</span></span><span>;</span>
-<span>CREATE</span> <span>TABLE</span> <span>IF</span> <span>NOT</span> <span>EXISTS</span> <span><span>`</span>Customers<span>`</span></span><span>(</span>
-	cust_id <span>VARCHAR</span><span>(</span><span>255</span><span>)</span> <span>NOT</span> <span>NULL</span> <span>COMMENT</span> <span>'客户id'</span><span>,</span>
-	cust_name <span>VARCHAR</span><span>(</span><span>255</span><span>)</span> <span>NOT</span> <span>NULL</span> <span>COMMENT</span> <span>'客户姓名'</span>
-<span>)</span><span>;</span>
-<span>INSERT</span> <span><span>`</span>Customers<span>`</span></span> <span>VALUES</span> <span>(</span><span>'cust10'</span><span>,</span><span>'andy'</span><span>)</span><span>,</span><span>(</span><span>'cust1'</span><span>,</span><span>'ben'</span><span>)</span><span>,</span><span>(</span><span>'cust2'</span><span>,</span><span>'tony'</span><span>)</span><span>,</span><span>(</span><span>'cust22'</span><span>,</span><span>'tom'</span><span>)</span><span>,</span><span>(</span><span>'cust221'</span><span>,</span><span>'an'</span><span>)</span><span>,</span><span>(</span><span>'cust2217'</span><span>,</span><span>'hex'</span><span>)</span><span>;</span>
-
-<span>DROP</span> <span>TABLE</span> <span>IF</span> <span>EXISTS</span> <span><span>`</span>Orders<span>`</span></span><span>;</span>
-<span>CREATE</span> <span>TABLE</span> <span>IF</span> <span>NOT</span> <span>EXISTS</span> <span><span>`</span>Orders<span>`</span></span><span>(</span>
-  order_num <span>VARCHAR</span><span>(</span><span>255</span><span>)</span> <span>NOT</span> <span>NULL</span> <span>COMMENT</span> <span>'商品订单号'</span><span>,</span>
-  cust_id <span>VARCHAR</span><span>(</span><span>255</span><span>)</span> <span>NOT</span> <span>NULL</span> <span>COMMENT</span> <span>'顾客id'</span>
-<span>)</span><span>;</span>
-<span>INSERT</span> <span><span>`</span>Orders<span>`</span></span> <span>VALUES</span> <span>(</span><span>'a1'</span><span>,</span><span>'cust10'</span><span>)</span><span>,</span><span>(</span><span>'a2'</span><span>,</span><span>'cust1'</span><span>)</span><span>,</span><span>(</span><span>'a3'</span><span>,</span><span>'cust2'</span><span>)</span><span>,</span><span>(</span><span>'a4'</span><span>,</span><span>'cust22'</span><span>)</span><span>,</span><span>(</span><span>'a5'</span><span>,</span><span>'cust221'</span><span>)</span><span>,</span><span>(</span><span>'a7'</span><span>,</span><span>'cust2217'</span><span>)</span><span>;</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br></div></div><h3 id="解答" tabindex="-1"> 解答</h3>
-<p>主要考察的知识点：</p>
-<ul>
-<li>取别名：<code>AS</code> 关键字</li>
-<li>求和：<code>SUM()</code></li>
-<li><code>GROUP BY</code> 和 <code>HAVING</code> 同时使用用于过滤结果</li>
-<li>排序：<code>ORDER BY</code> 关键字</li>
-</ul>
-<p>主要考察对多个 SQL 关键字的运用，同时还需要注意 SQL 中关键字的前后顺序。</p>
-<div><pre><code><span>SELECT</span> cust_name<span>,</span> <span>SUM</span><span>(</span>item_price <span>*</span> quantity<span>)</span> <span>AS</span> total_price
-<span>FROM</span> OrderItems<span>,</span> Orders<span>,</span> Customers
-<span>WHERE</span> OrderItems<span>.</span>order_num <span>=</span> Orders<span>.</span>order_num <span>AND</span> Orders<span>.</span>cust_id <span>=</span> Customers<span>.</span>cust_id
-<span>GROUP</span> <span>BY</span> cust_name
-<span>HAVING</span> total_price <span>>=</span> <span>1000</span>
-<span>ORDER</span> <span>BY</span> total_price<span>;</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br></div></div><h2 id="sql42-检索每个顾客的名称和所有的订单号-一" tabindex="-1"> SQL42 检索每个顾客的名称和所有的订单号（一）</h2>
-<h3 id="描述-1" tabindex="-1"> 描述</h3>
-<p>Customers 表代表顾客信息含有顾客 id cust_id 和顾客名称 cust_name</p>
-<table>
-<thead>
-<tr>
-<th>cust_id</th>
-<th>cust_name</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>cust10</td>
-<td>andy</td>
-</tr>
-<tr>
-<td>cust1</td>
-<td>ben</td>
-</tr>
-<tr>
-<td>cust2</td>
-<td>tony</td>
-</tr>
-<tr>
-<td>cust22</td>
-<td>tom</td>
-</tr>
-<tr>
-<td>cust221</td>
-<td>an</td>
-</tr>
-<tr>
-<td>cust2217</td>
-<td>hex</td>
-</tr>
-</tbody>
-</table>
-<p>Orders 表代表订单信息含有订单号 order_num 和顾客 id cust_id</p>
-<table>
-<thead>
-<tr>
-<th>order_num</th>
-<th>cust_id</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>a1</td>
-<td>cust10</td>
-</tr>
-<tr>
-<td>a2</td>
-<td>cust1</td>
-</tr>
-<tr>
-<td>a3</td>
-<td>cust2</td>
-</tr>
-<tr>
-<td>a4</td>
-<td>cust22</td>
-</tr>
-<tr>
-<td>a5</td>
-<td>cust221</td>
-</tr>
-<tr>
-<td>a7</td>
-<td>cust2217</td>
-</tr>
-</tbody>
-</table>
-<h3 id="问题-1" tabindex="-1"> 问题</h3>
-<p>使用 INNER JOIN 编写 SQL 语句，检索每个顾客的名称（Customers 表中的  cust_name）和所有的订单号（Orders 表中的 order_num），最后根据顾客姓名 cust_name 升序返回。</p>
-<h3 id="示例结果-1" tabindex="-1"> 示例结果</h3>
-<p>返回顾客名称 cust_name 和订单号 order_num</p>
-<table>
-<thead>
-<tr>
-<th>cust_name</th>
-<th>order_num</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>an</td>
-<td>a5</td>
-</tr>
-<tr>
-<td>andy</td>
-<td>a1</td>
-</tr>
-<tr>
-<td>ben</td>
-<td>a2</td>
-</tr>
-<tr>
-<td>hex</td>
-<td>a7</td>
-</tr>
-<tr>
-<td>tom</td>
-<td>a4</td>
-</tr>
-<tr>
-<td>tony</td>
-<td>a3</td>
-</tr>
-</tbody>
-</table>
-<h3 id="示例-1" tabindex="-1"> 示例</h3>
-<div><pre><code><span>DROP</span> <span>TABLE</span> <span>IF</span> <span>EXISTS</span> <span><span>`</span>Customers<span>`</span></span><span>;</span>
-<span>CREATE</span> <span>TABLE</span> <span>IF</span> <span>NOT</span> <span>EXISTS</span> <span><span>`</span>Customers<span>`</span></span><span>(</span>
-	cust_id <span>VARCHAR</span><span>(</span><span>255</span><span>)</span> <span>NOT</span> <span>NULL</span> <span>COMMENT</span> <span>'客户id'</span><span>,</span>
-	cust_name <span>VARCHAR</span><span>(</span><span>255</span><span>)</span> <span>NOT</span> <span>NULL</span> <span>COMMENT</span> <span>'客户姓名'</span>
-<span>)</span><span>;</span>
-<span>INSERT</span> <span><span>`</span>Customers<span>`</span></span> <span>VALUES</span> <span>(</span><span>'cust10'</span><span>,</span><span>'andy'</span><span>)</span><span>,</span><span>(</span><span>'cust1'</span><span>,</span><span>'ben'</span><span>)</span><span>,</span><span>(</span><span>'cust2'</span><span>,</span><span>'tony'</span><span>)</span><span>,</span><span>(</span><span>'cust22'</span><span>,</span><span>'tom'</span><span>)</span><span>,</span><span>(</span><span>'cust221'</span><span>,</span><span>'an'</span><span>)</span><span>,</span><span>(</span><span>'cust2217'</span><span>,</span><span>'hex'</span><span>)</span><span>;</span>
-
-<span>DROP</span> <span>TABLE</span> <span>IF</span> <span>EXISTS</span> <span><span>`</span>Orders<span>`</span></span><span>;</span>
-<span>CREATE</span> <span>TABLE</span> <span>IF</span> <span>NOT</span> <span>EXISTS</span> <span><span>`</span>Orders<span>`</span></span><span>(</span>
-  order_num <span>VARCHAR</span><span>(</span><span>255</span><span>)</span> <span>NOT</span> <span>NULL</span> <span>COMMENT</span> <span>'商品订单号'</span><span>,</span>
-  cust_id <span>VARCHAR</span><span>(</span><span>255</span><span>)</span> <span>NOT</span> <span>NULL</span> <span>COMMENT</span> <span>'顾客id'</span>
-<span>)</span><span>;</span>
-<span>INSERT</span> <span><span>`</span>Orders<span>`</span></span> <span>VALUES</span> <span>(</span><span>'a1'</span><span>,</span><span>'cust10'</span><span>)</span><span>,</span><span>(</span><span>'a2'</span><span>,</span><span>'cust1'</span><span>)</span><span>,</span><span>(</span><span>'a3'</span><span>,</span><span>'cust2'</span><span>)</span><span>,</span><span>(</span><span>'a4'</span><span>,</span><span>'cust22'</span><span>)</span><span>,</span><span>(</span><span>'a5'</span><span>,</span><span>'cust221'</span><span>)</span><span>,</span><span>(</span><span>'a7'</span><span>,</span><span>'cust2217'</span><span>)</span><span>;</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br></div></div><h3 id="解答-1" tabindex="-1"> 解答</h3>
-<p>主要考察 <code>INNER JOIN</code> 的用法，其使用语法如下：</p>
-<div><pre><code><span>SELECT</span> column_name<span>(</span>s<span>)</span>
-<span>FROM</span> table1
-<span>INNER</span> <span>JOIN</span> table2
-<span>ON</span> table1<span>.</span>column_name<span>=</span>table2<span>.</span>column_name<span>;</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br></div></div><p>要实现本题，利用上述语法填入对应字段名和表名即可，最后则是关键字 <code>ORDER BY</code> 的使用。</p>
-<div><pre><code><span>SELECT</span> cust_name<span>,</span> Orders<span>.</span>order_num <span>FROM</span> Customers <span>JOIN</span> Orders <span>ON</span> Orders<span>.</span>cust_id <span>=</span> Customers<span>.</span>cust_id <span>ORDER</span> <span>BY</span> cust_name<span>;</span>
-</code></pre><div aria-hidden="true"><span>1</span><br></div></div><h2 id="sql43-检索每个顾客的名称和所有的订单号-二" tabindex="-1"> SQL43 检索每个顾客的名称和所有的订单号（二）</h2>
-<h3 id="描述-2" tabindex="-1"> 描述</h3>
-<p>Orders 表代表订单信息含有订单号 order_num和顾客 id cust_id</p>
-<table>
-<thead>
-<tr>
-<th>order_num</th>
-<th>cust_id</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>a1</td>
-<td>cust10</td>
-</tr>
-<tr>
-<td>a2</td>
-<td>cust1</td>
-</tr>
-<tr>
-<td>a3</td>
-<td>cust2</td>
-</tr>
-<tr>
-<td>a4</td>
-<td>cust22</td>
-</tr>
-<tr>
-<td>a5</td>
-<td>cust221</td>
-</tr>
-<tr>
-<td>a7</td>
-<td>cust2217</td>
-</tr>
-</tbody>
-</table>
-<p>Customers 表代表顾客信息含有顾客 id cust_id 和 顾客名称 cust_name</p>
-<table>
-<thead>
-<tr>
-<th>cust_id</th>
-<th>cust_name</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>cust10</td>
-<td>andy</td>
-</tr>
-<tr>
-<td>cust1</td>
-<td>ben</td>
-</tr>
-<tr>
-<td>cust2</td>
-<td>tony</td>
-</tr>
-<tr>
-<td>cust22</td>
-<td>tom</td>
-</tr>
-<tr>
-<td>cust221</td>
-<td>an</td>
-</tr>
-<tr>
-<td>cust2217</td>
-<td>hex</td>
-</tr>
-<tr>
-<td>cust40</td>
-<td>ace</td>
-</tr>
-</tbody>
-</table>
-<h3 id="问题-2" tabindex="-1"> 问题</h3>
-<p>检索每个顾客的名称（Customers 表中的 cust_name）和所有的订单号（Orders 表中的 order_num），列出所有的顾客，即使他们没有下过订单。最后根据顾客姓名 cust_name 升序返回。</p>
-<h3 id="示例结果-2" tabindex="-1"> 示例结果</h3>
-<p>返回顾客名称 cust_name 和订单号 order_num</p>
-<table>
-<thead>
-<tr>
-<th>cust_name</th>
-<th>order_num</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>ace</td>
-<td>NULL</td>
-</tr>
-<tr>
-<td>an</td>
-<td>a5</td>
-</tr>
-<tr>
-<td>andy</td>
-<td>a1</td>
-</tr>
-<tr>
-<td>ben</td>
-<td>a2</td>
-</tr>
-<tr>
-<td>hex</td>
-<td>a7</td>
-</tr>
-<tr>
-<td>tom</td>
-<td>a4</td>
-</tr>
-<tr>
-<td>tony</td>
-<td>a3</td>
-</tr>
-</tbody>
-</table>
-<h3 id="示例解析-1" tabindex="-1"> 示例解析</h3>
-<p>基于两张表，返回订单号 a1 的顾客名称 andy 等人，没有下单的顾客 ace 也统计了进来。</p>
-<h3 id="示例-2" tabindex="-1"> 示例</h3>
-<div><pre><code><span>DROP</span> <span>TABLE</span> <span>IF</span> <span>EXISTS</span> <span><span>`</span>Customers<span>`</span></span><span>;</span>
-<span>CREATE</span> <span>TABLE</span> <span>IF</span> <span>NOT</span> <span>EXISTS</span> <span><span>`</span>Customers<span>`</span></span><span>(</span>
-	cust_id <span>VARCHAR</span><span>(</span><span>255</span><span>)</span> <span>NOT</span> <span>NULL</span> <span>COMMENT</span> <span>'客户id'</span><span>,</span>
-	cust_name <span>VARCHAR</span><span>(</span><span>255</span><span>)</span> <span>NOT</span> <span>NULL</span> <span>COMMENT</span> <span>'客户姓名'</span>
-<span>)</span><span>;</span>
-<span>INSERT</span> <span><span>`</span>Customers<span>`</span></span> <span>VALUES</span> <span>(</span><span>'cust10'</span><span>,</span><span>'andy'</span><span>)</span><span>,</span><span>(</span><span>'cust1'</span><span>,</span><span>'ben'</span><span>)</span><span>,</span><span>(</span><span>'cust2'</span><span>,</span><span>'tony'</span><span>)</span><span>,</span><span>(</span><span>'cust22'</span><span>,</span><span>'tom'</span><span>)</span><span>,</span><span>(</span><span>'cust221'</span><span>,</span><span>'an'</span><span>)</span><span>,</span><span>(</span><span>'cust2217'</span><span>,</span><span>'hex'</span><span>)</span><span>,</span><span>(</span><span>'cust40'</span><span>,</span><span>'ace'</span><span>)</span><span>;</span>
-
-<span>DROP</span> <span>TABLE</span> <span>IF</span> <span>EXISTS</span> <span><span>`</span>Orders<span>`</span></span><span>;</span>
-<span>CREATE</span> <span>TABLE</span> <span>IF</span> <span>NOT</span> <span>EXISTS</span> <span><span>`</span>Orders<span>`</span></span><span>(</span>
-  order_num <span>VARCHAR</span><span>(</span><span>255</span><span>)</span> <span>NOT</span> <span>NULL</span> <span>COMMENT</span> <span>'商品订单号'</span><span>,</span>
-  cust_id <span>VARCHAR</span><span>(</span><span>255</span><span>)</span> <span>NOT</span> <span>NULL</span> <span>COMMENT</span> <span>'顾客id'</span>
-<span>)</span><span>;</span>
-<span>INSERT</span> <span><span>`</span>Orders<span>`</span></span> <span>VALUES</span> <span>(</span><span>'a1'</span><span>,</span><span>'cust10'</span><span>)</span><span>,</span><span>(</span><span>'a2'</span><span>,</span><span>'cust1'</span><span>)</span><span>,</span><span>(</span><span>'a3'</span><span>,</span><span>'cust2'</span><span>)</span><span>,</span><span>(</span><span>'a4'</span><span>,</span><span>'cust22'</span><span>)</span><span>,</span><span>(</span><span>'a5'</span><span>,</span><span>'cust221'</span><span>)</span><span>,</span><span>(</span><span>'a7'</span><span>,</span><span>'cust2217'</span><span>)</span><span>;</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br></div></div><h3 id="解答-2" tabindex="-1"> 解答</h3>
-<p>根据题意，主要以 <code>Customers</code> 表中的列为主，然后取 <code>Customers</code> 和 <code>Orders</code> 中的交集。对于 <code>Orders</code> 表中不存在的列则取值 <code>null</code>。所以可以使用外联结中的 <code>LEFT JION</code>，其使用语法如下：</p>
-<div><pre><code><span>SELECT</span> column_name<span>(</span>s<span>)</span>
-<span>FROM</span> table1
-<span>LEFT</span> <span>OUTER</span> <span>JOIN</span> table2
-<span>ON</span> table1<span>.</span>column_name<span>=</span>table2<span>.</span>column_name<span>;</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br></div></div><p>套用上述语法，填入对应表和列名即可实现，最后则是再加入简单的排序即可。</p>
-<div><pre><code><span>SELECT</span> cust_name<span>,</span> Orders<span>.</span>order_num <span>FROM</span> Customers <span>LEFT</span> <span>JOIN</span> Orders <span>On</span> Orders<span>.</span>cust_id <span>=</span> Customers<span>.</span>cust_id <span>ORDER</span> <span>BY</span> cust_name<span>;</span>
-</code></pre><div aria-hidden="true"><span>1</span><br></div></div><h2 id="sql44-返回产品名称和与之相关的订单号" tabindex="-1"> SQL44 返回产品名称和与之相关的订单号</h2>
-<h3 id="描述-3" tabindex="-1"> 描述</h3>
-<p>Products 表为产品信息表含有字段 prod_id 产品 id、prod_name 产品名称</p>
-<table>
-<thead>
-<tr>
-<th>prod_id</th>
-<th>prod_name</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>a0001</td>
-<td>egg</td>
-</tr>
-<tr>
-<td>a0002</td>
-<td>sockets</td>
-</tr>
-<tr>
-<td>a0013</td>
-<td>coffee</td>
-</tr>
-<tr>
-<td>a0003</td>
-<td>cola</td>
-</tr>
-<tr>
-<td>a0023</td>
-<td>soda</td>
-</tr>
-</tbody>
-</table>
-<p>OrderItems 表为订单信息表含有字段 order_num 订单号和产品 id prod_id</p>
-<table>
-<thead>
-<tr>
-<th>prod_id</th>
-<th>order_num</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>a0001</td>
-<td>a105</td>
-</tr>
-<tr>
-<td>a0002</td>
-<td>a1100</td>
-</tr>
-<tr>
-<td>a0002</td>
-<td>a200</td>
-</tr>
-<tr>
-<td>a0013</td>
-<td>a1121</td>
-</tr>
-<tr>
-<td>a0003</td>
-<td>a10</td>
-</tr>
-<tr>
-<td>a0003</td>
-<td>a19</td>
-</tr>
-<tr>
-<td>a0003</td>
-<td>a5</td>
-</tr>
-</tbody>
-</table>
-<h3 id="问题-3" tabindex="-1"> 问题</h3>
-<p>使用 OUTER JOIN 联结 Products 表和 OrderItems 表，返回产品名称（prod_name）和与之相关的订单号（order_num）的列表，并按照产品名称升序排序。</p>
-<h3 id="示例结果-3" tabindex="-1"> 示例结果</h3>
-<p>返回产品名称 prod_name 和订单号 order_num</p>
-<table>
-<thead>
-<tr>
-<th>prod_name</th>
-<th>order_num</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>coffee</td>
-<td>a1121</td>
-</tr>
-<tr>
-<td>cola</td>
-<td>a5</td>
-</tr>
-<tr>
-<td>cola</td>
-<td>a19</td>
-</tr>
-<tr>
-<td>cola</td>
-<td>a10</td>
-</tr>
-<tr>
-<td>egg</td>
-<td>a105</td>
-</tr>
-<tr>
-<td>sockets</td>
-<td>a200</td>
-</tr>
-<tr>
-<td>sockets</td>
-<td>a1100</td>
-</tr>
-<tr>
-<td>soda</td>
-<td>NULL</td>
-</tr>
-</tbody>
-</table>
-<h3 id="示例解析-2" tabindex="-1"> 示例解析</h3>
-<p>返回产品和对应实际支付订单的订单号，但是无实际订单的产品 soda 也返回，最后根据产品名称升序排序。</p>
-<h3 id="示例-3" tabindex="-1"> 示例</h3>
-<div><pre><code><span>DROP</span> <span>TABLE</span> <span>IF</span> <span>EXISTS</span> <span><span>`</span>Products<span>`</span></span><span>;</span>
-<span>CREATE</span> <span>TABLE</span> <span>IF</span> <span>NOT</span> <span>EXISTS</span> <span><span>`</span>Products<span>`</span></span> <span>(</span>
-<span><span>`</span>prod_id<span>`</span></span> <span>VARCHAR</span><span>(</span><span>255</span><span>)</span> <span>NOT</span> <span>NULL</span> <span>COMMENT</span> <span>'产品 ID'</span><span>,</span>
-<span><span>`</span>prod_name<span>`</span></span> <span>VARCHAR</span><span>(</span><span>255</span><span>)</span> <span>NOT</span> <span>NULL</span> <span>COMMENT</span> <span>'产品名称'</span>
-<span>)</span><span>;</span>
-<span>INSERT</span> <span>INTO</span> <span><span>`</span>Products<span>`</span></span> <span>VALUES</span> <span>(</span><span>'a0001'</span><span>,</span><span>'egg'</span><span>)</span><span>,</span>
-<span>(</span><span>'a0002'</span><span>,</span><span>'sockets'</span><span>)</span><span>,</span>
-<span>(</span><span>'a0013'</span><span>,</span><span>'coffee'</span><span>)</span><span>,</span>
-<span>(</span><span>'a0003'</span><span>,</span><span>'cola'</span><span>)</span><span>,</span>
-<span>(</span><span>'a0023'</span><span>,</span><span>'soda'</span><span>)</span><span>;</span>
-
-<span>DROP</span> <span>TABLE</span> <span>IF</span> <span>EXISTS</span> <span><span>`</span>OrderItems<span>`</span></span><span>;</span>
-<span>CREATE</span> <span>TABLE</span> <span>IF</span> <span>NOT</span> <span>EXISTS</span> <span><span>`</span>OrderItems<span>`</span></span><span>(</span>
-	prod_id <span>VARCHAR</span><span>(</span><span>255</span><span>)</span> <span>NOT</span> <span>NULL</span> <span>COMMENT</span> <span>'产品id'</span><span>,</span>
-	order_num <span>VARCHAR</span><span>(</span><span>255</span><span>)</span> <span>NOT</span> <span>NULL</span> <span>COMMENT</span> <span>'商品数量'</span>
-<span>)</span><span>;</span>
-<span>INSERT</span> <span><span>`</span>OrderItems<span>`</span></span> <span>VALUES</span> <span>(</span><span>'a0001'</span><span>,</span><span>'a105'</span><span>)</span><span>,</span><span>(</span><span>'a0002'</span><span>,</span><span>'a1100'</span><span>)</span><span>,</span><span>(</span><span>'a0002'</span><span>,</span><span>'a200'</span><span>)</span><span>,</span><span>(</span><span>'a0013'</span><span>,</span><span>'a1121'</span><span>)</span><span>,</span><span>(</span><span>'a0003'</span><span>,</span><span>'a10'</span><span>)</span><span>,</span><span>(</span><span>'a0003'</span><span>,</span><span>'a19'</span><span>)</span><span>,</span><span>(</span><span>'a0003'</span><span>,</span><span>'a5'</span><span>)</span><span>;</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br></div></div><h3 id="解答-3" tabindex="-1"> 解答</h3>
-<p>此题解法类似于 43 题，主要使用 <code>OUTER JOIN</code> 中的左联结 <code>LEFT JOIN</code>，主要清除相关语法，然后套用填入表名和列名即可。</p>
-<div><pre><code><span>SELECT</span> prod_name<span>,</span> OrderItems<span>.</span>order_num <span>FROM</span> Products 
-<span>LEFT</span> <span>JOIN</span> OrderItems <span>ON</span> OrderItems<span>.</span>prod_id <span>=</span> Products<span>.</span>prod_id
-<span>ORDER</span> <span>BY</span> prod_name<span>;</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br></div></div><h2 id="sql45-返回产品名称和每一项产品的总订单数" tabindex="-1"> SQL45 返回产品名称和每一项产品的总订单数</h2>
-<h3 id="描述-4" tabindex="-1"> 描述</h3>
-<p>Products 表为产品信息表含有字段 prod_id 产品 id、prod_name 产品名称</p>
-<table>
-<thead>
-<tr>
-<th>prod_id</th>
-<th>prod_name</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>a0001</td>
-<td>egg</td>
-</tr>
-<tr>
-<td>a0002</td>
-<td>sockets</td>
-</tr>
-<tr>
-<td>a0013</td>
-<td>coffee</td>
-</tr>
-<tr>
-<td>a0003</td>
-<td>cola</td>
-</tr>
-<tr>
-<td>a0023</td>
-<td>soda</td>
-</tr>
-</tbody>
-</table>
-<p>OrderItems 表为订单信息表含有字段 order_num 订单号和产品 id prod_id</p>
-<table>
-<thead>
-<tr>
-<th>prod_id</th>
-<th>order_num</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>a0001</td>
-<td>a105</td>
-</tr>
-<tr>
-<td>a0002</td>
-<td>a1100</td>
-</tr>
-<tr>
-<td>a0002</td>
-<td>a200</td>
-</tr>
-<tr>
-<td>a0013</td>
-<td>a1121</td>
-</tr>
-<tr>
-<td>a0003</td>
-<td>a10</td>
-</tr>
-<tr>
-<td>a0003</td>
-<td>a19</td>
-</tr>
-<tr>
-<td>a0003</td>
-<td>a5</td>
-</tr>
-</tbody>
-</table>
-<h3 id="问题-4" tabindex="-1"> 问题</h3>
-<p>使用 OUTER JOIN 联结 Products 表和 OrderItems 表，返回产品名称（prod_name）和每一项产品的总订单数（不是订单号），并按产品名称升序排序。</p>
-<h3 id="示例结果-4" tabindex="-1"> 示例结果</h3>
-<p>返回产品名称 prod_name 和订单号订单数 orders</p>
-<table>
-<thead>
-<tr>
-<th>prod_name</th>
-<th>orders</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>coffee</td>
-<td>1</td>
-</tr>
-<tr>
-<td>cola</td>
-<td>3</td>
-</tr>
-<tr>
-<td>egg</td>
-<td>1</td>
-</tr>
-<tr>
-<td>sockets</td>
-<td>2</td>
-</tr>
-<tr>
-<td>soda</td>
-<td>0</td>
-</tr>
-</tbody>
-</table>
-<h3 id="示例解析-3" tabindex="-1"> 示例解析</h3>
-<p>返回产品和产品对应的实际支付的订单数，但是无实际订单的产品 soda 也返回，最后根据产品名称升序排序。</p>
-<h3 id="示例-4" tabindex="-1"> 示例</h3>
-<div><pre><code><span>DROP</span> <span>TABLE</span> <span>IF</span> <span>EXISTS</span> <span><span>`</span>Products<span>`</span></span><span>;</span>
-<span>CREATE</span> <span>TABLE</span> <span>IF</span> <span>NOT</span> <span>EXISTS</span> <span><span>`</span>Products<span>`</span></span> <span>(</span>
-<span><span>`</span>prod_id<span>`</span></span> <span>VARCHAR</span><span>(</span><span>255</span><span>)</span> <span>NOT</span> <span>NULL</span> <span>COMMENT</span> <span>'产品 ID'</span><span>,</span>
-<span><span>`</span>prod_name<span>`</span></span> <span>VARCHAR</span><span>(</span><span>255</span><span>)</span> <span>NOT</span> <span>NULL</span> <span>COMMENT</span> <span>'产品名称'</span>
-<span>)</span><span>;</span>
-<span>INSERT</span> <span>INTO</span> <span><span>`</span>Products<span>`</span></span> <span>VALUES</span> <span>(</span><span>'a0001'</span><span>,</span><span>'egg'</span><span>)</span><span>,</span>
-<span>(</span><span>'a0002'</span><span>,</span><span>'sockets'</span><span>)</span><span>,</span>
-<span>(</span><span>'a0013'</span><span>,</span><span>'coffee'</span><span>)</span><span>,</span>
-<span>(</span><span>'a0003'</span><span>,</span><span>'cola'</span><span>)</span><span>,</span>
-<span>(</span><span>'a0023'</span><span>,</span><span>'soda'</span><span>)</span><span>;</span>
-
-<span>DROP</span> <span>TABLE</span> <span>IF</span> <span>EXISTS</span> <span><span>`</span>OrderItems<span>`</span></span><span>;</span>
-<span>CREATE</span> <span>TABLE</span> <span>IF</span> <span>NOT</span> <span>EXISTS</span> <span><span>`</span>OrderItems<span>`</span></span><span>(</span>
-	prod_id <span>VARCHAR</span><span>(</span><span>255</span><span>)</span> <span>NOT</span> <span>NULL</span> <span>COMMENT</span> <span>'产品id'</span><span>,</span>
-	order_num <span>VARCHAR</span><span>(</span><span>255</span><span>)</span> <span>NOT</span> <span>NULL</span> <span>COMMENT</span> <span>'商品数量'</span>
-<span>)</span><span>;</span>
-<span>INSERT</span> <span><span>`</span>OrderItems<span>`</span></span> <span>VALUES</span> <span>(</span><span>'a0001'</span><span>,</span><span>'a105'</span><span>)</span><span>,</span><span>(</span><span>'a0002'</span><span>,</span><span>'a1100'</span><span>)</span><span>,</span><span>(</span><span>'a0002'</span><span>,</span><span>'a200'</span><span>)</span><span>,</span><span>(</span><span>'a0013'</span><span>,</span><span>'a1121'</span><span>)</span><span>,</span><span>(</span><span>'a0003'</span><span>,</span><span>'a10'</span><span>)</span><span>,</span><span>(</span><span>'a0003'</span><span>,</span><span>'a19'</span><span>)</span><span>,</span><span>(</span><span>'a0003'</span><span>,</span><span>'a5'</span><span>)</span><span>;</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br></div></div><h3 id="解答-4" tabindex="-1"> 解答</h3>
-<p>考察的知识点仍然是外连接，只不过加入了 <code>COUNT()</code> 函数用于分组统计，最后同样是简单的排序。</p>
-<div><pre><code><span>SELECT</span> prod_name<span>,</span> <span>COUNT</span><span>(</span>order_num<span>)</span> <span>AS</span> orders
-<span>FROM</span> Products <span>LEFT</span> <span>JOIN</span> OrderItems <span>ON</span> OrderItems<span>.</span>prod_id <span>=</span> Products<span>.</span>prod_id
-<span>GROUP</span> <span>BY</span> prod_name <span>ORDER</span> <span>BY</span> prod_name<span>;</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br></div></div><h2 id="致谢" tabindex="-1"> 致谢</h2>
-<p>感谢<a href="http://nowcoder.com/" target="_blank" rel="noopener noreferrer">牛客网<ExternalLinkIcon/></a>提供的题目列表。</p>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>SQL 必知必会 50 题（46 - 50）</title>
-      <link>https://cunyu1943.github.io/JavaPark/JavaPark/database/sql-in-10min/46-50.html</link>
-      <guid>https://cunyu1943.github.io/JavaPark/JavaPark/database/sql-in-10min/46-50.html</guid>
-      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">SQL 必知必会 50 题（46 - 50）</source>
-      <category>SQL 必知必会 50 题</category>
-      <pubDate>Sat, 09 Apr 2022 22:22:18 GMT</pubDate>
-      <content:encoded><![CDATA[<h2 id="sql46-列出供应商及其可供产品的数量" tabindex="-1"> SQL46 列出供应商及其可供产品的数量</h2>
-<h3 id="描述" tabindex="-1"> 描述</h3>
-<p>有 Vendors 表含有 vend_id 供应商id.</p>
-<table>
-<thead>
-<tr>
-<th>vend_id</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>a0002</td>
-</tr>
-<tr>
-<td>a0013</td>
-</tr>
-<tr>
-<td>a0003</td>
-</tr>
-<tr>
-<td>a0010</td>
-</tr>
-</tbody>
-</table>
-<p>有 Products 表含有供应商 id 和供应产品 id</p>
-<table>
-<thead>
-<tr>
-<th>vend_id</th>
-<th>prod_id</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>a0001</td>
-<td>egg</td>
-</tr>
-<tr>
-<td>a0002</td>
-<td>prod_id_iphone</td>
-</tr>
-<tr>
-<td>a00113</td>
-<td>prod_id_tea</td>
-</tr>
-<tr>
-<td>a0003</td>
-<td>prod_id_vivo phone</td>
-</tr>
-<tr>
-<td>a0010</td>
-<td>prod_id_huawei phone</td>
-</tr>
-</tbody>
-</table>
-<h3 id="问题" tabindex="-1"> 问题</h3>
-<p>列出供应商（Vendors 表中的 vend_id）及其可供产品的数量，包括没有产品的供应商。你需要使用 OUTER JOIN 和 COUNT() 聚合函数来计算 Products 表中每种产品的数量，最后根据 vend_id 升序排序。</p>
-<p>注意：vend_id 列会显示在多个表中，因此在每次引用它时都需要完全限定它。</p>
-<h3 id="示例结果" tabindex="-1"> 示例结果</h3>
-<p>返回供应商 id 和对应供应商供应的产品的个数</p>
-<table>
-<thead>
-<tr>
-<th>vend_id</th>
-<th>prod_id</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>a0002</td>
-<td>1</td>
-</tr>
-<tr>
-<td>a0013</td>
-<td>0</td>
-</tr>
-<tr>
-<td>a0003</td>
-<td>1</td>
-</tr>
-<tr>
-<td>a0010</td>
-<td>1</td>
-</tr>
-</tbody>
-</table>
-<h3 id="示例解析" tabindex="-1"> 示例解析</h3>
-<p>供应商 a00013 供应的商品不在 Products 表中所以为 0，其他供应商供应的产品为 1 个。</p>
-<h3 id="示例" tabindex="-1"> 示例</h3>
-<div><pre><code><span>DROP</span> <span>TABLE</span> <span>IF</span> <span>EXISTS</span> <span><span>`</span>Vendors<span>`</span></span><span>;</span>
-<span>CREATE</span> <span>TABLE</span> <span>IF</span> <span>NOT</span> <span>EXISTS</span> <span><span>`</span>Vendors<span>`</span></span> <span>(</span>
-  <span><span>`</span>vend_id<span>`</span></span> <span>VARCHAR</span><span>(</span><span>255</span><span>)</span> <span>NOT</span> <span>NULL</span> <span>COMMENT</span> <span>'vend名称'</span>
-<span>)</span><span>;</span>
-<span>INSERT</span> <span>INTO</span> <span><span>`</span>Vendors<span>`</span></span> <span>VALUES</span> <span>(</span><span>'a0002'</span><span>)</span><span>,</span>
-<span>(</span><span>'a0013'</span><span>)</span><span>,</span>
-<span>(</span><span>'a0003'</span><span>)</span><span>,</span>
-<span>(</span><span>'a0010'</span><span>)</span><span>;</span>
-
-<span>DROP</span> <span>TABLE</span> <span>IF</span> <span>EXISTS</span> <span><span>`</span>Products<span>`</span></span><span>;</span>
-<span>CREATE</span> <span>TABLE</span> <span>IF</span> <span>NOT</span> <span>EXISTS</span> <span><span>`</span>Products<span>`</span></span> <span>(</span>
-<span><span>`</span>vend_id<span>`</span></span> <span>VARCHAR</span><span>(</span><span>255</span><span>)</span> <span>NOT</span> <span>NULL</span> <span>COMMENT</span> <span>'产品 ID'</span><span>,</span>
-<span><span>`</span>prod_id<span>`</span></span> <span>VARCHAR</span><span>(</span><span>255</span><span>)</span> <span>NOT</span> <span>NULL</span> <span>COMMENT</span> <span>'产品名称'</span>
-<span>)</span><span>;</span>
-<span>INSERT</span> <span>INTO</span> <span><span>`</span>Products<span>`</span></span> <span>VALUES</span> <span>(</span><span>'a0001'</span><span>,</span><span>'egg'</span><span>)</span><span>,</span>
-<span>(</span><span>'a0002'</span><span>,</span><span>'prod_id_iphone'</span><span>)</span><span>,</span>
-<span>(</span><span>'a00113'</span><span>,</span><span>'prod_id_tea'</span><span>)</span><span>,</span>
-<span>(</span><span>'a0003'</span><span>,</span><span>'prod_id_vivo phone'</span><span>)</span><span>,</span>
-<span>(</span><span>'a0010'</span><span>,</span><span>'prod_id_huawei phone'</span><span>)</span><span>;</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br></div></div><h3 id="解答" tabindex="-1"> 解答</h3>
-<p>利用 <code>COUNT()</code> 函数对 <code>Vendors</code> 中的 <code>vend_id</code> 分组并统计。</p>
-<p>另外则是考察 <code>LEFT JOIN</code>，即题目中所说的 <code>OUTER JOIN</code>，其具体使用语法如下。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/cunyu1943/blog-imgs@main/2022/04/image-20220409165508072.png" alt="" loading="lazy"></p>
-<div><pre><code><span>SELECT</span> column_name<span>(</span>s<span>)</span>
-<span>FROM</span> table1
-<span>LEFT</span> <span>JOIN</span> table2
-<span>ON</span> table1<span>.</span>column_name<span>=</span>table2<span>.</span>column_name<span>;</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br></div></div><div><pre><code><span>SELECT</span> Vendors<span>.</span>vend_id<span>,</span> <span>COUNT</span><span>(</span>Products<span>.</span>prod_id<span>)</span> <span>FROM</span> Vendors <span>LEFT</span> <span>JOIN</span> Products <span>ON</span> Vendors<span>.</span>vend_id <span>=</span> Products<span>.</span>vend_id <span>GROUP</span> <span>BY</span> Vendors<span>.</span>vend_id <span>ORDER</span> <span>BY</span> Vendors<span>.</span>vend_id<span>;</span>
-</code></pre><div aria-hidden="true"><span>1</span><br></div></div><h2 id="sql47-将两个-select-语句结合起来-一" tabindex="-1"> SQL47 将两个 SELECT 语句结合起来（一）</h2>
-<h3 id="描述-1" tabindex="-1"> 描述</h3>
-<p>表 OrderItems 包含订单产品信息，字段 prod_id 代表产品 id、quantity 代表产品数量</p>
-<table>
-<thead>
-<tr>
-<th>prod_id</th>
-<th>quantity</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>a0001</td>
-<td>105</td>
-</tr>
-<tr>
-<td>a0002</td>
-<td>100</td>
-</tr>
-<tr>
-<td>a0002</td>
-<td>200</td>
-</tr>
-<tr>
-<td>a0013</td>
-<td>1121</td>
-</tr>
-<tr>
-<td>a0003</td>
-<td>10</td>
-</tr>
-<tr>
-<td>a0003</td>
-<td>19</td>
-</tr>
-<tr>
-<td>a0003</td>
-<td>5</td>
-</tr>
-<tr>
-<td>BNBG</td>
-<td>10002</td>
-</tr>
-</tbody>
-</table>
-<h3 id="问题-1" tabindex="-1"> 问题</h3>
-<p>将两个 SELECT 语句结合起来，以便从 OrderItems 表中检索产品 id（prod_id）和 quantity。其中，一个 SELECT 语句过滤数量为 100 的行，另一个 SELECT 语句过滤 id 以 BNBG 开头的产品，最后按产品 id 对结果进行升序排序。</p>
-<h3 id="示例结果-1" tabindex="-1"> 示例结果</h3>
-<p>返回产品 id prod_id和产品数量 quantity</p>
-<table>
-<thead>
-<tr>
-<th>prod_id</th>
-<th>quantity</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>a0002</td>
-<td>100</td>
-</tr>
-<tr>
-<td>BNBG</td>
-<td>10002</td>
-</tr>
-</tbody>
-</table>
-<h3 id="示例解析-1" tabindex="-1"> 示例解析</h3>
-<p>产品 id a0002 因为数量等于 100 被选取返回；BNBG 因为是以 BNBG 开头的产品所以返回；最后以产品 id 进行排序返回。</p>
-<h3 id="示例-1" tabindex="-1"> 示例</h3>
-<div><pre><code><span>DROP</span> <span>TABLE</span> <span>IF</span> <span>EXISTS</span> <span><span>`</span>OrderItems<span>`</span></span><span>;</span>
-<span>CREATE</span> <span>TABLE</span> <span>IF</span> <span>NOT</span> <span>EXISTS</span> <span><span>`</span>OrderItems<span>`</span></span><span>(</span>
-	prod_id <span>VARCHAR</span><span>(</span><span>255</span><span>)</span> <span>NOT</span> <span>NULL</span> <span>COMMENT</span> <span>'产品id'</span><span>,</span>
-	quantity <span>VARCHAR</span><span>(</span><span>255</span><span>)</span> <span>NOT</span> <span>NULL</span> <span>COMMENT</span> <span>'商品数量'</span>
-<span>)</span><span>;</span>
-<span>INSERT</span> <span><span>`</span>OrderItems<span>`</span></span> <span>VALUES</span> <span>(</span><span>'a0001'</span><span>,</span><span>105</span><span>)</span><span>,</span><span>(</span><span>'a0002'</span><span>,</span><span>100</span><span>)</span><span>,</span><span>(</span><span>'a0002'</span><span>,</span><span>200</span><span>)</span><span>,</span><span>(</span><span>'a0013'</span><span>,</span><span>1121</span><span>)</span><span>,</span><span>(</span><span>'a0003'</span><span>,</span><span>10</span><span>)</span><span>,</span><span>(</span><span>'a0003'</span><span>,</span><span>19</span><span>)</span><span>,</span><span>(</span><span>'a0003'</span><span>,</span><span>5</span><span>)</span><span>,</span><span>(</span><span>'BNBG'</span><span>,</span><span>10002</span><span>)</span><span>;</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br></div></div><h3 id="解答-1" tabindex="-1"> 解答</h3>
-<p>依照题意，其实我们利用一个 <code>SELECT</code> 然后搭配 <code>WHERE</code> 条件查询就能将满足题意的纪律筛选出来。但是为了练习关键字 <code>UNION</code> 的使用，可以将两个条件查询语句分开，然后用 <code>UNION</code> 联接起来，最后则是按照 <code>prod_id</code> 正序排列。</p>
-<div><pre><code><span>SELECT</span> prod_id<span>,</span> quantity <span>FROM</span> OrderItems <span>WHERE</span> quantity <span>=</span> <span>'100'</span> <span>UNION</span> <span>SELECT</span> prod_id<span>,</span> quantity <span>FROM</span> OrderItems <span>WHERE</span> prod_id <span>LIKE</span> <span>'BNBG%'</span> <span>ORDER</span> <span>BY</span> prod_id<span>;</span>
-</code></pre><div aria-hidden="true"><span>1</span><br></div></div><h2 id="sql48-将两个-select-语句结合起来-二" tabindex="-1"> SQL48 将两个 SELECT 语句结合起来（二）</h2>
-<h3 id="描述-2" tabindex="-1"> 描述</h3>
-<p>表 OrderItems 包含订单产品信息，字段 prod_id 代表产品 id、quantity 代表产品数量。</p>
-<table>
-<thead>
-<tr>
-<th>prod_id</th>
-<th>quantity</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>a0001</td>
-<td>105</td>
-</tr>
-<tr>
-<td>a0002</td>
-<td>100</td>
-</tr>
-<tr>
-<td>a0002</td>
-<td>200</td>
-</tr>
-<tr>
-<td>a0013</td>
-<td>1121</td>
-</tr>
-<tr>
-<td>a0003</td>
-<td>10</td>
-</tr>
-<tr>
-<td>a0003</td>
-<td>19</td>
-</tr>
-<tr>
-<td>a0003</td>
-<td>5</td>
-</tr>
-<tr>
-<td>BNBG</td>
-<td>10002</td>
-</tr>
-</tbody>
-</table>
-<h3 id="问题-2" tabindex="-1"> 问题</h3>
-<p>将两个 SELECT 语句结合起来，以便从 OrderItems 表中检索产品 id（prod_id）和 quantity。其中，一个 SELECT 语句过滤数量为 100 的行，另一个 SELECT 语句过滤 id 以 BNBG 开头的产品，最后按产品 id 对结果进行升序排序。
-注意：这次仅使用单个 SELECT 语句。</p>
-<h3 id="示例结果-2" tabindex="-1"> 示例结果</h3>
-<p>返回产品 id prod_id 和产品数量 quantity</p>
-<table>
-<thead>
-<tr>
-<th>prod_id</th>
-<th>quantity</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>a0002</td>
-<td>100</td>
-</tr>
-<tr>
-<td>BNBG</td>
-<td>10002</td>
-</tr>
-</tbody>
-</table>
-<h3 id="示例解析-2" tabindex="-1"> 示例解析</h3>
-<p>产品 id a0002 因为数量等于 100 被选取返回；BNBG 因为是以 BNBG 开头的产品所以返回；最后以产品 id 进行排序返回。</p>
-<h3 id="示例-2" tabindex="-1"> 示例</h3>
-<div><pre><code><span>DROP</span> <span>TABLE</span> <span>IF</span> <span>EXISTS</span> <span><span>`</span>OrderItems<span>`</span></span><span>;</span>
-<span>CREATE</span> <span>TABLE</span> <span>IF</span> <span>NOT</span> <span>EXISTS</span> <span><span>`</span>OrderItems<span>`</span></span><span>(</span>
-	prod_id <span>VARCHAR</span><span>(</span><span>255</span><span>)</span> <span>NOT</span> <span>NULL</span> <span>COMMENT</span> <span>'产品id'</span><span>,</span>
-	quantity <span>VARCHAR</span><span>(</span><span>255</span><span>)</span> <span>NOT</span> <span>NULL</span> <span>COMMENT</span> <span>'商品数量'</span>
-<span>)</span><span>;</span>
-<span>INSERT</span> <span><span>`</span>OrderItems<span>`</span></span> <span>VALUES</span> <span>(</span><span>'a0001'</span><span>,</span><span>105</span><span>)</span><span>,</span><span>(</span><span>'a0002'</span><span>,</span><span>100</span><span>)</span><span>,</span><span>(</span><span>'a0002'</span><span>,</span><span>200</span><span>)</span><span>,</span><span>(</span><span>'a0013'</span><span>,</span><span>1121</span><span>)</span><span>,</span><span>(</span><span>'a0003'</span><span>,</span><span>10</span><span>)</span><span>,</span><span>(</span><span>'a0003'</span><span>,</span><span>19</span><span>)</span><span>,</span><span>(</span><span>'a0003'</span><span>,</span><span>5</span><span>)</span><span>,</span><span>(</span><span>'BNBG'</span><span>,</span><span>10002</span><span>)</span><span>;</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br></div></div><h3 id="解答-2" tabindex="-1"> 解答</h3>
-<p>根据题意仅使用单个 <code>SELECT</code> 语句，那就直接利用 <code>WHERE</code> 条件查询，然后将两个条件利用连接符 <code>OR</code> 并联即可。</p>
-<div><pre><code><span>SELECT</span> prod_id<span>,</span> quantity <span>FROM</span> OrderItems <span>WHERE</span> prod_id <span>LIKE</span> <span>'BNBG%'</span> <span>OR</span> quantity <span>=</span> <span>'100'</span> <span>ORDER</span> <span>BY</span> prod_id<span>;</span>
-</code></pre><div aria-hidden="true"><span>1</span><br></div></div><h2 id="sql49-组合-products-表中的产品名称和-customers-表中的顾客名称" tabindex="-1"> SQL49 组合 Products 表中的产品名称和 Customers 表中的顾客名称</h2>
-<h3 id="描述-3" tabindex="-1"> 描述</h3>
-<p>Products 表含有字段 prod_name 代表产品名称</p>
-<table>
-<thead>
-<tr>
-<th>prod_name</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>flower</td>
-</tr>
-<tr>
-<td>rice</td>
-</tr>
-<tr>
-<td>ring</td>
-</tr>
-<tr>
-<td>umbrella</td>
-</tr>
-</tbody>
-</table>
-<p>Customers 表代表顾客信息，cust_name 代表顾客名称</p>
-<table>
-<thead>
-<tr>
-<th>cust_name</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>andy</td>
-</tr>
-<tr>
-<td>ben</td>
-</tr>
-<tr>
-<td>tony</td>
-</tr>
-<tr>
-<td>tom</td>
-</tr>
-<tr>
-<td>an</td>
-</tr>
-<tr>
-<td>lee</td>
-</tr>
-<tr>
-<td>hex</td>
-</tr>
-</tbody>
-</table>
-<h3 id="问题-3" tabindex="-1"> 问题</h3>
-<p>编写 SQL 语句，组合 Products 表中的产品名称（prod_name）和 Customers 表中的顾客名称（cust_name）并返回，然后按产品名称对结果进行升序排序。</p>
-<h3 id="示例结果-3" tabindex="-1"> 示例结果</h3>
-<table>
-<thead>
-<tr>
-<th>prod_name</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>an</td>
-</tr>
-<tr>
-<td>andy</td>
-</tr>
-<tr>
-<td>ben</td>
-</tr>
-<tr>
-<td>flower</td>
-</tr>
-<tr>
-<td>hex</td>
-</tr>
-<tr>
-<td>lee</td>
-</tr>
-<tr>
-<td>rice</td>
-</tr>
-<tr>
-<td>ring</td>
-</tr>
-<tr>
-<td>tom</td>
-</tr>
-<tr>
-<td>tony</td>
-</tr>
-<tr>
-<td>umbrella</td>
-</tr>
-</tbody>
-</table>
-<h3 id="示例解析-3" tabindex="-1"> 示例解析</h3>
-<p>拼接 cust_name 和 prod_name 并根据结果升序排序</p>
-<h3 id="示例-3" tabindex="-1"> 示例</h3>
-<div><pre><code><span>DROP</span> <span>TABLE</span> <span>IF</span> <span>EXISTS</span> <span><span>`</span>Products<span>`</span></span><span>;</span>
-<span>CREATE</span> <span>TABLE</span> <span>IF</span> <span>NOT</span> <span>EXISTS</span> <span><span>`</span>Products<span>`</span></span> <span>(</span>
-<span><span>`</span>prod_name<span>`</span></span> <span>VARCHAR</span><span>(</span><span>255</span><span>)</span> <span>NOT</span> <span>NULL</span> <span>COMMENT</span> <span>'产品名称'</span>
-<span>)</span><span>;</span>
-<span>INSERT</span> <span>INTO</span> <span><span>`</span>Products<span>`</span></span> <span>VALUES</span> <span>(</span><span>'flower'</span><span>)</span><span>,</span>
-<span>(</span><span>'rice'</span><span>)</span><span>,</span>
-<span>(</span><span>'ring'</span><span>)</span><span>,</span>
-<span>(</span><span>'umbrella'</span><span>)</span><span>;</span>
-
-<span>DROP</span> <span>TABLE</span> <span>IF</span> <span>EXISTS</span> <span><span>`</span>Customers<span>`</span></span><span>;</span>
-<span>CREATE</span> <span>TABLE</span> <span>IF</span> <span>NOT</span> <span>EXISTS</span> <span><span>`</span>Customers<span>`</span></span><span>(</span>
-	cust_name <span>VARCHAR</span><span>(</span><span>255</span><span>)</span> <span>NOT</span> <span>NULL</span> <span>COMMENT</span> <span>'客户姓名'</span>
-<span>)</span><span>;</span>
-<span>INSERT</span> <span><span>`</span>Customers<span>`</span></span> <span>VALUES</span> <span>(</span><span>'andy'</span><span>)</span><span>,</span><span>(</span><span>'ben'</span><span>)</span><span>,</span><span>(</span><span>'tony'</span><span>)</span><span>,</span><span>(</span><span>'tom'</span><span>)</span><span>,</span><span>(</span><span>'an'</span><span>)</span><span>,</span><span>(</span><span>'lee'</span><span>)</span><span>,</span><span>(</span><span>'hex'</span><span>)</span><span>;</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br></div></div><h3 id="解答-3" tabindex="-1"> 解答</h3>
-<p>同样考察 <code>UNION</code> 操作符，通过将两个 <code>SELECT</code> 语句的结果合并起来即可。</p>
-<p>这里需要注意的是得出的结果是 <code>prod_name</code>，所以需要注意两个 <code>SELECT</code> 语句的先后顺序，再然后就是需要对查询出的记录按照 <code>prod_name</code> 正序排列。</p>
-<div><pre><code><span>SELECT</span> prod_name <span>FROM</span> Products <span>UNION</span> <span>SELECT</span> cust_name <span>FROM</span> Customers <span>ORDER</span> <span>BY</span> prod_name<span>;</span>
-</code></pre><div aria-hidden="true"><span>1</span><br></div></div><h2 id="sql50-纠错4" tabindex="-1"> SQL50 纠错4</h2>
-<h3 id="描述-4" tabindex="-1"> 描述</h3>
-<p>表 Customers 含有字段 cust_name 顾客名、cust_contact 顾客联系方式、cust_state 顾客州、cust_email 顾客 email</p>
-<table>
-<thead>
-<tr>
-<th>cust_name</th>
-<th>cust_contact</th>
-<th>cust_state</th>
-<th>cust_email</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>cust10</td>
-<td>8695192</td>
-<td>MI</td>
-<td>cust10@cust.com</td>
-</tr>
-<tr>
-<td>cust1</td>
-<td>8695193</td>
-<td>MI</td>
-<td>cust1@cust.com</td>
-</tr>
-<tr>
-<td>cust2</td>
-<td>8695194</td>
-<td>IL</td>
-<td>cust2@cust.com</td>
-</tr>
-</tbody>
-</table>
-<h3 id="问题-4" tabindex="-1"> 问题</h3>
-<p>修正下面错误的 SQL</p>
-<div><pre><code><span>SELECT</span> cust_name<span>,</span> cust_contact<span>,</span> cust_email 
-<span>FROM</span> Customers 
-<span>WHERE</span> cust_state <span>=</span> <span>'MI'</span> 
-<span>ORDER</span> <span>BY</span> cust_name<span>;</span> 
-<span>UNION</span> 
-<span>SELECT</span> cust_name<span>,</span> cust_contact<span>,</span> cust_email 
-<span>FROM</span> Customers 
-<span>WHERE</span> cust_state <span>=</span> <span>'IL'</span> <span>ORDER</span> <span>BY</span> cust_name<span>;</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br></div></div><h3 id="示例结果-4" tabindex="-1"> 示例结果</h3>
-<p>返回顾客名称：cust_name、顾客联系方式：cust_contact、顾客 email：cust_email</p>
-<table>
-<thead>
-<tr>
-<th>cust_name</th>
-<th>cust_contact</th>
-<th>cust_email</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>cust1</td>
-<td>8695193</td>
-<td>cust1@cust.com</td>
-</tr>
-<tr>
-<td>cust10</td>
-<td>8695192</td>
-<td>cust10@cust.com</td>
-</tr>
-<tr>
-<td>cust2</td>
-<td>8695194</td>
-<td>cust2@cust.com</td>
-</tr>
-</tbody>
-</table>
-<h3 id="示例解析-4" tabindex="-1"> 示例解析</h3>
-<p>返回住在 &quot;IL&quot; 和 &quot;MI&quot; 的顾客信息，最后根据顾客名称升序排序。</p>
-<h3 id="示例-4" tabindex="-1"> 示例</h3>
-<div><pre><code><span>DROP</span> <span>TABLE</span> <span>IF</span> <span>EXISTS</span> <span><span>`</span>Customers<span>`</span></span><span>;</span>
-<span>CREATE</span> <span>TABLE</span> <span>IF</span> <span>NOT</span> <span>EXISTS</span> <span><span>`</span>Customers<span>`</span></span><span>(</span>
-    cust_name <span>VARCHAR</span><span>(</span><span>255</span><span>)</span> <span>NOT</span> <span>NULL</span> <span>COMMENT</span> <span>'顾客id'</span><span>,</span>
-    cust_contact <span>VARCHAR</span><span>(</span><span>255</span><span>)</span> <span>NOT</span> <span>NULL</span> <span>COMMENT</span> <span>'顾客联系方式'</span><span>,</span>
-    cust_state <span>VARCHAR</span><span>(</span><span>255</span><span>)</span> <span>NOT</span> <span>NULL</span> <span>COMMENT</span> <span>'顾客州'</span><span>,</span>
-    cust_email <span>VARCHAR</span><span>(</span><span>255</span><span>)</span> <span>NOT</span> <span>NULL</span> <span>COMMENT</span> <span>'顾客email'</span>
-  <span>)</span><span>;</span>
-<span>INSERT</span> <span><span>`</span>Customers<span>`</span></span> <span>VALUES</span> <span>(</span><span>'cust10'</span><span>,</span><span>'8695192'</span><span>,</span><span>'MI'</span><span>,</span><span>'cust10@cust.com'</span><span>)</span><span>,</span><span>(</span><span>'cust1'</span><span>,</span><span>'8695193'</span><span>,</span><span>'MI'</span><span>,</span><span>'cust1@cust.com'</span><span>)</span><span>,</span><span>(</span><span>'cust2'</span><span>,</span><span>'8695194'</span><span>,</span><span>'IL'</span><span>,</span><span>'cust2@cust.com'</span><span>)</span><span>;</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br></div></div><h3 id="解答-4" tabindex="-1"> 解答</h3>
-<p>主要有两处错误，第一是 <code>UNION</code> 前多加了 <code>;</code>，<code>;</code> 表示一条 SQL 的结束，加在此处不适合。</p>
-<p>第二则是只主要对 <code>cust_name</code> 排序一次即可，放在 <code>UNION</code> 前的 <code>ORDER BY</code> 关键字显然位置不对。</p>
-<div><pre><code><span>SELECT</span> cust_name<span>,</span> cust_contact<span>,</span> cust_email 
-<span>FROM</span> Customers 
-<span>WHERE</span> cust_state <span>=</span> <span>'MI'</span>  
-<span>UNION</span> 
-<span>SELECT</span> cust_name<span>,</span> cust_contact<span>,</span> cust_email 
-<span>FROM</span> Customers 
-<span>WHERE</span> cust_state <span>=</span> <span>'IL'</span> <span>ORDER</span> <span>BY</span> cust_name<span>;</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br></div></div><h2 id="致谢" tabindex="-1"> 致谢</h2>
-<p>感谢<a href="http://nowcoder.com/" target="_blank" rel="noopener noreferrer">牛客网<ExternalLinkIcon/></a>提供的题目列表。</p>
-]]></content:encoded>
-      <enclosure url="https://cdn.jsdelivr.net/gh/cunyu1943/blog-imgs@main/2022/04/image-20220409165508072.png" type="image/png"/>
-    </item>
-    <item>
-      <title>SQL 必知必会 50 题（6 - 10）</title>
-      <link>https://cunyu1943.github.io/JavaPark/JavaPark/database/sql-in-10min/6-10.html</link>
-      <guid>https://cunyu1943.github.io/JavaPark/JavaPark/database/sql-in-10min/6-10.html</guid>
-      <source url="https://cunyu1943.github.io/JavaPark/JavaPark/rss.xml">SQL 必知必会 50 题（6 - 10）</source>
-      <category>SQL 必知必会 50 题</category>
-      <pubDate>Tue, 05 Apr 2022 10:53:15 GMT</pubDate>
-      <content:encoded><![CDATA[<h2 id="sql6-按照数量和价格排序" tabindex="-1"> SQL6 按照数量和价格排序</h2>
-<h3 id="描述" tabindex="-1"> 描述</h3>
-<p>假设有一个 OrderItems 表</p>
-<table>
-<thead>
-<tr>
-<th>quantity</th>
-<th>item_price</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>100</td>
-</tr>
-<tr>
-<td>10</td>
-<td>1003</td>
-</tr>
-<tr>
-<td>2</td>
-<td>500</td>
-</tr>
-</tbody>
-</table>
-<h3 id="问题" tabindex="-1"> 问题</h3>
-<p>编写 SQL 语句，显示 OrderItems 表中的数量（quantity）和价格（item_price），并按数量由多到少、价格由高到低排序。</p>
-<h3 id="示例答案" tabindex="-1"> 示例答案</h3>
-<p>返回 quantity 和 item_price</p>
-<h3 id="示例" tabindex="-1"> 示例</h3>
-<div><pre><code><span>DROP</span> <span>TABLE</span> <span>IF</span> <span>EXISTS</span> <span><span>`</span>OrderItems<span>`</span></span><span>;</span>
-<span>CREATE</span> <span>TABLE</span> <span>IF</span> <span>NOT</span> <span>EXISTS</span> <span><span>`</span>OrderItems<span>`</span></span> <span>(</span>
-  <span><span>`</span>quantity<span>`</span></span> <span>INT</span><span>(</span><span>64</span><span>)</span> <span>NOT</span> <span>NULL</span> <span>COMMENT</span> <span>'数量'</span><span>,</span>
-  <span><span>`</span>item_price<span>`</span></span> <span>INT</span><span>(</span><span>64</span><span>)</span> <span>NOT</span> <span>NULL</span> <span>COMMENT</span> <span>'订单价格'</span>
-<span>)</span><span>;</span>
-<span>INSERT</span> <span>INTO</span> <span><span>`</span>OrderItems<span>`</span></span> <span>VALUES</span> <span>(</span><span>1</span><span>,</span><span>100</span><span>)</span><span>,</span>
-<span>(</span><span>10</span><span>,</span><span>1003</span><span>)</span><span>,</span>
-<span>(</span><span>2</span><span>,</span><span>500</span><span>)</span><span>;</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br></div></div><h3 id="解答" tabindex="-1"> 解答</h3>
-<p>同样是查询语句，要对查询结果进行排序，则需要使用  <code>ORDER BY</code> 关键字，最后则是需要注意是正序还是倒序，题目中由多到少和由高到低都是属于倒序，所以需要使用关键字 <code>DESC</code>。</p>
-<div><pre><code><span>SELECT</span> quantity<span>,</span> item_price <span>FROM</span> OrderItems <span>ORDER</span> <span>BY</span> quantity <span>DESC</span><span>,</span> item_price <span>DESC</span><span>;</span>
-</code></pre><div aria-hidden="true"><span>1</span><br></div></div><h2 id="sql7-检查sql语句" tabindex="-1"> SQL7 检查SQL语句</h2>
-<h3 id="描述-1" tabindex="-1"> 描述</h3>
-<p>有 Vendors 表</p>
-<table>
-<thead>
-<tr>
-<th>vend_name</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>海底捞</td>
-</tr>
-<tr>
-<td>小龙坎</td>
-</tr>
-<tr>
-<td>大龙燚</td>
-</tr>
-</tbody>
-</table>
-<h3 id="问题-1" tabindex="-1"> 问题</h3>
-<p>下面的 SQL 语句有问题吗？尝试将它改正确，使之能够正确运行，并且返回结果根据 vend_name 逆序排列</p>
-<div><pre><code><span>SELECT</span> vend_name<span>,</span> 
-<span>FROM</span> Vendors 
-<span>ORDER</span> vend_name <span>DESC</span><span>;</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br></div></div><h3 id="示例展示" tabindex="-1"> 示例展示</h3>
-<p>返回 vend_name</p>
-<table>
-<thead>
-<tr>
-<th>vend_name</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>海底捞</td>
-</tr>
-<tr>
-<td>小龙坎</td>
-</tr>
-<tr>
-<td>大龙燚</td>
-</tr>
-</tbody>
-</table>
-<h3 id="示例-1" tabindex="-1"> 示例</h3>
-<div><pre><code><span>DROP</span> <span>TABLE</span> <span>IF</span> <span>EXISTS</span> <span><span>`</span>Vendors<span>`</span></span><span>;</span>
-<span>CREATE</span> <span>TABLE</span> <span>IF</span> <span>NOT</span> <span>EXISTS</span> <span><span>`</span>Vendors<span>`</span></span> <span>(</span>
-  <span><span>`</span>vend_name<span>`</span></span> <span>VARCHAR</span><span>(</span><span>255</span><span>)</span> <span>NOT</span> <span>NULL</span> <span>COMMENT</span> <span>'vend名称'</span>
-<span>)</span><span>;</span>
-<span>INSERT</span> <span>INTO</span> <span><span>`</span>Vendors<span>`</span></span> <span>VALUES</span> <span>(</span><span>'海底捞'</span><span>)</span><span>,</span>
-<span>(</span><span>'小龙坎'</span><span>)</span><span>,</span>
-<span>(</span><span>'大龙燚'</span><span>)</span><span>;</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br></div></div><h3 id="解答-1" tabindex="-1"> 解答</h3>
-<div><pre><code><span>SELECT</span> vend_name<span>,</span> <span>FROM</span> Vendors <span>ORDER</span> vend_name <span>DESC</span><span>;</span>
-</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p>主要存在两处错误，首先是选取需要展示的列 <code>vend_name</code> 后，后面并没有跟上需要展示的其他列，所以此处多了一个 <code>,</code>。另外，对选取列进行排序使用的关键字是 <code>ORDER BY</code>，而题目中只是给出了 <code>ORDER</code>，忘记了 <code>BY</code>，所以会导致查询结果错误。针对这两处错误改正后，得到的正确的语句如下所示。</p>
-<div><pre><code><span>SELECT</span> vend_name <span>FROM</span> Vendors <span>ORDER</span> <span>BY</span> vend_name <span>DESC</span><span>;</span>
-</code></pre><div aria-hidden="true"><span>1</span><br></div></div><h2 id="sql8-返回固定价格的产品" tabindex="-1"> SQL8 返回固定价格的产品</h2>
-<h3 id="描述-2" tabindex="-1"> 描述</h3>
-<p>有表 Products</p>
-<table>
-<thead>
-<tr>
-<th>prod_id</th>
-<th>prod_name</th>
-<th>prod_price</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>a0018</td>
-<td>sockets</td>
-<td>9.49</td>
-</tr>
-<tr>
-<td>a0019</td>
-<td>iphone13</td>
-<td>600</td>
-</tr>
-<tr>
-<td>b0018</td>
-<td>gucci t-shirts</td>
-<td>1000</td>
-</tr>
-</tbody>
-</table>
-<h3 id="问题-2" tabindex="-1"> 问题</h3>
-<p>从 Products 表中检索产品 ID（prod_id）和产品名称（prod_name），只返回价格为 9.49 美元的产品。</p>
-<h3 id="示例结果" tabindex="-1"> 示例结果</h3>
-<p>返回 prod_id 和 prod_name</p>
-<table>
-<thead>
-<tr>
-<th>prod_id</th>
-<th>prod_name</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>a0018</td>
-<td>sockets</td>
-</tr>
-</tbody>
-</table>
-<h3 id="示例-2" tabindex="-1"> 示例</h3>
-<div><pre><code><span>DROP</span> <span>TABLE</span> <span>IF</span> <span>EXISTS</span> <span><span>`</span>Products<span>`</span></span><span>;</span>
-<span>CREATE</span> <span>TABLE</span> <span>IF</span> <span>NOT</span> <span>EXISTS</span> <span><span>`</span>Products<span>`</span></span> <span>(</span>
-  <span><span>`</span>prod_id<span>`</span></span> <span>VARCHAR</span><span>(</span><span>255</span><span>)</span> <span>NOT</span> <span>NULL</span> <span>COMMENT</span> <span>'产品 ID'</span><span>,</span>
-  <span><span>`</span>prod_name<span>`</span></span> <span>VARCHAR</span><span>(</span><span>255</span><span>)</span> <span>NOT</span> <span>NULL</span> <span>COMMENT</span> <span>'产品名称'</span><span>,</span>
-  <span><span>`</span>prod_price<span>`</span></span> <span>DOUBLE</span> <span>NOT</span> <span>NULL</span> <span>COMMENT</span> <span>'产品价格'</span>
-<span>)</span><span>;</span>
-<span>INSERT</span> <span>INTO</span> <span><span>`</span>Products<span>`</span></span> <span>VALUES</span> <span>(</span><span>'a0018'</span><span>,</span><span>'sockets'</span><span>,</span><span>9.49</span><span>)</span><span>,</span>
-<span>(</span><span>'a0019'</span><span>,</span><span>'iphone13'</span><span>,</span><span>600</span><span>)</span><span>,</span>
-<span>(</span><span>'b0019'</span><span>,</span><span>'gucci t-shirts'</span><span>,</span><span>1000</span><span>)</span><span>;</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br></div></div><h3 id="解答-2" tabindex="-1"> 解答</h3>
-<p>查询符合指定条件的数据，可以使用关键字 <code>WHERE</code> 对条件进行限制，然后就是对条件的实现，这里可以使用两种方式。</p>
-<p>第一种，直接利用 <code>=</code>，既然条件是需要价格为 <code>9.49</code> 美元的产品，则我们将价格列设置为 <code>prod_price = 9.49</code> 即可。</p>
-<div><pre><code><span>SELECT</span> prod_id<span>,</span> prod_name <span>FROM</span> Products <span>WHERE</span> prod_price <span>=</span> <span>9.49</span><span>;</span>
-</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p>第二种，除开 <code>=</code> 之外，我们也可以使用 <code>in</code>，表示价格只要在指定的数据之中，我们将价格列设置为 <code>in (9.49)</code> 即可，但是此时要注意不要忽略 <code>()</code>，否则语句会报错。</p>
-<div><pre><code><span>SELECT</span> prod_id<span>,</span> prod_name <span>FROM</span> Products <span>WHERE</span> prod_price <span>in</span> <span>(</span><span>9.49</span><span>)</span><span>;</span>
-</code></pre><div aria-hidden="true"><span>1</span><br></div></div><h2 id="sql9-返回更高价格的产品" tabindex="-1"> SQL9 返回更高价格的产品</h2>
-<h3 id="描述-3" tabindex="-1"> 描述</h3>
-<p>Products 表</p>
-<table>
-<thead>
-<tr>
-<th>prod_id</th>
-<th>prod_name</th>
-<th>prod_price</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>a0018</td>
-<td>sockets</td>
-<td>9.49</td>
-</tr>
-<tr>
-<td>a0019</td>
-<td>iphone13</td>
-<td>600</td>
-</tr>
-<tr>
-<td>b0019</td>
-<td>gucci t-shirts</td>
-<td>1000</td>
-</tr>
-</tbody>
-</table>
-<h3 id="问题-3" tabindex="-1"> 问题</h3>
-<p>编写 SQL 语句，从 Products 表中检索产品 ID（prod_id）和产品名称（prod_name），只返回价格为 9 美元或更高的产品。</p>
-<h3 id="示例答案-1" tabindex="-1"> 示例答案</h3>
-<p>返回 prod_id 商品 id 和 prod_name 商品名称</p>
-<table>
-<thead>
-<tr>
-<th>prod_id</th>
-<th>prod_name</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>a0018</td>
-<td>sockets</td>
-</tr>
-<tr>
-<td>a0019</td>
-<td>iphone13</td>
-</tr>
-<tr>
-<td>b0019</td>
-<td>gucci t-shirts</td>
-</tr>
-</tbody>
-</table>
-<h3 id="示例-3" tabindex="-1"> 示例</h3>
-<div><pre><code><span>DROP</span> <span>TABLE</span> <span>IF</span> <span>EXISTS</span> <span><span>`</span>Products<span>`</span></span><span>;</span>
-<span>CREATE</span> <span>TABLE</span> <span>IF</span> <span>NOT</span> <span>EXISTS</span> <span><span>`</span>Products<span>`</span></span> <span>(</span>
-<span><span>`</span>prod_id<span>`</span></span> <span>VARCHAR</span><span>(</span><span>255</span><span>)</span> <span>NOT</span> <span>NULL</span> <span>COMMENT</span> <span>'产品 ID'</span><span>,</span>
-<span><span>`</span>prod_name<span>`</span></span> <span>VARCHAR</span><span>(</span><span>255</span><span>)</span> <span>NOT</span> <span>NULL</span> <span>COMMENT</span> <span>'产品名称'</span><span>,</span>
-<span><span>`</span>prod_price<span>`</span></span> <span>DOUBLE</span> <span>NOT</span> <span>NULL</span> <span>COMMENT</span> <span>'产品价格'</span>
-<span>)</span><span>;</span>
-<span>INSERT</span> <span>INTO</span> <span><span>`</span>Products<span>`</span></span> <span>VALUES</span> <span>(</span><span>'a0011'</span><span>,</span><span>'usb'</span><span>,</span><span>9.49</span><span>)</span><span>,</span>
-<span>(</span><span>'a0019'</span><span>,</span><span>'iphone13'</span><span>,</span><span>600</span><span>)</span><span>,</span>
-<span>(</span><span>'b0019'</span><span>,</span><span>'gucci t-shirts'</span><span>,</span><span>1000</span><span>)</span><span>;</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br></div></div><h3 id="解答-3" tabindex="-1"> 解答</h3>
-<p>条件查询语句，查询格式：</p>
-<blockquote>
-<p>SELECT [列名] FROM [表名] WHERE 判断条件 …</p>
-</blockquote>
-<p>既然判断条件是要产品价格不低于 9 美元，则产品需要大于等于 9 美元，可以将产品价格设置为 <code>prod_price &gt;= 9</code> 即可。</p>
-<div><pre><code><span>SELECT</span> prod_id<span>,</span> prod_name <span>FROM</span> Products <span>WHERE</span> prod_price <span>>=</span> <span>9</span><span>;</span>
-</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p>此外，我们还可以将 <code>&gt;=</code> 拆分为两个条件，一个是 <code>prod_price &gt; 9</code>，而另一个则是 <code>prod_price = 9</code>，然后满足任一条件即可，则利用关键字 <code>OR</code> 将两个条件进行连接。</p>
-<div><pre><code><span>SELECT</span> prod_id<span>,</span> prod_name <span>FROM</span> Products <span>WHERE</span> prod_price <span>></span> <span>9</span> <span>OR</span> prod_price <span>=</span> <span>9</span><span>;</span>
-</code></pre><div aria-hidden="true"><span>1</span><br></div></div><h2 id="sql10-返回产品并且按照价格排序" tabindex="-1"> SQL10 返回产品并且按照价格排序</h2>
-<h3 id="描述-4" tabindex="-1"> 描述</h3>
-<p>有 Products 表</p>
-<table>
-<thead>
-<tr>
-<th>prod_id</th>
-<th>prod_name</th>
-<th>prod_price</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>a0011</td>
-<td>egg</td>
-<td>3</td>
-</tr>
-<tr>
-<td>a0019</td>
-<td>sockets</td>
-<td>4</td>
-</tr>
-<tr>
-<td>b0019</td>
-<td>coffee</td>
-<td>15</td>
-</tr>
-</tbody>
-</table>
-<h3 id="问题-4" tabindex="-1"> 问题</h3>
-<p>编写 SQL 语句，返回 Products 表中所有价格在 3 美元到 6 美元之间的产品的名称（prod_name）和价格（prod_price），然后按价格对结果进行排序</p>
-<h3 id="示例结果-1" tabindex="-1"> 示例结果</h3>
-<p>返回商品名称 prod_name 和商品价格 prod_price</p>
-<table>
-<thead>
-<tr>
-<th>prod_name</th>
-<th>prod_price</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>egg</td>
-<td>3</td>
-</tr>
-<tr>
-<td>sockets</td>
-<td>4</td>
-</tr>
-</tbody>
-</table>
-<p>注：不需要考虑商品价格相同的情况</p>
-<h3 id="示例-4" tabindex="-1"> 示例</h3>
-<div><pre><code><span>DROP</span> <span>TABLE</span> <span>IF</span> <span>EXISTS</span> <span><span>`</span>Products<span>`</span></span><span>;</span>
-<span>CREATE</span> <span>TABLE</span> <span>IF</span> <span>NOT</span> <span>EXISTS</span> <span><span>`</span>Products<span>`</span></span> <span>(</span>
-<span><span>`</span>prod_id<span>`</span></span> <span>VARCHAR</span><span>(</span><span>255</span><span>)</span> <span>NOT</span> <span>NULL</span> <span>COMMENT</span> <span>'产品 ID'</span><span>,</span>
-<span><span>`</span>prod_name<span>`</span></span> <span>VARCHAR</span><span>(</span><span>255</span><span>)</span> <span>NOT</span> <span>NULL</span> <span>COMMENT</span> <span>'产品名称'</span><span>,</span>
-<span><span>`</span>prod_price<span>`</span></span> <span>DOUBLE</span> <span>NOT</span> <span>NULL</span> <span>COMMENT</span> <span>'产品价格'</span>
-<span>)</span><span>;</span>
-<span>INSERT</span> <span>INTO</span> <span><span>`</span>Products<span>`</span></span> <span>VALUES</span> <span>(</span><span>'a0011'</span><span>,</span><span>'egg'</span><span>,</span><span>3</span><span>)</span><span>,</span>
-<span>(</span><span>'a0019'</span><span>,</span><span>'sockets'</span><span>,</span><span>4</span><span>)</span><span>,</span>
-<span>(</span><span>'b0019'</span><span>,</span><span>'coffee'</span><span>,</span><span>15</span><span>)</span><span>;</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br></div></div><h3 id="解答-4" tabindex="-1"> 解答</h3>
-<p>条件查询，通过将条件拆分为 <code>prod_price &gt;= 3</code> 和 <code>prod_price &lt;= 6</code> 两个条件，然后利用关键字  <code>AND</code> 将两个条件串联起来，同时满足两个条件的数据则进行输出。然后要对价格进行排序，则可以使用关键字 <code>ORDER BY</code>。</p>
-<div><pre><code><span>SELECT</span> prod_name<span>,</span> prod_price <span>FROM</span> Products <span>WHERE</span> prod_price <span>>=</span> <span>3</span> <span>AND</span> prod_price <span>&lt;=</span><span>6</span> <span>ORDER</span> <span>BY</span> prod_price<span>;</span>
-</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p>除开上述将两个条件拆分开然后利用关键字 <code>AND</code> 串联起来之外，其实 SQL 还提供了关键字 <code>BETWEEN … AND …</code>，可以将满足介于两者之间的数进行筛选输出。</p>
-<div><pre><code><span>SELECT</span> prod_name<span>,</span> prod_price <span>FROM</span> Products <span>WHERE</span> prod_price <span>BETWEEN</span> <span>3</span> <span>AND</span> <span>6</span> <span>ORDER</span> <span>BY</span> prod_price<span>;</span>
-</code></pre><div aria-hidden="true"><span>1</span><br></div></div><h2 id="致谢" tabindex="-1"> 致谢</h2>
-<p>感谢<a href="http://nowcoder.com/" target="_blank" rel="noopener noreferrer">牛客网<ExternalLinkIcon/></a>提供的题目列表。</p>
-]]></content:encoded>
     </item>
   </channel>
 </rss>
