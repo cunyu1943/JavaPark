@@ -290,6 +290,3 @@ public class CalcTest {
 
 **关注公众号，获取最新文章更新**
 
-::: center
-![](https://cdn.jsdelivr.net/gh/cunyu1943/cunyu1943@main/imgs/wepublic.gif =200x)
-:::
