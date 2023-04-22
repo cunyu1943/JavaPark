@@ -26,11 +26,11 @@ title: Lombok 安装及使用指南
 
 - 老版本 IDEA 安装 Lombok
 
-<img src="./assets/20220719-lombok-install-and-usage/lombok-plugin.png" style="zoom:50%;" />
+<img src="./assets/20220719-lombok-install-and-usage/lombok-plugin.png"  />
 
 - 新版本中集成了 Lombok
 
-<img src="./assets/20220719-lombok-install-and-usage/intege-lombok.png" style="zoom:50%;" />
+<img src="./assets/20220719-lombok-install-and-usage/intege-lombok.png"  />
 
 以上就是 Lombok 的安装过程了，是不是十分简单？那接下来我们就来看看，如何在我们的项目中使用 Lombok！
 

@@ -1,6 +1,7 @@
 ---
 title: 是时候拥抱 Junit 单元测试了
 ---
+
 :::info
 
 不要哀求，学会争取。若是如此，终有所获。
@@ -60,7 +61,7 @@ JUnit 是一个编写可重复测试的简单框架，是单元测试框架 xUni
 
 以 IDEA 为例，依次打开 `File -> Project Structure -> Project Settings -> Modules -> Dependencies -> 点击 + -> Library... -> Java`，最后找到下载的 JUnit 文件即可；
 
-<img src="./assets/20220718-test-with-junit/dependency.png" style="zoom:50%;" />
+<img src="./assets/20220718-test-with-junit/dependency.png" />
 
 - **Maven 安装**
 
