@@ -3,8 +3,7 @@
 建群的目的是希望给大家提供一个良好的技术学习交流平台，由于微信群人满 `100` 之后无法加入，请扫描下方二维码先添加作者 “村雨遥” 微信(`cunyu1943`)，备注：**加群**。
 
 <center>
-
-<img src="./static/img/site/wechat.png" style="zoom:33%;" />
+<img src="./static/img/site/wechat.png" width="150px" />
 
 </center>
 
@@ -16,8 +15,7 @@
 防止失联，建议关注并加星。
 
 <center>
-
-<img src="./static/img/site/wechatpublic.png" style="zoom:33%;" />
+<img src="./static/img/site/wechatpublic.png" width="150px" />
 
 </center>
 
@@ -29,17 +27,16 @@
 
 如果您觉得本项目对您有所帮助，那就去 Github **Star** 收藏一下吧！
 
-<img src="https://api.star-history.com/svg?repos=cunyu1943/JavaPark&type=Date" style="zoom: 80%;" />
-
+<img src="https://api.star-history.com/svg?repos=cunyu1943/JavaPark&type=Date" width="50%"/>
 
 ## 赞助
 
 开源不易，如果你觉得本仓库对你有帮助，或许可以请我喝杯咖啡 ☕️
 
 
-|                            支付宝                            |                             微信                             |
-| :----------------------------------------------------------: | :----------------------------------------------------------: |
-| <img src="./static/img/site/alipay.png" style="zoom: 33%;" /> | <img src="./static/img/site/wechatpay.png" style="zoom:33%;" /> |
+|                          支付宝                          |                            微信                             |
+| :------------------------------------------------------: | :---------------------------------------------------------: |
+| <img src="./static/img/site/alipay.png" width="150px" /> | <img src="./static/img/site/wechatpay.png" width="150px" /> |
 
 ## 🧑‍🤝‍🧑 参与贡献
 

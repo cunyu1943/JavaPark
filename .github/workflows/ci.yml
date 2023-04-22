@@ -29,7 +29,7 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           token: ${{ secrets.TOKEN }}
-          repository-name: cunyu1943/cunyu1943.github.io
+          repository-name: cunyu1943/cunyu1943.github.io/JavaPark
           branch: docusaurus
           folder: build
           commit-message: "${{ github.event.head_commit.message }}"
