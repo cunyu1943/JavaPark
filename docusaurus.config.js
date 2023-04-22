@@ -117,6 +117,12 @@ const config = {
             position: 'left',
             label: '好物周刊',
           },
+          {
+            type: 'docSidebar',
+            sidebarId: 'QASidebar',
+            position: 'left',
+            label: '你问我答',
+          },
           { to: '/blog', label: '生活近况', position: 'left' },
           {
             type: 'dropdown',
@@ -151,6 +157,10 @@ const config = {
                 href: 'https://github.com/cunyu1943',
               },
               {
+                label: '知乎',
+                href: 'https://www.zhihu.com/people/cunyu1943',
+              },
+              {
                 label: 'CSDN',
                 href: 'https://cunyu1943.blog.csdn.net',
               },
@@ -159,6 +169,11 @@ const config = {
                 href: 'https://juejin.cn/user/747323637904519',
               },
             ],
+          },
+          {
+            href: 'https://cunyu1943.github.io',
+            label: '旧版博客',
+            position: 'left',
           },
           // {
           //   type: 'dropdown',
