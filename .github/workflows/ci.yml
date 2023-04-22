@@ -1,0 +1,36 @@
+name: 🎉 部署
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    name: 🎉 部署
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🎉 检查分支
+        uses: actions/checkout@v3
+        with:
+          ref: main
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: 🎉 安装依赖
+        run: npm install --save
+      - name: 🎉 构建
+        run: npm run build
+
+      # Popular action to deploy to GitHub Pages:
+      # Docs: https://github.com/peaceiris/actions-gh-pages#%EF%B8%8F-docusaurus
+      - name: 🎉 部署到 Github
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          token: ${{ secrets.TOKEN }}
+          repository-name: cunyu1943/cunyu1943.github.io
+          branch: docusaurus
+          folder: build
+          commit-message: "${{ github.event.head_commit.message }}"
+          # Build output to publish to the `gh-pages` branch:
