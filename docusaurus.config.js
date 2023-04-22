@@ -96,7 +96,7 @@ const config = {
         title: 'JavaPark',
         logo: {
           alt: 'JavaPark',
-          src: '/img/site/logo.svg',
+          src: 'img/site/logo.svg',
         },
         items: [
           {
@@ -139,16 +139,12 @@ const config = {
           },
           {
             type: 'dropdown',
-            label: '快速联系',
+            label: '联系方式',
             position: 'left',
             items: [
               {
-                label: '微信',
-                href: 'img/site/wechat.png',
-              },
-              {
-                label: '公众号',
-                href: 'img/site/wechatpublic.png',
+                label: '快速联系',
+                href: 'docs/contract',
               },
               {
                 label: 'Github',
@@ -233,7 +229,7 @@ const config = {
         //     ],
         //   },
         // ],
-        copyright: `Copyright © ${new Date().getFullYear()} <a href="https://github.com/cunyu1943/JavaPark">JavaPark</a>, Inc. All rights reserved by <a href="/img/site/wechatpublic.png">村雨遥</a>.`,
+        copyright: `Copyright © ${new Date().getFullYear()} <a href="https://github.com/cunyu1943/JavaPark">JavaPark</a>, Inc. All rights reserved by <a href="docs/contract">村雨遥</a>.`,
       },
       prism: {
         theme: lightCodeTheme,
@@ -244,7 +240,7 @@ const config = {
       announcementBar: {
         id: 'star',
         content:
-          '<b>文章首发公众号<a href="/img/site/wechatpublic.png">「村雨遥」</a>，如果你喜欢 JavaPark，那就去 <a href="https://github.com/cunyu1943/JavaPark">Github</a> 点个 Star ⭐️ 再走吧！</b>',
+          '<b>文章首发公众号<a href="docs/contract">「村雨遥」</a>，如果你喜欢 JavaPark，那就去 <a href="https://github.com/cunyu1943/JavaPark">Github</a> 点个 Star ⭐️ 再走吧！</b>',
         backgroundColor: '#fafbfc',
         textColor: '#25C2A0',
         isCloseable: false,

@@ -12,11 +12,11 @@ sidebar_position: 1
 
 - [博客](https://cunyu1943.site/)：PC 端推荐
 - [JavaPark](https://cunyu1943.site/JavaPark)：PC 端推荐
-- [公众号](/img/site/wechatpublic.png)：移动端推荐
+- [公众号](/docs/contract)：移动端推荐
 
-如果你想推荐或自荐项目/网站/软件/资源，欢迎提交 **[issue](https://github.com/cunyu1943/JavaPark/issues/21)** 或者添加我 **[个人微信：cunyu1943](/img/site/wechat.png)** 和我交流。
+如果你想推荐或自荐项目/网站/软件/资源，欢迎提交 **[issue](https://github.com/cunyu1943/JavaPark/issues/21)** 或者添加我 **[个人微信：cunyu1943](/docs/contract)** 和我交流。
 
-<img src="/img/site/wechat.png" width="150" />
+<img src="https://cunyu1943.site/JavaPark/img/site/wechat.png" width="150" />
 
 ## 介绍
 
@@ -30,13 +30,9 @@ sidebar_position: 1
 
 好物周刊开始于 **2023.04.15**，如果看到这篇文章时我依旧在坚持更新，那就是最好的消息。
 
-
-
-
-
 ## 交流
 
-欢迎关注[公众号](/img/site/wechatpublic.png)|[博客](https://cunyu1943.site/)一起交流（每周在公众号首发）：
+欢迎关注[公众号](/docs/contract)|[博客](https://cunyu1943.site/)一起交流（每周在公众号首发）：
 
-<img src="/img/site/wechatpublic.png" width="150" />
+<img src="https://cunyu1943.site/JavaPark/img/site/wechatpublic.png" width="150" />
 
