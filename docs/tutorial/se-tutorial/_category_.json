@@ -1,8 +1,8 @@
 {
-  "label": "SE 基础教程",
+  "label": "Java 基础教程",
   "position": 2,
   "link": {
     "type": "generated-index",
-    "description": "Java SE 基础教程"
+    "description": "Java 基础教程"
   }
 }
