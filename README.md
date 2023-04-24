@@ -41,7 +41,7 @@
 21. [Java 基础教程：Lombok 安装及使用指南](docs/tutorial/se-tutorial/20220719-lombok-install-and-usage.md)
 22. [Java 基础教程：Fastjson V2 简单使用手册](docs/tutorial/se-tutorial/20220720-fastjson2-quickstart.md)
 23. [Java 基础教程：static 和 final 小课堂](docs/tutorial/se-tutorial/20221203-oop-advance.md)
-24. [Java 基础教程：抽象、接口和内部类](docs/tutorial/se-tutorial/20221211abstract.md)
+24. [Java 基础教程：抽象、接口和内部类](docs/tutorial/se-tutorial/20221211-abstract.md)
 
 ## 快速联系
 
