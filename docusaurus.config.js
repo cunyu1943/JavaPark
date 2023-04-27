@@ -150,7 +150,7 @@ const config = {
             items: [
               {
                 label: '快速联系',
-                href: 'docs/contract',
+                href: 'https://cunyu1943.github.io/JavaPark/docs/contract',
               },
               {
                 label: 'Github',
