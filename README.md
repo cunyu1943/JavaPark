@@ -48,9 +48,9 @@
 1. [效率工具：如何用 Markdown 写出好看的文章](docs/tutorial/efficiency-tools/20230425-markdown-tutorial.md)
 
 ## 好物周刊
-1. [好物周刊#1（0415 ~ 0421）](docs/weekly/weekly-2023/0415-0421)
-2. [好物周刊#2（0422 ~ 0428）](docs/weekly/weekly-2023/0422-0428)
-3. [好物周刊#3（0429 ~ 0505）](docs/weekly/weekly-2023/0429-0505)
+1. [好物周刊#1（0415 ~ 0421）](docs/weekly/weekly-2023/0415-0421.md)
+2. [好物周刊#2（0422 ~ 0428）](docs/weekly/weekly-2023/0422-0428.md)
+3. [好物周刊#3（0429 ~ 0505）](docs/weekly/weekly-2023/0429-0505.md)
 
 ## 快速联系
 
