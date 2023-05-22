@@ -48,10 +48,11 @@
 1. [效率工具：如何用 Markdown 写出好看的文章](docs/tutorial/efficiency-tools/20230425-markdown-tutorial.md)
 
 ## 好物周刊
-1. [好物周刊#1（0415 ~ 0421）](docs/weekly/weekly-2023/0415-0421.md)
-2. [好物周刊#2（0422 ~ 0428）](docs/weekly/weekly-2023/0422-0428.md)
-3. [好物周刊#3（0429 ~ 0505）](docs/weekly/weekly-2023/0429-0505.md)
-4. [好物周刊#4（0506 ~ 0512）](docs/weekly/weekly-2023/0506-0512.md)
+1. [好物周刊#1：提示工程师养成指南](docs/weekly/weekly-2023/0415-0421.md)
+2. [好物周刊#2：AI 写作助手](docs/weekly/weekly-2023/0422-0428.md)
+3. [好物周刊#3：Java 学习+面试指南](docs/weekly/weekly-2023/0429-0505.md)
+4. [好物周刊#4：每天一条 JS 小技巧](docs/weekly/weekly-2023/0506-0512.md)
+5. [好物周刊#5：前端开发必备资源站](docs/weekly/weekly-2023/0513-0519.md)
 
 ## 快速联系
 
