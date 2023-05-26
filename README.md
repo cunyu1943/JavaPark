@@ -53,6 +53,7 @@
 3. [好物周刊#3：Java 学习+面试指南](docs/weekly/weekly-2023/0429-0505.md)
 4. [好物周刊#4：每天一条 JS 小技巧](docs/weekly/weekly-2023/0506-0512.md)
 5. [好物周刊#5：前端开发必备资源站](docs/weekly/weekly-2023/0513-0519.md)
+6. [好物周刊#6：系统下载最优解](docs/weekly/weekly-2023/0520-0526.md)
 
 ## 快速联系
 
