@@ -25,7 +25,7 @@ const config = {
 
   title: 'JavaPark',
   tagline: 'Java 自学指南',
-  favicon: '/img/site/logo.svg',
+  favicon: '/img/site/wechatpublic.png',
 
   // Set the production url of your site here
   url: 'https://cunyu1943.github.io',
@@ -96,7 +96,7 @@ const config = {
         title: 'JavaPark',
         logo: {
           alt: 'JavaPark',
-          src: 'img/site/logo.svg',
+          src: 'img/site/wechatpublic.png',
         },
         items: [
           {
