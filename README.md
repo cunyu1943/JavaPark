@@ -56,6 +56,8 @@
 6. [好物周刊#6：系统下载最优解](docs/weekly/weekly-2023/0520-0526.md)
 7. [好物周刊#7：标签页也可以这么酷](docs/weekly/weekly-2023/0527-0602.md)
 8. [好物周刊#8：开源镜像站](docs/weekly/weekly-2023/0603-0609.md)
+9. [好物周刊#9：AI 学习必备资料](docs/weekly/weekly-2023/0610-0616.md)
+10. [好物周刊#10：算法学习必备](docs/weekly/weekly-2023/0617-0623.md)
 
 ## 快速联系
 
