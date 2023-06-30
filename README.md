@@ -43,9 +43,25 @@
 23. [Java 基础：static 和 final 小课堂](docs/tutorial/se-tutorial/20221203-oop-advance.md)
 24. [Java 基础：抽象、接口和内部类](docs/tutorial/se-tutorial/20221211-abstract.md)
 
+### MySQL 教程
+1. [MySQL 教程：《SQL 必知必会》全解析](docs/tutorial/mysql-tutorial/20220726-sql-in-10min.md)
+
+### 博客搭建
+1. [博客搭建：Hexo+Github Pages博客搭建教程](docs/tutorial/blog-tutorial/20220401-hexo.md)
+
+### 开发工具
+1. [开发工具：网站访问太慢，不妨试试这些 CDN](docs/tutorial/dev-tutorial/20220729-cdn.md)
+2. [开发工具：计算机专业涨薪必备的几个网站](docs/tutorial/dev-tutorial/20220731-exercise-websites.md)
+3. [开发工具：黑客大神也常用的一些 CMD 命令](docs/tutorial/dev-tutorial/20221127-cmd.md)
+
+### IDEA 教程
+1. [IDEA 教程：最新版 IntelliJ IDEA 使用手册](docs/tutorial/idea-tutorial/20220202-idea-guide.md)
+2. [IDEA 教程：原来大厂都是这么提交代码的](docs/tutorial/idea-tutorial/20230525-code-commit.md)
 ### 效率工具
 
-1. [效率工具：如何用 Markdown 写出好看的文章](docs/tutorial/efficiency-tools/20230425-markdown-tutorial.md)
+1. [效率工具：如何用 Markdown 写出好看的文章](docs/tutorial/efficiency-tutorial/20230425-markdown-tutorial.md)
+2. [效率工具：10 个神奇的网站，助力带薪摸鱼](docs/tutorial/efficiency-tutorial/20220729-10-amazing-website.md)
+3. [效率工具：Emoji 表情大作战](docs/tutorial/efficiency-tutorial/20220729-emoji.md)
 
 ## 好物周刊
 1. [好物周刊#1：提示工程师养成指南](docs/weekly/weekly-2023/0415-0421.md)
@@ -58,6 +74,7 @@
 8. [好物周刊#8：开源镜像站](docs/weekly/weekly-2023/0603-0609.md)
 9. [好物周刊#9：AI 学习必备资料](docs/weekly/weekly-2023/0610-0616.md)
 10. [好物周刊#10：算法学习必备](docs/weekly/weekly-2023/0617-0623.md)
+11. [好物周刊#11：远程桌面软件对对碰](docs/weekly/weekly-2023/0624-0630.md)
 
 ## 快速联系
 
