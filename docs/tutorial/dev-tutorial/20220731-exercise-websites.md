@@ -15,7 +15,7 @@ sidebar_position: 2
 刚学习编程时，你是不是很烦恼该去哪儿找找题目来练习下，看看自己学的怎么样。有或者在找工作时，需要准备面试，但是又不知道该去哪儿刷题？针对这个情况，今天我就来给大家分享几个可以在线练习算法和面试题的网站，为大家找工作助力！
 
 ## PTA
-![](https://cunyu1943.github.io/img/article/dev-tutorial/a6fcd5cf60758ffb36cb9af286268e9b.png)
+![](https://cunyu1943.github.io/static/imgs/article/dev-tutorial/a6fcd5cf60758ffb36cb9af286268e9b.png)
 
 - [地址](https://pintia.cn/)
 
@@ -23,21 +23,21 @@ sidebar_position: 2
 如果你在学习 C/C++ 语言，那么不妨进入他们，和各个高校的学子一起在线拼题吧。
 
 ## LeetCode 美国站
-![](https://cunyu1943.github.io/img/article/dev-tutorial/360b7331438a65a9d9beb61aad44b197.png)
+![](https://cunyu1943.github.io/static/imgs/article/dev-tutorial/360b7331438a65a9d9beb61aad44b197.png)
 
 - [地址](https://leetcode.com/)
 
 全球极客挚爱的技术成长平台，与其说国内在用，还不如说是因为国外一线科技公司如谷歌、评估、Meta 等公司都在这里选拔人才，所以才引入的国内。如果的英语能力还 OK，那么强烈推荐你来这里练习算法，和来自世界各地的程序员们 Battle 一下，谁才是王者！
 
 ## LeetCode 中国站
-![](https://cunyu1943.github.io/img/article/dev-tutorial/e56959e6d975c8fb5e064eecb22152d5.png)
+![](https://cunyu1943.github.io/static/imgs/article/dev-tutorial/e56959e6d975c8fb5e064eecb22152d5.png)
 
 - [地址](https://leetcode.cn/)
 
 当然了，除了美国站，LeetCode 还有中国站，相当于将美国站的内容翻译后搬运过来，但是又在此基础上进一步扩展了业务，加入了许多付费课程。如果你对自己的英语实在不自信，那么这里也不失为一个好去处。
 
 ## 牛客网
-![](https://cunyu1943.github.io/img/article/dev-tutorial/e885b214e9203bfef740fef7a1a23c93.png)
+![](https://cunyu1943.github.io/static/imgs/article/dev-tutorial/e885b214e9203bfef740fef7a1a23c93.png)
 
 - [地址](https://www.nowcoder.com/)
 
@@ -46,7 +46,7 @@ sidebar_position: 2
 如果你正在准备校招或者准备换工作，那么强烈推荐你多去逛逛这个网站，不管是刷题也好，还是看看经验贴，没准儿面试的时候你就会在牛客进行。
 
 ## 炼码
-![](https://cunyu1943.github.io/img/article/dev-tutorial/ab94245a4e65ae241496f0a2a3c2340c.png)
+![](https://cunyu1943.github.io/static/imgs/article/dev-tutorial/ab94245a4e65ae241496f0a2a3c2340c.png)
 
 - [地址](https://www.lintcode.com/)
 
@@ -54,21 +54,21 @@ sidebar_position: 2
 这里不仅有实操题目，还有各种精选题目集，更有针对热门编程语言如 Python、Java、SQL 等的学习教程，更有码力评测栏目，快来试试你的码力处于什么段位吧！
 
 ## 赛码
-![](https://cunyu1943.github.io/img/article/dev-tutorial/98bf365924b164df10001725fc432632.png)
+![](https://cunyu1943.github.io/static/imgs/article/dev-tutorial/98bf365924b164df10001725fc432632.png)
 
 - [地址](https://www.acmcoder.com/)
 
 一个免费在线考试系统、在线面试系统，稳定专业且易用。里边汇聚了腾讯、阿里、字节跳动、百度、京东、小米、华为等一线互联网的真题，如果你参加过校招，那么你肯定不会陌生这个网站，因为会有好多公司都会选择在这里进行笔试。
 
 ## 百面网
-![](https://cunyu1943.github.io/img/article/dev-tutorial/3eb2af5af5884eea42a5636974291b08.png)
+![](https://cunyu1943.github.io/static/imgs/article/dev-tutorial/3eb2af5af5884eea42a5636974291b08.png)
 
 - [地址](http://www.100mian.com/) 
 
 IT 公司面试神器，这里不仅提供了 300 本计算机编程经典书籍免费下载，还有针对互联网各个岗位的面试题，如果你也刚好需要找工作，不妨来这里看看经验和面试题。
 
 ## hihoCoder
-![](https://cunyu1943.github.io/img/article/dev-tutorial/213c84cd7d25d1bd89170749c5d8b9c3.png)
+![](https://cunyu1943.github.io/static/imgs/article/dev-tutorial/213c84cd7d25d1bd89170749c5d8b9c3.png)
 
 - [地址](http://hihocoder.com/)
 
@@ -84,7 +84,7 @@ IT 公司面试神器，这里不仅提供了 300 本计算机编程经典书籍
 
 ## N 诺
 
-![](https://cunyu1943.github.io/img/article/dev-tutorial/75a49bd80897f5102ecdf3a5e111abbb.png)
+![](https://cunyu1943.github.io/static/imgs/article/dev-tutorial/75a49bd80897f5102ecdf3a5e111abbb.png)
 
 - [地址](https://noobdream.com/)
 

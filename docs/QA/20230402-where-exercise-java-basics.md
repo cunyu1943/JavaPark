@@ -93,6 +93,6 @@ sidebar_position: 2
 
 <center>
 
-<img src="https://cunyu1943.github.io/img/course/datastructure-algo.png" width="30%" />
+<img src="https://cunyu1943.github.io/static/imgs/course/datastructure-algo.png" width="30%" />
 
 </center>

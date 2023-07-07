@@ -16,7 +16,7 @@ sidebar_position: 2
 
 ## docsmall
 
-![](https://cunyu1943.github.io/img/article/efficiency-tutorial/9d33d4ffd08b6d673f53eae95548cacc.jpeg)
+![](https://cunyu1943.github.io/static/imgs/article/efficiency-tutorial/9d33d4ffd08b6d673f53eae95548cacc.jpeg)
 
 -   [链接](https://docsmall.com/)
 
@@ -24,7 +24,7 @@ docsmall，这是一个神奇的网站。通过它，你不仅可以实现图片
 
 ## 白描网页版
 
-![](https://cunyu1943.github.io/img/article/efficiency-tutorial/b06786bc14b8cc4929a4389f9e4d419c.jpeg)
+![](https://cunyu1943.github.io/static/imgs/article/efficiency-tutorial/b06786bc14b8cc4929a4389f9e4d419c.jpeg)
 
 -   [链接](https://web.baimiaoapp.com/)
 
@@ -32,7 +32,7 @@ docsmall，这是一个神奇的网站。通过它，你不仅可以实现图片
 
 ## DeepL 翻译器
 
-![](https://cunyu1943.github.io/img/article/efficiency-tutorial/a5d4ac05b3bb6a0d9fa42e2907a49e2a.jpeg)
+![](https://cunyu1943.github.io/static/imgs/article/efficiency-tutorial/a5d4ac05b3bb6a0d9fa42e2907a49e2a.jpeg)
 
 
 
@@ -42,7 +42,7 @@ docsmall，这是一个神奇的网站。通过它，你不仅可以实现图片
 
 ## BigJpg
 
-![](https://cunyu1943.github.io/img/article/efficiency-tutorial/056bfd7142319889abbef059c1a456de.jpeg)
+![](https://cunyu1943.github.io/static/imgs/article/efficiency-tutorial/056bfd7142319889abbef059c1a456de.jpeg)
 
 
 
@@ -52,7 +52,7 @@ AI 人工智能图片放大！使用最新的人工智能深度学习技术，�
 
 ## unDraw
 
-![](https://cunyu1943.github.io/img/article/efficiency-tutorial/ca2d77c94ba85104131af8db27543076.jpeg)
+![](https://cunyu1943.github.io/static/imgs/article/efficiency-tutorial/ca2d77c94ba85104131af8db27543076.jpeg)
 
 
 
@@ -62,7 +62,7 @@ AI 人工智能图片放大！使用最新的人工智能深度学习技术，�
 
 ## IconFont
 
-![](https://cunyu1943.github.io/img/article/efficiency-tutorial/b89fc7397f8bd6b756a7587cdcb822d0.jpeg)
+![](https://cunyu1943.github.io/static/imgs/article/efficiency-tutorial/b89fc7397f8bd6b756a7587cdcb822d0.jpeg)
 
 -   [链接](http://www.iconfont.cn/)
 
@@ -70,7 +70,7 @@ AI 人工智能图片放大！使用最新的人工智能深度学习技术，�
 
 ## IconPark
 
-![img](https://cunyu1943.github.io/img/article/efficiency-tutorial/866528a021da01def1ebb0f22000bc9a.jpeg)
+![img](https://cunyu1943.github.io/static/imgs/article/efficiency-tutorial/866528a021da01def1ebb0f22000bc9a.jpeg)
 
 
 
@@ -80,7 +80,7 @@ AI 人工智能图片放大！使用最新的人工智能深度学习技术，�
 
 ## Font Awesome
 
-![img](https://cunyu1943.github.io/img/article/efficiency-tutorial/6ba2ca2cb8aa2e60c74e61237e4a0aea.jpeg)
+![img](https://cunyu1943.github.io/static/imgs/article/efficiency-tutorial/6ba2ca2cb8aa2e60c74e61237e4a0aea.jpeg)
 
 
 
@@ -89,7 +89,7 @@ AI 人工智能图片放大！使用最新的人工智能深度学习技术，�
 跟字节的 IconPark 和阿里的 IconFont 一样，是一个图标资源库！
 
 ## 第 1 PPT
-![](https://cunyu1943.github.io/img/article/efficiency-tutorial/81c34f60febe42aca79b8baebdc9a7c7.png)
+![](https://cunyu1943.github.io/static/imgs/article/efficiency-tutorial/81c34f60febe42aca79b8baebdc9a7c7.png)
 
 
 -   [链接](https://www.1ppt.com/)
@@ -98,7 +98,7 @@ AI 人工智能图片放大！使用最新的人工智能深度学习技术，�
 
 ## 优品 PPT
 
-![](https://cunyu1943.github.io/img/article/efficiency-tutorial/44f8e2802e1a639b6129b468e2247372.png)
+![](https://cunyu1943.github.io/static/imgs/article/efficiency-tutorial/44f8e2802e1a639b6129b468e2247372.png)
 
 -   [链接](https://www.ypppt.com/moban/)
 

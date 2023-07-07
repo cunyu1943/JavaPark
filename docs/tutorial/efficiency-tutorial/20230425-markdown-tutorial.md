@@ -376,19 +376,19 @@ print("公众号：村雨遥")
 
 跨平台多功能编辑器，支持导出 `PDF`、`HTML` 等格式，不过目前已经开始收费，89 软妹币即可永久授权 3 台设备。
 
-![](https://cunyu1943.github.io/img/article/efficiency-tools/typora.png)
+![](https://cunyu1943.github.io/static/imgs/article/efficiency-tools/typora.png)
 
 2.  [MarkText](https://marktext.app/)
 
 跨平台开源 `Markdown` 编辑器，支持斗图哦！
 
-![](https://cunyu1943.github.io/img/article/efficiency-tools/marktext.png)
+![](https://cunyu1943.github.io/static/imgs/article/efficiency-tools/marktext.png)
 
 3.  [Visual Studio Code](https://code.visualstudio.com/)
 
 微软出品，相信这是许多程序员电脑上必装的一个软件了。支持超多插件，需要插件使用效果更佳哦！
 
-![](https://cunyu1943.github.io/img/article/efficiency-tools/vscode.png)
+![](https://cunyu1943.github.io/static/imgs/article/efficiency-tools/vscode.png)
 
 ### Markdown 插件
 
@@ -401,7 +401,7 @@ print("公众号：村雨遥")
 1.   在邮件客户端的富文本编辑器中编写 `Markdown` 格式的邮件内容。
 2.   接着在编辑区右键后选择 `Markdown 转换` 即可。
 
-![](https://cunyu1943.github.io/img/article/weekly-2023/Markdown-here.png)
+![](https://cunyu1943.github.io/static/imgs/article/weekly-2023/Markdown-here.png)
 
 ### Markdown 在线编辑器和转换器
 
@@ -409,7 +409,7 @@ print("公众号：村雨遥")
 
 支持自定义样式的 `Markdown` 编辑器，支持微信公众号、知乎和稀土掘金，也是我在日常运营公众号时使用最多的转换器之一了。
 
-![](https://cunyu1943.github.io/img/article/efficiency-tools/markdownnice.png)
+![](https://cunyu1943.github.io/static/imgs/article/efficiency-tools/markdownnice.png)
 
 2.   [Cmd Markdown](https://www.zybuluo.com/mdeditor)
 
@@ -420,13 +420,13 @@ print("公众号：村雨遥")
 -   撰写发布技术文稿（代码支持）
 -   撰写发布学术论文（`LaTeX` 公式支持）
 
-![](https://cunyu1943.github.io/img/article/efficiency-tools/cmdmarkdown.png)
+![](https://cunyu1943.github.io/static/imgs/article/efficiency-tools/cmdmarkdown.png)
 
 3.   [微信 Markdown 编辑器](https://doocs.gitee.io/md)
 
 `Doocs` 开源社区出品的一款高度简洁的微信 `Markdown` 编辑器。
 
-![](https://cunyu1943.github.io/img/article/efficiency-tools/doocs.png)
+![](https://cunyu1943.github.io/static/imgs/article/efficiency-tools/doocs.png)
 
 ## 注意事项
 

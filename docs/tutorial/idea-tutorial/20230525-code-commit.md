@@ -46,16 +46,16 @@ categories: 基础教程
 
 ### 提交前的配置项
 
-![提交前的配置](https://cunyu1943.github.io/img/article/idea-tutorial/before-commit.png)
+![提交前的配置](https://cunyu1943.github.io/static/imgs/article/idea-tutorial/before-commit.png)
 
 #### Alibaba Code Guidelines
 
 安装 `p3c` 插件后，才会有该选项。在提交代码改动之前，如果勾选此选项，则会去扫描代码中不符合 `p3c` 规则中的代码，然后弹窗提示存在可疑代码，此时可以到控制台查看存疑的代码。然后只需要根据控制台中提示的去修改代码即可。
 
 - 代码存疑弹窗
-  ![](https://cunyu1943.github.io/img/article/idea-tutorial/ali-code-analyze.png)
+  ![](https://cunyu1943.github.io/static/imgs/article/idea-tutorial/ali-code-analyze.png)
 - 控制台中存疑的代码提示
-  ![](https://cunyu1943.github.io/img/article/idea-tutorial/console-ali.png)
+  ![](https://cunyu1943.github.io/static/imgs/article/idea-tutorial/console-ali.png)
 
 #### Reformat code
 
@@ -108,9 +108,9 @@ public class Main {
 #### Analyze code
 
 勾选该选项后，`IDEA` 会用默认的配置文件去扫描我们所写代码的质量。如果扫描发现问题，则会弹出以下类似的弹窗，此时只要点击 `Review` 就可以对代码中存在问题的地方进行 `Review`，根据所给提示对代码进行修改。
-![](https://cunyu1943.github.io/img/article/idea-tutorial/code-analysis.png)
+![](https://cunyu1943.github.io/static/imgs/article/idea-tutorial/code-analysis.png)
 
-![](https://cunyu1943.github.io/img/article/idea-tutorial/code-analysis-res.png)
+![](https://cunyu1943.github.io/static/imgs/article/idea-tutorial/code-analysis-res.png)
 
 #### Check TODO
 
@@ -127,10 +127,10 @@ public class Main {
 
 如果我们新增的代码如上，此时如果在提交点前勾选 `Check TODO` 选项，就会弹窗提示。
 
-![](https://cunyu1943.github.io/img/article/idea-tutorial/todo.png)
+![](https://cunyu1943.github.io/static/imgs/article/idea-tutorial/todo.png)
 
 此时点击 `Review` 就可以去查看对应分析结果，然后去找到对应 `todo` 所在的代码对它进行补充。
-![](https://cunyu1943.github.io/img/article/idea-tutorial/review.png)
+![](https://cunyu1943.github.io/static/imgs/article/idea-tutorial/review.png)
 
 #### Cleanup
 
@@ -167,9 +167,9 @@ public class Main {
 
 ```
 
-![](https://cunyu1943.github.io/img/article/idea-tutorial/review-sonar-res.png)
+![](https://cunyu1943.github.io/static/imgs/article/idea-tutorial/review-sonar-res.png)
 
-![](https://cunyu1943.github.io/img/article/idea-tutorial/sonar-res.png)
+![](https://cunyu1943.github.io/static/imgs/article/idea-tutorial/sonar-res.png)
 
 ## 提交日志模板化（Git Commit Template）
 
@@ -251,13 +251,13 @@ public class Main {
 
 1.  安装完成后，在代码提交界面会有以下图标，点击进行参数配置。
 
-![](https://cunyu1943.github.io/img/article/idea-tutorial/para-setting.png)
+![](https://cunyu1943.github.io/static/imgs/article/idea-tutorial/para-setting.png)
 
 2.  根据自己的需求进行相关配置。
 
-![](https://cunyu1943.github.io/img/article/idea-tutorial/para-fill.png)
+![](https://cunyu1943.github.io/static/imgs/article/idea-tutorial/para-fill.png)
 
-![](https://cunyu1943.github.io/img/article/idea-tutorial/fix-setting.png)
+![](https://cunyu1943.github.io/static/imgs/article/idea-tutorial/fix-setting.png)
 
 3.  完成配置之后，点击右下角的 `ok`，就会自动根据模板生成提交的具体信息，最后进行提交即可，一个自动生成的具体示例如下：
 
@@ -271,7 +271,7 @@ BREAKING CHANGE: 不兼容的变更
 Closes 关闭的issue
 ```
 
-![](https://cunyu1943.github.io/img/article/idea-tutorial/gene-res.png)
+![](https://cunyu1943.github.io/static/imgs/article/idea-tutorial/gene-res.png)
 
 ## 总结
 

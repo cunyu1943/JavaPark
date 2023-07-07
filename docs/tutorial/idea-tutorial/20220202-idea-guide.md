@@ -34,11 +34,11 @@ recommend: true
 
 https://www.jetbrains.com/idea/download/
 
-![](https://cunyu1943.github.io/img/article/idea-tutorial/20220202-idea-guide/offcial-website.png)
+![](https://cunyu1943.github.io/static/imgs/article/idea-tutorial/20220202-idea-guide/offcial-website.png)
 
 因为我有旗舰版的账号，所以这里就以旗舰版安装为例，其实社区版的安装也是一样的，只不过里边集成的东西有所不同。所以如果你安装的是社区版，参照此教程也是完全可以的！
 
-![](https://cunyu1943.github.io/img/article/idea-tutorial/20220202-idea-guide/download.png)
+![](https://cunyu1943.github.io/static/imgs/article/idea-tutorial/20220202-idea-guide/download.png)
 
 ## 安装
 
@@ -46,25 +46,25 @@ https://www.jetbrains.com/idea/download/
 
 1.  双击我们的安装包之后，来到 `IDEA` 的欢迎界面，我们此时只需要 `Next` 即可。
 
-![](https://cunyu1943.github.io/img/article/idea-tutorial/20220202-idea-guide/welcome.png)
+![](https://cunyu1943.github.io/static/imgs/article/idea-tutorial/20220202-idea-guide/welcome.png)
 
 2.  接着就是选择我们要安装 `IDEA` 的位置，它默认的安装位置是 `C:\Program Files\JetBrains\IntelliJ IDEA 2021.1.2`，这里就是看大家自己的喜好了，你喜欢安在哪儿都可以，但是需要满足它所需要的内存。更加推荐大家安装到自己的非系统盘位置，比如我的安装位置是 `D:\SoftInstall\IntelliJ IDEA`。
 
-![](https://cunyu1943.github.io/img/article/idea-tutorial/20220202-idea-guide/path-set.png)
+![](https://cunyu1943.github.io/static/imgs/article/idea-tutorial/20220202-idea-guide/path-set.png)
 
 3.  选择安装的配置，这里主要选择创建 32 还是 64 位的桌面快捷方式、是否要将其加入到系统 `PATH` 环境变量、是否关联相关后缀文件等等。可以根据自己的使用习惯来进行选择，以我个人来说，因为不喜欢弄一些桌面快捷方式以及关联相关后缀文件等操作，所以我默认全都不勾选，直接 `Next`。
 
-![](https://cunyu1943.github.io/img/article/idea-tutorial/20220202-idea-guide/install-options.png)
+![](https://cunyu1943.github.io/static/imgs/article/idea-tutorial/20220202-idea-guide/install-options.png)
 
 4.  选择开始菜单中给 IDEA 的文件夹名，这里默认即可，直接点击 `Install`，然后就是漫长的等待安装过程了！
 
-![](https://cunyu1943.github.io/img/article/idea-tutorial/20220202-idea-guide/start-menu.png)
+![](https://cunyu1943.github.io/static/imgs/article/idea-tutorial/20220202-idea-guide/start-menu.png)
 
-![](https://cunyu1943.github.io/img/article/idea-tutorial/20220202-idea-guide/installing.png)
+![](https://cunyu1943.github.io/static/imgs/article/idea-tutorial/20220202-idea-guide/installing.png)
 
 5.  大功告成！显示此界面就说明我们的 `IDEA` 已经安装好了，直接点击 `Finish` 即可！
 
-![](https://cunyu1943.github.io/img/article/idea-tutorial/20220202-idea-guide/finish.png)
+![](https://cunyu1943.github.io/static/imgs/article/idea-tutorial/20220202-idea-guide/finish.png)
 
 ## 配置
 
@@ -81,13 +81,13 @@ https://www.jetbrains.com/idea/download/
 
 当然你也可以选择 `Evaluate for free`，它是有 30 天的试用期的，你只需要在这 30 天之内激活即可，否则 30 天之后将会弹窗不可用。对于社区版，应该没有激活这一说法，因为它是免费的，我们直接打开用就可以了。
 
-![](https://cunyu1943.github.io/img/article/idea-tutorial/20220202-idea-guide/license.png)
+![](https://cunyu1943.github.io/static/imgs/article/idea-tutorial/20220202-idea-guide/license.png)
 
 ### 编码设置
 
 一般 IDEA 的编码是和系统保持一致的，而为了通用，减少不必要的编码问题，所以一般统一设置为 UTF-8，设置入口如下，依次打开 `Settings -> Editor -> File Encodings`，然后将 `Global Encoding`、`Project Encoding`、`Default encoding for properties files` 均设置为 UTF-8。
 
-![](https://cunyu1943.github.io/img/article/idea-tutorial/20220202-idea-guide/encode-setting.png)
+![](https://cunyu1943.github.io/static/imgs/article/idea-tutorial/20220202-idea-guide/encode-setting.png)
 
 ### 外观设置
 
@@ -95,7 +95,7 @@ https://www.jetbrains.com/idea/download/
 
 安装并激活之后，进入 IDEA 的主界面，新版本的主界面如下图所示：
 
-![](https://cunyu1943.github.io/img/article/idea-tutorial/20220202-idea-guide/ui.png)
+![](https://cunyu1943.github.io/static/imgs/article/idea-tutorial/20220202-idea-guide/ui.png)
 
 点击 `Customize`，可以看到右侧我们可以设置主题和字体。其中主题有如下 4 种选择：
 
@@ -109,39 +109,39 @@ https://www.jetbrains.com/idea/download/
 
 而字体大小设置这边，我个人更喜欢稍微大一点（主要是小的看久了眼睛疼 😂），所以设置的是 16 号字体。
 
-![](https://cunyu1943.github.io/img/article/idea-tutorial/20220202-idea-guide/theme.png)
+![](https://cunyu1943.github.io/static/imgs/article/idea-tutorial/20220202-idea-guide/theme.png)
 
 而关于更多设置，可以点击下方的 `All settings…`，进入更详细的设置。比如这里 IDEA 默认界面字体是微软雅黑，我们要改成自己喜欢的字体就可以在这里进行更改，这里推荐 JetBrains 自家推出的 `JetBrains Mono` 字体。
 
 设置入口，依次进入 `Settings -> Appearance & Behavior -> Appearance`，然后在右边设置主题，字体以及字体大小即可。
 
-![](https://cunyu1943.github.io/img/article/idea-tutorial/20220202-idea-guide/appearance.png)
+![](https://cunyu1943.github.io/static/imgs/article/idea-tutorial/20220202-idea-guide/appearance.png)
 
 #### 编辑区
 
 上述设置只是针对于 IDEA 整体界面风格的设置，而如果我们要对我们的代码编辑区进行设置，那么就需要进入：`Settings -> Editor -> Font`，然后设置字体和大小。这里依然推荐使用 `JetBrains Mono` 字体，字号 16。
 
-![](https://cunyu1943.github.io/img/article/idea-tutorial/20220202-idea-guide/font.png)
+![](https://cunyu1943.github.io/static/imgs/article/idea-tutorial/20220202-idea-guide/font.png)
 
 除开上面设置编辑区字体大小的方法外，我们还可以按住 `Ctrl`，然后通过鼠标滚轮来实现字体大小的调整，但是前提是你要先打开相关设置。设置入口如下，依次进入 `Settings -> Editor -> General`，然后勾选 `Change font size with Ctrl+Mouse Wheel` 即可。
 
-![](https://cunyu1943.github.io/img/article/idea-tutorial/20220202-idea-guide/mouse-wheel.png)
+![](https://cunyu1943.github.io/static/imgs/article/idea-tutorial/20220202-idea-guide/mouse-wheel.png)
 
 #### 控制台
 
 一般情况下无需调整，它会沿用编辑器一样的配置，但如果你需要自定义，可以去如下入口：`Settings -> Editor -> Color Scheme -> Console Font`，然后勾选如下 `Use color scheme font instead of the default` 选项并进行设置即可。
 
-![](https://cunyu1943.github.io/img/article/idea-tutorial/20220202-idea-guide/console.png)
+![](https://cunyu1943.github.io/static/imgs/article/idea-tutorial/20220202-idea-guide/console.png)
 
 ### 扁平化显示及空包隐藏
 
 有时候，我们项目的包结构会变成如下样式，有时会造成一定的不便，此时是因为开启了 `Flatten Packages` 所导致。
 
-![](https://cunyu1943.github.io/img/article/idea-tutorial/20220202-idea-guide/flatten-pkg-on.png)
+![](https://cunyu1943.github.io/static/imgs/article/idea-tutorial/20220202-idea-guide/flatten-pkg-on.png)
 
 如果我们关闭此功能，则项目包结构如下所示：
 
-![](https://cunyu1943.github.io/img/article/idea-tutorial/20220202-idea-guide/flatten-pkg-off.png)
+![](https://cunyu1943.github.io/static/imgs/article/idea-tutorial/20220202-idea-guide/flatten-pkg-off.png)
 
 其中 `Compact Middle Packages` 表示是否隐藏空包。
 
@@ -151,37 +151,37 @@ https://www.jetbrains.com/idea/download/
 
 设置入口：依次打开 `Settings -> Editor -> General -> Editor Tabs`，然后将 `Show tabs in` 勾选为 `Multiples rows`。
 
-![](https://cunyu1943.github.io/img/article/idea-tutorial/20220202-idea-guide/mul-row.png)
+![](https://cunyu1943.github.io/static/imgs/article/idea-tutorial/20220202-idea-guide/mul-row.png)
 
 ### 行号和方法分隔符
 
 日常为了方便定位 Bug 所在位置，我们通常需要打开代码所对应的行号，方便我们查找。另外，如果我们代码中方法较多时，最好是在每个方法之间加一个分隔符，方便我们知道一个方法的开始和结束。而这两个功能，IDEA 都是提供的。设置入口：依次打开 `Settings -> Editor -> General -> Appearance`，然后勾选 `Show line numbers` 和 `Show method separators`。
 
-![](https://cunyu1943.github.io/img/article/idea-tutorial/20220202-idea-guide/line-num.png)
+![](https://cunyu1943.github.io/static/imgs/article/idea-tutorial/20220202-idea-guide/line-num.png)
 
 ### 自动导包
 
 日常工作中，我们会经常用到第三方的包，每次都需要我们通过手动（`Alt + Enter`） 的方式来导入，但实际上 IDEA 也是提供自动导包功能的，设置入口如下：`Settings -> Editor -> General -> Auto Import`，将 `Insert imports on paste` 设置为 `Always`，再勾选 `Add unambiguous imports on the fly` 以及 `Optimize imports on the fly` 即可。
 
-![](https://cunyu1943.github.io/img/article/idea-tutorial/20220202-idea-guide/auto-import.png)
+![](https://cunyu1943.github.io/static/imgs/article/idea-tutorial/20220202-idea-guide/auto-import.png)
 
 ### 忽略大小写
 
 通常 IDEA 在导入类时大小写是全匹配的，这样一样就极大影响了我们编码的速度。此时我们就可以通过设置 IDEA，让其忽略大小写字母，提高效率。设置入口如下，依次进入 `Settings -> Editor -> General -> Code Completion`，取消勾选 `Match case`。
 
-![](https://cunyu1943.github.io/img/article/idea-tutorial/20220202-idea-guide/match-case.png)
+![](https://cunyu1943.github.io/static/imgs/article/idea-tutorial/20220202-idea-guide/match-case.png)
 
 ### 自动编译
 
 IDEA 默认是不会对代码自动编译的，需要我们手动配置。设置入口：依次打开 `Settings -> Build,Execution,Deployment -> Compiler`，然后勾选 `Build project automatically` 和 `Compole independent modules in parallel`。
 
-![](https://cunyu1943.github.io/img/article/idea-tutorial/20220202-idea-guide/build-auto.png)
+![](https://cunyu1943.github.io/static/imgs/article/idea-tutorial/20220202-idea-guide/build-auto.png)
 
 ### 编译器设置
 
 这里推荐使用 `Javac` 编译器，然后编译器版本最好保持和你本地使用的 JDK 版本相同。因为我本地使用的是 JDK11，所以这里版本我设置的是 11，这里最好根据你自己的实际情况进行设置。设置入口：依次打开 `Settings -> Build,Execution,Deployment -> Compiler -> Java Compiler`，然后将 `Use compiler` 设置为 `Javac`，并将 `Project bytecode version` 设置为你本地使用的 JDK 的版本。
 
-![](https://cunyu1943.github.io/img/article/idea-tutorial/20220202-idea-guide/compiler.png)
+![](https://cunyu1943.github.io/static/imgs/article/idea-tutorial/20220202-idea-guide/compiler.png)
 
 ### Maven 设置
 
@@ -194,7 +194,7 @@ IDEA 默认是不会对代码自动编译的，需要我们手动配置。设置
 
 设置入口：依次打开 `Settings -> Build,Execution,Deployment -> Build Tools -> Maven`，然后设置以上三点即可。
 
-![](https://cunyu1943.github.io/img/article/idea-tutorial/20220202-idea-guide/maven-setting.png)
+![](https://cunyu1943.github.io/static/imgs/article/idea-tutorial/20220202-idea-guide/maven-setting.png)
 
 ### 类模板
 
@@ -216,7 +216,7 @@ IDEA 默认是不会对代码自动编译的，需要我们手动配置。设置
  */
 ```
 
-![img](https://cunyu1943.github.io/img/article/idea-tutorial/20220202-idea-guide/class-temp.png)
+![img](https://cunyu1943.github.io/static/imgs/article/idea-tutorial/20220202-idea-guide/class-temp.png)
 
 ### 导入导出设置
 
@@ -226,13 +226,13 @@ IDEA 默认是不会对代码自动编译的，需要我们手动配置。设置
 
 导出入口：依次打开 `File -> Manage IDE Settings -> Export Settings…`。
 
-![](https://cunyu1943.github.io/img/article/idea-tutorial/20220202-idea-guide/export.png)
+![](https://cunyu1943.github.io/static/imgs/article/idea-tutorial/20220202-idea-guide/export.png)
 
 #### 导入
 
 导入入口，依次打开 `File -> Manage IDE Settings -> Import Settings…`。
 
-![](https://cunyu1943.github.io/img/article/idea-tutorial/20220202-idea-guide/import.png)
+![](https://cunyu1943.github.io/static/imgs/article/idea-tutorial/20220202-idea-guide/import.png)
 
 ## 总结
 
