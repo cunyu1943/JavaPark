@@ -53,6 +53,7 @@
 1. [开发工具：网站访问太慢，不妨试试这些 CDN](docs/tutorial/dev-tutorial/20220729-cdn.md)
 2. [开发工具：计算机专业涨薪必备的几个网站](docs/tutorial/dev-tutorial/20220731-exercise-websites.md)
 3. [开发工具：黑客大神也常用的一些 CMD 命令](docs/tutorial/dev-tutorial/20221127-cmd.md)
+4. [开发工具：如何在浏览器中安装插件](docs/tutorial/dev-tutorial/20230710-browser-plugin-install.md)
 
 ### IDEA 教程
 1. [IDEA 教程：最新版 IntelliJ IDEA 使用手册](docs/tutorial/idea-tutorial/20220202-idea-guide.md)
@@ -75,6 +76,7 @@
 9. [好物周刊#9：AI 学习必备资料](docs/weekly/weekly-2023/0610-0616.md)
 10. [好物周刊#10：算法学习必备](docs/weekly/weekly-2023/0617-0623.md)
 11. [好物周刊#11：远程桌面软件对对碰](docs/weekly/weekly-2023/0624-0630.md)
+12. [好物周刊#12：计算机考研资料](docs/weekly/weekly-2023/0701-0707.md)
 
 ## 快速联系
 
