@@ -10,9 +10,9 @@
 
 - 👉 [『资源下载』](https://github.com/cunyu1943/ebooks)
 
-![](https://img.shields.io/github/stars/cunyu1943/JavaPark?style=social)
-![](https://img.shields.io/github/forks/cunyu1943/JavaPark?style=social)
-![](https://img.shields.io/github/watchers/cunyu1943/JavaPark?style=social)
+![](https://img.shields.io/github/followers/cunyu1943?label=Followers&logo=Github&color=red)![](https://img.shields.io/github/stars/cunyu1943/JavaPark?logo=Github&label=Stars&color=yellow)
+![](https://img.shields.io/github/forks/cunyu1943/JavaPark?logo=Github&label=Forks)
+![](https://img.shields.io/github/watchers/cunyu1943/JavaPark?label=Watchers&logo=Github&color=green)
 
 ## 基础教程
 ### Java 基础
@@ -84,6 +84,10 @@
 18. [好物周刊#18：灵感收集器](src/weekly/2023/0812-0818.md)
 19. [好物周刊#19：开源指北](src/weekly/2023/0819-0825.md)
 
+## 你问我答
+
+1. [你问我答：想学好 Java 基础，应该去哪儿刷题](src/QA/20230402-where-exercise-java-basics.md)
+
 ## 快速联系
 
 ### 👨‍💻 加群交流
@@ -117,15 +121,12 @@
 
 ## 赞助
 
-开源不易，如果你觉得本仓库对你有帮助，或许可以请我喝杯咖啡 ☕️
+开源不易，如果你觉得本仓库对你有帮助，或许可以请我喝杯咖啡，不靠它生存，但仍希望得到你的鼓励。
 
-
-|                          支付宝                          |                            微信                             |
-| :------------------------------------------------------: | :---------------------------------------------------------: |
-| <img src="./static/img/site/alipay.png" width="150px" /> | <img src="./static/img/site/wechatpay.png" width="150px" /> |
+<img src="src/.vuepress/public/award/donate.svg" style="zoom:35%;" />
 
 ## 🧑‍🤝‍🧑 参与贡献
 
-1.  如果您对本项目有任何建议或者发现文中内容有错误的，欢迎私信我或者提交 `issues` 指正。
+1.  如果您对本项目有任何建议或者发现文中内容有错误的，欢迎私信我或者提交 [`issues`](https://github.com/cunyu1943/JavaPark/issues) 指正。
 
 2.  对于项目中未涉及到的知识点，欢迎提交 `PR`。
