@@ -123,7 +123,7 @@
 
 开源不易，如果你觉得本仓库对你有帮助，或许可以请我喝杯咖啡，不靠它生存，但仍希望得到你的鼓励。
 
-<img src="src/.vuepress/public/award/donate.svg" style="zoom:35%;" />
+<img src="src/.vuepress/public/award/donate.svg" width="150px"/>
 
 ## 🧑‍🤝‍🧑 参与贡献
 
