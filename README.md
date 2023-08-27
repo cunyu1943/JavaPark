@@ -2,8 +2,7 @@
 
 ## 项目简介
 
-
-- 👉 推荐 [Github 在线阅读](https://cunyu1943.github.io/JavaPark) | [Gitee 在线阅读](https://cunyu1943.gitee.io/JavaPark)，`Github` 访问较慢，所以部分资源可能会加载较慢。
+- 👉 推荐 [Github 在线阅读](https://cunyu1943.github.io/) | [Gitee 在线阅读](https://cunyu1943.gitee.io/)，`Github` 访问较慢，所以部分资源可能会加载较慢。
 
 - 👉 项目同步维护：[Github](https://github.com/cunyu1943/JavaPark) | [Gitee](https://gitee.com/cunyu1943/JavaPark)
 
@@ -42,7 +41,6 @@
 22. [Java 基础：Fastjson V2 简单使用手册](src/java-tutorial/javase-series/20220720-fastjson2-quickstart.md)
 23. [Java 基础：static 和 final 小课堂](src/java-tutorial/javase-series/20221203-oop-advance.md)
 24. [Java 基础：抽象、接口和内部类](src/java-tutorial/javase-series/20221211-abstract.md)
-
 
 ### MySQL 教程
 1. [MySQL 教程：《SQL 必知必会》全解析](src/java-tutorial/mysql-series/20220726-sql-in-10min.md)
@@ -111,7 +109,7 @@
 
 ## ✨ Star 趋势图
 
-> 🎈 [JavaPark](https://github.com/cunyu1943/JavaPark)
+> 🎈 [Github](https://github.com/cunyu1943/JavaPark) | [Gitee](https://gitee.com/cunyu1943/JavaPark)
 
 如果您觉得本项目对您有所帮助，那就去 Github **Star** 收藏一下吧！
 
