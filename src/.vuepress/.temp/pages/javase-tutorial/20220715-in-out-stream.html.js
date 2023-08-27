@@ -1,0 +1,14 @@
+export const data = JSON.parse("{\"key\":\"v-c756f1f6\",\"path\":\"/javase-tutorial/20220715-in-out-stream.html\",\"title\":\"输入输出流\",\"lang\":\"zh-CN\",\"frontmatter\":{\"isOriginal\":true,\"order\":1,\"category\":[\"Java 基础\"],\"tag\":[\"Java\"],\"description\":\"输入输出流 共勉 不要哀求，学会争取。若是如此，终有所获。 前言 我们日常开发过程中，有许多方面都涉及到 IO 流，比如上传下载、传输、设计模式等等。而所有的一切都是基于 IO 流来进行，所以今天就来看看 Java 中 IO 流的相关知识点。 本文主要内容安排如下： 文件对象 流简介 字节流 字符流\"},\"headers\":[{\"level\":2,\"title\":\"前言\",\"slug\":\"前言\",\"link\":\"#前言\",\"children\":[]},{\"level\":2,\"title\":\"文件对象\",\"slug\":\"文件对象\",\"link\":\"#文件对象\",\"children\":[{\"level\":3,\"title\":\"文件路径\",\"slug\":\"文件路径\",\"link\":\"#文件路径\",\"children\":[]},{\"level\":3,\"title\":\"文件和目录操作\",\"slug\":\"文件和目录操作\",\"link\":\"#文件和目录操作\",\"children\":[]},{\"level\":3,\"title\":\"练习\",\"slug\":\"练习\",\"link\":\"#练习\",\"children\":[]}]},{\"level\":2,\"title\":\"流\",\"slug\":\"流\",\"link\":\"#流\",\"children\":[{\"level\":3,\"title\":\"什么是流\",\"slug\":\"什么是流\",\"link\":\"#什么是流\",\"children\":[]},{\"level\":3,\"title\":\"InputStream\",\"slug\":\"inputstream\",\"link\":\"#inputstream\",\"children\":[]},{\"level\":3,\"title\":\"OutputStream\",\"slug\":\"outputstream\",\"link\":\"#outputstream\",\"children\":[]},{\"level\":3,\"title\":\"字符串中的编解码问题\",\"slug\":\"字符串中的编解码问题\",\"link\":\"#字符串中的编解码问题\",\"children\":[]},{\"level\":3,\"title\":\"Writer\",\"slug\":\"writer\",\"link\":\"#writer\",\"children\":[]},{\"level\":3,\"title\":\"Reader\",\"slug\":\"reader\",\"link\":\"#reader\",\"children\":[]}]},{\"level\":2,\"title\":\"总结\",\"slug\":\"总结\",\"link\":\"#总结\",\"children\":[]}],\"readingTime\":{\"minutes\":11.57,\"words\":3471},\"filePathRelative\":\"javase-tutorial/20220715-in-out-stream.md\",\"excerpt\":\"<h1> 输入输出流</h1>\\n<div class=\\\"hint-container info\\\">\\n<p class=\\\"hint-container-title\\\">共勉</p>\\n<p>不要哀求，学会争取。若是如此，终有所获。</p>\\n</div>\\n<h2> 前言</h2>\\n<p>我们日常开发过程中，有许多方面都涉及到 IO 流，比如上传下载、传输、设计模式等等。而所有的一切都是基于 IO 流来进行，所以今天就来看看 Java 中 IO 流的相关知识点。</p>\\n<p>本文主要内容安排如下：</p>\\n<ul>\\n<li><strong>文件对象</strong></li>\\n<li><strong>流简介</strong></li>\\n<li><strong>字节流</strong></li>\\n<li><strong>字符流</strong></li>\\n</ul>\",\"copyright\":{\"author\":\"村雨遥\",\"license\":\"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处\"},\"autoDesc\":true}")
+
+if (import.meta.webpackHot) {
+  import.meta.webpackHot.accept()
+  if (__VUE_HMR_RUNTIME__.updatePageData) {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  }
+}
+
+if (import.meta.hot) {
+  import.meta.hot.accept(({ data }) => {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  })
+}
