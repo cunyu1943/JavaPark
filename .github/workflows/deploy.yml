@@ -30,7 +30,7 @@ jobs:
         with:
           token: ${{ secrets.TOKEN }}
           repository-name: cunyu1943/JavaPark
-          branch: docusaurus
+          branch: gh-pages
           folder: build
           commit-message: "${{ github.event.head_commit.message }}"
           # Build output to publish to the `gh-pages` branch:
