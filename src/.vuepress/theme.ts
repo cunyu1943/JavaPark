@@ -71,7 +71,7 @@ export default hopeTheme({
             path: "/",
             title: "🎉🎉🎉",
             content:
-              '<b><center>扫码添加微信/关注公众号，及时获取最新资讯</br><img src="/contact/contact.png" width="200"></br>鼓励/支持/赞赏我</br><img src="/award/donate.svg" width="150"></b></center>',
+              '<b><center>扫码添加微信/关注公众号，及时获取最新资讯</br><img src="/contact/contact.png" width="180"></br>鼓励/支持/赞赏我</br><img src="/award/donate.svg" width="100"></b></center>',
             actions: [
               {
                 text: "查看更多",
