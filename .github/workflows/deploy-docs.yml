@@ -60,6 +60,17 @@ jobs:
           # 注意替换为你的 Gitee 目标仓库地址
           destination-repo: git@gitee.com:cunyu1943/JavaPark.git
 
+      - name: 同步部署仓库
+        uses: wearerequired/git-mirror-action@master
+        env:
+          # 注意在 Settings->Secrets 配置 GITEE_RSA_PRIVATE_KEY
+          SSH_PRIVATE_KEY: ${{ secrets.GITEE_RSA_PRIVATE_KEY }}
+        with:
+          # 注意替换为你的 GitHub 源仓库地址
+          source-repo: git@github.com:cunyu1943/cunyu1943.github.io.git
+          # 注意替换为你的 Gitee 目标仓库地址
+          destination-repo: git@gitee.com:cunyu1943/cunyu1943.git
+
       - name: 同步 Gitee Pages
         uses: yanglbme/gitee-pages-action@main
         with:
