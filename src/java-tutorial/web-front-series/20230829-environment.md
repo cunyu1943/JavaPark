@@ -39,7 +39,7 @@ date: 2023-08-29
 
 截止目前，根据 `W3Counter` 的统计，`Chrome` 浏览器占据了绝大部分市场，处于绝对领先地位。
 
-![2023.8 浏览器市场份额](assets/image-20230829222932583.png)
+![](https://cdn.staticaly.com/gh/cunyu1943/JavaPark@main/src/java-tutorial/web-front-series/assets/1693786691442.webp)
 
 同时，`Chrome` 也深受前端开发者的欢迎。出于两方面的考虑，因此选用 `Chrome` 作为系列教程中用于看效果的载体。
 
@@ -55,13 +55,21 @@ date: 2023-08-29
 
 >   https://code.visualstudio.com/
 
-![VS Code 官网](assets/image-20230829224404655.png)
+![](https://cdn.staticaly.com/gh/cunyu1943/JavaPark@main/src/java-tutorial/web-front-series/assets/1693786800554.webp)
 
 虽说官网是英文界面，不过都很简单。选择对应操作的安装包，点击 `Download` 就能得到想要的安装包了。
 
 ### 2. 安装
 
+![](https://cdn.staticaly.com/gh/cunyu1943/JavaPark@main/src/java-tutorial/web-front-series/assets/1693787359078.webp)
 
+![](https://cdn.staticaly.com/gh/cunyu1943/JavaPark@main/src/java-tutorial/web-front-series/assets/1693787400353.webp)
+
+![](https://cdn.staticaly.com/gh/cunyu1943/JavaPark@main/src/java-tutorial/web-front-series/assets/1693787430775.webp)
+
+![](https://cdn.staticaly.com/gh/cunyu1943/JavaPark@main/src/java-tutorial/web-front-series/assets/1693787469522.webp)
+
+![](https://cdn.staticaly.com/gh/cunyu1943/JavaPark@main/src/java-tutorial/web-front-series/assets/1693787504599.webp)
 
 ### 3. 插件
 
@@ -94,5 +102,7 @@ date: 2023-08-29
 ### 2. 安装
 
 相对与下载而言，`Chrome` 的安装就十分简单了，只需要双击打开安装包，它就会自动开始安装。
+
+
 
 <Share colorful />
