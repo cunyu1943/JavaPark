@@ -194,4 +194,12 @@ class Student extends Person{
 
 码字不易，如果本文对你所有帮助，那就来个一键三连吧！
 
+## ⏳ 联系
+
+想解锁更多知识？不妨关注我的微信公众号：**村雨遥（id：JavaPark）**。
+
+扫一扫，探索另一个全新的世界。
+
+![](/contact/wechatpublic.png =150x)
+
 <Share colorful />

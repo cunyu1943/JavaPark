@@ -684,4 +684,12 @@ public class ReflectTest {
 ![](https://cdn.jsdelivr.net/gh/cunyu1943/cunyu1943@main/imgs/wepublic.gif =200x)
 :::
 
+## ⏳ 联系
+
+想解锁更多知识？不妨关注我的微信公众号：**村雨遥（id：JavaPark）**。
+
+扫一扫，探索另一个全新的世界。
+
+![](/contact/wechatpublic.png =150x)
+
 <Share colorful />

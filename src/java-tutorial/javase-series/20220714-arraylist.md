@@ -133,4 +133,12 @@ public class IterTest {
 本文主要讲解了 `ArrayList` 的定义、泛型支持、构造方法以及常用方法等。主要针对的是日常中的使用，更多关于 `ArrayList`  底层原理的一些知识，抽个时间再聊吧！
 
 
+## ⏳ 联系
+
+想解锁更多知识？不妨关注我的微信公众号：**村雨遥（id：JavaPark）**。
+
+扫一扫，探索另一个全新的世界。
+
+![](/contact/wechatpublic.png =150x)
+
 <Share colorful />

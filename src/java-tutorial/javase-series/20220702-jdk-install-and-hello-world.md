@@ -15,7 +15,7 @@ https://mp.weixin.qq.com/s/geOWlAwVMhtmmIMvFvjSpQ
 
 :::
 
-## 前言
+## 一、前言
 
 作为一个入门的学习者，要进行 Java 开发，那怎么能少得了 JDK 呢，本文就先来看看如何安装并配置 JDK，为后续的学习做好铺垫。
 
@@ -29,15 +29,15 @@ A[开发环境搭建及入门程序] --> E[2. Hello World]
 A[开发环境搭建及入门程序] --> F[3. 知识点解析]
 ```
 
-## 下载并安装 JDK
+## 二、下载并安装 JDK
 
 什么是 JDK 呢？JDK（Java Development Kit）即 Java 开发者工具包，使我们学习 Java 语言必须安装的一个工具。
 
 这里主要以 Windows 和 macOS 系统中 JDK 的安装为例，一来因为考虑到大家用的最多的还是 Windows 和 macOS 系统，二来则是因为手边没有安装 Linux 图形化系统。如果恰好你使用的是 Linux 系统，那么推荐你参考一下其他的资料，同样你也可以参考我的另一篇文章：[手把手带你玩转 Ubuntu](https://cunyu1943.blog.csdn.net/article/details/105648148)。
 
-### Windows
+### 1. Windows
 
-#### 安装
+#### 1.1 安装
 
 1.  首先进入 [Oracle 官网](https://www.oracle.com/java/technologies/javase-downloads.html)，然后找到自己想要的 JDK 版本，这边以 JDK 11 为例；
 
@@ -57,7 +57,7 @@ A[开发环境搭建及入门程序] --> F[3. 知识点解析]
 
 ![](./assets/20220702-jdk-install-and-hello-world/install-path.png)
 
-#### 配置 JDK
+#### 1.2 配置 JDK
 
 好了，经过上面的配置，我们的 JDK 就已经安装好了，但是这个使用你是用不了的，我们还需要进一步的配置；
 
@@ -81,7 +81,7 @@ A[开发环境搭建及入门程序] --> F[3. 知识点解析]
 
 5.  各种确定，然后突出系统属性即可，到这一步，理论上我们的 JDK 就安装并配置成功了，接下来我们就去确认一下到底安装好了没；
 
-#### 验证 JDK
+#### 1.3 验证 JDK
 
 按照上述步骤操作完成之后，接下来就是验证了，一般我们可以通过如下三个命令来进行验证；
 
@@ -104,9 +104,9 @@ java
 
 ![](./assets/20220702-jdk-install-and-hello-world/java.png)
 
-### macOS
+### 2. macOS
 
-#### 安装
+#### 2.1 安装
 
 1.  首先去 [官网下载](https://www.oracle.com/java/technologies/javase-jdk11-downloads.html) 对应安装包；
 
@@ -126,7 +126,7 @@ java
 
 ![](./assets/20220702-jdk-install-and-hello-world/success.png)
 
-#### 验证
+#### 2.2 验证
 
 不同于 Windows，macOS 下不用再去配置了，它会给你自动配置好，我们只需要去验证即可；
 
@@ -146,7 +146,7 @@ java -version
 
 ![](./assets/20220702-jdk-install-and-hello-world/macos-java.png)
 
-### 安装目录详解
+### 3. 安装目录详解
 
 安装好 `JDK` 之后，打开安装路径，通常情况下会有如下的目录结构：
 
@@ -159,7 +159,7 @@ java -version
 | `legal`   | 存放各模块的授权文件                                                                      |
 | `jmods`   | 存放各种模块                                                                              |
 
-## 你的第一个 Java 程序：HelloWorld
+## 三、你的第一个 Java 程序：HelloWorld
 
 好了，经过上面的安装配置，我们就可以开始我们的第一个 Java 程序编写了。
 
@@ -201,7 +201,7 @@ java Main
 
 ![](./assets/20220702-jdk-install-and-hello-world/console-compiler.png)
 
-## 知识点说明
+## 四、知识点说明
 
 我们的 Hello World 是打印出来了，但是你肯定对里边的代码很感兴趣，这一节就主要针对我们的 Hello World 程序进行说明；
 
@@ -221,7 +221,7 @@ public class Main{
 - `public static void main(String[] args){}`：主方法，这是我们以后最常接触到的一个方法，每个主类当中都必须有一个 `main` 方法；
 - `System.out.println("Hello World!")`：控制台输出语句，执行该语句会在控制台中输出字符串，字符串要用双引号 `""` 括起来，你可以把其中的 `Hello Wolrd!` 换成你想要打印的内容试试看。
 
-## 总结
+## 五、总结
 
 好了，今天的内容到此就结束了，主要介绍了如何在 Windows 和 macOS 中安装 JDK，具体过程可以总结如下：
 
@@ -230,5 +230,13 @@ public class Main{
 - 验证
 
 然后编写了我们的第一个 `Hello World` 程序，并利用安装好的的 JDK 对其进行编译和运行。最后，则是对我们的 `Hello World` 程序中的相关知识进行了介绍。
+
+## ⏳ 联系
+
+想解锁更多知识？不妨关注我的微信公众号：**村雨遥（id：JavaPark）**。
+
+扫一扫，探索另一个全新的世界。
+
+![](/contact/wechatpublic.png =150x)
 
 <Share colorful />

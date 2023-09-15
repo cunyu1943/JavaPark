@@ -123,4 +123,12 @@ Java Micro Edition，即 Java 小型版。主要是 Java 针对移动设备应�
 
 本文主要从 Java 历史背景、选择 Java 的理由、Java 能做什么、Java 技术体系等 4 方面对 Java 语言做了一个简单介绍。接下来的文章我们就来看看，如何搭建 Java 的开发环境以及实现一个简单的入门程序。
 
+## ⏳ 联系
+
+想解锁更多知识？不妨关注我的微信公众号：**村雨遥（id：JavaPark）**。
+
+扫一扫，探索另一个全新的世界。
+
+![](/contact/wechatpublic.png =150x)
+
 <Share colorful />
