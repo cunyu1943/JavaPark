@@ -39,7 +39,7 @@ date: 2023-08-29
 
 截止目前，根据 `W3Counter` 的统计，`Chrome` 浏览器占据了绝大部分市场，处于绝对领先地位。
 
-![](https://cdn.staticaly.com/gh/cunyu1943/JavaPark@main/src/java-tutorial/web-front-series/assets/1693786691442.webp)
+![](https://jsd.cdn.zzko.cn/gh/cunyu1943/JavaPark@main/src/java-tutorial/web-front-series/assets/1693786691442.webp)
 
 同时，`Chrome` 也深受前端开发者的欢迎。出于两方面的考虑，因此选用 `Chrome` 作为系列教程中用于看效果的载体。
 
@@ -55,21 +55,21 @@ date: 2023-08-29
 
 >   https://code.visualstudio.com/
 
-![](https://cdn.staticaly.com/gh/cunyu1943/JavaPark@main/src/java-tutorial/web-front-series/assets/1693786800554.webp)
+![](https://jsd.cdn.zzko.cn/gh/cunyu1943/JavaPark@main/src/java-tutorial/web-front-series/assets/1693786800554.webp)
 
 虽说官网是英文界面，不过都很简单。选择对应操作的安装包，点击 `Download` 就能得到想要的安装包了。
 
 ### 2. 安装
 
-![](https://cdn.staticaly.com/gh/cunyu1943/JavaPark@main/src/java-tutorial/web-front-series/assets/1693787359078.webp)
+![](https://jsd.cdn.zzko.cn/gh/cunyu1943/JavaPark@main/src/java-tutorial/web-front-series/assets/1693787359078.webp)
 
-![](https://cdn.staticaly.com/gh/cunyu1943/JavaPark@main/src/java-tutorial/web-front-series/assets/1693787400353.webp)
+![](https://jsd.cdn.zzko.cn/gh/cunyu1943/JavaPark@main/src/java-tutorial/web-front-series/assets/1693787400353.webp)
 
-![](https://cdn.staticaly.com/gh/cunyu1943/JavaPark@main/src/java-tutorial/web-front-series/assets/1693787430775.webp)
+![](https://jsd.cdn.zzko.cn/gh/cunyu1943/JavaPark@main/src/java-tutorial/web-front-series/assets/1693787430775.webp)
 
-![](https://cdn.staticaly.com/gh/cunyu1943/JavaPark@main/src/java-tutorial/web-front-series/assets/1693787469522.webp)
+![](https://jsd.cdn.zzko.cn/gh/cunyu1943/JavaPark@main/src/java-tutorial/web-front-series/assets/1693787469522.webp)
 
-![](https://cdn.staticaly.com/gh/cunyu1943/JavaPark@main/src/java-tutorial/web-front-series/assets/1693787504599.webp)
+![](https://jsd.cdn.zzko.cn/gh/cunyu1943/JavaPark@main/src/java-tutorial/web-front-series/assets/1693787504599.webp)
 
 ### 3. 插件
 
