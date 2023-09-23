@@ -69,7 +69,6 @@ export default navbar([
     icon: "fas fa-book",
     children: [
       { text: "JavaPark", icon: "fa-brands fa-java", link: "https://github.com/cunyu1943/JavaPark" },
-      { text: "weekly", icon: "fa-solid fa-newspaper", link: "https://github.com/cunyu1943/weekly" },
       { text: "电子书", icon: "iconfont icon-book", link: "https://github.com/cunyu1943/ebooks" }
     ],
   },
