@@ -1,7 +1,7 @@
 ---
 isOriginal: true
 index: false
-category: Java 基础
+category: Java 基础系列
 tag:
     - Java
     - 计算机
@@ -28,6 +28,6 @@ date: 2023-09-25
 
 扫一扫，探索另一个全新的世界。
 
-![](D:/contact/wechatpublic.png =150x)
+![](/contact/wechatpublic.png =150x)
 
 <Share colorful />
