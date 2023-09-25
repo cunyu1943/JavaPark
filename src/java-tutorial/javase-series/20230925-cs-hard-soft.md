@@ -1,17 +1,25 @@
 ---
-index: false
 isOriginal: true
-shortTitle: 
-category:
+index: false
+category: Java 基础
 tag:
-date:
+    - Java
+    - 计算机
+date: 2023-09-25
 ---
+
+# 计算机软硬件
+
 ::: info 共勉
 不要哀求，学会争取。若是如此，终有所获。
 :::
 ::: tip 原文
 
 :::
+
+## 一、计算机组成
+
+
 
 
 ## ⏳ 联系
@@ -20,6 +28,6 @@ date:
 
 扫一扫，探索另一个全新的世界。
 
-![](/contact/wechatpublic.png =150x)
+![](D:/contact/wechatpublic.png =150x)
 
 <Share colorful />
