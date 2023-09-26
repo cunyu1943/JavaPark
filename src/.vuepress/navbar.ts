@@ -59,6 +59,18 @@ export default navbar([
   },
 
   {
+    text: "编程语言",
+    icon: "fa-solid fa-code",
+    children: [
+      {
+        text: "C 语言",
+        icon: "iconfont icon-C",
+        link: "/program-language/c-series/20180308-memory-manage/"
+      },
+    ]
+  },
+
+  {
     text: "你问我答",
     icon: "fa-solid fa-circle-question",
     link: "/QA/20230402-where-exercise-java-basics/"

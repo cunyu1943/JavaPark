@@ -1,10 +1,13 @@
 ---
 isOriginal: true
-shortTitle: 
-category:
+category: Nginx 教程
 tag:
+    - Nginx
 date: 2022-10-16
 ---
+
+# 简介与环境搭建
+
 ::: info 共勉
 不要哀求，学会争取。若是如此，终有所获。
 :::
@@ -36,7 +39,7 @@ https://mp.weixin.qq.com/s/Fx4AAS5pUqSGtui4Z-LYXA
 
 >   http://nginx.org/en/download.html
 
-![](assets/82fab0e89c6a42b896b77f98dee94b2c.png)
+![](assets/82fab0e89c6a42b896b77f98dee94b2c.webp)
 
 ## 三、编译安装与依赖检查
 
@@ -45,14 +48,14 @@ https://mp.weixin.qq.com/s/Fx4AAS5pUqSGtui4Z-LYXA
 ```shell
 tar -zxf 压缩包名
 ```
-![](assets/2cd8cb2c4221471e89bd6ad9c58269d5.png)
+![](assets/2cd8cb2c4221471e89bd6ad9c58269d5.webp)
 进入解压缩后的 `Nginx` 所在文件夹，然后执行 `configure` 脚本，这时候就会检查安装 `Nginx` 所需的依赖，这里可能会因为你的服务器中没有事先安装所需依赖而导致报错。
 
 ```shell
 cd nginx-1.22.0
 sh configure
 ```
-![](assets/16c89775141f40f9a69cdb9980bd221b.png)
+![](assets/16c89775141f40f9a69cdb9980bd221b.webp)
 
 
 这里例举几个安装时可能会遇到的错误：
@@ -91,7 +94,7 @@ error: the HTTP gzip module requires zlib library.
 yum install -y zlib zlib-devel
 ```
 
-![](assets/e0c9acc5f35e447591b2b6d2df12755b.png)
+![](assets/e0c9acc5f35e447591b2b6d2df12755b.webp)
 如果出现以上的提示信息，则说明可以进行下一步，此时直接执行编译安装命令。
 
 ```shell
@@ -99,8 +102,8 @@ make
 
 make install
 ```
-![](assets/73fa2a756cd54177ac55cfd17b34d9f1.png)
-![](assets/991d0ce06dc6480d97abf8b858b93030.png)
+![](assets/73fa2a756cd54177ac55cfd17b34d9f1.webp)
+![](assets/991d0ce06dc6480d97abf8b858b93030.webp)
 
 ## 四、Nginx 启停
 
@@ -114,10 +117,10 @@ make install
 ```shell
 ./nginx
 ```
-![](assets/70fc81bab6ce4aeb9618e27ba081469d.png)
+![](assets/70fc81bab6ce4aeb9618e27ba081469d.webp)
 然后在浏览器中访问服务器的 `IP` 地址，如果出现以下界面，则说明我们的 `Nginx` 安装并启动成功了！
 
-![](assets/7a61140a0a464a81a27e348e1b284ac6.png)
+![](assets/7a61140a0a464a81a27e348e1b284ac6.webp)
 
 ### 2. 快速停止
 
@@ -126,7 +129,7 @@ make install
 ```
 停止后，再到浏览器中去访问服务器地址，就会出现以下情况。
 
-![](assets/7205270749fb4e5ab06423dc6920891c.png)
+![](assets/7205270749fb4e5ab06423dc6920891c.webp)
 
 ### 3. 关闭前完成已接受的连接请求
 
@@ -220,7 +223,7 @@ systemctl stop nginx
 systemctl status nginx
 ```
 
-![](assets/06e3119f7e4b4e7096b3ce9e85387613.png)
+![](assets/06e3119f7e4b4e7096b3ce9e85387613.webp)
 ## 六、总结
 
 以上就是 `Nginx` 的简介和如何在 Linux 中安装 `Nginx` 的相关内容了，如果您觉得本文对您有所帮助，还请来个一键三连支持把！
