@@ -19,7 +19,7 @@ date: 2023-09-25
 
 ## 一、前言
 
-学习完 `Java` 的主要特性、发展历程以及常见误解之后。本篇文章再来学习，如何在当前主流操作系统下搭建 `Java` 开发环境，为接下来的开发做好准备。
+学习完 `Java` 的主要特性、发展历程以及常见误解之后。本篇文章来学习，如何在当前主流操作系统下搭建 `Java` 开发环境，为接下来的开发做好准备。
 
 ## 二、Windows 环境配置
 
@@ -29,11 +29,11 @@ date: 2023-09-25
 
 ![](./assets/20220702-jdk-install-and-hello-world/jdk11.png)
 
-2.  点击 JDK Download 后，它会跳转到具体下载页面，然后根据自己的系统来进行选择，此处以 Windows 10 64 位为例。
+2.  点击 JDK Download 后，它会跳转到具体下载页面，然后根据自己的系统来进行选择，此处以 `Windows` 64 位系统为例。
 
 ![](./assets/20220702-jdk-install-and-hello-world/download.png)
 
-3.  点击最后的连接后，它会让你同意协议，勾选同意，然后登陆你的 `Oracle` 账户即可开始下载，若是没有 `Oracle` 账户，点击下面的创建一个就可以了。
+3.  点击最后的链接后，它会让你同意协议，勾选同意，然后登陆你的 `Oracle` 账户即可开始下载，若是没有 `Oracle` 账户，点击下面的创建一个就可以了。
 
 ![](./assets/20220702-jdk-install-and-hello-world/agree.png)
 
@@ -51,11 +51,11 @@ date: 2023-09-25
 
 1.  **Windows + R** 快捷键组合唤醒 Windows 运行窗口，然后输入 `sysdm.cpl`，紧接着回车即可，一般会打开如下界面，然后点击最上方的 **高级**；
 
-![](./assets/20220702-jdk-install-and-hello-world/jdk-config.png)
+![](https://jsd.cdn.zzko.cn/gh/cunyu1943/JavaPark@main/src/java-tutorial/javase-series/assets/1695686767330.webp)
 
 2.  点击高级后，就会打开如下界面，然后打开环境变量。
 
-![](./assets/20220702-jdk-install-and-hello-world/envi-vari.png)
+![](https://jsd.cdn.zzko.cn/gh/cunyu1943/JavaPark@main/src/java-tutorial/javase-series/assets/1695686806548.webp)
 
 3.  新建环境变量 **JAVA_HOME**，然后变量值填入刚才安装 JDK 的路径（刚才提醒过要记住！）。
 
@@ -67,9 +67,13 @@ date: 2023-09-25
 
 5.  各种确定，然后突出系统属性即可，到这一步，理论上我们的 JDK 就安装并配置成功了，接下来我们就去确认一下到底安装好了没有。
 
-### 3. 验证
+### 3. 注意
 
-按照上述步骤操作完成之后，接下来就是验证了，一般我们可以通过如下三个命令来进行验证；
+自 `JDK` 11 之后，安装完成后就无需在配置环境变量，安装完成即可去验证是否安装成功。
+
+### 4. 验证
+
+按照上述步骤操作完成之后，接下来就是验证了，一般我们可以通过如下三个命令来进行验证。
 
 ```bash
 # 查看 JDK 版本
@@ -84,25 +88,23 @@ java
 
 打开命令控制台（**Windows + R，然后输入 cmd 回车**），然后输入如上三个命令，如果安装成功，一般是会出现如下内容的；
 
-![](./assets/20220702-jdk-install-and-hello-world/java-version.png)
+![](https://jsd.cdn.zzko.cn/gh/cunyu1943/JavaPark@main/src/java-tutorial/javase-series/assets/1695686544052.webp)
 
-![](./assets/20220702-jdk-install-and-hello-world/javac.png)
+![](https://jsd.cdn.zzko.cn/gh/cunyu1943/JavaPark@main/src/java-tutorial/javase-series/assets/1695686583197.webp)
 
-![](./assets/20220702-jdk-install-and-hello-world/java.png)
-
-
+![](https://jsd.cdn.zzko.cn/gh/cunyu1943/JavaPark@main/src/java-tutorial/javase-series/assets/1695686620882.webp)
 
 ## 三、macOS 环境配置
 
 ### 1. 安装
 
-1.  首先去 [官网下载](https://www.oracle.com/java/technologies/javase-jdk11-downloads.html) 对应安装包；
+1.  首先去 [官网下载](https://www.oracle.com/java/technologies/javase-jdk11-downloads.html) 对应安装包。
 
 ![](./assets/20220702-jdk-install-and-hello-world/macos-jdk.png)
 
-2.  接受相关协议并登录下载；
+2.  接受相关协议并登录下载。
 
-3.  双击下载好的 `.dmg` 安装包，然后开始安装；
+3.  双击下载好的 `.dmg` 安装包，然后开始安装。
 
 ![](./assets/20220702-jdk-install-and-hello-world/install-macos.png)
 
@@ -110,15 +112,15 @@ java
 
 ![](./assets/20220702-jdk-install-and-hello-world/pwd.png)
 
-5.  安装成功；
+5.  安装成功。
 
 ![](./assets/20220702-jdk-install-and-hello-world/success.png)
 
 ### 2. 验证
 
-不同于 Windows，macOS 下不用再去配置了，它会给你自动配置好，我们只需要去验证即可；
+不同于 `Windows`，`macOS` 下不用再手动配置环境变量了，它会给你自动配置好，我们只需要去验证即可；
 
-1.  查看 JDK 版本；
+1.  查看 `JDK` 版本。
 
 ```bash
 java -version
@@ -126,11 +128,11 @@ java -version
 
 ![](./assets/20220702-jdk-install-and-hello-world/macos-jdk-v.png)
 
-2.  编译命令；
+2.  编译命令。
 
 ![](./assets/20220702-jdk-install-and-hello-world/macos-javac.png)
 
-3.  运行命令；
+3.  运行验证命令。
 
 ![](./assets/20220702-jdk-install-and-hello-world/macos-java.png)
 
@@ -138,7 +140,7 @@ java -version
 
 ### 1. 安装
 
-1.   先去 [下载](https://www.oracle.com/java/technologies/javase-downloads.html) 要安装的 JDK 版本，然后解压到本地，移到你要存放的位置；
+1.   先去 [下载](https://www.oracle.com/java/technologies/javase-downloads.html) 要安装的 `JDK` 版本，然后解压到本地存放的位置。
 
 ```shell
 tar -zxvf jdk-11.0.7_linux-x64_bin.tar.gz
@@ -204,6 +206,28 @@ javac
 | `release` | 版本发布内容以及版本信息                                                                  |
 | `README`  | `JDK` 信息                                                                                |
 | `LICENSE` | 版权和签证相关的说明文档                                                                  |
+
+## 六、API 文档
+
+`API（Application Programming Interface）`，应用程序编程接口，是 `Java` 提供的基本编程接口。`Java` 语言提供了大量的基础类，为了给开发者提供相应的说明文档，于是便有了 `Java API` 文档。它类似于我们日常生活中的字典，如果遇到什么不认识的字，那么就可以去这里找。而对应到 `Java` 语言中，就是当我们遇到未使用过的基础类或方法，可以去 `Java API` 中寻找。
+
+为了方便大家，在这里贴出目前最常用的几个长期版本 `Java` 的在线阅读地址和离线下载地址，有需要的小伙伴可以自行去下载。
+
+温馨提示：这里无论是在线阅读还是离线下载后的文档，都是纯英文的。
+
+### 1. 在线阅读
+
+-   **`JDK 8 API`**：https://docs.oracle.com/javase/8/docs/api/index.html
+-   **`JDK 11 API`**：https://docs.oracle.com/en/java/javase/11/docs/api/
+-   **`JDK 17 API`**：https://docs.oracle.com/en/java/javase/17/docs/api/
+-   **`JDK 21 API`**：https://docs.oracle.com/en/java/javase/21/docs/api/
+
+### 2. 离线下载
+
+-   **`JDK 8 API`**：https://www.oracle.com/java/technologies/javase-jdk8-doc-downloads.html
+-   **`JDK 11 API`**：https://www.oracle.com/java/technologies/javase-jdk11-doc-downloads.html
+-   **`JDK 17 API`**：https://www.oracle.com/java/technologies/javase-jdk17-doc-downloads.html
+-   **`JDK 21 API`**：https://www.oracle.com/java/technologies/javase-jdk21-doc-downloads.html
 
 ## ⏳ 联系
 
