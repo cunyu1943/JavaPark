@@ -1,12 +1,12 @@
 ---
-index: false
 isOriginal: true
-shortTitle: 
 category: Python 教程
 tag:
     - Python
 date: 2021-04-03
 ---
+# 条件判断、循环以及循环的终止
+
 ::: info 共勉
 不要哀求，学会争取。若是如此，终有所获。
 :::
