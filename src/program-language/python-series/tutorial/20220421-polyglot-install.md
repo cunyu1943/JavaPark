@@ -75,7 +75,7 @@ pip install xxx.whl
 最后，既然安装成功了，那就得试一下呀！以下是一个利用 `polyglot` 分词的结果，可以看看效果如何哦。
 另外，你觉得相比于 `jieba`、`SnowNLP`、`PkuSeg`、`THULAC`、`HanLP` 等分词工具，谁的效果更胜一筹呢？
 
-![](assets/71423640d214226a7ec32b1e87e0bb9f.png)
+![](assets/71423640d214226a7ec32b1e87e0bb9f.webp)
 
 ## ⏳ 联系
 
