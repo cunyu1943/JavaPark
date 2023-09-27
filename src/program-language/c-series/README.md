@@ -1,5 +1,5 @@
 ---
-title: C 语言
+title: C 系列
 index: false
 icon: iconfont icon-C
 ---
