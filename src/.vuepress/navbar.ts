@@ -67,6 +67,16 @@ export default navbar([
         icon: "iconfont icon-C",
         link: "/program-language/c-series/20180308-memory-manage/"
       },
+      {
+        text: "C++",
+        icon: "iconfont icon-CPP",
+        link: "/program-language/cpp-series/20180720-summary/"
+      },
+      {
+        text: "Python",
+        icon: "iconfont icon-Python",
+        link: "/program-language/python-series/tutorial/20210331-intro/"
+      },
     ]
   },
 
