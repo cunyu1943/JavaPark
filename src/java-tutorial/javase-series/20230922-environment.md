@@ -27,21 +27,21 @@ date: 2023-09-25
 
 1.  首先进入 [Oracle 官网](https://www.oracle.com/java/technologies/javase-downloads.html)，然后找到自己想要的 `JDK` 版本，这边以 `JDK` 11 为例。
 
-![](./assets/20220702-jdk-install-and-hello-world/jdk11.png)
+![](https://jsd.cdn.zzko.cn/gh/cunyu1943/JavaPark@main/src/java-tutorial/javase-series/assets/20220702-jdk-install-and-hello-world/jdk11.png)
 
 2.  点击 JDK Download 后，它会跳转到具体下载页面，然后根据自己的系统来进行选择，此处以 `Windows` 64 位系统为例。
 
-![](./assets/20220702-jdk-install-and-hello-world/download.png)
+![](https://jsd.cdn.zzko.cn/gh/cunyu1943/JavaPark@main/src/java-tutorial/javase-series/assets/20220702-jdk-install-and-hello-world/download.png)
 
 3.  点击最后的链接后，它会让你同意协议，勾选同意，然后登陆你的 `Oracle` 账户即可开始下载，若是没有 `Oracle` 账户，点击下面的创建一个就可以了。
 
-![](./assets/20220702-jdk-install-and-hello-world/agree.png)
+![](https://jsd.cdn.zzko.cn/gh/cunyu1943/JavaPark@main/src/java-tutorial/javase-series/assets/20220702-jdk-install-and-hello-world/agree.png)
 
-![](./assets/20220702-jdk-install-and-hello-world/login.png)
+![](https://jsd.cdn.zzko.cn/gh/cunyu1943/JavaPark@main/src/java-tutorial/javase-series/assets/20220702-jdk-install-and-hello-world/login.png)
 
 4.  下载完成后，进行安装即可，安装流程和我们平常安装软件的一样，就再赘述，需要注意的是要记住如下的安装路径，因为一般我们都不会安装到默认路径，所以一定要记住你所安装到的路径，这关系到后续的配置步骤。
 
-![](./assets/20220702-jdk-install-and-hello-world/install-path.png)
+![](https://jsd.cdn.zzko.cn/gh/cunyu1943/JavaPark@main/src/java-tutorial/javase-series/assets/20220702-jdk-install-and-hello-world/install-path.png)
 
 ### 2. 配置
 
@@ -59,11 +59,11 @@ date: 2023-09-25
 
 3.  新建环境变量 **JAVA_HOME**，然后变量值填入刚才安装 JDK 的路径（刚才提醒过要记住！）。
 
-![](./assets/20220702-jdk-install-and-hello-world/java-home.png)
+![](https://jsd.cdn.zzko.cn/gh/cunyu1943/JavaPark@main/src/java-tutorial/javase-series/assets/20220702-jdk-install-and-hello-world/java-home.png)
 
 4.  编辑 **Path** 环境变量，然后新建一个变量值，填入如下内容：`%JAVA_HOME%\bin`。
 
-![](./assets/20220702-jdk-install-and-hello-world/path-bin.png)
+![](https://jsd.cdn.zzko.cn/gh/cunyu1943/JavaPark@main/src/java-tutorial/javase-series/assets/20220702-jdk-install-and-hello-world/path-bin.png)
 
 5.  各种确定，然后突出系统属性即可，到这一步，理论上我们的 JDK 就安装并配置成功了，接下来我们就去确认一下到底安装好了没有。
 
@@ -100,21 +100,21 @@ java
 
 1.  首先去 [官网下载](https://www.oracle.com/java/technologies/javase-jdk11-downloads.html) 对应安装包。
 
-![](./assets/20220702-jdk-install-and-hello-world/macos-jdk.png)
+![](https://jsd.cdn.zzko.cn/gh/cunyu1943/JavaPark@main/src/java-tutorial/javase-series/assets/20220702-jdk-install-and-hello-world/macos-jdk.png)
 
 2.  接受相关协议并登录下载。
 
 3.  双击下载好的 `.dmg` 安装包，然后开始安装。
 
-![](./assets/20220702-jdk-install-and-hello-world/install-macos.png)
+![](https://jsd.cdn.zzko.cn/gh/cunyu1943/JavaPark@main/src/java-tutorial/javase-series/assets/20220702-jdk-install-and-hello-world/install-macos.png)
 
 4.  安装过程中会让你输入密码，也就是你本机的密码。
 
-![](./assets/20220702-jdk-install-and-hello-world/pwd.png)
+![](https://jsd.cdn.zzko.cn/gh/cunyu1943/JavaPark@main/src/java-tutorial/javase-series/assets/20220702-jdk-install-and-hello-world/pwd.png)
 
 5.  安装成功。
 
-![](./assets/20220702-jdk-install-and-hello-world/success.png)
+![](https://jsd.cdn.zzko.cn/gh/cunyu1943/JavaPark@main/src/java-tutorial/javase-series/assets/20220702-jdk-install-and-hello-world/success.png)
 
 ### 2. 验证
 
@@ -126,15 +126,15 @@ java
 java -version
 ```
 
-![](./assets/20220702-jdk-install-and-hello-world/macos-jdk-v.png)
+![](https://jsd.cdn.zzko.cn/gh/cunyu1943/JavaPark@main/src/java-tutorial/javase-series/assets/20220702-jdk-install-and-hello-world/macos-jdk-v.png)
 
 2.  编译命令。
 
-![](./assets/20220702-jdk-install-and-hello-world/macos-javac.png)
+![](https://jsd.cdn.zzko.cn/gh/cunyu1943/JavaPark@main/src/java-tutorial/javase-series/assets/20220702-jdk-install-and-hello-world/macos-javac.png)
 
 3.  运行验证命令。
 
-![](./assets/20220702-jdk-install-and-hello-world/macos-java.png)
+![](https://jsd.cdn.zzko.cn/gh/cunyu1943/JavaPark@main/src/java-tutorial/javase-series/assets/20220702-jdk-install-and-hello-world/macos-java.png)
 
 ## 四、Linux 环境配置
 
@@ -146,9 +146,9 @@ java -version
 tar -zxvf jdk-11.0.7_linux-x64_bin.tar.gz
 ```
 
-![](assets/jdk-install.png)
+![](https://jsd.cdn.zzko.cn/gh/cunyu1943/JavaPark@main/src/java-tutorial/javase-series/assets/jdk-install.png)
 
-![](assets/jdk-path.png)
+![](https://jsd.cdn.zzko.cn/gh/cunyu1943/JavaPark@main/src/java-tutorial/javase-series/assets/jdk-path.png)
 
 ### 2. 配置
 
@@ -159,9 +159,9 @@ export JAVA_HOME=/home/cunyu/Soft/jdk11.0.7
 export PATH=$JAVA_HOME:$PATH
 ```
 
-![](assets/jdk-profile.png)
+![](https://jsd.cdn.zzko.cn/gh/cunyu1943/JavaPark@main/src/java-tutorial/javase-series/assets/jdk-profile.png)
 
-![](assets/profile-jdk.png)
+![](https://jsd.cdn.zzko.cn/gh/cunyu1943/JavaPark@main/src/java-tutorial/javase-series/assets/profile-jdk.png)
 
 ### 3. 验证
 
@@ -176,7 +176,7 @@ java
 javac
 ```
 
-![](assets/verify.png)
+![](https://jsd.cdn.zzko.cn/gh/cunyu1943/JavaPark@main/src/java-tutorial/javase-series/assets/verify.png)
 
 ## 五、安装目录详解
 
