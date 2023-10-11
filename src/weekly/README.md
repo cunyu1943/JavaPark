@@ -15,11 +15,11 @@ isOriginal: true
 
 村雨遥的好物周刊，记录每周看到的有价值的信息，主要针对计算机领域，每周五发布。专栏目的在于记录让自己有印象的信息做一个备份及分享，阅读渠道如下：
 
-- [博客](https://cunyu1943.github.io/weekly) | [博客(国内)](https://cunyu1943.gitee.io/)
+- [博客](https://cunyu1943.github.io/) | [博客(国内)](https://cunyu1943.gitee.io/)
 - [JavaPark](https://github.com/cunyu1943/JavaPark)
 - [公众号](https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzIyNTg2MjkzNw==&action=getalbum&album_id=2501145320567963650&scene=173&from_msgid=2247497779&from_itemidx=1&count=3&nolastread=1#wechat_redirect)：移动端推荐
 
-如果你想推荐或自荐项目/网站/软件/插件/资料等任何资源，欢迎提交 **[issue](https://github.com/cunyu1943/weekly/issues)** 或者添加我 **[个人微信：cunyu1943](/contact/wechat.png)** 和我交流。
+如果你想推荐或自荐项目/网站/软件/插件/资料等任何资源，欢迎提交 **[issue](https://github.com/cunyu1943/JavaPark/issues)** 或者添加我 **[个人微信：cunyu1943](/contact/wechat.png)** 和我交流。
 
 <center>
 <img src="/contact/wechat.png" width="150" />
@@ -33,7 +33,7 @@ isOriginal: true
 
 针对这个问题，给我个人感觉非常不好，不知道你是否也会有这样的感觉呢？于是 **好物周刊** 诞生了，周刊于我而言既是一种留存，也是一种分享，希望我能一直坚持下去，欢迎大家监督。
 
-如果大家感兴趣，请持续关注我的的周刊专栏[电子书](https://cunyu1943.github.io/weekly)，也请移步[Github](https://github.com/cunyu1943/weekly/) | [Gitee](https://gitee.com/cunyu1943/weekly/) 给我一个`Star`支持下吧。
+如果大家感兴趣，请持续关注我的的周刊专栏[电子书](https://cunyu1943.github.io/)，也请移步[Github](https://github.com/cunyu1943/JavaPark/) | [Gitee](https://gitee.com/cunyu1943/JavaPark/) 给我一个`Star`支持下吧。
 
 好物周刊开始于 **2023.04.15**，如果看到这篇文章时我依旧在坚持更新，那就是最好的消息。
 
