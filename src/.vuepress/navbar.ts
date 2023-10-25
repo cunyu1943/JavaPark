@@ -94,4 +94,10 @@ export default navbar([
       { text: "电子书", icon: "iconfont icon-book", link: "https://github.com/cunyu1943/ebooks" }
     ],
   },
+
+  {
+    text: "共建周刊",
+    icon: "fa-solid fa-pen-to-square",
+    link: "https://wj.qq.com/s2/13360545/da29/"
+  },
 ]);
