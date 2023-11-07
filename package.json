@@ -11,16 +11,16 @@
     "docs:update-package": "pnpm dlx vp-update"
   },
   "devDependencies": {
+    "@vue/repl": "^2.6.2",
     "@vuepress/client": "2.0.0-beta.67",
+    "chart.js": "^4.4.0",
+    "echarts": "^5.4.3",
+    "flowchart.ts": "^1.0.1",
+    "katex": "^0.16.9",
+    "mermaid": "^10.6.0",
+    "reveal.js": "^5.0.1",
     "vue": "^3.3.8",
     "vuepress": "2.0.0-beta.67",
-    "chart.js": "4.4.0",
-    "echarts": "5.4.3",
-    "katex": "0.16.9",
-    "mathjax-full": "3.2.2",
-    "mermaid": "10.5.0",
-    "reveal.js": "4.6.1",
-    "vuepress-plugin-md-enhance": "2.0.0-beta.246",
     "vuepress-plugin-search-pro": "2.0.0-beta.246",
     "vuepress-theme-hope": "2.0.0-beta.246"
   }
