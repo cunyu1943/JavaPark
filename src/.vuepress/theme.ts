@@ -129,7 +129,8 @@ export default hopeTheme({
       playground: {
         presets: ["ts", "vue"],
       },
-      revealjs: ["highlight", "math", "search", "notes", "zoom"],
+      // revealjs: true,
+      // ["highlight", "math", "search", "notes", "zoom"],
       stylize: [
         {
           matcher: "Recommended",
