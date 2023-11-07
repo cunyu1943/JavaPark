@@ -35,7 +35,7 @@ jobs:
       - name: 构建文档
         env:
           NODE_OPTIONS: --max_old_space_size=8192
-        run: pnpm run docs:vite-build
+        run: pnpm run docs:build
         # |-
         #   pnpm run docs:build
         #   > src/.vuepress/dist/.nojekyll
