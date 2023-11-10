@@ -1,7 +1,7 @@
 {
-  "name": "javapark",
+  "name": "java-park",
   "version": "2.0.0",
-  "description": "Java 自学指南",
+  "description": "The way to be a full stack javaer!",
   "license": "MIT",
   "type": "module",
   "scripts": {
@@ -11,17 +11,10 @@
     "docs:update-package": "pnpm dlx vp-update"
   },
   "devDependencies": {
-    "@vue/repl": "^2.6.2",
     "@vuepress/client": "2.0.0-beta.67",
-    "chart.js": "^4.4.0",
-    "echarts": "^5.4.3",
-    "flowchart.ts": "^1.0.1",
-    "katex": "^0.16.9",
-    "mermaid": "^10.6.0",
-    "reveal.js": "^5.0.1",
-    "vue": "^3.3.8",
+    "vue": "^3.3.4",
     "vuepress": "2.0.0-beta.67",
-    "vuepress-plugin-search-pro": "2.0.0-beta.246",
-    "vuepress-theme-hope": "2.0.0-beta.246"
+    "vuepress-plugin-search-pro": "2.0.0-beta.247",
+    "vuepress-theme-hope": "2.0.0-beta.247"
   }
 }

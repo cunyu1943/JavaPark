@@ -1,3 +1,4 @@
+
 name: 部署文档
 
 on:
@@ -14,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v3
         with:
           fetch-depth: 0
           # 如果你文档需要 Git 子模块，取消注释下一行
@@ -26,19 +27,20 @@ jobs:
           run_install: true
           version: 8
 
+
       - name: 设置 Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: 20
           cache: pnpm
+
 
       - name: 构建文档
         env:
           NODE_OPTIONS: --max_old_space_size=8192
-        run: pnpm run docs:build
-        # |-
-        #   pnpm run docs:build
-        #   > src/.vuepress/dist/.nojekyll
+        run: |-
+          pnpm run docs:build
+          > src/.vuepress/dist/.nojekyll
 
       - name: 部署文档
         uses: JamesIves/github-pages-deploy-action@v4
@@ -48,8 +50,7 @@ jobs:
           folder: src/.vuepress/dist
           token: ${{ secrets.TOKEN }}
           repository-name: cunyu1943/cunyu1943.github.io
-          commit-message: "${{ github.event.head_commit.message }}"
-
+      
       - name: 同步 Gitee
         uses: wearerequired/git-mirror-action@master
         env:

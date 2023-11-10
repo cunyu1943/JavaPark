@@ -7,7 +7,7 @@ export default defineUserConfig({
 
   lang: "zh-CN",
   title: "JavaPark",
-  description: "分享编程学习、面试求职、效率工具等方面内容。",
+  description: "分享编程学习（侧重 Java）、面试求职、计算机基础、效率工具等方面内容。",
 
   theme,
 
