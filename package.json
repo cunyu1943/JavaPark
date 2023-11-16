@@ -14,7 +14,7 @@
     "@vuepress/client": "2.0.0-beta.68",
     "vue": "^3.3.8",
     "vuepress": "2.0.0-beta.68",
-    "vuepress-plugin-search-pro": "2.0.0-beta.250",
-    "vuepress-theme-hope": "2.0.0-beta.250"
+    "vuepress-plugin-search-pro": "2.0.0-beta.251",
+    "vuepress-theme-hope": "2.0.0-beta.251"
   }
 }
