@@ -2,9 +2,9 @@
 
 ## 项目简介
 
-- 👉 推荐 [Github 在线阅读](https://cunyu1943.github.io/) | [Gitee 在线阅读](https://cunyu1943.gitee.io/)，`Github` 访问较慢，所以部分资源可能会加载较慢。
+- 👉 推荐 [语雀](https://yuque.com/cunyu1943) ｜ [Github 在线阅读](https://cunyu1943.github.io/) | [Gitee 在线阅读](https://cunyu1943.gitee.io/)，`Github` 访问较慢，所以部分资源可能会加载较慢。
 
-- 👉 项目同步维护：[Github](https://github.com/cunyu1943/JavaPark) | [Gitee](https://gitee.com/cunyu1943/JavaPark)
+- 👉 项目同步维护：[语雀](https://yuque.com/cunyu1943/JavaPark)｜[Github](https://github.com/cunyu1943/JavaPark) | [Gitee](https://gitee.com/cunyu1943/JavaPark)
 
 - 👉 这里有 `Java` 学习保姆级教程、面试总结、计算机基础、数据库、效率工具等诸多内容。
 
@@ -15,6 +15,7 @@
 ![](https://img.shields.io/github/watchers/cunyu1943/JavaPark?label=Watchers&logo=Github&color=green)
 
 ## 基础教程
+
 ### Java 基础
 
 1.  [Java 基础：简介](src/java-tutorial/javase-series/20220701-intro-to-java.md)
