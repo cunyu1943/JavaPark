@@ -12,9 +12,9 @@
   },
   "devDependencies": {
     "@vuepress/client": "2.0.0-rc.0",
-    "vue": "^3.3.8",
+    "vue": "^3.3.9",
     "vuepress": "2.0.0-rc.0",
-    "vuepress-plugin-search-pro": "2.0.0-rc.0",
-    "vuepress-theme-hope": "2.0.0-rc.0"
+    "vuepress-plugin-search-pro": "2.0.0-rc.1",
+    "vuepress-theme-hope": "2.0.0-rc.1"
   }
 }
