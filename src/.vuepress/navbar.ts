@@ -98,6 +98,6 @@ export default navbar([
   {
     text: "共建周刊",
     icon: "fa-solid fa-pen-to-square",
-    link: "https://wj.qq.com/s2/13360545/da29/"
+    link: "https://www.yuque.com/forms/share/38e342f3-3847-455e-8e26-49ea1f1ffd44"
   },
 ]);
