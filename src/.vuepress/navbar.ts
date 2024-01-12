@@ -24,6 +24,11 @@ export default navbar([
     icon: "fa-solid fa-newspaper",
     children: [
       {
+        text: "2024 年刊",
+        icon: "iconfont icon-calendar",
+        link: "/weekly/2024/0101-0105/"
+      },
+      {
         text: "2023 年刊",
         icon: "iconfont icon-calendar",
         link: "/weekly/2023/0415-0421/"
