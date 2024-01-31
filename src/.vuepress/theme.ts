@@ -57,18 +57,18 @@ export default hopeTheme({
   plugins: {
     blog: true,
     // You should generate and use your own comment service
-    comment: {
-      provider: "Giscus",
-      repo: "cunyu1943/JavaPark",
-      repoId: "R_kgDOHI1mog",
-      category: "Announcements",
-      categoryId: "DIC_kwDOHI1mos4CUBUV",
-    },
+    // comment: {
+    //   provider: "Giscus",
+    //   repo: "cunyu1943/JavaPark",
+    //   repoId: "R_kgDOHI1mog",
+    //   category: "Announcements",
+    //   categoryId: "DIC_kwDOHI1mos4CUBUV",
+    // },
 
     // 版权信息
     copyright: {
       global: true,
-      triggerLength: 20,
+      triggerLength: 100,
       license: "著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处",
     },
 
