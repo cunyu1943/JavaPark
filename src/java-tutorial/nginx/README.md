@@ -1,5 +1,5 @@
 ---
-title: Nginx 教程
+title: Nginx
 index: false
 icon: iconfont icon-nginx
 ---

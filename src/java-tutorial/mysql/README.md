@@ -1,5 +1,5 @@
 ---
-title: MySQL 教程
+title: MySQL
 index: false
 icon: iconfont icon-mysql
 ---

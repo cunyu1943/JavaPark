@@ -18,51 +18,51 @@
 
 ### Java 基础
 
-1.  [Java 基础：简介](src/java-tutorial/javase-series/20220701-intro-to-java.md)
-2.  [Java 基础：开发环境搭建及入门程序](src/java-tutorial/javase-series/20220702-jdk-install-and-hello-world.md)
-3.  [Java 基础：利用 IDEA 进行 Java 开发](src/java-tutorial/javase-series/20220703-learn-java-with-idea.md)
-4.  [Java 基础：变量与数据类型](src/java-tutorial/javase-series/20220704-variable-and-datatype.md)
-5.  [Java 基础：常用进制转换](src/java-tutorial/javase-series/20220705-binary-convert.md)
-6.  [Java 基础：操作符](src/java-tutorial/javase-series/20220706-operator.md)
-7.  [Java 基础：控制流程](src/java-tutorial/javase-series/20220707-control-process.md)
-8.  [Java 基础：流程控制知识大闯关](src/java-tutorial/javase-series/20221127-loop-in-action.md)
-9.  [Java 基础：数组操作的奇技淫巧](src/java-tutorial/javase-series/20220708-how-to-operate-array.md)
-10. [Java 基础：面向对象的 3、5 知识点](src/java-tutorial/javase-series/20220709-oop-1.md)
-11. [Java 基础：类的相关知识](src/java-tutorial/javase-series/20220710-oop-2.md)
-12. [Java 基础：包和 jar 文件的创建](src/java-tutorial/javase-series/20220711-oop-3.md)
-13. [Java 基础：成员变量、实例变量、静态变量、局部变量？](src/java-tutorial/javase-series/20220712-all-kinds-of-variable.md)
-14. [Java 基础：String 详解](src/java-tutorial/javase-series/20220713-string.md)
-15. [Java 基础：ArrayList 详解](src/java-tutorial/javase-series/20220714-arraylist.md)
-16. [Java 基础：输入输出流](src/java-tutorial/javase-series/20220715-in-out-stream.md)
-17. [Java 基础：反射机制详解](src/java-tutorial/javase-series/20220716-reflection.md)
-18. [Java 基础：深入浅出 Java 注解](src/java-tutorial/javase-series/20220721-annotations.md)
-19. [Java 基础：JDBC 入门指南](src/java-tutorial/javase-series/20220717-jdbc-introduction.md)
-20. [Java 基础：是时候拥抱 Junit 单元测试了！](src/java-tutorial/javase-series/20220718-test-with-junit.md)
-21. [Java 基础：Lombok 安装及使用指南](src/java-tutorial/javase-series/20220719-lombok-install-and-usage.md)
-22. [Java 基础：Fastjson V2 简单使用手册](src/java-tutorial/javase-series/20220720-fastjson2-quickstart.md)
-23. [Java 基础：static 和 final 小课堂](src/java-tutorial/javase-series/20221203-oop-advance.md)
-24. [Java 基础：抽象、接口和内部类](src/java-tutorial/javase-series/20221211-abstract.md)
+1.  [Java 基础：简介](src/java-tutorial/javase/20220701-intro-to-java.md)
+2.  [Java 基础：开发环境搭建及入门程序](src/java-tutorial/javase/20220702-jdk-install-and-hello-world.md)
+3.  [Java 基础：利用 IDEA 进行 Java 开发](src/java-tutorial/javase/20220703-learn-java-with-idea.md)
+4.  [Java 基础：变量与数据类型](src/java-tutorial/javase/20220704-variable-and-datatype.md)
+5.  [Java 基础：常用进制转换](src/java-tutorial/javase/20220705-binary-convert.md)
+6.  [Java 基础：操作符](src/java-tutorial/javase/20220706-operator.md)
+7.  [Java 基础：控制流程](src/java-tutorial/javase/20220707-control-process.md)
+8.  [Java 基础：流程控制知识大闯关](src/java-tutorial/javase/20221127-loop-in-action.md)
+9.  [Java 基础：数组操作的奇技淫巧](src/java-tutorial/javase/20220708-how-to-operate-array.md)
+10. [Java 基础：面向对象的 3、5 知识点](src/java-tutorial/javase/20220709-oop-1.md)
+11. [Java 基础：类的相关知识](src/java-tutorial/javase/20220710-oop-2.md)
+12. [Java 基础：包和 jar 文件的创建](src/java-tutorial/javase/20220711-oop-3.md)
+13. [Java 基础：成员变量、实例变量、静态变量、局部变量？](src/java-tutorial/javase/20220712-all-kinds-of-variable.md)
+14. [Java 基础：String 详解](src/java-tutorial/javase/20220713-string.md)
+15. [Java 基础：ArrayList 详解](src/java-tutorial/javase/20220714-arraylist.md)
+16. [Java 基础：输入输出流](src/java-tutorial/javase/20220715-in-out-stream.md)
+17. [Java 基础：反射机制详解](src/java-tutorial/javase/20220716-reflection.md)
+18. [Java 基础：深入浅出 Java 注解](src/java-tutorial/javase/20220721-annotations.md)
+19. [Java 基础：JDBC 入门指南](src/java-tutorial/javase/20220717-jdbc-introduction.md)
+20. [Java 基础：是时候拥抱 Junit 单元测试了！](src/java-tutorial/javase/20220718-test-with-junit.md)
+21. [Java 基础：Lombok 安装及使用指南](src/java-tutorial/javase/20220719-lombok-install-and-usage.md)
+22. [Java 基础：Fastjson V2 简单使用手册](src/java-tutorial/javase/20220720-fastjson2-quickstart.md)
+23. [Java 基础：static 和 final 小课堂](src/java-tutorial/javase/20221203-oop-advance.md)
+24. [Java 基础：抽象、接口和内部类](src/java-tutorial/javase/20221211-abstract.md)
 
 ### MySQL 教程
-1. [MySQL 教程：《SQL 必知必会》全解析](src/java-tutorial/mysql-series/20220726-sql-in-10min.md)
+1. [MySQL 教程：《SQL 必知必会》全解析](src/java-tutorial/mysql/20220726-sql-in-10min.md)
 
 ### 博客搭建
-1. [博客搭建：Hexo+Github Pages博客搭建教程](src/tutorial/blog-series/20220401-hexo.md)
+1. [博客搭建：Hexo+Github Pages博客搭建教程](src/tutorial/blog/20220401-hexo.md)
 
 ### 开发工具
-1. [开发工具：网站访问太慢，不妨试试这些 CDN](src/tutorial/dev-series/20220729-cdn.md)
-2. [开发工具：计算机专业涨薪必备的几个网站](src/tutorial/dev-series/20220731-exercise-websites.md)
-3. [开发工具：黑客大神也常用的一些 CMD 命令](src/tutorial/dev-series/20221127-cmd.md)
-4. [开发工具：如何在浏览器中安装插件](src/tutorial/dev-series/20230710-browser-plugin-install.md)
+1. [开发工具：网站访问太慢，不妨试试这些 CDN](src/tutorial/devtools/20220729-cdn.md)
+2. [开发工具：计算机专业涨薪必备的几个网站](src/tutorial/devtools/20220731-exercise-websites.md)
+3. [开发工具：黑客大神也常用的一些 CMD 命令](src/tutorial/devtools/20221127-cmd.md)
+4. [开发工具：如何在浏览器中安装插件](src/tutorial/devtools/20230710-browser-plugin-install.md)
 
 ### IDEA 教程
-1. [IDEA 教程：最新版 IntelliJ IDEA 使用手册](src/tutorial/idea-series/20220202-idea-guide.md)
-2. [IDEA 教程：原来大厂都是这么提交代码的](src/tutorial/idea-series/20230525-code-commit.md)
+1. [IDEA 教程：最新版 IntelliJ IDEA 使用手册](src/tutorial/idea/20220202-idea-guide.md)
+2. [IDEA 教程：原来大厂都是这么提交代码的](src/tutorial/idea/20230525-code-commit.md)
 ### 效率工具
 
-1. [效率工具：如何用 Markdown 写出好看的文章](src/tutorial/efficiency-series/20230425-markdown-tutorial.md)
-2. [效率工具：10 个神奇的网站，助力带薪摸鱼](src/tutorial/efficiency-series/20220729-10-amazing-website.md)
-3. [效率工具：Emoji 表情大作战](src/tutorial/efficiency-series/20220729-emoji.md)
+1. [效率工具：如何用 Markdown 写出好看的文章](src/tutorial/efficiency/20230425-markdown-tutorial.md)
+2. [效率工具：10 个神奇的网站，助力带薪摸鱼](src/tutorial/efficiency/20220729-10-amazing-website.md)
+3. [效率工具：Emoji 表情大作战](src/tutorial/efficiency/20220729-emoji.md)
 
 ## 好物周刊
 ### 2024 年刊

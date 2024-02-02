@@ -13,11 +13,11 @@ export default hopeTheme({
     email: "747731461@qq.com",
   },
 
-  iconAssets: ["fontawesome-with-brands", "//at.alicdn.com/t/c/font_3871871_xoqiqqwuia.css"],
+  iconAssets: ["fontawesome-with-brands", "//at.alicdn.com/t/c/font_3871871_9kauxi78cqe.css"],
   favicon: "/logo.svg",
   logo: "/logo.svg",
 
-  repo: "cunyu1943/JavaPark",
+  // repo: "cunyu1943/JavaPark",
 
   docsDir: "src",
 

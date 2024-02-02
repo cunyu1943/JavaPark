@@ -6,4 +6,5 @@ export default sidebar({
   "/program-language/": "structure",
   "/tutorial/": "structure",
   "/QA/": "structure",
+  "/about/": "structure",
 });
