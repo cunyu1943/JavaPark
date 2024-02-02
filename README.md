@@ -14,7 +14,7 @@
 ![](https://img.shields.io/github/forks/cunyu1943/JavaPark?logo=Github&label=Forks)
 ![](https://img.shields.io/github/watchers/cunyu1943/JavaPark?label=Watchers&logo=Github&color=green)
 
-## 基础教程
+## Java
 
 ### Java 基础
 

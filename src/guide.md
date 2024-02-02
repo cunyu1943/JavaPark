@@ -8,7 +8,7 @@ title: JavaPark | 编程知识公园 🔥
 
 - issues: `https://github.com/cunyu1943/JavaPark/issues`
 - PR: `https://github.com/cunyu1943/JavaPark/pulls`，仅需在文章的末尾找到 **在 GitHub 上编辑此页**，即可完成克隆和提交 `PR`。
-- 本站为整理公众号文章的知识库，关注公众号：[村雨遥](https://cunyu1943.github.io/contact/wechatpublic.png) 及时获取最新推文，避免错过最近更新。
+- 本站为整理公众号文章的知识库，关注公众号：[村雨遥](https://cunyu1943.gitee.io/contact/wechatpublic.png) 及时获取最新推文，避免错过最近更新。
 - 此外，如果在学习本站内容有疑惑的地方，还可以通过微信：`cunyu1943` 联系我，备注 **加群**，拉你进技术交流群！
 
 ![](/contact/contact.png =200x)
@@ -16,3 +16,21 @@ title: JavaPark | 编程知识公园 🔥
 ---
 
 ## 本站知识图谱
+
+## Java
+
+## 求职面试
+
+## 框架｜中间件
+
+## 计算机知识
+
+## 基础教程
+
+## 编程语言
+
+## 你问我答
+
+## 好物周刊
+
+## 关于

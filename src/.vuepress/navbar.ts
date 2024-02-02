@@ -4,8 +4,9 @@ export default navbar([
   {
     text: "导读",
     icon: "iconfont icon-guide",
-    link: "/guide"
+    link: "/guide/"
   },
+
   {
     text: "Java",
     icon: "fa-brands fa-java",
@@ -21,6 +22,24 @@ export default navbar([
         link: "/java-tutorial/mysql/20220726-sql-in-10min/"
       },
     ]
+  },
+
+  {
+    text: "求职面试",
+    icon: "iconfont icon-interview",
+    link: "/interview/"
+  },
+
+  {
+    text: "框架|中间件",
+    icon: "iconfont icon-framework",
+    link: "/framework/"
+  },
+
+  {
+    text: "计算机知识",
+    icon: "iconfont icon-computer",
+    link: "/cs-wiki/"
   },
 
   {
@@ -109,5 +128,5 @@ export default navbar([
     link: "https://yuque.com/cunyu1943"
   },
 
-  
+
 ]);

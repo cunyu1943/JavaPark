@@ -7,4 +7,6 @@ export default sidebar({
   "/tutorial/": "structure",
   "/QA/": "structure",
   "/about/": "structure",
+  "/interview/": "structure",
+  "/framework/": "structure",
 });

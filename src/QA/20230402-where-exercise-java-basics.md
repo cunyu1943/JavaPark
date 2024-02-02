@@ -21,7 +21,7 @@ tag:
 
 ## 二、网站
 
-### 1、牛客网
+### 1. 牛客网
 
 -   [牛客网](https://www.nowcoder.com/)
 
@@ -47,7 +47,7 @@ tag:
 
 算法练习的网站也比较多了，这里就推荐几个最常用的。
 
-### 2、LeetCode
+### 2. LeetCode
 
 -   [LeetCode 美国站](https://leetcode.cn/?utm_source=LCUS&utm_medium=ip_redirect&utm_campaign=transfer2china)
 
@@ -55,7 +55,7 @@ tag:
 
 -   [LeetCode 中国站](https://leetcode.cn/)
 
-### 3、牛客网
+### 3. 牛客网
 
 没错，又是它。现在国内有很多企业都是在牛客笔试的，为了尽快适应招聘面试，推荐在这里刷算法题，这样在笔试时也不会因为环境而感到陌生，尽快上手。
 
@@ -70,7 +70,7 @@ tag:
 -   [《剑指 Offer（专线突击版）》](https://leetcode.cn/problemset/all/?page=1&listId=e8X3pBZi)
 -   [《剑指 Offer（第 2 版）》](https://leetcode.cn/problemset/all/?page=1&listId=xb9nqhhg)
 
-### 4、赛码网
+### 4. 赛码网
 
 -   [赛码网](https://www.acmcoder.com/#/home)
 

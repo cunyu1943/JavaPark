@@ -8,7 +8,7 @@ heroImage: /logo.svg
 # bgImageStyle:
 #   background-attachment: fixed
 heroText: JavaPark
-tagline: 汇聚 Java 基础、中间件、求职面试、计算机知识、数据库、编程语言、效率工具…
+tagline: 汇聚 Java 基础、框架、中间件、求职面试、计算机知识、编程语言、基础教程、效率工具…
 actions:
   - text: 发车 ➡️
     link: /guide
@@ -21,16 +21,30 @@ actions:
 
   # - header: 在这里你能看到以下方面的内容
 features:
-  - title: 好物周刊
-    icon: fa-solid fa-newspaper
-    details: 记录每周有价值的信息
   - title: Java 教程
     icon: iconfont icon-java
     details: Java 基础保姆级教程
-  - title: 效率工具
+  - title: 求职面试
+    icon: iconfont icon-interview
+    details: 面试八股、简历修改
+  - title: 框架｜中间件
+    icon: iconfont icon-framework
+    details: 各种框架、中间件知识点总结
+  - title: 计算机基础
+    icon: iconfont icon-computer
+    details: 网络、算法、数据结构等知识
+  - title: 基础教程
     icon: iconfont icon-rocket
-    details: 助力工作学习
-    
+    details: IT 相关知识，助力工作学习
+  - title: 编程语言
+    icon: iconfont icon-order
+    details: 学习其他编程语言的总结
+  - title: 你问我答
+    icon: fa-solid fa-circle-question
+    details: 回复常见疑问
+  - title: 好物周刊
+    icon: fa-solid fa-newspaper
+    details: 记录每周有价值的信息
 ---
 
 ## 必看专栏
