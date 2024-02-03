@@ -3,7 +3,7 @@ import navbar from "./navbar.js";
 import sidebar from "./sidebar.js";
 
 export default hopeTheme({
-  breadcrumb: false,
+  breadcrumb: true,
   hostname: "https://cunyu1943.github.io",
   sidebarSorter: ["filename", "title", "order"],
 
@@ -13,7 +13,7 @@ export default hopeTheme({
     email: "747731461@qq.com",
   },
 
-  iconAssets: ["fontawesome-with-brands", "//at.alicdn.com/t/c/font_3871871_ikxth0oazu.css"],
+  iconAssets: ["fontawesome-with-brands", "//at.alicdn.com/t/c/font_3871871_u2g14j9ltmp.css"],
   favicon: "/logo.svg",
   logo: "/logo.svg",
 

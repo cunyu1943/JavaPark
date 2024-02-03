@@ -10,18 +10,19 @@ export default navbar([
   {
     text: "Java",
     icon: "fa-brands fa-java",
-    children: [
-      {
-        text: "Java 基础",
-        icon: "iconfont icon-java",
-        link: "/java-tutorial/javase/20220701-intro-to-java/"
-      },
-      {
-        text: "MySQL",
-        icon: "iconfont icon-mysql",
-        link: "/java-tutorial/mysql/20220726-sql-in-10min/"
-      },
-    ]
+    link: "/java-tutorial/",
+    // children: [
+    //   {
+    //     text: "Java 基础",
+    //     icon: "iconfont icon-java",
+    //     link: "/java-tutorial/javase/20220701-intro-to-java/"
+    //   },
+    //   {
+    //     text: "MySQL",
+    //     icon: "iconfont icon-mysql",
+    //     link: "/java-tutorial/mysql/20220726-sql-in-10min/"
+    //   },
+    // ]
   },
 
   {
@@ -115,6 +116,12 @@ export default navbar([
   },
 
   {
+    text: "关于",
+    icon: "fa-solid fa-circle-info",
+    link: "/about/"
+  },
+
+  {
     text: "源码",
     icon: "iconfont icon-test",
     children: [
@@ -127,6 +134,5 @@ export default navbar([
     icon: "fa-solid fa-crow",
     link: "https://yuque.com/cunyu1943"
   },
-
 
 ]);

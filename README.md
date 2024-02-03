@@ -46,25 +46,43 @@
 ### MySQL 教程
 1. [MySQL 教程：《SQL 必知必会》全解析](src/java-tutorial/mysql/20220726-sql-in-10min.md)
 
+## 求职面试
+
+## 框架｜中间件
+
+### Nginx
+
+1. [简介与环境搭建](src/framework/nginx/20221016-intro-install.md)
+
+## 计算机知识
+
+## 基础教程
+
 ### 博客搭建
 1. [博客搭建：Hexo+Github Pages博客搭建教程](src/tutorial/blog/20220401-hexo.md)
 
-### 开发工具
-1. [开发工具：网站访问太慢，不妨试试这些 CDN](src/tutorial/devtools/20220729-cdn.md)
-2. [开发工具：计算机专业涨薪必备的几个网站](src/tutorial/devtools/20220731-exercise-websites.md)
-3. [开发工具：黑客大神也常用的一些 CMD 命令](src/tutorial/devtools/20221127-cmd.md)
-4. [开发工具：如何在浏览器中安装插件](src/tutorial/devtools/20230710-browser-plugin-install.md)
 
 ### IDEA 教程
 1. [IDEA 教程：最新版 IntelliJ IDEA 使用手册](src/tutorial/idea/20220202-idea-guide.md)
 2. [IDEA 教程：原来大厂都是这么提交代码的](src/tutorial/idea/20230525-code-commit.md)
+
 ### 效率工具
 
 1. [效率工具：如何用 Markdown 写出好看的文章](src/tutorial/efficiency/20230425-markdown-tutorial.md)
 2. [效率工具：10 个神奇的网站，助力带薪摸鱼](src/tutorial/efficiency/20220729-10-amazing-website.md)
-3. [效率工具：Emoji 表情大作战](src/tutorial/efficiency/20220729-emoji.md)
+3. [效率工具：网站访问太慢，不妨试试这些 CDN](src/tutorial/devtools/20220729-cdn.md)
+4. [效率工具：计算机专业涨薪必备的几个网站](src/tutorial/efficiency/20220731-exercise-websites.md)
+5. [效率工具：黑客大神也常用的一些 CMD 命令](src/tutorial/efficiency/20221127-cmd.md)
+6. [效率工具：如何在浏览器中安装插件](src/tutorial/efficiency/20230710-browser-plugin-install.md)
+7. [效率工具：Emoji 表情大作战](src/tutorial/efficiency/20220729-emoji.md)
+
+## 编程语言
+
+## 你问我答
+1. [你问我答：想学好 Java 基础，应该去哪儿刷题](src/QA/20230402-where-exercise-java-basics.md)
 
 ## 好物周刊
+
 ### 2024 年刊
 1. [好物周刊#38：在线图片处理](src/weekly/2024/0101-0105.md)
 2. [好物周刊#39：IT 人必备神器](src/weekly/2024/0106-0112.md)
@@ -110,10 +128,6 @@
 36. [好物周刊#36：程序员简历](src/weekly/2023/1216-1222.md)
 37. [好物周刊#37：元气桌面](src/weekly/2023/1223-1229.md)
 
-## 你问我答
-
-1. [你问我答：想学好 Java 基础，应该去哪儿刷题](src/QA/20230402-where-exercise-java-basics.md)
-
 ## 快速联系
 
 ### 👨‍💻 加群交流
@@ -121,7 +135,7 @@
 建群的目的是希望给大家提供一个良好的技术学习交流平台，由于微信群人满 `100` 之后无法加入，请扫描下方二维码先添加作者 “村雨遥” 微信(`cunyu1943`)，备注：**加群**。
 
 <center>
-<img src="./src/.vuepress/public/contact/contact.png" width="150px" />
+<img src="./src/.vuepress/public/contact/contact.png" width="200px" />
 
 </center>
 

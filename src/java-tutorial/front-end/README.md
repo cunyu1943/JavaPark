@@ -1,5 +1,5 @@
 ---
-title: Web 前端教程
+title: Web 前端
 index: false
 icon: iconfont icon-html
 ---
