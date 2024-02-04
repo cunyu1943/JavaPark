@@ -17,6 +17,8 @@ title: JavaPark | 编程知识公园 🔥
 
 ## 本站知识图谱
 
+![](.vuepress/public/map.png)
+
 ## Java
 
 ## 求职面试

@@ -61,11 +61,15 @@
 ### MySQL 教程
 1. [MySQL 教程：《SQL 必知必会》全解析](src/java-tutorial/mysql/20220726-sql-in-10min.md)
 
-## Web 前端
+### Web 前端
 <!-- 1. [前端：开发环境搭建](front-end/20230829-environment.md)
 2. [前端：HTML 大揭秘](front-end/20230829-html.md)
 3. [前端：CSS 教程](front-end/20230903-css.md) -->
 1. [前端：Axios 简单使用指南](src/java-tutorial/front-end/20230926-axios.md)
+
+#### Vue 3
+
+1. [Vue 3 系列：常用指令](src/java-tutorial/front-end/vue3/20221012-common-command.md)
 
 ## 求职面试
 
@@ -76,6 +80,10 @@
 3. [知识点：MySQL 面试知识点](src/interview/knowledge/20240203-mysql.md)
 
 ## 框架｜中间件
+
+### Redis
+
+1. [Redis：持久化](src/framework/redis/20221016-persistence.md)
 
 ### Nginx
 
@@ -103,6 +111,8 @@
 5. [效率工具：黑客大神也常用的一些 CMD 命令](src/tutorial/efficiency/20221127-cmd.md)
 6. [效率工具：如何在浏览器中安装插件](src/tutorial/efficiency/20230710-browser-plugin-install.md)
 7. [效率工具：Emoji 表情大作战](src/tutorial/efficiency/20220729-emoji.md)
+8. [效率工具：macOS 安装 Node.js](src/tutorial/efficiency/20221114-macos-install-node.md)
+9. [效率工具：PPT 模板免费下载](src/tutorial/efficiency/20220623-ppt-template.md)
 
 ### 软件设计师
 

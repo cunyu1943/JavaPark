@@ -1,7 +1,7 @@
 ---
 isOriginal: true
 category:
-  - 开发工具
+  - 效率工具
 tag:
     - 浏览器
     - Chrome

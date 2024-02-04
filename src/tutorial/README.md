@@ -6,7 +6,7 @@ icon: iconfont icon-interview
 
 ## 博客搭建
 
-1. [博客搭建：Hexo+Github Pages博客搭建教程](blog/20220401-hexo.md)
+1. [博客搭建：Hexo + Github Pages 博客搭建教程](blog/20220401-hexo.md)
 
 ## IDEA 教程
 
@@ -22,6 +22,8 @@ icon: iconfont icon-interview
 5. [效率工具：黑客大神也常用的一些 CMD 命令](efficiency/20221127-cmd.md)
 6. [效率工具：如何在浏览器中安装插件](efficiency/20230710-browser-plugin-install.md)
 7. [效率工具：Emoji 表情大作战](efficiency/20220729-emoji.md)
+8. [效率工具：macOS 安装 Node.js](efficiency/20221114-macos-install-node.md)
+9. [效率工具：PPT 模板免费下载](efficiency/20220623-ppt-template.md)
 
 ## 软件设计师
 

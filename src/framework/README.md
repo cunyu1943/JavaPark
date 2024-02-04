@@ -10,6 +10,10 @@ icon: iconfont icon-framework
 
 ## Spring Boot
 
+## Redis
+
+1. [Redis：持久化](redis/20221016-persistence.md)
+
 ## Nginx
 
 1. [简介与环境搭建](nginx/20221016-intro-install.md)
