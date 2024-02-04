@@ -13,7 +13,7 @@ icon: iconfont icon-interview
 1. [IDEA 教程：最新版 IntelliJ IDEA 使用手册](idea/20220202-idea-guide.md)
 2. [IDEA 教程：原来大厂都是这么提交代码的](idea/20230525-code-commit.md)
 
-###\ 效率工具
+## 效率工具
 
 1. [效率工具：如何用 Markdown 写出好看的文章](efficiency/20230425-markdown-tutorial.md)
 2. [效率工具：10 个神奇的网站，助力带薪摸鱼](efficiency/20220729-10-amazing-website.md)

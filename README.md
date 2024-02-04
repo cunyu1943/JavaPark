@@ -1,12 +1,14 @@
 # 📖 JavaPark | Java 自学指南
 
+
+
 ## 项目简介
 
 - 👉 推荐 [语雀](https://yuque.com/cunyu1943) ｜ [Github 在线阅读](https://cunyu1943.github.io/) | [Gitee 在线阅读](https://cunyu1943.gitee.io/)，`Github` 访问较慢，所以部分资源可能会加载较慢。
 
 - 👉 项目同步维护：[语雀](https://yuque.com/cunyu1943/JavaPark)｜[Github](https://github.com/cunyu1943/JavaPark) | [Gitee](https://gitee.com/cunyu1943/JavaPark)
 
-- 👉 这里有 `Java` 学习保姆级教程、面试总结、计算机基础、数据库、效率工具等诸多内容。
+- 👉 这里有 `Java` 学习保姆级教程、求职面试、计算机基础、编程语言、效率工具等诸多内容。
 
 - 👉 [『资源下载』](https://github.com/cunyu1943/ebooks)
 
@@ -99,6 +101,17 @@
 1. [C++ 系列：知识点总结](src/program-language/cpp/20180720-summary.md)
 
 ### Python
+
+#### 教程
+
+1. [Python 教程：简介](src/program-language/python/tutorial/20210331-intro.md)
+2. [Python 教程：玩转 Pycharm](src/program-language/python/tutorial//20210401-pycharm.md)
+3. [Python 教程：语言元素](src/program-language/python/tutorial/20210402-language-element.md)
+4. [Python 教程：条件判断、循环以及循环的终止](src/program-language/python/tutorial/20210403-condition.md)
+5. [Python 教程：购物车](src/program-language/python/tutorial/20220420-shopping.md)
+6. [Python 教程：turtle 库使用](src/program-language/python/tutorial/20180429-turtle.md)
+7. [Python 教程：数码管绘制](src/program-language/python/tutorial/20180501-digital-time.md)
+8. [Python 教程：Python 3.7 安装 polyglot 失败](src/program-language/python/tutorial/20220421-polyglot-install.md)
 
 #### 编程实例
 1. [编程实例（1 - 5）](src/program-language/python/instance/20181003-1-5.md)

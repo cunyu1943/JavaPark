@@ -11,7 +11,7 @@ date: 2024-02-03
 
 ### 异常类层次结构
 
-![](assets/20240203-java-advanced/akwEee.png)
+![](assets/20240203-java-advanced/akwEee.webp)
 
 从结构图可以看出，所有异常均继承自 `Throwable` 类，它有两个重要的子类：`Exception` 和 `Error` ，各自又包含大量子类。
 
@@ -89,7 +89,7 @@ Java IO 共涉及 40 多个类，均从如下 4 个抽象类中派生而来：
 3. `Reader`：所有输入流的基类，**字符输入流**
 4. `Writer`：所有输出流的基类，**字符输出流**
 
-![](assets/20240203-java-advanced/aE9fSO.png)
+![](assets/20240203-java-advanced/aE9fSO.webp)
 
 ### 字节流 vs 字符流
 
@@ -557,7 +557,7 @@ public static < E > void printArray( E[] inputArray )
 | `TERMINATED`                 | 终止状态，表示线程执行完毕                                   |
 
 
-![](assets/20240203-java-advanced/aENcM8.png)
+![](assets/20240203-java-advanced/aENcM8.webp)
 
 上图源自《Java 并发编程艺术》，可以看出一个线程的状态变迁过程：
 
@@ -688,7 +688,7 @@ public static void main(String[] args) throws ExecutionException, InterruptedExc
 
 ### 反射的基本运用
 
-![](assets/20240203-java-advanced/aVTv3n.png)
+![](assets/20240203-java-advanced/aVTv3n.webp)
 
 ### 如何利用反射创建对象
 

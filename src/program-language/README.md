@@ -15,6 +15,17 @@ icon: iconfont icon-order
 
 ## Python
 
+### 教程
+
+1. [Python 教程：简介](python/tutorial/20210331-intro.md)
+2. [Python 教程：玩转 Pycharm](python/tutorial//20210401-pycharm.md)
+3. [Python 教程：语言元素](python/tutorial/20210402-language-element.md)
+4. [Python 教程：条件判断、循环以及循环的终止](python/tutorial/20210403-condition.md)
+5. [Python 教程：购物车](python/tutorial/20220420-shopping.md)
+6. [Python 教程：turtle 库使用](python/tutorial/20180429-turtle.md)
+7. [Python 教程：数码管绘制](python/tutorial/20180501-digital-time.md)
+8. [Python 教程：Python 3.7 安装 polyglot 失败](python/tutorial/20220421-polyglot-install.md)
+
 ### 编程实例
 
 1. [编程实例（1 - 5）](python/instance/20181003-1-5.md)

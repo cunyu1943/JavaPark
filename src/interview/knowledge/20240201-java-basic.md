@@ -45,11 +45,11 @@ class Student{
 - JRE：Java Runtime Environment，即 Java 运行时环境，是用来运行已经编译过的 Java 程序所需内容的集合（JVM、Java 类库、Java 命令等），不能用来开发新程序。
 - JDK：Java Development Kit，即 Java 开发工具包，是功能齐全的 Java SDK，包含 JRE 拥有的一切，还有编译器和其他工具，如果我们想要创建和编译新程序，就必须使用到它。
 
-![](assets/20240203-java-basic/format,png.png)
+![](assets/20240203-java-basic/format,png.webp)
 
 ## Java 程序编译过程
 
-![](assets/20240203-java-basic/UzFVeO.png)
+![](assets/20240203-java-basic/UzFVeO.webp)
 
 我们编译的源代码（`xxx.java`）经 JDK 中的 `javac` 命令编译后，成为 JVM 能够理解的 Java 字节码（`xxx.class`），然后经由 JVM 加载，通过解释器 **逐行解释执行**，这就是为什么能经常听见说 **Java 是一门编译和解释共存的语言**。
 
@@ -216,7 +216,7 @@ System.out.println(str1 == str2);
 System.out.println(str3 == str4);
 ```
 
-![](assets/20240203-java-basic/UxLfq1.png)
+![](assets/20240203-java-basic/UxLfq1.webp)
 
 ### new String(“xxx”)
 
@@ -226,13 +226,13 @@ System.out.println(str3 == str4);
 
 此时会创建两个字符串对象，“xxx” 属于字符串字面量，因此在编译期会在 String Pool 中创建一个字符串对象，用于指向该字符串的字面量 “xxx”；然后 `new` 会在堆中创建一个字符串对象；
 
-![](assets/20240203-java-basic/UxXxC8.png)
+![](assets/20240203-java-basic/UxXxC8.webp)
 
 2. **String Pool 中存在 “xxx”**
 
 此时只需要创建一个字符串对象，由于 String Pool 中已经存在指向 “xxx” 的对象，所以直接在堆中创建一个字符串对象；
 
-![](assets/20240203-java-basic/UxjpvQ.png)
+![](assets/20240203-java-basic/UxjpvQ.webp)
 
 ## 基础语法
 
@@ -267,7 +267,7 @@ String name = "村雨遥";
 
 ### 常见关键字
 
-![](assets/20240203-java-basic/imgJava 关键字.png)
+![](assets/20240203-java-basic/imgJava 关键字.webp)
 
 ### 标识符和关键字
 
@@ -542,13 +542,13 @@ variable x = (expression) ? value if true : value if false
 
 浅拷贝是 **按位拷贝对象，会创建一个新对象，该对象具有原始对象属性值的精确拷贝。** 若属性是基本类型，则拷贝的是基本类型的值；若属性是引用类型（内存地址），则拷贝的是内存地址。因此，一旦其中任一对象改变了该引用类型属性，均会影响到对方；
 
-![](assets/20240203-java-basic/aSAzUU.png)
+![](assets/20240203-java-basic/aSAzUU.webp)
 
 2. **深拷贝**
 
 深拷贝会 **拷贝所有属性，同时拷贝属性指向的动态分配的内存**。当对象和它引用的对象一起拷贝是即发生深拷贝，**相比于浅拷贝，深拷贝速度较慢同时花销更大**。
 
-![](assets/20240203-java-basic/aSEADx.png)
+![](assets/20240203-java-basic/aSEADx.webp)
 
 3. **总结**
 
