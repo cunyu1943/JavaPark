@@ -46,45 +46,47 @@ export default navbar([
   {
     text: "基础教程",
     icon: "iconfont icon-tools",
-    children: [
-      {
-        text: "IDEA 教程",
-        icon: "iconfont icon-intellijidea",
-        link: "/tutorial/idea/20220202-idea-guide/"
-      },
-      {
-        text: "博客搭建",
-        icon: "iconfont icon-blog",
-        link: "/tutorial/blog/20220401-hexo/"
-      },
-      {
-        text: "效率工具",
-        icon: "iconfont icon-rocket",
-        link: "/tutorial/efficiency/20220729-10-amazing-website/"
-      },
-    ]
+    link: "/tutorial/",
+    // children: [
+    //   {
+    //     text: "IDEA 教程",
+    //     icon: "iconfont icon-intellijidea",
+    //     link: "/tutorial/idea/20220202-idea-guide/"
+    //   },
+    //   {
+    //     text: "博客搭建",
+    //     icon: "iconfont icon-blog",
+    //     link: "/tutorial/blog/20220401-hexo/"
+    //   },
+    //   {
+    //     text: "效率工具",
+    //     icon: "iconfont icon-rocket",
+    //     link: "/tutorial/efficiency/20220729-10-amazing-website/"
+    //   },
+    // ]
   },
 
   {
     text: "编程语言",
     icon: "iconfont icon-order",
-    children: [
-      {
-        text: "C 语言",
-        icon: "iconfont icon-c",
-        link: "/program-language/c/20180308-memory-manage/"
-      },
-      {
-        text: "C++",
-        icon: "iconfont icon-CPP",
-        link: "/program-language/cpp/20180720-summary/"
-      },
-      {
-        text: "Python",
-        icon: "iconfont icon-Python",
-        link: "/program-language/python/tutorial/20210331-intro/"
-      },
-    ]
+    link: "/program-language/",
+    // children: [
+    //   {
+    //     text: "C 语言",
+    //     icon: "iconfont icon-c",
+    //     link: "/program-language/c/20180308-memory-manage/"
+    //   },
+    //   {
+    //     text: "C++",
+    //     icon: "iconfont icon-CPP",
+    //     link: "/program-language/cpp/20180720-summary/"
+    //   },
+    //   {
+    //     text: "Python",
+    //     icon: "iconfont icon-Python",
+    //     link: "/program-language/python/tutorial/20210331-intro/"
+    //   },
+    // ]
   },
 
   {

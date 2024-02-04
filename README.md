@@ -48,11 +48,17 @@
 
 ## 求职面试
 
+### 知识点
+
+1. [知识点：Java 基础面试知识点](src/interview/knowledge/20240201-java-basic.md)
+2. [知识点：Java 进阶面试知识点](src/interview/knowledge/20240203-java-advanced.md)
+3. [知识点：MySQL 面试知识点](src/interview/knowledge/20240203-mysql.md)
+
 ## 框架｜中间件
 
 ### Nginx
 
-1. [简介与环境搭建](src/framework/nginx/20221016-intro-install.md)
+1. [Nginx：简介与环境搭建](src/framework/nginx/20221016-intro-install.md)
 
 ## 计算机知识
 
@@ -63,6 +69,7 @@
 
 
 ### IDEA 教程
+
 1. [IDEA 教程：最新版 IntelliJ IDEA 使用手册](src/tutorial/idea/20220202-idea-guide.md)
 2. [IDEA 教程：原来大厂都是这么提交代码的](src/tutorial/idea/20230525-code-commit.md)
 
@@ -70,13 +77,42 @@
 
 1. [效率工具：如何用 Markdown 写出好看的文章](src/tutorial/efficiency/20230425-markdown-tutorial.md)
 2. [效率工具：10 个神奇的网站，助力带薪摸鱼](src/tutorial/efficiency/20220729-10-amazing-website.md)
-3. [效率工具：网站访问太慢，不妨试试这些 CDN](src/tutorial/devtools/20220729-cdn.md)
+3. [效率工具：网站访问太慢，不妨试试这些 CDN](src/tutorial/efficiency/20220729-cdn.md)
 4. [效率工具：计算机专业涨薪必备的几个网站](src/tutorial/efficiency/20220731-exercise-websites.md)
 5. [效率工具：黑客大神也常用的一些 CMD 命令](src/tutorial/efficiency/20221127-cmd.md)
 6. [效率工具：如何在浏览器中安装插件](src/tutorial/efficiency/20230710-browser-plugin-install.md)
 7. [效率工具：Emoji 表情大作战](src/tutorial/efficiency/20220729-emoji.md)
 
+### 软件设计师
+
+1. [软设：计算机系统](src/tutorial/software-designer/20221024-computer-system.md)
+
 ## 编程语言
+
+### C 语言
+
+1. [C 语言：内存管理函数](src/program-language/c/20180308-memory-manage.md)
+2. [C 语言：知识点总结](src/program-language/c/20180720-summary.md)
+
+### C++
+
+1. [C++ 系列：知识点总结](src/program-language/cpp/20180720-summary.md)
+
+### Python
+
+#### 编程实例
+1. [编程实例（1 - 5）](src/program-language/python/instance/20181003-1-5.md)
+2. [编程实例（6 - 10）](src/program-language/python/instance/20181004-6-10.md)
+3. [编程实例（11 - 15）](src/program-language/python/instance/20181005-11-15.md)
+4. [编程实例（16 - 20）](src/program-language/python/instance/20181006-16-20.md)
+5. [编程实例（21 - 25）](src/program-language/python/instance/20181007-21-25.md)
+6. [编程实例（26 - 30）](src/program-language/python/instance/20181008-26-30.md)
+7. [编程实例（31 - 35）](src/program-language/python/instance/20181009-31-35.md)
+8. [编程实例（36 - 40）](src/program-language/python/instance/20181010-36-40.md)
+9. [编程实例（41 - 45）](src/program-language/python/instance/20181011-41-45.md)
+10. [编程实例（46 - 50）](src/program-language/python/instance/20181012-46-50.md)
+11. [编程实例（51 - 55）](src/program-language/python/instance/20181013-51-55.md)
+
 
 ## 你问我答
 1. [你问我答：想学好 Java 基础，应该去哪儿刷题](src/QA/20230402-where-exercise-java-basics.md)
@@ -88,6 +124,7 @@
 2. [好物周刊#39：IT 人必备神器](src/weekly/2024/0106-0112.md)
 3. [好物周刊#40：多功能文件管理器](src/weekly/2024/0113-0119.md)
 4. [好物周刊#41：新一代截图神器](src/weekly/2024/0120-0126.md)
+5. [好物周刊#42：国产项目管理软件](src/weekly/2024/0127-0202.md)
 
 ### 2023 年刊
 1. [好物周刊#1：提示工程师养成指南](src/weekly/2023/0415-0421.md)

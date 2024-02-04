@@ -4,3 +4,4 @@ index: false
 icon: fa-solid fa-crosshairs
 ---
 
+<AutoCatalog />
