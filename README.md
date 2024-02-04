@@ -45,8 +45,27 @@
 23. [Java 基础：static 和 final 小课堂](src/java-tutorial/javase/20221203-oop-advance.md)
 24. [Java 基础：抽象、接口和内部类](src/java-tutorial/javase/20221211-abstract.md)
 
+### 实战训练
+
+#### Java 入门
+
+1. [入门练习：1 - 5](src/java-tutorial/in-action/se/20220625-1-5.md)
+2. [入门练习：6 - 10](src/java-tutorial/in-action/se/20220626-6-10.md)
+3. [入门练习：11 - 15](src/java-tutorial/in-action/se/20220627-11-15.md)
+4. [入门练习：16 - 20](src/java-tutorial/in-action/se/20220628-16-20.md)
+5. [入门练习：21 - 25](src/java-tutorial/in-action/se/20220629-21-25.md)
+6. [入门练习：26 - 30](src/java-tutorial/in-action/se/20220630-26-30.md)
+7. [入门练习：31 - 35](src/java-tutorial/in-action/se/20220701-31-35.md)
+8. [入门练习：36 - 40](src/java-tutorial/in-action/se/20220702-36-40.md)
+
 ### MySQL 教程
 1. [MySQL 教程：《SQL 必知必会》全解析](src/java-tutorial/mysql/20220726-sql-in-10min.md)
+
+## Web 前端
+<!-- 1. [前端：开发环境搭建](front-end/20230829-environment.md)
+2. [前端：HTML 大揭秘](front-end/20230829-html.md)
+3. [前端：CSS 教程](front-end/20230903-css.md) -->
+1. [前端：Axios 简单使用指南](src/java-tutorial/front-end/20230926-axios.md)
 
 ## 求职面试
 
@@ -67,7 +86,7 @@
 ## 基础教程
 
 ### 博客搭建
-1. [博客搭建：Hexo+Github Pages博客搭建教程](src/tutorial/blog/20220401-hexo.md)
+1. [博客搭建：Hexo + Github Pages 博客搭建教程](src/tutorial/blog/20220401-hexo.md)
 
 
 ### IDEA 教程

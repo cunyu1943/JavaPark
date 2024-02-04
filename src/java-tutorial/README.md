@@ -33,8 +33,23 @@ icon: iconfont icon-java
 
 ## 实战训练
 
+### Java 入门
+
+1. [入门练习：1 - 5](in-action/se/20220625-1-5.md)
+2. [入门练习：6 - 10](in-action/se/20220626-6-10.md)
+3. [入门练习：11 - 15](in-action/se/20220627-11-15.md)
+4. [入门练习：16 - 20](in-action/se/20220628-16-20.md)
+5. [入门练习：21 - 25](in-action/se/20220629-21-25.md)
+6. [入门练习：26 - 30](in-action/se/20220630-26-30.md)
+7. [入门练习：31 - 35](in-action/se/20220701-31-35.md)
+8. [入门练习：36 - 40](in-action/se/20220702-36-40.md)
+
 ## MySQL 教程
 
 1. [MySQL 教程：《SQL 必知必会》全解析](mysql/20220726-sql-in-10min.md)
 
 ## Web 前端
+<!-- 1. [前端：开发环境搭建](front-end/20230829-environment.md)
+2. [前端：HTML 大揭秘](front-end/20230829-html.md)
+3. [前端：CSS 教程](front-end/20230903-css.md) -->
+1. [前端：Axios 简单使用指南](front-end/20230926-axios.md)
