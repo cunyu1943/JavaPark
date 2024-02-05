@@ -29,7 +29,7 @@ tag:
 
 ### RDB
 
-![](assets/20221016-persistence/9da8b3765509b2d69aa52f4d186a7701.png)
+![](assets/20221016-persistence/9da8b3765509b2d69aa52f4d186a7701.webp)
 
 #### 工作原理
 
@@ -85,7 +85,7 @@ rdbchecksum yes
 
 ### AOF
 
-![](assets/20221016-persistence/97c86fe924d22384d36088a0b2989bf3.png)
+![](assets/20221016-persistence/97c86fe924d22384d36088a0b2989bf3.webp)
 
 #### 工作原理
 
