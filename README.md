@@ -44,6 +44,7 @@
 22. [Java 基础：Fastjson V2 简单使用手册](src/java-tutorial/javase/20220720-fastjson2-quickstart.md)
 23. [Java 基础：static 和 final 小课堂](src/java-tutorial/javase/20221203-oop-advance.md)
 24. [Java 基础：抽象、接口和内部类](src/java-tutorial/javase/20221211-abstract.md)
+25. [Java 基础：Mockito + JUnit 单元测试实例](src/java-tutorial/javase/20220722-mockito.md)
 
 ### 实战训练
 
@@ -84,6 +85,11 @@
 
 ## 框架｜中间件
 
+### Spring Boot 2.7.x
+
+1. [Spring Boot 2.7.x：集成 Knife4j](src/framework/springboot/2.7.x/20220430-knife4j.md)
+2. [Spring Boot 2.7.x：集成 Security 入门小实例](src/framework/springboot/2.7.x/20220604-security.md)
+
 ### Redis
 
 1. [Redis：持久化](src/framework/redis/20221016-persistence.md)
@@ -117,7 +123,8 @@
 6. [效率工具：如何在浏览器中安装插件](src/tutorial/efficiency/20230710-browser-plugin-install.md)
 7. [效率工具：Emoji 表情大作战](src/tutorial/efficiency/20220729-emoji.md)
 8. [效率工具：macOS 安装 Node.js](src/tutorial/efficiency/20221114-macos-install-node.md)
-9. [效率工具：PPT 模板免费下载](src/tutorial/efficiency/20220623-ppt-template.md)
+9. [效率工具：iTerm2 + Fish 高效终端](src/tutorial/efficiency/20220426-iterm2-fish.md)
+10. [效率工具：PPT 模板免费下载](src/tutorial/efficiency/20220623-ppt-template.md)
 
 ### 软件设计师
 

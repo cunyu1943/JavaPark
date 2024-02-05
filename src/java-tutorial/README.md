@@ -30,6 +30,7 @@ icon: iconfont icon-java
 22. [Java 基础：Fastjson V2 简单使用手册](javase/20220720-fastjson2-quickstart.md)
 23. [Java 基础：static 和 final 小课堂](javase/20221203-oop-advance.md)
 24. [Java 基础：抽象、接口和内部类](javase/20221211-abstract.md)
+25. [Java 基础：Mockito + JUnit 单元测试实例](javase/20220722-mockito.md)
 
 ## 实战训练
 

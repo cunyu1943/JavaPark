@@ -25,7 +25,8 @@ icon: iconfont icon-interview
 6. [效率工具：如何在浏览器中安装插件](efficiency/20230710-browser-plugin-install.md)
 7. [效率工具：Emoji 表情大作战](efficiency/20220729-emoji.md)
 8. [效率工具：macOS 安装 Node.js](efficiency/20221114-macos-install-node.md)
-9. [效率工具：PPT 模板免费下载](efficiency/20220623-ppt-template.md)
+9. [效率工具：iTerm2 + Fish 高效终端](efficiency/20220426-iterm2-fish.md)
+10. [效率工具：PPT 模板免费下载](efficiency/20220623-ppt-template.md)
 
 ## 软件设计师
 
