@@ -7,6 +7,8 @@ icon: iconfont icon-interview
 ## 博客搭建
 
 1. [博客搭建：Hexo + Github Pages 博客搭建教程](blog/20220401-hexo.md)
+2. [博客搭建：dumi 博客搭建](blog/20220610-dumi.md)
+3. [博客搭建：Hugo + Github Pages 博客搭建教程](blog/20220611-hugo.md)
 
 ## IDEA 教程
 

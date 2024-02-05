@@ -3,7 +3,7 @@ isOriginal: true
 category:
   - Vue 3 系列
 tag:
-    - vue
+    - Vue
 ---
 
 # 常用指令

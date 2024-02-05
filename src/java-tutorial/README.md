@@ -56,4 +56,6 @@ icon: iconfont icon-java
 
 ### Vue 3 系列
 
-1. [Vue 3 系列：常用指令](front-end/vue3/20221012-common-command.md)
+1. [Vue 3 系列：简介](front-end/vue3/20220605-intro.md)
+2. [Vue 3 系列：搭建 Vue + Vite 入门项目](front-end/vue3/20220606-vite-quickstart.md)
+3. [Vue 3 系列：常用指令](front-end/vue3/20221012-common-command.md)

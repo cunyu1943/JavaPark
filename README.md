@@ -69,7 +69,10 @@
 
 #### Vue 3
 
-1. [Vue 3 系列：常用指令](src/java-tutorial/front-end/vue3/20221012-common-command.md)
+1. [Vue 3 系列：简介](src/java-tutorial/front-end/vue3/20220605-intro.md)
+2. [Vue 3 系列：搭建 Vue + Vite 入门项目](src/java-tutorial/front-end/vue3/20220606-vite-quickstart.md)
+3. [Vue 3 系列：常用指令](src/java-tutorial/front-end/vue3/20221012-common-command.md)
+
 
 ## 求职面试
 
@@ -95,6 +98,8 @@
 
 ### 博客搭建
 1. [博客搭建：Hexo + Github Pages 博客搭建教程](src/tutorial/blog/20220401-hexo.md)
+2. [博客搭建：dumi 博客搭建](src/tutorial/blog/20220610-dumi.md)
+3. [博客搭建：Hugo + Github Pages 博客搭建教程](src/tutorial/blog/20220611-hugo.md)
 
 
 ### IDEA 教程
