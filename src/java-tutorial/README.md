@@ -55,6 +55,19 @@ icon: iconfont icon-java
 3. [前端：CSS 教程](front-end/20230903-css.md) -->
 1. [前端：Axios 简单使用指南](front-end/20230926-axios.md)
 
+### JavaScript
+
+1. [JavaScript：简介](front-end/javascript/20220416-intro.md)
+2. [JavaScript：注释、输入输出、变量](front-end/javascript/20220417-var.md)
+3. [JavaScript：数据类型](front-end/javascript/20220418-datatype.md)
+4. [JavaScript：操作符](front-end/javascript/20220419-operator.md)
+5. [JavaScript：流程控制](front-end/javascript/20220420-flow.md)
+6. [JavaScript：数组](front-end/javascript/20220421-array.md)
+7. [JavaScript：函数](front-end/javascript/20220422-function.md)
+8. [JavaScript：面向对象](front-end/javascript/20220423-oop.md)
+9. [JavaScript：DOM 元素获取、属性修改](front-end/javascript/20220424-dom-attr.md)
+10. [JavaScript：DOM 事件](front-end/javascript/20220425-dom.md)
+
 ### Vue 3 系列
 
 1. [Vue 3 系列：简介](front-end/vue3/20220605-intro.md)

@@ -68,6 +68,19 @@
 3. [前端：CSS 教程](front-end/20230903-css.md) -->
 1. [前端：Axios 简单使用指南](src/java-tutorial/front-end/20230926-axios.md)
 
+#### JavaScript
+
+1. [JavaScript：简介](src/java-tutorial/front-end/javascript/20220416-intro.md)
+2. [JavaScript：注释、输入输出、变量](src/java-tutorial/front-end/javascript/20220417-var.md)
+3. [JavaScript：数据类型](src/java-tutorial/front-end/javascript/20220418-datatype.md)
+4. [JavaScript：操作符](src/java-tutorial/front-end/javascript/20220419-operator.md)
+5. [JavaScript：流程控制](src/java-tutorial/front-end/javascript/20220420-flow.md)
+6. [JavaScript：数组](src/java-tutorial/front-end/javascript/20220421-array.md)
+7. [JavaScript：函数](src/java-tutorial/front-end/javascript/20220422-function.md)
+8. [JavaScript：面向对象](src/java-tutorial/front-end/javascript/20220423-oop.md)
+9. [JavaScript：DOM 元素获取、属性修改](src/java-tutorial/front-end/javascript/20220424-dom-attr.md)
+10. [JavaScript：DOM 事件](src/java-tutorial/front-end/javascript/20220425-dom.md)
+
 #### Vue 3
 
 1. [Vue 3 系列：简介](src/java-tutorial/front-end/vue3/20220605-intro.md)
@@ -85,10 +98,16 @@
 
 ## 框架｜中间件
 
+### Spring
+1. [Spring 系列：IoC 简介及入门实例（XML 版）](src/framework/spring/20220428-ioc-xml.md)
+2. [Spring 系列：Bean 详解](src/framework/spring/20220429-bean.md)
+
 ### Spring Boot 2.7.x
 
-1. [Spring Boot 2.7.x：集成 Knife4j](src/framework/springboot/2.7.x/20220430-knife4j.md)
-2. [Spring Boot 2.7.x：集成 Security 入门小实例](src/framework/springboot/2.7.x/20220604-security.md)
+1. [Spring Boot 2.7.x：集成 Swagger2](src/framework/springboot/2.7.x/20220106-swagger2.md)
+2. [Spring Boot 2.7.x：集成 Swagger3](src/framework/springboot/2.7.x/20220110-swagger3.md)
+2. [Spring Boot 2.7.x：集成 Knife4j](src/framework/springboot/2.7.x/20220430-knife4j.md)
+3. [Spring Boot 2.7.x：集成 Security 入门小实例](src/framework/springboot/2.7.x/20220604-security.md)
 
 ### Redis
 
@@ -99,6 +118,11 @@
 1. [Nginx：简介与环境搭建](src/framework/nginx/20221016-intro-install.md)
 
 ## 计算机知识
+
+### 数据结构与算法
+
+1.   [数据结构与算法：数据结构简介](src/cs-wiki/algo/20220503-datastructure-intro.md)
+2.   [数据结构与算法：算法简介](src/cs-wiki/algo/20220511-algo-intro.md)
 
 ## 基础教程
 
