@@ -6,14 +6,16 @@ icon: iconfont icon-interview
 
 ## 博客搭建
 
-1. [博客搭建：Hexo + Github Pages 博客搭建教程](blog/20220401-hexo.md)
-2. [博客搭建：dumi 博客搭建](blog/20220610-dumi.md)
-3. [博客搭建：Hugo + Github Pages 博客搭建教程](blog/20220611-hugo.md)
+1. [博客搭建：Vuepress + GitHub Actions 实现博客自动部署](blog/20210826-vuepress.md)
+2. [博客搭建：Hexo + Github Pages 博客搭建教程](blog/20220401-hexo.md)
+3. [博客搭建：dumi 博客搭建](blog/20220610-dumi.md)
+4. [博客搭建：Hugo + Github Pages 博客搭建教程](blog/20220611-hugo.md)
 
 ## IDEA 教程
 
-1. [IDEA 教程：最新版 IntelliJ IDEA 使用手册](idea/20220202-idea-guide.md)
-2. [IDEA 教程：原来大厂都是这么提交代码的](idea/20230525-code-commit.md)
+1. [IDEA 教程：集成并使用 Git 图文教程](idea/20220105-git.md)
+2. [IDEA 教程：最新版 IntelliJ IDEA 使用手册](idea/20220202-idea-guide.md)
+3. [IDEA 教程：原来大厂都是这么提交代码的](idea/20230525-code-commit.md)
 
 ## 效率工具
 

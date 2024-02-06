@@ -102,12 +102,17 @@
 1. [Spring 系列：IoC 简介及入门实例（XML 版）](src/framework/spring/20220428-ioc-xml.md)
 2. [Spring 系列：Bean 详解](src/framework/spring/20220429-bean.md)
 
+### MyBatis
+1. [MyBatis 系列：代码生成器](src/framework/mybatis/20211214-generator.md)
+
 ### Spring Boot 2.7.x
 
-1. [Spring Boot 2.7.x：集成 Swagger2](src/framework/springboot/2.7.x/20220106-swagger2.md)
-2. [Spring Boot 2.7.x：集成 Swagger3](src/framework/springboot/2.7.x/20220110-swagger3.md)
-2. [Spring Boot 2.7.x：集成 Knife4j](src/framework/springboot/2.7.x/20220430-knife4j.md)
-3. [Spring Boot 2.7.x：集成 Security 入门小实例](src/framework/springboot/2.7.x/20220604-security.md)
+1. [Spring Boot 2.7.x：创建项目的几种方式](src/framework/springboot/2.7.x/20210811-create-ways.md)
+2. [Spring Boot 2.7.x：整合 FreeMarker 实例](src/framework/springboot/2.7.x/20211130-freemaker.md)
+3. [Spring Boot 2.7.x：集成 Swagger2](src/framework/springboot/2.7.x/20220106-swagger2.md)
+4. [Spring Boot 2.7.x：集成 Swagger3](src/framework/springboot/2.7.x/20220110-swagger3.md)
+5. [Spring Boot 2.7.x：集成 Knife4j](src/framework/springboot/2.7.x/20220430-knife4j.md)
+6. [Spring Boot 2.7.x：集成 Security 入门小实例](src/framework/springboot/2.7.x/20220604-security.md)
 
 ### Redis
 
@@ -127,15 +132,17 @@
 ## 基础教程
 
 ### 博客搭建
-1. [博客搭建：Hexo + Github Pages 博客搭建教程](src/tutorial/blog/20220401-hexo.md)
-2. [博客搭建：dumi 博客搭建](src/tutorial/blog/20220610-dumi.md)
-3. [博客搭建：Hugo + Github Pages 博客搭建教程](src/tutorial/blog/20220611-hugo.md)
+1. [博客搭建：Vuepress + GitHub Actions 实现博客自动部署](src/tutorial/blog/20210826-vuepress.md)
+2. [博客搭建：Hexo + Github Pages 博客搭建教程](src/tutorial/blog/20220401-hexo.md)
+3. [博客搭建：dumi 博客搭建](src/tutorial/blog/20220610-dumi.md)
+4. [博客搭建：Hugo + Github Pages 博客搭建教程](src/tutorial/blog/20220611-hugo.md)
 
 
 ### IDEA 教程
 
-1. [IDEA 教程：最新版 IntelliJ IDEA 使用手册](src/tutorial/idea/20220202-idea-guide.md)
-2. [IDEA 教程：原来大厂都是这么提交代码的](src/tutorial/idea/20230525-code-commit.md)
+1. [IDEA 教程：集成并使用 Git 图文教程](src/tutorial/idea/20220105-git.md)
+2. [IDEA 教程：最新版 IntelliJ IDEA 使用手册](src/tutorial/idea/20220202-idea-guide.md)
+3. [IDEA 教程：原来大厂都是这么提交代码的](src/tutorial/idea/20230525-code-commit.md)
 
 ### 效率工具
 
