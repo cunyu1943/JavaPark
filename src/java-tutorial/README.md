@@ -33,6 +33,9 @@ icon: iconfont icon-java
 25. [Java 基础：Mockito + JUnit 单元测试实例](javase/20220722-mockito.md)
 
 ## 实战训练
+### 项目实践
+
+1. [项目实践：MySQL + MyBatis 版学生管理系统](in-action/project/20220307-mysql-mybatis-stu-manag-sys.md)
 
 ### Java 入门
 
@@ -67,6 +70,7 @@ icon: iconfont icon-java
 8. [JavaScript：面向对象](front-end/javascript/20220423-oop.md)
 9. [JavaScript：DOM 元素获取、属性修改](front-end/javascript/20220424-dom-attr.md)
 10. [JavaScript：DOM 事件](front-end/javascript/20220425-dom.md)
+11. [JavaScript：Chrome 中执行 JavaScript 代码](front-end/javascript/20220301-chrome-js.md)
 
 ### Vue 3 系列
 

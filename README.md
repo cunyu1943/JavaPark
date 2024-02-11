@@ -48,6 +48,10 @@
 
 ### 实战训练
 
+#### 项目实践
+
+1. [项目实践：MySQL + MyBatis 版学生管理系统](src/java-tutorial/in-action/project/20220307-mysql-mybatis-stu-manag-sys.md)
+
 #### Java 入门
 
 1. [入门练习：1 - 5](src/java-tutorial/in-action/se/20220625-1-5.md)
@@ -80,6 +84,7 @@
 8. [JavaScript：面向对象](src/java-tutorial/front-end/javascript/20220423-oop.md)
 9. [JavaScript：DOM 元素获取、属性修改](src/java-tutorial/front-end/javascript/20220424-dom-attr.md)
 10. [JavaScript：DOM 事件](src/java-tutorial/front-end/javascript/20220425-dom.md)
+11. [JavaScript：Chrome 中执行 JavaScript 代码](src/java-tutorial/front-end/javascript/20220301-chrome-js.md)
 
 #### Vue 3
 
@@ -210,6 +215,7 @@
 3. [好物周刊#40：多功能文件管理器](src/weekly/2024/0113-0119.md)
 4. [好物周刊#41：新一代截图神器](src/weekly/2024/0120-0126.md)
 5. [好物周刊#42：国产项目管理软件](src/weekly/2024/0127-0202.md)
+6. [好物周刊#43：设计素材下载](src/weekly/2024/0203-0209.md)
 
 ### 2023 年刊
 1. [好物周刊#1：提示工程师养成指南](src/weekly/2023/0415-0421.md)
