@@ -5,7 +5,7 @@ import sidebar from "./sidebar.js";
 export default hopeTheme({
   breadcrumb: true,
   hostname: "https://cunyu1943.github.io",
-  sidebarSorter: ["filename", "title", "order"],
+  sidebarSorter: ["date", "order", "filename", "title"],
 
   author: {
     name: "村雨遥",
@@ -13,7 +13,7 @@ export default hopeTheme({
     email: "747731461@qq.com",
   },
 
-  iconAssets: ["fontawesome-with-brands", "//at.alicdn.com/t/c/font_3871871_gk06ehv2umn.css"],
+  iconAssets: ["fontawesome-with-brands", "//at.alicdn.com/t/c/font_3871871_34k90adv31r.css"],
   favicon: "/logo.svg",
   logo: "/logo.svg",
 
@@ -134,7 +134,7 @@ export default hopeTheme({
       include: true,
 
       // install katex before enabling it
-      // katex: true,
+      katex: true,
 
       // install mathjax-full before enabling it
       // mathjax: true,
@@ -142,7 +142,7 @@ export default hopeTheme({
       mark: true,
 
       // install mermaid before enabling it
-      // mermaid: true,
+      mermaid: true,
 
       playground: {
         presets: ["ts", "vue"],

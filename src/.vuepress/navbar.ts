@@ -132,9 +132,25 @@ export default navbar([
   },
 
   {
-    text: "语雀",
-    icon: "fa-solid fa-crow",
-    link: "https://yuque.com/cunyu1943"
+    text: "联系我",
+    icon: "fa-solid fa-address-card",
+    children: [
+      {
+        text: "语雀",
+        icon: "fa-solid fa-crow",
+        link: "https://yuque.com/cunyu1943"
+      },
+      {
+        text: " CSDN",
+        icon: "iconfont icon-csdn",
+        link: "https://cunyu1943.blog.csdn.net"
+      },
+      {
+        text: "掘金",
+        icon: "iconfont icon-juejin",
+        link: "https://juejin.cn/user/747323637904519"
+      }
+    ],
   },
 
 ]);

@@ -4,7 +4,6 @@ category: Python 教程
 tag:
     - Python
     - turtle
-date: 2018-05-01
 ---
 
 # 数码管绘制
