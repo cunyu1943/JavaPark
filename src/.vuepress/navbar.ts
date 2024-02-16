@@ -141,7 +141,7 @@ export default navbar([
         link: "https://yuque.com/cunyu1943"
       },
       {
-        text: " CSDN",
+        text: "CSDN",
         icon: "iconfont icon-csdn",
         link: "https://cunyu1943.blog.csdn.net"
       },
@@ -149,6 +149,16 @@ export default navbar([
         text: "掘金",
         icon: "iconfont icon-juejin",
         link: "https://juejin.cn/user/747323637904519"
+      },
+      {
+        text: "思否",
+        icon: "iconfont icon-segmentfault",
+        link: "https://segmentfault.com/u/cunyu1943"
+      },
+      {
+        text: "知乎",
+        icon: "iconfont icon-zhihu",
+        link: "https://www.zhihu.com/people/cunyu1943"
       }
     ],
   },
