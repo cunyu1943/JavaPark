@@ -9,6 +9,7 @@ icon: iconfont icon-interview
 1. [Java 基础面试知识点](knowledge/20240201-java-basic.md)
 2. [Java 进阶面试知识点](knowledge/20240203-java-advanced.md)
 3. [MySQL 面试知识点](knowledge/20240203-mysql.md)
+4. [MyBatis 面试知识点](knowledge/20210822-mybatis.md)
 
 ## 面经
 

@@ -100,6 +100,7 @@
 1. [知识点：Java 基础面试知识点](src/interview/knowledge/20240201-java-basic.md)
 2. [知识点：Java 进阶面试知识点](src/interview/knowledge/20240203-java-advanced.md)
 3. [知识点：MySQL 面试知识点](src/interview/knowledge/20240203-mysql.md)
+4. [知识点：MyBatis 面试知识点](src/interview/knowledge/20210822-mybatis.md)
 
 ## 框架｜中间件
 
@@ -121,7 +122,8 @@
 
 ### Redis
 
-1. [Redis：持久化](src/framework/redis/20221016-persistence.md)
+1. [Redis：简介](src/framework/redis/20210821-intro.md)
+2. [Redis：持久化](src/framework/redis/20221016-persistence.md)
 
 ### Nginx
 
@@ -145,9 +147,11 @@
 
 ### IDEA 教程
 
-1. [IDEA 教程：集成并使用 Git 图文教程](src/tutorial/idea/20220105-git.md)
-2. [IDEA 教程：最新版 IntelliJ IDEA 使用手册](src/tutorial/idea/20220202-idea-guide.md)
-3. [IDEA 教程：原来大厂都是这么提交代码的](src/tutorial/idea/20230525-code-commit.md)
+1. [IDEA 教程：创建 Java 入门应用](src/tutorial/idea/20210914-java-app.md)
+2. [IDEA 教程：实用小技巧](src/tutorial/idea/20211010-tips.md)
+3. [IDEA 教程：集成并使用 Git 图文教程](src/tutorial/idea/20220105-git.md)
+4. [IDEA 教程：最新版 IntelliJ IDEA 使用手册](src/tutorial/idea/20220202-idea-guide.md)
+5. [IDEA 教程：原来大厂都是这么提交代码的](src/tutorial/idea/20230525-code-commit.md)
 
 ### 效率工具
 
@@ -216,6 +220,7 @@
 4. [好物周刊#41：新一代截图神器](src/weekly/2024/0120-0126.md)
 5. [好物周刊#42：国产项目管理软件](src/weekly/2024/0127-0202.md)
 6. [好物周刊#43：设计素材下载](src/weekly/2024/0203-0209.md)
+7. [好物周刊#44：现代终端工具](src/weekly/2024/0210-0216.md)
 
 ### 2023 年刊
 1. [好物周刊#1：提示工程师养成指南](src/weekly/2023/0415-0421.md)

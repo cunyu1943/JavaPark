@@ -26,6 +26,7 @@ icon: iconfont icon-framework
 
 ## Redis
 
+1. [Redis：简介](redis/20210821-intro.md)
 1. [Redis：持久化](redis/20221016-persistence.md)
 
 ## Nginx

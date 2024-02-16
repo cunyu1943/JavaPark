@@ -13,9 +13,11 @@ icon: iconfont icon-interview
 
 ## IDEA 教程
 
-1. [IDEA 教程：集成并使用 Git 图文教程](idea/20220105-git.md)
-2. [IDEA 教程：最新版 IntelliJ IDEA 使用手册](idea/20220202-idea-guide.md)
-3. [IDEA 教程：原来大厂都是这么提交代码的](idea/20230525-code-commit.md)
+1. [IDEA 教程：创建 Java 入门应用](idea/20210914-java-app.md)
+2. [IDEA 教程：实用小技巧](idea/20211010-tips.md)
+3. [IDEA 教程：集成并使用 Git 图文教程](idea/20220105-git.md)
+4. [IDEA 教程：最新版 IntelliJ IDEA 使用手册](idea/20220202-idea-guide.md)
+5. [IDEA 教程：原来大厂都是这么提交代码的](idea/20230525-code-commit.md)
 
 ## 效率工具
 
