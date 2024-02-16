@@ -51,6 +51,9 @@
 #### 项目实践
 
 1. [项目实践：MySQL + MyBatis 版学生管理系统](src/java-tutorial/in-action/project/20220307-mysql-mybatis-stu-manag-sys.md)
+2. [项目实践：学生管理系统](src/java-tutorial/in-action/project/20210405-stu-manage-sys.md)
+3. [项目实践：记账本](src/java-tutorial/in-action/project/20210801-tally-book.md)
+4. [项目实践：点菜系统](src/java-tutorial/in-action/project/20210731-order-system.md)
 
 #### Java 入门
 
@@ -101,6 +104,10 @@
 2. [知识点：Java 进阶面试知识点](src/interview/knowledge/20240203-java-advanced.md)
 3. [知识点：MySQL 面试知识点](src/interview/knowledge/20240203-mysql.md)
 4. [知识点：MyBatis 面试知识点](src/interview/knowledge/20210822-mybatis.md)
+5. [知识点：Spring 面试知识点](src/interview/knowledge/20210103-spring.md)
+6. [知识点：多线程面试知识点](src/interview/knowledge/20210629-thread.md)
+7. [知识点：异常面试知识点](src/interview/knowledge/20210528-exception.md)
+8. [知识点：计算机网络面试知识点](src/interview/knowledge/20201231-network.md)
 
 ## 框架｜中间件
 
@@ -135,6 +142,12 @@
 
 1.   [数据结构与算法：数据结构简介](src/cs-wiki/algo/20220503-datastructure-intro.md)
 2.   [数据结构与算法：算法简介](src/cs-wiki/algo/20220511-algo-intro.md)
+3. [数据结构与算法：时间 & 空间复杂度](src/cs-wiki/algo/20220512-time-space.md)
+4. [数据结构与算法：数组简介](src/cs-wiki/algo/20220516-array.md)
+5. [数据结构与算法：数组的增删改查](src/cs-wiki/algo/20200510-arr-crud.md)
+6. [数据结构与算法：有序数组去重](src/cs-wiki/algo/20220513-sorted-arr-duplication.md)
+7. [数据结构与算法：链表详解](src/cs-wiki/algo/20220515-linkedlist.md)
+8. [数据结构与算法：二叉树的遍历](src/cs-wiki/algo/202205170-binary-tree-traverse.md)
 
 ## 基础教程
 
@@ -143,6 +156,8 @@
 2. [博客搭建：Hexo + Github Pages 博客搭建教程](src/tutorial/blog/20220401-hexo.md)
 3. [博客搭建：dumi 博客搭建](src/tutorial/blog/20220610-dumi.md)
 4. [博客搭建：Hugo + Github Pages 博客搭建教程](src/tutorial/blog/20220611-hugo.md)
+5. [博客搭建：Halo 博客搭建教程](src/tutorial/blog/20201228-halo.md)
+6. [博客搭建：docsify 文档型博客搭建](src/tutorial/blog/20220612-docsify.md)
 
 
 ### IDEA 教程
@@ -164,7 +179,21 @@
 7. [效率工具：Emoji 表情大作战](src/tutorial/efficiency/20220729-emoji.md)
 8. [效率工具：macOS 安装 Node.js](src/tutorial/efficiency/20221114-macos-install-node.md)
 9. [效率工具：iTerm2 + Fish 高效终端](src/tutorial/efficiency/20220426-iterm2-fish.md)
-10. [效率工具：PPT 模板免费下载](src/tutorial/efficiency/20220623-ppt-template.md)
+10. [效率工具：iTerm2 + Oh My Zsh 终端神器](src/tutorial/efficiency/20220811-iterm2-zsh.md)
+11. [效率工具：PPT 模板免费下载](src/tutorial/efficiency/20220623-ppt-template.md)
+12. [效率工具：Windows 安装 Node.js](src/tutorial/efficiency/20200511-windows-install-node.md)
+13. [效率工具：Ubuntu 默认 root 密码修改](src/tutorial/efficiency/20200517-ubuntu-root-pwd.md)
+14. [效率工具：VMware 安装 Ubuntu](src/tutorial/efficiency/20200518-vmware-ubuntu.md)
+15. [效率工具：XShell 连接 Ubuntu](src/tutorial/efficiency/20200519-xshell-ubuntu.md)
+16. [效率工具：手把手配置 Ubuntu](src/tutorial/efficiency/20200520-ubuntu.md)
+17. [效率工具：玩转 Manjora](src/tutorial/efficiency/20200521-manjora.md)
+18. [效率工具：如何给视频添加字幕](src/tutorial/efficiency/20201010-video-subtitle.md)
+19. [效率工具：U 盘启动盘制作](src/tutorial/efficiency/20201229-u-disk-sys-booter.md)
+20. [效率工具：优雅地使用 Windows 10](src/tutorial/efficiency/20201230-windows-tips.md)
+21. [效率工具：Windows 系统安装教程](src/tutorial/efficiency/20201231-windows-sys.md)
+22. [效率工具：如何制作电子签名](src/tutorial/efficiency/20210422-signature.md)
+23. [效率工具：技术写作中的神兵利器](src/tutorial/efficiency/20210504-write-tools.md)
+24. [效率工具：PPT 模板免费下载](src/tutorial/efficiency/20220623-ppt-template.md)
 
 ### 软件设计师
 

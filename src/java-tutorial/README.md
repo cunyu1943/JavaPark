@@ -36,6 +36,9 @@ icon: iconfont icon-java
 ### 项目实践
 
 1. [项目实践：MySQL + MyBatis 版学生管理系统](in-action/project/20220307-mysql-mybatis-stu-manag-sys.md)
+2. [项目实践：学生管理系统](in-action/project/20210405-stu-manage-sys.md)
+3. [项目实践：记账本](in-action/project/20210801-tally-book.md)
+4. [项目实践：点菜系统](in-action/project/20210731-order-system.md)
 
 ### Java 入门
 
