@@ -22,7 +22,7 @@ tag:
 
 单向链表包括一个值和一个指向下一结点的指针，其典型结构定义如下：
 
-![单链表](assets/20220515-linkedlist/cac197c9b025943ec3248c259fe5fcfd.png)
+![单链表](assets/20220515-linkedlist/cac197c9b025943ec3248c259fe5fcfd.webp)
 
 ```java
 public class Node{
@@ -72,7 +72,7 @@ public class Node{
 
 每个数据结点中都有两个指针，分别指向直接后继和直接前驱，其典型结构定义如下：
 
-![双向链表](assets/20220515-linkedlist/e4b67a02887add618a56cb99721b7753.png)
+![双向链表](assets/20220515-linkedlist/e4b67a02887add618a56cb99721b7753.webp)
 
 ```java
 public class DoubleNode{

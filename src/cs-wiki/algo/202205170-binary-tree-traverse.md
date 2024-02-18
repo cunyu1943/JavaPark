@@ -19,7 +19,7 @@ tag:
 
 所谓二叉树，指的是每个结点最多有两个分支的树结构，其分支通常被称为“左子树”和“右子树”，而且他们的次序是固定的，不能随意颠倒，一棵二叉树的示例如下：
 
-![](assets/202205170-binary-tree-traverse/37daa9b9896f27f71d9bccfae85dee6d.png)
+![](assets/202205170-binary-tree-traverse/37daa9b9896f27f71d9bccfae85dee6d.webp)
 
 ```java
 class TreeNode{

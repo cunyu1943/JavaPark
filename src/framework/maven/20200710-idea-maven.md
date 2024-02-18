@@ -22,7 +22,7 @@ tag: Maven
 
 比如我 IDEA 中的 Maven 相关设置就可以参照下图。
 
-![](assets/20200710-idea-maven/3a8f240387f0be16d9f1161fc17119d1.png)
+![](assets/20200710-idea-maven/3a8f240387f0be16d9f1161fc17119d1.webp)
 
 ## 使用 IDEA 创建 Maven 项目
 
@@ -30,11 +30,11 @@ tag: Maven
 
 1.  首先一次进入 `File -> New -> Project`，然后选择 Maven，表示新建一个 Maven 项目；
 
-![](assets/20200710-idea-maven/ec34f6c52bd77c208e315f56d1ca98de.png)
+![](assets/20200710-idea-maven/ec34f6c52bd77c208e315f56d1ca98de.webp)
 
 2.  填写相关信息，也就是我们之前所介绍的 Maven 的坐标。这里我们只要提供 GroupId、ArtifactId 以及 Version 这三项就足够了。关于其他的配置，我们可以到后续的 `pom.xml` 中去进行配置；
 
-![](assets/20200710-idea-maven/6d79685d9e783d69bc0eaccb27bf22bd.png)
+![](assets/20200710-idea-maven/6d79685d9e783d69bc0eaccb27bf22bd.webp)
 
 3.  新建项目完成，完成后的项目目录结构如下，基本上也就是之前介绍过的项目结构；
 
@@ -52,7 +52,7 @@ ProjectName/
 
 
 
-![](assets/20200710-idea-maven/5f4bab56f2bb15926dbbf4331bd1f4a9.png)
+![](assets/20200710-idea-maven/5f4bab56f2bb15926dbbf4331bd1f4a9.webp)
 
 4.  默认生成的 `pom.xml` 如下。
 

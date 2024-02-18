@@ -38,7 +38,7 @@ date: 2022-05-12
 
 ### 常见的时间复杂度曲线
 
-![](assets/20220512-time-space/dd6b7dfb2c46cd7119e21d59de2f1705.png)
+![](assets/20220512-time-space/dd6b7dfb2c46cd7119e21d59de2f1705.webp)
 ### 常见时间复杂度
 
 #### $O(1)$

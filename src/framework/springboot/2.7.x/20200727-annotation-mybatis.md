@@ -15,14 +15,14 @@ tag:
 
 如下图是总结的整合过程的大概流程，那接下来我们就来开始具体的整合操作！
 
-![](assets/20200727-annotation-mybatis/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2dpdGh1Yl8zOTY1NTAyOQ==,size_16,color_FFFFFF,t_70-20240216142826169.png)
+![](assets/20200727-annotation-mybatis/1.webp)
 
 
 ## 整合过程
 
 最终项目结构如下图所示：
 
-![](assets/20200727-annotation-mybatis/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2dpdGh1Yl8zOTY1NTAyOQ==,size_16,color_FFFFFF,t_70-20240216142826327.png)
+![](assets/20200727-annotation-mybatis/2.webp)
 
 
 ### 新建 Spring Boot 项目
@@ -277,7 +277,7 @@ public class MybatisXmlApplication {
 
 完成上述所有步骤之后，在浏览器中访问 `http://localhost:8080/user`，就可以在网页中显示对应 `id` 的 `User` 对象的所有信息；
 
-![](assets/20200727-annotation-mybatis/format,png.png)
+![](assets/20200727-annotation-mybatis/format,png.webp)
 
 ## 总结
 以上就是 Spring Boot 整合 MyBatis 的具体过程了，不过你可能也发现了，我们在 DAO 层未使用任何 XML 文件，取而代之的是各种不同的注解。那我们下一篇文章就来看看，[Spring Boot 如何通过 XML 的方式来整合  MyBatis](https://blog.csdn.net/github_39655029/article/details/107602406)！

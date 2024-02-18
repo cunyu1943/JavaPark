@@ -117,7 +117,7 @@ public void testAddUser() {
 }
 ```
 
-![](assets/20200721-annotation/format,png-20240216182743467.png)
+![](assets/20200721-annotation/format,png-20240216182743467.webp)
 
 ### 2.3 更新
 
@@ -144,7 +144,7 @@ public void testUpdateUser() {
 }
 ```
 
-![](assets/20200721-annotation/format,png-20240216182743462.png)
+![](assets/20200721-annotation/format,png-20240216182743462.webp)
 
 ### 2.4 删除
 
@@ -169,7 +169,7 @@ public void testDeleteUser() {
 }
 ```
 
-![](assets/20200721-annotation/format,png-20240216182743470.png)
+![](assets/20200721-annotation/format,png-20240216182743470.webp)
 
 ## 3. 注意事项
 

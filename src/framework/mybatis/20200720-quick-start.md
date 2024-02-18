@@ -281,7 +281,7 @@ public class InsertTest {
 }
 ```
 
-![插入成功](assets/20200720-quick-start/aacb76f5ffabbbc9ede23f683256be41.png)
+![插入成功](assets/20200720-quick-start/aacb76f5ffabbbc9ede23f683256be41.webp)
 
 ## 查询操作 `select`
 
@@ -356,7 +356,7 @@ public class QueryTest {
 }
 ```
 
-![查询成功](assets/20200720-quick-start/ba28cca59f160f88a2c5c0535fceeb2e.png)
+![查询成功](assets/20200720-quick-start/ba28cca59f160f88a2c5c0535fceeb2e.webp)
 
 ## 修改操作 `update`
 
@@ -428,9 +428,9 @@ public class UpdateTest {
 }
 ```
 
-![](assets/20200720-quick-start/644f607ea9707de6d25f9dfafb4cfb96.png)
+![](assets/20200720-quick-start/644f607ea9707de6d25f9dfafb4cfb96.webp)
 
-![](assets/20200720-quick-start/2b5ad394c94ba5803bc2e894744d8ba7.png)
+![](assets/20200720-quick-start/2b5ad394c94ba5803bc2e894744d8ba7.webp)
 
 ## 删除操作 `delete`
 
@@ -502,9 +502,9 @@ public class DeleteTest {
 }
 ```
 
-![](assets/20200720-quick-start/571f9bfe5b4baaab08ca1586f0e5ff6a.png)
+![](assets/20200720-quick-start/571f9bfe5b4baaab08ca1586f0e5ff6a.webp)
 
-![](assets/20200720-quick-start/087f7db9a7249e900dde8c00df58dd8e.png)
+![](assets/20200720-quick-start/087f7db9a7249e900dde8c00df58dd8e.webp)
 
 
 

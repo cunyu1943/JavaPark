@@ -37,7 +37,7 @@ tag:
 
 在新建项目时添加，在 `Templeate Engines` 中勾选 Thymeleaf；
 
-![在这里插入图片描述](assets/20200729-thymeleaf/d21cf34a70eef14aadda1115504a2e20.png)
+![在这里插入图片描述](assets/20200729-thymeleaf/d21cf34a70eef14aadda1115504a2e20.webp)
 
 
 2.  **第二种**
@@ -147,7 +147,7 @@ public class UserController {
 
 第上面的代码中，我们设置了跳转的视图为 `index`，所以我们需要在 `src/main/resources/templates` 中创建 `index.html`。
 
-![](assets/20200729-thymeleaf/15061e92fe45f7c20cd92719af1bc518.png)
+![](assets/20200729-thymeleaf/15061e92fe45f7c20cd92719af1bc518.webp)
 
 ```html
 <!DOCTYPE html>
@@ -177,7 +177,7 @@ public class UserController {
 
 启动项目，然后在浏览器中访问 `http://localhost:8080/index`，如果出现下图中的信息，说明整合成功。
 
-![https://s1.ax1x.com/2020/07/29/ae2Uf0.png](assets/20200729-thymeleaf/b097ea4415d4788723624bc10c8d5079.png)
+![](assets/20200729-thymeleaf/b097ea4415d4788723624bc10c8d5079.png)
 
 ## 注意事项
 

@@ -12,13 +12,13 @@ tag:
 
 本篇博客主要利用 SpringBoot 通过注解的方式整合 Mybatis 同时利用 PageHelper 对结果分页。下面是整个整合过程，接下来开始整合：
 
-![](assets/20200728-annotation-mybatis-pagehelper/format,png-20240216142942968.png)
+![](assets/20200728-annotation-mybatis-pagehelper/format,png-20240216142942968.webp)
 
 ## 2.  整合过程
 
 最终项目结构如下图所示：
 
-![](assets/20200728-annotation-mybatis-pagehelper/format,png-20240216142942996.png)
+![](assets/20200728-annotation-mybatis-pagehelper/format,png-20240216142942996.webp)
 
 ### 2.1 新建 Spring Boot 项目
 
@@ -339,10 +339,10 @@ public class MybatisXmlApplication {
 
 完成上述所有步骤之后，在浏览器中访问 `http://localhost:8080/user/{page}/{pageSize}`，就可以在网页中显示对应 `id` 的 `User` 对象的所有信息；
 
-![](assets/20200728-annotation-mybatis-pagehelper/format,png-20240216142943002.png)
+![](assets/20200728-annotation-mybatis-pagehelper/format,png-20240216142943002.webp)
 
 ![](https://imgconvert.csdnimg.cn/aHR0cHM6Ly91c2VyLWdvbGQtY2RuLnhpdHUuaW8vMjAyMC83LzI3LzE3MzhkZmVmYTBjZTVlZWE?x-oss-process=image/format,png)
 
 
 
-![](assets/20200728-annotation-mybatis-pagehelper/format,png-20240216142943003.png)
+![](assets/20200728-annotation-mybatis-pagehelper/format,png-20240216142943003.webp)

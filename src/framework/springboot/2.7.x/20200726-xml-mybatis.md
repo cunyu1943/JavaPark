@@ -15,13 +15,13 @@ tag:
 
 下图是整个整合过程，接下来开始整合。
 
-![](assets/20200726-xml-mybatis/ef1bd6c4a0dff834d62f689af19e2aca.png)
+![](assets/20200726-xml-mybatis/ef1bd6c4a0dff834d62f689af19e2aca.webp)
 
 ## 整合过程
 
 最终项目结构如下图所示：
 
-![](assets/20200726-xml-mybatis/b427339f93a5fd033a70087b51ba2663.png)
+![](assets/20200726-xml-mybatis/b427339f93a5fd033a70087b51ba2663.webp)
 
 ### 新建 Spring Boot 项目
 
@@ -300,7 +300,7 @@ public class MybatisXmlApplication {
 
 完成上述所有步骤之后，在浏览器中访问 `http://localhost:8080/user`，就可以在网页中显示对应 `id` 的 `User` 对象的所有信息；
 
-![](assets/20200726-xml-mybatis/14162bcaa8a912073e768cb3a8b190c4.png)
+![](assets/20200726-xml-mybatis/14162bcaa8a912073e768cb3a8b190c4.webp)
 
 ## 总结
 

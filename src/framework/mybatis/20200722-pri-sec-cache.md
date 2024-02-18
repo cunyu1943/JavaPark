@@ -29,7 +29,7 @@ MyBatis 内置了一个强大的事务性查询缓存机制，通过它能够十
 
 ### 3.1 一级缓存原理
 
-![](assets/20200722-pri-sec-cache/format,png-20240216182550923.png)
+![](assets/20200722-pri-sec-cache/format,png-20240216182550923.webp)
 
 每个 `SqlSession` 中都有一个 `Executor`，每个 `Executor` 中又有一个 `LocalCache`，当我们进行查询操作时，MyBatis 根据当前执行的语句生成 `MapperdStatement`，然后在 `Local Cache` 中进行查询，如果存在（命中），直接返回给用户。若缓存中不存在（未命中），则和数据库交互查询数据，将结果写入 `Local Cache`，同时返回给用户。
 
@@ -66,7 +66,7 @@ public void testQueryUserById() {
 
 3.  结果
 
-![](assets/20200722-pri-sec-cache/format,png-20240216182550915.png)
+![](assets/20200722-pri-sec-cache/format,png-20240216182550915.webp)
 
 通过结果可以看出，由于是在一次会话期间内（`SqlSession` 级别），所以此时的 SQL 语句只查询了一次，当第二次获取相同结果时，直接从缓存中取结果即可，也就解释了为什么 `user1` 和 `user2` 指向的是同一个对象；
 
@@ -100,7 +100,7 @@ public void testQueryUserById() {
 }
 ```
 
-![](assets/20200722-pri-sec-cache/format,png-20240216182550941.png)
+![](assets/20200722-pri-sec-cache/format,png-20240216182550941.webp)
 
 2.  **当前缓存中不存在该数据时**
 
@@ -150,7 +150,7 @@ public void testQueryUserById() {
 }
 ```
 
-![](assets/20200722-pri-sec-cache/format,png-20240216182550941.png)
+![](assets/20200722-pri-sec-cache/format,png-20240216182550941.webp)
 
 4.  **手动清除**
 
@@ -177,7 +177,7 @@ public void testQueryUserById1() {
 }
 ```
 
-![](assets/20200722-pri-sec-cache/format,png-20240216182550941.png)
+![](assets/20200722-pri-sec-cache/format,png-20240216182550941.webp)
 
 ## 4. 二级缓存
 
@@ -185,7 +185,7 @@ public void testQueryUserById1() {
 
 ### 4.1 二级缓存原理
 
-![](assets/20200722-pri-sec-cache/format,png-20240216182550952.png)
+![](assets/20200722-pri-sec-cache/format,png-20240216182550952.webp)
 
 一级缓存的最大共享范围是一个 `SqlSession` 内部，若多个 `SqlSession` 之间要共享缓存，则需要用二级缓存。二级缓存一旦开启，将会有多个 `CachingExecutor` 来装饰 `Executor`，进入一级缓存的查询流程之前，先在 `CachingExecutor` 中进行二级缓存的查询，如上图。此时数据的查询流程是：
 
@@ -251,6 +251,6 @@ public void testGetUserByPassword() {
 
 4.  结果
 
-![](assets/20200722-pri-sec-cache/format,png-20240216182550927.png)
+![](assets/20200722-pri-sec-cache/format,png-20240216182550927.webp)
 
 根据结果可以看出，此时的二级缓存已经生效。若是未生效，则会和一级缓存中的结果一致，两者指向不同的对象，但此时两个引用指向同一对象，说明二级缓存成功。
