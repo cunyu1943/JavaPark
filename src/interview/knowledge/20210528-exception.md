@@ -12,7 +12,7 @@ tag:
 
 ### 异常类层次结构
 
-![](assets/20210528-exception/1c84229f69d297378acbb67640945140.png)
+![](assets/20210528-exception/1c84229f69d297378acbb67640945140.webp)
 
 从结构图可以看出，所有异常均继承自 `Throwable` 类，它有两个重要的子类：`Exception` 和 `Error` ，各自又包含大量子类。
 
@@ -44,12 +44,12 @@ tag:
 
 ### Throwable 常用方法
 
-| 方法                                 | 说明                                                         |
-| ------------------------------------ | ------------------------------------------------------------ |
-| `public String getMessage()`         | 返回异常发生时的简要描述                                     |
-| `public String toString()`           | 返回异常发生时的详细信息                                     |
+| 方法                                 | 说明                                                                                                       |
+| ------------------------------------ | ---------------------------------------------------------------------------------------------------------- |
+| `public String getMessage()`         | 返回异常发生时的简要描述                                                                                   |
+| `public String toString()`           | 返回异常发生时的详细信息                                                                                   |
 | `public String getLocalizeMessage()` | 返回异常对象的本地化信息，若子类重写该方法，可以生成本地化信息，若未重写，则返回信息同 `getMessage()` 方法 |
-| `public void printStackTrace()`      | 在控制台中打印异常对象封装的异常信息                         |
+| `public void printStackTrace()`      | 在控制台中打印异常对象封装的异常信息                                                                       |
 
 ### try-catch-finally 和 try-with-resources
 
@@ -95,7 +95,7 @@ try (Scanner scanner = new Scanner(new File("D:/demo.txt"))) {
 
 Java 中，异常处理机制分为 **声明异常、抛出异常和捕获异常**，根据异常的情况，可以对异常进行不同处理：
 
-![](assets/20210528-exception/f0e6de0123d88bb0f33ef3e5048de1ed.png)
+![](assets/20210528-exception/f0e6de0123d88bb0f33ef3e5048de1ed.webp)
 
 ### 声明异常
 

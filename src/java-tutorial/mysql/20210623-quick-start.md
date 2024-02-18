@@ -27,7 +27,7 @@ tag:
 
 ### 常见数据库软件
 
-![](assets/20210623-quick-start/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2dpdGh1Yl8zOTY1NTAyOQ==,size_16,color_FFFFFF,t_70-20240216132859495.png)
+![](assets/20210623-quick-start/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2dpdGh1Yl8zOTY1NTAyOQ==,size_16,color_FFFFFF,t_70-20240216132859495.webp)
 
 
 上图是截至 2021 年 4 月数据库使用率排行榜前 10 榜单，可以看到主要有 Oracle、MySQL、SQL Server、Redis、MongoDB、PostgreSQL、Elasticsearch，Db2 等数据库。而我们之所以选择 MySQL，主要有如下两个原因：
@@ -55,7 +55,7 @@ tag:
 
 一般来讲，解压后的文件目录中是不存在配置文件 `my.ini` 的，需要我们自己新建一个，新建后的目录结构如下图所示：
 
-![](assets/20210623-quick-start/4bd803f437ebf60ec1bf62a3d9364e76.png)
+![](assets/20210623-quick-start/4bd803f437ebf60ec1bf62a3d9364e76.webp)
 
 接着我们在配置文件中加入以下配置：
 
@@ -99,13 +99,13 @@ default-character-set=utf8
 4.  **配置环境变量**
 
 - 打开控制面板->系统与安全->系统，进入高级系统设置，如下图所示；
-    ![](assets/20210623-quick-start/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2dpdGh1Yl8zOTY1NTAyOQ==,size_16,color_FFFFFF,t_70-20240216132859443.png)
+    ![](assets/20210623-quick-start/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2dpdGh1Yl8zOTY1NTAyOQ==,size_16,color_FFFFFF,t_70-20240216132859443.webp)
 
 - 然后进行环境变量的设置，如下图；
-    ![](assets/20210623-quick-start/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2dpdGh1Yl8zOTY1NTAyOQ==,size_16,color_FFFFFF,t_70-20240216132859453.png)
-    ![](assets/20210623-quick-start/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2dpdGh1Yl8zOTY1NTAyOQ==,size_16,color_FFFFFF,t_70-20240216132859425.png)
+    ![](assets/20210623-quick-start/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2dpdGh1Yl8zOTY1NTAyOQ==,size_16,color_FFFFFF,t_70-20240216132859453.webp)
+    ![](assets/20210623-quick-start/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2dpdGh1Yl8zOTY1NTAyOQ==,size_16,color_FFFFFF,t_70-20240216132859425.webp)
 
-    ![](assets/20210623-quick-start/b40576c3f98ff17a7d2377bdde2f90ef.png)
+    ![](assets/20210623-quick-start/b40576c3f98ff17a7d2377bdde2f90ef.webp)
 
 5.  **初始化**
 
@@ -116,7 +116,7 @@ mysqld --initialize --console
 ```
 
 **注意**：执行成功后会打印出初始的 root 用户密码，一定要记住！！！方便后边修改密码；
-![](assets/20210623-quick-start/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2dpdGh1Yl8zOTY1NTAyOQ==,size_16,color_FFFFFF,t_70.png)
+![](assets/20210623-quick-start/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2dpdGh1Yl8zOTY1NTAyOQ==,size_16,color_FFFFFF,t_70.webp)
 
 6.  **安装数据库服务**
 
@@ -127,7 +127,7 @@ mysqld --install
 ```
 
 因为博主已经安装过了，所以会提示服务已存在，若是第一次安装，则不会提示已安装；
-![](assets/20210623-quick-start/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2dpdGh1Yl8zOTY1NTAyOQ==,size_16,color_FFFFFF,t_70-20240216132859470.png)
+![](assets/20210623-quick-start/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2dpdGh1Yl8zOTY1NTAyOQ==,size_16,color_FFFFFF,t_70-20240216132859470.webp)
 
 ### 卸载
 
@@ -141,10 +141,10 @@ mysqld --install
 
 使用快捷键 `Win + X + G`，进入计算机管理界面，然后打开 **服务和应用程序 -> 服务**，找到 `MySQL` 服务，然后根据需要点击 **暂停**、**停止**、**重启动** 此服务即可；
 
-![](assets/20210623-quick-start/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2dpdGh1Yl8zOTY1NTAyOQ==,size_16,color_FFFFFF,t_70-20240216132859476.png)
+![](assets/20210623-quick-start/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2dpdGh1Yl8zOTY1NTAyOQ==,size_16,color_FFFFFF,t_70-20240216132859476.webp)
 
 
-![](assets/20210623-quick-start/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2dpdGh1Yl8zOTY1NTAyOQ==,size_16,color_FFFFFF,t_70-20240216132859532.png)
+![](assets/20210623-quick-start/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2dpdGh1Yl8zOTY1NTAyOQ==,size_16,color_FFFFFF,t_70-20240216132859532.webp)
 
 
 2.  **终端命令打开**
@@ -158,7 +158,7 @@ net start mysql
 net stop mysql
 ```
 
-![](assets/20210623-quick-start/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2dpdGh1Yl8zOTY1NTAyOQ==,size_16,color_FFFFFF,t_70-20240216132859494.png)
+![](assets/20210623-quick-start/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2dpdGh1Yl8zOTY1NTAyOQ==,size_16,color_FFFFFF,t_70-20240216132859494.webp)
 
 
 #### 登陆
@@ -171,7 +171,7 @@ net stop mysql
 mysql -u root -p
 ```
 
-![](assets/20210623-quick-start/762bc632aca002b5b9b05b9b5781c67a.png)
+![](assets/20210623-quick-start/762bc632aca002b5b9b05b9b5781c67a.webp)
 
 2.  **mysql -h ip地址 -u 用户名 -p**
 
@@ -179,7 +179,7 @@ mysql -u root -p
 mysql -h localhost -u root -p
 ```
 
-![](assets/20210623-quick-start/1d93614d9179873de1447357980753ac.png)
+![](assets/20210623-quick-start/1d93614d9179873de1447357980753ac.webp)
 
 #### 退出
 
@@ -189,9 +189,9 @@ exit;
 quit;
 ```
 
-![](assets/20210623-quick-start/4a338ce2e13e99616e06c1d74dc1e4b0.png)
+![](assets/20210623-quick-start/4a338ce2e13e99616e06c1d74dc1e4b0.webp)
 
-![](assets/20210623-quick-start/a281d38e3b73def59d8a1bf46134a21b.png)
+![](assets/20210623-quick-start/a281d38e3b73def59d8a1bf46134a21b.webp)
 
 ## SQL
 
@@ -216,9 +216,9 @@ quit;
     SQL语句 # 注释内容
     ```
 
-    ![](assets/20210623-quick-start/d900bd88136838b5b76cd88e24c496a1.png)
+    ![](assets/20210623-quick-start/d900bd88136838b5b76cd88e24c496a1.webp)
 
-    ![](assets/20210623-quick-start/f40c44947c0fcd82e0d8fb6ee8ee8d4d.png)
+    ![](assets/20210623-quick-start/f40c44947c0fcd82e0d8fb6ee8ee8d4d.webp)
 
 -   **多行注释**
 
@@ -226,7 +226,7 @@ quit;
 SQL语句 /* 注释内容 */
 ```
 
-![](assets/20210623-quick-start/b6747ab4d4c7d0ea99e9babd50321c15.png)
+![](assets/20210623-quick-start/b6747ab4d4c7d0ea99e9babd50321c15.webp)
 
 ### 常用 SQL 语句
 
@@ -267,9 +267,9 @@ SQL语句 /* 注释内容 */
     CREATE DATABASE 数据库名 CHARACTER SET 字符集名;
     ```
 
-![](assets/20210623-quick-start/6ce578b106aa7b11082fcd7591a2782a.png)
+![](assets/20210623-quick-start/6ce578b106aa7b11082fcd7591a2782a.webp)
 
-![](assets/20210623-quick-start/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2dpdGh1Yl8zOTY1NTAyOQ==,size_16,color_FFFFFF,t_70-20240216132859557.png)
+![](assets/20210623-quick-start/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2dpdGh1Yl8zOTY1NTAyOQ==,size_16,color_FFFFFF,t_70-20240216132859557.webp)
 
 
 -   **查询**
@@ -286,7 +286,7 @@ SQL语句 /* 注释内容 */
     SHOW CREATE DATABASE 数据库名;
     ```
 
-![](assets/20210623-quick-start/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2dpdGh1Yl8zOTY1NTAyOQ==,size_16,color_FFFFFF,t_70-20240216132859575.png)
+![](assets/20210623-quick-start/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2dpdGh1Yl8zOTY1NTAyOQ==,size_16,color_FFFFFF,t_70-20240216132859575.webp)
 
 
 -   **更新**
@@ -303,7 +303,7 @@ SQL语句 /* 注释内容 */
     ALTER DATABASE 数据库名 CHARACTER SET 字符集名;
     ```
 
-![](assets/20210623-quick-start/20210621222713867.png)
+![](assets/20210623-quick-start/20210621222713867.webp)
 
 
 -   **删除**
@@ -320,7 +320,7 @@ SQL语句 /* 注释内容 */
     DROP DATABASE IF EXISTS 数据库名;
     ```
 
-![](assets/20210623-quick-start/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2dpdGh1Yl8zOTY1NTAyOQ==,size_16,color_FFFFFF,t_70-20240216132859558.png)
+![](assets/20210623-quick-start/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2dpdGh1Yl8zOTY1NTAyOQ==,size_16,color_FFFFFF,t_70-20240216132859558.webp)
 
 
 -   **使用**
@@ -337,7 +337,7 @@ SQL语句 /* 注释内容 */
     SELECT DATABASE();
     ```
 
-![](assets/20210623-quick-start/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2dpdGh1Yl8zOTY1NTAyOQ==,size_16,color_FFFFFF,t_70-20240216132859557-8061339.png)
+![](assets/20210623-quick-start/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2dpdGh1Yl8zOTY1NTAyOQ==,size_16,color_FFFFFF,t_70-20240216132859557-8061339.webp)
 
 
 3.  **表操作**
@@ -372,7 +372,7 @@ SQL语句 /* 注释内容 */
     CREATE TABLE 新表名 LIKE 被复制的表名;
     ```
 
-![](assets/20210623-quick-start/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2dpdGh1Yl8zOTY1NTAyOQ==,size_16,color_FFFFFF,t_70-20240216132859576.png)
+![](assets/20210623-quick-start/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2dpdGh1Yl8zOTY1NTAyOQ==,size_16,color_FFFFFF,t_70-20240216132859576.webp)
 
 
 -   **查询**
@@ -389,7 +389,7 @@ SQL语句 /* 注释内容 */
     DESC 表名;
     ```
 
-![](assets/20210623-quick-start/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2dpdGh1Yl8zOTY1NTAyOQ==,size_16,color_FFFFFF,t_70-20240216132859586.png)
+![](assets/20210623-quick-start/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2dpdGh1Yl8zOTY1NTAyOQ==,size_16,color_FFFFFF,t_70-20240216132859586.webp)
 
 
 -   **更新**
@@ -425,7 +425,7 @@ SQL语句 /* 注释内容 */
     ALTER TABLE 表名 DROP 列名;
     ```
 
-![](assets/20210623-quick-start/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2dpdGh1Yl8zOTY1NTAyOQ==,size_16,color_FFFFFF,t_70-20240216132859589.png)
+![](assets/20210623-quick-start/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2dpdGh1Yl8zOTY1NTAyOQ==,size_16,color_FFFFFF,t_70-20240216132859589.webp)
 
 
 -   **删除**
@@ -442,7 +442,7 @@ SQL语句 /* 注释内容 */
     DROP TABLE IF EXISTS 表名;
     ```
 
-![](https://img-blog.csdnimg.cn/20210621222957895.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2dpdGh1Yl8zOTY1NTAyOQ==,size_16,color_FFFFFF,t_70)
+![](https://img-blog.csdnimg.cn/20210621222957895.webp?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2dpdGh1Yl8zOTY1NTAyOQ==,size_16,color_FFFFFF,t_70)
 
 
 ​    
@@ -479,7 +479,7 @@ SQL语句 /* 注释内容 */
 	UPDATE 表名 SET 列名1=值1, 类名2=值2, ……, 类名n=值n [WHERE 条件];
 	```
 
-![](assets/20210623-quick-start/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2dpdGh1Yl8zOTY1NTAyOQ==,size_16,color_FFFFFF,t_70-20240216132859587.png)
+![](assets/20210623-quick-start/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2dpdGh1Yl8zOTY1NTAyOQ==,size_16,color_FFFFFF,t_70-20240216132859587.webp)
 
 
 #### DQL（Data Query Language）
@@ -583,69 +583,69 @@ REVOKE 权限 数据库名.表名 ON FROM 用户名;
 1. 双击打开下载好的 `.exe` 安装包，然后选择语言；
 
 
-![](assets/20210623-quick-start/de23759d0dc70c0f8dc0edfc7aee4fea.png)
+![](assets/20210623-quick-start/de23759d0dc70c0f8dc0edfc7aee4fea.webp)
 
 2. 进入安装程序，点击 **下一步**  继续；
-    ![](assets/20210623-quick-start/cc5871bac3d1814c365b6509b95fd85b.png)
+    ![](assets/20210623-quick-start/cc5871bac3d1814c365b6509b95fd85b.webp)
 
 3. 接受相关许可证协议；
-    ![](assets/20210623-quick-start/1e097422e9744c03ce78b5eb78a47f4d.png)
+    ![](assets/20210623-quick-start/1e097422e9744c03ce78b5eb78a47f4d.webp)
 
 4. 为所有使用该电脑的用户安装还是只为你当前的用户安装，一般选择所有用户；
 
 
-![](assets/20210623-quick-start/c57cf3385b55bf7a9b00f305f0d6cdc1.png)
+![](assets/20210623-quick-start/c57cf3385b55bf7a9b00f305f0d6cdc1.webp)
 
 5. 选择组件，一般默认即可，继续下一步；
 
 
-![](assets/20210623-quick-start/42f899cc442c8651f142ea8069f6564a.png)
+![](assets/20210623-quick-start/42f899cc442c8651f142ea8069f6564a.webp)
 
 6. 选择安装路径，一般建议存在你日常安装软件的地方，不要直接装在 C 盘；
 
 
-![](assets/20210623-quick-start/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2dpdGh1Yl8zOTY1NTAyOQ==,size_16,color_FFFFFF,t_70-20240216132859640.png)
+![](assets/20210623-quick-start/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2dpdGh1Yl8zOTY1NTAyOQ==,size_16,color_FFFFFF,t_70-20240216132859640.webp)
 
 
 7. 是否创建快捷方式，要的话就勾选，不要就不用管，直接安装；
 
 
-![](assets/20210623-quick-start/8aedeabdfa8bc7655c7df6cdada1cff7.png)
+![](assets/20210623-quick-start/8aedeabdfa8bc7655c7df6cdada1cff7.webp)
 
 8. 安装过程开始，等待结束就安装好了，然后根据自己喜好选择是否创建桌面快捷方式，最后点击完成即可；
 
 
-![](assets/20210623-quick-start/54e1274c4603f60b3472db5c7e2b010c.png)
+![](assets/20210623-quick-start/54e1274c4603f60b3472db5c7e2b010c.webp)
 
 
-![](assets/20210623-quick-start/3b5e33e5c405b04c197823cad14d14bb.png)
+![](assets/20210623-quick-start/3b5e33e5c405b04c197823cad14d14bb.webp)
 
 ### 连接数据库
 
 1. 打开主界面后，依次打开 `文件 -> 新建 -> DBeaver -> 数据库连接`，然后下一步；
 
 
-![](assets/20210623-quick-start/1ad7fb54a7f669840dd4ab469384015c.png)
+![](assets/20210623-quick-start/1ad7fb54a7f669840dd4ab469384015c.webp)
 
 2. 选择对应数据库软件，我们这里以 MySQL 为例，然后选择下一步；
 
 
-![](assets/20210623-quick-start/765282cb5887622a7f394dc8836e22bc.png)
+![](assets/20210623-quick-start/765282cb5887622a7f394dc8836e22bc.webp)
 
 3. 输入数据库的地址、用户名、密码、端口号（默认是 3306）等信息，然后点击完成即可；
 
 
-![](assets/20210623-quick-start/0e1ed91b28963198a9e0b555c0f5fba1.png)
+![](assets/20210623-quick-start/0e1ed91b28963198a9e0b555c0f5fba1.webp)
 
 4. 连接成功，会在主界面中显示出当前连接数据库中的数据库信息；
 
 
-![](assets/20210623-quick-start/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2dpdGh1Yl8zOTY1NTAyOQ==,size_16,color_FFFFFF,t_70-20240216132859697.png)
+![](assets/20210623-quick-start/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2dpdGh1Yl8zOTY1NTAyOQ==,size_16,color_FFFFFF,t_70-20240216132859697.webp)
 
 
 可以看到 DBeaver 不仅仅支持查看数据库的相关属性，还能看到数据库的 ER 图，可以说是十分方便了；
 
-![](assets/20210623-quick-start/f952d6dd3f71332223496520431da2c5.png)
+![](assets/20210623-quick-start/f952d6dd3f71332223496520431da2c5.webp)
 
 以上就是关于如何安装以及简单使用 DBeaver 的相关知识了，更多关于 DBeaver 的高级使用技巧，等着你去探索！
 
