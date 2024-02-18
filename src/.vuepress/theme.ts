@@ -13,7 +13,7 @@ export default hopeTheme({
     email: "747731461@qq.com",
   },
 
-  iconAssets: ["fontawesome-with-brands", "//at.alicdn.com/t/c/font_3871871_hii25yqhwzr.css"],
+  iconAssets: ["iconify","fontawesome","fontawesome-with-brands", "//at.alicdn.com/t/c/font_3871871_hii25yqhwzr.css"],
   favicon: "/logo.svg",
   logo: "/logo.svg",
 
@@ -89,16 +89,23 @@ export default hopeTheme({
         notice: [
           {
             showOnce: true,
+            fullscreen: true,
+            confirm: true,
             path: "/",
             title: "🎉🎉🎉",
             content:
               '<b><center>扫码添加微信/关注公众号，及时获取最新资讯</br><img src="/contact/contact.png" width="180"></br>鼓励/支持/赞赏我</br><img src="/award/donate.svg" width="100"></b></center>',
             actions: [
               {
-                text: "查看更多",
-                link: "https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzIyNTg2MjkzNw==&action=getalbum&album_id=2501145320567963650&scene=173&from_msgid=2247496990&from_itemidx=1&count=3&nolastread=1#wechat_redirect",
+                text: "已关注，开卷 🔜",
+                link: "/",
                 type: "primary",
               },
+              {
+                text: "查看合辑",
+                link: "https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzIyNTg2MjkzNw==&action=getalbum&album_id=2501145320567963650&scene=173&from_msgid=2247496990&from_itemidx=1&count=3&nolastread=1#wechat_redirect",
+                // type: "primary",
+              }
             ],
           },
         ],
