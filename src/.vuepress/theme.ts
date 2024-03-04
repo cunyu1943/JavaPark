@@ -44,18 +44,18 @@ export default hopeTheme({
     editLink: "在 GitHub 上编辑此页",
   },
 
-  blog: {
-    name: "村雨遥",
-    avatar: "/logo.svg",
-    description: "不要哀求，学会争取。若是如此，终有所获。",
-    medias: {
-      Github: "https://github.com/cunyu1943",
-      Gitee: "https://gitee.com/cunyu1943",
-    },
-  },
+  // blog: {
+  //   name: "村雨遥",
+  //   avatar: "/logo.svg",
+  //   description: "不要哀求，学会争取。若是如此，终有所获。",
+  //   medias: {
+  //     Github: "https://github.com/cunyu1943",
+  //     Gitee: "https://gitee.com/cunyu1943",
+  //   },
+  // },
 
   plugins: {
-    blog: true,
+    blog: false,
     // You should generate and use your own comment service
     // comment: {
     //   provider: "Giscus",
