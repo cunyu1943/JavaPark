@@ -113,3 +113,5 @@ alter user 'root'@'localhost' identified by '新密码';
 
 ![](assets/20240314-environment/WindowsTerminal_1710417548.webp)
 
+最后，退出登录后就可以用我们刚改好的密码进行重新登录了。
+

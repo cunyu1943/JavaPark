@@ -157,8 +157,8 @@
 
 ### 数据结构与算法
 
-1.   [数据结构与算法：数据结构简介](src/cs-wiki/algo/20220503-datastructure-intro.md)
-2.   [数据结构与算法：算法简介](src/cs-wiki/algo/20220511-algo-intro.md)
+1. [数据结构与算法：数据结构简介](src/cs-wiki/algo/20220503-datastructure-intro.md)
+2. [数据结构与算法：算法简介](src/cs-wiki/algo/20220511-algo-intro.md)
 3. [数据结构与算法：时间 & 空间复杂度](src/cs-wiki/algo/20220512-time-space.md)
 4. [数据结构与算法：数组简介](src/cs-wiki/algo/20220516-array.md)
 5. [数据结构与算法：数组的增删改查](src/cs-wiki/algo/20200510-arr-crud.md)
@@ -270,6 +270,7 @@
 8. [好物周刊#45：系统激活工具](src/weekly/2024/0217-0223.md)
 9. [好物周刊#46：在线工具箱](src/weekly/2024/0224-0301.md)
 10. [好物周刊#47：快捷启动器](src/weekly/2024/0302-0308.md)
+11. [好物周刊#48：Golang 学习资料](src/weekly/2024/0309-0315.md)
 
 ### 2023 年刊
 1. [好物周刊#1：提示工程师养成指南](src/weekly/2023/0415-0421.md)
