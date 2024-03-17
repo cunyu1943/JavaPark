@@ -13,7 +13,7 @@ export default hopeTheme({
     email: "747731461@qq.com",
   },
 
-  iconAssets: ["iconify","fontawesome","fontawesome-with-brands", "//at.alicdn.com/t/c/font_3871871_hii25yqhwzr.css"],
+  iconAssets: ["iconify","fontawesome","fontawesome-with-brands", "//at.alicdn.com/t/c/font_3871871_99xoxcxn6bo.css"],
   favicon: "/logo.svg",
   logo: "/logo.svg",
 

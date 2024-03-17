@@ -151,9 +151,9 @@ export default navbar([
         link: "https://juejin.cn/user/747323637904519"
       },
       {
-        text: "思否",
-        icon: "iconfont icon-segmentfault",
-        link: "https://segmentfault.com/u/cunyu1943"
+        text: "牛客",
+        icon: "iconfont icon-nowcoder",
+        link: "https://www.nowcoder.com/users/806383223"
       },
       {
         text: "知乎",
