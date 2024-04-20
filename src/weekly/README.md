@@ -19,10 +19,10 @@ isOriginal: true
 - [JavaPark](https://github.com/cunyu1943/JavaPark)
 - [公众号](https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzIyNTg2MjkzNw==&action=getalbum&album_id=2501145320567963650&scene=173&from_msgid=2247497779&from_itemidx=1&count=3&nolastread=1#wechat_redirect)：移动端推荐
 
-如果你想推荐或自荐项目/网站/软件/插件/资料等任何资源，欢迎提交 **[issue](https://github.com/cunyu1943/JavaPark/issues)** 或者添加我 **[个人微信：cunyu1943](/contact/wechat.png)** 和我交流。
+如果你想推荐或自荐项目/网站/软件/插件/资料等任何资源，欢迎提交 **[issue](https://github.com/cunyu1943/JavaPark/issues)** 或者添加我 **[个人微信：coder_cunYu](/contact/wechat.svg)** 和我交流。
 
 <center>
-<img src="/contact/wechat.png" width="150" />
+<img src="/contact/wechat.svg" width="150" />
 </center>
 
 ## 二、介绍
@@ -42,7 +42,7 @@ isOriginal: true
 欢迎关注[公众号](https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzIyNTg2MjkzNw==&action=getalbum&album_id=2501145320567963650&scene=173&from_msgid=2247497779&from_itemidx=1&count=3&nolastread=1#wechat_redirect)|[博客](https://cunyu1943.github.io/)一起交流（每周在公众号首发）：
 
 <center>
-<img src="/contact/wechatpublic.png" width="150" />
+<img src="/contact/wechatpublic.svg" width="150" />
 </center>
 
 

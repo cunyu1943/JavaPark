@@ -321,10 +321,10 @@
 
 ### 👨‍💻 加群交流
 
-建群的目的是希望给大家提供一个良好的技术学习交流平台，由于微信群人满 `100` 之后无法加入，请扫描下方二维码先添加作者 “村雨遥” 微信(`cunyu1943`)，备注：**加群**。
+建群的目的是希望给大家提供一个良好的技术学习交流平台，由于微信群人满 `100` 之后无法加入，请扫描下方二维码先添加作者 “村雨遥” 微信(`coder_cunYu`)，备注：**加群**。
 
 <center>
-<img src="./src/.vuepress/public/contact/contact.png" width="200px" />
+<img src="./src/.vuepress/public/contact/contact.svg" width="200px" />
 
 </center>
 
@@ -335,7 +335,7 @@
 微信搜索 `JavaPark` 或者扫描下方二维码即可关注。防止错过最新消息推送，建议关注后加星标哦！
 
 <center>
-<img src="./src/.vuepress/public/contact/wechatpublic.png" width="150px" />
+<img src="./src/.vuepress/public/contact/wechatpublic.svg" width="150px" />
 </center>
 
 

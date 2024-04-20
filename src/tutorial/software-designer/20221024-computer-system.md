@@ -233,7 +233,7 @@ $$2^k>= n + k + 1$$
 
 扫一扫，探索另一个全新的世界。
 
-![](/contact/wechatpublic.png =150x)
+![](/contact/wechatpublic.svg =150x)
 
 <Share colorful />
 

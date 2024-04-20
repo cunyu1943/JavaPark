@@ -64,10 +64,10 @@ features:
 
 最新文章首发地址，强烈推荐关注一波！
 
-![](/contact/wechatpublic.png =150x)
+![](/contact/wechatpublic.svg =150x)
 
 ## 联系我
 
-你也可以添加我的微信：`cunyu1943`，备注 **加群** 加入作者技术交流群。
+你也可以添加我的微信：`coder_cunYu`，备注 **加群** 加入作者技术交流群。
 
-![](/contact/wechat.png =150x)
+![](/contact/wechat.svg =150x)
