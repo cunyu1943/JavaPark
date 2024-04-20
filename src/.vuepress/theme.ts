@@ -94,7 +94,7 @@ export default hopeTheme({
             path: "/",
             title: "🎉🎉🎉",
             content:
-              '<b><center>扫码添加微信/关注公众号，及时获取最新资讯</br><img src="/contact/contact.svg" width="180"></br>鼓励/支持/赞赏我</br><img src="/award/donate.svg" width="100"></b></center>',
+              '<b><center>扫码添加微信/关注公众号，及时获取最新资讯</br><img src="/contact/contact.svg" width="180"></br>鼓励/支持/赞赏我</br><img src="/award/donate.jpg" width="100"></b></center>',
             actions: [
               {
                 text: "已关注，开卷 🔜",

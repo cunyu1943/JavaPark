@@ -50,7 +50,7 @@ isOriginal: true
 
 开源不易，如果你觉得本仓库对你有帮助，或许可以请我喝杯咖啡，不靠它生存但仍希望得到你的鼓励。
 
-![](/award/donate.svg =150x)
+![](/award/donate.jpg =150x)
 
 ## 五、贡献
 
