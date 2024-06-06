@@ -10,7 +10,8 @@
 
 - 👉 [『资源下载』](https://github.com/cunyu1943/ebooks)
 
-![](https://img.shields.io/github/followers/cunyu1943?label=Followers&logo=Github&color=red)![](https://img.shields.io/github/stars/cunyu1943/JavaPark?logo=Github&label=Stars&color=yellow)
+![](https://img.shields.io/github/followers/cunyu1943?label=Followers&logo=Github&color=red)
+![](https://img.shields.io/github/stars/cunyu1943/JavaPark?logo=Github&label=Stars&color=yellow)
 ![](https://img.shields.io/github/forks/cunyu1943/JavaPark?logo=Github&label=Forks)
 ![](https://img.shields.io/github/watchers/cunyu1943/JavaPark?label=Watchers&logo=Github&color=green)
 
