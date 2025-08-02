@@ -10,6 +10,14 @@ tag:
 
 # 整合 Thymeleaf 实例
 
+## 🎈 号外
+
+最近，公众号之外，建立了微信交流群，不定期会在群里分享各种资源（影视、IT 编程、考试提升……）&知识。如果有需要，可以**扫码或者后台添加小编微信备注入群**。进群后**优先看群公告**，**呼叫群中【资源分享小助手】**，还能免费帮找资源哦～
+
+<center>
+<img src="/contact/wxgroup.jpg" width="150"> 
+</center>
+
 ## 什么是 Thymeleaf
 
 -   Thymeleaf 是新一代的 Java 模板引擎，类似于 Velocity、FreeMarker 等传统引擎，其语言和 HTML 很接近，而且扩展性更高；

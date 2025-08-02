@@ -10,6 +10,14 @@ date: 2022-11-14
 
 # macOS 中安装 Node.js
 
+## 🎈 号外
+
+最近，公众号之外，建立了微信交流群，不定期会在群里分享各种资源（影视、IT 编程、考试提升……）&知识。如果有需要，可以**扫码或者后台添加小编微信备注入群**。进群后**优先看群公告**，**呼叫群中【资源分享小助手】**，还能免费帮找资源哦～
+
+<center>
+<img src="/contact/wxgroup.jpg" width="150"> 
+</center>
+
 ## 什么是 Node.js
 
 `Node.js` 是一个基于 `Chrome V8` 引擎的 `JavaScript` 运行时环境。最早发布于 2009 年 5 月，由 `Ryan Dahl` 开发。它使用了一个事件驱动、非阻塞式 `I/O` 模型，让 `JavaScript` 运行在服务端的开发平台，能让 `JavaScript` 成为 `PHP`、`Python`、`Perl`、`Ruby` 等服务端语言的脚本语言。

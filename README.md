@@ -18,6 +18,15 @@
 ![](https://img.shields.io/github/forks/cunyu1943/JavaPark?logo=Github&label=Forks)
 ![](https://img.shields.io/github/watchers/cunyu1943/JavaPark?label=Watchers&logo=Github&color=green)
 
+
+## 🎈 号外
+
+最近，公众号之外，建立了微信交流群，不定期会在群里分享各种资源（影视、IT 编程、考试提升……）&知识。如果有需要，可以**扫码或者后台添加小编微信备注入群**。进群后**优先看群公告**，**呼叫群中【资源分享小助手】**，还能免费帮找资源哦～
+
+<center>
+<img src="/contact/wxgroup.jpg" width="150"> 
+</center>
+
 ## 一、Java
 
 ### Java 基础

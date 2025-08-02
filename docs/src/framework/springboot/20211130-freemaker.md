@@ -7,6 +7,14 @@ date: 2021-11-30
 
 # 整合 FreeMarker 实例
 
+## 🎈 号外
+
+最近，公众号之外，建立了微信交流群，不定期会在群里分享各种资源（影视、IT 编程、考试提升……）&知识。如果有需要，可以**扫码或者后台添加小编微信备注入群**。进群后**优先看群公告**，**呼叫群中【资源分享小助手】**，还能免费帮找资源哦～
+
+<center>
+<img src="/contact/wxgroup.jpg" width="150"> 
+</center>
+
 ## 前言
 
 在之前的文章[Spring Boot 整合 Thymeleaf](https://cunyu1943.blog.csdn.net/article/details/107671467)中，我们学习了如何将模板 `Thymeleaf` 整合到 `Spring Boot` 中，那今天我们就来看看，另一个老牌的开源免费模板引擎 - `FreeMarker`！
