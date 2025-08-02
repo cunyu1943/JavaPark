@@ -51,16 +51,6 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: docs/.vitepress/dist
-
-  # 部署工作
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    needs: build
-    runs-on: ubuntu-latest
-    name: Deploy
-    steps:
       - name: 🎉 Deploy to GitHub Pages
         id: deployment
         uses: JamesIves/github-pages-deploy-action@v4
@@ -70,3 +60,12 @@ jobs:
           folder: docs/.vitepress/dist
           token: ${{ secrets.TOKEN }}
           repository-name: cunyu1943/cunyu1943.github.io
+
+  # 部署工作
+  # deploy:
+  #   environment:
+  #     name: github-pages
+  #     url: ${{ steps.deployment.outputs.page_url }}
+  #   needs: build
+  #   runs-on: ubuntu-latest
+    
