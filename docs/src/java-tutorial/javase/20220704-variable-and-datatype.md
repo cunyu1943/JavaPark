@@ -522,6 +522,6 @@ PS：`final` 修饰变量后，该变量则变为常量。而 `final` 也还可�
 
 扫一扫，探索另一个全新的世界。
 
-![](/contact/wechatpublic.svg =150x)
-
-<Share colorful />
+<center>
+<img src="/contact/contact.png" width="300">
+</center>

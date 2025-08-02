@@ -368,7 +368,7 @@ Python 支持多种运算符，但是运算符之间也是有优先级的，下�
 
 扫一扫，探索另一个全新的世界。
 
-![](/contact/wechatpublic.svg =150x)
-
-<Share colorful />
+<center>
+<img src="/contact/contact.png" width="300">
+</center>
 

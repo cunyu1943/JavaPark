@@ -69,10 +69,10 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
             ]
         },
 
-        {
-            text: 'Java Web',
-            collapsed: true,
-        },
+        // {
+        //     text: 'Java Web',
+        //     collapsed: true,
+        // },
 
         {
             text: '实战训练',

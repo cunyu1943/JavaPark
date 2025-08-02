@@ -438,8 +438,8 @@ packages:
     requiresBuild: true
     optional: true
 
-  /@iconify-json/octicon@1.2.9:
-    resolution: {integrity: sha512-8v4jxXCvN9GDKecnQRL49YtENFyHIlxaZE07RUSxxOTTnz++imYYPHf3gAEPu5BlP2ChZmsxR1dflD2Q9lOeqA==}
+  /@iconify-json/octicon@1.2.10:
+    resolution: {integrity: sha512-dAwgLd35EPeEu6VHnERJ+sSJ9VKe0qFX4EXHjmWb4o7OyUfB1/F98JEjUxVa9eEHJ307z4q0AuGSVz8L3LWz5g==}
     dependencies:
       '@iconify/types': 2.0.0
     dev: true
@@ -491,7 +491,7 @@ packages:
       vitepress: ^1.5.0 || ^2.0.0-alpha.1
       vue: '>= 3'
     dependencies:
-      '@iconify-json/octicon': 1.2.9
+      '@iconify-json/octicon': 1.2.10
       less: 4.4.0
       vitepress: 1.6.3(@algolia/client-search@5.35.0)(markdown-it-mathjax3@4.3.2)(search-insights@2.17.3)
       vue: 3.5.18(typescript@5.9.2)
@@ -502,7 +502,7 @@ packages:
     peerDependencies:
       vitepress: ^1.5.0 || ^2.0.0-alpha.1
     dependencies:
-      '@iconify-json/octicon': 1.2.9
+      '@iconify-json/octicon': 1.2.10
       '@nolebase/ui': 2.18.1(vitepress@1.6.3)(vue@3.5.18)
       colorette: 2.0.20
       date-fns: 4.1.0
