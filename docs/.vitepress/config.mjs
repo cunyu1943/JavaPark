@@ -25,6 +25,9 @@ export default defineConfig({
   // 源目录
   srcDir: "src",
 
+  // 忽略死链
+  ignoreDeadLinks: true,
+
   // head,
   // 公式
   markdown: {

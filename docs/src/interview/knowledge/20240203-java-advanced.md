@@ -410,8 +410,6 @@ System.out.println("array1:" + Arrays.toString(array));
 System.out.println("array2:" + Arrays.toString(array2));
 ```
 
-有关集合的更多内容，可以参看 [Java 容器知识点总结](4.Java%E5%AE%B9%E5%99%A8)。
-
 ## 泛型
 
 推荐阅读：[https://juejin.im/post/5b614848e51d45355d51f792](https://juejin.im/post/5b614848e51d45355d51f792)
