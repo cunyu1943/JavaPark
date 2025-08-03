@@ -8,8 +8,9 @@ date: 2022-10-16
 
 # 简介与环境搭建
 
->
-> 不要哀求，学会争取。若是如此，终有所获。
+> 作者：[村雨遥](https://github.com/cunyu1943)
+> 
+> 不要哀求，学会争取，若是如此，终有所获
 >
 > 原文：https://mp.weixin.qq.com/s/Fx4AAS5pUqSGtui4Z-LYXA
 

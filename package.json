@@ -2,7 +2,8 @@
   "devDependencies": {
     "@nolebase/vitepress-plugin-git-changelog": "^2.18.1",
     "markdown-it-mathjax3": "^4.3.2",
-    "vitepress": "^1.6.3"
+    "vitepress": "^1.6.3",
+    "vitepress-markdown-timeline": "^1.2.2"
   },
   "scripts": {
     "docs:dev": "vitepress dev docs",

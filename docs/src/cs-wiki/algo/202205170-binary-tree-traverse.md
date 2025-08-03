@@ -23,12 +23,11 @@ tag:
 <center>
 <img src="/contact/wxgroup.jpg" width="150"> 
 </center>
-
-## 前言
+## 一、前言
 
 二叉树作为一种重要的数据结构，在算法中起到了承前启后的作用，它是数组和链表的延伸，也是图的基础。所以学习二叉树的相关知识是十分有必要的，而在相关的操作中，二叉树的遍历是最频繁的，今天就来看看二叉树的 4 种遍历方法！
 
-## 二叉树数据结构
+## 二、二叉树数据结构
 
 所谓二叉树，指的是每个结点最多有两个分支的树结构，其分支通常被称为“左子树”和“右子树”，而且他们的次序是固定的，不能随意颠倒，一棵二叉树的示例如下：
 
@@ -44,13 +43,13 @@ class TreeNode{
 }
 ```
 
-## 前序遍历
+## 三、前序遍历
 
 也叫做先序遍历，首先访问根节点，然后遍历左子树，最后再遍历右子树。而在遍历左右子树时，仍然按照先访问根节点，然后遍历左子树，最后遍历右子树的方式，直到二叉树为空则返回！
 
 遍历的方式又主要分为递归和迭代的方式，其具体实现如下所示。
 
-### 递归
+### 1. 递归
 
 ```java
 public ArrayList<Integer> preOrderReverse(TreeNode root){
@@ -72,7 +71,7 @@ public void preOrder(TreeNode root, ArrayList<Integer> list){
 
 ```
 
-### 迭代
+### 2. 迭代
 
 ```java
 /**
@@ -108,13 +107,13 @@ public ArrayList<Integer> preOrderReverse(TreeNode root){
 
 
 
-## 中序遍历
+## 四、中序遍历
 
 首先遍历左子树，然后访问根节点，最后再遍历右子树。而在遍历左右子树时，仍然按照先遍历左子树，然后访问根节点，最后遍历右子树的方式，直到二叉树为空则返回！
 
 遍历的方式又主要分为递归和迭代的方式，其具体实现如下所示。
 
-### 递归
+### 1. 递归
 
 ```java
 public ArrayList<Integer> inOrderReverse(TreeNode root){
@@ -135,7 +134,7 @@ public void inOrder(TreeNode root, ArrayList<Integer> list){
 }
 ```
 
-### 迭代
+### 2. 迭代
 
 ```java
 /**
@@ -169,13 +168,13 @@ public ArrayList<Integer> inOrderReverse(TreeNode root){
 
 
 
-## 后序遍历
+## 四、后序遍历
 
 后序遍历首先遍历左子树，然后遍历右子树，最后访问根结点，在遍历左、右子树时，仍然先遍历左子树，然后遍历右子树，最后遍历根结点，直到二叉树为空则返回！
 
 遍历的方式又主要分为递归和迭代的方式，其具体实现如下所示。
 
-###  递归
+### 1. 递归
 
 ```java
 public ArrayList<Integer> postOrderReverse(TreeNode root){
@@ -196,7 +195,7 @@ public void postOrder(TreeNode root, ArrayList<Integer> list){
 }
 ```
 
-###  迭代
+### 2. 迭代
 
 ```java
 public ArrayList<Integer> postOrderReverse(TreeNode root){
@@ -231,13 +230,13 @@ public ArrayList<Integer> postOrderReverse(TreeNode root){
 }
 ```
 
-## 层次遍历
+## 五、层次遍历
 
 层次遍历也叫做广度优先遍历，它会优先访问离根节点最近的节点，其实现一般借助队列实现。
 
 遍历的方式又主要分为递归和迭代的方式，其具体实现如下所示。
 
-### 递归
+### 1. 递归
 
 ```java
 public List<List<Integer>> levelOrder(TreeNode root) {
@@ -274,7 +273,7 @@ public void dfs(int index, TreeNode root, List<List<Integer>> lists){
 }
 ```
 
-### 迭代
+### 2. 迭代
 
 ```java
 ArrayList<ArrayList<Integer>> levelOrder(TreeNode root){
@@ -312,6 +311,6 @@ ArrayList<ArrayList<Integer>> levelOrder(TreeNode root){
 }
 ```
 
-## 总结
+## 六、总结
 
 以上就是数据结构二叉树的 4 种遍历，如果你有更多关于各种遍历的实现，欢迎留言交流呀！

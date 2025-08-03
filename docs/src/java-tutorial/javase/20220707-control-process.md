@@ -8,13 +8,14 @@ tag:
 ---
 # 流程控制
 
->
-> 不要哀求，学会争取。若是如此，终有所获。
-> 
-::: tip 原文
-https://mp.weixin.qq.com/s/3WU5l37DpPkR6o7CnFiStA
 
-:::
+> 作者：[村雨遥](https://github.com/cunyu1943)
+> 
+> 不要哀求，学会争取，若是如此，终有所获
+>
+> 原文：https://mp.weixin.qq.com/s/3WU5l37DpPkR6o7CnFiStA
+
+
 
 ## 🎈 号外
 

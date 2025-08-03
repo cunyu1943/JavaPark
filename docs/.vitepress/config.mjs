@@ -1,5 +1,6 @@
 import { defineConfig } from 'vitepress'
 import { chineseSearchOptimize, pagefindPlugin } from 'vitepress-plugin-pagefind'
+import timeline from "vitepress-markdown-timeline";
 import { AnnouncementPlugin } from 'vitepress-plugin-announcement'
 import { GitChangelog, GitChangelogMarkdownSection } from '@nolebase/vitepress-plugin-git-changelog/vite'
 // import { head } from './configs/head'
@@ -35,7 +36,13 @@ export default defineConfig({
     lineNumbers: true,
     image: {
       lazyLoading: true
+    },
+
+    // 时间线
+    config: (md) => {
+      md.use(timeline)
     }
+
   },
 
   vite: {

@@ -37,6 +37,9 @@ devDependencies:
   vitepress:
     specifier: ^1.6.3
     version: 1.6.3(@algolia/client-search@5.35.0)(markdown-it-mathjax3@4.3.2)(search-insights@2.17.3)
+  vitepress-markdown-timeline:
+    specifier: ^1.2.2
+    version: 1.2.2
 
 packages:
 
@@ -1189,6 +1192,10 @@ packages:
     resolution: {integrity: sha512-Ukq0owbQXxa/U3EGtsdVBkR1w7KOQ5gIBqdH2hkvknzZPYvBxb/aa6E8L7tmjFtkwZBu3UXBbjIgPo/Ez4xaNg==}
     dev: true
 
+  /dayjs@1.11.13:
+    resolution: {integrity: sha512-oaMBel6gjolK862uaPQOVTA7q3TZhuSvuMQAAglQDOWYO9A91IrAOUJEyKVlqJlHE0vq5p5UXxzdPfMH/x6xNg==}
+    dev: true
+
   /defu@6.1.4:
     resolution: {integrity: sha512-mEQCMmwJu317oSz8CwdIOdwf3xMif1ttiM8LTufzc3g6kR+9Pe236twL8j3IYT1F7GfRgGcW6MWxzZjLIkuHIg==}
     dev: true
@@ -2149,6 +2156,12 @@ packages:
       rollup: 4.46.2
     optionalDependencies:
       fsevents: 2.3.3
+
+  /vitepress-markdown-timeline@1.2.2:
+    resolution: {integrity: sha512-eDFcvudmTW33pI7XdT+ZeUPvpc4CPXI0LZbsZZ54j36G56AN6qYEBiwZpDHl77E4QvqAIJMc8phXXvm7P/Lc+Q==}
+    dependencies:
+      dayjs: 1.11.13
+    dev: true
 
   /vitepress-plugin-51la@0.1.0(vitepress@1.6.3):
     resolution: {integrity: sha512-jV5w7sgqGFuum70wpIY9hggFio4H1C3+MayeeP/b55Cf+lRiFVNMrQQvWjw7UjT0bO1eiJYq4DiLsxzXt7r+QA==}

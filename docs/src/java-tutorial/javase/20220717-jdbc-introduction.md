@@ -9,12 +9,12 @@ tag:
 ---
 # JDBC 入门指南
 
->
-> 不要哀求，学会争取。若是如此，终有所获。
+> 作者：[村雨遥](https://github.com/cunyu1943)
 > 
-::: tip 原文
-https://mp.weixin.qq.com/s/DOXFxk5dk9WBfAVK0UJUng
-:::
+> 不要哀求，学会争取，若是如此，终有所获
+>
+> 原文：https://mp.weixin.qq.com/s/DOXFxk5dk9WBfAVK0UJUng
+
 
 ## 🎈 号外
 

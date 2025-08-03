@@ -7,7 +7,13 @@ tag:
     - MySQL
 date: 2022-03-07
 ---
+
 # MySQL + MyBatis 版学生管理系统
+
+> 作者：[村雨遥](https://github.com/cunyu1943)
+> 
+> 不要哀求，学会争取，若是如此，终有所获
+>
 
 ## 🎈 号外
 

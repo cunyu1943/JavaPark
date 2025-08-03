@@ -8,7 +8,10 @@ tag:
 ---
 # 变量与数据类型
 
-> 不要哀求，学会争取。若是如此，终有所获。
+
+> 作者：[村雨遥](https://github.com/cunyu1943)
+> 
+> 不要哀求，学会争取，若是如此，终有所获
 >
 > 原文：https://mp.weixin.qq.com/s/Yz41IdWSNTgqgj0R-Ffgqw
 

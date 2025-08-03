@@ -9,9 +9,12 @@ tag:
 ---
 # 利用 IDEA 进行 Java 开发
 
->
-> 不要哀求，学会争取。若是如此，终有所获。
+
+> 作者：[村雨遥](https://github.com/cunyu1943)
 > 
+> 不要哀求，学会争取，若是如此，终有所获
+>
+
 
 ::: tip 原文
 https://mp.weixin.qq.com/s/Pkf1WTj-x6JH4Jo8mOr8SQ

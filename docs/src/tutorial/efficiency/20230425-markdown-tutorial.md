@@ -9,12 +9,12 @@ tag:
 
 # 如何用 Markdown 写出好看的文章
 
->
-> 不要哀求，学会争取。若是如此，终有所获。
+> 作者：[村雨遥](https://github.com/cunyu1943)
 > 
-:::tip 原文
-https://mp.weixin.qq.com/s/qIptV_MEGjsUjw_zqvGn_A
-:::
+> 不要哀求，学会争取，若是如此，终有所获
+> 
+> 原文：https://mp.weixin.qq.com/s/qIptV_MEGjsUjw_zqvGn_A
+
 
 ## 🎈 号外
 

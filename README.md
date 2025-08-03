@@ -2,9 +2,17 @@
 
 > 不要哀求，学会争取。若是如此，终有所获。
 
-## 项目简介
+## 🎈 号外
 
-- 👉 推荐 [语雀](https://yuque.com/cunyu1943) ｜ [Github 在线阅读](https://cunyu1943.github.io/)，`Github` 访问较慢，所以部分资源可能会加载较慢，建议访问语雀，速度更快！
+最近，公众号之外，建立了微信交流群，不定期会在群里分享各种资源（影视、IT 编程、考试提升……）&知识。如果有需要，可以 **扫码或者后台添加小编微信备注入群**。进群后 **优先看群公告**，**呼叫群中【资源分享小助手】**，还能免费帮找资源哦～
+
+<center>
+<img src="docs/src/public/contact/wxgroup.jpg" width="150"> 
+</center>
+
+## 📑 项目简介
+
+- 👉 推荐 [语雀](https://yuque.com/cunyu1943) ｜ [Github 在线阅读](https://cunyu1943.github.io/)，`Github` 访问较慢，所以部分资源可能会加载较慢，建议访问语雀，速度更快，移动端也更方便。
 
 - 👉 项目同步维护：[语雀](https://yuque.com/cunyu1943/JavaPark)｜[Github](https://github.com/cunyu1943/JavaPark)
 
@@ -18,14 +26,6 @@
 ![](https://img.shields.io/github/forks/cunyu1943/JavaPark?logo=Github&label=Forks)
 ![](https://img.shields.io/github/watchers/cunyu1943/JavaPark?label=Watchers&logo=Github&color=green)
 
-
-## 🎈 号外
-
-最近，公众号之外，建立了微信交流群，不定期会在群里分享各种资源（影视、IT 编程、考试提升……）&知识。如果有需要，可以**扫码或者后台添加小编微信备注入群**。进群后**优先看群公告**，**呼叫群中【资源分享小助手】**，还能免费帮找资源哦～
-
-<center>
-<img src="/contact/wxgroup.jpg" width="150"> 
-</center>
 
 ## 一、Java
 
@@ -81,7 +81,9 @@
 1. [MySQL 教程：《SQL 必知必会》全解析](docs/src/java-tutorial/mysql/20220726-sql-in-10min.md)
 
 ### Web 前端
+
 <!-- 1. [前端：开发环境搭建](front-end/20230829-environment.md)
+
 2. [前端：HTML 大揭秘](front-end/20230829-html.md)
 3. [前端：CSS 教程](front-end/20230903-css.md) -->
 1. [前端：Axios 简单使用指南](docs/src/java-tutorial/front-end/20230926-axios.md)
@@ -268,14 +270,14 @@
 
 ## 七、你问我答
 
-1. [你问我答：想学好 Java 基础，应该去哪儿刷题](docs/src/QA/20230402-where-exercise-java-basics.md)
+1. [你问我答：想学好 Java 基础，应该去哪儿刷题](docs/src/faq/20230402-where-exercise-java-basics.md)
 
-## 交流
+## ☎️ 交流
 
 欢迎关注[公众号](https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzIyNTg2MjkzNw==&action=getalbum&album_id=2501145320567963650&scene=173&from_msgid=2247497779&from_itemidx=1&count=3&nolastread=1#wechat_redirect)|[博客](https://cunyu1943.github.io/weekly)一起交流（每周在公众号首发）：
 
 <center>
-<img src="./docs/src/public/contact/wechatpublic.jpg" width="150" />
+<img src="docs/src/public/contact/contact.png" width="250" />
 </center>
 
 ## ✨ Star 趋势图
@@ -284,9 +286,9 @@
 
 如果您觉得本项目对您有所帮助，那就去 Github **Star** 收藏一下吧！
 
-<img src="https://api.star-history.com/svg?repos=cunyu1943/JavaPark&type=Date" width="50%"/>
+<img src="https://api.star-history.com/svg?repos=cunyu1943/JavaPark&type=Date" width="80%"/>
 
-## 赞助
+## 🧧 赞助
 
 开源不易，如果你觉得本仓库对你有帮助，或许可以请我喝杯咖啡 ☕️
 

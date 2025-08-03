@@ -9,13 +9,12 @@ tag:
 ---
 # 是时候拥抱 Junit 单元测试了
 
->
-> 不要哀求，学会争取。若是如此，终有所获。
+> 作者：[村雨遥](https://github.com/cunyu1943)
 > 
-::: tip 原文
-https://mp.weixin.qq.com/s/_FWd0Bj3DlbCReex6pqJKQ
+> 不要哀求，学会争取，若是如此，终有所获
+>
+> 原文：https://mp.weixin.qq.com/s/_FWd0Bj3DlbCReex6pqJKQ
 
-:::
 
 ## 🎈 号外
 

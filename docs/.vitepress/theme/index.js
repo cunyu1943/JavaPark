@@ -5,6 +5,7 @@ import { Aside_Data } from '../data/AsideData'
 import './style/index.css'
 // 组件
 import notice from "./components/notice.vue";
+import "vitepress-markdown-timeline/dist/theme/index.css";
 // theme/index.ts
 import '@theojs/lumen/style'
 import { Notice, Underline, Aside } from '@theojs/lumen'
