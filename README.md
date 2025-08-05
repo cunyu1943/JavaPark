@@ -29,6 +29,10 @@
 
 ## 一、Java
 
+<details>
+
+<summary>点击展开查看详情</summary>
+
 ### Java 基础
 
 1.  [Java 基础：简介](docs/src/java-tutorial/javase/20220701-intro-to-java.md)
@@ -108,7 +112,13 @@
 2. [Vue 3 系列：搭建 Vue + Vite 入门项目](docs/src/java-tutorial/front-end/vue3/20220606-vite-quickstart.md)
 3. [Vue 3 系列：常用指令](docs/src/java-tutorial/front-end/vue3/20221012-common-command.md)
 
+</details>
+
 ## 二、求职面试
+
+<details>
+
+<summary>点击展开查看详情</summary>
 
 ### 知识点
 
@@ -121,7 +131,13 @@
 7. [知识点：异常面试知识点](docs/src/interview/knowledge/20210528-exception.md)
 8. [知识点：计算机网络面试知识点](docs/src/interview/knowledge/20201231-network.md)
 
+</details>
+
 ## 三、框架｜中间件
+
+<details>
+
+<summary>点击展开查看详情</summary>
 
 ### Spring
 1. [Spring 系列：简介](docs/src/framework/spring/20200720-intro.md)
@@ -168,7 +184,13 @@
 
 1. [Nginx：简介与环境搭建](docs/src/framework/nginx/20221016-intro-install.md)
 
+</details>
+
 ## 四、计算机知识
+
+<details>
+
+<summary>点击展开查看详情</summary>
 
 ### 数据结构与算法
 
@@ -181,7 +203,13 @@
 7. [数据结构与算法：链表详解](docs/src/cs-wiki/algo/20220515-linkedlist.md)
 8. [数据结构与算法：二叉树的遍历](docs/src/cs-wiki/algo/202205170-binary-tree-traverse.md)
 
+</details>
+
 ## 五、基础教程
+
+<details>
+
+<summary>点击展开查看详情</summary>
 
 ### 博客搭建
 1. [博客搭建：Vuepress + GitHub Actions 实现博客自动部署](docs/src/tutorial/blog/20210826-vuepress.md)
@@ -231,7 +259,13 @@
 
 1. [软设：计算机系统](docs/src/tutorial/software-designer/20221024-computer-system.md)
 
+</details>
+
 ## 六、编程语言
+
+<details>
+
+<summary>点击展开查看详情</summary>
 
 ### C 语言
 
@@ -268,9 +302,17 @@
 10. [编程实例（46 - 50）](docs/src/program-language/python/instance/20181012-46-50.md)
 11. [编程实例（51 - 55）](docs/src/program-language/python/instance/20181013-51-55.md)
 
+</details>
+
 ## 七、你问我答
 
+<details>
+
+<summary>点击展开查看详情</summary>
+
 1. [你问我答：想学好 Java 基础，应该去哪儿刷题](docs/src/faq/20230402-where-exercise-java-basics.md)
+
+</details>
 
 ## ☎️ 交流
 
@@ -294,9 +336,10 @@
 
 <center>
 
-|                             支付宝                             |                               微信                                |
-| :------------------------------------------------------------: | :---------------------------------------------------------------: |
-| <img src="./docs/src/public/award/alipay.png" width="150px" /> | <img src="./docs/src/public/award/wechatpay.png" width="150px" /> |
+|                            支付宝                            |                             赞赏                             |                             微信                             |
+| :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
+| <img src="./docs/src/public/award/alipay.png" width="150px" /> | <img src="./docs/src/public/award/donate.jpg" width="150px" /> | <img src="./docs/src/public/award/wechatpay.png" width="150px" /> |
+
 
 </center>
 
