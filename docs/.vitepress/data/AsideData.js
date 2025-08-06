@@ -2,7 +2,7 @@
 
 export const Aside_Data = [
     {
-        link: 'https://hizrj.xyz/user/register?code=XXqTDsm9',
+        link: 'https://xn--mesr8b36x.cc/#/register?code=KhWkEeC9',
         image: 'https://cunyu1943.github.io/weekly/icon/gratewall.svg',
         info1: '稳定机场，已使用多年',
         promo: '✈️',
