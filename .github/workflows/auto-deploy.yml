@@ -1,6 +1,6 @@
 # 构建 VitePress 站点并将其部署到 GitHub Pages 的示例工作流程
 #
-name: 🎈 部署文档
+name: 🎈 Deploy VitePress site to Pages
 
 on:
   # 在针对 `main` 分支的推送上运行。如果你
@@ -36,7 +36,7 @@ jobs:
         with:
           version: 8
       # - uses: oven-sh/setup-bun@v1 # 如果使用 Bun，请取消注释
-      - name: 设置 Node
+      - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 20
@@ -51,21 +51,89 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: docs/.vitepress/dist
-      - name: 🎉 Deploy to GitHub Pages
-        id: deployment
-        uses: JamesIves/github-pages-deploy-action@v4
-        with:
-          # 这是文档部署到的分支名称
-          branch: gh-pages
-          folder: docs/.vitepress/dist
-          token: ${{ secrets.TOKEN }}
-          repository-name: cunyu1943/cunyu1943.github.io
 
   # 部署工作
-  # deploy:
-  #   environment:
-  #     name: github-pages
-  #     url: ${{ steps.deployment.outputs.page_url }}
-  #   needs: build
-  #   runs-on: ubuntu-latest
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    needs: build
+    runs-on: ubuntu-latest
+    name: Deploy
+    steps:
+      - name: 🎉 Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+
+# # 构建 VitePress 站点并将其部署到 GitHub Pages 的示例工作流程
+# #
+# name: 🎈 部署文档
+
+# on:
+#   # 在针对 `main` 分支的推送上运行。如果你
+#   # 使用 `master` 分支作为默认分支，请将其更改为 `master`
+#   push:
+#     branches: [main]
+
+#   # 允许你从 Actions 选项卡手动运行此工作流程
+#   workflow_dispatch:
+
+# # 设置 GITHUB_TOKEN 的权限，以允许部署到 GitHub Pages
+# permissions:
+#   contents: read
+#   pages: write
+#   id-token: write
+
+# # 只允许同时进行一次部署，跳过正在运行和最新队列之间的运行队列
+# # 但是，不要取消正在进行的运行，因为我们希望允许这些生产部署完成
+# concurrency:
+#   group: pages
+#   cancel-in-progress: false
+
+# jobs:
+#   # 构建工作
+#   build:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: 🎆 Checkout
+#         uses: actions/checkout@v4
+#         with:
+#           fetch-depth: 0 # 如果未启用 lastUpdated，则不需要
+#       - uses: pnpm/action-setup@v3 # 如果使用 pnpm，请取消注释
+#         with:
+#           version: 8
+#       # - uses: oven-sh/setup-bun@v1 # 如果使用 Bun，请取消注释
+#       - name: 设置 Node
+#         uses: actions/setup-node@v4
+#         with:
+#           node-version: 20
+#           cache: pnpm # 或 npm / yarn
+#       - name: Setup Pages
+#         uses: actions/configure-pages@v4
+#       - name: Install dependencies
+#         run: pnpm install # 或 npm ci / yarn install / bun install
+#       - name: Build with VitePress
+#         run: pnpm docs:build # npm run docs:build  / yarn docs:build / bun run docs:build
+#       - name: Upload artifact
+#         uses: actions/upload-pages-artifact@v3
+#         with:
+#           path: docs/.vitepress/dist
+#       - name: 🎉 Deploy to GitHub Pages
+#         id: deployment
+#         uses: JamesIves/github-pages-deploy-action@v4
+#         with:
+#           # 这是文档部署到的分支名称
+#           branch: gh-pages
+#           folder: docs/.vitepress/dist
+#           token: ${{ secrets.TOKEN }}
+#           repository-name: cunyu1943/cunyu1943.github.io
+
+#   # 部署工作
+#   # deploy:
+#   #   environment:
+#   #     name: github-pages
+#   #     url: ${{ steps.deployment.outputs.page_url }}
+#   #   needs: build
+#   #   runs-on: ubuntu-latest
     
