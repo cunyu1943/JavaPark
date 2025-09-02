@@ -22,7 +22,7 @@ export default defineConfig({
   // 网站描述
   description: "Java 学习保姆级教程、计算机基础、数据库、实战实践、效率工具、资源分享、程序人生 ~",
   // 仓库名
-  // base: "/weekly/",
+  base: "/JavaPark/",
   // 源目录
   srcDir: "src",
 
