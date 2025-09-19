@@ -1,7 +1,8 @@
 import type { DefaultTheme } from 'vitepress'
 
 export const nav: DefaultTheme.Config['nav'] = [
-    { text: '🏠 主页', link: '/' },
+    // { text: '🏠 主页', link: '/' },
+    { text: '🅱️ 我的博客', link: 'https://cunyu1943.github.io' },
     {
         text: '☕️ Java 图鉴',
         items: [

@@ -12,11 +12,12 @@
   },
   "dependencies": {
     "@theojs/lumen": "^6.4.4",
-    "pagefind": "^1.3.0",
+    "pagefind": "^1.4.0",
     "pnpm": "^9.15.9",
     "vitepress-plugin-51la": "^0.1.0",
     "vitepress-plugin-announcement": "^0.1.5",
     "vitepress-plugin-pagefind": "^0.4.14",
     "vitepress-plugin-rss": "^0.3.1"
-  }
+  },
+  "packageManager": "pnpm@10.3.0+sha256.24dd5c65d86c7d0710aba16699fbc46d74fc9acf2b419f4945207f2de9e57e23"
 }
