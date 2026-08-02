@@ -190,7 +190,11 @@ public class UserController {
 
 将我们的项目启动起来，然后在浏览器中访问如下路径：
 
->   http://localhost:8080/index
+```text
+http://localhost:8080/index
+```
+
+
 
 如果显示如下图中的信息，那么就说明我们此次的整合工作顺利完成！
 
