@@ -1,5 +1,15 @@
 /* var.css */
+/* @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap'); */
+/* @import url('https://cdn.jsdelivr.net/npm/cn-fontsource-lxgw-wen-kai-gb-screen-r@1.0.6/font.min.css'); */
+/* 引入 JetBrains Mono 英文字体（jsDelivr CDN，国内访问更快） */
+@import url('https://cdn.jsdelivr.net/npm/@fontsource/jetbrains-mono@5.2.8/400.css');
+/* @import url('https://cdn.jsdelivr.net/npm/@fontsource/jetbrains-mono@5.2.8/700.css'); */ 
+
 :root {
+  /* 英文字体在前，中文字体在后：浏览器优先用 JetBrains Mono 渲染英文，遇中文字符回退到霞鹭文楷 */
+  --vp-font-family-sans: 'JetBrains Mono', 'LXGW WenKai GB Screen R', 'Noto Serif SC', 'Noto Serif CJK SC', 'Source Han Serif SC', serif;
+  --vp-font-family-serif: 'JetBrains Mono', 'LXGW WenKai GB Screen R', 'Noto Serif SC', 'Noto Serif CJK SC', 'Source Han Serif SC', serif;
+  --vp-font-family-mono: 'JetBrains Mono', 'LXGW WenKai GB Screen R', 'Noto Serif SC', 'Noto Serif CJK SC', monospace;
   --vp-c-brand-1: #18794e;
   --vp-c-brand-2: #299764;
   --vp-c-brand-3: #30a46c;
@@ -10,6 +20,7 @@
   --vp-c-brand-2: #30a46c;
   --vp-c-brand-3: #298459;
 }
+
 /* 以前的vp-c-brand已弃用 */
 
 :root {
@@ -20,6 +31,48 @@
   /*hero logo背景渐变色 */
   --vp-home-hero-image-background-image: linear-gradient(-45deg, #bd34fe 50%, #47caff 50%);
   --vp-home-hero-image-filter: blur(40px);
+}
+
+/* 强制应用字体到所有元素（英文 JetBrains Mono，中文霞鹭文楷） */
+html,
+body,
+#app,
+.VPContent,
+.VPDoc,
+.VPDocFooter {
+  font-family: 'JetBrains Mono', 'LXGW WenKai GB Screen R', 'Noto Serif SC', 'Noto Serif CJK SC', 'Source Han Serif SC', serif !important;
+}
+
+/* 标题和其他文本元素 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+li,
+span,
+div,
+a {
+  font-family: 'JetBrains Mono', 'LXGW WenKai GB Screen R', 'Noto Serif SC', 'Noto Serif CJK SC', 'Source Han Serif SC', serif !important;
+}
+
+/* VPFeatures 页卡悬浮效果 */
+.VPFeatures .items .item {
+  transition: transform 0.3s;
+}
+
+.VPFeatures .items .item:hover {
+  transform: translateY(-5px);
+}
+
+/* VPDoc 文档一级标题渐变色 */
+.VPDoc h1 {
+  background: -webkit-linear-gradient(10deg, #bd34fe 5%, #e43498 15%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /* 也可自行单独修改brand按钮 */

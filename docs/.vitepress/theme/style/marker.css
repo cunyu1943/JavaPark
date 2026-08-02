@@ -1,0 +1,23 @@
+/* .vitepress/theme/style/marker.css */
+
+/* 尤雨溪 不喜欢可自行调整 */
+.marker-evy {
+    white-space: nowrap;
+    position: relative;
+}
+
+.marker-evy:after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 66%;
+    left: 0em;
+    right: 0em;
+    bottom: 0;
+    transition: top 200ms cubic-bezier(0, 0.8, 0.13, 1);
+    background-color: rgba(79, 192, 141, 0.5);
+}
+
+.marker-evy:hover:after {
+    top: 0%;
+}

@@ -1,23 +1,23 @@
 {
   "devDependencies": {
     "@nolebase/vitepress-plugin-git-changelog": "^2.18.2",
-    "markdown-it-mathjax3": "^4.3.2",
+    "sass-embedded": "^1.100.0",
     "vitepress": "^1.6.4",
-    "vitepress-markdown-timeline": "^1.2.2"
+    "vitepress-plugin-group-icons": "^1.7.6",
+    "vue": "^3.5.40"
   },
+  "packageManager": "pnpm@10.3.0+sha256.24dd5c65d86c7d0710aba16699fbc46d74fc9acf2b419f4945207f2de9e57e23",
+  "type": "module",
   "scripts": {
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs"
   },
   "dependencies": {
-    "@theojs/lumen": "^6.4.4",
-    "pagefind": "^1.4.0",
-    "pnpm": "^9.15.9",
-    "vitepress-plugin-51la": "^0.1.0",
-    "vitepress-plugin-announcement": "^0.1.5",
-    "vitepress-plugin-pagefind": "^0.4.14",
-    "vitepress-plugin-rss": "^0.3.1"
-  },
-  "packageManager": "pnpm@10.3.0+sha256.24dd5c65d86c7d0710aba16699fbc46d74fc9acf2b419f4945207f2de9e57e23"
+    "cn-fontsource-lxgw-wen-kai-screen": "^1.0.6",
+    "pagefind": "^1.5.2",
+    "vitepress-plugin-announcement": "^0.1.9",
+    "vitepress-plugin-rss": "^0.4.4",
+    "vitepress-plugin-sponsor": "^0.2.0"
+  }
 }
