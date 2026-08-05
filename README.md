@@ -322,13 +322,12 @@
 <img src="docs/src/public/contact/contact.png" width="250" />
 </center>
 
-## ✨ Star 趋势图
 
 > 🎈 [JavaPark](https://github.com/cunyu1943/JavaPark)
 
 如果您觉得本项目对您有所帮助，那就去 Github **Star** 收藏一下吧！
 
-<img src="https://api.star-history.com/svg?repos=cunyu1943/JavaPark&type=Date" width="80%"/>
+
 
 ## 🧧 赞助
 
@@ -338,7 +337,7 @@
 
 |                            支付宝                            |                             赞赏                             |                             微信                             |
 | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
-| <img src="./docs/src/public/award/alipay.png" width="150px" /> | <img src="./docs/src/public/award/donate.jpg" width="150px" /> | <img src="./docs/src/public/award/wechatpay.png" width="150px" /> |
+| <img src="./docs/src/public/imgs/award/alipay.png" width="150px" /> | <img src="./docs/src/public/imgs/award/donate.jpg" width="150px" /> | <img src="./docs/src/public/imgs/award/wechatpay.png" width="150px" /> |
 
 
 </center>

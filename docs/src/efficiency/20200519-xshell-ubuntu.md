@@ -38,7 +38,7 @@ tag:
 
 2. 然后启动 `ssh-server` 服务即可，开启方式，当然这两种开启方式都是需要切换到```root```用户或者提供密码权限的；
 
-    ```shell
+    ```sh
     service ssh start
     /etc/init.d/ssh start
     ```

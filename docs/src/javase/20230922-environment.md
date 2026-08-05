@@ -78,7 +78,7 @@ date: 2023-09-25
 
 按照上述步骤操作完成之后，接下来就是验证了，一般我们可以通过如下三个命令来进行验证。
 
-```bash
+```sh
 # 查看 JDK 版本
 java -version
 
@@ -125,7 +125,7 @@ java
 
 1.  查看 `JDK` 版本。
 
-```bash
+```sh
 java -version
 ```
 
@@ -145,7 +145,7 @@ java -version
 
 1.   先去 [下载](https://www.oracle.com/java/technologies/javase-downloads.html) 要安装的 `JDK` 版本，然后解压到本地存放的位置。
 
-```shell
+```sh
 tar -zxvf jdk-11.0.7_linux-x64_bin.tar.gz
 ```
 
@@ -170,7 +170,7 @@ export PATH=$JAVA_HOME:$PATH
 
 安装和配置之后，在终端中输入如下命令进行验证是否成功。
 
-```shell
+```sh
 # 查看版本
 java -version
 # 编译
@@ -185,7 +185,7 @@ javac
 
 安装好 `JDK` 之后，打开安装路径，通常情况下会有如下的目录结构，而各个模块的功能则如下表所示。
 
-```shell
+```sh
 .
 ├── LICENSE -> legal/java.base/LICENSE
 ├── README

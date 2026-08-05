@@ -19,19 +19,19 @@ tag:
 
 ## 安装
 
-```shell
+```sh
 corepack enable pnpm
 ```
 
 ![](assets/20240322-vitepress/WindowsTerminal_1711087340.webp)
 
-```shell
+```sh
 pnpm add -D vitepress
 ```
 
 ![](assets/20240322-vitepress/WindowsTerminal_1711087434.webp)
 
-```shell
+```sh
 pnpm vitepress init
 ```
 
@@ -39,7 +39,7 @@ pnpm vitepress init
 
 ![](assets/20240322-vitepress/Code_1711089302.webp)
 
-```shell
+```sh
 pnpm run docs:dev
 ```
 

@@ -63,7 +63,7 @@ IntelliJ IDEA 安装包[下载地址](https://www.jetbrains.com/idea/download/)�
 
 2. 将下载好的安装包 `ideaIU-2020.1.1.tar.gz` 移动到平时存放软件的目录下进行解压缩
 
-```shell
+```sh
 tar -zxvf ideaIU-2020.1.1.tar.gz
 ```
 
@@ -73,7 +73,7 @@ tar -zxvf ideaIU-2020.1.1.tar.gz
 
 3. 进入解压后的 `bin` 目录，然后在终端启动如下命令即可：
 
-```shell
+```sh
 ./idea.sh
 ```
 
@@ -177,7 +177,7 @@ public class HelloWorld {
 
 6.  最后运行我们刚才写的代码，可以看到输出了 `Hello World`，和我们在上一篇文章中通过控制台打印出的一样！
 
-```bash
+```sh
 Hello World!
 ```
 

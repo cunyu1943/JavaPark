@@ -119,7 +119,7 @@ A[开发环境搭建及入门程序] --> I[4. 知识点解析]
 
 按照上述步骤操作完成之后，接下来就是验证了，一般我们可以通过如下三个命令来进行验证；
 
-```bash
+```sh
 # 查看 JDK 版本
 java -version
 
@@ -154,26 +154,26 @@ macOS 用户推荐使用 Homebrew 包管理器来安装 JDK，这种方式更加
 
 1.  首先确保已安装 Homebrew，如果没有可以在终端中执行：
 
-```bash
+```sh
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
 2.  安装 JDK 17（推荐）：
 
-```bash
+```sh
 brew install openjdk@17
 ```
 
 3.  配置环境变量，将以下内容添加到 `~/.zshrc` 或 `~/.bash_profile`：
 
-```bash
+```sh
 echo 'export PATH="/usr/local/opt/openjdk@17/bin:$PATH"' >> ~/.zshrc
 source ~/.zshrc
 ```
 
 4.  验证安装：
 
-```bash
+```sh
 java -version
 ```
 
@@ -205,7 +205,7 @@ java -version
 
 1.  查看 JDK 版本；
 
-```bash
+```sh
 java -version
 ```
 
@@ -225,7 +225,7 @@ Linux 系统有多种安装方式，以下介绍常用的两种方法。
 
 #### 3.1 通过 apt 安装（Ubuntu/Debian）
 
-```bash
+```sh
 # 更新软件包列表
 sudo apt update
 
@@ -242,26 +242,26 @@ java -version
 
 2.  解压到指定目录（通常放在 `/opt` 下）：
 
-```bash
+```sh
 sudo tar -xzvf jdk-17_linux-x64_bin.tar.gz -C /opt
 ```
 
 3.  配置环境变量，编辑 `~/.bashrc` 或 `~/.profile`：
 
-```bash
+```sh
 export JAVA_HOME=/opt/jdk-17
 export PATH=$JAVA_HOME/bin:$PATH
 ```
 
 4.  使配置生效：
 
-```bash
+```sh
 source ~/.bashrc
 ```
 
 5.  验证安装：
 
-```bash
+```sh
 java -version
 javac -version
 ```
@@ -382,7 +382,7 @@ public class Main {
 
 打开控制命令台，然后进入上述文件存放的路径，使用如下命令进行编译，然后会生成一个 `Main.class` 文件；
 
-```bash
+```sh
 javac Main.java
 ```
 
@@ -396,7 +396,7 @@ javac Main.java
 
 运行，使用如下命令进行运行，然后就可以看到打印出的最终结果了！
 
-```bash
+```sh
 java Main
 ```
 

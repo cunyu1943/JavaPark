@@ -139,7 +139,7 @@ index: false
 
 1.  **磁盘切换**
 
-```shell
+```sh
 盘符 + 冒号
 ```
 
@@ -149,7 +149,7 @@ index: false
 
 2.  **进入指定目录**
 
-```shell
+```sh
 cd 目录
 ```
 
@@ -157,7 +157,7 @@ cd 目录
 
 3.  **返回磁盘根目录**
 
-```shell
+```sh
 cd \
 ```
 
@@ -165,7 +165,7 @@ cd \
 
 4.  **返回上级目录**
 
-```shell
+```sh
 cd ..
 ```
 
@@ -173,7 +173,7 @@ cd ..
 
 5.  **新建目录**
 
-```shell
+```sh
 md 目录名
 ```
 
@@ -181,7 +181,7 @@ md 目录名
 
 6.  **查看当前目录中内容**
 
-```shell
+```sh
 dir
 ```
 
@@ -189,7 +189,7 @@ dir
 
 7.  **查看指定目录结构**
 
-```shell
+```sh
 tree 目录
 ```
 
@@ -197,7 +197,7 @@ tree 目录
 
 8.  **删除目录**
 
-```shell
+```sh
 rd 目录名
 ```
 
@@ -205,7 +205,7 @@ rd 目录名
 
 9.  **复制文件**
 
-```shell
+```sh
 copy 源文件 目标文件
 ```
 
@@ -213,7 +213,7 @@ copy 源文件 目标文件
 
 10. **删除文件**
 
-```shell
+```sh
 del 文件名
 ```
 
@@ -223,31 +223,31 @@ del 文件名
 
 1.  **关机**
 
-```shell
+```sh
 shutdown /s
 ```
 
 2.  **重启**
 
-```shell
+```sh
 shutdown /r
 ```
 
 3.  **注销**
 
-```shell
+```sh
 shutdown /l
 ```
 
 4.  **休眠**
 
-```shell
+```sh
 shutdown /h /f
 ```
 
 5.  **定时关机**
 
-```shell
+```sh
 shutdown /s /t 时间（秒）
 ```
 
@@ -255,7 +255,7 @@ shutdown /s /t 时间（秒）
 
 6.  **取消关机**
 
-```shell
+```sh
 shutdown /a
 ```
 
@@ -265,7 +265,7 @@ shutdown /a
 
 1.  **测试网络延迟和丢包率**
 
-```shell
+```sh
 ping ip/域名
 ```
 
@@ -273,7 +273,7 @@ ping ip/域名
 
 2.  **查看本机 ip 地址**
 
-```shell
+```sh
 ipconfig
 ```
 
@@ -281,7 +281,7 @@ ipconfig
 
 3.  **清除本地 DNS 缓存**
 
-```shell
+```sh
 ipconfig /flushdns
 ```
 
@@ -289,7 +289,7 @@ ipconfig /flushdns
 
 4.  **路由追踪**
 
-```shell
+```sh
 tracert ip/域名
 ```
 
@@ -299,7 +299,7 @@ tracert ip/域名
 
 1.  **查看当前运行的进程**
 
-```shell
+```sh
 tasklist
 ```
 
@@ -307,13 +307,13 @@ tasklist
 
 2.  **运行指定程序或命令**
 
-```shell
+```sh
 start 程序名
 ```
 
 3.  **按名称结束进程**
 
-```shell
+```sh
 taskkill /im 进程名
 ```
 
@@ -321,7 +321,7 @@ taskkill /im 进程名
 
 4.  **按 PID 结束进程**
 
-```shell
+```sh
 taskkill /pid PID
 ```
 
@@ -329,7 +329,7 @@ taskkill /pid PID
 
 5.  **查看当前运行的服务**
 
-```shell
+```sh
 net start
 ```
 
@@ -337,7 +337,7 @@ net start
 
 6.  **启动指定服务**
 
-```shell
+```sh
 net start 服务名
 ```
 
@@ -345,7 +345,7 @@ net start 服务名
 
 7.  **停止指定服务**
 
-```shell
+```sh
 net stop 服务名
 ```
 
@@ -355,7 +355,7 @@ net stop 服务名
 
 1.  **清除屏幕**
 
-```shell
+```sh
 cls
 ```
 
@@ -365,7 +365,7 @@ cls
 
 2.  **退出**
 
-```shell
+```sh
 exit
 ```
 
@@ -389,7 +389,7 @@ exit
 
 机器语言指的是一台计算机全部的指令集合。最开始，计算机中的指令和数据都是由 `0` 和 `1` 组成的二进制数，以下即为一个机器语言的实例。机器语言虽然效率很高，是直接和计算机进行交互，但是晦涩难懂，如果没有系统性学习过，很难掌握。
 
-```bash
+```sh
 0000, 0000, 000000010000
 ```
 
@@ -579,21 +579,21 @@ exit
 
 打开命令控制台（**Windows + R，然后输入 cmd 回车**），然后输入以下三个命令进行验证。
 
-```shell
+```sh
 # 查看 JDK 版本
 java -version
 ```
 
 ![](assets/java-tutorial/java-version-windows.png)
 
-```shell
+```sh
 # 编译命令
 javac
 ```
 
 ![](assets/java-tutorial/javac-windows.png)
 
-```shell
+```sh
 # 运行命令
 java
 ```
@@ -622,7 +622,7 @@ java
 
 1.  查看 `JDK` 版本。
 
-```bash
+```sh
 java -version
 ```
 
@@ -640,7 +640,7 @@ java -version
 
 安装好 `JDK` 之后，打开安装路径，通常情况下会有如下的目录结构，而各个模块的功能则如下表所示。
 
-```shell
+```sh
 .
 ├── LICENSE -> legal/java.base/LICENSE
 ├── README
@@ -699,7 +699,7 @@ public class Main{
 
 2.  打开控制命令台，然后进入上述文件存放的路径，使用如下命令进行编译，然后会生成一个 `Main.class` 文件。
 
-```bash
+```sh
 javac Main.java
 ```
 
@@ -707,7 +707,7 @@ javac Main.java
 
 3.  运行，使用如下命令进行运行，然后就可以看到打印出的最终结果了！
 
-```bash
+```sh
 java Main
 ```
 
@@ -792,7 +792,7 @@ public class HelloWorld{
 
 然后我们通过终端，使用 `javadoc` 命令就可以为上述文件生成一个 `HTML` 文档。
 
-```bash
+```sh
 javadoc HelloWorld.java
 ```
 
@@ -896,7 +896,7 @@ public class HelloWorld {
 
 然后利用以下命令就可以生成我们的文档注释。
 
-```shell
+```sh
 javadoc -d helloworld -author -version -encoding UTF-8 HelloWorld.java
 ```
 
@@ -1044,7 +1044,7 @@ public class Main{
 
 用纯输出语句，编写一个程序，在控制台中输出以下图案。
 
-```shell
+```sh
 	*												*	
 *		*				I love you				 * 		* 
 	*												*	

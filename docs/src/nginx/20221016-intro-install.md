@@ -48,13 +48,13 @@ date: 2022-10-16
 
 将下载后的 `Nginx` 压缩包进行解压，解压命令如下。
 
-```shell
+```sh
 tar -zxf 压缩包名
 ```
 ![](assets/2cd8cb2c4221471e89bd6ad9c58269d5.webp)
 进入解压缩后的 `Nginx` 所在文件夹，然后执行 `configure` 脚本，这时候就会检查安装 `Nginx` 所需的依赖，这里可能会因为你的服务器中没有事先安装所需依赖而导致报错。
 
-```shell
+```sh
 cd nginx-1.22.0
 sh configure
 ```
@@ -65,42 +65,42 @@ sh configure
 
 1. **C 编译器缺失**
 
-```shell
+```sh
 error: C compiler cc is not found.
 ```
 
 要解决这个错误，只需要安装 `gcc` 编译器即可。
 
-```shell
+```sh
 yum install -y gcc
 ```
 
 2. **PCRE Library 缺失**
 
-```shell
+```sh
 error: the HTTP rewrite module requires the PCRE library.
 ```
 同样，为了解决这个这个问题，需要安装 `pcre-devel`。
 
-```shell
+```sh
 yum install -y pcre pcre-devel
 ```
 
 3. **zlib Library 缺失**
 
-```shell
+```sh
 error: the HTTP gzip module requires zlib library.
 ```
 解决方法，安装 `zlib` 库。
 
-```shell
+```sh
 yum install -y zlib zlib-devel
 ```
 
 ![](assets/e0c9acc5f35e447591b2b6d2df12755b.webp)
 如果出现以上的提示信息，则说明可以进行下一步，此时直接执行编译安装命令。
 
-```shell
+```sh
 make
 
 make install
@@ -117,7 +117,7 @@ make install
 
 ### 1. 启动
 
-```shell
+```sh
 ./nginx
 ```
 ![](assets/70fc81bab6ce4aeb9618e27ba081469d.webp)
@@ -127,7 +127,7 @@ make install
 
 ### 2. 快速停止
 
-```shell
+```sh
 ./nginx -s stop
 ```
 停止后，再到浏览器中去访问服务器地址，就会出现以下情况。
@@ -136,13 +136,13 @@ make install
 
 ### 3. 关闭前完成已接受的连接请求
 
-```shell
+```sh
 ./nginx -s quit
 ```
 
 ### 4. 重新加载配置
 
-```shell
+```sh
 ./nginx -s reload
 ```
 
@@ -152,24 +152,24 @@ make install
 
 ### 1. 关闭防火墙
 
-```shell
+```sh
 systemctl stop firewall.service
 ```
 
 ### 2. 禁止防火墙开机启动
 
-```shell
+```sh
 systemctl disable firewall.service
 ```
 ### 3. 放行端口
 
-```shell
+```sh
 firewall-cmd --zone=public --add-port=80/tcp --permanent
 ```
 
 ### 4. 重启防火墙
 
-```shell
+```sh
 firewall-cmd reload
 ```
 
@@ -179,7 +179,7 @@ firewall-cmd reload
 
 在 `/usr/lib/systemd/system` 目录下新增一个文件，命名为 `nginx.service`，然后将以下内容添加到该文件中。
 
-```shell
+```sh
 [Unit]
 Description=nginx - high performance web server
 Documentation=http://nginx.org/en/docs/
@@ -202,7 +202,7 @@ WantedBy=multi-user.target
 
 接着执行以下命令重新加载系统服务。
 
-```shell
+```sh
 systemctl daemon-reload
 ```
 
@@ -212,17 +212,17 @@ systemctl daemon-reload
 
 - 启动
 
-```shell
+```sh
 systemctl start nginx
 ```
 - 关停
 
-```shell
+```sh
 systemctl stop nginx
 ```
 - 查看当前状态
 
-```shell
+```sh
 systemctl status nginx
 ```
 

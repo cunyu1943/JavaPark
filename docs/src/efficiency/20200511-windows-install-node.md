@@ -65,7 +65,7 @@ tag:
 
 安装后，我们怎样知道自己是否安装成功呢？可以使用如下命令查看，若成功则会返回下图类似结果；
 
-```shell
+```sh
 node -v
 ```
 
@@ -75,17 +75,17 @@ node -v
 
 默认情况下，我们利用 `npm` 包管理器用来安装依赖包时，包会默认存放在 `C:\Users\用户名\AppData\Roaming\npm\node_modules` 目录下，如果你不确定你的包存放路径在哪儿，那么可以通过如下命令来进行查看：
 
-```bash
+```sh
 npm root -g
 ```
 
 但这样就存在一个问题，如果我们的依赖包很多的情况下，就会占用我们系统盘大量的空间，这时候我们如果不想让全局包放在这里，那么就可以自定义存放目录。修改的方式也很简单，只需要在控制台中执行如下两条命令即可：
 
-```bash
+```sh
 npm config set prefix "D:\node\node_global"
 ```
 
-```bash
+```sh
 npm config set cache "D:\node\node_cache"
 ```
 
