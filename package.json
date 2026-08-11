@@ -14,7 +14,6 @@
     "docs:preview": "vitepress preview docs"
   },
   "dependencies": {
-    "cn-fontsource-lxgw-wen-kai-screen": "^1.0.6",
     "pagefind": "^1.5.2",
     "vitepress-plugin-announcement": "^0.1.9",
     "vitepress-plugin-rss": "^0.4.4",

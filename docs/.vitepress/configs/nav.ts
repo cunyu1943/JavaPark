@@ -42,6 +42,7 @@ export const nav: DefaultTheme.Config['nav'] = [
             { text: '💾 MySQL 学习指南', link: 'https://github.com/cunyu1943/mysql-tutorial' },
             { text: '🐍 Python 学习指南', link: 'https://github.com/cunyu1943/python-tutorial' },
             { text: '🖥️ 计算机学习指南', link: 'https://github.com/cunyu1943/cs-guide' },
+            { text: '🧰 JetBrains IDEs 中文教程', link: 'https://github.com/cunyu1943/jetbrains-ides-tutorial' },
             { text: '🍃 Spring Boot Demos', link: 'https://github.com/cunyu1943/spring-boot-demos' },
 
         ]
