@@ -8,11 +8,19 @@
   <div class="doc-before">
     <!-- 在此自定义你的内容，例如：公告、版权声明、广告、提示信息等 -->
     <p>
-      📱 1.
-      <a href="https://ym.ksjhaoka.com/?s=Ltxbbs9W330131">官方正规大流量卡</a>
+      🤖 1.
+      <a
+        href="https://volcengine.com/L/FivOjNoG5LM"
+      >字节方舟 Coding Plan，支持 Doubao、GLM、DeepSeek、Kimi、MiniMax 等主流大模型</a>
     </p>
     <p>
-      ⛩️ 2.
+      🅰️ 2.
+      <a
+        href="https://www.qianwenai.com/benefits/tokenplan?shareCode=subTask..12814007..10274..,subTask..12814007..10274.."
+      >千问 Token Plan</a>
+    </p>
+    <p>
+      ⛩️ 3.
       <a href="https://www.bigairport1.asia/#/register?code=KhWkEeC9">科学上网学习</a>
     </p>
   </div>
