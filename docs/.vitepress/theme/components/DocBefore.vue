@@ -9,9 +9,7 @@
     <!-- 在此自定义你的内容，例如：公告、版权声明、广告、提示信息等 -->
     <p>
       🤖 1.
-      <a
-        href="https://volcengine.com/L/FivOjNoG5LM"
-      >字节方舟 Coding Plan，支持 Doubao、GLM、DeepSeek、Kimi、MiniMax 等主流大模型</a>
+      <a href="https://volcengine.com/L/FivOjNoG5LM">字节方舟 Coding Plan</a>
     </p>
     <p>
       🅰️ 2.
@@ -20,7 +18,13 @@
       >千问 Token Plan</a>
     </p>
     <p>
-      ⛩️ 3.
+      🐧 3.
+      <a
+        href="https://www.codebuddy.cn/events/invite?inviteCode=1exuocqktv9"
+      >腾讯 WorkBuddy，注册即可拿积分</a>
+    </p>
+    <p>
+      ⛩️ 4.
       <a href="https://www.bigairport1.asia/#/register?code=KhWkEeC9">科学上网学习</a>
     </p>
   </div>
