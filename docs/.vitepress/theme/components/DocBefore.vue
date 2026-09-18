@@ -24,7 +24,13 @@
       >腾讯 WorkBuddy，注册即可拿积分</a>
     </p>
     <p>
-      ⛩️ 4.
+      💧 4.
+      <a
+        href="https://cloud.siliconflow.cn/i/v6pAWgZ2"
+      >Deepseek 免费 API</a>
+    </p>
+    <p>
+      ⛩️ 5.
       <a href="https://www.bigairport1.asia/#/register?code=KhWkEeC9">科学上网学习</a>
     </p>
   </div>
